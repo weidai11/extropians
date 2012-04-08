@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Revealed at last... the Echelon spammer.</TITLE>
+<META NAME="Author" CONTENT="Michael S. Lorrey (retroman@turbont.net)">
+<META NAME="Subject" CONTENT="Re: Revealed at last... the Echelon spammer.">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Revealed at last... the Echelon spammer.</H1>
+<!-- received="Tue Aug  8 10:08:23 2000" -->
+<!-- isoreceived="20000808160823" -->
+<!-- sent="Tue, 08 Aug 2000 11:54:03 -0400" -->
+<!-- isosent="20000808155403" -->
+<!-- name="Michael S. Lorrey" -->
+<!-- email="retroman@turbont.net" -->
+<!-- subject="Re: Revealed at last... the Echelon spammer." -->
+<!-- id="39902D1B.AEE7C7D6@turbont.net" -->
+<!-- inreplyto="200008081426.KAA17504@ignition.name.net" -->
+<STRONG>From:</STRONG> Michael S. Lorrey (<A HREF="mailto:retroman@turbont.net?Subject=Re:%20Revealed%20at%20last...%20the%20Echelon%20spammer.&In-Reply-To=&lt;39902D1B.AEE7C7D6@turbont.net&gt;"><EM>retroman@turbont.net</EM></A>)<BR>
+<STRONG>Date:</STRONG> Tue Aug 08 2000 - 09:54:03 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2661.html">Spudboy100@aol.com: "RE: Differing views of oil reserves"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2659.html">Michael S. Lorrey: "Re: Strengths of materials"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2649.html">James Wetterau: "Re: Revealed at last... the Echelon spammer."</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2678.html">Alex Future Bokov: "Re: Revealed at last... the Echelon spammer."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2660">[ date ]</A>
+<A HREF="index.html#2660">[ thread ]</A>
+<A HREF="subject.html#2660">[ subject ]</A>
+<A HREF="author.html#2660">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+This is all great. Now what we need is an easily installable plugin for
+<BR>
+netscape, microsoft mail, and eudora that people can install that does the same
+<BR>
+thing to their sig file whenever they launch their mail reader. Promote its use
+<BR>
+by the general population and echelon and carnivore are both dead.
+<BR>
+<P>James Wetterau wrote:
+<BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; Alex Future Bokov says:
+</EM><BR>
+<EM>&gt; ...
+</EM><BR>
+<EM>&gt; &gt; # each time it runs. Toss it into your crontab or .login. Add some words of
+</EM><BR>
+<EM>&gt; &gt; # your own. Have fun!
+</EM><BR>
+<EM>&gt; &gt; #
+</EM><BR>
+<EM>&gt; &gt; # Warning: It will blow away any existing .sig file, so back 'em up!
+</EM><BR>
+<EM>&gt; ...
+</EM><BR>
+<EM>&gt; &gt; $egreeting &lt;&lt;EOF;
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; You have a syntax error here.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; It should be:
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;  $egreeting =&lt;&lt;EOF;
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; It doesn't compile otherwise.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; Also, if you're on a Unix system, you can make your .signature a fifo
+</EM><BR>
+<EM>&gt; using mkfifo, and you can keep this program running nohup by writing a
+</EM><BR>
+<EM>&gt; loop around it to keep it writing to the .sig file and closing after
+</EM><BR>
+<EM>&gt; each write.  This way each fresh read will get a fresh run.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; The loop could look basically like this:
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; while(1)
+</EM><BR>
+<EM>&gt; {
+</EM><BR>
+<EM>&gt;          open (&quot;&gt;/path/to/.sig&quot;) or die &quot;Could not open .sig: $!&quot;;
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;          # do the rest of the program here
+</EM><BR>
+<EM>&gt;          # ...
+</EM><BR>
+<EM>&gt;          # be sure to close
+</EM><BR>
+<EM>&gt;          close SIG or die &quot;Got an error closing .sig: $!&quot;;
+</EM><BR>
+<EM>&gt; }
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; Note that I've added error checking to both system calls.  Always
+</EM><BR>
+<EM>&gt; check the return value from system calls.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; Now, then, after you mkfifo .sig, all you need to do is execute the
+</EM><BR>
+<EM>&gt; program nohup:
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; nohup sigwriter &amp;
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; And any read will get a fresh set of words.  If you want, you can put
+</EM><BR>
+<EM>&gt; a monitor job in your crontab or login to make sure it's still running
+</EM><BR>
+<EM>&gt; every now and then.  The best way would be to have it record its
+</EM><BR>
+<EM>&gt; process id on startup in a file you check for an extand pid by the
+</EM><BR>
+<EM>&gt; same process name.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; All the best,
+</EM><BR>
+<EM>&gt; James
+</EM><BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2661.html">Spudboy100@aol.com: "RE: Differing views of oil reserves"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2659.html">Michael S. Lorrey: "Re: Strengths of materials"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2649.html">James Wetterau: "Re: Revealed at last... the Echelon spammer."</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2678.html">Alex Future Bokov: "Re: Revealed at last... the Echelon spammer."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2660">[ date ]</A>
+<A HREF="index.html#2660">[ thread ]</A>
+<A HREF="subject.html#2660">[ subject ]</A>
+<A HREF="author.html#2660">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:35:42 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

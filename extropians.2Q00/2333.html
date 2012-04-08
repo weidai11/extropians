@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: RE: COM/DCOM on Linux via EntireX (was Working With</TITLE>
+<META NAME="Author" CONTENT="Billy Brown (bbrown@transcient.com)">
+<META NAME="Subject" CONTENT="RE: COM/DCOM on Linux via EntireX (was Working Within the System)">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>RE: COM/DCOM on Linux via EntireX (was Working Within the System)</H1>
+<!-- received="Fri May  5 10:36:34 2000" -->
+<!-- isoreceived="20000505163634" -->
+<!-- sent="Fri, 5 May 2000 11:37:33 -0500" -->
+<!-- isosent="20000505163733" -->
+<!-- name="Billy Brown" -->
+<!-- email="bbrown@transcient.com" -->
+<!-- subject="RE: COM/DCOM on Linux via EntireX (was Working Within the System)" -->
+<!-- id="NDBBKGDJPKNNLCAEEHPPIEFIDHAA.bbrown@transcient.com" -->
+<!-- inreplyto="001d01bfb65e$783b3370$ef6565cb@squashynt" -->
+<STRONG>From:</STRONG> Billy Brown (<A HREF="mailto:bbrown@transcient.com?Subject=RE:%20COM/DCOM%20on%20Linux%20via%20EntireX%20(was%20Working%20Within%20the%20System)&In-Reply-To=&lt;NDBBKGDJPKNNLCAEEHPPIEFIDHAA.bbrown@transcient.com&gt;"><EM>bbrown@transcient.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Fri May 05 2000 - 10:37:33 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2334.html">Robin Hanson: "Re: Understanding Academia"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2332.html">Robin Hanson: "Re: Understanding Academia"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2304.html">Emlyn (pentacle): "Re: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2307.html">Eugene Leitl: "RE: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2333">[ date ]</A>
+<A HREF="index.html#2333">[ thread ]</A>
+<A HREF="subject.html#2333">[ subject ]</A>
+<A HREF="author.html#2333">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Emlyn (pentacle) wrote:
+<BR>
+<EM>&gt; Thanks thanks thanks thanks thanks!
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt; My problem is that I'm trying to make a call from a client to a server,
+</EM><BR>
+<EM>&gt; where the server is not trusted to actually process the call in a reliable
+</EM><BR>
+<EM>&gt; way; in particular, where the call may never return. So, I want to make an
+</EM><BR>
+<EM>&gt; asynchronous call - then the server can balls up, but the client can
+</EM><BR>
+<EM>&gt; continue.
+</EM><BR>
+<P><EM>&gt; I hacked together a pretend asynchronous call between com objects, using
+</EM><BR>
+an
+<BR>
+<EM>&gt; intermediate out-of-process object. The client calls the intermediate
+</EM><BR>
+<EM>&gt; object, and the intermediate object sets a timer (1 msec) and returns the
+</EM><BR>
+<EM>&gt; call (so the client can get on with it's life). Meanwhile, the timer goes
+</EM><BR>
+<EM>&gt; off in the intermediate object, which then calls the server as the client
+</EM><BR>
+<EM>&gt; has requested. If the server hangs, then the intermediate object does too,
+</EM><BR>
+<EM>&gt; but the client is clear of the damage.
+</EM><BR>
+<P><EM>&gt; Gross, isn't it? I think these message queues might be a better
+</EM><BR>
+solution...
+<BR>
+<P>Definitely. You put an outgoing queue on the client, and an incoming queue
+<BR>
+on the server, and set up MSMQ to route messages from one to the other. You
+<BR>
+have a server-side object instantiate an MSMQQueue object, and then put code
+<BR>
+in the 'message received' event handler that reads incoming messages and
+<BR>
+calls COM objects as appropriate. If the network goes down your messages
+<BR>
+just stack up in the outgoing queue, and they get delivered when it comes
+<BR>
+back up. If the server component dies MTS will kill it for you and
+<BR>
+instantiate a new copy for the next method call. You can even have MSMQ keep
+<BR>
+the queues on disk, to ensure that power failures don't make the app loose
+<BR>
+messages.
+<BR>
+<P>That's all the NT way of doing it. In Win2K you can just designate a COM
+<BR>
+object as asynchronous when you install it in MTS, and then COM+ takes care
+<BR>
+of managing all the plumbing for you.
+<BR>
+<P>Billy Brown
+<BR>
+<A HREF="mailto:bbrown@transcient.com?Subject=RE:%20COM/DCOM%20on%20Linux%20via%20EntireX%20(was%20Working%20Within%20the%20System)&In-Reply-To=&lt;NDBBKGDJPKNNLCAEEHPPIEFIDHAA.bbrown@transcient.com&gt;">bbrown@transcient.com</A>
+<BR>
+<A HREF="http://www.transcient.com">http://www.transcient.com</A>
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2334.html">Robin Hanson: "Re: Understanding Academia"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2332.html">Robin Hanson: "Re: Understanding Academia"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2304.html">Emlyn (pentacle): "Re: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2307.html">Eugene Leitl: "RE: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2333">[ date ]</A>
+<A HREF="index.html#2333">[ thread ]</A>
+<A HREF="subject.html#2333">[ subject ]</A>
+<A HREF="author.html#2333">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:10:31 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

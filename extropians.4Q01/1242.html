@@ -1,0 +1,434 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: COMPUTATIONAL BIOLOGY: Managing Data</title>
+<meta name="Author" content="J. R. Molloy (jr@shasta.com)">
+<meta name="Subject" content="COMPUTATIONAL BIOLOGY: Managing Data">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>COMPUTATIONAL BIOLOGY: Managing Data</h1>
+<!-- received="Fri Oct 19 07:06:49 2001" -->
+<!-- isoreceived="20011019130649" -->
+<!-- sent="Fri, 19 Oct 2001 06:06:37 -0700" -->
+<!-- isosent="20011019130637" -->
+<!-- name="J. R. Molloy" -->
+<!-- email="jr@shasta.com" -->
+<!-- subject="COMPUTATIONAL BIOLOGY: Managing Data" -->
+<!-- id="086b01c1589e$e5997100$4c5d2a42@jrmolloy" -->
+<!-- inreplyto="05f501c1589a$2ccfac60$4c5d2a42@jrmolloy" -->
+<strong>From:</strong> J. R. Molloy (<a href="mailto:jr@shasta.com?Subject=Re:%20COMPUTATIONAL%20BIOLOGY:%20Managing%20Data&In-Reply-To=&lt;086b01c1589e$e5997100$4c5d2a42@jrmolloy&gt;"><em>jr@shasta.com</em></a>)<br>
+<strong>Date:</strong> Fri Oct 19 2001 - 07:06:37 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1243.html">Mike Lorrey: "Re: fighting Anthrax w/ Dr. Strangelove"</a>
+<li><strong>Previous message:</strong> <a href="1241.html">Eliezer S. Yudkowsky: "Re: praying to hako sot"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1245.html">J. R. Molloy: "Semantic Web: Beyond Metadata"</a>
+<li><strong>Reply:</strong> <a href="1245.html">J. R. Molloy: "Semantic Web: Beyond Metadata"</a>
+<li><strong>Reply:</strong> <a href="1249.html">J. R. Molloy: "NEURO-SCI: Lefty Memory"</a>
+<li><strong>Reply:</strong> <a href="1273.html">Spike Jones: "Re: COMPUTATIONAL BIOLOGY: Managing Data"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1242">[ date ]</a>
+<a href="index.html#1242">[ thread ]</a>
+<a href="subject.html#1242">[ subject ]</a>
+<a href="author.html#1242">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Bioinformatics--Trying to Swim in a Sea of Data
+<br>
+David S. Roos
+<br>
+<a href="http://www.sciencemag.org/cgi/content/full/291/5507/1260">http://www.sciencemag.org/cgi/content/full/291/5507/1260</a>
+<br>
+Advances in many areas of genomics research are heavily rooted in engineering
+<br>
+technology, from the capillary electrophoresis units used in large-scale DNA
+<br>
+sequencing projects, to the photolithography and robotics technology used in
+<br>
+chip manufacture, to the confocal imaging systems used to read those chips, to
+<br>
+the beam and detector technology driving high-throughput mass spectroscopy.
+<br>
+Further advances in (for example) materials science and nanotechnology promise
+<br>
+to improve the sensitivity and cost of these technologies greatly in the near
+<br>
+future. Genomic research makes it possible to look at biological phenomena on
+<br>
+a scale not previously possible: all genes in a genome, all transcripts in a
+<br>
+cell, all metabolic processes in a tissue.
+<br>
+<p>One feature that all of these approaches share is the production of massive
+<br>
+quantities of data. GenBank, for example, now accommodates &gt;1010 nucleotides
+<br>
+of nucleic acid sequence data and continues to more than double in size every
+<br>
+year. New technologies for assaying gene expression patterns, protein
+<br>
+structure, protein-protein interactions, etc., will provide even more data.
+<br>
+How to handle these data, make sense of them, and render them accessible to
+<br>
+biologists working on a wide variety of problems is the challenge facing
+<br>
+bioinformatics--an emerging field that seeks to integrate computer science
+<br>
+with applications derived from molecular biology. We are swimming in a rapidly
+<br>
+rising sea of data...how do we keep from drowning?
+<br>
+<p>Bioinformatics faces its share of growing pains, many of which presage
+<br>
+problems that all biologists will soon encounter as we focus on large-scale
+<br>
+science projects. For starters, few scientists can claim a strong background
+<br>
+on both sides of the divide separating computer science from biomedical
+<br>
+research. This shortage means a lack of mentors who might train the next
+<br>
+generation of &quot;bioinformaticians.&quot; Lack of familiarity with the intellectual q
+<br>
+uestions that motivate each side can also lead to misunderstandings. For
+<br>
+example, writing a computer program that assembles overlapping expressed
+<br>
+sequence tag (EST) sequences may be of great importance to the biologist
+<br>
+without breaking any new ground in computer science. Similarly, proving that
+<br>
+it is impossible to determine a globally optimal phylogenetic tree under
+<br>
+certain conditions may constitute a significant finding in computer science,
+<br>
+while being of little practical use to the biologist. Identifying problems of
+<br>
+intellectual value to all concerned is an important goal for the maturation of
+<br>
+computational biology as a distinct discipline. &quot;Real&quot; biology is increasingly
+<br>
+carried out in front of a computer, while an increasing number of projects in
+<br>
+computer science will be driven by biological problems.
+<br>
+<p>Further difficulties stem from the fact that bioinformatics is an inherently
+<br>
+integrative discipline, requiring access to data from a wide range of sources.
+<br>
+Without the underlying data, and the ability to combine these data in new and
+<br>
+interesting ways, the field of bioinformatics would be very much limited in
+<br>
+scope. For example, the widespread utility of BLAST for the identification of
+<br>
+gene similarity (1) is attributable not only to the algorithm itself (and its
+<br>
+implementation), but also to the availability of databases such as GenBank,
+<br>
+the European Molecular Biology Laboratory (EMBL), and the DNA Data Bank of
+<br>
+Japan (DDBJ), which pool genomic data from a variety of sources. BLAST would
+<br>
+be of limited utility without a broad-based database to query.
+<br>
+<p>One core aspect of research in computational biology focuses on database
+<br>
+development: how to integrate and optimally query data from (for example)
+<br>
+genomic DNA sequence, spatial and temporal patterns of mRNA expression,
+<br>
+protein structure, immunological reactivity, clinical outcomes, publication
+<br>
+records, and other sources. A second focus involves pattern recognition
+<br>
+algorithms for such areas as nucleic acid or protein sequence assembly,
+<br>
+sequence alignment for similarity comparisons or phylogeny reconstruction,
+<br>
+motif recognition in linear sequences or higher-order structure, and common
+<br>
+patterns of gene expression. Both database integration and pattern recognition
+<br>
+depend absolutely on accessing data from diverse sources, and being able to
+<br>
+integrate, transform, and reproduce these data in new formats.
+<br>
+<p>As noted above, computational biology is a fundamentally collaborative
+<br>
+discipline, owing its very existence to the availability of rich and extensive
+<br>
+data sets for analysis, integration, and manipulation. Data accessibility and
+<br>
+usability are therefore critical, raising concerns about data release
+<br>
+policies--what constitutes primary data, who owns this resource, when and how
+<br>
+data should be released, and what restrictions may be placed on further use.
+<br>
+Two challenges have emerged that could potentially restrict the advancement of
+<br>
+bioinformatics research: (i) questions related to the appropriate use of data
+<br>
+released before publication and (ii) restrictions on the reposting of
+<br>
+published data.
+<br>
+<p>The first challenge to bioinformatics research relates to the analysis of data
+<br>
+posted on the Web in advance of publication. Recognizing the value of early
+<br>
+data release for a wide range of studies, the Human Genome Project adopted a
+<br>
+policy of prepublication data release (2), and many genome projects (and the
+<br>
+funding agencies that support them) now adhere to similar rules. Because
+<br>
+bioinformatics depends absolutely on the ability to integrate data from a wide
+<br>
+variety of sources, it is to be hoped that other projects that generate
+<br>
+genomic-scale data (including expression analysis and proteomics research)
+<br>
+will follow a similar policy (3), because immensely valuable results can
+<br>
+emerge from large-scale comparative studies of genome structure, microarray
+<br>
+data, protein interactions, and so on (4-6). The success of such altruistic
+<br>
+data release policies, however, requires that those who generate primary
+<br>
+sequence data (often on behalf of the community at large) receive appropriate
+<br>
+recognition and are able to derive intellectual satisfaction from their work.
+<br>
+Rowen et al. (7) have recently proposed treating unpublished data available on
+<br>
+the Web as analogous to &quot;personal communication,&quot; thereby establishing some
+<br>
+degree of intellectual property protection.
+<br>
+<p>The difficulty with this approach comes in determining what types of analysis
+<br>
+should require permission from the submitters, and what types of analysis can
+<br>
+reasonably be prohibited. Clearly, the identification of individual genes of
+<br>
+interest for further experimental analysis must be acceptable--perhaps even
+<br>
+without the need for formal permission--otherwise, early data release serves
+<br>
+no purpose at all. Conversely, second-party publication of raw, unpublished,
+<br>
+sequence data posted on the Web must be viewed as violating ethical
+<br>
+standards--analogous to the verbatim plagiarism of unpublished results from a
+<br>
+meeting presentation. Where to draw the line in intermediate cases will
+<br>
+ultimately depend on the intellectual contributions provided by the manuscript
+<br>
+in question, and whether such work might reasonably have been expected to
+<br>
+emerge in due course from those who generated the original data (7). Such
+<br>
+considerations of &quot;value added&quot; are not terribly different from those normally
+<br>
+applied during manuscript review, but require special consideration by
+<br>
+reviewers and editors of the anticipated contributions from the original
+<br>
+submitter.
+<br>
+<p>Experience with the Plasmodium falciparum genome project (8-15) suggests that
+<br>
+disagreements over what kinds of data and analyses are permissible for
+<br>
+publication are sometimes attributable to the failure of second parties to
+<br>
+adequately consider the interests and involvement of those generating the
+<br>
+primary data. More often, however, disputes are attributable to a lack of
+<br>
+understanding: either on the part of biologists, who do not fully appreciate
+<br>
+the long lag that may reasonably be expected between (for example) the first
+<br>
+appearance of shotgun sequencing results and final sequence closure and
+<br>
+annotation, or on the part of those generating the primary data, who may not
+<br>
+fully appreciate the intellectual contributions of
+<br>
+biologists/bioinformaticians. One hopes that as the gulf between those engaged
+<br>
+in the application of genomic technologies, bioinformatics research, and
+<br>
+laboratory analysis is bridged by understanding, these problems will diminish
+<br>
+in importance. Increased acceptance of Web-based release as a form of
+<br>
+publication (for hiring, promotion, tenure decisions, etc.), as well as
+<br>
+increased understanding of the nature of &quot;big science&quot; projects in biology,
+<br>
+will also reduce tensions.
+<br>
+<p>The second challenge to bioinformatics research derives not from restrictions
+<br>
+on data access but from restrictions on downstream use, such as incorporation
+<br>
+into new or existing databases. This challenge is of a more fundamental
+<br>
+nature, involving not just when bioinformatic analysis is permissible, but
+<br>
+what kinds of analyses can be carried out. Today's publication of a draft
+<br>
+analysis of the human genome by Celera Genomics (16) focuses a spotlight on
+<br>
+this question, because the primary data themselves are being released only
+<br>
+through a private company that places restrictions on the reposting and
+<br>
+redistribution of their data. Other genome-scale projects, including a recent
+<br>
+analysis of protein-protein interactions in Helicobacter pylori (17), have
+<br>
+placed similar restrictions on the reposting of primary data.
+<br>
+<p>As described in the accompanying editorial (18), Science has taken care to
+<br>
+craft a policy which guarantees that the data on which Celera's analyses are
+<br>
+based will be available for examination. But the purpose of insisting that
+<br>
+primary scientific data be released is not merely to ensure that the published
+<br>
+conclusions are correct, but also to permit building on these results, to
+<br>
+allow further scientific advancement. Bioinformatics research is particularly
+<br>
+dependent on unencumbered access to data, including the ability to reanalyze
+<br>
+and repost results. Thus the statement that &quot;... any scientist can examine and
+<br>
+work with Celera's sequence in order to verify or confirm the conclusions of
+<br>
+the paper, perform their own basic research, and publish the results&quot; (19) is
+<br>
+inaccurate with respect to research in bioinformatics. For example, a
+<br>
+genome-wide analysis and reannotation of additional features identified in
+<br>
+Celera's database could not be published or posted on the Web without
+<br>
+compromising the proprietary nature of the underlying data. Nor could this
+<br>
+information be combined with the resources available from other
+<br>
+databases--such as the information from additional species necessary for
+<br>
+cross-species comparisons, or data from microarray and proteomics resources
+<br>
+that would permit queries based on a combination of genome sequence data,
+<br>
+expression patterns, and structural information. It is certainly true that the
+<br>
+present state of genomics research would never have been achieved without the
+<br>
+freedom to use (properly attributed) information from GenBank/EMBL/DDBJ.
+<br>
+<p>The potential for restricting downstream analysis offers the prospect of
+<br>
+making a wealth of proprietary data generated by private companies accessible
+<br>
+to the research community at large, but this potential comes at a very great
+<br>
+cost. Imagine, for example, genomics research in a world where
+<br>
+GenBank/EMBL/DDBJ did not exist and could not be assembled because of
+<br>
+ownership restrictions. Five years ago, the Bermuda Conventions (2)
+<br>
+established a standard for the release of genome sequence data that has served
+<br>
+biologists very well; we should consider carefully what precedent to establish
+<br>
+for the next 5 years, as considerations of data-release and data-use policy
+<br>
+are likely to have far-reaching implications for all of biomedical research.
+<br>
+<p>The &quot;postgenomic era&quot; holds phenomenal promise for identifying the mechanistic
+<br>
+bases of organismal development, metabolic processes, and disease, and we can
+<br>
+confidently predict that bioinformatics research will have a dramatic impact
+<br>
+on improving our understanding of such diverse areas as the regulation of gene
+<br>
+expression, protein structure determination, comparative evolution, and drug
+<br>
+discovery. The availability of virtually complete data sets also makes
+<br>
+negative data informative: by mapping entire pathways, for example, it becomes
+<br>
+interesting to ask not only what is present, but also what is absent. As the
+<br>
+potential of genomics-scale studies becomes more fully appreciated, it is
+<br>
+likely that genomics research will increasingly come to be viewed as
+<br>
+indistinguishable from biology itself. But such research is only possible if
+<br>
+data remain available not only for examination, but also to build upon. It is
+<br>
+hard to swim in a sea of data while bound and gagged!
+<br>
+<p>---   ---   ---   ---   ---
+<br>
+<p>Useless hypotheses, etc.:
+<br>
+&nbsp;consciousness, phlogiston, philosophy, vitalism, mind, free will, qualia,
+<br>
+analog computing, cultural relativism, GAC, Cyc, Eliza, cryonics, individual
+<br>
+uniqueness, ego, human values, scientific relinquishment
+<br>
+<p>We  move into a better future in proportion as science displaces superstition.
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1243.html">Mike Lorrey: "Re: fighting Anthrax w/ Dr. Strangelove"</a>
+<li><strong>Previous message:</strong> <a href="1241.html">Eliezer S. Yudkowsky: "Re: praying to hako sot"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1245.html">J. R. Molloy: "Semantic Web: Beyond Metadata"</a>
+<li><strong>Reply:</strong> <a href="1245.html">J. R. Molloy: "Semantic Web: Beyond Metadata"</a>
+<li><strong>Reply:</strong> <a href="1249.html">J. R. Molloy: "NEURO-SCI: Lefty Memory"</a>
+<li><strong>Reply:</strong> <a href="1273.html">Spike Jones: "Re: COMPUTATIONAL BIOLOGY: Managing Data"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1242">[ date ]</a>
+<a href="index.html#1242">[ thread ]</a>
+<a href="subject.html#1242">[ subject ]</a>
+<a href="author.html#1242">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:14 MDT</em>
+</em>
+</small>
+</body>
+</html>

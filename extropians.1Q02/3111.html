@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>extropians: Re: Hole in a box</title>
+<meta name="Author" content="Anders Sandberg (asa@nada.kth.se)">
+<meta name="Subject" content="Re: Hole in a box">
+<meta name="Date" content="2002-02-19">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Hole in a box</h1>
+<!-- received="Tue Feb 19 06:23:42 2002" -->
+<!-- isoreceived="20020219132342" -->
+<!-- sent="Tue, 19 Feb 2002 14:23:24 +0100" -->
+<!-- isosent="20020219132324" -->
+<!-- name="Anders Sandberg" -->
+<!-- email="asa@nada.kth.se" -->
+<!-- subject="Re: Hole in a box" -->
+<!-- id="20020219132324.GA19734@akira.nada.kth.se" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="Pine.SOL.4.44.0202191011340.2504-100000@sun5.lrz-muenchen.de" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Anders Sandberg (<a href="mailto:asa@nada.kth.se?Subject=Re:%20Hole%20in%20a%20box"><em>asa@nada.kth.se</em></a>)<br>
+<strong>Date:</strong> Tue Feb 19 2002 - 06:23:24 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3112.html">Anders Sandberg: "Re: review of Egan's SCHILD'S LADDER by Adam Roberts"</a>
+<li><strong>Previous message:</strong> <a href="3110.html">Eliezer S. Yudkowsky: "Re: AI:This is how we do it"</a>
+<li><strong>In reply to:</strong> <a href="3104.html">Eugene Leitl: "RE: Hole in a box"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3114.html">Louis Newstrom: "Re: Hole in a box"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3111">[ date ]</a>
+<a href="index.html#3111">[ thread ]</a>
+<a href="subject.html#3111">[ subject ]</a>
+<a href="author.html#3111">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Tue, Feb 19, 2002 at 10:41:54AM +0100, Eugene Leitl wrote:
+<br>
+<em>&gt; On Tue, 19 Feb 2002, Emlyn O'regan wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; Anders wrote:
+</em><br>
+<em>&gt; &gt; &gt; Assume we can store x bits / kg of matter. One stored bit is worth c^2/x
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Just storing, or computing? Qubit, or conventional? Bits being beings, or
+</em><br>
+<em>&gt; archives? Evolutionary/agoric scenario, or not?
+</em><br>
+<p>Storing. Computation can be assumed to be reversible, with the exception
+<br>
+of the irreversible bit erasures costing energy. I used classical bits,
+<br>
+since I was thinking of long-term storage - qubits aren't known for
+<br>
+their persistence. 
+<br>
+<p>A more quantum approach would be to use the Bekenstein bound. Assume we
+<br>
+have a radius R, mass M system. That allows us to store kMR bits in
+<br>
+quantum states. So if we use the same analysis as before,
+<br>
+kMR(1-f)=fMc^2/kTln2, producing the optimal f= kR/(kR+c^2/kTln2). kR is
+<br>
+a huge number for macroscopic R, again producing a f~=1. 
+<br>
+<p><em>&gt; &gt; &gt; J of energy if its substrate is transmuted.  The entropy cost of
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Are we talking fusion, or 100% efficiency singularity-catalyzed matter
+</em><br>
+<em>&gt; conversion? Given that singularities are so hard to make, what is the
+</em><br>
+<em>&gt; overall efficiency of the process? What is the growth kinetics?
+</em><br>
+<p>I assumed &quot;simply&quot; lossless conversion into energy. Clearly a more
+<br>
+careful analysis has to take the entropy change of matter -&gt; energy
+<br>
+conversion into account and could perhaps calculate limiting efficiency.
+<br>
+<p><em>&gt; Qubit based technology seems to require cryogenic environments, whereas
+</em><br>
+<em>&gt; computronium will be obviously limited to the &lt;1 kK temperature range
+</em><br>
+<em>&gt; before you'll get into deterioration regime. Node cloud assemblies need to
+</em><br>
+<em>&gt; be obviously small and sparse enough that you can get rid of that by
+</em><br>
+<em>&gt; radiative transfer, which gives you a relativistic latency bound. What is
+</em><br>
+<em>&gt; the optimal radial distribution of the node density, given above
+</em><br>
+<em>&gt; constraints, anyone knows?
+</em><br>
+<p>Sounds like a fun optimization problem. Given a number of small spheres
+<br>
+with blackbody heat emissions, which distribution minimizes average
+<br>
+distance for a given temperature bound?
+<br>
+<p>If then spheres have radius r and disspiation W, the heat balance
+<br>
+of sphere i becomes  
+<br>
+<p>W + sum_j 4 pi^2 sigma T_j^4 r^3 / R_ij^2 = 4 pi sigma r T_i^4
+<br>
+<p>(essentially a radiosity equation; I think I have oversimplified it a
+<br>
+bit by assuming R &gt;&gt; r). R_ij is the distance between sphere i and j. So
+<br>
+we need to find the configuration that minimizes sum_ij R_ij and where
+<br>
+max T_i &lt; T_max. I would probably solve this by a genetic algorithm or
+<br>
+hillclimbing, but I don't have the time.
+<br>
+<p><em>&gt; &gt; &gt; If you have M kilograms of matter and use the fraction f to produce
+</em><br>
+<em>&gt; &gt; &gt; information, then if you end up with just enough matter to hold the
+</em><br>
+<em>&gt; &gt; &gt; result you get: x(1-f)M=fM c^2/kTln2. The &quot;optimal&quot; f is
+</em><br>
+<em>&gt; &gt; &gt; x/(x+c^2/kTln2). If x is 10^24 bits/kg (molecular matter storage) and
+</em><br>
+<em>&gt; &gt; &gt; T=3 K, I get f=3.2e-16. On the other hand, for x 10^50
+</em><br>
+<em>&gt; &gt; &gt; (nuclear storage
+</em><br>
+<em>&gt; &gt; &gt; close to the Bekenstein bound) f~=1.  In the first case the matter
+</em><br>
+<em>&gt; &gt; &gt; is so bad at storing information that you cannot use much of it for
+</em><br>
+<em>&gt; &gt; &gt; energy, since you will run out of storage. In the second case you can
+</em><br>
+<em>&gt; &gt; &gt; cram a lot of info into it, so you don't need much.
+</em><br>
+<em>&gt; &gt; &gt;
+</em><br>
+<em>&gt; &gt; &gt; The breakpoint is at x=3.13e39 bit/kg, I guess around
+</em><br>
+<em>&gt; &gt; &gt; degenerate matter.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; We don't know if degenerate matter (gravitation-stabilized, I presume?
+</em><br>
+<em>&gt; That would make it essentially a flat spherical assembly around a core
+</em><br>
+<em>&gt; otherwise useless but for energy generation)  offers sufficient structural
+</em><br>
+<em>&gt; variety to build computational machinery.
+</em><br>
+<p>True. I think degenerate matter offers enough stability to store
+<br>
+information (C12/C13 nuclei in a lattice), but it is not obvious how to
+<br>
+do processing in it. Even worse for nuclear matter. 
+<br>
+<p>Hmm, just a realization: my above argument implies that if the supercivs
+<br>
+are using nuclear densities, they will be highly visible by their energy
+<br>
+dissipation. But if you can't use neutronium for storage, then they will
+<br>
+likely be in the quiet region. So this provides a prediction that
+<br>
+nuclear matter may not be suitable for storage if we assume the
+<br>
+existence of supercivs, since otherwise they would be visible. 
+<br>
+&nbsp;
+<br>
+<p><pre>
+-- 
+-----------------------------------------------------------------------
+Anders Sandberg                                      Towards Ascension!
+<a href="mailto:asa@nada.kth.se?Subject=Re:%20Hole%20in%20a%20box">asa@nada.kth.se</a>                            <a href="http://www.nada.kth.se/~asa/">http://www.nada.kth.se/~asa/</a>
+GCS/M/S/O d++ -p+ c++++ !l u+ e++ m++ s+/+ n--- h+/* f+ g+ w++ t+ r+ !y
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3112.html">Anders Sandberg: "Re: review of Egan's SCHILD'S LADDER by Adam Roberts"</a>
+<li><strong>Previous message:</strong> <a href="3110.html">Eliezer S. Yudkowsky: "Re: AI:This is how we do it"</a>
+<li><strong>In reply to:</strong> <a href="3104.html">Eugene Leitl: "RE: Hole in a box"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3114.html">Louis Newstrom: "Re: Hole in a box"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3111">[ date ]</a>
+<a href="index.html#3111">[ thread ]</a>
+<a href="subject.html#3111">[ subject ]</a>
+<a href="author.html#3111">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Fri Nov 01 2002 - 13:37:40 MST
+</em></small></p>
+</body>
+</html>

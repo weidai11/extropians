@@ -1,0 +1,267 @@
+<!-- received="Fri Nov 15 13:59:18 1996 MST" -->
+<!-- sent="Fri, 15 Nov 1996 15:23:57 -0600" -->
+<!-- name="Ira Brodsky" -->
+<!-- email="ibrodsky@ix12.ix.netcom.com" -->
+<!-- subject="Re: Ira's Poetry Break" -->
+<!-- id="v01530500aeb2471bd6fb@[199.35.203.161]" -->
+<!-- inreplyto="Ira's Poetry Break" -->
+<title>extropians: Re: Ira's Poetry Break</title>
+<h1>Re: Ira's Poetry Break</h1>
+Ira Brodsky (<i>ibrodsky@ix12.ix.netcom.com</i>)<br>
+<i>Fri, 15 Nov 1996 15:23:57 -0600</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2990">[ date ]</a><a href="index.html#2990">[ thread ]</a><a href="subject.html#2990">[ subject ]</a><a href="author.html#2990">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2991.html">Michael Butler: "Hi-temp bio, alternate genetic code (was Re: Planet Densities bl"</a>
+<li> <b>Previous message:</b> <a href="2989.html">Max M: "Fw: wildgrowing threads"</a>
+<li> <b>Maybe in reply to:</b> <a href="2960.html">Ira Brodsky: "Ira's Poetry Break"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3080.html">Michael Lorrey: "Re: Ira's Poetry Break"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Eugene Leitl wrote:<br>
+<p>
+<i>&gt;On Thu, 14 Nov 1996, Ira Brodsky wrote:</i><br>
+<i>&gt;</i><br>
+<i>&gt;&gt; [...]</i><br>
+<i>&gt;&gt;</i><br>
+<i>&gt;&gt; However, each of the conversations is digitized (i.e., the voices are sent</i><br>
+<i>&gt;&gt; as bit streams) and assigned a unique "code."  The base station receiver</i><br>
+<i>&gt;&gt; picks up all of the signals at once; a computer is able to distinguish and</i><br>
+<i>&gt;&gt; separate the different conversations by "decoding" the composite bit</i><br>
+<i>&gt;&gt; stream.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Isn't this the same technology enabling a NAVSTAR GPS receiver to sift</i><br>
+<i>&gt;through several simultaneous sat signals? (in contrast to GLONASS, which is</i><br>
+<i>&gt;conventional). Where's the novelty of the CDMA approach, can you disclose</i><br>
+<i>&gt;a bit more details? Sounds really intriguing, but achieving the same</i><br>
+<i>&gt;signal ratio must involve a feedback loop, to dynamically adjust the</i><br>
+<i>&gt;sender power. What the highest possible talker load on a single</i><br>
+<i>&gt;frequency? Some 10, some 100? 'twould be interesting to learn. The stuff</i><br>
+<i>&gt;operates in GHz range, I presume? Individual channel bandwidth???</i><br>
+<p>
+Yes, GPS uses a one-way version of CDMA.  However, there are typically just<br>
+3 - 5 "mobile transmitters" (satellites), and much less multipath<br>
+interference.  Cellular CDMA involves several novelties, including dynamic<br>
+power control, "soft" handoffs, "RAKE" receivers, and variable rate speech<br>
+encoding.<br>
+<p>
+Unlike conventional cellular systems (both analog and digital), CDMA reuses<br>
+all of the frequencies in all of the cells.  A handoff in a conventional<br>
+system involves changing frequencies, with a brief loss of audio.  In a<br>
+CDMA system, the phone can communicate with two or even three cells<br>
+simultaneously.  As these networks mature, there should be fewer calls<br>
+dropped due to bungled handoffs, because CDMA is the only system that never<br>
+breaks the connection.<br>
+<p>
+RAKE receivers listen for and recombine multipath signals by adding<br>
+variable delays to the components.  Instead of interfering with each other,<br>
+the compoents now reinforce each other.<br>
+<p>
+And in a conventional cellular network, once a call is in process it<br>
+consumes all of its allocated bandwidth, whether or not both parties are<br>
+talking at any given moment.  With CDMA, variable speech encoding<br>
+"upshifts" the bit rate only during voice activity.  In fairness, the<br>
+competing time division multiple access (TDMA) technology claims it will<br>
+add this capability later, but it is clearly *much* harder to accomplish in<br>
+a TDMA system, because standard time-slot assignment is quite rigid.<br>
+<p>
+<p>
+I believe the maximum CDMA "talker" load per 1.25 MHz carrier is 40.  At<br>
+first, this seems low, as you can fit 41 30-kHz analog channels in the same<br>
+space.  But in the classic cellular network, you can only reuse one-seventh<br>
+of the channels in each cell.  (You can improve analog reuse, but the same<br>
+techniques apply to CDMA, so there is no net gain for analog.)<br>
+<p>
+<p>
+<i>&gt;&gt; To the CDMA engineer, this means designing a radio network in which the</i><br>
+<i>&gt;&gt; base stations must control the transmit power of every handset to within an</i><br>
+<i>&gt;&gt; extremely fine tolerance -- no easy thing to do since signals received from</i><br>
+<i>&gt;&gt; mobile handsets naturally vary more than ten thousand-fold due to fading</i><br>
+<i>&gt;&gt; and multipath interference (i.e., signals taking different paths and</i><br>
+<i>&gt;&gt; recombining at the receiver out-of-phase).</i><br>
+<p>
+<i>&gt;Ah, so they have an autofeedback control loop allright...</i><br>
+<p>
+Yes.  The fraud/conspiracy theory says that once you load up the system,<br>
+this control loop will become impossible to control.  However, they ignore<br>
+the fact the system is intentionally designed to accommodate only about 50%<br>
+of its theoretical capacity.  It is not normally allowed to get close to<br>
+"meltdown"  -- assuming such a thing exists.<br>
+<p>
+<i>&gt;</i><br>
+<i>&gt;&gt; However, if one can make power control work it delivers significant</i><br>
+<i>&gt;&gt; advantages to the end-user.  Since the handset is continually compensating</i><br>
+<i>&gt;&gt; for fading by adjusting its transmit power -- thousands of times each</i><br>
+<i>&gt;&gt; second -- the hissing and fluttering sound normally associated with</i><br>
+<i>&gt;&gt; cellular telephone completely vanishes.  CDMA phones sound very much like</i><br>
+<i>&gt;</i><br>
+<i>&gt;Uh, I thought the cellular stuff was digital? The only artefacts being voice</i><br>
+<i>&gt;compression alias?</i><br>
+<p>
+Yes, both CDMA and TDMA get rid of the hissing and flutter, and both<br>
+introduce "quantization noise" as they use lower bit rate encoding.  But<br>
+consumer tests have consistently shown that CDMA sounds more like landline<br>
+telephone.  In part, this is because the CDMA camp has good<br>
+noise-cancelling technology, and in part because of CDMA's power control<br>
+and RAKE receivers.  (Fading causes clicking sounds in TDMA systems.)<br>
+<p>
+<i>&gt;</i><br>
+<i>&gt;&gt; desktop phones; some people will refuse to believe you are calling them</i><br>
+<i>&gt;&gt; from your car.  And there is another beneficial side-effect of granular</i><br>
+<i>&gt;&gt; power control: it greatly extends handset battery life.</i><br>
+<i>&gt;</i><br>
+<i>&gt;An vanilla cell phone in Europe has about 5 W peak power. What does CDMA</i><br>
+<i>&gt;average about to? Does this result in nondeterministic battery life time,</i><br>
+<i>&gt;depending on your movement dynamics and EM environment?</i><br>
+<p>
+I don't know the peak power off hand, but I'm sure if you spend all of your<br>
+time near cell edges you will use more power.  Still, it will be the<br>
+minimal power needed for that type of operation, and a significant savings<br>
+over the coarse power control of analog and TDMA systems.<br>
+<i>&gt;</i><br>
+<i>&gt;&gt; [...]</i><br>
+<i>&gt;&gt;</i><br>
+<i>&gt;&gt; Well, I now have one of these CDMA personal communication phones in hand</i><br>
+<i>&gt;&gt; and it does work.  Sound quality is excellent.  Due to its enhanced battery</i><br>
+<i>&gt;&gt; life, you can leave the phone on all day.  (Actually, it can be left in</i><br>
+<i>&gt;</i><br>
+<i>&gt;The usual good cell stuff has a standby of max 50 hours, I thought.</i><br>
+<p>
+That's not an apples to apples comparison.  The phone I am talking about<br>
+runs at 1.9 gigahertz.  The 800 Mhz version gets 72 hours of standby...<br>
+<p>
+<i>&gt;&gt; standby for two days, or you can talk for four hours, or some combination</i><br>
+<i>&gt;</i><br>
+<i>&gt;4 hours? It's not too sensational.</i><br>
+<p>
+...and 5 hours of talk time.  I believe you are comparing it, however, to<br>
+special phones with extra-large (or dual?) batteries.  For example, I know<br>
+Ericsson has matched the five hours at 800 Mhz, but by using a battery<br>
+that's nearly as heavy as the entire CDMA phone *with* battery.<br>
+<p>
+<i>&gt;</i><br>
+<i>&gt;&gt; inbetween.)  Initial prices are 10% - 15% less than cellular telephone.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Ah. That's an argument. Hardware prices, what about provider prices?</i><br>
+<p>
+Actually, that was the service provider price.  The CDMA phone itself is<br>
+more expensive right now, because there is just one supplier near full<br>
+production; but phone prices are subsidized in the U.S.  (I paid $199 for<br>
+the phone; Qualcomm's quantity one price is $530).<br>
+<i>&gt;</i><br>
+<i>&gt;&gt; However, CDMA claims ten times the capacity of conventional cellular, so</i><br>
+<i>&gt;</i><br>
+<i>&gt;Wowie. Ten times 9.6 kBaud???</i><br>
+<p>
+No, ten times the voice traffic capacity.  Europe's GSM (TDMA) system is<br>
+about 2.6 times analog, while the U.S. TDMA technology is barely 2 times<br>
+analog, but uses an 8 kbps vocoder with inferior audio (to put it<br>
+politely).<br>
+<p>
+CDMA claims 10 - 20 times analog at 8 kbps.  Carriers are reporting 8 - 10<br>
+times analog at 13 kbps, which is 3 - 4 times the capacity of European TDMA<br>
+(GSM).<br>
+<p>
+<i>&gt;</i><br>
+<i>&gt;&gt; prices will probably go much lower as competition heats up.  It is also</i><br>
+<i>&gt;&gt; easy to provide features like caller ID over an end-to-end digital network,</i><br>
+<i>&gt;&gt; so they are part of the standard package.  Some of the conspiracy theorists</i><br>
+<i>&gt;&gt; are now buying time for themselves by focusing on CDMA's capacity claims,</i><br>
+<i>&gt;&gt; saying the technology will blow up in operators' faces *later* -- as they</i><br>
+<i>&gt;&gt; bring more subscribers online.</i><br>
+<i>&gt;</i><br>
+<i>&gt;But CDMA must be just cellular, with a (big) plus. They sure modeled</i><br>
+<i>&gt;expected user load, this must be a bogus argument.</i><br>
+<p>
+Yes.  I should also say something about the CDMA versus Europe's GSM<br>
+competition.  (WARNING: The following is considered heresy by the European<br>
+telecomm industry.):<br>
+<p>
+In Europe, the next-generation cellular technology was developed by<br>
+committee and *mandated* by governments of the participating countries.  In<br>
+other words, CDMA is currently illegal for use in European cellular<br>
+networks.  The excuse for doing this was to ensure a single system that<br>
+worked everywhere in Europe.  After all, Europe's analog systems are all<br>
+incompatible, as the reigning philosophy at that time was national<br>
+protectionism.<br>
+<p>
+So they created GSM, which originally was Group Special Mobile (in French),<br>
+later changed to Global System for Mobile communications.  Personally, I<br>
+like to call it Global Socialist Mobile, or Government Standard Mandated.<br>
+Regardless of what you call it, and of how it is excused, it represents<br>
+merely a shift from national protectionism to continental protectionism.<br>
+<p>
+Please don't take any of this personally; I think Europe is a swell<br>
+vacation destination. :-)  Plus, you guys invented Western Civilization,<br>
+for which I am sincerely grateful.  (No kidding.)<br>
+<p>
+GSM fans accuse the U.S. of "cowboy capitalism."  I wish that were the<br>
+case.  However, it is true the U.S. went from a government-mandated analog<br>
+cellular standard to industry-voluntary digital standards (plural).  So,<br>
+when the FCC announced it would auction spectrum for a new personal<br>
+communications service, we had something like 70 competing standards at<br>
+first, and now we are down to 6.  (The other 64 or so didn't attract<br>
+sufficient funding.)<br>
+<p>
+I confess that while the European statists did a reasonably good job with<br>
+GSM, it is a matter of faith with me that even a somewhat distorted free<br>
+market environment is bound to come up with something better.  Actually,<br>
+the GSM committee considered CDMA, and I am told Siemens actually argued in<br>
+favor of it.  The committee took what they perceived as the low-risk path<br>
+-- leave CDMA as a potential "next" next-generation solution.<br>
+<p>
+Meanwhile, in the U.S. we came up with or "own" TDMA system.  Although<br>
+developed by industry voluntarily, it is clearly inferior to GSM -- despite<br>
+what my friend Craig McCaw claimed.  Some TDMA supporters were clearly<br>
+angered that Qualcomm muddied the water by developing a second "standard."<br>
+But hey, nobody put a gun to anyone's head to buy into it.<br>
+<p>
+Qualcomm gradually convinced every major cellular manufacturer to license<br>
+CDMA.  Even Sweden's Ericsson has a license, although they used a back<br>
+alley route, and tried to make it look like an accident.  (They bought 50%<br>
+of the British firm Orbitel, who then licensed CDMA for satellite<br>
+applications, and then Ericsson bought the other 50%.  Of course, that had<br>
+nothing to do with CDMA!)<br>
+<p>
+<p>
+<i>&gt;&gt; In this case, the "conspiracy theory" is really just the predictable</i><br>
+<i>&gt;&gt; reaction of the radio communication industry's equivalent of The Flat Earth</i><br>
+<i>&gt;&gt; Society.  It is peddled mainly by old-guard engineers (plus a couple of</i><br>
+<i>&gt;&gt; well-known Stanford professors) who simply can't accept the shift from a</i><br>
+<i>&gt;&gt; separate-frequency to a same-frequency paradigm.</i><br>
+<i>&gt;&gt;</i><br>
+<i>&gt;&gt; There is also much progress being made toward accessing the Net via</i><br>
+<i>&gt;&gt; wireless phones.  AT&amp;T is now selling a product called "PocketNet Phone"</i><br>
+<i>&gt;&gt; that retrieves intelligently-filtered text from Web pages.  Nokia has</i><br>
+<i>&gt;&gt; introduced a phone with a somewhat larger screen and built-in Web browser.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Yeah, I've seen it. A flat box looking a plain cellphone, you open it up</i><br>
+<i>&gt;like an oyster and see a diminuitive qwerty and a graphical LCD. I think</i><br>
+<i>&gt;they're using ARM chips. Btw ARM, have a look at StrongARM (at DEC site),</i><br>
+<i>&gt;it will be part of the next Newton, and some other products.</i><br>
+<i>&gt;</i><br>
+<i>&gt;&gt; If there is interest, perhaps I can post more on this later...</i><br>
+<i>&gt;</i><br>
+<i>&gt;Yeah, please do. Most extropians like tech things, methinks ;)</i><br>
+<p>
+OK, I will do that.  And thanks for your questions/comments.<br>
+<p>
+Ira Brodsky<br>
+Datacomm Research Company<br>
+Wilmette, Illinois<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2991.html">Michael Butler: "Hi-temp bio, alternate genetic code (was Re: Planet Densities bl"</a>
+<li> <b>Previous message:</b> <a href="2989.html">Max M: "Fw: wildgrowing threads"</a>
+<li> <b>Maybe in reply to:</b> <a href="2960.html">Ira Brodsky: "Ira's Poetry Break"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3080.html">Michael Lorrey: "Re: Ira's Poetry Break"</a>
+<!-- reply="end" -->
+</ul>

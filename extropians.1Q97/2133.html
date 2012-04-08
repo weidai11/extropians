@@ -1,0 +1,84 @@
+<!-- received="Sun Feb  2 21:28:20 1997 MDT" -->
+<!-- sent="Sun, 2 Feb 1997 17:38:46 -0800" -->
+<!-- name="Hal Finney" -->
+<!-- email="hal@rain.org" -->
+<!-- subject="Re: NANO: Amazing, isn't it?" -->
+<!-- id="199702030138.RAA01302@crypt.hfinney.com" -->
+<!-- inreplyto="NANO: Amazing, isn't it?" -->
+<title>extropians: Re: NANO: Amazing, isn't it?</title>
+<h1>Re: NANO: Amazing, isn't it?</h1>
+Hal Finney (<i>hal@rain.org</i>)<br>
+<i>Sun, 2 Feb 1997 17:38:46 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2133">[ date ]</a><a href="index.html#2133">[ thread ]</a><a href="subject.html#2133">[ subject ]</a><a href="author.html#2133">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2134.html">Jim Legg: "RE: Wireless Electricity -- Bunk? ( Nope!"</a>
+<li> <b>Previous message:</b> <a href="2132.html">Hal Finney: "Re: Universal non-point of light"</a>
+<li> <b>Maybe in reply to:</b> <a href="1569.html">Eliezer Yudkowsky: "NANO: Amazing, isn't it?"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+From: Eliezer Yudkowsky &lt;sentience@pobox.com&gt;<br>
+<i>&gt; Ah.  Then given 64 qb, you could search every 1000 consecutive digits of</i><br>
+<i>&gt; pi for hidden messages for the first sixteen billion billion digits of</i><br>
+<i>&gt; pi, in (of course) the same time it would take to search any 1000</i><br>
+<i>&gt; digits.</i><br>
+<p>
+I need to learn more about how quantum computers would work, but I don't<br>
+think it is quite this easy.<br>
+<p>
+I understand that there have been some algorithms proposed which speed<br>
+up search operations on a quantum computer.  The main reference which<br>
+I have seen mentioned is Grover, "A fast quantum mechanical algorithm for<br>
+database search", Proceedings of STOC96.  I haven't read this paper,<br>
+but I've seen it summarized as follows:<br>
+<p>
+You want to search a database of N items for one of S items which<br>
+satisfies some criterion.  Normal search would require about N/S checks.<br>
+(For example, there are 100 items, and 4 of them are good; you'll<br>
+have to check about 25 items before finding a good one.)  Grover's<br>
+quantum algorithm does it with the square root of this many checks.<br>
+(Your computer would only have to check about 5 items using quantum<br>
+parallelism in this example.)<br>
+<p>
+This is a considerable speedup but is not fully parallelized in<br>
+the naive sense.  We might think of a quantum computer as one which<br>
+simultaneously checks every possibility.  In that latter case it should<br>
+take just one fully-parallel check.  We don't get that, but we do get<br>
+a speedup.<br>
+<p>
+It's not clear a priori that the problem of searching for patterns in that<br>
+huge chunk of pi matches Grover's formulation, but even if it does then<br>
+it would take 2^32 checks (compared to 2^64 on a conventional computer)<br>
+or four billion times longer than is stated above.  That's still a lot<br>
+faster than doing it without quantum parallelism, of course, but it's<br>
+not as dramatic as what was described.<br>
+<p>
+Also, I think you will need a lot more than a single 64 qubit register<br>
+to execute the calculation.  This register, as I understand the proposal,<br>
+is an index which specifies which block of 1000 digits in pi's expansion<br>
+to test.  But the test itself is undoubtedly a complicated mathematical<br>
+program.  I would expect that considerably more storage space will be<br>
+needed to represent all the intermediate values needed for the algorithm.<br>
+<p>
+So, while quantum computers will be remarkable things if they can be<br>
+built, we should try to keep a sense of realism in terms of what they<br>
+will be able to do.  They don't give us full access to the Everett<br>
+multiplex.  Tricky algorithms can give us some speedups, but there are<br>
+many limitations at present.<br>
+<p>
+Hal<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2134.html">Jim Legg: "RE: Wireless Electricity -- Bunk? ( Nope!"</a>
+<li> <b>Previous message:</b> <a href="2132.html">Hal Finney: "Re: Universal non-point of light"</a>
+<li> <b>Maybe in reply to:</b> <a href="1569.html">Eliezer Yudkowsky: "NANO: Amazing, isn't it?"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

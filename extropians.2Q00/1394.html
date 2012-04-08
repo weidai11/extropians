@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Permutation City</TITLE>
+<META NAME="Author" CONTENT="Matt Gingell (mjg223@is7.nyu.edu)">
+<META NAME="Subject" CONTENT="Re: Permutation City">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Permutation City</H1>
+<!-- received="Sat Apr 22 15:58:36 2000" -->
+<!-- isoreceived="20000422215836" -->
+<!-- sent="Sat, 22 Apr 2000 17:40:51 -0400" -->
+<!-- isosent="20000422214051" -->
+<!-- name="Matt Gingell" -->
+<!-- email="mjg223@is7.nyu.edu" -->
+<!-- subject="Re: Permutation City" -->
+<!-- id="00042217584400.02000@localhost.localdomain" -->
+<!-- inreplyto="b494s8x64wj.fsf@sans04.nada.kth.se" -->
+<STRONG>From:</STRONG> Matt Gingell (<A HREF="mailto:mjg223@is7.nyu.edu?Subject=Re:%20Permutation%20City&In-Reply-To=&lt;00042217584400.02000@localhost.localdomain&gt;"><EM>mjg223@is7.nyu.edu</EM></A>)<BR>
+<STRONG>Date:</STRONG> Sat Apr 22 2000 - 15:40:51 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="1395.html">Michael S. Lorrey: "Re: Redneck Pride"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1393.html">Zero Powers: "Re: Identity Crises (was) Re: Where do cool people go (my own pigeon holes)"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="1230.html">Anders Sandberg: "Re: Permutation City"</A>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1394">[ date ]</A>
+<A HREF="index.html#1394">[ thread ]</A>
+<A HREF="subject.html#1394">[ subject ]</A>
+<A HREF="author.html#1394">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+On Wed, 19 Apr 2000, you wrote:
+<BR>
+<EM>&gt;mjg223 &lt;<A HREF="mailto:mjg223@is7.nyu.edu?Subject=Re:%20Permutation%20City&In-Reply-To=&lt;00042217584400.02000@localhost.localdomain&gt;">mjg223@is7.nyu.edu</A>&gt; writes:
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt;&gt; On Wed, 19 Apr 2000, Anders Sandberg wrote:
+</EM><BR>
+<EM>&gt;&gt; &gt; I have spent this weekend attempting to evolve causality in a
+</EM><BR>
+<EM>&gt;&gt; &gt; cellular automaton (I wanted to find a 2D automaton rule that
+</EM><BR>
+<EM>&gt;&gt; &gt; generated patterns corresponding to the space-time diagrams of a 1D
+</EM><BR>
+<EM>&gt;&gt; &gt; automaton), and it was definitely tricky. 
+</EM><BR>
+<EM>&gt;&gt; 
+</EM><BR>
+<EM>&gt;&gt; Interesting stuff. A rule like: 'fire if my right-hand neighbor is firing'
+</EM><BR>
+<EM>&gt;&gt; would generate leftwards trajectories. You could elaborate on that to get
+</EM><BR>
+<EM>&gt;&gt; traces to bounce off each other is you added a second class of firing
+</EM><BR>
+<EM>&gt;&gt; mode. Are you looking for something deeper than that - what's the target
+</EM><BR>
+<EM>&gt;&gt; you're trying to fit? Are you just doing thresholding on local neighbors
+</EM><BR>
+<EM>&gt;&gt; or are you using a more sophisticated class of 1D automation?
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt;The origin of the experiment is a cosmological idea I have been
+</EM><BR>
+<EM>&gt;playing around with: the entire 4-D history of the universe is a
+</EM><BR>
+<EM>&gt;stable state of a 4-D cellular automaton. If this hypothetical CA is
+</EM><BR>
+<EM>&gt;started with a random state, then it will converge to an allowable
+</EM><BR>
+<EM>&gt;history of the universe.
+</EM><BR>
+<P>Why would the stability matter? Couldn't each time step of the 4-D
+<BR>
+automata be a universe, or do you see some reason to require that
+<BR>
+the world be persistent over a 5th dimension?
+<BR>
+<P><EM>&gt;My experiment was far simpler, I used a 2D automaton with binary
+</EM><BR>
+<EM>&gt;states and the Moore neighborhood and a 2^9 bit rule denoting the
+</EM><BR>
+<EM>&gt;result of every possible local state (this was the genes I ran the GA
+</EM><BR>
+<EM>&gt;on). After running the automaton for a few steps, I calculated fitness
+</EM><BR>
+<EM>&gt;from the final state. At first I tried to make the fitness function
+</EM><BR>
+<EM>&gt;depend on how well the pattern fitted a predetermined 1-D rule, but
+</EM><BR>
+<EM>&gt;right now I'm just contenting myself trying to get a causal evolution
+</EM><BR>
+<EM>&gt;(i.e. a one-to-one mapping of states in the previous row to the
+</EM><BR>
+<EM>&gt;next). So far I have not yet succeeded.
+</EM><BR>
+<P>I'm not sure that - in general - GAs are appropriate for finding CAs
+<BR>
+with particular stable states, though it's not something I've ever
+<BR>
+tried. Intuitively it seems the mutating a transition rule either
+<BR>
+won't make a difference to a particular stable configuration or it'll
+<BR>
+change it completely. What you really want is small incremental
+<BR>
+changes you can hill-climb over. Do you get that under the description
+<BR>
+system you describe above?
+<BR>
+<P><EM>&gt;As I see it, the interesting question is if you can get the 2D
+</EM><BR>
+<EM>&gt;automaton to evolve a consistent state from a random state. It would
+</EM><BR>
+<EM>&gt;also incorporate the possibility of &quot;synchronicity&quot; and nonlocal
+</EM><BR>
+<EM>&gt;interactions, as two separated patterns in the 1D world could have
+</EM><BR>
+<EM>&gt;been affected by precursor states at early steps in the 2D world.
+</EM><BR>
+<P>I'm not sure what you mean by consistent state. If initial conditions
+<BR>
+are irrelevant then every terminal state is determined by the
+<BR>
+transition rules, which puts an upper bound on what you can represent
+<BR>
+of 2^9 terminal 'images.' Vastly fewer in practice - but I'm sure you
+<BR>
+could map any stable state you want onto cellular rules given a
+<BR>
+sufficiently powerful computational cell model.
+<BR>
+<P>The idea that non-locality is explainable in terms of CA is appealing,
+<BR>
+but how does it differ from assuming some other kind of hidden state?
+<BR>
+<P>-matt
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="1395.html">Michael S. Lorrey: "Re: Redneck Pride"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1393.html">Zero Powers: "Re: Identity Crises (was) Re: Where do cool people go (my own pigeon holes)"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="1230.html">Anders Sandberg: "Re: Permutation City"</A>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1394">[ date ]</A>
+<A HREF="index.html#1394">[ thread ]</A>
+<A HREF="subject.html#1394">[ subject ]</A>
+<A HREF="author.html#1394">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:09:43 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

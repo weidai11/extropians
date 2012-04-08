@@ -1,0 +1,187 @@
+<!-- received="Mon Dec 23 07:40:54 1996 MST" -->
+<!-- sent="Mon, 23 Dec 1996 15:07:56 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: tech snippets" -->
+<!-- id="Pine.SOL.3.91.961220013725.12680C-100000@sun3" -->
+<!-- inreplyto="1.5.4.32.19961219235923.003861b0@best.com" -->
+<title>extropians: Re: tech snippets</title>
+<h1>Re: tech snippets</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Mon, 23 Dec 1996 15:07:56 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4569">[ date ]</a><a href="index.html#4569">[ thread ]</a><a href="subject.html#4569">[ subject ]</a><a href="author.html#4569">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4570.html">QueeneMUSE@aol.com: "Re: Sex and genetics or fun by default (was) Re: guidelines/ethics"</a>
+<li> <b>Previous message:</b> <a href="4568.html">Mark Grant: "GUNS: Re: Brin on privacy"</a>
+<li> <b>In reply to:</b> <a href="4363.html">James Rogers: "Re: tech snippets"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="4390.html">bill@iglobal.net: "Re: tech snippets"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+(Sorry for the delay, (briefly) I am back to ethernet instead of 14.4 <br>
+kBaud online link which is _expensive_ in Krautland. I've heard local calls <br>
+are not free in California, is this really true? I thought this was the <br>
+case almost throughout the U.S...)<br>
+<p>
+On Thu, 19 Dec 1996, James Rogers wrote:<br>
+ <br>
+<i>&gt; [antifloat rant]</i><br>
+<i>&gt; I often do use fixed-point numbers for floating point computation (32-bit</i><br>
+<i>&gt; int for fraction and 32 or 64-bit int for integer portion).  For some</i><br>
+<p>
+Applause! You realize almost nobody is doing this nowadays? A pity, imo.<br>
+<p>
+<i>&gt; applications it is more convenient (and more accurate) to use fixed point</i><br>
+<i>&gt; calculations.  However, for some types of floating point intensive</i><br>
+<p>
+Fixed point ints have an equidistributed mapping density to "real" reals <br>
+(resolution is the same over the entire dynamic range), at the cost of a <br>
+smaller dynamic range than that of equally long floats. This can be <br>
+avoided by using scaled integers (scaling is done by shifts), which <br>
+drains a lot of programmer brainpower from the problem, and introduces <br>
+subtle numerical bugs, as do floats. In fact, this would be almost <br>
+equivalent to implementing floats in software.<br>
+<p>
+<i>&gt; computation, I doubt this is the _fastest_ method.</i><br>
+<i>&gt; </i><br>
+<i>&gt; &gt; [ Alpha/PA-Risc expensive? ]</i><br>
+<i>&gt; </i><br>
+<i>&gt; Granted, Fast fp RISC machines are expensive, but if you need a workstation</i><br>
+<i>&gt; with high-end fp capability, this is the way to go.  "Consumer" CPUs,</i><br>
+<p>
+If one is stuck with a monolithic application, requiring high absolute <br>
+Flop values, you are right. But if your application is suitable for SMP, or <br>
+a distribution on a (PVMed) workstation cluster, Intels might be a choice, <br>
+simply because there are so cheap.<br>
+<p>
+<i>&gt; especially SMP, will get you more bang for the buck, but SMP is only useful</i><br>
+<i>&gt; for a subset of computational problems.  The performance gap is getting</i><br>
+<i>&gt; pretty narrow though.  Using specmarks as a reference, the highest-end</i><br>
+<p>
+Yes, numerics mainstream is starting to be aware of this.<br>
+<p>
+<i>&gt; workstation CPUs only offer roughly twice the performance of the highest-end</i><br>
+<i>&gt; "consumer" CPUs.  For some classes of problems, a 4-way SMP P6 or PowerPC</i><br>
+<i>&gt; system would seriously out-perform many high-end workstations at a fraction</i><br>
+<i>&gt; of the cost.  Case in point:  An Intergraph P6 SMP graphics workstations</i><br>
+<p>
+...if only e.g. numerical QM codes were not Fortran monsters from 70's, <br>
+porting being equivalent to rewriting them from scratch, which grad <br>
+students simply cannot afford, as it would take years to do.<br>
+<p>
+<i>&gt; (with custom acceleration hardware) will out-perform any SGI graphics system</i><br>
+<i>&gt; costing less than $100k.  The Intergraph system will only cost you $25k</i><br>
+<p>
+I think current accelerator hardware/software is a trifle weak on <br>
+realtime graphics horsepower, but this will be mended in the next version.<br>
+<p>
+<i>&gt; because it uses off the shelf components, with the sole exception of the</i><br>
+<i>&gt; hardware accelerator (which is compatible with any NT workstation).  </i><br>
+<p>
+While high-end SGIs use awesome amounts of silicon for their <br>
+engines/buffers, they charge by far too much, especially because of their <br>
+small production capacities. Next-generation 3d accelerators should be <br>
+sufficient for mid-range scientific visualization, for a comparatively <br>
+negligeable price. I'd like to see, whether OpenGL will really catch on (it <br>
+should, being a part of NT. Linux is still very weak on OpenGL <br>
+performance).<br>
+ <br>
+<i>&gt; I think this convergence of performance will kill a significant number of</i><br>
+<i>&gt; the RISC vendors unless prices converge as well.</i><br>
+<p>
+Agreed absolutely. PA should fall, Alpha will probably fall, PowerPC <br>
+might fall. MIPS by rights should, but they have found their nice in <br>
+embedded and consumer markets, as has ARM, and possibly soon StrongARM.<br>
+ <br>
+<i>&gt; &gt;&gt; [ mutimedia DSP eats GFlops for breakfast ]</i><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt;The more reason for doing it in 128 bit integers, and with a maspar </i><br>
+<i>&gt; &gt;pipeline (one CPU for each processing stage). </i><br>
+<i>&gt; </i><br>
+<i>&gt; I never really thought about it in this sense.  I suppose it WOULD be</i><br>
+<i>&gt; possible to pipeline integer CPUs to get fast floating point performance.</i><br>
+<i>&gt; It probably never occurred to me because this is contrary to conventional</i><br>
+<i>&gt; thinking.  </i><br>
+<p>
+I take that as a compliment ;) Trouble is, we must grew accustomed to the <br>
+"Man from Mars" viewpoint, because physical reality will demand novel <br>
+solutions, as a rule of thumb mostly parallel ones. We've seen this <br>
+coming for decades, but we still haven't done much to school our thinking.<br>
+<p>
+E.g., consider a minor novely, the L4 nanokernel. It is just 12 kBytes, <br>
+which vastly increases its probability to be at last in the 2nd-level <br>
+cache if it is needed, hot-spot 1 kByte of message-passing code (one <br>
+order of magnitude more efficent than Mach) will typically even reside in <br>
+1st-level cache. The microkernel is not portable, so why not writing it in <br>
+assembly for each individual CPU? This should take a single person several <br>
+months, which is tolerable. But consider the performance increase!<br>
+<p>
+Taking this one step further: why not putting the entire microkernel/VM <br>
+into a _normal_ on-die SRAM, having an address in address space (cache <br>
+has none, it occupies the same address space as the addressable core)? <br>
+Why not offering a second set of registers/stacks for the OS, making <br>
+system perversion much harder? Since we will be using GA-techniques, the <br>
+entire system must be able to execute randomly generated code (what crashme <br>
+does to kill your workstation). One must consider each node running in a <br>
+maspar cluster, in a very hostile environment (GA, hacker attack), it <br>
+must offer lightweight cryptographic authentication methods as parts of the <br>
+_kernel_.<br>
+ <br>
+<i>&gt; This could be the basis for a flexible, fast computing architecture.</i><br>
+<i>&gt; Pipeline simple 128-bit (or even 256-bit) ALUs.  The ALUs, by nature, would</i><br>
+<i>&gt; be really small, simple, and very fast.  You could build a simple floating</i><br>
+<p>
+Right, if there are no hardware multipliers, ALUs grow really skinny. A <br>
+lot of clever algorithms exist, which substitute short sequences of shifts <br>
+and basic logics for hardware, this stuff is not slow.<br>
+<p>
+<i>&gt; point processor with many parallel pipelines using less than &gt;1 million</i><br>
+<i>&gt; transistors (trivial these days).  The fp throughput would be enormous, and</i><br>
+<p>
+I don't think a 256-bit ALU needs more than 100 kTransistors, pipelining <br>
+can be substituted by VLIW/SIMD techniques.<br>
+<p>
+<i>&gt; I suspect that you could build a veritable supercomputer on a chip or MCM</i><br>
+<p>
+Now imagine a 8" WSI wafer, filled with 50% viable dies, linked by a <br>
+redundant on-wafer high-speed (100 MByte/s) hypergrid links... Sounds <br>
+like fun, huh?<br>
+<p>
+<i>&gt; this way.  And depending on how it was designed, you could have arbitrary</i><br>
+<i>&gt; hardware supported precision, up to the point of the total number of</i><br>
+<i>&gt; pipelines on the chip or MCM.</i><br>
+<p>
+Another thing, which interests me, is reconfigurable/evolvable hardware. <br>
+We know how to translate source into register machines automagically, and <br>
+novel hardware lets us change logic gate connectivity by means of writing a <br>
+bit pattern into a SRAM. One solution might involve swapping in/out <br>
+building blocks, another solution involves GA-changing this bit pattern. <br>
+This pattern can be changed at runtime, by an autofeedback mechanism. I <br>
+can imagine funky things happening on optically linked WSIs running GAs <br>
+on such evolvable hardware dies, featuring kBit buses. Interesting <br>
+things. The next step would be hardware CAMs, of course, but we should not <br>
+rush things.<br>
+ <br>
+ciao,<br>
+'gene<br>
+<p>
+<i>&gt; </i><br>
+<i>&gt; -James Rogers</i><br>
+<i>&gt;  jamesr@best.com</i><br>
+<i>&gt; </i><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4570.html">QueeneMUSE@aol.com: "Re: Sex and genetics or fun by default (was) Re: guidelines/ethics"</a>
+<li> <b>Previous message:</b> <a href="4568.html">Mark Grant: "GUNS: Re: Brin on privacy"</a>
+<li> <b>In reply to:</b> <a href="4363.html">James Rogers: "Re: tech snippets"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="4390.html">bill@iglobal.net: "Re: tech snippets"</a>
+<!-- reply="end" -->
+</ul>

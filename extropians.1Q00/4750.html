@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: RE: [Fwd: Corel Intel Deal in the making]</TITLE>
+<META NAME="Author" CONTENT="Billy Brown (bbrown@transcient.com)">
+<META NAME="Subject" CONTENT="RE: [Fwd: Corel Intel Deal in the making]">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>RE: [Fwd: Corel Intel Deal in the making]</H1>
+<!-- received="Mon Mar 13 11:30:15 2000" -->
+<!-- isoreceived="20000313183015" -->
+<!-- sent="Mon, 13 Mar 2000 12:31:02 -0600" -->
+<!-- isosent="20000313183102" -->
+<!-- name="Billy Brown" -->
+<!-- email="bbrown@transcient.com" -->
+<!-- subject="RE: [Fwd: Corel Intel Deal in the making]" -->
+<!-- id="NDBBKGDJPKNNLCAEEHPPCEOGDEAA.bbrown@transcient.com" -->
+<!-- inreplyto="14536.44000.220010.438987@lrz.uni-muenchen.de" -->
+<STRONG>From:</STRONG> Billy Brown (<A HREF="mailto:bbrown@transcient.com?Subject=RE:%20[Fwd:%20Corel%20Intel%20Deal%20in%20the%20making]&In-Reply-To=&lt;NDBBKGDJPKNNLCAEEHPPCEOGDEAA.bbrown@transcient.com&gt;"><EM>bbrown@transcient.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Mon Mar 13 2000 - 11:31:02 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="4751.html">Michael S. Lorrey: "Re: The US Department of Defense's New  AntiterrorismSquads-Thefaceoftota..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="4749.html">Lee Daniel Crocker: "Re: extro fools day"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="4474.html">Eugene Leitl: "RE: [Fwd: Corel Intel Deal in the making]"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="4813.html">Mike Linksvayer: "Re: [Fwd: Corel Intel Deal in the making]"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="4813.html">Mike Linksvayer: "Re: [Fwd: Corel Intel Deal in the making]"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#4750">[ date ]</A>
+<A HREF="index.html#4750">[ thread ]</A>
+<A HREF="subject.html#4750">[ subject ]</A>
+<A HREF="author.html#4750">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Eugene Leitl wrote:
+<BR>
+<EM>&gt; So tell us, why and how is COM+ better than MPI or PVM, or any of the
+</EM><BR>
+<EM>&gt; newer funky userland active-messages efforts. Stability? Availability?
+</EM><BR>
+<EM>&gt; Throughput? Latency?
+</EM><BR>
+<P>and Mike Linksvayer wrote:
+<BR>
+<EM>&gt; Hand-code what?  Use CORBA.  From my limited vantage point, forget about
+</EM><BR>
+<EM>&gt; COM and CORBA, Windows and Unix.  Write everything in Java (now there's
+</EM><BR>
+<EM>&gt; a real cost savings vs. C++), abstract your transport, and you can easily
+</EM><BR>
+<EM>&gt; plug into COM, CORBA, some fancy message queue, or whatever, easily.
+</EM><BR>
+<P>Well, I can see some of us haven't been keeping up with what's happening on
+<BR>
+the other side of the fence.
+<BR>
+<P>The DCOM standard is pretty much comparable to CORBA or JavaBeans -
+<BR>
+preferences between them will have more to do with personal taste and
+<BR>
+OS/language ideology than anything real.  However, there is a *lot* more to
+<BR>
+COM+ than just DCOM.
+<BR>
+<P>First off, you get a run-time environment for your components (this used to
+<BR>
+be called MTS) that handles all your cross-process communications and
+<BR>
+networking issues for you.  It also does component pooling (so thousands of
+<BR>
+clients can share  a few hundred component instances), connection pooling
+<BR>
+(so hundreds of components can share a few dozen database connections), and
+<BR>
+distributed transaction management (so components can participate in
+<BR>
+transactions that span multiple applications and multiple database servers).
+<BR>
+All of these features are automated to the point that you can actually use
+<BR>
+them in VB code, and the most complicated thing the component programmer
+<BR>
+ever has to do is invoke a 'commit/roll back transaction' method.
+<BR>
+<P>Also, the system is very tightly integrated with lots of neat OS features.
+<BR>
+You get dynamic load balancing across an arbitrary number of servers without
+<BR>
+any programming, you can invoke components from scripting code on a web
+<BR>
+server, you can configure security on components the same way you would
+<BR>
+secure a file, etc.
+<BR>
+<P>Plus, they give you all that automation without preventing you from doing
+<BR>
+things a different way.  I can write a quick VB component if their
+<BR>
+automation does what I want (which it generally does), or I can write it in
+<BR>
+C++ and build my own resource dispensers, do security checks
+<BR>
+programmatically, control how the component is pooled, and so on.
+<BR>
+<P>As for Eugene's performance questions, the answers are yes.  COM+ on Windows
+<BR>
+2000 delivers the same high stability, fast performance and high
+<BR>
+availability as competing Unix-based standards.  It also offers much better
+<BR>
+scalability than most offerings, thanks to that dynamic load balancing
+<BR>
+feature. I've even implemented a couple of components that let you make
+<BR>
+major changes to the database while the system is running.
+<BR>
+<P>Now, I'll readily concede that this isn't what you want to use for
+<BR>
+high-performance scientific simulations, but that's because what you want
+<BR>
+there is a naked CPU and a bunch of hand-coded assembler.  For anything else
+<BR>
+(and in particular, for the database-oriented apps that constitute the vast
+<BR>
+majority of business software) there is nothing around that is comparable.
+<BR>
+<P>Billy Brown
+<BR>
+<A HREF="mailto:bbrown@transcient.com?Subject=RE:%20[Fwd:%20Corel%20Intel%20Deal%20in%20the%20making]&In-Reply-To=&lt;NDBBKGDJPKNNLCAEEHPPCEOGDEAA.bbrown@transcient.com&gt;">bbrown@transcient.com</A>
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="4751.html">Michael S. Lorrey: "Re: The US Department of Defense's New  AntiterrorismSquads-Thefaceoftota..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="4749.html">Lee Daniel Crocker: "Re: extro fools day"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="4474.html">Eugene Leitl: "RE: [Fwd: Corel Intel Deal in the making]"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="4813.html">Mike Linksvayer: "Re: [Fwd: Corel Intel Deal in the making]"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="4813.html">Mike Linksvayer: "Re: [Fwd: Corel Intel Deal in the making]"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#4750">[ date ]</A>
+<A HREF="index.html#4750">[ thread ]</A>
+<A HREF="subject.html#4750">[ subject ]</A>
+<A HREF="author.html#4750">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:05:01 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

@@ -1,0 +1,103 @@
+<!-- received="Sun Dec 29 20:13:50 1996 MST" -->
+<!-- sent="Mon, 30 Dec 1996 12:57:43 +1000" -->
+<!-- name="Mitchell Porter" -->
+<!-- email="mitch@thehub.com.au" -->
+<!-- subject="COMP: Quantum computers" -->
+<!-- id="199612300257.MAA22777@smople.thehub.com.au" -->
+<!-- inreplyto="" -->
+<title>extropians: COMP: Quantum computers</title>
+<h1>COMP: Quantum computers</h1>
+Mitchell Porter (<i>mitch@thehub.com.au</i>)<br>
+<i>Mon, 30 Dec 1996 12:57:43 +1000</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#5040">[ date ]</a><a href="index.html#5040">[ thread ]</a><a href="subject.html#5040">[ subject ]</a><a href="author.html#5040">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="5041.html">E. Shaun Russell: "&gt;Hx announcement proposal"</a>
+<li> <b>Previous message:</b> <a href="5039.html">Eliezer Yudkowsky: "Re: Parallel universes and Shroedinger's cat"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+[Eliezer Yudkowsky on the uses of quantum computers]<br>
+<p>
+<i>&gt; Think genetic programming.  Current "populations" are in the 10^3-10^6</i><br>
+<i>&gt; range.  With a 64-qubit QC, you could have a population of sixteen</i><br>
+<i>&gt; billion billion.  Heck, with a 64-qubit QC, you could probably string</i><br>
+<i>&gt; instructions together completely at random and wind up with the most</i><br>
+<i>&gt; powerful solution immediately.  Who needs evolutionary computation?  </i><br>
+<p>
+I thought along similar lines; I thought quantum parallelism would make<br>
+constraint satisfaction problems (e.g. "find a path that passes through<br>
+every vertex of this graph without intersecting itself") easy:<br>
+Just put the quantum computer into a superposition that covers every <br>
+element of the search space, and filter the superposition by asking some <br>
+yes/no question about all its elements at once.<br>
+<p>
+Then I saw this thread and asked myself, "How would this actually work?",<br>
+and decided to look for expert opinion:<br>
+<p>
+<a href="http://www.ph.unimelb.edu.au/~schmuel/comp/node11.html">http://www.ph.unimelb.edu.au/~schmuel/comp/node11.html</a><br>
+<p>
+  [...] This requirement appears to be a general one: Quantum parallelism <br>
+  will only yield an exponential speedup in problems whose structure avoids <br>
+  the need to try exponentially many solutions.  Thus, a brute force approach <br>
+  to some of the hardest computational questions, known as NP-complete <br>
+  problems, will not succeed with the aid of quantum parallelism. [...]<br>
+<p>
+The point is that there is only a limited set of measurements you can<br>
+perform on a real quantum system. The question you ask at the "read-out" <br>
+step (e.g. "does the fitness measure exceed this cutoff?") must be <br>
+practically computable, you have to be able to get at that information. <br>
+<p>
+In the case of Shor's quantum factoring algorithm, there's a specific<br>
+trick which makes it possible to find factors (see<br>
+<a href="http://www.ph.unimelb.edu.au/~schmuel/comp/node14.html">http://www.ph.unimelb.edu.au/~schmuel/comp/node14.html</a>). But no one<br>
+seems to know yet just what class of problems allows a speedup:<br>
+<p>
+<a href="http://aerodec.anu.edu.au/~qc/open.question.html">http://aerodec.anu.edu.au/~qc/open.question.html</a><br>
+<p>
+  The real future of quantum computers occurs if a general computer can be <br>
+  built.  This is what allowed classical computers to take off, since you no <br>
+  longer needed to build a "one-task" computer (typically an analog computer). <br>
+  If a general quantum computer (one that can be programmed, in some sense, <br>
+  to solve many different problems on the once computer) can be constructed, <br>
+  they are set to change the way computation is thought about.  If not, then <br>
+  basically we are stuck with building computers that can only solve a very <br>
+  limited group of problems (be it very quickly), restricting their <br>
+  usefullness.<br>
+<p>
+One more URL: <a href="http://rosebay.matra.com.au/~gregb/q-gol//index.html">http://rosebay.matra.com.au/~gregb/q-gol//index.html</a><br>
+  <br>
+Q-gol - a high-level programming language for quantum computers!<br>
+But still buggy, it seems. Elsewhere in his web (see the "summary" page), <br>
+this guy says he's defined a whole set of generalizations of ordinary <br>
+computation (of which quantum computation is just one), including one<br>
+appropriate for time-travelling computation (in which you might have<br>
+access to information from the future).<br>
+<p>
+Damien Broderick added:<br>
+<p>
+<i>&gt;  If you crossed a quantum computer with Borges's Library of Babel, it struck</i><br>
+<i>&gt; me a while back, might you destructively interfere all the `wrong'</i><br>
+<i>&gt; descriptions of physics, being left with a single Book of True Everything</i><br>
+<i>&gt; (Abridged)?  I  love the idea that you could turn on the infinite monkey</i><br>
+<i>&gt; machine and get out Ed Witten Mark Aleph Null.</i><br>
+<p>
+The problem here (apart from general problems of implementation mentioned<br>
+above): what do you use as your filtering criterion, to screen out the <br>
+wrong descriptions?<br>
+<p>
+-mitch<br>
+<a href="http://www.thehub.com.au/~mitch/q-comp.html">http://www.thehub.com.au/~mitch/q-comp.html</a><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="5041.html">E. Shaun Russell: "&gt;Hx announcement proposal"</a>
+<li> <b>Previous message:</b> <a href="5039.html">Eliezer Yudkowsky: "Re: Parallel universes and Shroedinger's cat"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

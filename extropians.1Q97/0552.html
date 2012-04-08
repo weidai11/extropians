@@ -1,0 +1,111 @@
+<!-- received="Sun Jan 12 08:35:49 1997 MDT" -->
+<!-- sent="Sun, 12 Jan 1997 16:24:27 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="SCI:PHYS:random walk" -->
+<!-- id="Pine.SOL.3.91.970112162016.8576D-100000@sun6" -->
+<!-- inreplyto="" -->
+<title>extropians: SCI:PHYS:random walk</title>
+<h1>SCI:PHYS:random walk</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 12 Jan 1997 16:24:27 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#552">[ date ]</a><a href="index.html#552">[ thread ]</a><a href="subject.html#552">[ subject ]</a><a href="author.html#552">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0553.html">Eliezer Yudkowsky: "Re: BIO: Defining "Life""</a>
+<li> <b>Previous message:</b> <a href="0551.html">Eugene Leitl: "SCI:NANO:small structure conductivity processes"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+P.W. Atkins, "Physical chemistry", 3rd ed., Oxford University Press (1987),<br>
+pp. 681-683<br>
+<p>
+27.3(d) The statistical view of diffusion<br>
+<p>
+An intuitive picture of diffusion is that the particles move in a series<br>
+of small steps and gradually migrate from their original positions. We<br>
+shall explore this idea by building a model by assuming that the<br>
+particles can jump through a distance d in a time \tau, so that the<br>
+distance traveled by a particle in a time t is (t/ \tau)d. This does not<br>
+mean the particle will be found at that distance from the origin. The<br>
+direction of each step may be different, and the net distance travelled<br>
+must take this into account. If we simplify the discussion by allowing<br>
+the particles to travel only along a straight line (the x axis), and for<br>
+each step (to the left or the right) to be through the same distance d<br>
+each time, we obtain the one-dimensional random walk, the process first<br>
+met in Appendix 25.1 [check out this one, as well -- 'gene ]<br>
+<p>
+Appendix 27.1 The random walk<br>
+<p>
+Our task is to calculate the probability that a particle will be found at<br>
+a distance x from the origin after a time t. During that time it will have<br>
+taken n steps, with n=t / \tau. If n_R of these are steps to the right,<br>
+and n_L are steps to the left (with n_L + n_R = n), then the net distance<br>
+travelled is x = (n_R-n_L)d. That is, to arrive at x, we must ensure that<br>
+<p>
+n_R = 1/2(n+s) and n_L = 1/2(n-s)                (27.A1.1)<br>
+<p>
+with s=x/d. The probability of being at x after n steps of length d is<br>
+therefore the probability that, when n random steps are taken, the<br>
+numbers to the right and the left are as given above.<br>
+<p>
+The total number of different journeys for a walk of n steps is equal to<br>
+2^n, because each step can be in either of two directions. The number of<br>
+journeys in which exactly n_R steps are taken to the right is equal to<br>
+the number of ways of choosing n_R objects from n possibilities<br>
+irrespective of the order: this is n!/n_R!(n-n_R)!. As a check, consider<br>
+all journeys of four steps: there are 2^4 possible journeys (figure<br>
+omitted). There are six ways of taking two steps to the right and two to<br>
+the left, which tallies with the expression 4!/2!2!=6. The probability<br>
+that the particle is back at the origin after four steps is therefore<br>
+6/16. The probability that it is out at x= + 4d is only 1/16 because, in<br>
+order to be there, all four steps must be to the right, and since<br>
+4!/4!0!=1 the chance of that occuring is 1/16.<br>
+<p>
+Returning now to the general case, the probability of being at x after n<br>
+steps is<br>
+<p>
+P=(Number of journeys with n_R steps to the right)/(Total number of<br>
+journeys)={n!/n_R!(n-n_R)!}/2^n={n!/[0.5(n+s)]! [0.5(n-s)]!}/2^n. (27.A1.2)<br>
+<p>
+At this stage the expression of the probability does not seem to resemble<br>
+the Gaussian, [...], obtained by solving the diffusion equation. However,<br>
+consider the case when so much time has elapsed that the particles have<br>
+taken many steps. Then the factorials may be approximated using<br>
+Stirling's approximation (in the more precise form given in the footnote<br>
+on p. 509)<br>
+<p>
+ln N! = (N+1/2) ln N - N + ln \sqrt{2\pi}                   (27.A1.3)<br>
+<p>
+Taking the logarithm of eqn (27.A1.2) then leads (after quite a lot of<br>
+algebra) to<br>
+<p>
+ln P = ln n!-ln[0.5(n+s)]! - ln [0.5(n-s)]! - n ln 2<br>
+= ln \sqrt{2/\pi n} - 0.5(n+s+1) ln (1+s/n)-0.5(n-s+1)ln(1-s/n).<br>
+<p>
+As long as s/n&lt;&lt; 1 (which is equivalent to x not being at a great<br>
+distances from the origin) we can use the approximation ln(1+z)\approx z,<br>
+and obtain<br>
+<p>
+ln P = ln \sqrt{2/ \pi n} - s^2/2n, or P = \sqrt{2/ \pi n} e^{-s^2/2n}<br>
+                                                              (27.A1.4)<br>
+Finally, replace s by x/d and n by t/ \tau, and obtain<br>
+<p>
+P=\sqrt{2\tau/ \pi t} e^{-x^2\tau /2td^2}<br>
+<p>
+P=\sqrt{2\tau/ \pi t} e^{-x^2\tau /2td^2}<br>
+<p>
+This is the equation used in the text [...]<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0553.html">Eliezer Yudkowsky: "Re: BIO: Defining "Life""</a>
+<li> <b>Previous message:</b> <a href="0551.html">Eugene Leitl: "SCI:NANO:small structure conductivity processes"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

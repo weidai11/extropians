@@ -1,0 +1,494 @@
+<!-- received="Sun May 18 09:51:22 1997 MDT" -->
+<!-- sent="Sun, 18 May 1997 17:10:49 +0200 (MET DST)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="MIL:COMP:NET: Internetworking in the Navy" -->
+<!-- id="Pine.SOL.3.91.970518170600.28747A-100000@sun6" -->
+<!-- inreplyto="" -->
+<title>extropians: MIL:COMP:NET: Internetworking in the Navy</title>
+<h1>MIL:COMP:NET: Internetworking in the Navy</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 18 May 1997 17:10:49 +0200 (MET DST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1199">[ date ]</a><a href="index.html#1199">[ thread ]</a><a href="subject.html#1199">[ subject ]</a><a href="author.html#1199">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1200.html">Eugene Leitl: "MIL:COMP:NET: Internetworking in the Navy"</a>
+<li> <b>Previous message:</b> <a href="1198.html">Damien Broderick: "Re: grettings all, quick question"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+{{<br>
+<p>
+  by way of an apology:<br>
+  why this particular bioOCR'd piece? partly dire<br>
+  gore-crowing, partly _unhealthy_ fascination with<br>
+  bleeding-edge killer applications, a (surely)<br>
+  perverse wish to elucidate some (possibly hidden)<br>
+  agendas on behalf of IPng definition, partly an<br>
+  attempt to forecast the outlines of the shape of<br>
+  possible future conflicts (so at least you can<br>
+  classify what had hit you ;), partly an attempt<br>
+  to extract also civ-relevant tech info. All in all,<br>
+  pretty perfectly acceptable reasons, imo...<br>
+<p>
+                                      ciao, 'gene<br>
+}}<br>
+<p>
+Internetworking in the Navy -- R. Brian Adamson, Naval<br>
+Research Laboratory (Excerpted from "IPng Internet<br>
+Protocol Next Generation", Scott O. Bradner, Allison<br>
+Mankin, ed., Addision Wesley, 1996, pp. 27-35.).<br>
+<p>
+The U.S. Navy and other armed services have identified<br>
+critical requirements for security, mobility, real-time<br>
+data-delivery applications, multicast, and<br>
+quality-of-service and policy-based routing of the next<br>
+generation of the Internet Protocol. Address scaling<br>
+for military application of internet technology may<br>
+include very large numbers of local (interplatform)<br>
+distributed information and weapons systems and a<br>
+smaller number of nodes requiring global connectivity.<br>
+The flexibility of the current Internet Protocol (IP)<br>
+for supporting widely different communication media<br>
+should be preserved to meed the needs of the highly<br>
+heterogenous networks of the tactical environment.<br>
+<p>
+Compact protocol headers are necessary for efficient<br>
+data transfer on the relatively low throughput radio<br>
+frequency (RF) systems. Mechanisms which can enhance<br>
+the effectiveness of an internet datagram protocol<br>
+to provide resource reservation, priority, and<br>
+service quality guarantees are also very important.<br>
+The broadcast nature of many RF networks and the need<br>
+for broad dissemination of information to war-fighting<br>
+participants makes multicast the general case for<br>
+information flow in the tactical environment.<br>
+<p>
+&lt;b&gt;Naval Research Efforts.&lt;/b&gt; The requirements for<br>
+the Internet protocol next generation (IPng) candidates<br>
+with respect to their application to military tactical<br>
+RF communication networks need to be considered along<br>
+with private concerns. The foundatons for these<br>
+requirements are experiences born of the Navy's<br>
+research efforts in this area: the NATO Communication<br>
+System Network Interoperability (CSNI) project;<br>
+the Naval Research Laboratory Data/Voice Integration<br>
+Advanced Technology Demonstration (D/V ATD), and the<br>
+Navy Communication Support System (CSS) architecture<br>
+development.<br>
+<p>
+&lt;b&gt;NATO Communication System Network Interoperability<br>
+Project.&lt;/b&gt; The goal of the CSNI project is to apply<br>
+internetworking technology to facilitate multinational<br>
+interoperability for typical military communication<br>
+applications (e.g., electronic messaging, tactical data<br>
+exchange, and digital voice) on typical tactical RF<br>
+communication links and networks. The International<br>
+Standard Organization (ISO) Open Systems Interconnect<br>
+(OSI) protocol suite, including the Connectionless<br>
+Network Protocol (CLNP), was selected for this project<br>
+for policy reasons. There are design issues in meeting<br>
+the project goals with this particular protocol stack.<br>
+<p>
+&lt;b&gt;Naval Research Laboratory's Data/Voice Integration<br>
+advanced Technology Demonstration.&lt;/b&gt; The D/V ATD is<br>
+focused on demonstrating a survivable, self-configuring,<br>
+self-recovering RF subnetwork technology capable of<br>
+simultaneously supporting data delivery, including<br>
+message transfer, imagery, tactical data, and<br>
+real-time digital voice applications. Support for<br>
+real-time interactive communication application was<br>
+extended to include a "white board" and other similiar<br>
+applications. IP datagram delivery is also planned<br>
+as part of this demonstration system.<br>
+<p>
+&lt;b&gt;Navy Communication Support System Architecture<br>
+Development.&lt;/b&gt; The CSS architecture will provide<br>
+U.S. Navy tactical platforms with a broad array of<br>
+user-transparent voice and data information exchange<br>
+services. This will include support for sharing and<br>
+management of limited platform communicaiton resources<br>
+among multiple war-fighting communities. Emphasis is<br>
+placed on attaining interoperability of with other<br>
+military services and foreign allies. Utilization of<br>
+commercial off-the-shelf communication products to<br>
+take advantage of existing economies of scale is<br>
+important to make any resulting system design<br>
+affordable. It is anticipated that open, voluntary<br>
+standards, and flexible communication protocols, such<br>
+as IP, will play a key role in meeting the goals of<br>
+this architecture.<br>
+<p>
+&lt;b&gt;IPng Requirements and RFC-1550.&lt;/b&gt; Before<br>
+addressing and IPng requirements as applied to<br>
+tactical RF comminications, it is necessary to<br>
+define what is meant by "IPng requirements".<br>
+To maintain brevity, the criteria described in<br>
+this section are specifically related to the<br>
+design of an OSI model's Layer 3 protocol format<br>
+and a few other areas suggested by RFC-1550.<br>
+There are also several additional areas of<br>
+concern in applying intrenetwork protocols to<br>
+the military tactical RF setting:<br>
+<p>
+    * routing protocol design<br>
+    * address assignment<br>
+    * network management<br>
+    * resource management<br>
+<p>
+&lt;i&gt;Scale.&lt;/i&gt; The requirement that IPng should be<br>
+able to deal with 10^12 nodes {{hah! never heard of<br>
+nanotechnology, apparently. why do we never learn?}}<br>
+is more than adequate in the face of military<br>
+requirements. More importantly, with IPng it must be<br>
+possible to assign adresses efficiently. For example,<br>
+although a military platform may have a relatively<br>
+small number of nodes with requirements to<br>
+communicate with a larger, global infrastructure,<br>
+there will be likely applications of IPng to<br>
+management and control of distributed systems<br>
+(e.g., specific radio communications equipement<br>
+and processors, weapon systems) within the platform.<br>
+This local expansion of address space requirements<br>
+may not necessarily need to be solved by "sheer numbers"<br>
+of globally unique addresses but perhaps by alternate<br>
+delimitations of addressing to differentiate between<br>
+globally unique and localy unique addressing. The<br>
+advantages of a compact internet address header<br>
+are clear for relatively low capacity RF networks.<br>
+<p>
+&lt;i&gt;Transition.&lt;/i&gt; The Navy and other armed<br>
+services are currently (in the past few years)<br>
+designing and deploying systems that use open<br>
+networking technology. From this point of view,<br>
+the time scale for selecting of IPng must be<br>
+somewhat rapid. Otherwise, two transition phases<br>
+will need to be suffered: 1) the move from unique<br>
+"stove pipe" systems to open, internetworked<br>
+(e.g.; IP) systems, and 2) a transition from<br>
+deployed IP-based systems to IPng. In some sense<br>
+if an IPng is quickly accepted and widely<br>
+implemented, the transition for tactical<br>
+military systems will be somewhat easier than<br>
+the enterprise Internet where a large investment<br>
+in current IP already exists. However, having<br>
+said this, the Department of Defense as a whole<br>
+already deploys a large number of IP-capable<br>
+systems, and the issue of transition from IP to<br>
+IPng remains significant.<br>
+<p>
+&lt;i&gt;Media Independence.&lt;/i&gt; The tactical communication<br>
+environment includes a very broad spectrum {{spread-spectrum?<br>
+;) }} of communication media from shipboard fiber-optic<br>
+LANs to very low data rate (fewer than 2400 bps) RF links.<br>
+Many of the RF links, evne higher speed ones, can exhibit<br>
+error statistics not necessarily well-serviced by higher<br>
+layre reliable protocols (i.e., TCP). In these cases,<br>
+efficient lower layer protocols can be implemented to<br>
+provide reliable datagram delivery at the link layer, but<br>
+at the cost of highly variable delay performance.<br>
+<p>
+It is also important to recognize that RF communication<br>
+cannot be viewed from the IPng designer as simple<br>
+point-to-point links.<br>
+<p>
+Often, highly complex, unique subnetwork protocols<br>
+are utilized to meet requirements of survivability,<br>
+communications performance with limited bandwith,<br>
+anti-jam, and/or low probability of detection<br>
+requirements.<br>
+<p>
+It is understood that IPng cannot be the panacea of Layer 3<br>
+protocols, particularly when it comes to providing special<br>
+mechanisms to support the endangered-species low data rate<br>
+user. In some of these cases IPng will be one of several<br>
+Layer 3 protocols sharing the subnetwork. However, note<br>
+that there are potentially many low date rate, IP-based<br>
+applications of value to the tactical user. Well-designed,<br>
+efficient networking protocols, can allow many more users<br>
+to share the limited avialable RF bandwidth. A significant<br>
+fraction of data traffic in the tactical environment may<br>
+consist of short datagram messages (e.g., position reports,<br>
+fire control, etc.). Also, relatively low data rate links<br>
+will also likely utilize relatively small packet MTU sizes.<br>
+As a result, any mechanisms which facilitate compression<br>
+of network headers are highly valuable in an IPng candidate.<br>
+<p>
+&lt;i&gt;Configuration, Administration, and Operation.&lt;/i&gt; The<br>
+tactical military has very real requirements for multimedia<br>
+services across its shared and interconnected RF networks.<br>
+This includes applications from digital secure voice<br>
+integrated with applications such as "white boards" and<br>
+position reporting for mission planning purposes to low<br>
+latency, high priority tactical data messages (target<br>
+detection, identification, location, and heading information).<br>
+Because of the limited capacity of tactical RF networks,<br>
+resource reservation is extremely important to control<br>
+access to these valuable resources. Resource reservation<br>
+can play a role in "congestion avoidance" for these limited<br>
+resources as well as ensuring that quality-of-service (QoS)<br>
+data delivery requirements are met for multimedia communication.<br>
+<p>
+Note that this requires more than can be met by simple QoS-<br>
+based path selection and subsequent source-routing to get<br>
+realtime-data, such as voice, delivered. For example, to<br>
+support digital voice in the CSNI project, a call setup and<br>
+resource reservation protocol was designed. It was determined<br>
+that the QoS mechanisms provided by CLNP specification were<br>
+not sufficient for our voice application with path selection.<br>
+Voice calls could not be routed adn resources reserved based<br>
+on any single QoS parameter (e.g., delay, capacity) alone.<br>
+Some RF subnets in the CSNI test bed simply did not have the<br>
+capability to support voice calls.<br>
+<p>
+To perform resource reservation for the voice calls, the CLNP<br>
+cost metric was "hijacked" as essentially as a Type-of-Service<br>
+identifier to let the router know which datagrams were<br>
+associated with a voicecall. The cost metric, concatenated<br>
+with the source and destination addresses, were used to form<br>
+a unique identifier for voice calls in the router and subnet<br>
+state tables. Voice call paths were to be selected by the<br>
+router (i.e., the "cost" metric was calculated) as a rule-based<br>
+function of each subnet's capability to support voice, its delay,<br>
+and its capacity.<br>
+<p>
+While source-routing provided as a possible means for voice<br>
+datagrams to find their way from router to router, the network<br>
+address alone was not explicit enough to direct the data to<br>
+correct interface {{why? broken design, this!}}, particularly<br>
+in cases where there were multiple communication media<br>
+interconnecting two routers along the path. Fortunately,<br>
+excluse use of the QoS indicator for voice in CSNI was able<br>
+to serve as a flag to the router for packets requiring<br>
+special handling.<br>
+<p>
+&lt;i&gt;Flow specification.&lt;/i&gt; While a simple Type-of-Service<br>
+field as part of an IPng protocol can serve this purpose where<br>
+there are a limited number of well-known services (CSNI has<br>
+a single special service: 2400 bps digital voice), a more<br>
+general technique such as RSVP's Flow Specification can<br>
+support a larger set of such services. And a field, such as<br>
+the one sometimes referred to as a Flow Identification (Flow ID),<br>
+can play an important role in facilitating internetworking<br>
+data communication over these limited capacity networks.<br>
+<p>
+For example, the D/V ATD RF sub-network provides support<br>
+for both connectionless datagram delivery and virtual circuit<br>
+connectivity. To utilize this capacity, an IPng could establish<br>
+a virtual circuit connection across this RF subnetwork which<br>
+meets the requirements of an RSVP Flow Specification. By creating<br>
+an assotiation between a particular Flow ID and the subnetwork<br>
+header identifying the established virtual circuit, and IPng<br>
+gateway could forward data across the low-capacity link while<br>
+removing most, if not all, of the IPng header information.<br>
+The receiving gateway could re-construct these fields based on<br>
+the Flow Specification of the particular Flow ID/virtual circuit<br>
+association.<br>
+<p>
+A field such as a Flow ID can serve at least two important<br>
+purposes:<br>
+<p>
+    * It can be used by routers (or gateways) to identify<br>
+      packets with special, or pre-arranged delivery<br>
+      requirements. It is important to realize that it<br>
+      may not always be possible to "peek" at internet<br>
+      packet content for this information if certain<br>
+      security considerations are met (e.g., an encrypted<br>
+      transport layer).<br>
+<p>
+    * It can air mapping datagram services to different<br>
+      types of communication services provided by special<br>
+      subnet/data link layers protocols.<br>
+<p>
+&lt;i&gt;Secure Operation.&lt;/i&gt; As with any military system,<br>
+information security, including confidentiality and<br>
+authenticity of data, is of paramount importance. With<br>
+regard to IPng, network layer security mechanisms for<br>
+tactical RF networks are generally important for<br>
+authentication purposes, including routing protocol<br>
+authentication, source authentication, and user network<br>
+access control. Concerns for denial of service attacks,<br>
+traffic analysis monitoring, etc., usually dictate that<br>
+tactical RF communication networks provide link layer<br>
+security mechanisms.<br>
+<p>
+Compartmentalization and multiple levels of security<br>
+for different users of common communication resources<br>
+call for additional security mechanisms at the transport<br>
+layer or above. In the typical tactical RF environment,<br>
+network layer confidentiality, and in some cases even<br>
+authentication, becomes redundant with these other<br>
+security mechanisms.<br>
+<p>
+The need for network layer security mechanisms becomes<br>
+more critical when the military utilizes commercial<br>
+communication systems or has tactical systems<br>
+interconnected with commercial internets. While the<br>
+Network Encryption Server (NES) works in this role<br>
+today, there is a desire for a more integrated, higher<br>
+performance solution in the future. Thus, to meet the<br>
+military requirements for confidentiality and<br>
+authentication, an IPng candidate must be capable at<br>
+operating in a secure manner when necessary, but also<br>
+allow for efficient operation on low throughput RF<br>
+links when other security mechanisms are already in<br>
+place.<br>
+<p>
+In either of these cases, key management is extremely<br>
+important. Ideally, a common key management system<br>
+could be used to provide key distribution for security<br>
+mechanisms at any layer from the application to the<br>
+link layer. As a result, it is anticipated, however,<br>
+that key distribution is a function of management, and<br>
+should not be dependant on a particular IPng protocol<br>
+format.<br>
+<p>
+&lt;i&gt;Multicast.&lt;/i&gt; Tactical military communication has<br>
+a very clear requirement for multicast. Efficient<br>
+dissemiation of information to distributed war-fighting<br>
+participants can be the key to success in a battle.<br>
+<p>
+In modren warfare, this information includes imagery,<br>
+the "tactical scene" via tactical data messages,<br>
+messaging information, and real-time interactive<br>
+applications such as digital secure voice. Many of<br>
+the tactical RF communication media are broadcast by<br>
+nature, and multicast routing can take advantage of<br>
+this topology to distribute critical data to a large<br>
+number of participants. The throughput limitations<br>
+imposed by these RF media and the physics of potential<br>
+electronic counter measures (ECM) dictate that this<br>
+information be distributed efficiently. A multicast<br>
+architecture is the general case for information flow<br>
+in a tactical network.<br>
+<p>
+&lt;i&gt;Extensibility.&lt;/i&gt; Quality of service and policy<br>
+based routing are of particular importance in a<br>
+tactical environment with limited communication<br>
+resources, limited bandwidth, and possible degradation<br>
+and/or denial of service. Priority is a very important<br>
+criteria in the tactical setting. In the tactical RF<br>
+world of limited resources (limited bandwidth, radio<br>
+assets, etc.) thre will be instances when there is not<br>
+sufficient capacity to provide all users with with<br>
+their perception of required communication capability.<br>
+<p>
+It is extremely important for a shared, automated<br>
+communication system to to delegate capacity to higher<br>
+priority users. Unlike the commercial world, where<br>
+everyone has more equal footing, it is possible in<br>
+the military environment to assign priority to users<br>
+or even individual datagrams. An example of this is the<br>
+tactical data exchange. Tactical data messages are<br>
+generally single-datagram messages containing information<br>
+on the location, bearing, identification, etc., of<br>
+entities detected by sensors. In CSNI, tactical data<br>
+messages were assigned 15 different levels of CLNP<br>
+priority. This ensured that important messages, such<br>
+as a rapidly approaching enemy missile's trajectory,<br>
+were given priority over less important messages,<br>
+such as a friendly, slow-moving tanker's heading.<br>
+<p>
+&lt;i&gt;Applicability.&lt;/i&gt; There will be a significant<br>
+amount of applicability to tactical RF networks. The<br>
+current IP and CLNP are bing considerable attention<br>
+in the tactical RF community as a means to provide<br>
+communication interoperability across a large set of<br>
+heterogenous RF networks in use by different services<br>
+and countries. The applicability of IPng can only<br>
+improve with the inclusion of features critical to<br>
+supporting QoS and policy-based routing, security,<br>
+real-time multi-media data delivery, and extended<br>
+addressing. It must be noted that it is very important<br>
+that the IPng protocol headers not grow overly large.<br>
+There is a sharp tradeoff between the value added by<br>
+these headers (interoperability, global addressing,<br>
+etc.) and the degree of communication performance<br>
+attainable on limited capacity RF networks. Regardless<br>
+of the data rate that future RF networks will be capable<br>
+of supporting, there is always a tactical advantage in<br>
+utilizing your resources more efficiently.<br>
+<p>
+&lt;i&gt;Support for Mobility&lt;/i&gt; The definition of most<br>
+tactical systems include mobility in some form. Many<br>
+tactical RF network designs provide means for members<br>
+to join and leave particular RF subnets as their<br>
+position changes. For example, as a platform moves<br>
+out of RF line-of-sight (LOS) range, it may switch<br>
+from a typical LOS RF media such as the ultra-high<br>
+frequency (UHF) band to a long-haul RF media such as<br>
+high-frequency (HF) or satellite communications (SATCOM).<br>
+<p>
+In some cases, as the D/V ATD network, the RF subnet<br>
+will perform its own routing and management of this<br>
+dynamic topology. This will be invisible to the internet<br>
+protocol except for subtle changes to some routing metrics<br>
+(e.g., more or less delay to reach a host). In this<br>
+instance, the RF subnetwork protocols serve as a buffer<br>
+to the internet routing protocols and IPng will not need<br>
+to be too concerned with mobility. In other cases, however,<br>
+the platform may make a dramatic change in position and<br>
+require a major change in internet routing. IPng must<br>
+be able to support this situation. It is recognized that<br>
+an internet protocol may not be able to cope with large,<br>
+rapid changes in topology. {{!!! why? broken protocol}}<br>
+Efforts will be made to minimize the frequency of this<br>
+in a tactical RF communication architecture, but there<br>
+are instances when a major change in topology is required.<br>
+<p>
+Furthermore, it should be realized that mobility in the<br>
+tactical setting is not limited to individual nodes<br>
+moving about, but that, in some cases, entire subnetworks<br>
+may be moving. An example of this is a Navy ship with<br>
+multiple LANs on board, moving through the domains of<br>
+different RF networks. In some cases, the RF subnet will<br>
+be moving, as in the case of an aricraft strike force, or<br>
+Navy battlegroup.<br>
+<p>
+&lt;i&gt;Datagram service.&lt;/i&gt; The datagram service paradigm<br>
+provides many useful features for tactical communication<br>
+networks. The "memory" provided by datagram headers,<br>
+provides an inherent amount of survivability essential<br>
+to the dynamics of hte tactical communication environment.<br>
+The availability of platforms for routing and relaying is<br>
+never 100% certain in a tactical scenario. The efficiency<br>
+with which multicast can be implemented in a connectionless<br>
+network is highly critical in the tactical environment<br>
+where rapid, eficient information dissemination can be<br>
+a deciding factor. And, as it has been proven with several<br>
+different Internet applications and experiments, a<br>
+datagram service is capable of providing useful connection-<br>
+oriented and real-time connection services.<br>
+<p>
+Consideration should be given in IPng to how it can co-exist<br>
+with other architectures usch as switching fabrics which<br>
+offer demand-based control over topology and connectivity.<br>
+The military owns many of its own communication resources<br>
+and one of the large problems in managing the military<br>
+communication infrastructure is directing those underlying<br>
+resources to where they are needed. Traditional management<br>
+(SNMP, tec.) is of course useful here, but RF communication<br>
+media can be somewhat dynamically allocated.<br>
+<p>
+Circuit switching designs offer some advantages here.<br>
+Dial-up IP routing is an example of an integrated solution.<br>
+The IPng should be capable of supporti4g a similiar type of<br>
+operation.<br>
+<p>
+--end excerpt--<br>
+<p>
+ciao,<br>
+'gene <br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1200.html">Eugene Leitl: "MIL:COMP:NET: Internetworking in the Navy"</a>
+<li> <b>Previous message:</b> <a href="1198.html">Damien Broderick: "Re: grettings all, quick question"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Audio to pitch is not a solved problem. Don't e</TITLE>
+<META NAME="Author" CONTENT="James Rogers (jamesr@best.com)">
+<META NAME="Subject" CONTENT="Re: Audio to pitch is not a solved problem. Don't expect it to work for general cases anytime soon!">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Audio to pitch is not a solved problem. Don't expect it to work for general cases anytime soon!</H1>
+<!-- received="Sun May 28 15:05:19 2000" -->
+<!-- isoreceived="20000528210519" -->
+<!-- sent="Sun, 28 May 2000 08:26:13 -0700" -->
+<!-- isosent="20000528152613" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Audio to pitch is not a solved problem. Don't expect it to work for general cases anytime soon!" -->
+<!-- id="00052809595300.02793@tachyon" -->
+<!-- inreplyto="20000528061927.7147.qmail@hotmail.com" -->
+<STRONG>From:</STRONG> James Rogers (<A HREF="mailto:jamesr@best.com?Subject=Re:%20Audio%20to%20pitch%20is%20not%20a%20solved%20problem.%20Don't%20expect%20it%20to%20work%20for%20general%20cases%20anytime%20soon!&In-Reply-To=&lt;00052809595300.02793@tachyon&gt;"><EM>jamesr@best.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Sun May 28 2000 - 09:26:13 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="3949.html">altamira: "RE: ART: What Art Is"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3947.html">zeb haradon: "Jackson Pollock (RE: ART: What Art Is)"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3899.html">phil osborn: "Re: Audio to pitch is not a solved problem. Don't expect it to work for general cases anytime soon!"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3901.html">phil osborn: "Re: Audio to pitch is not a solved problem. Don't expect it to work for general cases anytime soon!"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3948">[ date ]</A>
+<A HREF="index.html#3948">[ thread ]</A>
+<A HREF="subject.html#3948">[ subject ]</A>
+<A HREF="author.html#3948">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+On Sat, 27 May 2000, phil osborn wrote:
+<BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; At the first CyberArts conference in L.A. in 1990 - the BEST digital arts 
+</EM><BR>
+<EM>&gt; conference ever held! - a man who created the systems used by the big record 
+</EM><BR>
+<EM>&gt; houses to clean up recordings demonstrated a live system into which he read 
+</EM><BR>
+<EM>&gt; a poem.  He then stated that this system could take his input and output it 
+</EM><BR>
+<EM>&gt; as ANY sound, retaining legibiilty.  Then he demonstrated it, having the 
+</EM><BR>
+<EM>&gt; system speak back his vocalization, using the sound of waves crashing on a 
+</EM><BR>
+<EM>&gt; beach.  It was waves crashing on a beach, reading poetry, retaining perfect 
+</EM><BR>
+<EM>&gt; legibility and retaining his style.  Clearly, such a system could take my 
+</EM><BR>
+<EM>&gt; rather lousy singing voice and map it to Caruso.  So, where can I buy it?
+</EM><BR>
+<P><P>There are a few different types of algorithms which can do this type of
+<BR>
+effect, with varying degrees of precision and differing qualities to the
+<BR>
+sound.  Some of the simplest ones, such as vocoding, take very little DSP
+<BR>
+power even when a high number of bands are used.  Vocoding, by its nature,
+<BR>
+has a &quot;filtered&quot; and often identifiable sound to it, but preserves a
+<BR>
+lot of the character of the source when a large number of bands (say 30)
+<BR>
+are used and is done with good (read expensive) filters.
+<BR>
+<P>What is being described above at the Cyberarts conference is probably an
+<BR>
+audio convolving algorithm.  These types of matrix algorithms are pretty
+<BR>
+expensive DSP-wise to do in real-time on Red Book audio (16-bits @ 44.1kHz)
+<BR>
+but can produce very clean results that do not have the processing
+<BR>
+artifacts in the output signal unlike the computationally cheaper classes
+<BR>
+of algorithms.  In 1990 it would have required a high-end DSP
+<BR>
+engine to do in real-time.  It *is* interesting that the choice for the
+<BR>
+second signal was waves crashing on a beach -- a classic &quot;pink noise&quot;
+<BR>
+source.  Most cheap algorithms do not preserve articulation as well with
+<BR>
+noisy carriers (in this case almost pure noise), which lends support to a
+<BR>
+convolving algorithm.
+<BR>
+<P>For a rough idea of the computational requirements for convolving
+<BR>
+algorithms, I have a middle-aged audio sampler from E-mu Systems that
+<BR>
+included a convolver utility as part of the operating system (EOS v2.5 at
+<BR>
+the time).  Although the processor is admittedly pretty weak (I believe it
+<BR>
+is a Motorola 68k at around 25MHz), it takes the system around 10 minutes
+<BR>
+of processing time per second of Red Book audio to convolve two samples.
+<BR>
+Of course, a proper DSP would do these types of ops much faster at the
+<BR>
+same clock speed.
+<BR>
+<P>Subjectively, convolvers are wicked cool audio processing utilities and
+<BR>
+I've gotten great results with them on occasion when looking for
+<BR>
+interesting sounds/textures.  I actually have more use for convolvers than
+<BR>
+the ever popular vocoders.
+<BR>
+<P>-James Rogers
+<BR>
+&nbsp;<A HREF="mailto:jamesr@best.com?Subject=Re:%20Audio%20to%20pitch%20is%20not%20a%20solved%20problem.%20Don't%20expect%20it%20to%20work%20for%20general%20cases%20anytime%20soon!&In-Reply-To=&lt;00052809595300.02793@tachyon&gt;">jamesr@best.com</A>
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="3949.html">altamira: "RE: ART: What Art Is"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3947.html">zeb haradon: "Jackson Pollock (RE: ART: What Art Is)"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3899.html">phil osborn: "Re: Audio to pitch is not a solved problem. Don't expect it to work for general cases anytime soon!"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3901.html">phil osborn: "Re: Audio to pitch is not a solved problem. Don't expect it to work for general cases anytime soon!"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3948">[ date ]</A>
+<A HREF="index.html#3948">[ thread ]</A>
+<A HREF="subject.html#3948">[ subject ]</A>
+<A HREF="author.html#3948">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:11:49 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

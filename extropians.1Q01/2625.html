@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=unknown-8bit">
+<title>extropians: Re: Singularity optimization [Was: Colossus and the</title>
+<meta name="Author" content="Anders Sandberg (asa@nada.kth.se)">
+<meta name="Subject" content="Re: Singularity optimization [Was: Colossus and the Singularity]">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: Singularity optimization [Was: Colossus and the Singularity]</h1>
+<!-- received="Sat Jan 27 10:58:16 2001" -->
+<!-- isoreceived="20010127175816" -->
+<!-- sent="27 Jan 2001 18:58:11 +0100" -->
+<!-- isosent="20010127175811" -->
+<!-- name="Anders Sandberg" -->
+<!-- email="asa@nada.kth.se" -->
+<!-- subject="Re: Singularity optimization [Was: Colossus and the Singularity]" -->
+<!-- id="b49wvbg513g.fsf_-_@sans04.nada.kth.se" -->
+<!-- charset="unknown-8bit" -->
+<!-- inreplyto="Thu, 25 Jan 2001 23:06:25 -0500&quot;" -->
+<strong>From:</strong> Anders Sandberg (<a href="mailto:asa@nada.kth.se?Subject=Re:%20Singularity%20optimization%20[Was:%20Colossus%20and%20the%20Singularity]&In-Reply-To=&lt;b49wvbg513g.fsf_-_@sans04.nada.kth.se&gt;"><em>asa@nada.kth.se</em></a>)<br>
+<strong>Date:</strong> Sat Jan 27 2001 - 10:58:11 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2626.html">denis bider: "RE: Scientist will try to clone a human"</a>
+<li><strong>Previous message:</strong> <a href="2624.html">Peter C. McCluskey: "Re: DiscoveryCh - AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2630.html">Eliezer S. Yudkowsky: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Reply:</strong> <a href="2630.html">Eliezer S. Yudkowsky: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Reply:</strong> <a href="2637.html">Samantha Atkins: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Maybe reply:</strong> <a href="2641.html">Anders Sandberg: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Maybe reply:</strong> <a href="2645.html">Anders Sandberg: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Maybe reply:</strong> <a href="2667.html">Anders Sandberg: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2625">[ date ]</a>
+<a href="index.html#2625">[ thread ]</a>
+<a href="subject.html#2625">[ subject ]</a>
+<a href="author.html#2625">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Thanks Jim for an excellent commentary on the movie!
+<br>
+<p>Here is a longish critique of fast AI bootstrapping inspired by the
+<br>
+movie and discussions on this list. It is a bit unpolished and
+<br>
+handwaving in places, but may be of interest to some of us (I guess
+<br>
+Eliezer will have fun with it :-).
+<br>
+<p>Jim Fehlinger &lt;<a href="mailto:fehlinger@home.com?Subject=Re:%20Singularity%20optimization%20[Was:%20Colossus%20and%20the%20Singularity]&In-Reply-To=&lt;b49wvbg513g.fsf_-_@sans04.nada.kth.se&gt;">fehlinger@home.com</a>&gt; writes:
+<br>
+<p><em>&gt; An unexpected functional result -- the deduction of
+</em><br>
+<em>&gt; the existence of the Soviet computer, which not even the
+</em><br>
+<em>&gt; human intelligence analysts had discovered, and the
+</em><br>
+<em>&gt; observation by Forbin and his team of the increased
+</em><br>
+<em>&gt; speed of the computer, are the first indications that
+</em><br>
+<em>&gt; a positive feedback loop has begun, though Forbin either is not
+</em><br>
+<em>&gt; aware of or chooses not to mention the implications.  Since
+</em><br>
+<em>&gt; Colossus does not at this point have the capability to alter its
+</em><br>
+<em>&gt; own hardware, it must be enhancing itself by rewriting its own
+</em><br>
+<em>&gt; software -- perhaps it was given (inadvertently or deliberately?)
+</em><br>
+<em>&gt; the rudiments of a &quot;codic cortex&quot; as described by Eliezer Yudkowsky
+</em><br>
+<em>&gt; in CaTAI!
+</em><br>
+<p>My problem with this standard singularity scenario is that it is
+<br>
+really based on a kind of rationalist bootstrap model of knowledge
+<br>
+(and skill) aquisition. Essentially the AI is supposed to be sitting
+<br>
+by itself thinking, deducing or testing ways of improving its code
+<br>
+that makes it better and better at this process. It is an appealing
+<br>
+idea for any programmer, we need only create the initial snowball to
+<br>
+get the avalanche going. But it is almost completely the same approach
+<br>
+the rationalists tried for bootstrapping knowledge, and it doesn't
+<br>
+seem to work. 
+<br>
+<p>Why? The learning system needs to learn about its &quot;environment&quot; (in
+<br>
+this case the space of algorithms and how it translates into computer
+<br>
+code) and move relevant information (relevance is measured by the
+<br>
+system by its value functions) from this environment into itself. Just
+<br>
+making deductions doesn't seem to be an efficient way of doing this,
+<br>
+since they are based on the pool of knowledge already in the system; a
+<br>
+program cannot increase its algorithmic complexity just by extending
+<br>
+itself with code it writes. So what is left is empirical
+<br>
+experimentation with code (guided by deductions from already learned
+<br>
+stuff). The system needs to learn from its environment about many
+<br>
+things, including what kind of statistical environment it is - if it
+<br>
+is a smooth fitness landscape code optimization is best done by
+<br>
+hill-climbing or something similar, while on a rugged but regular
+<br>
+landscape other algorithms are needed.
+<br>
+<p>The problem here with the search is that if the current program is P
+<br>
+(which maps integers to candidate new programs which are then
+<br>
+evaluated), the empirical search process is of the form Pnew =
+<br>
+argmax_i V(P(i)) where V is the estimated value of solution
+<br>
+P(i). Hill-climbing can be seen as having programs that generate
+<br>
+programs similar to themselves, genetic algorithms would have
+<br>
+'programs' P that are really populations of programs and the deductive
+<br>
+'rationalist' approach would be a program that generates a single
+<br>
+successor that has a higher V than itself. Now, where does this search
+<br>
+end up? In the general case the landscape will not be amenable to
+<br>
+*efficient* optimization at all (due to the TANSTAAFL theorems) - any
+<br>
+initial program in the set of all seed programs will statistically do
+<br>
+just as well as any other. This is simply because most optimization
+<br>
+landscapes are completely random. 
+<br>
+<p>What about the space of code relevant for AI? Most likely it is nicer
+<br>
+than the general case, so there are some seed programs that are on
+<br>
+average better than others. But we should remember that this space
+<br>
+still contains Gödel-undecidable stuff, so it is by no means
+<br>
+simple. The issue here is whether even the most optimal seed program
+<br>
+converges towards a optimum fast enough to be interesting. To
+<br>
+complicate things, programs can increase the dimensionality of their
+<br>
+search space by becoming more complex, possibly enabling higher values
+<br>
+of V(P) but also making the search problem exponentially harder. So
+<br>
+there is a kind of limit here, where systems can quickly improve their
+<br>
+value in the first steps, but then rapidly get a search space that is
+<br>
+getting more and more unmanageable. I guess the &quot;intelligence&quot; of such
+<br>
+a system would behave like the logarithm of time or worse - definitely
+<br>
+not exponential.
+<br>
+<p>I would recommend Christoph Adami's _Introduction to Artificial Life_,
+<br>
+Sprinmger, New York 1998 for a discussion of environment
+<br>
+information gathering in evolving programs (based on his papers on
+<br>
+this; see <a href="http://www.krl.caltech.edu/~adami/cas.html">http://www.krl.caltech.edu/~adami/cas.html</a>).
+<br>
+<p>Anyway, this is getting a bit rambling, but what I hope I have showed
+<br>
+above is that having a system improve itself along some metric is
+<br>
+likely very time-consuming / resource-consuming if done in
+<br>
+parallel. Evolution has just had the time to sample a tiny fraction of
+<br>
+terrestrial genomes througghout the last billion years, and it has
+<br>
+been able to run trillions of entities in parallel. This doesn't mean
+<br>
+it is impossible to create such an intelligence bootstrapping system,
+<br>
+but it may take enormous time to produce anything. 
+<br>
+<p>It might of course turn out that there is some underlying regularity
+<br>
+in all of these fitness landscapes, some trick that makes it simple to
+<br>
+create better programs once you have found it. Then the search would
+<br>
+suddently go very much faster. But it doesn't seem likely if the
+<br>
+fitness function is not very special, given the results of Chaitin on
+<br>
+randomness and undecidability even in basic arithmetic.
+<br>
+<p>This has of course completely focused on a little box thinking happily
+<br>
+for itself, it has no connection to the external world. If we really
+<br>
+want an AI to bootstrap itself, then it would 1) likely benefit from
+<br>
+acquiring all the expensive information we have already acquired over
+<br>
+the last four billion years of evolution about the nature of our world
+<br>
+(never underestimate the effort and time the ancestors of the
+<br>
+procaryotes expended on learning metabolism!), and 2) it would need it
+<br>
+if the goal is anything beyond a box producing programs optimising
+<br>
+some arbitrary function - in the end intelligence is likely best
+<br>
+defined as how well an entity functions in its environment, and I
+<br>
+guess we are more interested in an entity that can thrive in both the
+<br>
+algorithmic and physical worlds than one that just thrives in the
+<br>
+algorithmic one.
+<br>
+<p>It should be noted that the choice of values is not just important,
+<br>
+but likely the most complex problem! There seems to be some general
+<br>
+rule (a bit of experience-based handwaving here) that if you
+<br>
+reformulate an optimisation problem so that the solution algorithm
+<br>
+becomes very simple (like a GA or neural network) then a lot of
+<br>
+efforts has to be spent on setting parameters like the fitness
+<br>
+function or network parameters; the total effort of writing the
+<br>
+algorithm, setting parameters and running it appears to be roughly
+<br>
+constant (it would be interesting to see if this can be proven). So
+<br>
+the AI value function can likely be as complex as the finished program
+<br>
+itself if the seed program is simple! I think this is because the
+<br>
+above kind of systems doesn't interact much with any external
+<br>
+environment feeding them extra information, all the algorithmic
+<br>
+complexity has to come &quot;from inside&quot;.  In real life, the harsh fitness
+<br>
+function of a complex reality already holds a tremendous amount of
+<br>
+information.
+<br>
+<p>To sum up, I doubt Colossus, even given its cameras and missiles,
+<br>
+would have been able to bootstrap itself very fast. It seems it had
+<br>
+been given a very simple value function, and that would likely lead to
+<br>
+a very slow evolution. To get a real AI bootstrap we probably need to
+<br>
+connect it a lot with reality, and reality is unfortunately rather
+<br>
+slow even when it is Internet.
+<br>
+<p><p><p>PS. I have still not pased <a href="http://xxx.lanl.gov/abs/cs.AI/0004001">http://xxx.lanl.gov/abs/cs.AI/0004001</a> yet,
+<br>
+but it seems to put some interesting bounds on the AI bootstrapping
+<br>
+process.
+<br>
+<p><pre>
+-- 
+-----------------------------------------------------------------------
+Anders Sandberg                                      Towards Ascension!
+<a href="mailto:asa@nada.kth.se?Subject=Re:%20Singularity%20optimization%20[Was:%20Colossus%20and%20the%20Singularity]&In-Reply-To=&lt;b49wvbg513g.fsf_-_@sans04.nada.kth.se&gt;">asa@nada.kth.se</a>                            <a href="http://www.nada.kth.se/~asa/">http://www.nada.kth.se/~asa/</a>
+GCS/M/S/O d++ -p+ c++++ !l u+ e++ m++ s+/+ n--- h+/* f+ g+ w++ t+ r+ !y
+</pre>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2626.html">denis bider: "RE: Scientist will try to clone a human"</a>
+<li><strong>Previous message:</strong> <a href="2624.html">Peter C. McCluskey: "Re: DiscoveryCh - AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2630.html">Eliezer S. Yudkowsky: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Reply:</strong> <a href="2630.html">Eliezer S. Yudkowsky: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Reply:</strong> <a href="2637.html">Samantha Atkins: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Maybe reply:</strong> <a href="2641.html">Anders Sandberg: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Maybe reply:</strong> <a href="2645.html">Anders Sandberg: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<li><strong>Maybe reply:</strong> <a href="2667.html">Anders Sandberg: "Re: Singularity optimization [Was: Colossus and the Singularity]"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2625">[ date ]</a>
+<a href="index.html#2625">[ thread ]</a>
+<a href="subject.html#2625">[ subject ]</a>
+<a href="author.html#2625">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:25 MDT</em>
+</em>
+</small>
+</body>
+</html>

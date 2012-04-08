@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Dithering (was Re: FWD [forteana] [More steganograp</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Dithering (was Re: FWD [forteana] [More steganography] Hidden web codes could be linked to  Bin Laden)">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Dithering (was Re: FWD [forteana] [More steganography] Hidden web codes could be linked to  Bin Laden)</h1>
+<!-- received="Thu Oct 11 14:14:49 2001" -->
+<!-- isoreceived="20011011201449" -->
+<!-- sent="Thu, 11 Oct 2001 13:13:00 -0700" -->
+<!-- isosent="20011011201300" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Dithering (was Re: FWD [forteana] [More steganography] Hidden web codes could be linked to  Bin Laden)" -->
+<!-- id="B7EB4B5B.5F82%jamesr@best.com" -->
+<!-- inreplyto="FEEHKEIJDJKMGAAFLAIMOELHDNAA.mail@HarveyNewstrom.com" -->
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Dithering%20(was%20Re:%20FWD%20[forteana]%20[More%20steganography]%20Hidden%20web%20codes%20could%20be%20linked%20to%20%20Bin%20Laden)&In-Reply-To=&lt;B7EB4B5B.5F82%25jamesr@best.com&gt;"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Thu Oct 11 2001 - 14:13:00 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0728.html">Anders Sandberg: "Re: steganography (and bin Laden)"</a>
+<li><strong>Previous message:</strong> <a href="0726.html">Harvey Newstrom: "WAR:  Praising the efforts"</a>
+<li><strong>In reply to:</strong> <a href="0722.html">Harvey Newstrom: "RE: FWD [forteana] [More steganography] Hidden web codes could be linked to  Bin Laden"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0752.html">Harvey Newstrom: "RE: Dithering (was Re: FWD [forteana] [More steganography] Hidden webcodes could be linked to  Bin Laden)"</a>
+<li><strong>Reply:</strong> <a href="0752.html">Harvey Newstrom: "RE: Dithering (was Re: FWD [forteana] [More steganography] Hidden webcodes could be linked to  Bin Laden)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#727">[ date ]</a>
+<a href="index.html#727">[ thread ]</a>
+<a href="subject.html#727">[ subject ]</a>
+<a href="author.html#727">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+On 10/11/01 9:35 AM, &quot;Harvey Newstrom&quot; &lt;<a href="mailto:mail@HarveyNewstrom.com?Subject=Re:%20Dithering%20(was%20Re:%20FWD%20[forteana]%20[More%20steganography]%20Hidden%20web%20codes%20could%20be%20linked%20to%20%20Bin%20Laden)&In-Reply-To=&lt;B7EB4B5B.5F82%25jamesr@best.com&gt;">mail@HarveyNewstrom.com</a>&gt; wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Also, counter-intuitively, adding noise actually makes it *easier* to
+</em><br>
+<em>&gt; eliminate the noise.  The more noise there is, the more statistically
+</em><br>
+<em>&gt; predictable it becomes.  Statistical analysis works better the more sample
+</em><br>
+<em>&gt; you have.  Lots of static over a longer period of time actually makes it
+</em><br>
+<em>&gt; easier to eliminate the static.
+</em><br>
+<p><p>This isn't quite right.  Adding noise increases the noise floor in exchange
+<br>
+for reducing quantization distortion.  The improvement in signal quality is
+<br>
+more apparent than real.  The human brain has an easier time rejecting noise
+<br>
+than correcting quantization distortion, so adding noise to mask the
+<br>
+distortion is a cheap solution.  In practice, sufficient bit depth will
+<br>
+eliminate quantization distortion and there is no good reason not to use
+<br>
+sufficient bit depth in many cases.  Therefore, adding noise is only
+<br>
+valuable when reducing the dynamic range of the signal to a level where the
+<br>
+quantization would become perceptible.  The noise serves only to mask the
+<br>
+quantization distortion, it does not correct it.
+<br>
+<p>A concrete example is the audio CD, which uses 16-bit encoding.  At 16-bits,
+<br>
+there is enough quantization distortion that the human ear can detect it.
+<br>
+However, most recording these days is actually done at 24-bits, which has
+<br>
+sufficient dynamic range that there is no detectable quantization; at
+<br>
+24-bits, the theoretical dynamic range is hitting the practical noise floor
+<br>
+of our environment at the atomic level.  Therefore, the 24-bit signals are
+<br>
+&quot;dithered&quot; (the technical term) down to 16-bits, minimizing the apparent
+<br>
+quantization distortion by adding noise that our brains can automatically
+<br>
+filter out.  The real effect is the reduction of the effective dynamic range
+<br>
+of the signal, but the apparent effect is a reduction of quantization
+<br>
+distortion.
+<br>
+<p>Note that this is a problem specific to digital recording of analog signals.
+<br>
+Analog recordings have a high noise floor already (analog signals are
+<br>
+equivalent to about 12-bits of digital in high end analog systems) and
+<br>
+therefore are dithered by nature; the signal gently disappears underneath a
+<br>
+sea of noise.  Digital conversions have a much lower &quot;self-noise&quot; floor, and
+<br>
+therefore quantization distortion is more noticeable as the system doesn't
+<br>
+produce enough noise to mask the quantization artifacts at the lower
+<br>
+extremes of its dynamic range, pretty much by definition.  Dithering makes
+<br>
+the digital system behave like an analog system with respect to noise, while
+<br>
+still retaining the extremely high S/N that digital systems can support.
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Dithering%20(was%20Re:%20FWD%20[forteana]%20[More%20steganography]%20Hidden%20web%20codes%20could%20be%20linked%20to%20%20Bin%20Laden)&In-Reply-To=&lt;B7EB4B5B.5F82%25jamesr@best.com&gt;">jamesr@best.com</a>
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0728.html">Anders Sandberg: "Re: steganography (and bin Laden)"</a>
+<li><strong>Previous message:</strong> <a href="0726.html">Harvey Newstrom: "WAR:  Praising the efforts"</a>
+<li><strong>In reply to:</strong> <a href="0722.html">Harvey Newstrom: "RE: FWD [forteana] [More steganography] Hidden web codes could be linked to  Bin Laden"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0752.html">Harvey Newstrom: "RE: Dithering (was Re: FWD [forteana] [More steganography] Hidden webcodes could be linked to  Bin Laden)"</a>
+<li><strong>Reply:</strong> <a href="0752.html">Harvey Newstrom: "RE: Dithering (was Re: FWD [forteana] [More steganography] Hidden webcodes could be linked to  Bin Laden)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#727">[ date ]</a>
+<a href="index.html#727">[ thread ]</a>
+<a href="subject.html#727">[ subject ]</a>
+<a href="author.html#727">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:13 MDT</em>
+</em>
+</small>
+</body>
+</html>

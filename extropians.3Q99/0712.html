@@ -1,0 +1,439 @@
+<!-- received="Thu Jul 15 17:28:37 1999 MDT" -->
+<!-- sent="Thu, 15 Jul 1999 16:26:15 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="COMP: overclocking Celerons, summary" -->
+<!-- id="14221.17702.987444.319652@lrz.de" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=316 -->
+<html><head><title>extropians: COMP: overclocking Celerons, summary</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>COMP: overclocking Celerons, summary</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Thu, 15 Jul 1999 16:26:15 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#712">[ date ]</a><a href="index.html#712">[ thread ]</a><a href="subject.html#712">[ subject ]</a><a href="author.html#712">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0713.html">[ Next ]</a><a href="0711.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+
+<p>
+"Phillip D. Matz" &lt;matz@wsunix.wsu.edu&gt;
+
+<p>
+I have two C300As overclocked to 450Mhz which have been running Win95 24/7
+since December 1998.  They have been running Gaussian 98W, a molecular
+modeling program which is fpu intensive, nonstop 24/7 as well.  The computers
+have no overclocking stability issues with G98W, btw it has been my experience
+that if a pc is stable enough to run a gaussian calculation without crashing
+then nothing will crash it.
+<hr>
+<br>
+From: "Donald B. Kinghorn" &lt;kinghorn@U.Arizona.EDU&gt;
+
+<p>
+I'd like to make two comments;
+
+
+<OL>
+  <li>  I do (very) high precision QM energy calculations with wave function
+optimizations that may run for months --- I would be very uneasy
+about publishing new energy upper bounds that were computed with
+hardware that was pushed beyond specifications.  Maybe it's safe but
+I wouldn't want to stake my reputation on it.  [Remember the FOOF bug?
+For a short time results computed on Intel hardware were unpublishable.]
+
+  <li>  A killer machine for one problem may be a piece of junk for another problem.
+
+
+</OL>
+<p>
+[I think this has been stated several times] The memory subsystem can have<br>
+a large impact on performance for some calculations.
+Example:
+<br>
+I put together a PII400 system with 128M PC100 cas 2 SDRAM and was
+casually testing it against a PPro 180 system with 128MB 60ns DIMM (at 60MHz)
+The PPro has 256k full speed cache and the PII400 has 512k 1/2 speed cache.
+(some other difference too I assume)
+<br>
+For "small" jobs the PII400 was basically twice as fast as the PPro180.
+For "large" jobs (80MB RSS) the PII400 was about 3.5 times faster!!
+<br>
+[there was no disk or network IO on either system during the calc's]<br>
+I was very surprised by this. I can only assume that it was due to the
+(overall) faster memory subsystem on the PII400 system.
+
+<p>
+[I'm eagerly awaiting a K7 system with a 200MHz memory subsystem<br>
+that might be real interesting if the price is right]
+
+<p>
+Bottom line: A system is only killer if it works well on your problems
+and gives you results that you can use.
+
+<p>
+but please don't stop experimenting with the overclocking --- this is
+very interesting stuff. [I'm going to try it too]   :-)
+<hr>
+<br>
+From: Glenn Plas &lt;glenn.plas@mchugh.com&gt;
+
+<p>
+Duh, the right link to the SMP smackdown is:
+
+<p>
+<a href="http://www.ars-technica.com/cpu/3q99/smp/smp-1.html">http://www.ars-technica.com/cpu/3q99/smp/smp-1.html</a>  I switched the 'cpu' 
+part to 'spu'.  Copy/pasting the link was too much trouble :P huh ...
+Sorry for the extra mail.
+
+<p>
+I was not going to post the vendors at first, I was a little worried some 
+of you would think I was making free publicity.  But the place I bought it 
+supports 100% 'the cause', meaning 'the overclockers cause'.   I got my 
+CPU's over international mail from the US to Belgium (yes, the only 
+chicken-less, coke-less lil' country in Europe for a while if you followed 
+the news lately).  The place is called <a href="http://www.outsideloop.com">http://www.outsideloop.com</a> .  Take a 
+look at their site, they are cool. Their prices might be a little higher 
+than others but they hand-pick Processor  batches and for a buck or 10 more 
+you have a guaranteed OC'er.  Lemme tell you that what they charge over 
+there for their stuff + VAT + shipping oversea to my front door in Europe 
+costs less than buying the stuff over here.  And a lot of the stores DO not 
+ship outside the US.  Heads up for them.
+
+<p>
+There are other vendors that I know a lot of my fellow clockers use (almost 
+all in the US unfortunately for us Euro's).   One of my favorite sites 
+among ARS is HardOCP ( <a href="http://www.hardocp.com">http://www.hardocp.com</a> ).  There are links to Azzo 
+Computing and Dallasmemory and other shops known in the field.
+
+<p>
+The 300a thing is indeed a good question.  I would still go for them I 
+think considering their price.  The main reason is because they easily run 
+at 100Mhz FSB.  Since Intel knows people are seriously clocking them, all 
+the new PPGA celeron's available today have huge multipliers (6, 7, etc ..) 
+now since they are supposedly only good according to Intel for the 66 Mhz 
+Bus.  When you set the FSB to 100Mhz, a multiplier of 7 is just too good to 
+be true.  (700Mhz anyone ?? :P).  As a side effect when clocking in the 
+case of high multiplier locks, you'll have to use a different FSB (83, 75, 
+etc ) to achieve a stable system.  This has implications for the PCI bus 
+running seriously out of spec at 40 +mhz in some cases because the PCI bus 
+divider on most motherboards instead of the default speed of 33 Mhz .  At 
+66 Mhz and 100Mhz the divider becomes respectively 1/2 and 1/3 .
+
+<p>
+In short, in that case you're overclocking every CARD in your PC , more 
+correct your whole system.  Most lower end cards blow chow on that. 
+ Sometimes this can be safely done but the successrate is less.  Your 
+mileage WILL vary.   The latest news is that the 366 PPGA celeron is a 
+ good candidate.  But then the Epox KP6-BS is not a good choice since it 
+does not have a lot of different FSB's possibities.   I would defo go for 
+the Abit Dual BP6 Mobo in that case.   In fact, that motherboard wasn't out 
+yet when I designed my system, otherwise I would've taken that one.  No 
+SLOT1/PPGA convertors to mess with.
+
+<p>
+Pfff, my hands hurt.
+
+<p>
+Here are my specs:
+
+<p>
+2 * cele 300a @ 504
+<br>
+2 * MSI 6905 Ver. 1.1 S370
+<br>
+Epox KP6-BS dual board
+<br>
+Adaptec U2W 2940 SCSI
+<br>
+IBM U2W LVD 4.5 GIG System HD (don't know the type# by heart)
+Quantum Fireball 6 Gigger file-storage HD
+Intel Etherexpress Pro 100 fast ethernet NIC
+2*  Creative Labs VoodooII (SLI)
+<br>
+Creative Labs RIVA TNT (AGP)
+<br>
+Somewhat older ISA Creative AWE64 Sound blaster
+198 Meg SDRam (6ns) 1 * 128 from Siemens and 1 * 64 from Samsung (Micron is 
+also a very good brand, go for atleast CAS2 ram)
+2 * GlobalWin CPM25603-16 CPU cooler/heatsink combo
+2 Case 25 cfm 12V blowers Nidec Gamma 30 (extra ones on top of the standard 
+case fans) <a href="http://www.nidec.com/gamma30.html">http://www.nidec.com/gamma30.html</a>
+Case Supermicro SC 750A <a href="http://www.supermicro.com/PRODUCT/Chassis/sc750.htm">http://www.supermicro.com/PRODUCT/Chassis/sc750.htm</a> 
+MGE UPS Pulsar 750VA 8+
+
+<p>
+And my shoesize is a 9 and a half  :-] thus a 43 in Europe
+
+<p>
+Good luck,
+
+<p>
+/// Glenn
+
+<p>
+Linux -is- user  friendly.   It's  just very selective about who its   | 
+friends are.  And sometimes even best friends have fights
+
+<p>
+-----Original Message-----
+<pre>
+From:	Fulton CR (Charles) [SMTP:fultoncr@ucarb.com]
+Sent:	Wednesday, July 14, 1999 4:12 PM
+To:	'glenn.plas@mchugh.com'
+Subject:	a very nice system (from beowulf list)
+
+</pre>
+<p>
+Glenn,
+
+<p>
+Any chance you could send me a full listing of all the parts in your system
+w/ approx prices. I've started doing some research on the feasability of
+building a dual system at home. Your system sounds quite nice.
+
+<p>
+I tried the link at arstechnica.com but it didnt work. but that is a very
+nice site thanks.
+
+<p>
+If you were building it today would you still use the cel. 300a's ?
+
+<p>
+Also any hints for online purchasing would be great. I always like to see
+other ppl's resources. well this is just the thing that is going to make my
+new bride very upset hehehe. "Another computer!!!" :)
+
+<p>
+thanks in advance,
+
+<p>
+-charlie.
+
+<p>
+p.s.
+
+<p>
+I just wanted to mail direct since this is kinda off topic.
+
+
+<p>
+&lt;your sys&gt;
+<br>
+motherboard - Epox KP6-BS motherboard (200$?) (slot1)
+processors - 2 Celeron 300a overclocked to ~504Mhz
+case - ?
+<br>
+extras - 2 Nidec Gamma 30 blowers
+<br>
+hd (s) (scsi/ide?) -
+<br>
+ram -
+<br>
+video card(s) - 3dfx vodoo2
+<br>
+sound card -
+<br>
+&lt;/your sys&gt;
+
+
+<pre>
+&gt; The most important thing perhaps is cooling.   The CPU coolers I have are 
+&gt; the best of breed(globalwin).  Also I've spent a lot of  money on a very
+&gt; good case (one that has very good airflow) with 2 extra Nidec Gamma 30
+&gt; blowers.   The second most important is the PSU.  Go for 300 WATTS or
+&gt; more.
+&gt;   I've seen huge powerdrops on the -12v and the +12 Volt line when
+&gt; starting
+&gt; Quake3 when this board was still in an old case.  That does not help
+&gt; stability.
+&gt;
+&gt; On Tue, 13 Jul 1999, Glenn Plas wrote:
+&gt;
+&gt; &gt; I have made a (non beowulf) dual Celeron machine based on the Epox
+&gt; &gt; KP6-BS motherboard.  It is a SLOT 1 motherboard .  I used 2 MSI 6905 
+</pre>
+rev
+<pre>
+&gt; &gt; 1.1 Slotkets to SMP-enable the PPGA celerons'.  It also allows you to
+&gt; &gt; overclock them.  I'm currently running Suse 6.1 on it.  The Celeron's
+&gt; &gt; are 300a AkA hard-to-get these days. They are clocked stable at 504 
+</pre>
+Mhz.
+<pre>
+&gt; &gt; yes, you read that, I clocked them 204 Mhz higher than their specs.
+&gt; &gt; It's outside the scope maybe but I'll continue anyway.  It's the
+&gt; &gt; cheapest wy to build a rocking fast dual box.  504 is not a guaranteed
+&gt; &gt; FSB though.  450Mhz is reached with almost all 300a's (FSB 66 -&gt; FSB
+&gt; &gt; 100_), 464 with a FSB of 103 is being reached by a lot of people too.
+&gt; &gt; 504 is more an exception.
+&gt;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</pre>
+Glenn Plas &lt;glenn.plas@mchugh.com&gt;
+
+<p>
+nlike your statement, the Celeron is not from the same core as the PII. 
+ As a mather of fact it's design looks more like the Intel Xeon PII than 
+the regualar PII.
+<br>
+The Celeron's Core is Mendocino. The PII's core are either a 
+ Klamath/Deschutes core  .  the big difference is the on die L2 cache, 
+which runs at core speed.   The PII's cache runs at core speed / 2.
+Celeron's really rock.  Intel's money cow, the PII is just a big joke. 
+  The celeron's that run at the same core speed as a PII kicks serious 
+butt.  Including PIII's.
+<br>
+Because of the bad rep the first cacheless Celeron's had,  the CPU was 
+destined to be sold to the lower segment of the market.   And that's great, 
+because 'we' can buy dirt cheap CPU's  that rock.
+
+<p>
+Also, PC100 RAM has totally no advantage if you're Front bus speed is set 
+too 66Mhz.  Like someone stated before,  celeron's overclock easily.  Abit 
+motherboards are your friends.
+<br>
+Take a look at the BP6 Motherboard from abit.  A dual PPGA motherboard and 
+probably one of the most stable boards in the world. (and cheap ..)
+
+<p>
+As long as no program uses the new KNI instruction set for the PIII,  it's 
+really a waste of money to pay 3 times as much for it than the cost of King 
+Celeron.
+
+
+
+<p>
+/// Glenn
+
+<p>
+Unix -is- user  friendly.   It's  just very selective about who its   | 
+friends are.  And sometimes even best friends have fights
+
+
+<p>
+-----Original Message-----
+<pre>
+From:	Robert G. Brown [SMTP:rgb@phy.duke.edu]
+Sent:	Tuesday, July 13, 1999 11:35 PM
+To:	Christopher J. Morrone
+Cc:	Conor Masterson; beowulf@beowulf.gsfc.nasa.gov
+Subject:	Re: Fast Ethernet - worth it?
+
+</pre>
+<p>
+On Tue, 13 Jul 1999, Christopher J. Morrone wrote:
+
+<pre>
+&gt; On Tue, 13 Jul 1999, Conor Masterson wrote:
+&gt;
+&gt; &gt; Hi,
+&gt; &gt;
+&gt; &gt; &gt; &gt; BTW: AMD K-6 CPUs - good, bad or indifferent?
+&gt; &gt; &gt;
+&gt; &gt; &gt; For  FPU intensive tasks K6 is in general not a good choice, for 
+</pre>
+integer operations K6 is a good choice. But maybe AMD-K7 will change the 
+FPU dominance of Intel stuff.
+<pre>
+&gt; &gt;
+&gt; &gt; We're also looking at buying a Beowulf cluster for a CPU/floating point 
+&gt; &gt; intensive application, and Intel Celeron 466 CPUs seem to be the best 
+</pre>
+value,
+<br>
+&gt; &gt; as they have the same performance on that type of application as PII's, 
+the
+<br>
+&gt; &gt; only difference being a smaller L2 cache. You can also get a dual 
+Celeron box
+<br>
+&gt; &gt; for roughly the price of a single PII of the same speed. Has anybody 
+tried
+<pre>
+&gt; &gt; this configuration?
+&gt;
+&gt; Doesn't the Celeron limit you to 66MHz memory access vs the PII's 100MHz
+&gt; memory access?
+
+</pre>
+<p>
+Yes, but for many things this doesn't seem to matter much.  For others,
+of course, it will.  I've a bunch of applications (including my
+numerical Monte Carlo code, but other stuff too) that runs within 5% of
+the same speed on PII's and Celerons, with or without PC100 SDRAM.  This
+isn't unreasonable -- the PII and Celeron share the same core.
+
+<p>
+For many things, clock speed rules.  For others, cache size and memory
+speed are important.  In my mind (because my applications fit in the
+former category) the Celeron is the best deal on the market -- a beowulf
+node can be built for as little as $350 with careful shopping, and it is
+pretty easy to build nodes for $500-750 (depending on how much memory
+and disk and what kind of network).  This is pretty close to what PIII
+processors cost all by themselves.
+
+<p>
+Between the Celeron at one end (most TOPS/FLOPS/IPS per dollar) and the
+21264 Alpha at the other (most TOPS/FLOPS per node at a still-sane cost
+per dollar) is a vast wasteland of less-than-optimal cost benefit where
+only a few people will be wise to buy.  To find out if you're one of
+them, you pretty much have to benchmark and test, ideally with the
+actual application you plan to run.  Realize that you can get two, maybe
+three 466 MHz Celeron systems for what a single 500 MHz PIII system
+costs -- there has to be a pretty significant advantage to the PIII to
+make it worth it.
+
+<p>
+   rgb
+<hr>
+<br>
+From: "Phillip D. Matz" &lt;matz@wsunix.wsu.edu&gt;
+
+<p>
+Allow me to specify in greater detail the comments I made in the previous post.
+
+<p>
+I have a genuine 450MHz PII system (no overclock) which I run gaussian98
+calculations on.  I have the two previously mentioned C300As overclocked to 450MHz,
+and I have a K6-2 333MHz system (so a total of 4 different computers).
+
+<p>
+Now, it does NOT matter which computer I run a gaussian98 on I ALWAYS get the same
+answers (energies, MO coefficients, etc.).  I have checked and rechecked my results
+between all four computers as well as published results in the literature (JACS, J
+Chem Phys, Etc.).  If these calculations are subject to ANY hardware derived errors
+then all four of the above machines must share that same flaw.
+
+<p>
+Also, my reference to the stability of an overclocked computer with respect to
+gaussian98 is derived from the following.  First, all four cpus listed above can
+still be further overclocked without any degradation in system stability during
+normal usage (i.e. running netscape to check my email).  In fact they can all be
+overclocked another 12% (100MHz FSB -&gt; 112MHz FSB) and run just fine (i.e. no
+crashes or errors when running any/all my current software programs) until I attempt
+to run a gaussian98 calculation.  For some reason the gaussian98 code seems
+particularly sensitive to cpus operating in their marginally unstable regions.  I
+have verified that this phenomena is not an artifact of the 112MHz bus since the K6
+is not clock-multiplier locked and the motherboard can go up to 124MHz FSB with no
+g98 issues unless I also try and clock the cpu above 333MHz.  Bottom line is that if
+your computer is overclocked and does not crash when running G98W then I would say
+it is as stable as it will ever need to be.
+
+<p>
+Phillip Matz
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0713.html">[ Next ]</a><a href="0711.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

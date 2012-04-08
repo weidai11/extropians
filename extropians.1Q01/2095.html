@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: CODE: Programming project required</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="CODE: Programming project required">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>CODE: Programming project required</h1>
+<!-- received="Mon Jan 22 13:18:43 2001" -->
+<!-- isoreceived="20010122201843" -->
+<!-- sent="Mon, 22 Jan 2001 12:17:00 -0800" -->
+<!-- isosent="20010122201700" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="CODE: Programming project required" -->
+<!-- id="5.0.2.1.0.20010122111444.00ac3320@shell9.ba.best.com" -->
+<!-- inreplyto="028301c0847c$fdc919c0$320120c2@squashy2000" -->
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20CODE:%20Programming%20project%20required&In-Reply-To=&lt;5.0.2.1.0.20010122111444.00ac3320@shell9.ba.best.com&gt;"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Mon Jan 22 2001 - 13:17:00 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2096.html">James Rogers: "RE: Programming project required"</a>
+<li><strong>Previous message:</strong> <a href="2094.html">natashavita@earthlink.net: "Re: HTML question (off topic)"</a>
+<li><strong>In reply to:</strong> <a href="2029.html">Emlyn: "Re: Programming project required"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2146.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<li><strong>Reply:</strong> <a href="2146.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<li><strong>Reply:</strong> <a href="2150.html">Emlyn: "Re: CODE: Programming project required"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2095">[ date ]</a>
+<a href="index.html#2095">[ thread ]</a>
+<a href="subject.html#2095">[ subject ]</a>
+<a href="author.html#2095">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+At 11:39 PM 1/22/2001 +0930, Emlyn wrote:
+<br>
+<em>&gt; &gt; Errrr....I take it that you don't really know how to use SQL*Plus?  Things
+</em><br>
+<em>&gt; &gt; like conditionals, loops, etc are all supported natively inside SQL*Plus
+</em><br>
+<em>&gt; &gt; without doing any of the stuff you are talking about.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;Damn, caught out; I really don't know it well at all, apparently. Do you
+</em><br>
+<em>&gt;have some good links to resources on this? The ones I found were less than
+</em><br>
+<em>&gt;good. Loops? Conditionals? Do I have to beg?
+</em><br>
+<p><p>Heh.  Seriously, people who have been using Oracle for years usually don't 
+<br>
+realize just how much they don't know.  Most people consider me to be an 
+<br>
+expert on Oracle development and I *still* regularly learn new and useful 
+<br>
+things about the product.  I don't know of any links to resources, but some 
+<br>
+of the third party books like O'Reilly's are good (avoid Oracle's books, as 
+<br>
+they are basically tree dumps of the online docs).
+<br>
+<p>To get the most out of the Oracle environment you need to know a few 
+<br>
+things.  Most importantly, you need to learn PL/SQL and learn it 
+<br>
+well.  PL/SQL is an Ada-like language (should be trivial for you, since you 
+<br>
+know Delphi), is very easy to learn for an experienced programmer, and 
+<br>
+gives you all the procedural constructs you need.  However, it has some 
+<br>
+quirks and oddities that nothing but experience will teach.  The O'Reilly 
+<br>
+book (PL/SQL Programming) is the best reference on the language that I know 
+<br>
+of.  The beauty of PL/SQL isn't that it is a wonderful language (it isn't 
+<br>
+-- much too verbose), but that you can embed PL/SQL procedural blocks into 
+<br>
+just about everything in Oracle.  You can mingle PL/SQL code with your 
+<br>
+SQL/commands/environment/etc in SQL*Plus (what you are looking for).  You 
+<br>
+can use PL/SQL to extend the SQL syntax (e.g. you can use custom procedural 
+<br>
+logic in your WHERE clauses).  There are also a bunch of standard libraries 
+<br>
+in PL/SQL that allow you to interact with various parts of the system 
+<br>
+(scheduling jobs, accessing files, etc).  Additionally, you can link shared 
+<br>
+libraries into Oracle and map the call interfaces to PL/SQL to extend the 
+<br>
+functionality and effectively give an unlimited number of 
+<br>
+capabilities.  And generally speaking, nothing runs faster for doing 
+<br>
+procedural database logic, though it is dog slow for many other things 
+<br>
+(like arithmetic).  The details of how to do all these things is in the 
+<br>
+documentation.
+<br>
+<p>The other thing you need to learn is SQL*Plus.  This is a pain, but 
+<br>
+necessary.  PL/SQL lets you do what you want, but SQL*Plus sets up the 
+<br>
+environment and controls the scripts.  But it isn't as important to learn 
+<br>
+SQL*Plus very well as it is to learn PL/SQL very well; if you don't know 
+<br>
+PL/SQL, you are missing out on a significant portion of the functionality 
+<br>
+in Oracle.  When everything is set up right and you know what you are 
+<br>
+doing, you end up with a relatively rich scripting environment that allows 
+<br>
+you to build your own components and tools in a fashion similar to Unix 
+<br>
+tradition.
+<br>
+<p><p><em>&gt;&quot;DBAs exist to keep developers from getting bored.&quot; - can I have this as a
+</em><br>
+<em>&gt;quote?
+</em><br>
+<p><p>Sure.
+<br>
+<p><p><em>&gt;Do I remember that you do really scary code generation stuff? The memory is
+</em><br>
+<em>&gt;vague.
+</em><br>
+<p><p>Yes, but my bread-n-butter is system and application architecture on big 
+<br>
+Oracle systems.
+<br>
+<p>Cheers,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20CODE:%20Programming%20project%20required&In-Reply-To=&lt;5.0.2.1.0.20010122111444.00ac3320@shell9.ba.best.com&gt;">jamesr@best.com</a>
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2096.html">James Rogers: "RE: Programming project required"</a>
+<li><strong>Previous message:</strong> <a href="2094.html">natashavita@earthlink.net: "Re: HTML question (off topic)"</a>
+<li><strong>In reply to:</strong> <a href="2029.html">Emlyn: "Re: Programming project required"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2146.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<li><strong>Reply:</strong> <a href="2146.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<li><strong>Reply:</strong> <a href="2150.html">Emlyn: "Re: CODE: Programming project required"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2095">[ date ]</a>
+<a href="index.html#2095">[ thread ]</a>
+<a href="subject.html#2095">[ subject ]</a>
+<a href="author.html#2095">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:22 MDT</em>
+</em>
+</small>
+</body>
+</html>

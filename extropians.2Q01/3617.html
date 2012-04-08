@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: How to help create a singularity.</title>
+<meta name="Author" content="Eugene.Leitl@lrz.uni-muenchen.de (Eugene.Leitl@lrz.uni-muenchen.de)">
+<meta name="Subject" content="Re: How to help create a singularity.">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: How to help create a singularity.</h1>
+<!-- received="Tue May  1 15:27:50 2001" -->
+<!-- isoreceived="20010501212750" -->
+<!-- sent="Tue, 01 May 2001 21:15:36 +0200" -->
+<!-- isosent="20010501191536" -->
+<!-- name="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: How to help create a singularity." -->
+<!-- id="3AEF0B58.514BDCFE@lrz.uni-muenchen.de" -->
+<!-- inreplyto="000601c0d246$aa074240$bf4902c1@x" -->
+<strong>From:</strong> <a href="mailto:Eugene.Leitl@lrz.uni-muenchen.de?Subject=Re:%20How%20to%20help%20create%20a%20singularity.&In-Reply-To=&lt;3AEF0B58.514BDCFE@lrz.uni-muenchen.de&gt;"><em>Eugene.Leitl@lrz.uni-muenchen.de</em></a><br>
+<strong>Date:</strong> Tue May 01 2001 - 13:15:36 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3618.html">GBurch1@aol.com: "Re: META: Posting news [was: Re: NANO: IBM breakthrough for making chips with..."</a>
+<li><strong>Previous message:</strong> <a href="3616.html">J. R. Molloy: "Re: Near-term stuff"</a>
+<li><strong>In reply to:</strong> <a href="3588.html">Aleks Jakulin: "Re: How to help create a singularity."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3634.html">Samantha Atkins: "Re: How to help create a singularity."</a>
+<li><strong>Reply:</strong> <a href="3634.html">Samantha Atkins: "Re: How to help create a singularity."</a>
+<li><strong>Reply:</strong> <a href="3669.html">Aleks Jakulin: "Re: How to help create a singularity."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3617">[ date ]</a>
+<a href="index.html#3617">[ thread ]</a>
+<a href="subject.html#3617">[ subject ]</a>
+<a href="author.html#3617">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Aleks Jakulin wrote:
+<br>
+&nbsp;
+<br>
+<em>&gt; I agree. But progress is usually made with baby steps, not jumps. When the needs
+</em><br>
+<em>&gt; are demonstrated, the solutions will follow. Hardware is very conservative ---
+</em><br>
+<p>Hi Aleks. Trouble is, if you ask the average software developer whether
+<br>
+he'll need three order of magnitude faster computers, and he'll look at
+<br>
+you askance. For many of them computers are plenty fast already.
+<br>
+<p><em>&gt; many have been burned by providing something that was eventually not supported.
+</em><br>
+<em>&gt; Practically nobody will throw a technology on the market without knowing how it
+</em><br>
+<em>&gt; will be used. Even fascinating technologies such as FPGA are marginalized,
+</em><br>
+<p>Yes, the debacles are many, and well documented. Shrinking profit margins
+<br>
+make for highly risk aversive R&amp;D.
+<br>
+<p><em>&gt; because they're too radical. And in any case, before you implement something in
+</em><br>
+<em>&gt; hardware, it has to be simulated and demonstrated in software.
+</em><br>
+<p>The problem is high prototyping costs of modern hardware. It is the
+<br>
+pipeline setup time if you're running a new design through the fab. 
+<br>
+Modern foundries can't afford to goof around with outlandish 
+<br>
+architectures. They're trying to keep the production capabilities 
+<br>
+saturated with cash chips, and gather whatever profits there are 
+<br>
+left for the war chest, i.e. legal battles, economical maneuvring 
+<br>
+and putting the rest into surefire returns, such as developing 
+<br>
+your next line of products, in structure shrinks and touching 
+<br>
+finishes on core logic. Nevertheless, judging from the job alerts 
+<br>
+of a single foundry (I track Infineon), they're gearing up to do 
+<br>
+a lot with embedded RAM designs, and preparing for nonvolatile 
+<br>
+memories. 
+<br>
+<p>More minimal cores like StrongARM do dominate the deep embedded
+<br>
+market, and they're seeming to be considered as good candidates
+<br>
+for very large clusters due to their better OPS/Watt performance,
+<br>
+as well as handheld (-&gt;wearable) market. Google has just doubled 
+<br>
+their capacities to include 8 k nodes. At this cluster sizes 
+<br>
+footprint, energy consumption and air conditioning costs become
+<br>
+the biggest numbers on the budget, apart from people, of course.
+<br>
+<p>Message passing hardware support is moving into next generation
+<br>
+of consumer processors (AMDs HyperTransport), so things do move.
+<br>
+<p><em>&gt; An interesting challenge is how to work well with architectures such as CA's.
+</em><br>
+<em>&gt; Right now it seems that they're used either as a machine code equivalent for
+</em><br>
+<em>&gt; logic expressed as &quot;traditional&quot; serial code, or for evolved computational
+</em><br>
+<em>&gt; circuits. It seems to me that a new generation of significantly more
+</em><br>
+<p>There are two principally different ways of implementing CAs in hardware:
+<br>
+as embedded RAM, or hardwiring the individual cells. Embedded RAM implementations
+<br>
+optimize for cell density, and allow you to use higher dimensions, allowing
+<br>
+you to use e.g. 3d lattices with their shorter average distances, and
+<br>
+more space to lay around the signalling pipework. But they're relatively 
+<br>
+slow, because they're updated more or less sequentially. Hardwiring the 
+<br>
+individual cells gives you blazing speed, but limits you to the plane.
+<br>
+<p>Hardware CAs are sufficiently lunatic fringe that I would attempt to make 
+<br>
+them accept silicon compiler output with as little tweaking as possible. 
+<br>
+I.e. use registers, wires, and blocks of logics mapped to the CA grid, 
+<br>
+with the benefit of deterministic, quantized signal behaviour.
+<br>
+<p>Of course this is grave substrate underutilization, but it gets your foot
+<br>
+into the door. And once foundries output these wafers, you can introduce
+<br>
+variations (use more or less state per cell, change the rule, change
+<br>
+the neighbourhood) with much less costs, and allow you tailoring for
+<br>
+other paradigms entirely, without not changing the hardware visibly.
+<br>
+<p><em>&gt; sophisticated tools are required to take advantages of notions like heuristics
+</em><br>
+<em>&gt; or modules.
+</em><br>
+[...]
+<br>
+<em>&gt; I generally agree. The main dilemma is how many heuristics should people
+</em><br>
+<em>&gt; provide -- on one hand there might be genetic algorithms, on the other
+</em><br>
+<em>&gt; hand-coded &quot;intelligence&quot;. My position is somewhere in between, as I believe
+</em><br>
+<em>&gt; yours too.
+</em><br>
+<p>I'm actually pretty much at the extreme side, pro using as much GA 
+<br>
+messiness as it is humanly possible. The modularization (which is 
+<br>
+clearly present in biological systems) should emerge naturally, and 
+<br>
+not be human meddling handiwork. It might be funny to submit human 
+<br>
+designs into the genetic soup, though, and see what might evolve.
+<br>
+<p><em>&gt; Minsky had a nice way of saying it, something along these lines: if natural
+</em><br>
+<em>&gt; evolution of intelligence took 200 million years, common sense and reason might
+</em><br>
+<em>&gt; take far less. The quest is for the most efficient approach (thus realistically
+</em><br>
+<em>&gt; feasible), not the simplest theoretically feasible.
+</em><br>
+<p>I'm all for the practical approach, but the product of skills, time
+<br>
+and hardware at my disposal doesn't allow me to do anything funky.
+<br>
+Perhaps I should wait for these desktop nanolithoprinters I mentioned.
+<br>
+&nbsp;
+<br>
+<em>&gt; &gt; I hope you like it in there, where you're sitting. I've been there myself,
+</em><br>
+<em>&gt; &gt; briefly, but thankfully, have gotten better since.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I do not quite understand what you mean here. Could you explain?
+</em><br>
+<p>Apologies for the flippant comment. I thought you were a strong AI adherent
+<br>
+such as Eliezer. I was referring to the time when I read Elaine Rich,
+<br>
+Hofstadter and Minsky, and all kinds of weird AI journals, and believed 
+<br>
+their approach was not sterile. This was about 15 years ago. Then I got
+<br>
+a bad case of cellular automata, complexity, resulting in processing of
+<br>
+lots of dead tree labeled with Fredkin, Toffioli, Holland, Koza, Kauffman, 
+<br>
+Wolfram, and their illustrous ilk. I still haven't recovered yet. 
+<br>
+I'm looking for other infections material, but so far haven't found
+<br>
+much. Maybe I've become immune, that would be a pity.
+<br>
+&nbsp;
+<br>
+<em>&gt; &gt; We don't need no compilation//we don't need no flow control.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Even we monkeys have multiple layers of behavior control, some are reflexive and
+</em><br>
+<em>&gt; fast, others are reflective and flexible.
+</em><br>
+<p>Absolutely. But we don't have kLoCs inside us, nor sequential threads of control
+<br>
+(funny that consciousness should seem to absurdly sequential to introspection),
+<br>
+and generally do not suffer from privilege violations. I think computers should
+<br>
+be more like monkeys, not the other way round.
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3618.html">GBurch1@aol.com: "Re: META: Posting news [was: Re: NANO: IBM breakthrough for making chips with..."</a>
+<li><strong>Previous message:</strong> <a href="3616.html">J. R. Molloy: "Re: Near-term stuff"</a>
+<li><strong>In reply to:</strong> <a href="3588.html">Aleks Jakulin: "Re: How to help create a singularity."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3634.html">Samantha Atkins: "Re: How to help create a singularity."</a>
+<li><strong>Reply:</strong> <a href="3634.html">Samantha Atkins: "Re: How to help create a singularity."</a>
+<li><strong>Reply:</strong> <a href="3669.html">Aleks Jakulin: "Re: How to help create a singularity."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3617">[ date ]</a>
+<a href="index.html#3617">[ thread ]</a>
+<a href="subject.html#3617">[ subject ]</a>
+<a href="author.html#3617">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 10:00:01 MDT</em>
+</em>
+</small>
+</body>
+</html>

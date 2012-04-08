@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: TECH: Database independence</title>
+<meta name="Author" content="Samantha Atkins (samantha@objectent.com)">
+<meta name="Subject" content="Re: TECH: Database independence">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: TECH: Database independence</h1>
+<!-- received="Tue Oct  9 02:38:25 2001" -->
+<!-- isoreceived="20011009083825" -->
+<!-- sent="Tue, 09 Oct 2001 01:39:02 -0700" -->
+<!-- isosent="20011009083902" -->
+<!-- name="Samantha Atkins" -->
+<!-- email="samantha@objectent.com" -->
+<!-- subject="Re: TECH: Database independence" -->
+<!-- id="3BC2B7A6.4D353E12@objectent.com" -->
+<!-- inreplyto="7A2B25F8EB070940996FA543A70A217B03CA99@ADLEXSV02" -->
+<strong>From:</strong> Samantha Atkins (<a href="mailto:samantha@objectent.com?Subject=Re:%20TECH:%20Database%20independence&In-Reply-To=&lt;3BC2B7A6.4D353E12@objectent.com&gt;"><em>samantha@objectent.com</em></a>)<br>
+<strong>Date:</strong> Tue Oct 09 2001 - 02:39:02 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0599.html">Amara Graps: "Re: the naked q hypothesis"</a>
+<li><strong>Previous message:</strong> <a href="0597.html">Joe Dees: "Re: This War Is Not About Terror, But About Islam (Article)"</a>
+<li><strong>In reply to:</strong> <a href="0587.html">Emlyn O'regan: "TECH: Database independence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0608.html">scerir: "Bose-Einstein condensate:100th Nobel Prize"</a>
+<li><strong>Reply:</strong> <a href="0608.html">scerir: "Bose-Einstein condensate:100th Nobel Prize"</a>
+<li><strong>Reply:</strong> <a href="0623.html">Reason: "RE: TECH: Database independence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#598">[ date ]</a>
+<a href="index.html#598">[ thread ]</a>
+<a href="subject.html#598">[ subject ]</a>
+<a href="author.html#598">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Emlyn O'regan wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Hi all,
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I've got a technical question, so I hope there are some technically minded
+</em><br>
+<em>&gt; people out there (erm...). Warning to non-IT types... you will likely find
+</em><br>
+<em>&gt; this entire post entirely pointless, so switch off now!
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I'm doing YADA work at the moment (Yet Another Database App), and I've run
+</em><br>
+<em>&gt; into an old problem for which there never seems to be a really good
+</em><br>
+<em>&gt; solution. This particular app is targetted at RDBMS Brand X (actually it's
+</em><br>
+<em>&gt; Sybase), and now there is a need to retarget it to another RDBMS. I am
+</em><br>
+<em>&gt; positive that more databases will creep into the story over time, so this is
+</em><br>
+<em>&gt; the old database-independent-app problem.
+</em><br>
+<em>&gt; 
+</em><br>
+<p>I hear you!
+<br>
+<p>This is actually close to my speciality.  I've been doing
+<br>
+persistence middleware and object persistence especially for a
+<br>
+lot of the last 15 years.  My speciality is object persistence
+<br>
+and especially through middleware I created.  I just finished
+<br>
+the grand opus of this work (unfortunately proprietary to my
+<br>
+employer for now) in Java.  The performance is quite good.  The
+<br>
+system includes in memory caching, multiple threading, its own
+<br>
+lock manager and an adapter framework for plugging in different
+<br>
+database products.  It doesn't matter if they are even of the
+<br>
+same type (all relational for instance).  At the top the
+<br>
+applications only see the middleware API.  Also included is
+<br>
+builtin support for binary relations, persistent collections and
+<br>
+persistent queues.  There is room in the architecture to scale
+<br>
+and distribute the lock manager and cache and to support
+<br>
+language adapters for different software language object and
+<br>
+structure persistence.   The system supports dynamically
+<br>
+difining new object/structs whose instances can then be
+<br>
+persisted, queried, related to other instances and so on.
+<br>
+<p><p><p><em>&gt; The big drama with retargetting the app is the mighty mountain of SQL which
+</em><br>
+<em>&gt; is database specific. RDBMSs are supposed to follow standards with their SQL
+</em><br>
+<em>&gt; - yeah, right. While they do look superficially similar, SQL dialects differ
+</em><br>
+<em>&gt; in fundamental join syntax, in built in functions, in the kinds of primitive
+</em><br>
+<em>&gt; data types they provide operators for, etc. This can be a really big hassle,
+</em><br>
+<em>&gt; and from an ongoing maintenance point of view it is big enough to be a
+</em><br>
+<em>&gt; project killer, especially if it forces a codebase to be forked into one
+</em><br>
+<em>&gt; copy for each database to be targetted.
+</em><br>
+<em>&gt;
+</em><br>
+<p>What is needed to make a middleware approach work is to
+<br>
+concentrate on the type of persistence services that are needed
+<br>
+for your domain of applications instead of diving down
+<br>
+immediately into SQL blues.  Build a good layer for giving that
+<br>
+which sits on top of adapters which abstract out the vagaries
+<br>
+that are driving you nuts.  
+<br>
+&nbsp;
+<br>
+<em>&gt; In the past I've worked on systems using various approaches to solving this
+</em><br>
+<em>&gt; problem, from parallel code bases for each database (yes, really!
+</em><br>
+<em>&gt; urrgghh....), through database tables full of alternate forms of queries for
+</em><br>
+<em>&gt; each desired database (still nasty to maintain), even apps which try to
+</em><br>
+<em>&gt; stick to a common simple subset of SQL which works across all dbs (a noble
+</em><br>
+<em>&gt; but doomed approach). The nicest approach I've used so far was a system I
+</em><br>
+<em>&gt; built for translating the SQL from one database's dialect to another at run
+</em><br>
+<em>&gt; time, so that I could stick to one brand of SQL with impunity (within some
+</em><br>
+<em>&gt; restrictions).
+</em><br>
+<em>&gt;
+</em><br>
+<p>Embedding SQL of any flavor within the application code already
+<br>
+produces cognitive dissonance, known in the industry as
+<br>
+&quot;impedance mismatch&quot;. 
+<br>
+&nbsp;
+<br>
+<em>&gt; I'm really truly sick of this stupid problem popping up all the time, and I
+</em><br>
+<em>&gt; think it's time to nail it. I've got some ideas for the Grand Solution to
+</em><br>
+<em>&gt; proprietary database evilness, and I'm ready to go and build these solutions
+</em><br>
+<em>&gt; myself. However, before I go off half cocked, I was hoping others could
+</em><br>
+<em>&gt; share their experiences with this common problem, solutions they've
+</em><br>
+<em>&gt; used/know of. I don't want to reinvent the wheel, but the best that google
+</em><br>
+<em>&gt; has been able to tell me is that yes, this really is a problem without a
+</em><br>
+<em>&gt; decent solution, and for which one may buy all manner of half baked partial
+</em><br>
+<em>&gt; fixes. If people can help me get a decent feel for what is available to
+</em><br>
+<em>&gt; address this problem, I can move forward in some sensible manner.
+</em><br>
+<p>Perhaps the above could give you some ideas.  If your world is
+<br>
+guaranteed to be always relational then it can make sense to
+<br>
+base middleware first on an ODBC adapter.   This gives you the
+<br>
+most coverage the most cheaply.  
+<br>
+<p>- samantha
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0599.html">Amara Graps: "Re: the naked q hypothesis"</a>
+<li><strong>Previous message:</strong> <a href="0597.html">Joe Dees: "Re: This War Is Not About Terror, But About Islam (Article)"</a>
+<li><strong>In reply to:</strong> <a href="0587.html">Emlyn O'regan: "TECH: Database independence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0608.html">scerir: "Bose-Einstein condensate:100th Nobel Prize"</a>
+<li><strong>Reply:</strong> <a href="0608.html">scerir: "Bose-Einstein condensate:100th Nobel Prize"</a>
+<li><strong>Reply:</strong> <a href="0623.html">Reason: "RE: TECH: Database independence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#598">[ date ]</a>
+<a href="index.html#598">[ thread ]</a>
+<a href="subject.html#598">[ subject ]</a>
+<a href="author.html#598">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:12 MDT</em>
+</em>
+</small>
+</body>
+</html>

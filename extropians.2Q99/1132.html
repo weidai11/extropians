@@ -1,0 +1,73 @@
+<!-- received="Mon May  3 10:21:11 1999 MDT" -->
+<!-- sent="Tue, 4 May 1999 02:21:03 +1000 (GMT+1000)" -->
+<!-- name="Alejandro Dubrovsky" -->
+<!-- email="s335984@student.uq.edu.au" -->
+<!-- subject="Re: Information &amp; Power /Alexandria library" -->
+<!-- id="Pine.OSF.4.10.9905040205190.17090-100000@student.uq.edu.au" -->
+<!-- inreplyto="372D0A7E.2A03D1EF@lorrey.com" -->
+<!-- version=1.10, linesinbody=36 -->
+<html><head><title>extropians: Re: Information &amp; Power /Alexandria library</title>
+<meta name=author content="Alejandro Dubrovsky">
+<link rel=author rev=made href="mailto:s335984@student.uq.edu.au" title ="Alejandro Dubrovsky">
+</head><body>
+<h1>Re: Information &amp; Power /Alexandria library</h1>
+Alejandro Dubrovsky (<i>s335984@student.uq.edu.au</i>)<br>
+<i>Tue, 4 May 1999 02:21:03 +1000 (GMT+1000)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1132">[ date ]</a><a href="index.html#1132">[ thread ]</a><a href="subject.html#1132">[ subject ]</a><a href="author.html#1132">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1133.html">[ Next ]</a><a href="1131.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1122.html">Michael S. Lorrey</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1292.html">KPJ</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+On Sun, 2 May 1999, Michael S. Lorrey wrote:
+
+<p>
+<a href="1122.html#1132qlink1">&gt; Ross A. Finlayson wrote:</a><br>
+<i>&gt; &gt; </i><br>
+<i>&gt; &gt; The biggest threat to the entirety of regular Internet WWW functionality is DNS,</i><br>
+<i>&gt; &gt; in terms of global connectivity, although any size of DNS names might be cached</i><br>
+<i>&gt; &gt; anywhere.</i><br>
+<i>&gt; </i><br>
+<i>&gt; The entire DNS database is updated regularly on every web server at</i><br>
+<i>&gt; every ISP, so there is not threat to its being destroyed. Thats why they</i><br>
+<i>&gt; are called name servers. When you request a page from a site, your ISP's</i><br>
+<i>&gt; webserver looks up the DNS and its corresponding IP address, then</i><br>
+<i>&gt; queries the network for the data from that IP address. The routers take</i><br>
+<i>&gt; that query and send it to the next closer router, etc. The system does</i><br>
+<i>&gt; not query network solutions' registry every time.</i><br>
+
+<p>
+<a name="1292qlink2">Each DNS at each ISP holds a minuscule share of the entire database, most
+definitely not the entire database.  It can cache requests that go through
+it but that only for a short time (usually one hour) and only of the
+request done on it. A DNS usually only holds the IP table for whatever
+domains it is acting as a master or as a secondary for, and usually you
+only have two servers knowing the IPs for a subdomain.  Whatever ISP you
+are using does not have a clue what IP corresponds to
+s335984.student.uq.edu.au but the root servers know who the dns master for
+edu.au is (munnari.oz.au), who still doesn't know the ip but it knows that
+the master dns for uq.edu.au is krefti.uq.edu.au, and so on.  This system
+enables each dns to respond quickly to name lookups since they only have
+to hold a couple of name to ip matchings but it does mean that it is
+fragile.  If the 7 or 8 root servers were taken down all cross domain
+lookups (eg from .edu to .com, or from .gov to .uk) would fail after</a> the
+corresponding caches expire (1 to 3 hours).
+chau
+<br>
+Alejandro Dubrovsky
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1133.html">[ Next ]</a><a href="1131.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1122.html">Michael S. Lorrey</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1292.html">KPJ</a>
+</ul>
+</body></html>

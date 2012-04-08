@@ -1,0 +1,235 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: META: Russell instructs us on how to filter him</title>
+<meta name="Author" content="Joe Dees (joedees@addall.com)">
+<meta name="Subject" content="META: Russell instructs us on how to filter him">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>META: Russell instructs us on how to filter him</h1>
+<!-- received="Thu Jan 11 08:22:13 2001" -->
+<!-- isoreceived="20010111152213" -->
+<!-- sent="Thu, 11 Jan 2001 07:21:41 -0800" -->
+<!-- isosent="20010111152141" -->
+<!-- name="Joe Dees" -->
+<!-- email="joedees@addall.com" -->
+<!-- subject="META: Russell instructs us on how to filter him" -->
+<!-- id="200101111521.HAA12442@mail15.bigmailbox.com" -->
+<strong>From:</strong> Joe Dees (<a href="mailto:joedees@addall.com?Subject=Re:%20META:%20Russell%20instructs%20us%20on%20how%20to%20filter%20him&In-Reply-To=&lt;200101111521.HAA12442@mail15.bigmailbox.com&gt;"><em>joedees@addall.com</em></a>)<br>
+<strong>Date:</strong> Thu Jan 11 2001 - 08:21:41 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0908.html">Michael S. Lorrey: "True Military Applications of Nanotech"</a>
+<li><strong>Previous message:</strong> <a href="0906.html">Joe Dees: "Russell's Favorite Things to Kill With, If He Ever Does"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0915.html">Harvey Newstrom: "FLAME: Joe Dees and Russell Whitaker STOP IT!"</a>
+<li><strong>Reply:</strong> <a href="0915.html">Harvey Newstrom: "FLAME: Joe Dees and Russell Whitaker STOP IT!"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#907">[ date ]</a>
+<a href="index.html#907">[ thread ]</a>
+<a href="subject.html#907">[ subject ]</a>
+<a href="author.html#907">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+ ('binary' encoding is not supported, stored as-is)
+<em>&gt;From: &quot;Russell Whitaker&quot; &lt;<a href="mailto:russell_whitaker@hotmail.com?Subject=Re:%20META:%20Russell%20instructs%20us%20on%20how%20to%20filter%20him&In-Reply-To=&lt;200101111521.HAA12442@mail15.bigmailbox.com&gt;">russell_whitaker@hotmail.com</a>&gt;
+</em><br>
+<em>&gt;To: <a href="mailto:extropians@extropy.org?Subject=Re:%20META:%20Russell%20instructs%20us%20on%20how%20to%20filter%20him&In-Reply-To=&lt;200101111521.HAA12442@mail15.bigmailbox.com&gt;">extropians@extropy.org</a>
+</em><br>
+<em>&gt;Subject: META: tutorial: set up your own lunatic filter
+</em><br>
+<em>&gt;Date: Thu, 11 Jan 2001 07:57:32 -0000
+</em><br>
+<em>&gt;Reply-To: <a href="mailto:extropians@extropy.org?Subject=Re:%20META:%20Russell%20instructs%20us%20on%20how%20to%20filter%20him&In-Reply-To=&lt;200101111521.HAA12442@mail15.bigmailbox.com&gt;">extropians@extropy.org</a>
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;Howdy.  For those uninterested in having their mailboxes
+</em><br>
+<em>&gt;cluttered with lunatic rants, here's a tutorial on how
+</em><br>
+<em>&gt;to set up a lunatic filter.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;This assumes that you receive your list mail through an
+</em><br>
+<em>&gt;ISP running some flavor of Unix with a standard local MDA
+</em><br>
+<em>&gt;(mail delivery agent) such as /bin/mail or /usr/local/bin/procmail.
+</em><br>
+<em>&gt;(I do, but have it forwarded to Hotmail for convenience.)
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;Make sure your shell account host has procmail available
+</em><br>
+<em>&gt;for use (do a &quot;which procmail&quot; at a shell prompt).
+</em><br>
+<em>&gt;If available:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;1.) Create directory ~/.procmail:
+</em><br>
+<em>&gt;  % mkdir ~/.procmail
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;2.) Create file ~/.procmailrc with these contents
+</em><br>
+<em>&gt;(modify with actual user values):
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;PATH=/bin:/usr/bin:/usr/local/bin:/home/&lt;username&gt;/bin  # example path
+</em><br>
+<em>&gt;PMDIR=$HOME/.procmail  # literal directory name: location of filter
+</em><br>
+<em>&gt;rules and log file
+</em><br>
+<em>&gt;MAILDIR=$HOME/mail    # example directory: filtered mail spooled here
+</em><br>
+<em>&gt;DEFAULT=$HOME/inbox   # example default mailspool: could be 
+</em><br>
+<em>&gt;/var/mail/&lt;username&gt; on some systems
+</em><br>
+<em>&gt;LOGFILE=$PMDIR/procmail.log  # you'll want this for debugging
+</em><br>
+<em>&gt;VERBOSE=off
+</em><br>
+<em>&gt;SHELL=/bin/sh
+</em><br>
+<em>&gt;INCLUDERC=$PMDIR/rc.devnull  # name of your procmail recipe file
+</em><br>
+<em>&gt;COMSAT=off
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;3.) In directory ~/.procmail, create your procmail recipes
+</em><br>
+<em>&gt;file (in this case &quot;rc.devnull&quot;), with contents like this
+</em><br>
+<em>&gt;(the exact example here being merely theoretical):
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;# save mail filtered on the &quot;From&quot; line match to $MAILDIR/russellwhitaker,
+</em><br>
+<em>&gt;# for future amusement, or evidence.
+</em><br>
+<em>&gt;:0
+</em><br>
+<em>&gt;* ^From:.*<a href="mailto:russellwhitaker@hotmail.com?Subject=Re:%20META:%20Russell%20instructs%20us%20on%20how%20to%20filter%20him&In-Reply-To=&lt;200101111521.HAA12442@mail15.bigmailbox.com&gt;">russellwhitaker@hotmail.com</a>
+</em><br>
+<em>&gt;russellwhitaker
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;or
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;# simply discard mail from example destination
+</em><br>
+<em>&gt;:0
+</em><br>
+<em>&gt;* ^From:.*<a href="mailto:russellwhitaker@hotmail.com?Subject=Re:%20META:%20Russell%20instructs%20us%20on%20how%20to%20filter%20him&In-Reply-To=&lt;200101111521.HAA12442@mail15.bigmailbox.com&gt;">russellwhitaker@hotmail.com</a>
+</em><br>
+<em>&gt;/dev/null
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;4.) Create or modify your ~/.forward file to contain:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;&lt;username&gt;,   # usually, your local username
+</em><br>
+<em>&gt;&quot;|IFS=' '&amp;&amp;exec /usr/local/bin/procmail -f-||exit 75 #&lt;username&gt;&quot;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;&quot;/usr/local/bin/procmail&quot; is a typical location; use the value of
+</em><br>
+<em>&gt;&quot;which procmail&quot; above or &quot;/usr/bin/env procmail&quot; if your
+</em><br>
+<em>&gt;system supports it.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;Some enlightened sysadmins actually have procmail
+</em><br>
+<em>&gt;set up as the local MDA, in which case step #4 above is
+</em><br>
+<em>&gt;unnecessary.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;At least one emotionally unbalanced person on this list
+</em><br>
+<em>&gt;has threatened to change email addresses if list members
+</em><br>
+<em>&gt;don't listen to his rants.  That's OK.  Once he shows
+</em><br>
+<em>&gt;up and engages in similar rants, it's easy to add recipe lines
+</em><br>
+<em>&gt;to ~/.procmail/rc.devnull.  It takes much less effort to
+</em><br>
+<em>&gt;add the recipe than it does for that person to change email
+</em><br>
+<em>&gt;addresses.  Let him waste time trying.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;Here's a reference if you're interested:
+</em><br>
+<em>&gt;&quot;<a href="http://userpages.umbc.edu/~ian/procmail.html">http://userpages.umbc.edu/~ian/procmail.html</a>&quot;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;Have fun,
+</em><br>
+<em>&gt;Russell
+</em><br>
+<em>&gt;_________________________________________________________________
+</em><br>
+<em>&gt;Get your FREE download of MSN Explorer at <a href="http://explorer.msn.com">http://explorer.msn.com</a>
+</em><br>
+<p><p><p><p>------------------------------------------------------------
+<br>
+Looking for a book? Want a deal? No problem AddALL!
+<br>
+<a href="http://www.addall.com">http://www.addall.com</a> compares book price at 41 online stores.
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0908.html">Michael S. Lorrey: "True Military Applications of Nanotech"</a>
+<li><strong>Previous message:</strong> <a href="0906.html">Joe Dees: "Russell's Favorite Things to Kill With, If He Ever Does"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0915.html">Harvey Newstrom: "FLAME: Joe Dees and Russell Whitaker STOP IT!"</a>
+<li><strong>Reply:</strong> <a href="0915.html">Harvey Newstrom: "FLAME: Joe Dees and Russell Whitaker STOP IT!"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#907">[ date ]</a>
+<a href="index.html#907">[ thread ]</a>
+<a href="subject.html#907">[ subject ]</a>
+<a href="author.html#907">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:18 MDT</em>
+</em>
+</small>
+</body>
+</html>

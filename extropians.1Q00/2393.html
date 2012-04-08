@@ -1,0 +1,417 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: NANO: Hacking assembler security</TITLE>
+<META NAME="Author" CONTENT="Charlie Stross (charlie@antipope.org)">
+<META NAME="Subject" CONTENT="NANO: Hacking assembler security">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>NANO: Hacking assembler security</H1>
+<!-- received="Wed Feb  9 07:03:19 2000" -->
+<!-- isoreceived="20000209140319" -->
+<!-- sent="Wed, 9 Feb 2000 14:02:58 +0000" -->
+<!-- isosent="20000209140258" -->
+<!-- name="Charlie Stross" -->
+<!-- email="charlie@antipope.org" -->
+<!-- subject="NANO: Hacking assembler security" -->
+<!-- id="20000209140257.A27858@antipope.org" -->
+<STRONG>From:</STRONG> Charlie Stross (<A HREF="mailto:charlie@antipope.org?Subject=Re:%20NANO:%20Hacking%20assembler%20security&In-Reply-To=&lt;20000209140257.A27858@antipope.org&gt;"><EM>charlie@antipope.org</EM></A>)<BR>
+<STRONG>Date:</STRONG> Wed Feb 09 2000 - 07:02:58 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2394.html">Neal Marin: "Re: Hey, does anybody know any really spectacular sites with decent articles on DNA?"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2392.html">Sarah Lawrence: "Re: best-of-extropians?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2434.html">hal@finney.org: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2434.html">hal@finney.org: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2489.html">hal@finney.org: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2544.html">Ramez Naam: "RE: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2591.html">Delvieron@aol.com: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2744.html">Delvieron@aol.com: "Re: NANO: Hacking assembler security"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2393">[ date ]</A>
+<A HREF="index.html#2393">[ thread ]</A>
+<A HREF="subject.html#2393">[ subject ]</A>
+<A HREF="author.html#2393">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+I was bouncing a couple of ideas about with some of my colleagues
+<BR>
+today, discussing how to shut down the internet. (We're an e-commerce
+<BR>
+enabler firm -- we processess credit cards. So security is a perennial 
+<BR>
+obsession.) Somehow we drifted onto the topic of distributed denial
+<BR>
+of service attacks such as TriNoo and Tribe Flood Network and whatever
+<BR>
+took down Yahoo yesterday; and we also got onto the topic of the RTM
+<BR>
+worm.
+<BR>
+<P>&lt;SIDE_TRACK&gt;
+<BR>
+<P>&nbsp;&nbsp;I like metaphors. (I'm not particularly bright, and they make it easier
+<BR>
+&nbsp;&nbsp;for me to grasp weird new technologies and explore their possibilities.
+<BR>
+&nbsp;&nbsp;When they work properly, that is.) I particularly like the metaphor of the
+<BR>
+&nbsp;&nbsp;nanotech assembler (or the ribosome, for that matter) as being a compiler.
+<BR>
+<P>&nbsp;&nbsp;(I think I already mentioned the idea of using the Thompson Hack to
+<BR>
+&nbsp;&nbsp;prevent assemblers being used for the construction of obvious weapons
+<BR>
+&nbsp;&nbsp;of mass destruction, even in an environment where the blueprints for
+<BR>
+&nbsp;&nbsp;assemblers are widespread, leading to the proliferation of customized
+<BR>
+&nbsp;&nbsp;nanoassemblers for special tasks. I'm still trying to explore this idea's
+<BR>
+&nbsp;&nbsp;implications, using the compiler metaphor. If you bear with me through
+<BR>
+&nbsp;&nbsp;the software discussion I'll get to the grey goop ...)
+<BR>
+<P>&lt;/SIDE_TRACK&gt;
+<BR>
+<P>While we were discussing DDoS attacks, a couple of paranoid ideas occured
+<BR>
+to me.  The first was: how is it possible to set up a DDoS attack in the
+<BR>
+first place? Obviously, you need to spread the DDoS clients to as many
+<BR>
+host systems as possible. This typically requires a degree of social
+<BR>
+engineering insofar as you need to make people trust you enough to run
+<BR>
+your system -- relying on an external intrusion (like the RTM worm)
+<BR>
+may work once, and is vastly easier in a monoculture, but isn't necessarily
+<BR>
+reliable: if someone else discovers the security hole your worm relies on
+<BR>
+and patches it before you pull the trigger, you've lost.
+<BR>
+<P>One way of earning trust is to look like something else -- something
+<BR>
+that obviously needs to take data from a central source and do something
+<BR>
+with it, but something that is nevertheless benign.  For example,
+<BR>
+take Seti@Home. The Seti@Home clients are closed-source! They regularly
+<BR>
+download batches of data, process it in mysterious ways, and upload the
+<BR>
+results to a central server. If I was an infowarrior from Big Black,
+<BR>
+I'd be drooling at the prospects and doing my damndest to get my hands
+<BR>
+on the Seti@Home network. All it takes is a minor modification to the
+<BR>
+client software, so that if it sees a data set with a certain attribute,
+<BR>
+it triggers a fork()/exec() and executes the data set as a process instead
+<BR>
+of processing it as SETI data. This would enable a hypothetical attacker,
+<BR>
+who has set themselves up by disguising themselves as a charitable concern
+<BR>
+like Seti@Home or distributed.net, to launch a massive simultaneous DDoS
+<BR>
+attack on some target, by downloading DDoS client software disguised as
+<BR>
+a new SETI dataset.
+<BR>
+<P>(If you have access to the operating system authors and the compiler
+<BR>
+sources as well, you can do something even more scary: the Thompson
+<BR>
+hack springs to mind again. _Anything_ that grabs data from a socket and
+<BR>
+writes it to a file handle can be turned into a vicious trojan if it
+<BR>
+sees a specific signature in its data stream, and you'll never be able
+<BR>
+to find it unless you keep a low-level debugger pointed at your kernel,
+<BR>
+because it's your TCP/IP stack that has been compromised.)
+<BR>
+<P>But I digress ...
+<BR>
+<P>Nanoassemblers will exist in an economy. They will be used as matter
+<BR>
+compilers, and they will be operated on source code at the discretion of
+<BR>
+their owners. Thus, scope for human engineering creeps in. Having kicked
+<BR>
+around the idea of what you can do to a single compromised, untrustworthy
+<BR>
+strain of assembler, I'm trying to figure out what you can do with a
+<BR>
+_distributed_ assembler hack.
+<BR>
+<P>The Thompson hack basically lets you create compilers that scan their
+<BR>
+input stream for some signature and snitch on you (or execute some
+<BR>
+arbitrary payload) if they see it. The nasty sting in the tail of
+<BR>
+this idea is that the scanner/payload isn't visible in the source code
+<BR>
+to the compiler; because one of the scanner/payload combinations in a
+<BR>
+contaminated compiler is designed to add the patch whenever it recognizes
+<BR>
+its own source code being re-compiled. With application to assemblers
+<BR>
+(or, more likely, their control software aboard the nanocomputers used
+<BR>
+to direct them), this would mean that if you try to assemble some grey
+<BR>
+goo, the assembler will recognize the grey goo, and assemble something
+<BR>
+else instead -- probably a pair of handcuffs.  And you can't build an
+<BR>
+assembler that _won't_ snitch on you without doing it by hand, without
+<BR>
+involving any off-the-shelf assemblers in the process: because they'll
+<BR>
+try to propagate the Thompson hack into your new &quot;clean&quot; assembler.
+<BR>
+<P>The logical next step, if we view this as an enforcement arms race, is
+<BR>
+for the guys in the black hats to look for ways around the hack. Two
+<BR>
+ways spring to mind:
+<BR>
+<P>#1  Build a clean assembler. To do this, build unrecognizable tools
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;(at least, to the scanners in the contaminated assemblers) that can
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;be combined to build something that can compile a clean assembler.
+<BR>
+<P>#2  Build a weapon than doesn't look like a weapon to the contaminated
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;assemblers. 
+<BR>
+<P>I suspect #2 is going to be easier. And I'd look to a distributed service
+<BR>
+attack propagated by human engineering as a way of doing this without 
+<BR>
+detection. 
+<BR>
+<P>&lt;EXAMPLE&gt;
+<BR>
+<P>*  This is a firearm-free district. The nanoassembly of GAU-27s is
+<BR>
+&nbsp;&nbsp;&nbsp;banned (as is private ownership of ICBMs). The ban is enforced by
+<BR>
+&nbsp;&nbsp;&nbsp;snitch patterns that all local assemblers recognize. The patterns
+<BR>
+&nbsp;&nbsp;&nbsp;are regularly updated with all the open-source algorithms for 
+<BR>
+&nbsp;&nbsp;&nbsp;gatling assembly that are floating around the net.
+<BR>
+<P>*  Building a GAU-27 isn't a single task (&quot;stuck ingredients in vat,
+<BR>
+&nbsp;&nbsp;&nbsp;add assemblers, wave magic wand, remove anti-tank gun&quot;). Different
+<BR>
+&nbsp;&nbsp;&nbsp;components require different treatments and need to be brought together
+<BR>
+&nbsp;&nbsp;&nbsp;in sequence to produce a whole machine.
+<BR>
+<P>*  The snitch circuits specifically target critical path steps in the
+<BR>
+&nbsp;&nbsp;&nbsp;production cycle that are characteristic of building a gatling gun
+<BR>
+&nbsp;&nbsp;&nbsp;(&quot;insert six tubes through performated metal disk; align with 
+<BR>
+&nbsp;&nbsp;&nbsp;convergence angle foo, weld into position&quot;) rather than any other
+<BR>
+&nbsp;&nbsp;&nbsp;structure (&quot;lay down a perforated metal disk bar centimetres in
+<BR>
+&nbsp;&nbsp;&nbsp;diameter, quux millimetres thick ...&quot;) that might be part of something
+<BR>
+&nbsp;&nbsp;&nbsp;else. In fact, it'll probably take a sequence of such steps to
+<BR>
+&nbsp;&nbsp;&nbsp;distinctively identify the fact that the assembler is working on a
+<BR>
+&nbsp;&nbsp;&nbsp;GAU-27, as opposed to, say, a replica steam engine boiler. (Lots of
+<BR>
+&nbsp;&nbsp;&nbsp;parallel tubes held in place by welding ...)
+<BR>
+<P>*  Therefore the job of the black hats is to distribute the critical steps
+<BR>
+&nbsp;&nbsp;&nbsp;in the construction sequence so that no one assembler (or family tree
+<BR>
+&nbsp;&nbsp;&nbsp;of assemblers, if they're building a macroscopic artefact and tracking
+<BR>
+&nbsp;&nbsp;&nbsp;suspicious patterns from generation to generation via some sort of 
+<BR>
+&nbsp;&nbsp;&nbsp;analog of telomeres in their instruction set) gets to see the full
+<BR>
+&nbsp;&nbsp;&nbsp;picture.
+<BR>
+<P>*  It might be as simple as &quot;stop: alert human operator! Eject pipe-like
+<BR>
+&nbsp;&nbsp;&nbsp;structures and disk from tank! Await new material input.&quot;  While the 
+<BR>
+&nbsp;&nbsp;&nbsp;humans take care of the step the pattern recognizers are looking for.
+<BR>
+<P>*  More likely, it'll be along the lines of a piece of spam saying &quot;hi!
+<BR>
+&nbsp;&nbsp;&nbsp;Here's a real cool design for a gold bee that you can use as living
+<BR>
+&nbsp;&nbsp;&nbsp;jewellery! Feed me to your household assembler now!&quot; -- Carrying a 
+<BR>
+&nbsp;&nbsp;&nbsp;payload that will migrate to a final assembly ground using GPS or 
+<BR>
+&nbsp;&nbsp;&nbsp;whatever to navigate, then self-assemble (at a macroscopic scale) 
+<BR>
+&nbsp;&nbsp;&nbsp;into something nasty.
+<BR>
+<P>&lt;/EXAMPLE&gt;
+<BR>
+<P>On a large scale a nanotech attack may be an analogue of the seti@home
+<BR>
+corruption described above -- one that works on a system where people
+<BR>
+download designs from a trusted source, build them, then post them to
+<BR>
+a destination that will make use of them, all with the idea of doing
+<BR>
+something useful. (&quot;You too can help colonize Tau Ceti! Download our
+<BR>
+designs for an endothermic neutron irradiation source and help manufacture
+<BR>
+DT fuel pellets in the comfort of your own home! Send your upload to
+<BR>
+the stars!&quot; And all the time you're sending the Traditional IRA splinter
+<BR>
+group fusion pellets for their forthcoming H-bomb campaign against the 
+<BR>
+EU.)  
+<BR>
+<P>This sort of cooperative attack _will_ happen; it's just too tempting.
+<BR>
+Here's another example: 
+<BR>
+<P>&lt;EXAMPLE&gt;
+<BR>
+<P>You drive GNU station wagon 18.3, the Emacs of the automotive world.
+<BR>
+GNUsw is a great car. You have to paint it yourself, but it comes with
+<BR>
+steam, diesel, coal, nuclear, and solar power options, two to sixteen
+<BR>
+wheels, optional hovercraft assist, and it's self-repairing. (And it's
+<BR>
+a free design, unlike Ford's latest style offering that looks infinitely
+<BR>
+nicer but expires after twelve months unless you keep paying your license 
+<BR>
+fees.)
+<BR>
+<P>GNUsw just happens to have a facility for auto-upgrading itself: it 
+<BR>
+periodically downloads a set of design improvements from the Free Hardware
+<BR>
+Foundation's CVS archive, fabricates them, and integrates them into
+<BR>
+its structure. 
+<BR>
+<P>This works fine ... until the black hats get at the Free Hardware
+<BR>
+Foundation. They suborn the FHF archive, and publish a &quot;design
+<BR>
+improvement&quot; that lies dormant until a certain date, then turns a station
+<BR>
+wagon into the equivalent of an M1A2. On that date, suddenly your car
+<BR>
+turns into a vicious armoured killing machine -- along with those of
+<BR>
+sixteen million of your neighbours.  The scanners embedded in the GNUsw's
+<BR>
+own assembler suite don't spot the purpose of this design change because
+<BR>
+the tanks aren't actually carrying guns -- when you weigh sixty tons and
+<BR>
+can outrun a Jaguar you don't _need_ to :) -- and the tanks are still
+<BR>
+basically land-going passenger vehicles. The lethal bit is the control
+<BR>
+software, which has a pattern recognizer for humans that will make the
+<BR>
+tanks chase them until they turn into red smears.
+<BR>
+<P>(By the way, it's not just GNU I'm picking on here; the same attack could
+<BR>
+easily come through a closed-source commercial venture. It's equivalent to
+<BR>
+the macro viruses so common today on Windows; a vulnerability caused by
+<BR>
+the system having facilities to permit self-extension, combined with the
+<BR>
+ability to execute instructions sent from an implicitly trusted source.)
+<BR>
+<P>&lt;/EXAMPLE&gt;
+<BR>
+<P>Summary:
+<BR>
+<P>* Nanoassemblers are compilers.
+<BR>
+<P>* As such, they can be rigged to &quot;snitch&quot; if used to build something
+<BR>
+&nbsp;&nbsp;undesirable.
+<BR>
+<P>* The logical response to this is to use a distributed attack that causes
+<BR>
+&nbsp;&nbsp;no one assembler family to build something undesirable.
+<BR>
+<P>* Artefacts that posess the capability to autonomously extend or modify
+<BR>
+&nbsp;&nbsp;themselves are very vulnerable to this sort of attack.
+<BR>
+<P>* So are distributed networks that process instructions from a remote host.
+<BR>
+<P>Can anyone pick any holes in this line of thought?
+<BR>
+<P><P><P><P><P>-- Charlie
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2394.html">Neal Marin: "Re: Hey, does anybody know any really spectacular sites with decent articles on DNA?"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2392.html">Sarah Lawrence: "Re: best-of-extropians?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2434.html">hal@finney.org: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2434.html">hal@finney.org: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2489.html">hal@finney.org: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2544.html">Ramez Naam: "RE: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2591.html">Delvieron@aol.com: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2744.html">Delvieron@aol.com: "Re: NANO: Hacking assembler security"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2393">[ date ]</A>
+<A HREF="index.html#2393">[ thread ]</A>
+<A HREF="subject.html#2393">[ subject ]</A>
+<A HREF="author.html#2393">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:03:35 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: CODE: Programming project required</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: CODE: Programming project required">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: CODE: Programming project required</h1>
+<!-- received="Thu Jan 25 18:44:23 2001" -->
+<!-- isoreceived="20010126014423" -->
+<!-- sent="Thu, 25 Jan 2001 17:43:12 -0800" -->
+<!-- isosent="20010126014312" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: CODE: Programming project required" -->
+<!-- id="5.0.2.1.0.20010125161207.00acb630@shell9.ba.best.com" -->
+<!-- inreplyto="3A70ACFD.4EDABE09@lrz.uni-muenchen.de" -->
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20CODE:%20Programming%20project%20required&In-Reply-To=&lt;5.0.2.1.0.20010125161207.00acb630@shell9.ba.best.com&gt;"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Thu Jan 25 2001 - 18:43:12 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2513.html">Damien Broderick: "RE: Breaking News: World is 10 deg chillier"</a>
+<li><strong>Previous message:</strong> <a href="2511.html">hal@finney.org: "Re: Things extropians agree on"</a>
+<li><strong>In reply to:</strong> <a href="2492.html">Eugene.Leitl@lrz.uni-muenchen.de: "Re: CODE: Programming project required"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2150.html">Emlyn: "Re: CODE: Programming project required"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2512">[ date ]</a>
+<a href="index.html#2512">[ thread ]</a>
+<a href="subject.html#2512">[ subject ]</a>
+<a href="author.html#2512">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+At 11:47 PM 1/25/2001 +0100, Eugene wrote:
+<br>
+<p><em>&gt;James, as a professional, what is your assessment of recently released
+</em><br>
+<em>&gt;MySQL 3.23 as compared to Oracle and other (OpenSource) competitors?
+</em><br>
+<p><p>MySQL isn't in the same class largely because it was originally designed 
+<br>
+with very different goals, and the current code base reflects this.  MySQL 
+<br>
+was designed to be lightweight, fast, and simple.  It was not designed to 
+<br>
+be a large-scale robust database, and this is reflected in the internals.
+<br>
+<p>The biggest problem is that MySQL lacks a proper kernel, though I won't go 
+<br>
+into details regarding specific deficiencies.  As Monty will tell you, 
+<br>
+there is no one on the team really qualified to develop a proper database 
+<br>
+kernel.  Therefore, the existing kernel is amateurish in a large number of 
+<br>
+respects and takes some rather naive approaches to scalable and robust 
+<br>
+design, or in many cases, it doesn't even attempt to be scalable.  The 
+<br>
+result is a chimera that has been jury-rigged together and extended in ways 
+<br>
+that no one foresaw, and shows a lack of foresight in general.  Some of the 
+<br>
+hacks, though correct in the context of the source tree, are so inelegant 
+<br>
+that it should be criminal.  They've been clumsily gluing in third-party 
+<br>
+code to try and extend the capabilities of the engine (e.g. the SleepyCat 
+<br>
+code), but this has limits.  This is my primary reason for having a rather 
+<br>
+negative outlook on it.
+<br>
+<p>However, this could be solved by having a few qualified software engineers 
+<br>
+design and build a scalable and complete database kernel from the ground up 
+<br>
+and then porting the SQL layer to it.  A well-implemented and full-featured 
+<br>
+C language kernel that is enterprise-ready typically weighs in at 20-30k 
+<br>
+LoC (I've seen super-clean and elegant ones as small as 15 kLoC) and could 
+<br>
+easily be done by a few competent software engineers with experience in 
+<br>
+this domain within 6 months, though it would take a little time for the top 
+<br>
+layers to catch up with the bottom layers.
+<br>
+<p>My two cents...
+<br>
+<p>-James Rogers
+<br>
+&nbsp;&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20CODE:%20Programming%20project%20required&In-Reply-To=&lt;5.0.2.1.0.20010125161207.00acb630@shell9.ba.best.com&gt;">jamesr@best.com</a>
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2513.html">Damien Broderick: "RE: Breaking News: World is 10 deg chillier"</a>
+<li><strong>Previous message:</strong> <a href="2511.html">hal@finney.org: "Re: Things extropians agree on"</a>
+<li><strong>In reply to:</strong> <a href="2492.html">Eugene.Leitl@lrz.uni-muenchen.de: "Re: CODE: Programming project required"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2150.html">Emlyn: "Re: CODE: Programming project required"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2512">[ date ]</a>
+<a href="index.html#2512">[ thread ]</a>
+<a href="subject.html#2512">[ subject ]</a>
+<a href="author.html#2512">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:25 MDT</em>
+</em>
+</small>
+</body>
+</html>

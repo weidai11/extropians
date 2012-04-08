@@ -1,0 +1,163 @@
+<!-- received="Sun Feb  9 18:17:53 1997 MDT" -->
+<!-- sent="Sun, 09 Feb 1997 18:51:22 -0600" -->
+<!-- name="Eliezer Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: The Meaning of Life" -->
+<!-- id="199702100007.SAA21110@neuman.interaccess.com" -->
+<!-- inreplyto="The Meaning of Life" -->
+<title>extropians: Re: The Meaning of Life</title>
+<h1>Re: The Meaning of Life</h1>
+Eliezer Yudkowsky (<i>sentience@pobox.com</i>)<br>
+<i>Sun, 09 Feb 1997 18:51:22 -0600</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2435">[ date ]</a><a href="index.html#2435">[ thread ]</a><a href="subject.html#2435">[ subject ]</a><a href="author.html#2435">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2436.html">Natasha V. Mor: "Re: Goodbye"</a>
+<li> <b>Previous message:</b> <a href="2434.html">Paul Dietz: "Re: lib fic"</a>
+<li> <b>Maybe in reply to:</b> <a href="2594.html">John K Clark: "The Meaning of Life"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="2458.html">Eric Watt Forste: "Re: The Meaning of Life"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+[John K. Clark:]<br>
+<i>&gt; For the purposes of this argument it doesn't matter a bit if reason or </i><br>
+<i>&gt; Evolution CAUSED you to act in a certain way, in both cases they are  </i><br>
+<i>&gt; "imposed". If I make a logical decision, that means that out of an infinite </i><br>
+<i>&gt; number of choices I narrowed things down to one particular action.</i><br>
+<p>
+We aren't arguing determinism here.  It seems to me this is about what<br>
+we identify with.  If I identify with reason and act in accordance with<br>
+reason, I am free.  Determinism doesn't enter into it; truth does.  If<br>
+you identify with what you want and act in accordance with what you<br>
+want, determinism doesn't enter into it; desire does.<br>
+<p>
+Determinism has no relevance to this sort of freedom - nor are *all*<br>
+*systems* possessed of free will, as your self-unpredictability<br>
+definition would have it.  The question is whether the choices *you*<br>
+make - *you* are what you identify with, be it head or heart - are<br>
+placed in your value/belief system (internal freedom) and successfully<br>
+acted upon (external freedom).  The relevance of your definition is that<br>
+if you know beforehand what decision you will make, it was probably<br>
+pre-defined (irrespective of your decision) and thus imposed.<br>
+<p>
+<i>&gt; So, you have chosen to identify with evolution imposed reason. I don't wish  </i><br>
+<i>&gt; to insult you so let me say that I think your choice is reasonable, there  </i><br>
+<i>&gt; were reasons, causes, for you to make that decision. I'm not sure if the </i><br>
+<i>&gt; causes were in your genes or your environment and it doesn't matter, they're </i><br>
+<i>&gt; still causes.</i><br>
+<p>
+I don't care where reason comes from.  I don't care if it's<br>
+evolution-imposed, blank-slate-deduced, or God-given.  All I care about<br>
+is if it's true.  The great revelation that I reason because I have<br>
+evolved to do so falls flat.  Reason says to reason also, and if it said<br>
+to stop reasoning, I would - uhhh...<br>
+<p>
+/** A ridiculously simplified goal for an emotional architecture. */<br>
+class Goal extends CogObject {<br>
+<p>
+    /** The precomputed value of this goal.  Used to determine<br>
+        fatigue rates, compute subgoal values, and so on. */<br>
+    int      value;<br>
+<p>
+    /** The goals to which this goal is subgoal; those goals which the<br>
+        fulfillment of this goal will advance. */<br>
+    Goal[]   justification;<br>
+    /** The probability that fulfillment of this goal will help fulfill<br>
+        each goal above. */<br>
+    float[]  weights;<br>
+<p>
+    /*  Note:  Real java'd have some constructors. */<br>
+<p>
+    /** Get the value of this goal. */<br>
+    int value () {<br>
+       if (value != 0)<br>
+          return value;<br>
+       for (int i = 0; i &lt; justification.length; i++)<br>
+          value += (int) (justification[i].value() * weights[i]);<br>
+       return value;<br>
+    } // end value<br>
+<p>
+    static final Goal survival = new Goal(700, new Goal[0], new<br>
+float[0]);<br>
+    static final Goal reproduction = new Goal(400, new Goal[0], new<br>
+float[0]);<br>
+    static final Goal embarassment = new Goal(-300, new Goal[0], new<br>
+float[0]);<br>
+    /** You can't create arrays this way in real java. */<br>
+    static final Goal dress_properly =<br>
+        new Goal({reproduction, embarassment}, {0.32, -0.74});<br>
+<p>
+} // end Goal<br>
+<p>
+<i>&gt; You decide to do things you don't want to do??? Why do you do them? </i><br>
+<p>
+Because they are justified.  I don't intend to play word-games here. <br>
+There are cognitively real distinctions between want and decide, and I<br>
+am using them.  There is a difference between the "value" and<br>
+"justification" slots of goals.  Under normal circumstances, this rarely<br>
+shows up.  As a countersphexist, I run into it all the time; highly<br>
+justified goals have negative values for no real reason.  Now, under<br>
+those circumstances, you can decide to follow the value-slots or the<br>
+justification-slots.  Although my general cognitive systems are tuned to<br>
+follow the value, I try to hack it up so I follow the justification. <br>
+What I want to do has no relation to what I have decided to do, but I<br>
+try to carry on anyway.<br>
+<p>
+Again, you can use my concept of "formal ethical system" to see how this<br>
+corresponds to your argument.  To you, meaning is value.  High-value<br>
+goals have high meaning.  To me, meaning is justification.  Highly<br>
+justified goals have high meaning.<br>
+<p>
+<i>&gt; "Want" is an emotion. You don't "want" your emotions assigning positive value  </i><br>
+<i>&gt; to things, because that would make you sad, or at least, you think it would  </i><br>
+<i>&gt; make you sad. You think the idea of maximizing intrinsic value (whatever that </i><br>
+<i>&gt; is) will make you happy, while maximizing subjective value will not.</i><br>
+<p>
+Tsk, tsk.  You're Johnkclarkomorphizing me.  I've decided that emotions<br>
+assigning positive value to things is not conducive to reaching<br>
+Singularity.  Maximizing intrinsic value is the only logical basis for a<br>
+goal system, while observer-arbitrary value is nothing to me.  No<br>
+emotion at all.<br>
+<p>
+Well, not really, because emotions are part of the system that reasons<br>
+with respect to values, and if I somehow shut off the entire emotional<br>
+system, that would cripple my ability to reason about goals.  But I'm<br>
+sure you reason about what you "want", and see no conflict there either.<br>
+<p>
+(Re: my "he is/I am" list.)<br>
+<i>&gt; I need a little help here, I don't see it.</i><br>
+<p>
+I identify with the head, you with the heart.<br>
+Under the circumstances, our respective philosophies seem a bit ironic.<br>
+<p>
+Here's an interesting question:<br>
+<p>
+What is altruism?<br>
+Is it sacrificing your happiness for the happiness of others?<br>
+Or is it gaining your happiness through the happiness of others?<br>
+<p>
+I would unconditionally answer #2.  Given the way these ironies go, I'd<br>
+guess you're #1, though a priori you'd seem likely to be #2.<br>
+<pre>
+-- 
+         sentience@pobox.com      Eliezer S. Yudkowsky
+          <a href="http://tezcat.com/~eliezer/singularity.html">http://tezcat.com/~eliezer/singularity.html</a>
+           <a href="http://tezcat.com/~eliezer/algernon.html">http://tezcat.com/~eliezer/algernon.html</a>
+Disclaimer:  Unless otherwise specified, I'm not telling you
+everything I think I know.
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2436.html">Natasha V. Mor: "Re: Goodbye"</a>
+<li> <b>Previous message:</b> <a href="2434.html">Paul Dietz: "Re: lib fic"</a>
+<li> <b>Maybe in reply to:</b> <a href="2594.html">John K Clark: "The Meaning of Life"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="2458.html">Eric Watt Forste: "Re: The Meaning of Life"</a>
+<!-- reply="end" -->
+</ul>

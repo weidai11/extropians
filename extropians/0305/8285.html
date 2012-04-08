@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Electronic voting</title>
+<meta name="Author" content="Lee Daniel Crocker (lee@piclab.com)">
+<meta name="Subject" content="Electronic voting">
+<meta name="Date" content="2003-05-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Electronic voting</h1>
+<!-- received="Thu May 15 17:03:58 2003" -->
+<!-- isoreceived="20030515230358" -->
+<!-- sent="Thu, 15 May 2003 18:03:52 -0500" -->
+<!-- isosent="20030515230352" -->
+<!-- name="Lee Daniel Crocker" -->
+<!-- email="lee@piclab.com" -->
+<!-- subject="Electronic voting" -->
+<!-- id="20030515230352.GA705@piclab.com" -->
+<!-- charset="us-ascii" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Lee Daniel Crocker (<a href="mailto:lee@piclab.com?Subject=Re:%20Electronic%20voting"><em>lee@piclab.com</em></a>)<br>
+<strong>Date:</strong> Thu May 15 2003 - 17:03:52 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8286.html">Dehede011@aol.com: "Re: Which one of these explanations is true? was Re: Foresight Recon?"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="8284.html">Terry W. Colvin: "FWD (SK) Re: A bloody reminder of terrorism [Finnish op-ed]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8291.html">Jeff Davis: "FWD: Jessica Lynch story (BBC)"</a>
+<li><strong>Reply:</strong> <a href="8291.html">Jeff Davis: "FWD: Jessica Lynch story (BBC)"</a>
+<li><strong>Reply:</strong> <a href="8327.html">Harvey Newstrom: "RE: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8356.html">Hal Finney: "Re: Electronic voting"</a>
+<li><strong>Reply:</strong> <a href="8384.html">Chris Hibbert: "Re: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8482.html">spike66@attbi.com: "RE: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8491.html">Dehede011@aol.com: "Re: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8492.html">Dehede011@aol.com: "Re: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8511.html">Dehede011@aol.com: "Re: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8708.html">spike66@attbi.com: "Re: Electronic voting"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8285">[ date ]</a>
+<a href="index.html#8285">[ thread ]</a>
+<a href="subject.html#8285">[ subject ]</a>
+<a href="author.html#8285">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Here:
+<br>
+<p>&lt;<a href="http://verify.stanford.edu/evote.html">http://verify.stanford.edu/evote.html</a>&gt;
+<br>
+<p>a Stanford professor states the obvious: some electronic voting
+<br>
+machines are not auditable and easily hacked. But he recommends a
+<br>
+decidedly low-tech solution: having the machines produce paper
+<br>
+ballots that are authoritative and that can be audited by hand.
+<br>
+<p>A much simpler, more automated, and totally auditable solution
+<br>
+is obvious to me after a few moments of thought, but perhaps I'm
+<br>
+missing something obvious, so let me put it out there and see if
+<br>
+you guys can see any flaws (technical or political):
+<br>
+<p>At the polling place, each voter goes through the touch-screen
+<br>
+hand-holding menu options of the voting software. When he's done,
+<br>
+a simple paper receipt is printed that shows an overview of his
+<br>
+votes, which he is asked to read and confirm by placing it through
+<br>
+a reader and pressing a comfirmation button. On that receipt is
+<br>
+also printed a large random number unique to each voter. The
+<br>
+reader processes the vote and sends it to a central server. If
+<br>
+the user made a mistake, he just discards the reciept without
+<br>
+submitting it and starts over. The voter retains this receipt.
+<br>
+<p>Note that the receipt itself is secure: no one can determine
+<br>
+from it whose vote it represents, because the only identifier
+<br>
+on it is a random number.
+<br>
+<p>After election day, each precinct publishes two lists (on the
+<br>
+net, on paper, whatever): one is nothing but a list of names of
+<br>
+everyone who voted. This is already public information (when you
+<br>
+go in to vote today, your name is checked off on the registration
+<br>
+list). This way, everyone who voted can verify that his name
+<br>
+appears on the list, and that names of people who he knows didn't
+<br>
+vote (or who are dead, etc.) do not appear.
+<br>
+<p>The second list is the same number of entries, each of which is a
+<br>
+plaintext list of votes cast, along with a random number index made
+<br>
+by hashing together the random number printed on the voter stub
+<br>
+with info such as the voter's name, address, birthdate, etc., and
+<br>
+the votes themselves (a one-way hash). Each voter can then run a
+<br>
+program (with a published algorithm) to hash the random number on
+<br>
+his receipt with the information he knows, and then go to the list,
+<br>
+find that index, and verify that the published votes match.
+<br>
+<p>Since the votes themselves are in plaintext, the count is easily
+<br>
+verified by anyone. There is nothing to match the vote lists to
+<br>
+people unless you know a voter's personal info and the number on
+<br>
+his receipt, so ballots are secret. A voter can't repudiate his
+<br>
+votes because he has to show his paper receipt which isn't
+<br>
+forgeable because of the one-way hash.
+<br>
+<p>This way, the permanent record of the vote is totally online, and
+<br>
+the paper receipts serve as spot-checks. But groups concerned about
+<br>
+fraud could collect a large number of people to check their votes
+<br>
+on-camera if desired, and a few people might even make their votes
+<br>
+public as a further check (only by their choice, of course).
+<br>
+<p>So, is there an attack here I don't see? If so, can you plug the
+<br>
+hole, or come up with a system with the same safeguards?
+<br>
+<p><pre>
+-- 
+Lee Daniel Crocker &lt;<a href="mailto:lee@piclab.com?Subject=Re:%20Electronic%20voting">lee@piclab.com</a>&gt; &lt;<a href="http://www.piclab.com/lee/">http://www.piclab.com/lee/</a>&gt;
+&quot;All inventions or works of authorship original to me, herein and past,
+are placed irrevocably in the public domain, and may be used or modified
+for any purpose, without permission, attribution, or notification.&quot;--LDC
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8286.html">Dehede011@aol.com: "Re: Which one of these explanations is true? was Re: Foresight Recon?"</a>
+<li><strong>Previous message:</strong> <a href="8284.html">Terry W. Colvin: "FWD (SK) Re: A bloody reminder of terrorism [Finnish op-ed]"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8291.html">Jeff Davis: "FWD: Jessica Lynch story (BBC)"</a>
+<li><strong>Reply:</strong> <a href="8291.html">Jeff Davis: "FWD: Jessica Lynch story (BBC)"</a>
+<li><strong>Reply:</strong> <a href="8327.html">Harvey Newstrom: "RE: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8356.html">Hal Finney: "Re: Electronic voting"</a>
+<li><strong>Reply:</strong> <a href="8384.html">Chris Hibbert: "Re: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8482.html">spike66@attbi.com: "RE: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8491.html">Dehede011@aol.com: "Re: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8492.html">Dehede011@aol.com: "Re: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8511.html">Dehede011@aol.com: "Re: Electronic voting"</a>
+<li><strong>Maybe reply:</strong> <a href="8708.html">spike66@attbi.com: "Re: Electronic voting"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8285">[ date ]</a>
+<a href="index.html#8285">[ thread ]</a>
+<a href="subject.html#8285">[ subject ]</a>
+<a href="author.html#8285">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Thu May 15 2003 - 17:15:12 MDT
+</em></small></p>
+</body>
+</html>

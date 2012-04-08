@@ -1,0 +1,87 @@
+<!-- received="Sat Nov 21 18:10:59 1998 MST" -->
+<!-- sent="Sun, 22 Nov 1998 02:07:00 +0100" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Rationale: No New OS." -->
+<!-- id="199811220107.CAA20527@lrz.uni-muenchen.de" -->
+<!-- inreplyto="199811212241.XAA20193@lrz.uni-muenchen.de" -->
+<!-- version=1.10, linesinbody=45 -->
+<html><head><title>extropy: Re: Rationale: No New OS.</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Re: Rationale: No New OS.</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 22 Nov 1998 02:07:00 +0100</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1513">[ date ]</a><a href="index.html#1513">[ thread ]</a><a href="subject.html#1513">[ subject ]</a><a href="author.html#1513">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1514.html">[ Next ]</a><a href="1512.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1503.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1516.html">Christopher Whipple</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+Eliezer S. Yudkowsky writes:
+<br>
+<a href="1503.html#1513qlink1"> &gt; If you need an OS to do something, rewrite Linux.</a><br>
+<i> &gt; And hasn't Beowolf done distributed supercomputing already?</i><br>
+ 
+<p>
+Err, you weren't listening. I said there is no need to rewrite
+anything for the original rationale, and singnificantly beyond 
+that bickering about quality of OSses becomes pointless. (And if 
+only because in advanced architectures the distinction between 
+code and data grows meaningless, and the art of programming 
+becomes first a lot like chip design, then is reduced to providing 
+a set of constraints and then goes extinct altogether, along with 
+the bipedal primate).
+ 
+<p>
+<a href="1503.html#1513qlink2"> &gt; There are only two real OSes.  MacOS is the supreme OS for users, and Linux is</a><br>
+<i> &gt; the supreme OS for programmers.  Everything else is the 90% of everything that</i><br>
+<i> &gt; is crap.</i><br>
+
+<p>
+I won't discuss MacOS, but with a GUI a la KDE (Next version of
+TrollTech's Qt will be GPL, and then there is Gnome) and a streamlined
+installation even a typical housewife might find Linux attractive. 
+Beyond the marketing smoke and mirrors, even Microsoft is
+very aware of that (see Halloween2).
+
+<p>
+As to Linux, it is far from being optimal. How are you supposed to 
+build an affordable parallel system if your kernel alone takes up 
+a MByte? You want fastest memory possible, you must use local on-die 
+memory with kBit wide bus and no parasitic capacitance/inductance. 
+Why having caches then? But die yield says your CPU must be way 
+simpler (no pipeline/MMU/FPU/BPU etc.), and your core grains must 
+be tiny. Linux/Unix is not scalable to a system of few 100 networked
+CPUs with a few MBit of RAM each. If your core is very limited, and 
+sending an (asynchronous active) message is almost as fast as 
+acessing on-die core we are obviously concerned more with 
+hierarchical decomposition of objects so that their fragments 
+fit into memory grains than with page faults, swaps, process context 
+switches, threads, libraries, modules, and other vermin. I guess I'll
+never understand it why people think that building computers or
+programming them are rational enterprises, and not ad hoc bricolage
+following market conservativism and vogues. What's so rational in a
+Hollerith machine and punching cards or pushing abacus beads?
+
+<p>
+ciao,
+<br>
+'gene
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1514.html">[ Next ]</a><a href="1512.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1503.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1516.html">Christopher Whipple</a>
+</ul>
+</body></html>

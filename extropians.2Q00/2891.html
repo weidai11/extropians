@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: RE: One of Sasha's great ideas....</TITLE>
+<META NAME="Author" CONTENT="Alejandro Dubrovsky (Alejandro.Dubrovsky@isholding.com)">
+<META NAME="Subject" CONTENT="RE: One of Sasha's great ideas....">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>RE: One of Sasha's great ideas....</H1>
+<!-- received="Thu May 11 22:53:00 2000" -->
+<!-- isoreceived="20000512045300" -->
+<!-- sent="Fri, 12 May 2000 15:03:32 +1000" -->
+<!-- isosent="20000512050332" -->
+<!-- name="Alejandro Dubrovsky" -->
+<!-- email="Alejandro.Dubrovsky@isholding.com" -->
+<!-- subject="RE: One of Sasha's great ideas...." -->
+<!-- id="B065853AD4F2D211822500A0C9D732B1343610@exchange.isholding.com" -->
+<!-- inreplyto="One of Sasha's great ideas...." -->
+<STRONG>From:</STRONG> Alejandro Dubrovsky (<A HREF="mailto:Alejandro.Dubrovsky@isholding.com?Subject=RE:%20One%20of%20Sasha's%20great%20ideas....&In-Reply-To=&lt;B065853AD4F2D211822500A0C9D732B1343610@exchange.isholding.com&gt;"><EM>Alejandro.Dubrovsky@isholding.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Thu May 11 2000 - 23:03:32 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2892.html">Spudboy100@aol.com: "Re: Our friend Sasha Chislenko is dead"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2890.html">John Clark: "Re: Can I kill  &quot;the original&quot;?"</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="2888.html">Brent Allsop: "One of Sasha's great ideas...."</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2896.html">E. Shaun Russell: "Re: One of Sasha's great ideas...."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2891">[ date ]</A>
+<A HREF="index.html#2891">[ thread ]</A>
+<A HREF="subject.html#2891">[ subject ]</A>
+<A HREF="author.html#2891">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+<EM>&gt; 	There would be a &quot;membership&quot; link off of the main
+</EM><BR>
+<EM>&gt; <A HREF="http://www.extropy.org/">http://www.extropy.org/</A> page.  People could go to this page and after
+</EM><BR>
+<EM>&gt; logging in, check their membership status and update their personal
+</EM><BR>
+<EM>&gt; information.  This would include information like interrests, areas of
+</EM><BR>
+<EM>&gt; expertise, extropian activities completed....  Everyone could specify
+</EM><BR>
+<EM>&gt; the level of privacy for all data fields in their own DB file with the
+</EM><BR>
+<EM>&gt; following proposed values:
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; 	 10      private
+</EM><BR>
+<EM>&gt; 	 20      Friends
+</EM><BR>
+<EM>&gt; 	 30      Extropy Advisors
+</EM><BR>
+<EM>&gt; 	 40      Paid up (active) members Only
+</EM><BR>
+<EM>&gt; 	 50      Any members
+</EM><BR>
+<EM>&gt; 	 60      Public
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<P>sounds good
+<BR>
+<P><EM>&gt; 
+</EM><BR>
+<EM>&gt; CREATE TABLE member (
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;   exinum INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;   first     CHAR(25),
+</EM><BR>
+<EM>&gt;   middle    CHAR(25),
+</EM><BR>
+<EM>&gt;   last      CHAR(25),
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;   address1  CHAR(25),
+</EM><BR>
+<EM>&gt;   address2  CHAR(25),
+</EM><BR>
+<EM>&gt;   city      CHAR(25),
+</EM><BR>
+<EM>&gt;   state     CHAR(25),
+</EM><BR>
+<EM>&gt;   country   CHAR(25),
+</EM><BR>
+<EM>&gt;   postal    CHAR(25),
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;   email     CHAR(50),
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;   url       VARCHAR(255),
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;   userid    CHAR(16),
+</EM><BR>
+<EM>&gt;   password  CHAR(16),
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;   joined    DATE
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt;   );
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+i would add phone  (char 30?)
+<BR>
+why the need for the two address fields?
+<BR>
+<P>regarding the interests table, i'll quote and edit from my previous message
+<BR>
+on the matter:
+<BR>
+(Notes:
+<BR>
+I = identity
+<BR>
+N = Not null
+<BR>
+)
+<BR>
+<P>Interest's table
+<BR>
+Interest id - N I    (INT)
+<BR>
+Name - N			(char 20?)
+<BR>
+Description			(varchar 255)
+<BR>
+<P><P>Member's Interest Tabe
+<BR>
+Member ID - N I     (INT) (linked to members table)       -\ Joint Identity
+<BR>
+<P>Interest ID  - N I  (INT)  ( linked to interests table)   -/
+<BR>
+<P><P><P>Interests Relationship table
+<BR>
+InterestParent ID - N I  (INT) (both linked to interest table)  -\ Joint
+<BR>
+identity
+<BR>
+InterestChild ID - N I    (INT)                                 -/
+<BR>
+<P><P>Interests linked in a hierarchical many to many so that you can get to a
+<BR>
+specific interest through many paths
+<BR>
+(eg  Nanotech investment through Nanotech -&gt; Nanotech Investment   and
+<BR>
+through Investment-&gt;Nanotech Investment)
+<BR>
+<P><P><P><EM>&gt; 	Anyway, this is what I have so far.  This is what I'm working
+</EM><BR>
+<EM>&gt; towards.  If anyone else is interrested in helping out with such a
+</EM><BR>
+<EM>&gt; project, some jsp programming, html page layout development, or even
+</EM><BR>
+<EM>&gt; if only with some suggestions on how better to precede (perhaps there
+</EM><BR>
+<EM>&gt; is a better way than MySQL and java server pages?), please notify me.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+what other software is available?  (php3? python?)
+<BR>
+<P>Alejandro Dubrovsky
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2892.html">Spudboy100@aol.com: "Re: Our friend Sasha Chislenko is dead"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2890.html">John Clark: "Re: Can I kill  &quot;the original&quot;?"</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="2888.html">Brent Allsop: "One of Sasha's great ideas...."</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2896.html">E. Shaun Russell: "Re: One of Sasha's great ideas...."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2891">[ date ]</A>
+<A HREF="index.html#2891">[ thread ]</A>
+<A HREF="subject.html#2891">[ subject ]</A>
+<A HREF="author.html#2891">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:11:07 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

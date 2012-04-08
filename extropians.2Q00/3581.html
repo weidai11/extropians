@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: SITE: Coding a Transhuman AI 2.0a</TITLE>
+<META NAME="Author" CONTENT="Dan Fabulich (daniel.fabulich@yale.edu)">
+<META NAME="Subject" CONTENT="Re: SITE: Coding a Transhuman AI 2.0a">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: SITE: Coding a Transhuman AI 2.0a</H1>
+<!-- received="Mon May 22 22:18:15 2000" -->
+<!-- isoreceived="20000523041815" -->
+<!-- sent="Tue, 23 May 2000 00:19:15 -0400 (EDT)" -->
+<!-- isosent="20000523041915" -->
+<!-- name="Dan Fabulich" -->
+<!-- email="daniel.fabulich@yale.edu" -->
+<!-- subject="Re: SITE: Coding a Transhuman AI 2.0a" -->
+<!-- id="Pine.GSO.4.10.10005230007260.15546-100000@morpheus.cis.yale.edu" -->
+<!-- inreplyto="00052223335803.00545@localhost.localdomain" -->
+<STRONG>From:</STRONG> Dan Fabulich (<A HREF="mailto:daniel.fabulich@yale.edu?Subject=Re:%20SITE:%20Coding%20a%20Transhuman%20AI%202.0a&In-Reply-To=&lt;Pine.GSO.4.10.10005230007260.15546-100000@morpheus.cis.yale.edu&gt;"><EM>daniel.fabulich@yale.edu</EM></A>)<BR>
+<STRONG>Date:</STRONG> Mon May 22 2000 - 22:19:15 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="3582.html">Franklin Wayne Poley: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3580.html">Dan Fabulich: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3577.html">Matt Gingell: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3597.html">Martin Ling: "(meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3597.html">Martin Ling: "(meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3581">[ date ]</A>
+<A HREF="index.html#3581">[ thread ]</A>
+<A HREF="subject.html#3581">[ subject ]</A>
+<A HREF="author.html#3581">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Matt Gingel noted briefly:
+<BR>
+<P><EM>&gt; In the general case, evolution is a graph search. Each possible
+</EM><BR>
+<EM>&gt; individual is a node, and mutations spell out the transition rules. By
+</EM><BR>
+<EM>&gt; manipulating the space of transition rules, we transform the search
+</EM><BR>
+<EM>&gt; space - we make some points closer together and some further
+</EM><BR>
+<EM>&gt; apart. Perhaps more importantly, local maxima can be eradicated
+</EM><BR>
+<EM>&gt; since we change the set reachable nodes. (This analysis still
+</EM><BR>
+<EM>&gt; holds if we consider crossover operators, every node becoming a
+</EM><BR>
+<EM>&gt; population.)
+</EM><BR>
+<P>Here's a good example of how someone might use GAs: they might be
+<BR>
+interested in finding out what the most aerodynamic design for a
+<BR>
+vehicle is.  So they'd design a multi-dimensional space allowing for a
+<BR>
+variety of different things to be changed in the design of the craft.
+<BR>
+Then, they'd set the GA to work.
+<BR>
+<P>When it got to work, it would generate a random sampling of designs,
+<BR>
+CHECK TO SEE HOW AERODYNAMIC THEY WERE, and prioritize the designs
+<BR>
+which were the most aerodynamic in the next run, which would amount to
+<BR>
+random variations, breedings, etc. from the previous generation.
+<BR>
+<P>So.  GA.  Trying to generate good heuristics.  It generates a random
+<BR>
+sampling of heuristics (or sets of heuristics).  Then it checks to see
+<BR>
+which heuristics are best, and prioritizes the best heuristics in the
+<BR>
+next generation.
+<BR>
+<P>But how do you figure out whether a heuristic is good or not?  Well,
+<BR>
+heuristics are rules for action.  You USE the heuristic, and you see
+<BR>
+how well off you wind up.  (Using some definition of &quot;well off&quot; which
+<BR>
+has nothing to do with motivations, I suppose.)  In fact, just one
+<BR>
+trial run really isn't enough... you need to try using the heuristic
+<BR>
+many many times in order to even out statistical hiccups.
+<BR>
+<P>So, how many operations do you think it would take to reach a decision
+<BR>
+on the heuristic &quot;Honesty is the best policy?&quot;  Would 10^21 be enough?
+<BR>
+<P>Or would it take time to do the testing phase?
+<BR>
+<P>This is like a &quot;good coffee&quot; maker.  How do you identify good
+<BR>
+heuristics?
+<BR>
+<P>-Dan
+<BR>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-unless you love someone-
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;-nothing else makes any sense-
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.e. cummings
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="3582.html">Franklin Wayne Poley: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3580.html">Dan Fabulich: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3577.html">Matt Gingell: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3597.html">Martin Ling: "(meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3597.html">Martin Ling: "(meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3581">[ date ]</A>
+<A HREF="index.html#3581">[ thread ]</A>
+<A HREF="subject.html#3581">[ subject ]</A>
+<A HREF="author.html#3581">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:11:32 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

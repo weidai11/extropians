@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Plasma engine calculator</title>
+<meta name="Author" content="Adrian Tymes (wingcat@pacbell.net)">
+<meta name="Subject" content="Plasma engine calculator">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Plasma engine calculator</h1>
+<!-- received="Wed Mar 21 23:16:44 2001" -->
+<!-- isoreceived="20010322061644" -->
+<!-- sent="Wed, 21 Mar 2001 22:16:57 -0800" -->
+<!-- isosent="20010322061657" -->
+<!-- name="Adrian Tymes" -->
+<!-- email="wingcat@pacbell.net" -->
+<!-- subject="Plasma engine calculator" -->
+<!-- id="3AB998D9.C9DC3B87@pacbell.net" -->
+<strong>From:</strong> Adrian Tymes (<a href="mailto:wingcat@pacbell.net?Subject=Re:%20Plasma%20engine%20calculator&In-Reply-To=&lt;3AB998D9.C9DC3B87@pacbell.net&gt;"><em>wingcat@pacbell.net</em></a>)<br>
+<strong>Date:</strong> Wed Mar 21 2001 - 23:16:57 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1235.html">Spike Jones: "Re: FY;) see, it's still spreading: this is hirten"</a>
+<li><strong>Previous message:</strong> <a href="1233.html">Spike Jones: "Re: SPACE: ExtroLaunchSim"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1253.html">Damien Broderick: "Re: Plasma engine calculator"</a>
+<li><strong>Reply:</strong> <a href="1253.html">Damien Broderick: "Re: Plasma engine calculator"</a>
+<li><strong>Maybe reply:</strong> <a href="1254.html">Spudboy100@aol.com: "Re: Plasma engine calculator"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1234">[ date ]</a>
+<a href="index.html#1234">[ thread ]</a>
+<a href="subject.html#1234">[ subject ]</a>
+<a href="author.html#1234">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+So I finished before the weekend...
+<br>
+<p>
+<br><head></head><body>
+<script>
+<!--
+function do_calculations() {
+// first, define constants
+     boltz = 8.31451;
+// boltz = Boltzmann's constant, in J/mol*K
+     pi = 3.14159;
+// Math.pi doesn't return a defined value on some systems
+     perm = pi * 4 / 10000000;
+// perm = permittivity of free space, in Wb * A/m
+// now load up the inputs
+     temp = document.foo.temperature.value;
+     mol_mass = document.foo.mol_mass.value;
+     mol_heat_cap = document.foo.mol_heat_cap.value;
+     deltav = document.foo.deltav.value;
+     tot_mass = document.foo.tot_mass.value;
+     struc_mass_frac = document.foo.structure_mass_frac.value;
+     accel = document.foo.accel.value;
+     beta = document.foo.beta.value;
+     len = document.foo.len.value;
+     vol = document.foo.vol.value;
+     thick = document.foo.thickness.value;
+     resist = document.foo.resist.value;
+     conductor_dens = document.foo.conductor_density.value;
+     heat_effic = document.foo.heat_effic.value;
+     pow_dens = document.foo.power_density.value * 3600;
+     cur_dens = document.foo.cur_density.value * 3600;
+// these last two convert from watt-hours and ampere-hours to watt-seconds and
+// ampere-seconds, respectively
+// now, compute
+     vel_exhaust = Math.sqrt(boltz*temp/mol_mass);
+     document.foo.exhaust_velocity.value = vel_exhaust;
+// v(x)^2 = RT/m, R = boltz, T = temp, m = mol_mass
+     fuel_mass = tot_mass * (1-(1/(Math.exp(deltav/vel_exhaust))));
+     document.foo.fuel_mass.value = fuel_mass;
+// Standard rocket equation: Mi/Mo = e^(dV/Ve)
+// Mi = Mass(initial) = tot_mass
+// Mo = Mass(remaining at end)
+// dV = delta V = deltav
+// Ve = exhaust velocity = vel_exhaust
+// Mf = Mass(fuel) = Mi * (1-(Mo/Mi)) = fuel_mass
+     thrust_time = deltav / accel;
+     document.foo.thrust_time.value = thrust_time;
+// Assuming constant acceleration, time * acceleration = delta velocity; divide by accel
+     mass_flow = fuel_mass / thrust_time;
+     document.foo.mass_flow.value = mass_flow;
+// Simple calculation of mass flow
+     current = 2 * pi * thick * Math.sqrt((mass_flow * len * boltz * temp) / (beta * perm * vol * mol_mass * vel_exhaust));
+     document.foo.current.value = current;
+// This one's involved...
+// beta = b = P/(BB/2u)
+// B = uI/2ph = uI/pH = magnetic field strength
+// P = nRT/V = thermal pressure (from ideal gas law: PV = nRT)
+// n = (L/.5v)*(F/m) = number of moles of fuel in bell at any given instant
+// L = len
+// F = mass_flow
+// m = mol_mass
+// v = vel_exhaust
+// F/m = number of moles of fuel exhausted per second
+// (L/.5v) = number of seconds that a given atom of fuel is in the bell
+//   assuming constant heating, and thus constant acceleration, everywhere in the bell
+//   and cutting off all heating/acceleration once outside the bell
+// R = boltz
+// T = temp
+// V = vol
+// u = perm
+// p = pi
+// h = thick/2 (distance from center of conductor to point of beta measurement)
+// H = thick
+// I = current
+// Solving gives II = 4FLRTppHH/buVmv
+     radius = Math.sqrt(vol/(len*pi));
+     document.foo.radius.value = radius;
+// vol/len = pi * radius * radius = area of cross section of bell
+     circumf = 2 * pi * radius;
+     document.foo.circumf.value = circumf;
+// standard trig formula for circumference of circle
+     conductor_mass = conductor_dens * circumf * len * thick;
+     document.foo.conductor_mass.value = conductor_mass;
+// mass = (mass/volume) * length * width * thickness = (mass/volume) * volume
+     containment_power = current * current * resist * circumf;
+     document.foo.cont_power.value = containment_power;
+// power to produce the current about = current * current * total_resisitance
+// total_resistance = resistance_per_unit_length * length_of_conductor
+     heat_energy = (fuel_mass / mol_mass) * mol_heat_cap * temp * heat_effic;
+     document.foo.heat_energy.value = heat_energy;
+// energy_to_heat = nCTE
+// n = fuel_mass / mol_mass = number of moles to be heated
+// C = mol_heat_cap
+// T = temp (ignoring fuel storage temperature: rrom temperature is negligible relative to
+//     plasma temperature)
+// E = heat_effic
+     power_mass_energy_limit = (heat_energy + (containment_power * thrust_time)) / pow_dens;
+     document.foo.heat_containment_power_mass.value = power_mass_energy_limit;
+     power_mass_current_limit = current * thrust_time / cur_dens;
+     document.foo.current_power_mass.value = power_mass_current_limit;
+     power_mass = power_mass_energy_limit;
+     if (power_mass < power_mass_current_limit) {
+          power_mass = power_mass_current_limit;
+     }
+     document.foo.power_mass.value = power_mass;
+// power storage is usually limited by watt density and ampere density; only one of those
+// will determine how massive the power storage must be
+     struct_mass = struc_mass_frac * tot_mass;
+     document.foo.structure_mass.value = struct_mass;
+// structure = all the fixed stuff, including crew and heat shielding
+     payload_mass = tot_mass - (struct_mass + power_mass + fuel_mass + conductor_mass);
+     document.foo.payload_mass.value = payload_mass;
+     payload_mass_frac = payload_mass / tot_mass;
+     document.foo.payload_mass_frac.value = payload_mass_frac;
+// payload = what's left after the above
+     return false;
+}
+// -->
+</script>
+The following is for a space transport vehicle whose sole propulsion is a plasma engine
+constructed as follows:<ul>
+<li>Main engine is a cylinder ("exhaust bell") consisting of one wide winding of some
+    low-resistance conductor.  (This is as opposed to the standard solenoid practice of
+    having one long wire with many windings; this significantly lowers total conductor
+    resistance, and thus power needed to induce the necessary current.)
+<li>Every so often along the circular part of the cylinder, there is a break in the
+    conductor to interrupt it with a bank of batteries, or other electric power storage
+    devices.  These devices provide current through the conductor, as well as power to RF
+    heaters pointed at the bell's interior.
+<li>Fuel is injected from one end of the bell and heated until it becomes a plasma.  Current
+    passing through the conductor creates a magnetic field that leaves this plasma nowhere
+    to go except out the other end of the bell.  (This is the only source of thrust, as
+    opposed to ion engines which add in electric fields to further accelerate the exhaust.)
+</ul>
+Note the following potential inaccuracies in this model:<ul>
+<li>The RF heaters are assumed to be of negligible mass.
+<li>Cooling systems for the conductor are neglected.
+<li>Mass of the fuel injector, fuel storage tanks, and injector end of the bell, is
+    neglected.  (Though, if the bell is made more cone-shaped than cylindrical, there need
+    be no "injector end of the bell".  Fuel injector and storage tanks can be subsumed under
+    "structure", though they are not strictly dependant on the overall vehicle mass.)
+<li>No maneuvering thrusters are included, and only one main engine is assumed.
+<li>Control electronics' mass and power requirements are assumed to be negligible for
+    fly-by-wire systems (fly-by-wire is assumed).
+<li>Thrust lost due to plasma hitting the engine edge is not accounted for.
+<li>Bell is calculated as if it were not interrupted by batteries; magnetic field from
+    default values is strong enough so that plasma escaping through breaks in the bell is
+    assumed to be negligible.
+<li>"Payload" includes any crew and life support systems.
+</ul>
+Default values are from the following sources:<ul>
+<li>Plasma temperature, total vehicle mass at start, exhaust bell length and internal volume
+    - arbitrary (and therefore most freely adjustable)
+<li>Exhaust bell thickness - large enough to ensure that loss of thickness due to damage
+    from the plasma is negligible during the ~10 minutes of thrust that the other default
+    values give
+<li>Structural mass fraction - multiple sources: composite airframes seem to take about 9%,
+    plus another 3% for landing gear, plus another 3% for avionics
+<li>Molar values of fuel - multiple sources (most standard physics and chemistry references
+    should corroborate), fuel is 100% helium
+<li>Delta V - NASA and other sources for effective delta V when going Earth-to-LEO,
+    including allowance for drag
+<li>Acceleration - 1.5 Gs, reccomended for human launch by multiple sources
+<li>Exhaust bell resistance and density - "Niobium Nb-1Zr (Wah Chang WC-1Zr; Fansteel 80)"
+    from http://www.matweb.com/
+<li>Plasma beta and heating efficiency - ITER and other fusion projects; a lower beta means
+    less plasma impacting engine edge (and thus less thrust, plus less damage to engine)
+<li>Power storage density - Black Light Power, Inc., at http://www.blacklightpower.com/
+</ul>
+<table border=1>
+<form name=foo>
+<tr><th>Name</th><th>Units</th><th>Value</th></tr>
+<tr><td>Plasma Temperature</td><td>K</td><td><input type=text name=temperature value=400000></td></tr>
+<tr><td>Molar Mass Of Fuel</td><td>kg/mol</td><td><input type=text name=mol_mass value=.004></td></tr>
+<tr><td>Molar Heat Capacity Of Fuel</td><td>J/mol * K</td><td><input type=text name=mol_heat_cap value=12.47></td></tr>
+<tr><td>Total Vehicle Mass At Start</td><td>kg</td><td><input type=text name=tot_mass value=50000></td></tr>
+<tr><td>Structural Mass Fraction</td><td>(none)</td><td><input type=text name=structure_mass_frac value=.15></td></tr>
+<tr><td>Delta V</td><td>m/s</td><td><input type=text name=deltav value=9000></td></tr>
+<tr><td>Acceleration</td><td>m/s^2</td><td><input type=text name=accel value=14.670735></td></tr>
+<tr><td>Plasma Beta (thermal pressure to magnetic pressure ratio measured at exhaust bell edge)</td><td>(none)</td><td><input type=text name=beta value=.01></td></tr>
+<tr><td>Exhaust Bell Thickness</td><td>m</td><td><input type=text name=thickness value=.05></td></tr>
+<tr><td>Exhaust Bell Length</td><td>m</td><td><input type=text name=len value=.1></td></tr>
+<tr><td>Exhaust Bell Internal Volume</td><td>m^3</td><td><input type=text name=vol value=.9></td></tr>
+<tr><td>Exhaust Bell Resistance</td><td>ohm/m</td><td><input type=text name=resist value=.000147></td></tr>
+<tr><td>Exhaust Bell Density</td><td>kg/m^3</td><td><input type=text name=conductor_density value=8590></td></tr>
+<tr><td>Plasma Heating Efficiency (1 watt input generates X watts of heat)</td><td>(none)</td><td><input type=text name=heat_effic value=.7></td></tr>
+<tr><td>Power Storage Max. Power Density</td><td>Wh/kg</td><td><input type=text name=power_density value=328000></td></tr>
+<tr><td>Power Storage Max. Current Density</td><td>Ah/kg</td><td><input type=text name=cur_density value=5000></td></tr>
+<tr><td colspan=3><center>
+<input type=button onclick=do_calculations() value='Convert Above Inputs To Output Below'>
+</center></td></tr>
+<tr><td>Exhaust Velocity</td><td>m/s</td><td><input type=text name=exhaust_velocity></td></tr>
+<tr><td>Mass Of Fuel Consumed</td><td>kg</td><td><input type=text name=fuel_mass></td></tr>
+<tr><td>Total Time To Achive Delta V</td><td>s</td><td><input type=text name=thrust_time></td></tr>
+<tr><td>Rate Of Fuel Consumption</td><td>kg/s</td><td><input type=text name=mass_flow></td></tr>
+<tr><td>Exhaust Bell Radius</td><td>m</td><td><input type=text name=radius></td></tr>
+<tr><td>Exhaust Bell Circumference</td><td>m</td><td><input type=text name=circumf></td></tr>
+<tr><td>Exhaust Bell Mass</td><td>kg</td><td><input type=text name=conductor_mass></td></tr>
+<tr><td>Current To Contain Plasma</td><td>A</td><td><input type=text name=current></td></tr>
+<tr><td>Power To Contain Plasma</td><td>W</td><td><input type=text name=cont_power></td></tr>
+<tr><td>Energy To Heat Plasma</td><td>J</td><td><input type=text name=heat_energy></td></tr>
+<tr><td>Power Storage Mass (current, ampere-hour limited)</td><td>kg</td><td><input type=text name=current_power_mass></td></tr>
+<tr><td>Power Storage Mass (heat and containment, watt-hour limited)</td><td>kg</td><td><input type=text name=heat_containment_power_mass></td></tr>
+<tr><td>Power Storage Mass (actual: maximum of above two)</td><td>kg</td><td><input type=text name=power_mass></td></tr>
+<tr><td>Structure Mass</td><td>kg</td><td><input type=text name=structure_mass></td></tr>
+<tr><td><b>Maximum Payload Mass</b></td><td>kg</td><td><input type=text name=payload_mass></td></tr>
+<tr><td><b>Payload Mass Fraction</b></td><td>(none)</td><td><input type=text name=payload_mass_frac></td></tr>
+</form></table></body>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1235.html">Spike Jones: "Re: FY;) see, it's still spreading: this is hirten"</a>
+<li><strong>Previous message:</strong> <a href="1233.html">Spike Jones: "Re: SPACE: ExtroLaunchSim"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1253.html">Damien Broderick: "Re: Plasma engine calculator"</a>
+<li><strong>Reply:</strong> <a href="1253.html">Damien Broderick: "Re: Plasma engine calculator"</a>
+<li><strong>Maybe reply:</strong> <a href="1254.html">Spudboy100@aol.com: "Re: Plasma engine calculator"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1234">[ date ]</a>
+<a href="index.html#1234">[ thread ]</a>
+<a href="subject.html#1234">[ subject ]</a>
+<a href="author.html#1234">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:59:42 MDT</em>
+</em>
+</small>
+</body>
+</html>

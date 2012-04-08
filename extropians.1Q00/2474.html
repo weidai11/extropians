@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: NANO: Hacking assembler security</TITLE>
+<META NAME="Author" CONTENT="Charlie Stross (charlie@antipope.org)">
+<META NAME="Subject" CONTENT="Re: NANO: Hacking assembler security">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: NANO: Hacking assembler security</H1>
+<!-- received="Thu Feb 10 05:10:42 2000" -->
+<!-- isoreceived="20000210121042" -->
+<!-- sent="Thu, 10 Feb 2000 12:10:07 +0000" -->
+<!-- isosent="20000210121007" -->
+<!-- name="Charlie Stross" -->
+<!-- email="charlie@antipope.org" -->
+<!-- subject="Re: NANO: Hacking assembler security" -->
+<!-- id="20000210121007.A1975@antipope.org" -->
+<!-- inreplyto="200002100105.RAA26270@finney.org" -->
+<STRONG>From:</STRONG> Charlie Stross (<A HREF="mailto:charlie@antipope.org?Subject=Re:%20NANO:%20Hacking%20assembler%20security&In-Reply-To=&lt;20000210121007.A1975@antipope.org&gt;"><EM>charlie@antipope.org</EM></A>)<BR>
+<STRONG>Date:</STRONG> Thu Feb 10 2000 - 05:10:07 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2475.html">Robert J. Bradbury: "Re: Freedom of shape (was: thermal poultry)"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2473.html">Anders Sandberg: "Re: Tree of Life"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2434.html">hal@finney.org: "Re: NANO: Hacking assembler security"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2485.html">Eliezer S. Yudkowsky: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2485.html">Eliezer S. Yudkowsky: "Re: NANO: Hacking assembler security"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2474">[ date ]</A>
+<A HREF="index.html#2474">[ thread ]</A>
+<A HREF="subject.html#2474">[ subject ]</A>
+<A HREF="author.html#2474">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+On Wed, Feb 09, 2000 at 05:05:07PM -0800, <A HREF="mailto:hal@finney.org?Subject=Re:%20NANO:%20Hacking%20assembler%20security&In-Reply-To=&lt;20000210121007.A1975@antipope.org&gt;">hal@finney.org</A> wrote:
+<BR>
+<EM>&gt; This is one way things may go, but I'm not sure the &quot;Thompson hack&quot;
+</EM><BR>
+<EM>&gt; would be the preferred way to prevent assemblers from building dangerous
+</EM><BR>
+<EM>&gt; objects.  The unique aspect of Thompson's idea was that the compiler
+</EM><BR>
+<EM>&gt; would recognize when it was compiling itself, and build the hack into
+</EM><BR>
+<EM>&gt; the new compiler, even though it wasn't present in the source code.
+</EM><BR>
+&nbsp;
+<BR>
+Yeah. What I'm thinking of is using the Thompson hack to ensure that any
+<BR>
+assembler created by _other_ assemblers will have some sort of hook for
+<BR>
+law enforcement/security monitoring built into it. This raises an
+<BR>
+obstacle to anyone trying to use an assembler to build tools suitable
+<BR>
+for creating nasties, because they have to build their first-generation
+<BR>
+assembler from scratch. 
+<BR>
+<P><EM>&gt; It does seem reasonable that assemblers would be limited in some ways,
+</EM><BR>
+<EM>&gt; but this particular method has disadvantages.  It relies on secrecy,
+</EM><BR>
+<EM>&gt; and if everyone knows it's there you might as well do things openly.
+</EM><BR>
+<EM>&gt; It also is somewhat brittle in that the code can't change much or the
+</EM><BR>
+<EM>&gt; hack won't recognize where it has to insert itself in the new version.
+</EM><BR>
+<P>True: I'm assuming fairly standardized consumer items here, the
+<BR>
+products of a mature technology. I'm also assuming that *most* of the
+<BR>
+enforcement side of things will take place at the software level, in
+<BR>
+whatever nanocomputers control the assemblers.
+<BR>
+<P><EM>&gt; I suspect it would be more likely that an assembler (by which I mean
+</EM><BR>
+<EM>&gt; a large device which might be in a home and used to build clothes,
+</EM><BR>
+<EM>&gt; furnishings, electronics, etc.) will have a catalog of devices it can
+</EM><BR>
+<EM>&gt; build, with variations that can be programmed in.  Maybe one assembler
+</EM><BR>
+<EM>&gt; can build another, but you wouldn't have control at the level of making
+</EM><BR>
+<EM>&gt; changes to remove limitations on what it could build, any more than a
+</EM><BR>
+<EM>&gt; MUD program lets you drop into assembly language.
+</EM><BR>
+<P>And here we hit a terminology problem: what is an assembler?
+<BR>
+<P>I think we need to carefully distinguish macroscopic machines (capable
+<BR>
+of creating other macroscopic machines by use of molecular-scale
+<BR>
+subassemblies) from the molecular-scale assemblers. The security issues
+<BR>
+for each are different. Wearing a policeman's hat, my goal for the
+<BR>
+macroscopic machines (macros?) would be &quot;(a) stop them being used to
+<BR>
+assemble weapons of mass destruction&quot;. My goal for the nanoscale machines
+<BR>
+(nanos?)  would be &quot;(b) stop them from being used to assemble macros
+<BR>
+capable of (a)&quot;, and a secondary goal of &quot;(c) stop them from assembling
+<BR>
+a range of nasty molecules that we really don't want, like botulinum
+<BR>
+or Novichuk-B&quot;.
+<BR>
+<P>This gives us three distinct monitoring and prevention problems. And
+<BR>
+they do overlap: a MUD isn't _supposed_ to let you drop into assembly
+<BR>
+language, but if you have the source code to it you can go looking for
+<BR>
+a workable buffer overrun attack that lets you write arbitrary machine
+<BR>
+instructions on its heap.
+<BR>
+<P>Given the general-purpose capabilities of a macroscopic assembler, I'd
+<BR>
+expect that any attempt to market a black-box unit that only registered
+<BR>
+designs can be manufactured on will meet with consumer resistance (and
+<BR>
+hackers). Hell, people even hack Microsoft Barney! The precedents are
+<BR>
+not good; any security mechanism will need to be based on something
+<BR>
+much more solid than security through obscurity, or saying &quot;it is a 
+<BR>
+criminal offense to tamper with an ACME AnyFab machine&quot;. That's why
+<BR>
+I'm trying to think up a fail-safe approah.
+<BR>
+<P><EM>&gt; An interesting example though of where secrecy is used for somewhat
+</EM><BR>
+<EM>&gt; similar purposes to what you desribe: recently there have been articles
+</EM><BR>
+<EM>&gt; revealing that color copiers each have a unique digital &quot;fingerprint&quot;
+</EM><BR>
+<EM>&gt; which they embed into copies.  Given a copy it is possible to trace it
+</EM><BR>
+<EM>&gt; back to the exact machine which made it.  This is intended as an anti
+</EM><BR>
+<EM>&gt; counterfeiting measure.  Most people have been unaware of this (although
+</EM><BR>
+<EM>&gt; rumors have been around for years).  See the well respected Privacy
+</EM><BR>
+<EM>&gt; Forum Digest at <A HREF="http://www.vortex.com/privacy/priv.08.18">http://www.vortex.com/privacy/priv.08.18</A>.
+</EM><BR>
+<P>Seen it.
+<BR>
+<P><P><P>-- Charlie
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2475.html">Robert J. Bradbury: "Re: Freedom of shape (was: thermal poultry)"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2473.html">Anders Sandberg: "Re: Tree of Life"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2434.html">hal@finney.org: "Re: NANO: Hacking assembler security"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2485.html">Eliezer S. Yudkowsky: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2485.html">Eliezer S. Yudkowsky: "Re: NANO: Hacking assembler security"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2474">[ date ]</A>
+<A HREF="index.html#2474">[ thread ]</A>
+<A HREF="subject.html#2474">[ subject ]</A>
+<A HREF="author.html#2474">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:03:37 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: LUDD/CRYPTO: Anti-luddites need to get WASTEd</title>
+<meta name="Author" content="Hal Finney (hal@finney.org)">
+<meta name="Subject" content="Re: LUDD/CRYPTO: Anti-luddites need to get WASTEd">
+<meta name="Date" content="2003-06-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: LUDD/CRYPTO: Anti-luddites need to get WASTEd</h1>
+<!-- received="Mon Jun  9 12:20:38 2003" -->
+<!-- isoreceived="20030609182038" -->
+<!-- sent="Mon, 9 Jun 2003 11:19:15 -0700" -->
+<!-- isosent="20030609181915" -->
+<!-- name="Hal Finney" -->
+<!-- email="hal@finney.org" -->
+<!-- subject="Re: LUDD/CRYPTO: Anti-luddites need to get WASTEd" -->
+<!-- id="200306091819.h59IJFY32566@finney.org" -->
+<!-- inreplyto="LUDD/CRYPTO: Anti-luddites need to get WASTEd" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Hal Finney (<a href="mailto:hal@finney.org?Subject=Re:%20LUDD/CRYPTO:%20Anti-luddites%20need%20to%20get%20WASTEd"><em>hal@finney.org</em></a>)<br>
+<strong>Date:</strong> Mon Jun 09 2003 - 12:19:15 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9774.html">Party of Citizens: "Re: 91'st update on fly longevity experiments"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="9772.html">John K Clark: "Re: [Iraq] The real reason for the war"</a>
+<li><strong>Maybe in reply to:</strong> <a href="9771.html">Mike Lorrey: "LUDD/CRYPTO: Anti-luddites need to get WASTEd"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9773">[ date ]</a>
+<a href="index.html#9773">[ thread ]</a>
+<a href="subject.html#9773">[ subject ]</a>
+<a href="author.html#9773">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Mike Lorrey wrote:
+<br>
+<p><em>&gt; The former brain of NullSoft (owned by AOL) left over his publishing a
+</em><br>
+<em>&gt; GNU'd version of his WASTE encrypted messaging and file sharing
+</em><br>
+<em>&gt; application, which you can read about on /. This is a highly useful
+</em><br>
+<em>&gt; tool, so those wishing to get more involved in fighting luddism, get it
+</em><br>
+<em>&gt; (<a href="http://www.freedomware.org/waste/index.html">http://www.freedomware.org/waste/index.html</a>) and spread those public
+</em><br>
+<em>&gt; keys around. It uses RSA encryption and protects its keyring with a
+</em><br>
+<em>&gt; blowfish passphrase encipherment. It has chat as well as messaging and
+</em><br>
+<em>&gt; file sharing.
+</em><br>
+<p>First, I don't know what this has to do with the Luddites mentioned
+<br>
+in the subject header.
+<br>
+<p>Second, the &quot;former brain&quot; in question, Justin Frankel, had (at last
+<br>
+notice) *threatened* to leave, but has not actually quit, as far as
+<br>
+has been publicly reported.  Read the slashdot discussion closely at
+<br>
+<a href="http://slashdot.org/article.pl?sid=03/06/04/169214">http://slashdot.org/article.pl?sid=03/06/04/169214</a>, or Frankel's blog
+<br>
+at <a href="http://www.1014.org/">http://www.1014.org/</a>.
+<br>
+<p>Third, the legality of the WASTE package is under question, as AOL, which
+<br>
+owns NullSoft and hence the software, claimed that Frankel planted the
+<br>
+GPL license on WASTE without authorization, and that in fact the license
+<br>
+is not valid and the software was released without permission.
+<br>
+<p>And fourth, although I have not inspected the crypto, some cypherpunks
+<br>
+did, and the consensus was that it is not very good.  This is from Eric
+<br>
+Rescorla on Perry Metzger's cryptography list:
+<br>
+<p>: It's utterly baffling to me why people like this choose to design
+<br>
+: their own thing rather than just using SSL. I've looked through their
+<br>
+: design documents and glanced at their code they don't provide any
+<br>
+: security features that SSL doesn't, and they appear to have made a
+<br>
+: number of questionable design decisions:
+<br>
+:
+<br>
+: (0) Their messages don't appear have any sequence numbers, making them
+<br>
+:     potentially open to a wide variety of integrity attacks. They have some sort
+<br>
+:     of guid but unless you intend to keep a record of all guids through
+<br>
+:     a session (horrible) this is only a partial fix for replay and 
+<br>
+:     not a fix at all for removal.
+<br>
+: (1) They use MD5 instead of HMAC for message authentication. Scary.
+<br>
+: (2) They use the same encryption keys in both directions. At least
+<br>
+:     they have the sense to run separate PCBC counters. However,
+<br>
+:     based on the code it doesn't look like they reset the PCBC
+<br>
+:     counters after a bad message is received so you may be able to
+<br>
+:     mount a reflection attack.
+<br>
+: (3) They use Blowfish (why not AES?) in PCBC mode (huh?)
+<br>
+:
+<br>
+: I don't think it's worth much time analyzing this... Just one
+<br>
+: more case of NIH.
+<br>
+<p>More negative commentary followed, and you can read the thread at:
+<br>
+<a href="http://www.mail-archive.com/cryptography%40metzdowd.com/msg00048.html">http://www.mail-archive.com/cryptography%40metzdowd.com/msg00048.html</a>
+<br>
+<p>Hal
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="9774.html">Party of Citizens: "Re: 91'st update on fly longevity experiments"</a>
+<li><strong>Previous message:</strong> <a href="9772.html">John K Clark: "Re: [Iraq] The real reason for the war"</a>
+<li><strong>Maybe in reply to:</strong> <a href="9771.html">Mike Lorrey: "LUDD/CRYPTO: Anti-luddites need to get WASTEd"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#9773">[ date ]</a>
+<a href="index.html#9773">[ thread ]</a>
+<a href="subject.html#9773">[ subject ]</a>
+<a href="author.html#9773">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Mon Jun 09 2003 - 12:32:48 MDT
+</em></small></p>
+</body>
+</html>

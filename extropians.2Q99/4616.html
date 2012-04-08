@@ -1,0 +1,95 @@
+<!-- received="Sun Jun 27 18:14:52 1999 MDT" -->
+<!-- sent="Sun, 27 Jun 1999 20:13:07 -0400" -->
+<!-- name="Christopher Maloney" -->
+<!-- email="dude@chrismaloney.com" -->
+<!-- subject="Re: META: personal server-side filtering" -->
+<!-- id="3776BE13.6F7E@chrismaloney.com" -->
+<!-- inreplyto="META: personal server-side filtering" -->
+<!-- version=1.10, linesinbody=57 -->
+<html><head><title>extropians: Re: META: personal server-side filtering</title>
+<meta name=author content="Christopher Maloney">
+<link rel=author rev=made href="mailto:dude@chrismaloney.com" title ="Christopher Maloney">
+</head><body>
+<h1>Re: META: personal server-side filtering</h1>
+Christopher Maloney (<i>dude@chrismaloney.com</i>)<br>
+<i>Sun, 27 Jun 1999 20:13:07 -0400</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4616">[ date ]</a><a href="index.html#4616">[ thread ]</a><a href="subject.html#4616">[ subject ]</a><a href="author.html#4616">[ author ]</a>
+<!-- next="start" -->
+<li><a href="4617.html">[ Next ]</a><b>In reply to:</b> <a href="4613.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="4617.html">Eugene Leitl</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+Eugene Leitl wrote:
+<br>
+<i>&gt; </i><br>
+<a href="4613.html#4616qlink1">&gt; Here's an interesting new filtering variant we've cooked up with</a><br>
+<i>&gt; Cris Rasch today.</i><br>
+<i>&gt; </i><br>
+<i>&gt; To recapitulate: my original proposal was to establish a pair of</i><br>
+<i>&gt; lists: extropians moderated/unmoderated. Everything rejected from</i><br>
+<i>&gt; extropians moderated would go to extropians unmoderated that anybody</i><br>
+<i>&gt; who subscribed to both lists would get the full feed, if so inclined.</i><br>
+<i>&gt; </i><br>
+<i>&gt; This scheme is simple to implement, but has obvious flaws. To avoid</i><br>
+<i>&gt; pressing anybody in a single quality metric it should be possible to</i><br>
+<i>&gt; associate each subscriber with a ranking matrix against the other</i><br>
+<i>&gt; participants (which could be inquirable remotely). With 1 k subscribers</i><br>
+<i>&gt; this means keeping track of 1 M short integers, which is tolerable</i><br>
+<i>&gt; nowadays (besides, this can be implemented as sparse matrix). Each</i><br>
+<i>&gt; mail will be attached a pair of urls/listserv commands to</i><br>
+<i>&gt; increment/decrement your individual ranking of the poster this mail</i><br>
+<i>&gt; came from. The matrix gets initialized with zero. All positive values</i><br>
+<i>&gt; including zero mean no filtering. -1 means every second post gets</i><br>
+<i>&gt; through, -2 every third, etc.</i><br>
+
+<p>
+<a name="4617qlink1">I'm not clear on this.  What algorithm do you use to determine a
+person's overall ranking as a function of the 1000 individualspecific
+ rankings?  If it's a simple sum,</a> I would 
+<a name="4617qlink2">think that there might be some interesting failure modes, such
+as the list becoming dominated by a group who conspire to always
+vote positively for each other's posts.  I don't know what</a> the
+<a name="4617qlink3">likelihood of such a failure mode appearing at random would be
+(in the absence of an overt conspiracy).
+I think there's a whole science to this sort of thing, but it's
+not my game.</a>
+
+
+
+<p>
+<i>&gt; </i><br>
+<a href="4613.html#4616qlink2">&gt; This doesn't include topic filtering, but this can be addressed</a><br>
+<i>&gt; separately. To address this, we can agree on an initial keyword pool</i><br>
+<i>&gt; (META:SPACE:GUNS: etc.) and make the listserv let through only</i><br>
+<i>&gt; properly classified messages. If a message is unclassified it gets</i><br>
+<i>&gt; send back with a list of current keywords. There should be a mechanism</i><br>
+<i>&gt; of creating new keywords, and discarding obsolete ones (e.g. by aging).</i><br>
+<i>&gt; </i><br>
+<i>&gt; I'm fairly certain it would be possible to hack mailman into</i><br>
+<i>&gt; supporting this. Does anybody see any obvious flaws in the scheme?</i><br>
+<i>&gt; </i><br>
+<i>&gt; ciao,</i><br>
+<i>&gt; 'gene</i><br>
+
+<pre>
+-- 
+Chris Maloney
+<a href="http://www.chrismaloney.com">http://www.chrismaloney.com</a>
+
+"Knowledge is good"
+-- Emil Faber
+</pre>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="4617.html">[ Next ]</a><b>In reply to:</b> <a href="4613.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="4617.html">Eugene Leitl</a>
+</ul>
+</body></html>

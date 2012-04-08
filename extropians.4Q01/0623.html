@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: RE: TECH: Database independence</title>
+<meta name="Author" content="Reason (reason@exratio.com)">
+<meta name="Subject" content="RE: TECH: Database independence">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>RE: TECH: Database independence</h1>
+<!-- received="Tue Oct  9 11:57:27 2001" -->
+<!-- isoreceived="20011009175727" -->
+<!-- sent="Tue, 9 Oct 2001 10:52:33 -0700" -->
+<!-- isosent="20011009175233" -->
+<!-- name="Reason" -->
+<!-- email="reason@exratio.com" -->
+<!-- subject="RE: TECH: Database independence" -->
+<!-- id="EPEELOAJBJFJPKFALCGKEEGDCIAA.reason@exratio.com" -->
+<!-- inreplyto="3BC2B7A6.4D353E12@objectent.com" -->
+<strong>From:</strong> Reason (<a href="mailto:reason@exratio.com?Subject=RE:%20TECH:%20Database%20independence&In-Reply-To=&lt;EPEELOAJBJFJPKFALCGKEEGDCIAA.reason@exratio.com&gt;"><em>reason@exratio.com</em></a>)<br>
+<strong>Date:</strong> Tue Oct 09 2001 - 11:52:33 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0624.html">Andrew Clough: "Re: Nothing beats science (was: This war is not about terror...)"</a>
+<li><strong>Previous message:</strong> <a href="0622.html">James Rogers: "Re: TECH: Database independence"</a>
+<li><strong>In reply to:</strong> <a href="0598.html">Samantha Atkins: "Re: TECH: Database independence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0622.html">James Rogers: "Re: TECH: Database independence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#623">[ date ]</a>
+<a href="index.html#623">[ thread ]</a>
+<a href="subject.html#623">[ subject ]</a>
+<a href="author.html#623">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+<em>&gt; &gt; I'm doing YADA work at the moment (Yet Another Database App),
+</em><br>
+<em>&gt; and I've run
+</em><br>
+<em>&gt; &gt; into an old problem for which there never seems to be a really good
+</em><br>
+<em>&gt; &gt; solution. This particular app is targetted at RDBMS Brand X
+</em><br>
+<em>&gt; (actually it's
+</em><br>
+<em>&gt; &gt; Sybase), and now there is a need to retarget it to another RDBMS. I am
+</em><br>
+<em>&gt; &gt; positive that more databases will creep into the story over
+</em><br>
+<em>&gt; time, so this is
+</em><br>
+<em>&gt; &gt; the old database-independent-app problem.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I hear you!
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; This is actually close to my speciality.  I've been doing
+</em><br>
+<em>&gt; persistence middleware and object persistence especially for a
+</em><br>
+<em>&gt; lot of the last 15 years.  My speciality is object persistence
+</em><br>
+<em>&gt; and especially through middleware I created.  I just finished
+</em><br>
+<em>&gt; the grand opus of this work (unfortunately proprietary to my
+</em><br>
+<em>&gt; employer for now) in Java.  The performance is quite good.  The
+</em><br>
+<em>&gt; system includes in memory caching, multiple threading, its own
+</em><br>
+<em>&gt; lock manager and an adapter framework for plugging in different
+</em><br>
+<em>&gt; database products.  It doesn't matter if they are even of the
+</em><br>
+<em>&gt; same type (all relational for instance).  At the top the
+</em><br>
+<em>&gt; applications only see the middleware API.  Also included is
+</em><br>
+<em>&gt; builtin support for binary relations, persistent collections and
+</em><br>
+<em>&gt; persistent queues.  There is room in the architecture to scale
+</em><br>
+<em>&gt; and distribute the lock manager and cache and to support
+</em><br>
+<em>&gt; language adapters for different software language object and
+</em><br>
+<em>&gt; structure persistence.   The system supports dynamically
+</em><br>
+<em>&gt; difining new object/structs whose instances can then be
+</em><br>
+<em>&gt; persisted, queried, related to other instances and so on.
+</em><br>
+<p>I was going to mention object persistence as the solution to your
+<br>
+problem...always add another level of abstraction. Solves everything except
+<br>
+too many layers of abstraction.
+<br>
+<p>One of my open source projects
+<br>
+(<a href="http://www.sourceforge.net/projects/dwengine/">http://www.sourceforge.net/projects/dwengine/</a>) includes a Java object
+<br>
+persistence layer that's fairly specific to certain types of data. It's in
+<br>
+the process of being implemented with various diffrent databases.
+<br>
+<p>But anyhow, my point was going to be that a million solutions already exist
+<br>
+out there. The trick is using one of them from the get-go. Salvaging a
+<br>
+system in which one of those solutions wasn't used is always going to be
+<br>
+messy.
+<br>
+<p>The day that someone comes up with a good general framework for upgrading
+<br>
+arbitrary legacy systems to, say, EJB, will be a good day. I'm not sure that
+<br>
+it's possible, however.
+<br>
+<p>Reason
+<br>
+<a href="http://www.exratio.com/">http://www.exratio.com/</a>
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0624.html">Andrew Clough: "Re: Nothing beats science (was: This war is not about terror...)"</a>
+<li><strong>Previous message:</strong> <a href="0622.html">James Rogers: "Re: TECH: Database independence"</a>
+<li><strong>In reply to:</strong> <a href="0598.html">Samantha Atkins: "Re: TECH: Database independence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0622.html">James Rogers: "Re: TECH: Database independence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#623">[ date ]</a>
+<a href="index.html#623">[ thread ]</a>
+<a href="subject.html#623">[ subject ]</a>
+<a href="author.html#623">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:12 MDT</em>
+</em>
+</small>
+</body>
+</html>

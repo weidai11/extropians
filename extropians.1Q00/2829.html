@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Where's Crit.org?</TITLE>
+<META NAME="Author" CONTENT="Lee Daniel Crocker (lcrocker@piclab.com)">
+<META NAME="Subject" CONTENT="Re: Where's Crit.org?">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Where's Crit.org?</H1>
+<!-- received="Tue Feb 15 11:03:50 2000" -->
+<!-- isoreceived="20000215180350" -->
+<!-- sent="Tue Feb 15 11:03:50 2000" -->
+<!-- isosent="20000215180350" -->
+<!-- name="Lee Daniel Crocker" -->
+<!-- email="lcrocker@piclab.com" -->
+<!-- subject="Re: Where's Crit.org?" -->
+<!-- id="200002151759.JAA12425@piclab.com" -->
+<!-- inreplyto="200002151651.LAA12600@Hydro.CAM.ORG" -->
+<STRONG>From:</STRONG> Lee Daniel Crocker (<A HREF="mailto:lcrocker@piclab.com?Subject=Re:%20Where's%20Crit.org?&In-Reply-To=&lt;200002151759.JAA12425@piclab.com&gt;"><EM>lcrocker@piclab.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Tue Feb 15 2000 - 11:03:50 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2830.html">Lee Daniel Crocker: "Re: Life extension in practice/was Re: the cut and paste blues..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2828.html">Anders Sandberg: "Re: Black hole question"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2826.html">Stirling Westrup: "Re: Where's Crit.org?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2922.html">Bryan Moss: "Re: Where's Crit.org?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2829">[ date ]</A>
+<A HREF="index.html#2829">[ thread ]</A>
+<A HREF="subject.html#2829">[ subject ]</A>
+<A HREF="author.html#2829">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+<EM>&gt; Since the topic has gotten around to the crit service, and it seemed
+</EM><BR>
+<EM>&gt; IMHO to be one of the better designed of such systems (I now know of
+</EM><BR>
+<EM>&gt; about 5, most used for graffitti), I've been wondering if anyone had
+</EM><BR>
+<EM>&gt; any comments on its design. What does it do right and what does it do
+</EM><BR>
+<EM>&gt; wrong? How would you change it, and what would be your wish list if
+</EM><BR>
+<EM>&gt; you didn't have to worry about implementation details?
+</EM><BR>
+<P>None of these services can possibly succeed or make any difference as
+<BR>
+an independent service, least of all Crit because they have no realistic
+<BR>
+business model.  There is a way to get annotations working and accepted,
+<BR>
+though, and that's to make them part of the infrastructure.  The Mozilla
+<BR>
+project (which everyone mistakenly believes to be a failure when it has
+<BR>
+made a huge impact and will make a far larger one) provides an opportunity
+<BR>
+for that (JWZ has already suggested this, but I don't know if anyone's
+<BR>
+actively working on it).
+<BR>
+<P>Very few of you will remember that the original NCSA Mosaic web browser
+<BR>
+(from which Netscape evolved) had a user-annotation feature that stored
+<BR>
+user comments on a central server.  This feature was removed because it
+<BR>
+was felt (correctly) that this server would become a bottleneck and
+<BR>
+become clogged with lots of hard-to-maintain data.  What should be done
+<BR>
+is to create a standard annotation service interface protocol that all
+<BR>
+the competing services understand, and add user-level support for the
+<BR>
+protocol as a standard part of the browser.
+<BR>
+<P>Here's the user's view: from a web page (seen purely as intended by its
+<BR>
+author with no Crit-pollution), the user selects the &quot;View Annotations&quot;
+<BR>
+menu or toolbar button.  A list shows &quot;31 comments at crit.org, 12
+<BR>
+comments at thirdvoice.com, 5 comments at fredsnotes.net&quot;, etc.  The
+<BR>
+user selects one of those links, and fredsnotes.net brings up one of
+<BR>
+its pages--drawn exactly as it wants them drawn, possibly with ads or
+<BR>
+other gadgets, that contains those comments.  User's comments can be
+<BR>
+added from those pages, using whatever means the annotation service
+<BR>
+provides (they'll want to be different so they can control formatting
+<BR>
+and content and provide value--and yes, the comment servers can and
+<BR>
+should exercize their own editorial control, which might be none for
+<BR>
+some services).  The browser will ship with a list of well-known
+<BR>
+annotation services that support the protocol, and the user will be
+<BR>
+able to add more or remove ones he doesn't want.
+<BR>
+<P>I could hack a protocol in a day or two--beyond that we'd need
+<BR>
+commitment from one or more services to support it and a few folks
+<BR>
+to put the code into Mozilla.  Netscape 6 will be based on Mozilla,
+<BR>
+as will other browsers.  If the feature catches on,  MS will have to
+<BR>
+add it (and there's little reason for them not to--in fact it's an
+<BR>
+opportunity for them to add their own censored annotation service
+<BR>
+as well).  After that, it's just part of the Web.
+<BR>
+<P>The critical keys to success are that PROTOCOL should be open and
+<BR>
+free, while CONTENT must allow editorial control, or else it will
+<BR>
+just be a worthless commons.
+<BR>
+<P><PRE>
+--
+Lee Daniel Crocker &lt;<A HREF="mailto:lee@piclab.com?Subject=Re:%20Where's%20Crit.org?&In-Reply-To=&lt;200002151759.JAA12425@piclab.com&gt;">lee@piclab.com</A>&gt; &lt;<A HREF="http://www.piclab.com/lcrocker.html">http://www.piclab.com/lcrocker.html</A>&gt;
+&quot;All inventions or works of authorship original to me, herein and past,
+are placed irrevocably in the public domain, and may be used or modified
+for any purpose, without permission, attribution, or notification.&quot;--LDC
+</PRE>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2830.html">Lee Daniel Crocker: "Re: Life extension in practice/was Re: the cut and paste blues..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2828.html">Anders Sandberg: "Re: Black hole question"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2826.html">Stirling Westrup: "Re: Where's Crit.org?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2922.html">Bryan Moss: "Re: Where's Crit.org?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2829">[ date ]</A>
+<A HREF="index.html#2829">[ thread ]</A>
+<A HREF="subject.html#2829">[ subject ]</A>
+<A HREF="author.html#2829">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:03:47 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

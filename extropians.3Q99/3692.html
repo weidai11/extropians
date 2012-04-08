@@ -1,0 +1,83 @@
+<!-- received="Tue Sep  7 07:51:50 1999 MDT" -->
+<!-- sent="Tue, 7 Sep 1999 10:00:37 -0400" -->
+<!-- name="Matt Gingell" -->
+<!-- email="mjg223@nyu.edu" -->
+<!-- subject="Re: Mike Perry's work on self-improving AI" -->
+<!-- id="00b201bef939$5dee4120$c94e7a80@matts" -->
+<!-- inreplyto="Mike Perry's work on self-improving AI" -->
+<!-- version=1.10, linesinbody=44 -->
+<html><head><title>extropians: Re: Mike Perry's work on self-improving AI</title>
+<meta name=author content="Matt Gingell">
+<link rel=author rev=made href="mailto:mjg223@nyu.edu" title ="Matt Gingell">
+</head><body>
+<h1>Re: Mike Perry's work on self-improving AI</h1>
+Matt Gingell (<i>mjg223@nyu.edu</i>)<br>
+<i>Tue, 7 Sep 1999 10:00:37 -0400</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3692">[ date ]</a><a href="index.html#3692">[ thread ]</a><a href="subject.html#3692">[ subject ]</a><a href="author.html#3692">[ author ]</a>
+<!-- next="start" -->
+<li><a href="3693.html">[ Next ]</a><b>In reply to:</b> <a href="3638.html">Joseph Sterlynne</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="3693.html">Rik van Riel</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+From: Joseph Sterlynne &lt;vxs@mailandnews.com&gt;
+
+<p>
+<a href="3638.html#3692qlink1">&gt;This appears to be a problem which truly requires serious investigation; it</a><br>
+<i>&gt;should predicate any extensive attempts at implementation.  While I am not</i><br>
+<i>&gt;entirely familiar with what the literature has to say on this issue it</i><br>
+<i>&gt;seems (given examples like this) that we do not have a sufficiently rich</i><br>
+<i>&gt;understanding of some of the rather basic considerations.  Some of this</i><br>
+<a name="3738qlink1"><i>&gt;concern has, I think, been incorporated as a major facet of studies of</i><br>
+<i>&gt;complex systems: we don't know why some systems can defeat local optima,</i><br>
+<i>&gt;how minimally complex various features must be, or even what the shape of</i><br>
+<i>&gt;certain multidimensional solution spaces is.  As Eliezer suggested, Perry's</i><br>
+</a>
+<i>&gt;system might in fact be insufficiently rich in certain areas to warrant</i><br>
+<i>&gt;this broader concern.  Whatever the case, we surely must possess at least a</i><br>
+<i>&gt;working model of these elements to surpass what successes Perry enjoyed.</i><br>
+
+<p>
+<a name="3741qlink1"><a name="3738qlink2"><a name="3693qlink1">I don’t think there can be any general solution to the problem of local optima.
+There are lots of different useful techniques, but any hill-climbing algorithm
+can potentially get stuck.</a> It’s a question of the topology of the search space,
+which can be arbitrarily</a> complex
+
+</a><p>
+Perceptrons are interesting because, for functions they can describe, the error
+function has no local minima. Unfortunately this is a feature of the narrow
+range of things a perceptron can do, rather than because they do anything
+particularly clever.
+
+<p>
+If you know something about a particular search surface, then you can invent
+heuristics that take advantage of that knowledge instead of just wandering in
+the direction that looks most immediately promising. You can try to infer useful
+heuristics from your previous adventures, which itself most likely reduces to a
+hill-climbing search of a hypothesis space. Then you end up with layers of
+meta-heuristics, so you try to close the loop by integrating your heuristics
+into a single problem domain.<a name="3741qlink2"> For instance, organisms in a genetic search might
+contain a block of data representing a mutation function, which you hope will be
+optimized along with the fitness function.</a>
+
+<p>
+<a name="3738qlink3">I think it’s interesting to ask why evolution didn’t get stuck,</a> and whether free
+market economics can be modeled as a hill-climb optimizing<a name="3741qlink3"> wealth and, if so,
+are there local optima?
+</a>
+
+<p>
+-matt
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="3693.html">[ Next ]</a><b>In reply to:</b> <a href="3638.html">Joseph Sterlynne</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="3693.html">Rik van Riel</a>
+</ul>
+</body></html>

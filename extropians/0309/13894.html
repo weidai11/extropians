@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: Today's evil Bayesian math problem</title>
+<meta name="Author" content="Hal Finney (hal@finney.org)">
+<meta name="Subject" content="Re: Today's evil Bayesian math problem">
+<meta name="Date" content="2003-09-11">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Today's evil Bayesian math problem</h1>
+<!-- received="Thu Sep 11 12:45:46 2003" -->
+<!-- isoreceived="20030911184546" -->
+<!-- sent="Thu, 11 Sep 2003 11:17:40 -0700" -->
+<!-- isosent="20030911181740" -->
+<!-- name="Hal Finney" -->
+<!-- email="hal@finney.org" -->
+<!-- subject="Re: Today's evil Bayesian math problem" -->
+<!-- id="200309111817.h8BIHep11957@finney.org" -->
+<!-- inreplyto="Today's evil Bayesian math problem" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Hal Finney (<a href="mailto:hal@finney.org?Subject=Re:%20Today's%20evil%20Bayesian%20math%20problem"><em>hal@finney.org</em></a>)<br>
+<strong>Date:</strong> Thu Sep 11 2003 - 12:17:40 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13895.html">alexboko: "Re: barbie promoted to threat"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="13893.html">Randall Randall: "Re: How do you calm down the hot-heads?"</a>
+<li><strong>Maybe in reply to:</strong> <a href="13795.html">Eliezer S. Yudkowsky: "Today's evil Bayesian math problem"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13904.html">Eliezer S. Yudkowsky: "Re: Today's evil Bayesian math problem"</a>
+<li><strong>Reply:</strong> <a href="13904.html">Eliezer S. Yudkowsky: "Re: Today's evil Bayesian math problem"</a>
+<li><strong>Reply:</strong> <a href="14008.html">Eliezer S. Yudkowsky: "Re: Today's evil Bayesian math problem"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13894">[ date ]</a>
+<a href="index.html#13894">[ thread ]</a>
+<a href="subject.html#13894">[ subject ]</a>
+<a href="author.html#13894">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Eliezer writes:
+<br>
+<em>&gt; In fact, for any j != k, p(Wj|Wk) == 4/9, provided that the only other 
+</em><br>
+<em>&gt; information given is as described above.
+</em><br>
+<p>That's pretty surprising.  In fact, it seems that an even more surprising
+<br>
+fact is true: the probability of a white chip on every round j is always
+<br>
+3/8, the same as it is on round 1.  And the probability of white chips
+<br>
+on both of any two different rounds j and k is always 1/6.  From this,
+<br>
+Eliezer's formula follows, as p(Wj|Wk) = p(Wj&amp;Wk)/p(Wk) = 1/6  /  3/8 = 4/9.
+<br>
+<p>I can prove at least the first statement, that the probability is always
+<br>
+the same on every round.  Suppose on round N there are p white chips and
+<br>
+q chips total.  Then the probability of drawing white on that round is
+<br>
+p/q.
+<br>
+<p>Now consider round N+1.  If we drew white on round N (which happened with
+<br>
+probability p/q), the probability of white on this round is (p+1)/(q+1).
+<br>
+If we drew red on round N (which happened with probability (q-p)/q),
+<br>
+the probability of white on this round is p/(q+1).
+<br>
+<p>So the total probability of white on this round is the sum of these two
+<br>
+values, weighted by their probabilities, or p/q * (p+1)/(q+1)
+<br>
++ (q-p)/q * p/(q+1).
+<br>
+<p>= (p^2 + p + qp - p^2) / q(q+1)
+<br>
+<p>= p(q+1) / q(q+1)
+<br>
+<p>= p / q
+<br>
+<p>QED.
+<br>
+<p>I imagine a more complex proof could show that the probability of white
+<br>
+on both of any two rounds is constant, and presumably this could be
+<br>
+generalized to any n rounds.  But I don't see how to prove all this
+<br>
+in a simple way.
+<br>
+<p>Hal
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13895.html">alexboko: "Re: barbie promoted to threat"</a>
+<li><strong>Previous message:</strong> <a href="13893.html">Randall Randall: "Re: How do you calm down the hot-heads?"</a>
+<li><strong>Maybe in reply to:</strong> <a href="13795.html">Eliezer S. Yudkowsky: "Today's evil Bayesian math problem"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="13904.html">Eliezer S. Yudkowsky: "Re: Today's evil Bayesian math problem"</a>
+<li><strong>Reply:</strong> <a href="13904.html">Eliezer S. Yudkowsky: "Re: Today's evil Bayesian math problem"</a>
+<li><strong>Reply:</strong> <a href="14008.html">Eliezer S. Yudkowsky: "Re: Today's evil Bayesian math problem"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13894">[ date ]</a>
+<a href="index.html#13894">[ thread ]</a>
+<a href="subject.html#13894">[ subject ]</a>
+<a href="author.html#13894">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Thu Sep 11 2003 - 12:55:26 MDT
+</em></small></p>
+</body>
+</html>

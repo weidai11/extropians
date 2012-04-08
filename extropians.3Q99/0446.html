@@ -1,0 +1,124 @@
+<!-- received="Fri Jul  9 15:45:03 1999 MDT" -->
+<!-- sent="Fri, 9 Jul 1999 16:43:17 -0500" -->
+<!-- name="Billy Brown" -->
+<!-- email="ewbrownv@mindspring.com" -->
+<!-- subject="RE: Human minds on Windows(?)" -->
+<!-- id="NDBBLBGGEJLACCFCPNINCEBPCBAA.ewbrownv@mindspring.com" -->
+<!-- inreplyto="001e01beca36$0b26f5e0$f76d45c2@filth" -->
+<!-- version=1.10, linesinbody=73 -->
+<html><head><title>extropians: RE: Human minds on Windows(?)</title>
+<meta name=author content="Billy Brown">
+<link rel=author rev=made href="mailto:ewbrownv@mindspring.com" title ="Billy Brown">
+</head><body>
+<h1>RE: Human minds on Windows(?)</h1>
+Billy Brown (<i>ewbrownv@mindspring.com</i>)<br>
+<i>Fri, 9 Jul 1999 16:43:17 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#446">[ date ]</a><a href="index.html#446">[ thread ]</a><a href="subject.html#446">[ subject ]</a><a href="author.html#446">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0447.html">[ Next ]</a><a href="0445.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0437.html">Bryan Moss</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Bryan Moss wrote:
+<br>
+<a href="0437.html#0446qlink1">&gt; Billy Brown wrote:</a><br>
+<i>&gt; &gt; &gt; How do you measure Defects per LOC exactly?</i><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt; Total number of defects found / total lines of source code in the</i><br>
+<i>&gt; &gt; project.  [...]</i><br>
+<i>&gt;</i><br>
+<i>&gt; At what time do you count the defects?  And what is a 'defect' exactly?</i><br>
+
+<p>
+<a name="0480qlink1">In essence, a defect is anything that makes the program different from the
+spec it is built to.  It could be anything from a bug that crashes the
+program to a typo in a dialog box.  Different organizations classify them
+differently, and make different decisions about borderline cases, but all of
+the more organized software companies have fairly good written standards
+that their development teams must use.</a>
+
+<p>
+The important thing, however, is to make sure that you use the same
+methodology from one project to the next.  That way you can use the numbers
+as an actual measure of changes in your own code quality.  Comparisons to
+other organizations are a bit less informative, both because standards vary
+somewhat and because different companies use different programming
+languages.  However, you can still make very rough comparisons (if company A
+gets 100 defects per KLOC in C++, and company B gets 500 defects per KLOC,
+it probably isn't just a difference in definitions).
+
+<p>
+If you are seriously interested in this sort of thing, I'd suggest the
+following books as an introduction to serious software engineering:
+
+<p>
+Code Complete
+<br>
+<a href="http://www.amazon.com/exec/obidos/ASIN/1556154844/qid=931555977/sr=1-1/002-4">http://www.amazon.com/exec/obidos/ASIN/1556154844/qid=931555977/sr=1-1/002-4</a>
+664586-4076060
+
+<p>
+Rapid Development
+<br>
+<a href="http://www.amazon.com/exec/obidos/ASIN/1556159005/qid=931555977/sr=1-2/002-4">http://www.amazon.com/exec/obidos/ASIN/1556159005/qid=931555977/sr=1-2/002-4</a>
+664586-4076060
+
+<p>
+Software Project Survival Guide
+<br>
+<a href="http://www.amazon.com/exec/obidos/ASIN/1572316217/qid=931555977/sr=1-4/002-4">http://www.amazon.com/exec/obidos/ASIN/1572316217/qid=931555977/sr=1-4/002-4</a>
+664586-4076060
+
+<p>
+The last is by far the least technical of the three.
+
+<p>
+<a href="0437.html#0446qlink2">&gt; I'm thinking more along the lines of Apple's Opendoc, RIP.  The components</a><br>
+<i>&gt; only make up apps at the user-end.  At the moment a programmer can employ</i><br>
+<i>&gt; bits of Office or IE into his apps but the user can't do the same.  If I</i><br>
+<i>&gt; have a spellchecker in Office and I want to use it in my mail program I</i><br>
+<i>&gt; can't.  In both my mail program and Office I'm using text, I'm writing in</i><br>
+<i>&gt; English, and yet unless the programmer has hardwired the ability to use</i><br>
+the
+<br>
+<a href="0437.html#0446qlink3">&gt; Office spellchecker COM object in to my mail program I can't do this very</a><br>
+<i>&gt; simple thing.  In order to do this the UI would have to be created on the</i><br>
+<i>&gt; fly and you would need strict rules for how components are designed.</i><br>
+
+<p>
+<a name="0480qlink2">Unfortunately, there are good reasons why OpenDoc never went anywhere.
+
+<p>
+Your first problem is that it introduces truly horrendous user interface
+problems.  Either the UI has to be capable of handling any possible
+component (in which case the components will be too standardized to allow
+for much innovation), or the components get to draw their own windows (which
+leads to dialog-box hell).</a>
+
+<p>
+<a name="0480qlink3">Your second problem is that most users don't want things to work that way.
+They don't want to have to figure out how to juggle the various components
+on their computer, picking the right combination for whatever it is they are
+doing at the moment.  They want you, the programmer, to do that for them.
+Thus, such a system doesn't have much appeal for users.</a>  Since most
+programmers don't want it either (I'd rather invoke the component through
+code), that doesn't leave you with much of a market.
+
+<p>
+Billy Brown, MCSE+I
+<br>
+ewbrownv@mindspring.com
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0447.html">[ Next ]</a><a href="0445.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0437.html">Bryan Moss</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

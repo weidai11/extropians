@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: [Fwd: Re: who uses Python or Ruby, and for what?]</title>
+<meta name="Author" content="Eugene.Leitl@lrz.uni-muenchen.de (Eugene.Leitl@lrz.uni-muenchen.de)">
+<meta name="Subject" content="[Fwd: Re: who uses Python or Ruby, and for what?]">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>[Fwd: Re: who uses Python or Ruby, and for what?]</h1>
+<!-- received="Tue May  1 16:48:51 2001" -->
+<!-- isoreceived="20010501224851" -->
+<!-- sent="Wed, 02 May 2001 02:46:22 +0200" -->
+<!-- isosent="20010502004622" -->
+<!-- name="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="[Fwd: Re: who uses Python or Ruby, and for what?]" -->
+<!-- id="3AEF58DE.E52B9820@lrz.uni-muenchen.de" -->
+<strong>From:</strong> <a href="mailto:Eugene.Leitl@lrz.uni-muenchen.de?Subject=Re:%20[Fwd:%20Re:%20who%20uses%20Python%20or%20Ruby,%20and%20for%20what?]&In-Reply-To=&lt;3AEF58DE.E52B9820@lrz.uni-muenchen.de&gt;"><em>Eugene.Leitl@lrz.uni-muenchen.de</em></a><br>
+<strong>Date:</strong> Tue May 01 2001 - 18:46:22 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3631.html">Emlyn: "Re: Posting news [was: Re: NANO: IBM breakthrough for making  chips with nanotubes]"</a>
+<li><strong>Previous message:</strong> <a href="3629.html">Eugene.Leitl@lrz.uni-muenchen.de: "Re: Maximizing results of efforts Re: Mainstreaming"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3630">[ date ]</a>
+<a href="index.html#3630">[ thread ]</a>
+<a href="subject.html#3630">[ subject ]</a>
+<a href="author.html#3630">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+A voice from the void.
+<br>
+<p>-------- Original Message --------
+<br>
+From: &quot;Bob Alexander&quot; &lt;<a href="mailto:bobalex@home.com?Subject=Re:%20[Fwd:%20Re:%20who%20uses%20Python%20or%20Ruby,%20and%20for%20what?]&In-Reply-To=&lt;3AEF58DE.E52B9820@lrz.uni-muenchen.de&gt;">bobalex@home.com</a>&gt;
+<br>
+Subject: Re: who uses Python or Ruby, and for what?
+<br>
+To: &quot;Python List&quot; &lt;<a href="mailto:python-list@python.org?Subject=Re:%20[Fwd:%20Re:%20who%20uses%20Python%20or%20Ruby,%20and%20for%20what?]&In-Reply-To=&lt;3AEF58DE.E52B9820@lrz.uni-muenchen.de&gt;">python-list@python.org</a>&gt;
+<br>
+<p><em>&gt; is anyone using Python or Ruby for anything substantial and
+</em><br>
+<em>&gt; product-quality, or are these languages only good for writing quick
+</em><br>
+<em>&gt; little unsupported hacks?
+</em><br>
+<p>I'm currently involved in a substantial software development project much of
+<br>
+which is written in Python. Originally most of the code was C/C++ with bits
+<br>
+of Perl, Python, shell scripts, etc. (It's for the Unix platform.) Over the
+<br>
+last year or so, we've been switching as much as possible to Python. As an
+<br>
+ancient software guy with lots of experience on all the major platforms and
+<br>
+with lots of development environments, languages, and what have you, my take
+<br>
+is that our conversion to Python has been a very pleasant experience (just
+<br>
+as we anticipated would be). I believe Python is well-suited to sizeable
+<br>
+software projects. As you would expect, the overall process is much more
+<br>
+productive (and more fun!) than doing similar jobs with C/C++. The main
+<br>
+downside to use of Python, as with any &quot;dynamically-typed&quot; language, is that
+<br>
+few errors are caught at compile time, but must be found at run time. So
+<br>
+it's a good idea to do plenty of coverage-oriented testing. Of course, even
+<br>
+strongly-typed languages don't catch everything at compile time either --
+<br>
+it's a matter of degree. But, all in all, Python gets a big thumbs up from
+<br>
+me and my co-workers in the context of our product. It's definitely not just
+<br>
+for quick hacks -- it is a serious development tool. Of course, be aware
+<br>
+that Python not as fast as C (yet it is not a slouch either), so that would
+<br>
+be a factor in making the choice.
+<br>
+<p>Now -- about Ruby. I have recently become aware of Ruby, and I REALLY LIKE
+<br>
+IT! Although we are not scrapping our Python code to rewrite it in Ruby, I
+<br>
+have pretty much switched over to it for my personal stuff. Even though
+<br>
+Python is a nice, clean language, Ruby is even cleaner. It's a step closer
+<br>
+to what Python wants to be for Python 3000 that Python is now: a &quot;pure&quot;
+<br>
+object oriented language rather than a hybrid. And most of the things that I
+<br>
+find rather annoying about Python are done right in Ruby. As a small
+<br>
+example, to read lines of a file, the idomatic code is:
+<br>
+<p>Python 2.0   (can you cite another language that requires 4 lines of
+<br>
+overhead to read lines?)
+<br>
+&nbsp;&nbsp;while 1:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line = file.readline()
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if not line:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;process the line&gt;
+<br>
+<p>Python 2.1    (finally! -- better, shorter, but wierd!)
+<br>
+&nbsp;&nbsp;while line in file.xreadlines():
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;process the line&gt;
+<br>
+<p>Ruby      (uses a general language feature (that Python does not have),
+<br>
+rather than a special purpose, rather hacky, technique)
+<br>
+&nbsp;&nbsp;while line = file.gets()
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;process the line&gt;
+<br>
+&nbsp;&nbsp;end
+<br>
+<p>On use of Ruby for large projects: Ruby seems to have all the software
+<br>
+engineering goodness that Python has, so I would think that Ruby and Python
+<br>
+would be in the same ballpark for big development.
+<br>
+<p>Contrasting Ruby and Python:
+<br>
+&nbsp;&nbsp;- Python is older, more mature, and has more 3rd-party support.
+<br>
+Object-orientedness seems to be an afterthought. Shortcomings in
+<br>
+expressiveness require excessively verbose code in some cases.
+<br>
+&nbsp;&nbsp;- Ruby is pure object oriented, has a extremely well-chosen set of
+<br>
+language features, in my experience is very solid, and even more fun to code
+<br>
+than Python. 3rd-party stuff is not as extensive as Python's yet, but there
+<br>
+is already quite a bit and its growing.
+<br>
+&nbsp;&nbsp;- In many ways, the languages are surprisingly similar. Converting
+<br>
+existing Python programs to Ruby is really easy.
+<br>
+<p>In summary, both are excellent languages, suitable for substantial software
+<br>
+development. I am glad to see the growing interest in Ruby, because it
+<br>
+deserves be noticed as a worthy alternative to Python, Perl, etc.
+<br>
+<p><p>Bob
+<br>
+<p><p><pre>
+-- 
+<a href="http://mail.python.org/mailman/listinfo/python-list">http://mail.python.org/mailman/listinfo/python-list</a>
+</pre>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3631.html">Emlyn: "Re: Posting news [was: Re: NANO: IBM breakthrough for making  chips with nanotubes]"</a>
+<li><strong>Previous message:</strong> <a href="3629.html">Eugene.Leitl@lrz.uni-muenchen.de: "Re: Maximizing results of efforts Re: Mainstreaming"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3630">[ date ]</a>
+<a href="index.html#3630">[ thread ]</a>
+<a href="subject.html#3630">[ subject ]</a>
+<a href="author.html#3630">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 10:00:01 MDT</em>
+</em>
+</small>
+</body>
+</html>

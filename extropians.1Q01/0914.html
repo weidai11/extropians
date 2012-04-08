@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: META: tutorial: set up your own lunatic filter</title>
+<meta name="Author" content="Michael S. Lorrey (mlorrey@datamann.com)">
+<meta name="Subject" content="Re: META: tutorial: set up your own lunatic filter">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: META: tutorial: set up your own lunatic filter</h1>
+<!-- received="Thu Jan 11 09:46:51 2001" -->
+<!-- isoreceived="20010111164651" -->
+<!-- sent="Thu, 11 Jan 2001 11:56:46 -0500" -->
+<!-- isosent="20010111165646" -->
+<!-- name="Michael S. Lorrey" -->
+<!-- email="mlorrey@datamann.com" -->
+<!-- subject="Re: META: tutorial: set up your own lunatic filter" -->
+<!-- id="3A5DE5CE.9E0E51C3@datamann.com" -->
+<!-- inreplyto="F303vLgAusVxONvzyJx00002479@hotmail.com" -->
+<strong>From:</strong> Michael S. Lorrey (<a href="mailto:mlorrey@datamann.com?Subject=Re:%20META:%20tutorial:%20set%20up%20your%20own%20lunatic%20filter&In-Reply-To=&lt;3A5DE5CE.9E0E51C3@datamann.com&gt;"><em>mlorrey@datamann.com</em></a>)<br>
+<strong>Date:</strong> Thu Jan 11 2001 - 09:56:46 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0915.html">Harvey Newstrom: "FLAME: Joe Dees and Russell Whitaker STOP IT!"</a>
+<li><strong>Previous message:</strong> <a href="0913.html">S.J. Van Sickle: "Re: Let the Hype Begin!"</a>
+<li><strong>In reply to:</strong> <a href="0897.html">Russell Whitaker: "META: tutorial: set up your own lunatic filter"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#914">[ date ]</a>
+<a href="index.html#914">[ thread ]</a>
+<a href="subject.html#914">[ subject ]</a>
+<a href="author.html#914">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Since I use netscape, I simply set up a new filter that sends anything
+<br>
+containing the words J** and D**s to the trashbin, where he belongs,
+<br>
+which I can read with humor if I feel like it. I simply love how he is
+<br>
+ranting on about obeying list rules that only he seems to be aware of,
+<br>
+while overposting more than I do, which is a rule that does exist but
+<br>
+apparently doesn't apply to him (more Joe Dees hypocrisy). As for me,
+<br>
+being the black pot here, guilty as charged. I've had to get in the
+<br>
+practice of keeping count of my posts to the list. I suggest that Joe do
+<br>
+the same, and I personally ask that guns discussions happen on
+<br>
+exi-freedom as a favor to me, because otherwise my daily ration of 6
+<br>
+posts gets eaten up too quickly for me to contribute on any other
+<br>
+subject....and I do get carried away, as I did yesterday, despite trying
+<br>
+to restrain myself, and I did hold a couple posts over to today so as to
+<br>
+not freak out too many people.
+<br>
+<p>So Joe: You don't get to be the arbiter of proper content on the list.
+<br>
+That is Greg Burch's job. Neither do you get to rant and rave over
+<br>
+anything you don't want on the list. That's called flaming, if you are
+<br>
+not already aware, and is quite against list rules. If you can't create
+<br>
+simple to make filters to remove content you don't want to read, then I
+<br>
+suggest you spend a little less time ranting and a little more time
+<br>
+reading software manuals. PLUS: your mirroring of other people's posts,
+<br>
+without alteration or additional comment, is spamming, and is also
+<br>
+against list rules.
+<br>
+<p>Russell Whitaker wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Howdy.  For those uninterested in having their mailboxes
+</em><br>
+<em>&gt; cluttered with lunatic rants, here's a tutorial on how
+</em><br>
+<em>&gt; to set up a lunatic filter.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; This assumes that you receive your list mail through an
+</em><br>
+<em>&gt; ISP running some flavor of Unix with a standard local MDA
+</em><br>
+<em>&gt; (mail delivery agent) such as /bin/mail or /usr/local/bin/procmail.
+</em><br>
+<em>&gt; (I do, but have it forwarded to Hotmail for convenience.)
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Make sure your shell account host has procmail available
+</em><br>
+<em>&gt; for use (do a &quot;which procmail&quot; at a shell prompt).
+</em><br>
+<em>&gt; If available:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 1.) Create directory ~/.procmail:
+</em><br>
+<em>&gt;   % mkdir ~/.procmail
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 2.) Create file ~/.procmailrc with these contents
+</em><br>
+<em>&gt; (modify with actual user values):
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; PATH=/bin:/usr/bin:/usr/local/bin:/home/&lt;username&gt;/bin  # example path
+</em><br>
+<em>&gt; PMDIR=$HOME/.procmail  # literal directory name: location of filter
+</em><br>
+<em>&gt; rules and log file
+</em><br>
+<em>&gt; MAILDIR=$HOME/mail    # example directory: filtered mail spooled here
+</em><br>
+<em>&gt; DEFAULT=$HOME/inbox   # example default mailspool: could be
+</em><br>
+<em>&gt; /var/mail/&lt;username&gt; on some systems
+</em><br>
+<em>&gt; LOGFILE=$PMDIR/procmail.log  # you'll want this for debugging
+</em><br>
+<em>&gt; VERBOSE=off
+</em><br>
+<em>&gt; SHELL=/bin/sh
+</em><br>
+<em>&gt; INCLUDERC=$PMDIR/rc.devnull  # name of your procmail recipe file
+</em><br>
+<em>&gt; COMSAT=off
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 3.) In directory ~/.procmail, create your procmail recipes
+</em><br>
+<em>&gt; file (in this case &quot;rc.devnull&quot;), with contents like this
+</em><br>
+<em>&gt; (the exact example here being merely theoretical):
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; # save mail filtered on the &quot;From&quot; line match to $MAILDIR/joedees,
+</em><br>
+<em>&gt; # for future amusement, or evidence.
+</em><br>
+<em>&gt; :0
+</em><br>
+<em>&gt; * ^From:.*<a href="mailto:joedees@addall.com?Subject=Re:%20META:%20tutorial:%20set%20up%20your%20own%20lunatic%20filter&In-Reply-To=&lt;3A5DE5CE.9E0E51C3@datamann.com&gt;">joedees@addall.com</a>
+</em><br>
+<em>&gt; joedees
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; or
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; # simply discard mail from example destination
+</em><br>
+<em>&gt; :0
+</em><br>
+<em>&gt; * ^From:.*<a href="mailto:joedees@addall.com?Subject=Re:%20META:%20tutorial:%20set%20up%20your%20own%20lunatic%20filter&In-Reply-To=&lt;3A5DE5CE.9E0E51C3@datamann.com&gt;">joedees@addall.com</a>
+</em><br>
+<em>&gt; /dev/null
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 4.) Create or modify your ~/.forward file to contain:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &lt;username&gt;,   # usually, your local username
+</em><br>
+<em>&gt; &quot;|IFS=' '&amp;&amp;exec /usr/local/bin/procmail -f-||exit 75 #&lt;username&gt;&quot;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &quot;/usr/local/bin/procmail&quot; is a typical location; use the value of
+</em><br>
+<em>&gt; &quot;which procmail&quot; above or &quot;/usr/bin/env procmail&quot; if your
+</em><br>
+<em>&gt; system supports it.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Some enlightened sysadmins actually have procmail
+</em><br>
+<em>&gt; set up as the local MDA, in which case step #4 above is
+</em><br>
+<em>&gt; unnecessary.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; At least one emotionally unbalanced person on this list
+</em><br>
+<em>&gt; has threatened to change email addresses if list members
+</em><br>
+<em>&gt; don't listen to his rants.  That's OK.  Once he/she shows
+</em><br>
+<em>&gt; up and engages in similar rants, it's easy to add recipe lines
+</em><br>
+<em>&gt; to ~/.procmail/rc.devnull.  It takes much less effort to
+</em><br>
+<em>&gt; add the recipe than it does for that person to change email
+</em><br>
+<em>&gt; addresses.  Let him/her waste time trying.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Here's a reference if you're interested:
+</em><br>
+<em>&gt; &quot;<a href="http://userpages.umbc.edu/~ian/procmail.html">http://userpages.umbc.edu/~ian/procmail.html</a>&quot;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Have fun,
+</em><br>
+<em>&gt; Russell
+</em><br>
+<em>&gt; _________________________________________________________________
+</em><br>
+<em>&gt; Get your FREE download of MSN Explorer at <a href="http://explorer.msn.com">http://explorer.msn.com</a>
+</em><br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0915.html">Harvey Newstrom: "FLAME: Joe Dees and Russell Whitaker STOP IT!"</a>
+<li><strong>Previous message:</strong> <a href="0913.html">S.J. Van Sickle: "Re: Let the Hype Begin!"</a>
+<li><strong>In reply to:</strong> <a href="0897.html">Russell Whitaker: "META: tutorial: set up your own lunatic filter"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#914">[ date ]</a>
+<a href="index.html#914">[ thread ]</a>
+<a href="subject.html#914">[ subject ]</a>
+<a href="author.html#914">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:18 MDT</em>
+</em>
+</small>
+</body>
+</html>

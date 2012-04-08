@@ -1,0 +1,217 @@
+<!-- received="Thu Jan 23 14:53:05 1997 MDT" -->
+<!-- sent="Thu, 23 Jan 1997 22:38:22 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="TECH:COMP:WSI: the cost of everything, and the value of nothing" -->
+<!-- id="Pine.SOL.3.91.970123223034.7310B-100000@sun6" -->
+<!-- inreplyto="" -->
+<title>extropians: TECH:COMP:WSI: the cost of everything, and the value of nothing</title>
+<h1>TECH:COMP:WSI: the cost of everything, and the value of nothing</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Thu, 23 Jan 1997 22:38:22 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1134">[ date ]</a><a href="index.html#1134">[ thread ]</a><a href="subject.html#1134">[ subject ]</a><a href="author.html#1134">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1135.html">Lee Daniel Crocker: "Re: Plea (was ExI: Cognitive Extropians)"</a>
+<li> <b>Previous message:</b> <a href="1133.html">Lyle Burkhead: "Genius - the evidence"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+(Well, it's outdated, but the basic arithmetics is still sound. Besides,<br>
+ even naphthaline content can tell us something).<br>
+<p>
+"Computer Architecture, a Quantitative Approach", John L. Hennessy &amp;<br>
+ David A. Patterson, Morgan Kaufmann Publishers, (1990), pp. 54-61.<br>
+<p>
+Cost of an Integrated Circuit<br>
+<p>
+Why would a computer architecture book have a section on integrated<br>
+circuit costs? In an increasingly competitive computer marketplace where<br>
+standard parts -- disks, DRAMs, and so on -- are becoming a significant<br>
+portion of any system's cost, integrated circuit costs are becoming a<br>
+greater portion of the cost that varies between machines, especially in<br>
+the high volume, cost-sensitive portion of the market. Thus computer<br>
+designers must understand the costs of the chips to understand the costs<br>
+of current computers. We follow here the American accounting approach to<br>
+the costs of the chips.<br>
+<p>
+While the costs of integrated circuits have dropped exponentially, the<br>
+basic procedure of silicon manufacture is unchanged: A _wafer_ is still<br>
+tested and chopped into _dies_ that are packaged [...]. Thus the <br>
+cost of a packaged integrated circuit is:<br>
+<p>
+<p>
+                             Cost of die+Cost of testing die+Cost of pkgng.<br>
+Cost of integrated circuit = ----------------------------------------------<br>
+                                            Final test yield<br>
+<p>
+<p>
+Cost of Dies<br>
+<p>
+To learn how to predict the number of good chips per wafer <br>
+requires first learning how many dies fit on a wafer and then how to <br>
+predict the percentage of those that will work. From there it is simple to <br>
+predict cost:<br>
+<p>
+                         Cost of wafer<br>
+Cost of die = ----------------------------------------<br>
+                    Dies per wafer * Die yield<br>
+<p>
+The most interesting feature of this first term of the chip <br>
+cost equation is its sensitivity to die size, shown below.<br>
+<p>
+The number of dies per wafer is basically the area of the wafer <br>
+divided by the area of the die. It can be more accurately estimated by<br>
+<p>
+                 \pi * (Wafer diameter/2)^2   \pi * wafer diamtr.   Test<br>
+Dies per wafer = -------------------------- - ------------------- - dies per<br>
+                         Die area             \sqrt{2 * Die area}   wafer<br>
+<p>
+The first term is the ratio of wafer area (\pi r^2) to die area. The <br>
+second compensates for the "square peg in a round hole" problem -- <br>
+rectangular dies near the periphery of round wafers. Dividing the<br>
+circumference (\pi d) by the diagonal of a square die is approximately<br>
+the number of dice along the edge. The last term is for test dies that<br>
+must be strategically placed to control manufacturing. For example, a      <br>
+15-cm (ca. 6-inch) diameter wafer with 5 test dies produces 3.14 * 225/4<br>
+- 3.14*15/\sqrt{2} - 5 or 138 1-cm-square dies. Doubling the area -- the<br>
+parameter that a computer designer controls -- would cut dies per wafer<br>
+to 59.<br>
+<p>
+But this only give the maximum number of dies per wafer, and the critical<br>
+question is what is the fraction of percentage of good dies on a wafer<br>
+number, or the _die yield_. A simple model of integrated circuit yield<br>
+assumes defects are randomly distributed over the wafer:<br>
+<p>
+                                Defects per unit area * Die area<br>
+Die yield = Wafer yield * ( 1 + -------------------------------- ) ^ - \alpha<br>
+                                           \alpha<br>
+<p>
+where _wafer yield_ accounts for wafers that are completely bad and so<br>
+need not be tested and \alpha is a parameter that corresponds roughly to<br>
+the number of masking levels critical to die yield. \alpha depends upon<br>
+the manufacturing process. Generally \alpha = 2.0 for simple MOS<br>
+processes and higher values for more complex processes, such as bipolar<br>
+and BiCMOS. As an example, wafer yield is 90%, _defects per unit area_<br>
+is 2 per square centimeter, and die area is 1 square centimeter. Then die<br>
+yield is 90% * (1 + (2 * 1)/2.0)^{-2.0} or 22.5 %.<br>
+<p>
+The bottom line is the number of good dies per wafer, which comes from<br>
+multiplying dies per wafer by die yield. The examples above predict<br>
+138*.225 or 31 good 1 cm-square dies per 15 cm wafer. As mentioned above,<br>
+both dies per wafer and die yield are sensitive to die size -- doubling<br>
+die area knocks die yield down to 10% and good chips per wafer to just<br>
+59*.10, or 6! Die size depends on the technology and gates required by<br>
+the function of the chip, but it is also limited by the number of pins<br>
+that can be placed on the border of a square die.<br>
+<p>
+A 15-cm-diameter wafer processed in two-level metal CMOS costs a<br>
+semiconductor manufacturer about $550 in 1990 [fresh numbers, anybody?].<br>
+The cost for a 1-cm-square die with two defects per square cm on a 15-cm<br>
+wafer is $550/(138*.225) or $17.74.<br>
+<p>
+What should a computer designer remember about chip costs? The<br>
+manufacturing process dictates the wafer cost, wafer yield, \alpha, and<br>
+defects per unit area, so sole control of the designer is die area. Since<br>
+\alpha is usually 2 or larger, die costs are proportional to the third<br>
+(or higher) power of the die area:<br>
+<p>
+  Cost of die = f (Die area^3)<br>
+<p>
+The computer designer affects die size, and hence cost, both by what<br>
+functions are include on or excluded from the die an by the number of<br>
+I/O pins.<br>
+<p>
+<p>
+Cost of Testing Die and Cost of Packaging<br>
+<p>
+Testing is the second term of the chip-cost equation, and the success<br>
+rate of testing (die yield) affects the costs of testing:<br>
+<p>
+                       Cost of testing per hour * Average die test time<br>
+Cost of testing die = ---------------------------------------------------<br>
+                                          Die yield<br>
+<p>
+Since bad dies are discarded, die yield is in the denominator in the<br>
+equation -- the good must shoulder the costs of thesting those that fail.<br>
+Testing costs about $150 per hour in 1990 and die test take about 5 to 90<br>
+seconds on average, depending on the simplicity of the die and the<br>
+provisions to reduce testing time included in the chip. For example, a<br>
+$150 per hour and 5 seconds to test, the die test cost is $0.21. After<br>
+factoring in die yield for a 1-cm-square die, the costs are $0.93 per<br>
+good die. As in second example, let's assume testing takes 90 seconds.<br>
+The cost is $3.75 per untested die and $16.67 per good die. The bill so<br>
+far for our 1-cm-square die is $18.67 to $34.31, depending on how long it<br>
+takes to test. These two testing-time examples illustrate the importance<br>
+of reducing testing time in reducing costs.<br>
+<p>
+Cost of Packaging and Final Die Yield<br>
+<p>
+The cost of a package depends on the material used, the number of pins,<br>
+and the die area. The cost of the material used in the package is in part<br>
+determined by the ability to dissipate power generated by the die. For<br>
+example, a _plastic quad flat pack_ (PQFP) dissipating less than one<br>
+watt, with 208 of fewer pins, and containing a die up to one cm on a side<br>
+costs $3 in 1990. A ceramic _pin grid array_ (PGA) can handle 300 to 400<br>
+pins and a larger die with more power, but it costs $50. In addition to<br>
+the cost of the package itself is the cost of the labor to place a die in<br>
+the package and the bond the pads to the pins. We can assume that costs<br>
+$2. Burn-in exercises the packaged die under power for a short time to<br>
+catch chips that would fail early. Burn-in costs about $0.25 in 1990<br>
+dollars.<br>
+<p>
+We are not finished with costs until we have figured in failure of some<br>
+chips during assembly and burn-in. Using the estimate of 90% for final<br>
+test yield, the successful must again pay for the cost of those that<br>
+fail, so our costs are $26.58 to $96.29 for the 1-cm-square die.<br>
+<p>
+While those specific costs estimates may not hold, the underlying models<br>
+will. [...] shows dies per wafer, die yield, and their product against<br>
+the die are for a typical fabrication line, this time using programs that<br>
+more accurately predict die per wafer and die yield. [...] plots the<br>
+change in in area and cost as one dimension of a square die changes.<br>
+Changes to small dies make little cost differences, while 30% increases<br>
+to die size can double costs. The wise silicon designer will minimize die<br>
+area, testing time, and pins per chip and understand the costs of<br>
+projected packaging options when considering using more power, pins, or<br>
+area for higher performance.<br>
+<p>
+<p>
+Cost of a Workstation<br>
+<p>
+To put the costs of silicon in perspective, [...] shows the approximate<br>
+costs of components in a 1990 workstation. Costs of a component can be<br>
+halved going from low volume to high volume; here we assume high-volume<br>
+purchasing of 100 000 units. While costs for units like DRAMs will surely<br>
+drop over time from those in [...], units whose prices have already been<br>
+cut, like displays and cabinets, will change very little.<br>
+<p>
+The processor, floating-point unit, memory-management unit, and cache are<br>
+only 12% to 21% of the cost of the CPU board in [...]. Depending on the<br>
+options included in that system -- number of disks, color monitor, and so<br>
+on -- the processor components drop to 9 % and 16 % of the cost of a<br>
+system, as [...] illustrates. In the future two questions will be<br>
+interesting to consider: What costs can an engineer control? And what<br>
+costs can a computer engineer control?<br>
+<p>
+Cost Versus Price -- Why They Differ and by How Much<br>
+<p>
+[ Ask InTeL that one -- 'gene ]<br>
+<p>
+ciao,<br>
+'gene<br>
+<p>
+P.S. Linux: Where do you want to go tomorrow?<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1135.html">Lee Daniel Crocker: "Re: Plea (was ExI: Cognitive Extropians)"</a>
+<li> <b>Previous message:</b> <a href="1133.html">Lyle Burkhead: "Genius - the evidence"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

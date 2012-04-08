@@ -1,0 +1,185 @@
+<!-- received="Sun Sep  5 00:50:51 1999 MDT" -->
+<!-- sent="Sat, 4 Sep 1999 23:50:58 -0700" -->
+<!-- name="hal@finney.org" -->
+<!-- email="hal@finney.org" -->
+<!-- subject="Mike Perry's work on self-improving AI" -->
+<!-- id="199909050650.XAA24906@finney.org" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=135 -->
+<html><head><title>extropians: Mike Perry's work on self-improving AI</title>
+<meta name=author content="hal@finney.org">
+<link rel=author rev=made href="mailto:hal@finney.org" title ="hal@finney.org">
+</head><body>
+<h1>Mike Perry's work on self-improving AI</h1>
+<i>hal@finney.org</i><br>
+<i>Sat, 4 Sep 1999 23:50:58 -0700</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3532">[ date ]</a><a href="index.html#3532">[ thread ]</a><a href="subject.html#3532">[ subject ]</a><a href="author.html#3532">[ author ]</a>
+<!-- next="start" -->
+<li><a href="3533.html">[ Next ]</a><a href="3531.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+There was a fascinating article by Mike Perry in the recent issue
+of Alcor's newsletter, Cryonics, regarding his 1984 PhD work on
+self-improving AI.  This is a topic which Eliezer and others have
+suggested as a pathway to the Singularity.  Mike saw his work in the
+same context, although the term was not in use then.  It was his hope
+that self-improving AI could increase its intelligence exponentially and
+thereby change the world utterly.  Mike said that he later learned that
+Marvin Minsky had expressed the same vision as early as the 1960s.
+
+<p>
+As Mike described it, he wanted to create an AI program which could
+operate on itself.  The flavor of AI he chose was incremental improvement.
+<a name="3638qlink1">The program was able to work on an abstract system for which it had tools
+to modify it in various ways, and some way of measuring whether the
+modification improved things.</a>  The AI program used various heuristics
+to select the modifications to try (perhaps based on which other ones
+had been successful in the past, for example).
+
+<p>
+The idea, then, was to have two instances of the AI program, which we
+might call the doctor and the patient (Mike didn't use these terms).
+Initially both the doctor and the patient were created the same, based
+on some seed code Mike wrote.  The doctor would twiddle with the patient
+and then test its "IQ".
+
+<p>
+The testing would be done by letting the patient work on some problem;
+one example Mike gives is the travelling salesman problem.  The
+patient would use its (twiddled) heuristics to try to optimize the
+problem it was given, in some fixed amount of time, and how well it
+did was then a measure of the patient's intelligence.  This IQ rating
+was used by the doctor to judge what to twiddle with next.
+
+<p>
+After some time running in this mode, the doctor would then be overwritten
+by a copy of the (improved) patient.  The theory was that if the doctor
+had in fact improved the performance of the patient, then when the doctor
+was given those same improvements, it could do an even better job of
+improving the patient.  If it all worked, an exponentially increasing
+positive feedback loop would be created, and before long you'd have a
+program with superhuman abilities at problem solving.
+
+<p>
+However, this did not happen.  In practice what happened is that the
+patient got improved and copied to the doctor.  Then the improved doctor
+might be able to make a few more improvements to the patient, and these
+would get copied.  But then the process would stop.  The new and improved
+doctor could not find any other improvements it could make to the patient.
+<a name="3638qlink2">After two or three iterations the process would hit a limit.</a>
+
+<p>
+Now, obviously we cannot generalize from this and conclude that the whole
+concept of self-improvement is flawed.  This program had only a limited
+repertoire of behavioral tricks up its sleeve, and there was a limit to
+how much it could be changed in practice.  The initial seed was quite
+stupid, by Mike's own design, and it could be that a much smarter initial
+starting point is needed to have any hope of an exponential takeoff.
+
+<p>
+Nevertheless I think the general quality of the failure is instructive,
+and can apply in principle to the more ambitious programs for self
+improving AI.  I see two aspects to the failure.
+
+<p>
+<a name="3638qlink3">First, the problem can be seen as a matter of getting stuck on a local
+optimum.</a>  This is a general problem for optimization programs, whether
+AI based or otherwise.  You find a solution and begin improving it,
+and eventually you get to the best possible version of that solution.
+But you are limited in your ability to hop over into an entirely
+different part of the solution space, and it may be that with the
+tools you have at your disposal (heuristics, etc.) the best you can do
+in that regard just isn't good enough.
+
+<p>
+It is relatively easy to recognize local optima when the programs
+involved have sub-human intelligence, as with Mike's programs.  We see
+them pathetically wiggling around in the tiny corner of the search
+space available to them, oblivious to the many strategies which would
+surely lead to new possibilities.
+
+<p>
+However it is hard to recognize local optima when the intelligence
+involved is equal to or greater than our own.  How can we come up with a
+solution which is beyond the range of human intelligence and creativity
+to conceive of?  Are there even such things, or do we see the entirety
+of the solution space?  I think it is quite likely that we are, in the
+grand scheme of things, just as limited as Mike's little Lisp programs.
+Like them, we can't see beyond what we can see.
+
+<p>
+Given this perspective, it would appear to be difficult to ensure that
+a self-improving AI would be able to avoid local optima, and continue
+to improve itself.  It requires certain assumptions about the shape of
+the solution space, such that any AI at a given local optimum will be
+smart enough to see how to jump over to another region which won't keep
+it trapped in this part of the solution space.  I don't know how we can
+evaluate the possibility of getting trapped in this way.
+
+<p>
+The second lesson from this failure has to do with the cost of incremental
+improvements to a program.  In physics we study systems with various
+degrees of amplification, which we call gain.  A system with gain of 1
+has output changes as large as input changes.  With gain greater than 1,
+the output is larger than the input, so we have amplification.  With gain
+less than 1 the output is smaller than the input.
+
+<p>
+<a name="3638qlink4">Something similar can be defined for the self-improving program.
+One way to think of Mike's program's failure is that as the program got
+smarter, it got more complicated.</a>  With each incremental improvement,
+it was smarter at what it did, but at the same time it was faced with
+a program (itself) that was harder to understand.  We could imagine an
+"intelligence gain" factor defined as how much smarter it was, divided
+by how much more complicated it was.
+
+<p>
+In order to have effective, exponential intelligence amplification, you
+need this intelligence gain to be greater than 1.  If the only way to
+make a system X percent smarter is to make it 2X percent more complicated,
+you have a gain of .5 and your self-improver isn't going to get very far.
+The problem is getting harder faster than the program is getting smarter.
+
+<p>
+If you have gain &gt; 1, then maybe you can make the program 50% smarter
+but only 25% more complicated.  Then you are in good shape for positive
+feedback.  Each incremental step puts you in position to take an even
+bigger step next time.
+
+<p>
+Further, there is no reason to expect that the intelligence gain would
+remain constant at each step, for a program which starts with sub-human
+intelligence and eventually grows "as far above humans as we are above
+bacteria".  If at any point in that progression the program runs into a
+regime where intelligence gains are running substantially less than 1,
+it has a problem.  It won't be able to make it through that barrier, or
+if it can, progress will be slow and tedious, not a Singularity-producing
+explosion.
+
+
+<p>
+Despite the failure of his efforts, Mike was able to get a PhD out of
+the research, and he self-published copies of his thesis.  Anyone who
+wants to pursue this approach might consider contacting Mike and getting
+copies of the thesis or perhaps of the code itself.  He has contact info
+at <a href="http://www.alcor.org/meet_the_staff.html#perry">http://www.alcor.org/meet_the_staff.html#perry</a>.  Mike concluded his
+article by indicating that he hopes to resume work on his program now
+that so much more powerful computers are available.  Maybe giving his
+little optimizers a million times more computing power will be all that
+is needed to bootstrap into superhuman AI.
+
+<p>
+Hal
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="3533.html">[ Next ]</a><a href="3531.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

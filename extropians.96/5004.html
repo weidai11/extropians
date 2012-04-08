@@ -1,0 +1,66 @@
+<!-- received="Sun Dec 29 10:16:19 1996 MST" -->
+<!-- sent="Sun, 29 Dec 1996 13:52:35 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="CRYPTO: only messy cryptosystems are good cryptosystems" -->
+<!-- id="Pine.SOL.3.91.961229133452.4626A-100000@sun6" -->
+<!-- inreplyto="" -->
+<title>extropians: CRYPTO: only messy cryptosystems are good cryptosystems</title>
+<h1>CRYPTO: only messy cryptosystems are good cryptosystems</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 29 Dec 1996 13:52:35 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#5004">[ date ]</a><a href="index.html#5004">[ thread ]</a><a href="subject.html#5004">[ subject ]</a><a href="author.html#5004">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="5005.html">J. Daugherty: "RE: The Second American Civil War"</a>
+<li> <b>Previous message:</b> <a href="5003.html">Mark Grant: "Re: List Filtration (a.k.a.: Signal to Noise Ratio)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+In the recent cryptography thread somebody mentioned a single <br>
+cryptoalgorithm, which was small/neat, even probably provably secure. <br>
+I don't think that being small/neat are properties of good cryptoalgorithms. <br>
+<p>
+Why?<br>
+<p>
+Assuming a symmetrical cryptosystem, the algorithm has to iteratively map <br>
+a large seed, consisting of many binary/word sites. This is clearly a <br>
+high-entropy Hamiltonian (rugged energy function), causing the system to <br>
+execute a random walk in a (very) high-dimensional space. The larger the <br>
+space, and the more dimensions there are, the lesser the probability of <br>
+stepping on its own track (cycling) in the course of the random walk. <br>
+Moreover, mapping should be extremely divergent, causing neighbour voxels,  <br>
+wherever the sample is located, to diverge as soon as possible (not <br>
+overdoing it, though).<br>
+<p>
+Clearly, a one-time pad would mean an explicit writeup of the Hamiltonian -- <br>
+everything else would be just a short hand for it (it is obviously <br>
+incollapsible). Here lies the crux: the code/data conglomerate is <br>
+equivalent to an index, selecting one special from the multitude of all <br>
+Hamiltonians. So I conjecture, a good algorithm, while containing very <br>
+simple code, must contain any number of opaque, high-entropy tables to <br>
+generate good random at all. Another conjecture: high-connectivity <br>
+integer automata networks, defined by an high-entropy lookup-table (the <br>
+larger, the better), especially those pseudorandomly changing <br>
+connectivity of the network in course of the evolution should produce <br>
+excellent, cryptosuitable pseudorandom -- even better, a whole family of <br>
+good pseudorandom number generators.<br>
+<p>
+ciao,<br>
+'gene<br>
+<p>
+P.S. I can't express myself properly, and one should prove several things <br>
+about the above, but I feel strongly there is some truth to it.<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="5005.html">J. Daugherty: "RE: The Second American Civil War"</a>
+<li> <b>Previous message:</b> <a href="5003.html">Mark Grant: "Re: List Filtration (a.k.a.: Signal to Noise Ratio)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

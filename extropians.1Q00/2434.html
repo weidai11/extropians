@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: NANO: Hacking assembler security</TITLE>
+<META NAME="Author" CONTENT="hal@finney.org (hal@finney.org)">
+<META NAME="Subject" CONTENT="Re: NANO: Hacking assembler security">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: NANO: Hacking assembler security</H1>
+<!-- received="Wed Feb  9 18:04:33 2000" -->
+<!-- isoreceived="20000210010433" -->
+<!-- sent="Wed, 9 Feb 2000 17:05:07 -0800" -->
+<!-- isosent="20000210010507" -->
+<!-- name="hal@finney.org" -->
+<!-- email="hal@finney.org" -->
+<!-- subject="Re: NANO: Hacking assembler security" -->
+<!-- id="200002100105.RAA26270@finney.org" -->
+<!-- inreplyto="NANO: Hacking assembler security" -->
+<STRONG>From:</STRONG> <A HREF="mailto:hal@finney.org?Subject=Re:%20NANO:%20Hacking%20assembler%20security&In-Reply-To=&lt;200002100105.RAA26270@finney.org&gt;"><EM>hal@finney.org</EM></A><BR>
+<STRONG>Date:</STRONG> Wed Feb 09 2000 - 18:05:07 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2435.html">Ziana Astralos: "Re: It's illegal now to play your DVD on Linux..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2433.html">Robert J. Bradbury: "RE: Hot Chicks: (ws) body mods making life more fun..."</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="2393.html">Charlie Stross: "NANO: Hacking assembler security"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2474.html">Charlie Stross: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2474.html">Charlie Stross: "Re: NANO: Hacking assembler security"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2434">[ date ]</A>
+<A HREF="index.html#2434">[ thread ]</A>
+<A HREF="subject.html#2434">[ subject ]</A>
+<A HREF="author.html#2434">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Charlie Stross writes:
+<BR>
+<P><EM>&gt; The Thompson hack basically lets you create compilers that scan their
+</EM><BR>
+<EM>&gt; input stream for some signature and snitch on you (or execute some
+</EM><BR>
+<EM>&gt; arbitrary payload) if they see it. The nasty sting in the tail of
+</EM><BR>
+<EM>&gt; this idea is that the scanner/payload isn't visible in the source code
+</EM><BR>
+<EM>&gt; to the compiler; because one of the scanner/payload combinations in a
+</EM><BR>
+<EM>&gt; contaminated compiler is designed to add the patch whenever it recognizes
+</EM><BR>
+<EM>&gt; its own source code being re-compiled. With application to assemblers
+</EM><BR>
+<EM>&gt; (or, more likely, their control software aboard the nanocomputers used
+</EM><BR>
+<EM>&gt; to direct them), this would mean that if you try to assemble some grey
+</EM><BR>
+<EM>&gt; goo, the assembler will recognize the grey goo, and assemble something
+</EM><BR>
+<EM>&gt; else instead -- probably a pair of handcuffs.  And you can't build an
+</EM><BR>
+<EM>&gt; assembler that _won't_ snitch on you without doing it by hand, without
+</EM><BR>
+<EM>&gt; involving any off-the-shelf assemblers in the process: because they'll
+</EM><BR>
+<EM>&gt; try to propagate the Thompson hack into your new &quot;clean&quot; assembler.
+</EM><BR>
+<P>This is one way things may go, but I'm not sure the &quot;Thompson hack&quot;
+<BR>
+would be the preferred way to prevent assemblers from building dangerous
+<BR>
+objects.  The unique aspect of Thompson's idea was that the compiler
+<BR>
+would recognize when it was compiling itself, and build the hack into
+<BR>
+the new compiler, even though it wasn't present in the source code.
+<BR>
+<P>It does seem reasonable that assemblers would be limited in some ways,
+<BR>
+but this particular method has disadvantages.  It relies on secrecy,
+<BR>
+and if everyone knows it's there you might as well do things openly.
+<BR>
+It also is somewhat brittle in that the code can't change much or the
+<BR>
+hack won't recognize where it has to insert itself in the new version.
+<BR>
+<P>I suspect it would be more likely that an assembler (by which I mean
+<BR>
+a large device which might be in a home and used to build clothes,
+<BR>
+furnishings, electronics, etc.) will have a catalog of devices it can
+<BR>
+build, with variations that can be programmed in.  Maybe one assembler
+<BR>
+can build another, but you wouldn't have control at the level of making
+<BR>
+changes to remove limitations on what it could build, any more than a
+<BR>
+MUD program lets you drop into assembly language.
+<BR>
+<P>An interesting example though of where secrecy is used for somewhat
+<BR>
+similar purposes to what you desribe: recently there have been articles
+<BR>
+revealing that color copiers each have a unique digital &quot;fingerprint&quot;
+<BR>
+which they embed into copies.  Given a copy it is possible to trace it
+<BR>
+back to the exact machine which made it.  This is intended as an anti
+<BR>
+counterfeiting measure.  Most people have been unaware of this (although
+<BR>
+rumors have been around for years).  See the well respected Privacy
+<BR>
+Forum Digest at <A HREF="http://www.vortex.com/privacy/priv.08.18">http://www.vortex.com/privacy/priv.08.18</A>.
+<BR>
+<P>Hal
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2435.html">Ziana Astralos: "Re: It's illegal now to play your DVD on Linux..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2433.html">Robert J. Bradbury: "RE: Hot Chicks: (ws) body mods making life more fun..."</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="2393.html">Charlie Stross: "NANO: Hacking assembler security"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2474.html">Charlie Stross: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2474.html">Charlie Stross: "Re: NANO: Hacking assembler security"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2434">[ date ]</A>
+<A HREF="index.html#2434">[ thread ]</A>
+<A HREF="subject.html#2434">[ subject ]</A>
+<A HREF="author.html#2434">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:03:36 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: COM/DCOM on Linux via EntireX (was Working With</TITLE>
+<META NAME="Author" CONTENT="Emlyn (pentacle) (pentacle@enternet.com.au)">
+<META NAME="Subject" CONTENT="Re: COM/DCOM on Linux via EntireX (was Working Within the System)">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: COM/DCOM on Linux via EntireX (was Working Within the System)</H1>
+<!-- received="Fri May  5 00:53:52 2000" -->
+<!-- isoreceived="20000505065352" -->
+<!-- sent="Fri, 5 May 2000 16:52:22 +1000" -->
+<!-- isosent="20000505065222" -->
+<!-- name="Emlyn (pentacle)" -->
+<!-- email="pentacle@enternet.com.au" -->
+<!-- subject="Re: COM/DCOM on Linux via EntireX (was Working Within the System)" -->
+<!-- id="001d01bfb65e$783b3370$ef6565cb@squashynt" -->
+<!-- inreplyto="NDBBKGDJPKNNLCAEEHPPAEFCDHAA.bbrown@transcient.com" -->
+<STRONG>From:</STRONG> Emlyn (pentacle) (<A HREF="mailto:pentacle@enternet.com.au?Subject=Re:%20COM/DCOM%20on%20Linux%20via%20EntireX%20(was%20Working%20Within%20the%20System)&In-Reply-To=&lt;001d01bfb65e$783b3370$ef6565cb@squashynt&gt;"><EM>pentacle@enternet.com.au</EM></A>)<BR>
+<STRONG>Date:</STRONG> Fri May 05 2000 - 00:52:22 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2305.html">Anders Sandberg: "Re: Understanding Academia"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2303.html">Ross A. Finlayson: "Re: law enforcement for profit"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2295.html">Billy Brown: "RE: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2333.html">Billy Brown: "RE: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2333.html">Billy Brown: "RE: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2304">[ date ]</A>
+<A HREF="index.html#2304">[ thread ]</A>
+<A HREF="subject.html#2304">[ subject ]</A>
+<A HREF="author.html#2304">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+<EM>&gt; MSMQ is intended to be used by COM objects, so it all works together
+</EM><BR>
+pretty
+<BR>
+<EM>&gt; well. The only real problem is that it was designed with a C++ mentality,
+</EM><BR>
+so
+<BR>
+<EM>&gt; it tends to be more complicated than it really needs to be.
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt; The basic model is that you set up message queues in different machines,
+</EM><BR>
+and
+<BR>
+<EM>&gt; each COM object 'subscribes' to one or more queues. Then and program on
+</EM><BR>
+the
+<BR>
+<EM>&gt; network can send messages to any message queue, using the MSMQ COM
+</EM><BR>
+<EM>&gt; interface. When a message arrives in a queue MSMQ generates an event that
+</EM><BR>
+<EM>&gt; signals any 'subscribed' COM objects that there is a message waiting.
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt; You can do some really neat things with the system, like sending messages
+</EM><BR>
+<EM>&gt; when the network is down (they just pile up until the connection comes
+</EM><BR>
+back,
+<BR>
+<EM>&gt; at which point they all get sent), or interfacing with other message queue
+</EM><BR>
+<EM>&gt; systems. However, you have to write your own code to handle dead letters
+</EM><BR>
+<EM>&gt; (i.e. method calls that can't be processed) and serializing data (a
+</EM><BR>
+message
+<BR>
+<EM>&gt; body can be text, almost any primitive data type, a byte array, or a
+</EM><BR>
+<EM>&gt; persistent ActiveX object, but it can't be a variant or an array of
+</EM><BR>
+anything
+<BR>
+<EM>&gt; except bytes, so you end up having to do some work if you're object have
+</EM><BR>
+<EM>&gt; complex parameters).
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt; The best book I've seen on using this kind of setup is:
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<A HREF="http://www.amazon.com/exec/obidos/ASIN/1861001460/qid%3D957502926/102-931255">http://www.amazon.com/exec/obidos/ASIN/1861001460/qid%3D957502926/102-931255</A>
+<BR>
+<EM>&gt; 7-4150418
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt; I give it about a 5 on a scale of 1-10, but then I rarely rate anything
+</EM><BR>
+<EM>&gt; above a 7.
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt; Billy Brown
+</EM><BR>
+<EM>&gt; <A HREF="mailto:bbrown@transcient.com?Subject=Re:%20COM/DCOM%20on%20Linux%20via%20EntireX%20(was%20Working%20Within%20the%20System)&In-Reply-To=&lt;001d01bfb65e$783b3370$ef6565cb@squashynt&gt;">bbrown@transcient.com</A>
+</EM><BR>
+<EM>&gt; <A HREF="http://www.transcient.com">http://www.transcient.com</A>
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<P>Thanks thanks thanks thanks thanks!
+<BR>
+<P>My problem is that I'm trying to make a call from a client to a server,
+<BR>
+where the server is not trusted to actually process the call in a reliable
+<BR>
+way; in particular, where the call may never return. So, I want to make an
+<BR>
+asynchronous call - then the server can balls up, but the client can
+<BR>
+continue.
+<BR>
+<P>I hacked together a pretend asynchronous call between com objects, using an
+<BR>
+intermediate out-of-process object. The client calls the intermediate
+<BR>
+object, and the intermediate object sets a timer (1 msec) and returns the
+<BR>
+call (so the client can get on with it's life). Meanwhile, the timer goes
+<BR>
+off in the intermediate object, which then calls the server as the client
+<BR>
+has requested. If the server hangs, then the intermediate object does too,
+<BR>
+but the client is clear of the damage.
+<BR>
+<P>Gross, isn't it? I think these message queues might be a better solution...
+<BR>
+<P>Emlyn
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2305.html">Anders Sandberg: "Re: Understanding Academia"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2303.html">Ross A. Finlayson: "Re: law enforcement for profit"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2295.html">Billy Brown: "RE: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2333.html">Billy Brown: "RE: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2333.html">Billy Brown: "RE: COM/DCOM on Linux via EntireX (was Working Within the System)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2304">[ date ]</A>
+<A HREF="index.html#2304">[ thread ]</A>
+<A HREF="subject.html#2304">[ subject ]</A>
+<A HREF="author.html#2304">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:10:30 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

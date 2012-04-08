@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: More Hard Problems Using Bayes' Theorem, Please</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: More Hard Problems Using Bayes' Theorem, Please">
+<meta name="Date" content="2003-07-08">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: More Hard Problems Using Bayes' Theorem, Please</h1>
+<!-- received="Tue Jul  8 20:38:45 2003" -->
+<!-- isoreceived="20030709023845" -->
+<!-- sent="Tue, 08 Jul 2003 22:38:41 -0400" -->
+<!-- isosent="20030709023841" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: More Hard Problems Using Bayes' Theorem, Please" -->
+<!-- id="3F0B8031.1020008@pobox.com" -->
+<!-- charset="ISO-8859-1" -->
+<!-- inreplyto="JEEOJKGAIKFKEHJONHMPAEJJEJAA.lcorbin@tsoft.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20More%20Hard%20Problems%20Using%20Bayes'%20Theorem,%20Please"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Tue Jul 08 2003 - 20:38:41 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11274.html">Eliezer S. Yudkowsky: "OOPS: More Hard Problems Using Bayes' Theorem, Please"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="11272.html">Eliezer S. Yudkowsky: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>In reply to:</strong> <a href="11267.html">Lee Corbin: "RE: More Hard Problems Using Bayes' Theorem, Please"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11277.html">Dan Fabulich: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Reply:</strong> <a href="11277.html">Dan Fabulich: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Reply:</strong> <a href="11279.html">Lee Corbin: "RE: More Hard Problems Using Bayes' Theorem, Please"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11273">[ date ]</a>
+<a href="index.html#11273">[ thread ]</a>
+<a href="subject.html#11273">[ subject ]</a>
+<a href="author.html#11273">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Oh, wait, apparently Lee *did* post this to the Extropians list, instead 
+<br>
+of just to me... no wonder I couldn't find it in my inbox.  OK, I'll try 
+<br>
+and straighten this out on-list.
+<br>
+<p>Lee Corbin wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt;Anyway, problem number three is hopefully my long sought
+</em><br>
+<em>&gt;&gt;Rosetta Stone that does not require talking of distributions
+</em><br>
+<em>&gt;&gt;to see Bayesianism rear its head.  (I do have one smaller
+</em><br>
+<em>&gt;&gt;and much easier problem that lies bare the differences, but
+</em><br>
+<em>&gt;&gt;this here might be much hotter stuff.)
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Well, now it seems to me that in this particular problem, it's
+</em><br>
+<em>&gt; easy to think, wrongly, that an answer is possible.  So I apologize
+</em><br>
+<em>&gt; for putting it on the list (at the time, I thought that I just
+</em><br>
+<em>&gt; wasn't quick enough.)  I still maintain that there is not enough
+</em><br>
+<em>&gt; information in it.  But now I believe that that goes for
+</em><br>
+<em>&gt; Bayesians as well as for everyone else.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;&gt;&gt;3. The probability that a newborn will have deformities
+</em><br>
+<em>&gt;&gt;&gt;   traceable to a sickness of its mother during pregnancy is 1%.
+</em><br>
+<em>&gt;&gt;&gt;   If a child is born healthy and normal, the probability that
+</em><br>
+<em>&gt;&gt;&gt;   the mother had rubella during her pregnancy is 10%.  If a
+</em><br>
+<em>&gt;&gt;&gt;   child is born with deformities that can be traced to a
+</em><br>
+<em>&gt;&gt;&gt;   sickness of the mother, the probability that the mother had
+</em><br>
+<em>&gt;&gt;&gt;   rubella during her pregnancy is 50%. What is the probability
+</em><br>
+<em>&gt;&gt;&gt;   that a child will be born with deformities if its mother had
+</em><br>
+<em>&gt;&gt;&gt;   rubella during her pregnancy?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; In this stupid problem, the authors badly misstate at least one
+</em><br>
+<em>&gt; of the premises, in my opinion.  If you draw a picture of the
+</em><br>
+<em>&gt; problem, perhaps, you may be less likely to misread it than if
+</em><br>
+<em>&gt; you plug the numbers into a formula.
+</em><br>
+<p>No, Lee, it's perfectly straightforward to solve the problem from these 
+<br>
+premises.
+<br>
+<p>Observe:
+<br>
+<p>p(deformity) = 0.01
+<br>
+p(~deformity) = 0.99
+<br>
+p(rubella|~deformity) = 0.1
+<br>
+p(rubella|deformity) = 0.5
+<br>
+p(rubella&amp;~deformity) = p(r|~d)p(~d) = .1*.99 = .099
+<br>
+p(rubella&amp;deformity) = p(r|d)p(d) = .5*.01 = .005
+<br>
+p(rubella) = p(r&amp;d) + p(r&amp;~d) = .104
+<br>
+p(deformity|rubella) = p(rubella&amp;deformity)/p(rubella) = .005/.104 = .048
+<br>
+<p><em>&gt; And the heresy P(AB) is not equal to P(A|B)*P(B) appears in this
+</em><br>
+<em>&gt; quote from the above paper:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;       In Germany, every expectant mother must have an
+</em><br>
+<em>&gt;       obligatory test for rubella infection because
+</em><br>
+<em>&gt;       children born to women who have rubella while
+</em><br>
+<em>&gt;       pregnant are often born with terrible deformities.
+</em><br>
+<em>&gt;       The following information is at your disposal:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;         The probability that a newborn will have deformities
+</em><br>
+<em>&gt;         traceable to a sickness of its mother during pregnancy is 1%.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;         If a child is born healthy and normal, the probability
+</em><br>
+<em>&gt;         that the mother had rubella during her pregnancy is 10%.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;         If a child is born with deformities and it can be traced
+</em><br>
+<em>&gt;         to some sickness of the mother, the probability that the
+</em><br>
+<em>&gt;         mother had rubella during her pregnancy is 50%.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;         What is the probability that a child will be born with
+</em><br>
+<em>&gt;         deformities if its mother had rubella during her pregnancy?
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;       The Bayesian solution p (H | D) is .048.  But participants
+</em><br>
+<em>&gt;       who use one of two non-Bayesian algorithms, computing
+</em><br>
+<em>&gt;       p (H&amp;D) = .005 or picking p (H) = .01, will produce
+</em><br>
+<em>&gt;       estimates that lie in the interval of ±5 percentage points
+</em><br>
+<em>&gt;       around the Bayesian solution.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; But why shouldn't p(H&amp;D) --- that is, p(defect &amp; rubella) be equal
+</em><br>
+<em>&gt; to .005?  What other conclusion can one come to from the first
+</em><br>
+<em>&gt; statement together with the third statement?
+</em><br>
+<p>p(H&amp;D) DOES come to .005.  It's just this is the WRONG SOLUTION to the 
+<br>
+problem.  Sedlmeier and Gigerenzer are not saying that p(H&amp;D) != 0.005, 
+<br>
+they're saying that p(H&amp;D) != p(H|D).
+<br>
+<p><em>&gt; Unless, they fail to believe that p(H&amp;D) = p(H|D)*p(D).  Sure
+</em><br>
+<em>&gt; enough, go back a couple of paragraphs in that paper, and find
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt;       The most frequent non-Bayesian algorithms they identified
+</em><br>
+<em>&gt;       include computing p (H&amp;D) by multiplying p (H) and p (D | H);
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; No wonder I can't grasp Bayesianism.   ;-)
+</em><br>
+<p>It may not be a good idea to read academic papers about Bayes before 
+<br>
+having grasped Bayes, since the authors are speaking to an audience that 
+<br>
+they need not fear confusing.  When they speak of non-Bayesian algorithms 
+<br>
+they are NOT talking about formal statistical methods employed by 
+<br>
+self-declared frequentists; they are talking about naive subjects 
+<br>
+computing a wrong answer using a bad visualization of the problem.  That 
+<br>
+is, &quot;non-Bayesian&quot; is here a synonym for &quot;incorrect&quot;, not &quot;frequentist&quot;. 
+<br>
+They are not talking about the frequentist/Bayesian controversy at all.
+<br>
+<p>If you look at the surrounding context, you will see that the problem they 
+<br>
+are addressing is that some incorrect answers computed according to common 
+<br>
+incorrect strategies are numerically close to the correct answer, and 
+<br>
+might be confused with a &quot;Bayesian&quot; answer by some common experimental 
+<br>
+techniques that accept answers as &quot;Bayesian&quot; if they are within a given 
+<br>
+range of the correct answer.
+<br>
+<p><em>&gt; Of course, it is a libel to say that Bayesians would be guilty of
+</em><br>
+<em>&gt; believing that p(H&amp;D) was not equal to p(H|D)*p(D).  But I was
+</em><br>
+<em>&gt; hoping that it would turn out to be the case that in some problems
+</em><br>
+<em>&gt; they do not---now I simply believe that the authors are full of shit.
+</em><br>
+<em>&gt; And I think that their study is deeply flawed too, as a predictable
+</em><br>
+<em>&gt; result of inflicting this problem on a lot of innocent victims.
+</em><br>
+<p>Lee, Gigerenzer is extremely unlikely (prior probability) to be full of 
+<br>
+shit.  I haven't heard of Sedlmeier, but I've heard of Gigerenzer.  If you 
+<br>
+are confused about a mathematical subject and you find yourself 
+<br>
+disagreeing with a pro mathematician it is diamonds to doughnuts that you 
+<br>
+are the one in the wrong.
+<br>
+<p>I would (as stated more briefly in my first reply) recommend that you read 
+<br>
+through the &quot;Intuitive Explanation&quot; from start to finish without skipping 
+<br>
+anything; and then, if you are still interested in understanding the 
+<br>
+difference between Bayesians and frequentists (which is something the 
+<br>
+intro does not address), I would recommend reading the E.T. Jaynes 
+<br>
+lectures given in the &quot;Further Reading&quot; section at the end of the intro. 
+<br>
+Jaynes gives specific examples of cases where frequentist methods are both 
+<br>
+more complicated than and inferior to Bayesian methods.
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://singinst.org/">http://singinst.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11274.html">Eliezer S. Yudkowsky: "OOPS: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Previous message:</strong> <a href="11272.html">Eliezer S. Yudkowsky: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>In reply to:</strong> <a href="11267.html">Lee Corbin: "RE: More Hard Problems Using Bayes' Theorem, Please"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11277.html">Dan Fabulich: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Reply:</strong> <a href="11277.html">Dan Fabulich: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Reply:</strong> <a href="11279.html">Lee Corbin: "RE: More Hard Problems Using Bayes' Theorem, Please"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11273">[ date ]</a>
+<a href="index.html#11273">[ thread ]</a>
+<a href="subject.html#11273">[ subject ]</a>
+<a href="author.html#11273">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Tue Jul 08 2003 - 20:49:23 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!-- received="Thu Jul 29 23:06:58 1999 MDT" -->
+<!-- sent="Thu, 29 Jul 1999 22:04:00 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Neurons vs. Transistors (IA vs. AI)" -->
+<!-- id="14241.12864.758725.424939@lrz.de" -->
+<!-- inreplyto="14238.20301.48559.502158@lrz.de" -->
+<!-- version=1.10, linesinbody=188 -->
+<html><head><title>extropians: Re: Neurons vs. Transistors (IA vs. AI)</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Re: Neurons vs. Transistors (IA vs. AI)</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Thu, 29 Jul 1999 22:04:00 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1328">[ date ]</a><a href="index.html#1328">[ thread ]</a><a href="subject.html#1328">[ subject ]</a><a href="author.html#1328">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1329.html">[ Next ]</a><a href="1327.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1256.html">Paul Hughes</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Paul Hughes writes:
+
+<p>
+<a href="1258.html#1328qlink1"> &gt; Well, I'm no neurophsyiologist, but lets give it a shot.  First of all, how many</a><br>
+
+<p>
+I don't think a neurophysiologist will have very much to tell you
+about the molecular level. It's not their area of expertise, after
+all.
+
+<p>
+<a href="1258.html#1328qlink2"> &gt; 'and/or' gates would it take to model a seratonin molecule interacting with a</a><br>
+<i> &gt; phosphate molecule?  This is outside of my expertise, but I suspect this would</i><br>
+<i> &gt; require several dozen 'and/or' gates to model even the simplest of interactions.</i><br>
+
+<p>
+If you want to address the issue at molecular level of detail you're
+facing two problem domains: system representation (scratchpad with
+lots of numbers on it) and system evolution, i.e. the laws which make
+it tick. Both require "logic gates" for implementation. If you attach
+an instance of the physical law implementing circuitry to each atom
+representation unit (the really smart memory scenario), wiring the
+result in a 3d lattice you'd obviously achive the fastest possible
+execution time but have the highest possible redundancy to pay. If you
+have just one instance of physical law engine to serve 10^9 or more
+atom coding units you're obviously very far away from realtime. My
+(more or less educated) guess is that one needs somewhen from
+10^3..10^6 transistor equivalents for the physical law engine if one
+does it the digital physics way (in current lingo, aka integer lattice
+gas with a complicated rule, check it out on <a href="http://xxx.lanl.gov">http://xxx.lanl.gov</a> ).
+
+<p>
+Unless the mind requires nonabstractable quantum level weirdness to
+operate, this brute force approach would obviously work. At maximum
+redundancy/maximum speed implementation scenario we're talking about
+roughly 1 cubic micron molecular circuitry for each atom, with 1 ns..1
+ps ticks being equivalent to 1-2 fs real time.
+
+<p>
+If you do the numbers you will notice that this is nothing like a
+sugarcube, and is not exactly running factor 10^9 superrealtime.
+
+<p>
+Of course we don't need molecular level of detail to run an upload,
+that's quite absurd. Beefed-up compartmental modelling is probably
+sufficient, so a complex cellular-level model fed with real
+neuroanatomy data would probably suffice. This is a far cry from the
+molecular dynamics level, yet would require about the same amount of
+complexity (within two orders of magnitude in the currency of
+circuitry) as the brute force MD approach.
+
+<p>
+There might be higher abstraction levels, but just what they will be
+is currently difficult to tell (probably system state space
+dynamics/attractor level), and it is not at all obvious how to
+translate the digitized neuroanatomy (scanned wetware, in cheesy
+cyberspeak) into that higher level encoding.
+
+<p>
+<a href="1256.html#1328qlink3"> &gt; The next challenge is coming up with a complex enough circuit design to model</a><br>
+<i> &gt; *all* of the possible interactions of seratonin along a single neuron connection.</i><br>
+<i> &gt; And of course this only describes seratonin!  So the next challenge is moving up</i><br>
+<i> &gt; the scale of complexity to design a software/hardware system general enough to</i><br>
+<i> &gt; accommodate *all* neurotransmitter activity.  You would think with today's</i><br>
+
+<p>
+This is not done this way. One just needs a set of parameters for each
+new class of molecules. In theory a single universal forcefield would
+suffice, and people are currently working on developing these (which
+automagically invoke the QM level and fit parameters whenever they
+don't have the knowledge in the database already), so these are maybe
+5-10 years away.
+
+<p>
+<a href="1256.html#1328qlink4"> &gt; supercomputers, somebody somewhere has designed a program that can emulate</a><br>
+<i> &gt; every conceivable molecular state of a single neuron.  If not, then my point is well</i><br>
+<i> &gt; taken in how complex each neuron in fact is.</i><br>
+ 
+<p>
+Right now we can more or less easily simulate 10^9 particle system
+with short-range potential (otherwise know as forcefield) on best
+modern mainframes. Assuming digital physics tricks as above (most
+simulation people would disagree when currently asked, but they're
+obviously turkeys) it is very much conceivable to model a cubic micron
+or slighlty more of biological tissue on a temporal domain of 1 ns...1
+us with end-of-the line silicon (i.e. when Moore has saturated in 2d
+photolitho). We're talking about runtime of ~1 year of a big box of
+end-Moore silicon here, so don't phone your local computing center
+operator yet.
+ 
+<p>
+<a href="1256.html#1328qlink5"> &gt; Assuming someone has designed a program that's capable of this; conceptually then,</a><br>
+<i> &gt; one must then have this program run simultaneously and in parallel with thousands</i><br>
+<i> &gt; of others to match the average neuronal connectivity.  The program would have</i><br>
+
+<p>
+The connectivity has little to do with parallelism: you can simulate a
+parallel system on a perfectly sequential machine. Of course it has
+everything to do with performance. So one needs at least one
+processing instance/biological neuron, if not several.
+
+<p>
+<a href="1256.html#1328qlink6"> &gt; to do a complete run through an average of 10 times/sec. Since it would be a waste</a><br>
+<i> &gt; for a simultaneous program running for every neuron (10 billion?) it would be</i><br>
+
+<p>
+Waste of space, not of time. And make no mistake: we're not talking
+about programs here. We're strictly on dedicated hardware train here,
+several of these babies allocated to each neuron. You're in dire
+trouble when you try to assign significant number of neurons to a
+single processor: there are many orders of magnitude hidden in their
+wetware parallelism.
+
+<p>
+<a href="1256.html#1328qlink7"> &gt; easier to have each neuron be stored as rapidly-accessed data until used.  How much</a><br>
+<i> &gt; data would be required to store accurately the state of each neuron? I don't know,</i><br>
+<i> &gt; but I suspect it's easily on the order of a megabyte at least - as it</i><br>
+<i> &gt; would have to store the entire array of unique molecular states the neuron is in.</i><br>
+ 
+<p>
+Data is not a problem: molecular memories are damn dense. The real
+problem is how quickly you can mangle these data.
+
+<p>
+<a href="1258.html#1328qlink8"> &gt; At this point it's all guess work, but my point is that even if when we achieve</a><br>
+<i> &gt; atomic</i><br>
+<i> &gt; scale transistor densities, the real challenge will be organizing those transistors</i><br>
+<i> &gt; to</i><br>
+<i> &gt; emulate the entire brain, which is itself a molecular switching computer.</i><br>
+ 
+<p>
+The underlying hardware must have obviously modest to mid connectivity
+due to constraints derived from physics of computation, but the switch
+topology has very little to do with the original layout of wetware
+circuitry. We're at the emulation level, the physical level is here
+visible only dimly (essentially, as signalling latency).
+
+<p>
+<a href="1258.html#1328qlink9"> &gt; **The challenge is not the speed or density, which will eventually give us the</a><br>
+<i> &gt; _potential_</i><br>
+<i> &gt; to run a human brain 1000's of times faster than our own.  No, the real challenge</i><br>
+
+<p>
+10^3 is very much possible, 10^6 is stretching it, 10^9? Maybe, but
+not very likely.
+
+<p>
+<a href="1256.html#1328qlink10"> &gt; is creating something complex and coherent enough to emulate the brain itself.  I</a><br>
+<i> &gt; suspect</i><br>
+<i> &gt; the hardware and software bottlenecks in actually doing so will be difficult enough</i><br>
+<i> &gt; to close the gap between brain augmentation (IA) and human-level AI considerably.</i><br>
+ 
+<p>
+Well, in principle all you need is a really accurate MD forcefield and
+the full structural data. It would be impractical, but in theory it
+would work, and with very little code at that.
+
+<p>
+<a href="1258.html#1328qlink11"> &gt; &gt;  &gt; Therefore, my primary position is that the gap between uploading</a><br>
+<i> &gt; &gt;  &gt; and human-level AI is much narrower than is often argued.</i><br>
+<i> &gt; &gt;</i><br>
+<i> &gt; &gt; Gap in which context? Brute-force uploading (aka neuroemulation)</i><br>
+<i> &gt; &gt; requires many orders of magnitude more power than straight bred</i><br>
+<i> &gt; &gt; AI. And the translation procedure to the more compact target encoding</i><br>
+<i> &gt; &gt; is nonobvious (i.e. I do have hints, but can't be sure it's going to</i><br>
+<i> &gt; &gt; work).</i><br>
+<i> &gt; </i><br>
+<i> &gt; That is also completely non-obvious.  I have yet to hear a single convincing argument</i><br>
+<i> &gt; </i><br>
+<i> &gt; that sufficient *speed* and density automatically yields human-level AI. You will</i><br>
+<i> &gt; need</i><br>
+<i> &gt; complexity, and where by chance will you be getting it?  Until this can be</i><br>
+<i> &gt; convincingly</i><br>
+<i> &gt; answered, all human-level AI claims should be kept in every Skeptics top 5.</i><br>
+ 
+<p>
+Well, I keep repeating it over and over, but apparently people either
+don't listen or keep forgetting it. You can't specify a true AI, we're
+not smart enough for that by far (even you, Eliezer). But we know that
+AI solves problems, and it is comparatively easy to evaluate individua
+according to their task solving performance. You need a testing
+framework, and a darwin in machina framework, and really monstrous
+power to run it (that's why you probably need nano). One starts on a
+small scale, feeding trivial problems to trivial systems first. As an
+analogy, our neurons are not much different from that of many other
+animals, and even evolutionary old animals. It's all in the details of
+several hundred classes, and how they are assembled. Of course nothing
+prevents us from inserting what we think is useful into the pool
+manually (i.e. we insert a protoneuron into a sea of cells). It will
+of course get blown away eventually, but we're saving time since not
+having to reinvent the wheel.
+ 
+<p>
+<a href="1256.html#1328qlink12"> &gt; **Since no one has actually built or designed a theoretical human-level AI, how can</a><br>
+<i> &gt; anyone possibly claim what it takes to build one?  This seems completely absurd</i><br>
+
+<p>
+I'm not saying my approach will work, I'm saying why other approaches
+are imo doomed, and outline a model without their listed
+shortcomings. If you have a new, better suggestion how to bootstrap AI
+I'm all ears.
+
+<p>
+<a href="1256.html#1328qlink13"> &gt; to the point of self-contradiction!  As so many are fond of saying around here -</a><br>
+<i> &gt; extraordinary claims require extraordinary proof.  To re-iterate the obvious, until</i><br>
+<i> &gt; someone can prove otherwise, a human-level AI will have to equal the complexity of</i><br>
+<i> &gt; the</i><br>
+<i> &gt; human brain.</i><br>
+ 
+<p>
+No one will argue with that, I think. But of course nobody requires
+you to produce the complexity by hand. You being there didn't require
+having a creator either.
+
+<p>
+ &gt; Paul Hughes<br>
+ 
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1329.html">[ Next ]</a><a href="1327.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1256.html">Paul Hughes</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

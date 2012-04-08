@@ -1,0 +1,121 @@
+<!-- received="Tue Dec  7 10:25:39 1999 MST" -->
+<!-- sent="Tue, 7 Dec 1999 09:25:36 -0800 (PST)" -->
+<!-- name="Robert J. Bradbury" -->
+<!-- email="bradbury@www.aeiveos.com" -->
+<!-- subject="Re: Blue Gene" -->
+<!-- id="Pine.UW2.4.20.9912070901060.807-100000@www.aeiveos.com" -->
+<!-- inreplyto="384CA8CE.166D45F7@stargate.net" -->
+<!-- version=1.10, linesinbody=72 -->
+<html><head><title>extropians: Re: Blue Gene</title>
+<meta name=author content="Robert J. Bradbury">
+<link rel=author rev=made href="mailto:bradbury@www.aeiveos.com" title ="Robert J. Bradbury">
+</head><body>
+<h1>Re: Blue Gene</h1>
+Robert J. Bradbury (<i>bradbury@www.aeiveos.com</i>)<br>
+<i>Tue, 7 Dec 1999 09:25:36 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3370">[ date ]</a><a href="index.html#3370">[ thread ]</a><a href="subject.html#3370">[ subject ]</a><a href="author.html#3370">[ author ]</a>
+<!-- next="start" -->
+<li><a href="3371.html">[ Next ]</a><a href="3369.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3347.html">Mike Hall</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="3381.html">Eugene Leitl</a>
+</ul>
+<!-- body="start" -->
+
+
+
+<p>
+On Tue, 7 Dec 1999, Mike Hall wrote:
+
+<p>
+<i>&gt; </i><br>
+<a href="3347.html#3370qlink1">&gt; Maybe, but I've seen nothing in the published material that says this is</a><br>
+<i>&gt; anything other than a general-purpose machine.  But again, the facts in</i><br>
+<i>&gt; these pieces are somewhat meager.  I'd like to get a peek at the</i><br>
+<i>&gt; instruction set if they ever deign to publish it.</i><br>
+
+<p>
+<a name="3381qlink1">So would I.  I think they would publish it, you can't effectively use a
+machine unless you can work with it at multiple levels.  I've rarely
+seen a compiler that I can't out-code.  The question is whether</a> they
+<a name="3381qlink2">will publish it before the machine becomes available, for example do we
+even have the Merced instruction set (or the Playstation instruction set?).</a>
+
+<p>
+<i>&gt; </i><br>
+<a name="3381qlink3"><a href="3347.html#3370qlink2">&gt; But even if I'm right, the task of designing software to make full use</a><br>
+<i>&gt; of the machine's capabilities may be so daunting that no one else will</i><br>
+<i>&gt; want to take it on, effectively making it a single-purpose machine.</i><br>
+
+<p>
+Not really, if it is general purpose, there are already software
+models (e.g. the Oxford Bulk Synchronous Parallel (BSP) model,
+the OpenMP API for Shared Memory Programming, and the BIP message
+passing model (for Myrinet) for programming similar machines.
+There only difference between programming something for a Beowulf
+cluster and Blue Gene is the granularity of the processor units.</a>
+
+<p>
+<a name="3381qlink4">What IBM probably did was ask themselves what the failure rate
+was going to be in the processor units.  With 1M processors
+it might be quite high.  Customers aren't going to be happy
+if your machine is down most of the time getting boards replaced.</a>
+<a name="3381qlink5">This is now solved in multiprocessor &amp; clustered architectures
+where you can afford to take out a node for a few minutes to
+hours to replace parts.  However if you are running integrated
+calculations (i.e. this isn't a client-server archecture) that
+take days to weeks and the data in one node interacts with *all*
+of the other data, then when you pull a node you slow down the
+entire calculation.  The clever trick is going to be detecting
+the failures (you don't want soft failures, you want hard failures)
+and having the data arranged so that multiple processors/nodes can
+rapidly get to it.
+</a>
+
+<p>
+<a name="3381qlink6">This is a new level in computer architecture and getting very close
+to what goes on in the brain.  If they get the architecture right
+and the fault tolerance right and because they have solved the
+bandwidth problem, you can expect a simple instruction set to
+gradually expand as people come up with other applications
+and declining feature sizes give you more chip real-estate to
+</a>work with.
+
+<p>
+<a name="3381qlink7">&gt; And this is likely the only one they will build, like Deep Blue.<br>
+
+<p>
+IBM is one of the most clever marketing organizations in the world.
+Unlike Deep Blue, they aren't doing this for publicity.  (After all
+how many machines are you going to sell when you know you are going
+to lose the game...) They realize the market for these machines is
+in the dozens (major pharma &amp; govmnts), thousands (universities &amp;
+small-biotech), and potentially workstation quantities (individual
+researchers).  I'll predict with this one they are planning to do
+the software investment and then use that to follow the declining
+hardware costs to make the machines available to larger markets.
+</a>
+
+<p>
+<i>&gt; </i><br>
+<a name="3381qlink8"><a href="3347.html#3370qlink3">&gt; P.S.  I apologize for my sloppy editing on my original post</a><br>
+<i>&gt; (which was truly my first post to this list).</i><br>
+
+<p>
+No problem.  The information was quite helpful and appreciated.
+
+<p>
+Robert
+</a>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="3371.html">[ Next ]</a><a href="3369.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3347.html">Mike Hall</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="3381.html">Eugene Leitl</a>
+</ul>
+</body></html>

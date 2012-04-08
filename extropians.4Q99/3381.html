@@ -1,0 +1,182 @@
+<!-- received="Tue Dec  7 11:58:57 1999 MST" -->
+<!-- sent="Tue, 7 Dec 1999 11:55:09 -0800 (PST)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Blue Gene" -->
+<!-- id="14413.26141.293527.888125@lrz.uni-muenchen.de" -->
+<!-- inreplyto="Pine.UW2.4.20.9912070901060.807-100000@www.aeiveos.com" -->
+<!-- version=1.10, linesinbody=122 -->
+<html><head><title>extropians: Re: Blue Gene</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Re: Blue Gene</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Tue, 7 Dec 1999 11:55:09 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3381">[ date ]</a><a href="index.html#3381">[ thread ]</a><a href="subject.html#3381">[ subject ]</a><a href="author.html#3381">[ author ]</a>
+<!-- next="start" -->
+<li><a href="3382.html">[ Next ]</a><a href="3380.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3370.html">Robert J. Bradbury</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Robert J. Bradbury writes:
+
+<p>
+<a href="3370.html#3381qlink1"> &gt; So would I.  I think they would publish it, you can't effectively use a</a><br>
+<i> &gt; machine unless you can work with it at multiple levels.  I've rarely</i><br>
+<i> &gt; seen a compiler that I can't out-code.  The question is whether they</i><br>
+
+<p>
+Deeply pipelined VLIW stuff is a nightmare to hand-optimize. TI 'C6x
+and Itanium would come to mind here.
+
+<p>
+<a href="3370.html#3381qlink2"> &gt; will publish it before the machine becomes available, for example do we</a><br>
+<i> &gt; even have the Merced instruction set (or the Playstation instruction set?).</i><br>
+ 
+<p>
+<a href="http://developer.intel.com/design/ia64/index.htm">http://developer.intel.com/design/ia64/index.htm</a>
+
+<p>
+As to PSX2 Beowulf (project named Wolfstation) there is a site
+<p>
+   <a href="http://wulfstation.org/">http://wulfstation.org/</a>
+<br>
+and a mailing list
+<p>
+   <a href="http://www.onelist.com/community/beowulf-psx2">http://www.onelist.com/community/beowulf-psx2</a>
+though so far it is mostly fluff (we're waiting for the dev kits).
+
+<p>
+The PSX2 CPU is mostly vanilla MIPS. If you know MIPS, you'll find
+yourself immediately at home.
+
+<p>
+<a href="3370.html#3381qlink3"> &gt; &gt; But even if I'm right, the task of designing software to make full use</a><br>
+<i> &gt; &gt; of the machine's capabilities may be so daunting that no one else will</i><br>
+<i> &gt; &gt; want to take it on, effectively making it a single-purpose machine.</i><br>
+<i> &gt; </i><br>
+<i> &gt; Not really, if it is general purpose, there are already software</i><br>
+<i> &gt; models (e.g. the Oxford Bulk Synchronous Parallel (BSP) model,</i><br>
+<i> &gt; the OpenMP API for Shared Memory Programming, and the BIP message</i><br>
+<i> &gt; passing model (for Myrinet) for programming similar machines.</i><br>
+<i> &gt; There only difference between programming something for a Beowulf</i><br>
+<i> &gt; cluster and Blue Gene is the granularity of the processor units.</i><br>
+
+<p>
+Hopefully, IBM will integrate the switch/router into the CPU, and
+implement direct hardware support for most MPI calls (i.e. most basic
+MPI calls would be substituted by a single/few machine instructions).
+
+<p>
+Otherwise, latencies will be prohibitive. The best we can do with
+cheap off-shelf codes/hardware is GAMMA (with MPI wrapper) and M-VIA:
+
+<p>
+    <a href="http://www.disi.unige.it/project/gamma/">http://www.disi.unige.it/project/gamma/</a>
+    <a href="http://www.nersc.gov/research/FTG/via/">http://www.nersc.gov/research/FTG/via/</a> 
+
+<p>
+The latencies here are mostly due to software overhead. I don't see
+why one shouldn't be able to bring message passing latency down to few
+10 ns with the proper hardware support.
+
+<p>
+As to the optimal type of code for MD, I strongly suspect integer
+lattice gases might be up to the challenge. 
+
+<p>
+	<a href="http://xxx.lanl.gov/archive/comp-gas">http://xxx.lanl.gov/archive/comp-gas</a>
+
+<p>
+Progress is slow, but steady. A generic forcefield engine implemented
+as integer lattice gas would be trivially to cast in hardware. And you 
+certainly can't beat the speed.
+
+<p>
+<a href="3370.html#3381qlink4"> &gt; What IBM probably did was ask themselves what the failure rate</a><br>
+<i> &gt; was going to be in the processor units.  With 1M processors</i><br>
+<i> &gt; it might be quite high.  Customers aren't going to be happy</i><br>
+<i> &gt; if your machine is down most of the time getting boards replaced.</i><br>
+
+<p>
+I surmise one can keep a fresh CPU pool and checkpoint
+periodically. When a CPU fails you fallback to the last snapshot
+state, thus losing only minutes of computation. Of course this means
+lots of I/O activity every few minutes, so each CPU should have its
+own disk. Otoh Big Blue is probably up to the challenge of building a
+monolithic monster RAID.
+
+<p>
+<a href="3370.html#3381qlink5"> &gt; This is now solved in multiprocessor &amp; clustered architectures</a><br>
+<i> &gt; where you can afford to take out a node for a few minutes to</i><br>
+<i> &gt; hours to replace parts.  However if you are running integrated</i><br>
+<i> &gt; calculations (i.e. this isn't a client-server archecture) that</i><br>
+<i> &gt; take days to weeks and the data in one node interacts with *all*</i><br>
+<i> &gt; of the other data, then when you pull a node you slow down the</i><br>
+<i> &gt; entire calculation.  The clever trick is going to be detecting</i><br>
+<i> &gt; the failures (you don't want soft failures, you want hard failures)</i><br>
+<i> &gt; and having the data arranged so that multiple processors/nodes can</i><br>
+<i> &gt; rapidly get to it.</i><br>
+
+<p>
+The good part about MD is that they are mostly local-interaction (see
+particle-in-cell for a very good illustration), and long-range
+interactions (mostly Coulomb) can be simulated by propagating the
+information through the node lattice a la bucket brigade.
+
+<p>
+<a href="3370.html#3381qlink6"> &gt; This is a new level in computer architecture and getting very close</a><br>
+<i> &gt; to what goes on in the brain.  If they get the architecture right</i><br>
+<i> &gt; and the fault tolerance right and because they have solved the</i><br>
+<i> &gt; bandwidth problem, you can expect a simple instruction set to</i><br>
+<i> &gt; gradually expand as people come up with other applications</i><br>
+<i> &gt; and declining feature sizes give you more chip real-estate to</i><br>
+<i> &gt; work with.</i><br>
+
+<p>
+For a glimpse of what is possible with PIM type of devices (caution,
+self plug again) have a look at (old, obsolete, half-baked etc):
+
+<p>
+     <a href="http://www.lrz-muenchen.de/~ui22204/.html/txt/8uliw.txt">http://www.lrz-muenchen.de/~ui22204/.html/txt/8uliw.txt</a>
+
+<p>
+<a href="3370.html#3381qlink7"> &gt; &gt; And this is likely the only one they will build, like Deep Blue.</a><br>
+<i> &gt; </i><br>
+<i> &gt; IBM is one of the most clever marketing organizations in the world.</i><br>
+<i> &gt; Unlike Deep Blue, they aren't doing this for publicity.  (After all</i><br>
+<i> &gt; how many machines are you going to sell when you know you are going</i><br>
+<i> &gt; to lose the game...) They realize the market for these machines is</i><br>
+<i> &gt; in the dozens (major pharma &amp; govmnts), thousands (universities &amp;</i><br>
+<i> &gt; small-biotech), and potentially workstation quantities (individual</i><br>
+<i> &gt; researchers).  I'll predict with this one they are planning to do</i><br>
+<i> &gt; the software investment and then use that to follow the declining</i><br>
+<i> &gt; hardware costs to make the machines available to larger markets.</i><br>
+
+<p>
+If we're talking about 5 years before they deliver, there is a fair
+chance Beowulfs will be able to meet the challenge. You can't argue
+with economies of scale very well.
+ 
+<p>
+<a href="3370.html#3381qlink8"> &gt; &gt; P.S.  I apologize for my sloppy editing on my original post</a><br>
+<i> &gt; &gt; (which was truly my first post to this list).</i><br>
+<i> &gt; </i><br>
+<i> &gt; No problem.  The information was quite helpful and appreciated.</i><br>
+<i> &gt; </i><br>
+<i> &gt; Robert</i><br>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="3382.html">[ Next ]</a><a href="3380.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3370.html">Robert J. Bradbury</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

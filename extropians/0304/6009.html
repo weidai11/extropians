@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: how many bytes make a human?</title>
+<meta name="Author" content="Anders Sandberg (asa@nada.kth.se)">
+<meta name="Subject" content="Re: how many bytes make a human?">
+<meta name="Date" content="2003-04-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: how many bytes make a human?</h1>
+<!-- received="Wed Apr  9 06:37:38 2003" -->
+<!-- isoreceived="20030409123738" -->
+<!-- sent="Wed, 9 Apr 2003 14:41:25 +0200" -->
+<!-- isosent="20030409124125" -->
+<!-- name="Anders Sandberg" -->
+<!-- email="asa@nada.kth.se" -->
+<!-- subject="Re: how many bytes make a human?" -->
+<!-- id="20030409124125.GB3764@akira.nada.kth.se" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="3.0.6.32.20030409125950.007a46e0@truck.its.unimelb.edu.au" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Anders Sandberg (<a href="mailto:asa@nada.kth.se?Subject=Re:%20how%20many%20bytes%20make%20a%20human?"><em>asa@nada.kth.se</em></a>)<br>
+<strong>Date:</strong> Wed Apr 09 2003 - 06:41:25 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6010.html">Robert J. Bradbury: "Re: how many bytes make a human?"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="6008.html">Christian Szegedy: "Re: Bad ideas from Microsoft et al"</a>
+<li><strong>In reply to:</strong> <a href="5994.html">Damien Broderick: "how many bytes make a human?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6010.html">Robert J. Bradbury: "Re: how many bytes make a human?"</a>
+<li><strong>Reply:</strong> <a href="6010.html">Robert J. Bradbury: "Re: how many bytes make a human?"</a>
+<li><strong>Reply:</strong> <a href="6102.html">Harvey Newstrom: "RE: how many bytes make a human?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6009">[ date ]</a>
+<a href="index.html#6009">[ thread ]</a>
+<a href="subject.html#6009">[ subject ]</a>
+<a href="author.html#6009">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Wed, Apr 09, 2003 at 12:59:50PM +1000, Damien Broderick wrote:
+<br>
+<em>&gt; At 05:13 PM 4/8/03 -0700, Robert wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt;the problem does arise that the atomic structure of the
+</em><br>
+<em>&gt; &gt;human body is a *large* amount of information -- I've
+</em><br>
+<em>&gt; &gt;never done the calculation 
+</em><br>
+<p>Freitas has of course done it:
+<br>
+<a href="http://www.foresight.org/Nanomedicine/Ch03_1.html">http://www.foresight.org/Nanomedicine/Ch03_1.html</a>
+<br>
+<p>&quot;The human body consists of ~7 x 10^27 atoms arranged in a highly
+<br>
+aperiodic physical structure&quot;
+<br>
+<p>If we demand that each atom be located with a precision of 100 pm
+<br>
+(a bit less than most bond lengths) that means we can locate them
+<br>
+with integers between 1 and 10^10. That means 3*34 bits to get each
+<br>
+position (I doubt we need velocities), and 5 bits for atom type. 
+<br>
+All in all, 7.49e29 bits. This is actually far more than than Egan's 
+<br>
+exabyte (by a factor of 8.12e10), but I guess that is because there 
+<br>
+is no packing of the data.
+<br>
+<p>Atom types are very unevenly distributed (~2/3 hydrogen, ~1/4
+<br>
+oxygen, ~1/10 carbon, 1% rest), so if we Huffman-code the atoms
+<br>
+H=0, O=10, C=110, the other = 111... we will gain a lot of bits. 
+<br>
+Just a simple spatial zip-like algorithm could compress this data
+<br>
+even better: most oxygen atoms are always found in close relation
+<br>
+to two hydrogen atoms, and hence the 321 bits of each water
+<br>
+molecule could be replaced with just a marker of molecule type,
+<br>
+location and orientation. There are ~5000 molecular types, and
+<br>
+these can also be Huffman coded. The win, if we assume the average
+<br>
+molecule to have ten atoms we go from 1070 bits per molecule to 134
+<br>
+(assuming 256 possible orientations for each Euler angle and on
+<br>
+average around 8 bits compressed molecule ID), a win of almost 90%. 
+<br>
+Larger molecules are probably best divided into smaller modules
+<br>
+like amino acids or functional groups. If we could repeat this kind
+<br>
+of chunking on larger scales (proteins, DNA, organelles) we could
+<br>
+probably win a lot more - collagen and actin fibers are eminently
+<br>
+compressible (IMHO). 
+<br>
+<p>Still, I think Egan did not think his polis citizens did lug around 
+<br>
+models of the glycin molecules in each cell in their little toe; 
+<br>
+most likely they relied on some standardized cell models or even 
+<br>
+higher level models as described in Permutation City. If we model 
+<br>
+the bodies with millimeter-precision voxel models we get around 
+<br>
+a billion voxels, and if each voxel has a megabyte of data we get 
+<br>
+just 10^12 bytes or 8e-7 exabytes. 
+<br>
+<p>Assuming a spatial subdivision scale of r, we have (1/r)^3 voxels 
+<br>
+each with I bytes of info. So the relation for having a exabyte 
+<br>
+description is 2^60=I/r^3. Using a one micron voxels, each voxel 
+<br>
+would have to contain about one byte. Maybe that is the basis for 
+<br>
+Egans guess.
+<br>
+<p><p><pre>
+-- 
+-----------------------------------------------------------------------
+Anders Sandberg                                      Towards Ascension!
+<a href="mailto:asa@nada.kth.se?Subject=Re:%20how%20many%20bytes%20make%20a%20human?">asa@nada.kth.se</a>                            <a href="http://www.nada.kth.se/~asa/">http://www.nada.kth.se/~asa/</a>
+GCS/M/S/O d++ -p+ c++++ !l u+ e++ m++ s+/+ n--- h+/* f+ g+ w++ t+ r+ !y
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6010.html">Robert J. Bradbury: "Re: how many bytes make a human?"</a>
+<li><strong>Previous message:</strong> <a href="6008.html">Christian Szegedy: "Re: Bad ideas from Microsoft et al"</a>
+<li><strong>In reply to:</strong> <a href="5994.html">Damien Broderick: "how many bytes make a human?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6010.html">Robert J. Bradbury: "Re: how many bytes make a human?"</a>
+<li><strong>Reply:</strong> <a href="6010.html">Robert J. Bradbury: "Re: how many bytes make a human?"</a>
+<li><strong>Reply:</strong> <a href="6102.html">Harvey Newstrom: "RE: how many bytes make a human?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6009">[ date ]</a>
+<a href="index.html#6009">[ thread ]</a>
+<a href="subject.html#6009">[ subject ]</a>
+<a href="author.html#6009">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Apr 09 2003 - 06:46:29 MDT
+</em></small></p>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!-- received="Wed May 26 16:49:38 1999 MDT" -->
+<!-- sent="Wed, 26 May 1999 15:47:13 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Deep time and shallow time" -->
+<!-- id="14155.19011.19807.227406@lrz.de" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=122 -->
+<html><head><title>extropians: Deep time and shallow time</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Deep time and shallow time</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Wed, 26 May 1999 15:47:13 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1928">[ date ]</a><a href="index.html#1928">[ thread ]</a><a href="subject.html#1928">[ subject ]</a><a href="author.html#1928">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1929.html">[ Next ]</a><a href="1927.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1985.html">Anders Sandberg</a>
+</ul>
+<!-- body="start" -->
+
+
+<p>
+The Swiss company Swatch recently defined the Biel 
+meridian time, dividing the day in one kilobeat (1 beat=1.44 min), 
+taking the city of Biel, Switzerland, as a point of reference.
+
+<p>
+Unlike just using using the timer output of a GPS receiver 
+<br>
+(which lets you synchronize systems at +/- 1 us precision<br>
+anywhere on the globe) to nudge a largish counter by 1 s 
+ticks, the new scheme seems to catch on.
+
+<p>
+However, the hardcore transhumanist nuts among us intend to live 
+<br>
+(almost) literally forever (shedding several snake skins along <br>
+the way, and going to some very distant very exotic places), so 
+this won't quite do. We need to define our very own extropian, 
+transhumanist time standard (&gt;HTS) capable of both reaching down 
+into very shallow time of nucleonic and subnucleonic processes 
+<br>
+(to be able to say hello to pulsar Steve) and up to the deep <br>
+time of astrophysical processes (see Diana, who is all over 
+Magellanic clouds yonder). At the same time the standard, 
+or a subset of it has to be usable to us-current. Tough, eh?
+
+<p>
+Making the counter to be binary makes obvious sense. Since  
+extending a binary counter register by one bit doubles the 
+time to wraparound, one can obviously prevent an *observable* 
+wraparound even if counting in Planck time unit increments, 
+while using a counter of relatively modest size. (Thanks, 
+no y2g bug for me). Of course no physical counter is going 
+to resolve Planck time quanta, ever, so we need to cheat 
+a little, and increment in chunks the current physical 
+implementation can handle, while maintaining a migration
+path to next generation technology. Semiconductor counters 
+will eventually handle up to ~100 GHz, those from hypothetical 
+nucleonic matter a lot more, &lt;insert your favourite lunatic 
+fringe tech here&gt; a couple of orders of mangnitude more, so 
+we'd better reserve a big security margin. Since impact of 
+spacetime curvature is already apparent with nuclear time 
+etalons sitting a few 100 m apart even in Earth's shallow 
+gravitational gradient, we must obviously compensate. Let's 
+define the reference clock for absolutely flat spacetime, 
+and introduce realtime correction feedback loop to it using 
+input from a spacetime curvature sensor. (Further design 
+refinement? Don't bother me with boring implementation 
+details, d00d.)
+
+<p>
+As to the utilized coding, I'm not sure that binary is 
+best: obviously there are problems with propagating overflow 
+bits around in a relativistic context, so something with 
+Hamming distance one at each tick might make more sense. 
+Gray code? Any other codings where the flips are local? Any
+arithmetics defined on them?
+
+<p>
+For the sake of illustration, let's represent the counter in 
+hexadecimal notation: one cypher/nybble (4 bit). As a trivial 
+example, consider the next generation of Sony game engines which
+can natively handle 128 bit integers.
+
+<p>
+As a more compact representation, this can be written as a 
+hexadecimal (base16: 0123456789abcdef) number: for instance 
+
+<p>
+	0xdeadbeefd00df00f4711affe29997924
+
+<p>
+Let's say the rightmost bit has a temporal resolution of 1 THz
+<br>
+(thus allowing some slack for the next CPU generations to come), <br>
+while the CPU itself runs at 256 MHz. We thus must obviously
+increment in 4-digit strides (i.e. skipping four leftmost digits, 
+piping the clock into the 16th bit)
+
+
+<pre>
+	dead beef d00d f00f 4711 affe 2999 7924	
+                  |||| |||| |||| |||| |||| ||||
+                  |||| |||| |||| |||| |||| ||||
+                  |||| |||| |||| |||| |||| |||+-    1 THz ~visible light
+                  |||| |||| |||| |||| |||| ||+--   64 GHz
+		  |||| |||| |||| |||| |||| |+---    4 GHz microwave
+		  |||| |||| |||| |||| |||| +----  256 MHz
+		  |||| |||| |||| |||| |||+------   16 MHz radio
+		  |||| |||| |||| |||| ||+-------    1 MHz
+		  |||| |||| |||| |||| |+--------   64 kHz ultrasonics
+		  |||| |||| |||| |||| +---------    4 kHz
+                  |||| |||| |||| |||+-----------  256  Hz
+		  |||| |||| |||| ||+------------   16  Hz neurobiological chronon
+		  |||| |||| |||| |+-------------    1  Hz
+		  |||| |||| |||| +--------------   16 s
+		  |||| |||| |||+----------------  4.3 min
+		  |||| |||| ||+-----------------  1.1 h
+		  |||| |||| |+------------------ 18.2 h
+		  |||| |||| +------------------- 12.1 d
+		  |||| |||+---------------------  6.3 month
+		  |||| ||+----------------------  8.4 year
+		  |||| |+-----------------------  0.1 kYear ~human lifespan
+		  |||| +------------------------  2.1 kYear
+		  |||+-------------------------- 34.2 kYear
+		  ||+---------------------------  0.5 MYear
+		  |+----------------------------  8.8 MYear
+		  +-----------------------------  0.1 GYear
+						  2.2 GYear
+						 35.9 GYear ~age of universe
+						573.9 GYear
+						plenty
+						of
+						room 
+						at the
+						bottom
+
+</pre>
+<p>
+All this is qualitative (I've cheated, using powers of two at the beginning, 
+then going to decimal orders of magnitude, but all this is just for the
+sake of illustration, anyway).
+
+<p>
+With a layout similiar to the above we can visualize the time in a spatial scheme:
+
+<pre>
+	deep time				shallow time
+	xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+	||||||||| |||| ||||   ||||||||| ||||||  |||||||||  ||||||||
+	nevernever cosmological	human	machine	subnucleonic ridiculous		
+	time       time scale	window	time	time	     time
+
+</pre>
+<p>
+Of course one needs to extend a positioning service as well. GPS is
+geocentric, we might use atomic clock beakons to establish solar
+navigation service and pulsars as a galactic-wide sources.
+
+<p>
+All this only 1/2 tongue-in-cheek.
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1929.html">[ Next ]</a><a href="1927.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1985.html">Anders Sandberg</a>
+</ul>
+</body></html>

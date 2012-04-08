@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: RE: The games are all crap; let's make a decent one.</TITLE>
+<META NAME="Author" CONTENT="White, Ryan (ryan@dvelco.com)">
+<META NAME="Subject" CONTENT="RE: The games are all crap; let's make a decent one.">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>RE: The games are all crap; let's make a decent one.</H1>
+<!-- received="Wed Jul 19 12:48:32 2000" -->
+<!-- isoreceived="20000719184832" -->
+<!-- sent="Wed, 19 Jul 2000 11:49:48 -0700" -->
+<!-- isosent="20000719184948" -->
+<!-- name="White, Ryan" -->
+<!-- email="ryan@dvelco.com" -->
+<!-- subject="RE: The games are all crap; let's make a decent one." -->
+<!-- id="8C4CFCBA75F7D311BE1F009027F359D607766E@mail.dvelco.com" -->
+<!-- inreplyto="The games are all crap; let's make a decent one." -->
+<STRONG>From:</STRONG> White, Ryan (<A HREF="mailto:ryan@dvelco.com?Subject=RE:%20The%20games%20are%20all%20crap;%20let's%20make%20a%20decent%20one.&In-Reply-To=&lt;8C4CFCBA75F7D311BE1F009027F359D607766E@mail.dvelco.com&gt;"><EM>ryan@dvelco.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Wed Jul 19 2000 - 12:49:48 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="1544.html">Scott Badger: "Re: MED/SOCIETY:'100% success' for male pill trial"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1542.html">Robert J. Bradbury: "Re: CRYO/AGING: [was Re: CRYO: Illegality of Cryonics in British Columbia]"</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="1528.html">Emlyn (onetel): "The games are all crap; let's make a decent one."</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="1573.html">mjg223: "RE: The games are all crap; let's make a decent one."</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="1573.html">mjg223: "RE: The games are all crap; let's make a decent one."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1543">[ date ]</A>
+<A HREF="index.html#1543">[ thread ]</A>
+<A HREF="subject.html#1543">[ subject ]</A>
+<A HREF="author.html#1543">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+From: mjg223 [mailto:<A HREF="mailto:mjg223@is7.nyu.edu?Subject=RE:%20The%20games%20are%20all%20crap;%20let's%20make%20a%20decent%20one.&In-Reply-To=&lt;8C4CFCBA75F7D311BE1F009027F359D607766E@mail.dvelco.com&gt;">mjg223@is7.nyu.edu</A>]
+<BR>
+Sent: Wednesday, July 19, 2000 9:47 AM
+<BR>
+<P>That sounds like a great idea - I'd love to see what you have in mind.
+<BR>
+Perhaps the first thing to do is get setup at sourceforge: That'll give
+<BR>
+you a place to start posting some ideas, and set up a couple of discussion
+<BR>
+lists to get some brainstorming going. If you're doing something exciting,
+<BR>
+I'd be interested in getting involved.
+<BR>
+<P>I've been interested, on and off, in some sort of distributed mud-like
+<BR>
+system. I'd like, for instance, to be able to walk through a door and
+<BR>
+seamlessly be talking to another server. Or manipulate objects whose
+<BR>
+behavior is being computed on another machine somewhere else. You'd figure
+<BR>
+out some system where by objects (a stove, a book, etc.) declare the ways
+<BR>
+in which they can be manipulated (open, close, read, etc.), along with
+<BR>
+verb mappings, then anyone can drop new objects in, run it's innards
+<BR>
+anywhere, and let people play with it. Some sort of Corba'ish/RMI deal. 
+<BR>
+<P>-matt
+<BR>
+<P><P>Ryan v24.2:
+<BR>
+<P>The 'server user exchange' is currently being done.  Origin's virtual world
+<BR>
+is actually a composite of several servers, each one running a defined
+<BR>
+virtual space.  They set this up with load balancing in mind - in Ultima
+<BR>
+Online, there are areas in which more users are active at any given time -
+<BR>
+such as urban areas in the game. After post-beta test analysis, i imagine
+<BR>
+they divided their world up such that a given server, say, one that includes
+<BR>
+a user-frequented virtual city, covers less space than another server
+<BR>
+running the wilderness outside the city walls.  With this idea in mind, they
+<BR>
+connect many servers (connected in-game at 'server lines'- points at which a
+<BR>
+crossing player's and associated objects' states are copied into memory and
+<BR>
+then transferred to the server running the adjacent virtual landscape.  The
+<BR>
+character jumps to another server seamlessly - players generally don't
+<BR>
+notice this in the game (it doesnt freeze and load the new server geography,
+<BR>
+anyway).  I tooled around with this and actually charted some server lines -
+<BR>
+i was able to make the distinction because in some parts of the 'world' i
+<BR>
+could 'move faster' (less player load on the server i was crossing into)
+<BR>
+than others. I imagine if the hardware rescources were sufficient, this
+<BR>
+could (and should) be incorporated into the game to avoid the speed
+<BR>
+differential.
+<BR>
+<P>To prevent hackers from creating their own virtual super-weapons or making
+<BR>
+super-characters (which really unbalances the game and makes it unfun for
+<BR>
+most players), EVERYTHING - characters, objects, etc. actually exists on
+<BR>
+Origin's servers.  What you buy when you purchase the game is an account,
+<BR>
+the interface with Origin's servers, and all the graphics.  The states of
+<BR>
+all of the objects associated with your account are maintained  by them.
+<BR>
+<P>I agree that players should have the ability to design new graphics and
+<BR>
+objects, or even new places - but for this to occur in an environment such
+<BR>
+as the one above, one would need a dedicated user design system, built on a
+<BR>
+foundation of the publication of in-game object properties and a strong set
+<BR>
+of rules, whereby players could submit their inventions for review by a
+<BR>
+'game upgrade team'.  If an object is accepted, it must be uploaded into all
+<BR>
+of the servers (so player X with object Y doesn't mysteriously lose object Y
+<BR>
+when he crosses into another server) and would probably be uploaded to
+<BR>
+players' machines in the form of auto-patches on connection with the game
+<BR>
+servers, as part of an 'update schedule'.
+<BR>
+<P>All of this assumes that you want the 'original game world' to be uniform
+<BR>
+for your global user base.  No doubt if the game is open source, the players
+<BR>
+are going to create their own little virtual worlds. I really like this idea
+<BR>
+too, but if this is where you (now were getting to 'we', because this is
+<BR>
+what Wil and I have been talking about:) want to take it, what you'd really
+<BR>
+want to be designing is not necessarily a game, but a object-oriented game
+<BR>
+design program and the engines to run it.  Like an 'Adventure Construction
+<BR>
+Set' (first implemented by Electronic Arts back in my Commodore 64 days -
+<BR>
+loved that game.)
+<BR>
+<P>Ryan v24.2
+<BR>
+<P>&nbsp;
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="1544.html">Scott Badger: "Re: MED/SOCIETY:'100% success' for male pill trial"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1542.html">Robert J. Bradbury: "Re: CRYO/AGING: [was Re: CRYO: Illegality of Cryonics in British Columbia]"</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="1528.html">Emlyn (onetel): "The games are all crap; let's make a decent one."</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="1573.html">mjg223: "RE: The games are all crap; let's make a decent one."</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="1573.html">mjg223: "RE: The games are all crap; let's make a decent one."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1543">[ date ]</A>
+<A HREF="index.html#1543">[ thread ]</A>
+<A HREF="subject.html#1543">[ subject ]</A>
+<A HREF="author.html#1543">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:34:53 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

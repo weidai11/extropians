@@ -1,0 +1,211 @@
+<!-- received="Sun Mar  2 12:26:28 1997 MDT" -->
+<!-- sent="Sun, 2 Mar 1997 20:08:02 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="COMP:ALIFE: more on medieval tin metallurgy -- wolf rahm (II)" -->
+<!-- id="Pine.SOL.3.91.970302195552.9575A-100000@sun6" -->
+<!-- inreplyto="" -->
+<title>extropians: COMP:ALIFE: more on medieval tin metallurgy -- wolf rahm (II)</title>
+<h1>COMP:ALIFE: more on medieval tin metallurgy -- wolf rahm (II)</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 2 Mar 1997 20:08:02 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3099">[ date ]</a><a href="index.html#3099">[ thread ]</a><a href="subject.html#3099">[ subject ]</a><a href="author.html#3099">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3100.html">Max More: "Re: BIOTECH: Public Attitudes"</a>
+<li> <b>Previous message:</b> <a href="3098.html">Eugene Leitl: "Re: &gt;H Open Air Space Habitats"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Ripped from:<br>
+Stephen Wolfram, "Cellular Automata and Complexity -- Collected<br>
+Papers", Adison Wesley (1994), pp. 309-328. [ an ancient post<br>
+cot'd, sorry for inconveniences (if any) due to delay'd dispatch <br>
+Apropos Measter W., Mathematica 3.0 for Linux, student edition is <br>
+now out. I paid 350 DEM, should be much cheaper in the U.S. <br>
+Purportedly, (I haven't tried out the package yet) Mathematica 3.0 <br>
+offers good support for CA research ]<br>
+<p>
+As a first example, consider various idealizations of the system<br>
+discussed above consisting of a ball rolling with friction on a<br>
+landscape, now assumed one dimensional. In the approximation of a<br>
+point ball, this is equivalent to a particle moving with damping in<br>
+a one-dimensional potential. But the basins of attraction depend<br>
+substantially on thee exact dynamics assumed. In the case of very<br>
+large friction, the particle satisfies a differential equation in<br>
+which velocity is proportional to force, and force is given by the<br>
+gradient of the potential. In a more realistic model, with finite<br>
+friction and the inertia of the ball included, the system becomes<br>
+similiar to a Roulette wheel. And in this case it is known that<br>
+the outcome is a sensitive function of the precise initial conditions.<br>
+As a consequence, the basins of attraction corresponding for example<br>
+to different holes around the wheel must have a complicated,<br>
+interdigitated, form (cf. [5]).<br>
+<p>
+Complicated basin boundaries can also be obtained with simpler<br>
+equations of motion. As one example, one can take time to be<br>
+discrete, and assume that the potential has the form of a polynomial,<br>
+so that the differential equation is approximated by an iterated<br>
+polynomial mapping. The sequence of positions found from this<br>
+mapping may overshoot the minimum, and for some values of parameters<br>
+may in fact never converge to it. The region of initial conditions<br>
+which evolves to a particular attractor may therefore be complicated.<br>
+In the case of the complex iterated mapping z-&gt;z^2+c, the boundary<br>
+of the basin of attraction (say for the attractor z=\infty) is a<br>
+Julia set, and has a very complicated fractal form (e.g. [6]).<br>
+<p>
+The essentials of the problem of finding basins of attraction already<br>
+arise in the problem of determining what set of inputs to a function of<br>
+discrete variables yields a particular output. This problem is known in<br>
+general to be computationally very difficult. In fact, the satisfiability<br>
+problem of determining which if any assignments of truth values to n<br>
+variables in a Boolean expression make the whole expression true is<br>
+NP-complete, and can presumably be solved in general essentially only<br>
+by explicitly testing all 2^n possible assignments (e.g. [7]). For some<br>
+functions with a simple, perhaps algebraic, structure an efficient<br>
+inversion procedure to find appropriate inputs may exist. But in general<br>
+no simple mathematical formula can describe the pattern of inputs:<br>
+they will simply seem random (cf. [8]).<br>
+<p>
+Many realistic examples of this problem are found in cellular automata.<br>
+Cellular automata consist of a lattice of sites with discrete values<br>
+updated in discrete steps according to a fixed local rule. The image<br>
+processing operation mentioned above can be considered a single step<br>
+in the evolution of a simple two-dimensional cellular automaton (cf.<br>
+[9]). Other cellular automata show much more complicated behaviour,<br>
+and it seems in fact that with appropriate rules they capture the<br>
+essential features of many complex systems in nature (e.g. [1]). The<br>
+basic problems of complexity engineering thus presumably already<br>
+arise in cellular automata.<br>
+<p>
+Most cellular automata are dissipative, or irreversible so that after<br>
+many steps, they evolve to attractors which contain only a subset<br>
+of their states. In some cellular automata (usually identified with<br>
+the classes 1 and 2), these attractors are fixed points (or limit<br>
+cycles), and small changes in initial conditions are usually dampened<br>
+out [10]. Other cellular automata (classes 3 and 4), however, never<br>
+settle down to a fixed state with time, but instead continue to show<br>
+complicated, chaotic, behaviour. Such cellular automata are unstable,<br>
+so that most initial perturbations grow with time to affect the detailed<br>
+configurations of an ever-increasing number of sites. The statistical<br>
+properties of the behaviour produced are nevertheless robust, and are<br>
+unaffected by such perturbations.<br>
+<p>
+It can be shown that the set of fixed points of a one-dimensional<br>
+cellular automaton consists simply of all those configurations in<br>
+which particular blocks of site values do no appear [11]. This set<br>
+forms a (finite complement) regular language, and can be represented<br>
+by the set of possible paths through a certain labeled directed<br>
+graph [11]. Even when they are not fixed points, the set of all states<br>
+that can occur after say t time steps in the evolution of a<br>
+one-dimensional cellular automaton in fact also forms a regular<br>
+language (though not necessarily a finite complement one). In addition,<br>
+the basin of attraction, or in general the set of all states which<br>
+evolve after t steps to a given one, can be represented as a regular<br>
+language. For class 1 and 2 cellular automata, the siz of the minimal<br>
+graph for this language stays bounded, or at most increases like a<br>
+polynomial with t. For class 3 and 4 cellular automata, however, the<br>
+the size of the graph often increases apparently exponentially with<br>
+t, so that it becomes increasingly difficult to describe the basin<br>
+of attraction. The general problem of determining which states evolve<br>
+to a particular one after t steps is in fact a generalization of the<br>
+satisfiability problem for logical functions mentioned above, and is<br>
+thus NP complete. The basin of attraction in the worst case can thus<br>
+presumably be found only by explicit testing of essentially all O(2^t)<br>
+possible initial configurations (cf. [12]). Its form will again often<br>
+be so complicated as to seem random. For two-dimensional cellular<br>
+automata, it is already an NP-complete problem just to find fixed<br>
+points (say to determine which n x n blocks of sites with specified<br>
+boundaries are invariant under the cellular automaton rule) [13].<br>
+<p>
+It is typical of complex systems that to reproduce their behaviour<br>
+requires extensive computation. This is a consequence of the fact that the<br>
+evolution of the systems themselves typically corresponds to a<br>
+sophisticated computation. In fact, the evolution of many complex systems<br>
+is probably computationally irreducible: it can be found essentally only<br>
+by direct simulation, and cannot be predicted by any short-cut procedure<br>
+[12, 14]. Such computational irreducibility is a necessary consequence of<br>
+the efficient use of computational resources in a system. Any<br>
+computational reducibility is a sign of inefficiency, since it implies<br>
+that some other system can determine the outcome more efficiently. <br>
+<p>
+Many systems in nature may well be computationally irreducible, so that no<br>
+general predictions can be made about their behaviour. But if a system is<br>
+to be used in engineering, it must be possible to determine in advance at<br>
+least some aspects of its behaviour. Conventional engineering requires<br>
+detailed specifications of the precise behaviour of each component in a<br>
+system. To make use of complex systems in engineering, one must relax this<br>
+constraint, and instead require only some general or approximate<br>
+specification of overall behaviour. <br>
+<p>
+One goal is to design systems which have particular attractors. For the<br>
+example of an inertialess ball rolling with friction on a landscape, this<br>
+is quite straightforward (cf. [15]). In one dimension, the height of the<br>
+landscape at position x could be given by the polynomial \Pi_i(x-x_i)^2,<br>
+where the x_i are the desired minima, or, attractors. The polynomial is<br>
+explicitly constructed to yield certain attractors in the dynamics.<br>
+However, it implies a particular structure for the basins of attraction.<br>
+If the attractors are close to equally spaced, or are sufficiently far<br>
+apart, then the boundaries of the basins of attraction for successive<br>
+attractors will be roughly half way between them. Notice, however, that as<br>
+the parameters of the landscape polynomial are changed, the structure of<br>
+the attractors and basins of attraction obtained can change<br>
+discontinuously, as described by catastrophe theory. <br>
+<p>
+For a more complex system, such as a cellular automaton, it is more<br>
+difficult to obtain a particular set of attractors. One approach is to<br>
+construct cellular automaton rules which leave particular sequences<br>
+invariant [16]. If these sequences are say of length L, and are<br>
+arbitrarily chosen, then it may be necessary to use a cellular automaton<br>
+rule which involves a neighbourhood of up to L-1 sites. The necessary rule<br>
+is straightforward to construct, but takes up to 2^{L-1} bits to specify. <br>
+<p>
+Many kinds of complex systems can be considered as bases for engineering.<br>
+Conventional engineering suggests some principles to follow. The most<br>
+important is the principle of modularity. The components of a system<br>
+should be arranged in some form of hierarchy. Components higher on the<br>
+hierarchy should provide overall control for sets of components lower on<br>
+the hierarchy, which can be treated as single units or modules. This<br>
+principle is crucial for software engineering, where the modules are<br>
+typically subroutines. It is also manifest in biology in the existance of<br>
+organs and definite body parts, apparently mirrored by subroutine-like<br>
+constructs in the genetic code [ check out Kauffman's "The Origins of<br>
+Order", Chapter 14 (Morphology, Maps and the Spatial Ordering of<br>
+Integrated Tissues) for more info on morphogenetic gadgetry -- 'gene ]<br>
+<p>
+An important aspect of modularity is the abstraction it makes possible.<br>
+Once the construction of a particular module has been completed, the<br>
+module can be treated as a single object, and only its overall behaviour<br>
+need be considered, wherever the module appears. Modularity thus divides<br>
+the problem of constructing or analysing a system into many levels,<br>
+potentially making each level manageable. <br>
+<p>
+Modularity is used in essentially all of the systems to be discussed<br>
+below. In most cases, there are just two levels: controlling (master) and<br>
+controlled (slave) components. The components on these two levels usually<br>
+change on different time scales. The controlling components change at most<br>
+slowly, and are often fixed once a system say with a particular sets of<br>
+attractors has been obtained. The controlled components change rapidly,<br>
+processing input data according to dynamical rules determined by the<br>
+controlling components. Such separation of time scales is common in many<br>
+natural and artificial systems. In biology, for example, phenotypes of<br>
+organisms grow by fast process, but are determined by genotypes which seem<br>
+to change only slowly with time. In software engineering, computer memory<br>
+is divided into a part for "programs", which ar supposed to remain fixed<br>
+or change only slowly, and another part for intermediate data, which<br>
+changes rapidly. <br>
+<p>
+[ to be continued... 'gene ]<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3100.html">Max More: "Re: BIOTECH: Public Attitudes"</a>
+<li> <b>Previous message:</b> <a href="3098.html">Eugene Leitl: "Re: &gt;H Open Air Space Habitats"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

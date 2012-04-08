@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: META: aol.com is blocking all mail from extropy.org</title>
+<meta name="Author" content="Dossy (dossy@panoptic.com)">
+<meta name="Subject" content="Re: META: aol.com is blocking all mail from extropy.org">
+<meta name="Date" content="2003-07-04">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: META: aol.com is blocking all mail from extropy.org</h1>
+<!-- received="Fri Jul  4 18:35:27 2003" -->
+<!-- isoreceived="20030705003527" -->
+<!-- sent="Fri, 4 Jul 2003 20:35:23 -0400" -->
+<!-- isosent="20030705003523" -->
+<!-- name="Dossy" -->
+<!-- email="dossy@panoptic.com" -->
+<!-- subject="Re: META: aol.com is blocking all mail from extropy.org" -->
+<!-- id="20030705003523.GK17959@panoptic.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="FEEHKEIJDJKMGAAFLAIMCEEPGDAA.mail@HarveyNewstrom.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Dossy (<a href="mailto:dossy@panoptic.com?Subject=Re:%20META:%20aol.com%20is%20blocking%20all%20mail%20from%20extropy.org"><em>dossy@panoptic.com</em></a>)<br>
+<strong>Date:</strong> Fri Jul 04 2003 - 18:35:23 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11122.html">EvMick@aol.com: "Re: ANNOUNCE: new Broderick/Barnes singularity novel"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="11120.html">Spike: "RE: push your bike, risk a beating"</a>
+<li><strong>In reply to:</strong> <a href="11113.html">Harvey Newstrom: "RE: META: aol.com is blocking all mail from extropy.org"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11124.html">Harvey Newstrom: "Re: META: aol.com is blocking all mail from extropy.org"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11121">[ date ]</a>
+<a href="index.html#11121">[ thread ]</a>
+<a href="subject.html#11121">[ subject ]</a>
+<a href="author.html#11121">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On 2003.07.04, Harvey Newstrom &lt;<a href="mailto:mail@HarveyNewstrom.com?Subject=Re:%20META:%20aol.com%20is%20blocking%20all%20mail%20from%20extropy.org">mail@HarveyNewstrom.com</a>&gt; wrote:
+<br>
+<em>&gt; My guess is that extropy.org, extropy.com, sl4.org, lucifer.com,
+</em><br>
+<em>&gt; javien.com, and everybody else hosted by Spots InterConnect are
+</em><br>
+<em>&gt; similarly being blocked.  You might talk to Spots InterConnect to
+</em><br>
+<em>&gt; confirm if all their subscribers are being blocked.  If so, they may
+</em><br>
+<em>&gt; be able to help resolve this issue at their level by informing AOL
+</em><br>
+<em>&gt; that these addresses are not dynamic.  However, I am not sure AOL will
+</em><br>
+<em>&gt; respond, because this bone-headed policy is intentional on their part.
+</em><br>
+<p>This policy isn't bone-headed.  It's a very reasonable one, actually.
+<br>
+<p>ISPs have the option to self-elect their IP netblocks as being resold to
+<br>
+third parties on various lists.  Folks who receive mail then can
+<br>
+subscribe to those lists and refuse to receive mail from those IPs.
+<br>
+<p>Why is this good?  Because folks who buy access may not properly secure
+<br>
+their mail servers.  They may either intentionally or inadvertently set
+<br>
+up their machines as open mail relays, run an open proxy, or otherwise
+<br>
+allow unauthorized individuals to use their machines (and thus, their IP
+<br>
+address) to send mail out.  So, the ISP in good faith elects to add
+<br>
+the IP addresses they license to customers in these DUL (Dial-Up Users)
+<br>
+or other lists.  (Yes, &quot;Dial-Up&quot; today is a misnomer, but that's where
+<br>
+it started and thus got its name.)
+<br>
+<p>ISPs who do self-elect in this fashion should be offering a mail relay
+<br>
+server that their customers can use to send mail to the outside world.
+<br>
+This mail relay should only allow mail to be relayed from IP addresses
+<br>
+that they own (and have self-elected to add to these DUL lists).  This
+<br>
+way, there's proper logging of what mail is passing out of the ISPs
+<br>
+networks by its customers.  This makes identifying violations of their
+<br>
+TOS or AUP easier, rather than waiting for angry complaints about a
+<br>
+particular IP address in their netblock and having to figure out who and
+<br>
+what is doing it.
+<br>
+<p>David needs to contact Spots InterConnect and ask them what mail server
+<br>
+he should be using as a relay host.
+<br>
+<p>My previous ISP, Eclipse Internet (now NetCarrier Communications)
+<br>
+self-elected their IPs that they use to provide dial-up and DSL
+<br>
+connections through.  Even the static IPs that I was assigned.  For
+<br>
+hosts who blocked mail from me via DUL lists, I simply had to add
+<br>
+entries to my /var/qmail/control/smtproutes file like so:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;aol.com:mail.eclipse.net
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;aol.net:mail.eclipse.net
+<br>
+<p>mail.eclipse.net is their mail relay for their customers.  Really easy,
+<br>
+and it keeps the DUL system working with only a minor inconvenience to
+<br>
+me.
+<br>
+<p><em>&gt; This is apparently a common problem for all mailing lists.  AOL not only
+</em><br>
+<em>&gt; blocks certain type of addresses as above, they also block on keywords
+</em><br>
+<em>&gt; indicating messages that are sexual, extremely political, violent, racist or
+</em><br>
+<em>&gt; subversive.
+</em><br>
+<p>Do you have proof of this?  Do you have a sample message that will
+<br>
+trigger this block?
+<br>
+<p>An individual customer can always report an email they receive as
+<br>
+offensive, but I don't think they actually block email that a customer
+<br>
+hasn't flagged as coming from a sender they don't wish to receive mail
+<br>
+from.
+<br>
+<p>I think if enough customers report the same sender as sending offensive
+<br>
+messages, then yes, that sender may be blocked from sending messages to
+<br>
+any OTHER customers.  I think this is a good service.  One complaint
+<br>
+might just be a difference in opinion, but if 50 people report being
+<br>
+harassed from the same sender ... should you really allow that sender to
+<br>
+send mail to any other people?
+<br>
+<p><em>&gt; They also will trigger from subscribers pressing the &quot;report
+</em><br>
+<em>&gt; spam&quot; button.
+</em><br>
+<p>I think this is what is really happening in the behavior you mentioned
+<br>
+above.
+<br>
+<p><em>&gt; They also block mail if any intervening ISP is blocked.
+</em><br>
+<p>Guilt by association.  It sucks, but the many true positives usually
+<br>
+outweighs any possible false positives.
+<br>
+<p><em>&gt; It may not even be extropy or javien that is blocked, but some other
+</em><br>
+<em>&gt; customer of that same ISP.
+</em><br>
+<p>Or, more likely, some customer of Spots InterConnect performed repeated
+<br>
+abuse and people threatened to blackhole the entire ISP if they didn't
+<br>
+self-elect their IPs to various block lists, like DUL.  (Guess that
+<br>
+doesn't sound so much like /self/-election anymore, but it still is.)
+<br>
+<p><em>&gt; In any case, the problem is apparently well known and definitely
+</em><br>
+<em>&gt; inside AOL.  Their subscribers may simply need to understand that
+</em><br>
+<em>&gt; their mail is being censored.  The Extropians List is still available
+</em><br>
+<em>&gt; to them via the web bbs interface, so nobody is completely cut off.
+</em><br>
+<p>The problem stems from a protocol (SMTP) that hasn't been adequately
+<br>
+updated to reflect the needs of the Internet, today.  Maybe it was fine
+<br>
+15 years ago, but it sure isn't workable today.  AOL's simply trying one
+<br>
+potential hack or workaround to the problems that SMTP isn't addressing.
+<br>
+It's not perfect, but again, the massive number of true positives it
+<br>
+blocks definitely outweighs the false positives.  Especially when it's
+<br>
+trivial to correct things once you realize you're being blocked as a
+<br>
+false positive.
+<br>
+<p>-- Dossy
+<br>
+<p><pre>
+-- 
+Dossy Shiobara                       mail: <a href="mailto:dossy@panoptic.com?Subject=Re:%20META:%20aol.com%20is%20blocking%20all%20mail%20from%20extropy.org">dossy@panoptic.com</a> 
+Panoptic Computer Network             web: <a href="http://www.panoptic.com/">http://www.panoptic.com/</a> 
+  &quot;He realized the fastest way to change is to laugh at your own
+    folly -- then you can let go and quickly move on.&quot; (p. 70)
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11122.html">EvMick@aol.com: "Re: ANNOUNCE: new Broderick/Barnes singularity novel"</a>
+<li><strong>Previous message:</strong> <a href="11120.html">Spike: "RE: push your bike, risk a beating"</a>
+<li><strong>In reply to:</strong> <a href="11113.html">Harvey Newstrom: "RE: META: aol.com is blocking all mail from extropy.org"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11124.html">Harvey Newstrom: "Re: META: aol.com is blocking all mail from extropy.org"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11121">[ date ]</a>
+<a href="index.html#11121">[ thread ]</a>
+<a href="subject.html#11121">[ subject ]</a>
+<a href="author.html#11121">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Fri Jul 04 2003 - 18:46:19 MDT
+</em></small></p>
+</body>
+</html>

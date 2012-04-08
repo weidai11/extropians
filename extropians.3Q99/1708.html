@@ -1,0 +1,62 @@
+<!-- received="Fri Aug  6 10:00:52 1999 MDT" -->
+<!-- sent="Fri, 6 Aug 1999 08:57:19 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="managing 17 kW heat dissipation (was AI substrate blah blah)" -->
+<!-- id="14251.1503.798537.859685@lrz.de" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=28 -->
+<html><head><title>extropians: managing 17 kW heat dissipation (was AI substrate blah blah)</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>managing 17 kW heat dissipation (was AI substrate blah blah)</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Fri, 6 Aug 1999 08:57:19 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1708">[ date ]</a><a href="index.html#1708">[ thread ]</a><a href="subject.html#1708">[ subject ]</a><a href="author.html#1708">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1709.html">[ Next ]</a><a href="1707.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+
+<p>
+I don't think 17 kW in a comparatively small volume is that difficult
+to dissipate. For one, there are no hot spots. We're talking about 4 W
+peak dissipated over a 27 mm x 27 mm surface as atomic unit. The chips
+are glued to perforated (to interconnect the layers, unfortunately the
+designers used 8 bit wide links instead of 1 GBit serial ones) sheet
+copper with some distance in between. I would think the chips would be
+perfectly happy to operate ~60 deg C, this should be manageable with a
+pretty strong airflow as the geometry is already strongly suggestive
+of a radiator. Alternatively, we can incorporate cooling channels into
+sheet copper and carry the heat away by liquid, which then can be
+dissipated by a large radiator elsewhere.
+
+<p>
+Alternative solution would be setting the CPU-studded copper sheets
+vertically into ~60 deg C boiling point fluorocarbon (ozone layer? Who
+needs the ozone layer!?). We would have excellent convection, and the
+heat would be carried away by evaporation enthalpy. It would
+condensate elsewhere, preferably in a large radiator which could be
+cooled passively. Of course we could simply use the heat to prepare
+hot water in the building, resulting in a slight plus instead of a big
+minus on the air conditioning bill.
+
+<p>
+The chiefest trouble is making an efficient power source (2.2 and 3.3
+V) for that beastie. I guess the power source would dissipate at least
+as much as the CPU box itself. Then there is the small matter of
+interfacing a disk array/RAM bank to the beastie (could be handled by
+a Beowulf, though).
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1709.html">[ Next ]</a><a href="1707.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

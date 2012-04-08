@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: processing power and chemistry</title>
+<meta name="Author" content="Anders Sandberg (asa@nada.kth.se)">
+<meta name="Subject" content="Re: processing power and chemistry">
+<meta name="Date" content="2003-06-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: processing power and chemistry</h1>
+<!-- received="Sun Jun 15 17:05:57 2003" -->
+<!-- isoreceived="20030615230557" -->
+<!-- sent="Mon, 16 Jun 2003 01:09:46 +0200" -->
+<!-- isosent="20030615230946" -->
+<!-- name="Anders Sandberg" -->
+<!-- email="asa@nada.kth.se" -->
+<!-- subject="Re: processing power and chemistry" -->
+<!-- id="20030615230946.GB11757@akira.nada.kth.se" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="Law8-OE41jV7lk0LIiT0000f27e@hotmail.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Anders Sandberg (<a href="mailto:asa@nada.kth.se?Subject=Re:%20processing%20power%20and%20chemistry"><em>asa@nada.kth.se</em></a>)<br>
+<strong>Date:</strong> Sun Jun 15 2003 - 17:09:46 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10230.html">Robert J. Bradbury: "Re: processing power and chemistry"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="10228.html">Lee Corbin: "RE: META: Dishonest debate (was &quot;cluster bombs&quot;)"</a>
+<li><strong>In reply to:</strong> <a href="10220.html">Kevin Freels: "processing power and chemistry"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10230.html">Robert J. Bradbury: "Re: processing power and chemistry"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10229">[ date ]</a>
+<a href="index.html#10229">[ thread ]</a>
+<a href="subject.html#10229">[ subject ]</a>
+<a href="author.html#10229">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Sun, Jun 15, 2003 at 05:09:13PM -0500, Kevin Freels wrote:
+<br>
+<em>&gt; The basic properties of all of the elements of the periodic table have
+</em><br>
+<em>&gt; been know for some time. If we had a computer with sufficient
+</em><br>
+<em>&gt; processing power, couldn't we have simulation software that could tell
+</em><br>
+<em>&gt; us pretty much every chemical compound/material that could be made?
+</em><br>
+<em>&gt; This would eleminate the trial and error approach and solve possible
+</em><br>
+<em>&gt; every disease!
+</em><br>
+<p>The problem is combinatorics. The number of chemicals that you can make
+<br>
+increase very fast with the number of atoms. For ten carbon atoms there
+<br>
+are 75 different alkanes, for 20 366,319, for 30 4,111,846,763 and for
+<br>
+40 62,491,178,805,831 (from <a href="http://www.rod.beavon.clara.net/quiz.htm">http://www.rod.beavon.clara.net/quiz.htm</a>). 
+<br>
+And that was just combining carbon and hydrogen. The real problem is
+<br>
+that each bond in these molecules can also turn in different directions
+<br>
+so you end up with a number of configurations growing roughly
+<br>
+exponentially with size for *each* possible molecule. So finding which 
+<br>
+chemical in which low-energy configuration would fit a receptor or have 
+<br>
+a neat property would require searching through a space that increases 
+<br>
+superexponentially with the number of atoms involved. This is 
+<br>
+impractical given most advances in computing, and even quantum computers 
+<br>
+would only make the problem very expensive. 
+<br>
+<p><em>&gt; I began thinking about this when I was watching a program that
+</em><br>
+<em>&gt; discussed how snake venom was being used to develop treatment for
+</em><br>
+<em>&gt; diseases. I estimated that there are so many possible chemicals out
+</em><br>
+<em>&gt; there in nature that we could probably never get to a point where we
+</em><br>
+<em>&gt; could try them all on everything. 
+</em><br>
+<p>Yes, isn't it annoying? 
+<br>
+<p><em>&gt; I know that we currently don;t have the processing power to do this,
+</em><br>
+<em>&gt; but does anyone on this board know roughly how much processing power
+</em><br>
+<em>&gt; we would need? 
+</em><br>
+<p>Let's say that the number of chemicals containing N atoms selected from
+<br>
+a repertoire of 92 are roughly (92^N)*(N!) (select the atoms, order them
+<br>
+in some order; this is an overestimate). The atoms have on the order of
+<br>
+N bonds which can have ~7 degrees of freedom (length, direction,
+<br>
+torsion), so for each molecule we have to search through a 7N
+<br>
+dimensional space to look for minimum energy/fitness maximum
+<br>
+configurations. So the total amount of work of finding the best by brute 
+<br>
+force is on the order of (K^N)(N!) for a large K - very slow. Even an 
+<br>
+exponential speedup only turns it into a N^2 log N search with a bad 
+<br>
+constant.
+<br>
+<p><p><pre>
+-- 
+-----------------------------------------------------------------------
+Anders Sandberg                                      Towards Ascension!
+<a href="mailto:asa@nada.kth.se?Subject=Re:%20processing%20power%20and%20chemistry">asa@nada.kth.se</a>                            <a href="http://www.nada.kth.se/~asa/">http://www.nada.kth.se/~asa/</a>
+GCS/M/S/O d++ -p+ c++++ !l u+ e++ m++ s+/+ n--- h+/* f+ g+ w++ t+ r+ !y
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="10230.html">Robert J. Bradbury: "Re: processing power and chemistry"</a>
+<li><strong>Previous message:</strong> <a href="10228.html">Lee Corbin: "RE: META: Dishonest debate (was &quot;cluster bombs&quot;)"</a>
+<li><strong>In reply to:</strong> <a href="10220.html">Kevin Freels: "processing power and chemistry"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="10230.html">Robert J. Bradbury: "Re: processing power and chemistry"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#10229">[ date ]</a>
+<a href="index.html#10229">[ thread ]</a>
+<a href="subject.html#10229">[ subject ]</a>
+<a href="author.html#10229">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Sun Jun 15 2003 - 17:15:35 MDT
+</em></small></p>
+</body>
+</html>

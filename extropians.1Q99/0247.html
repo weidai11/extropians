@@ -1,0 +1,219 @@
+<!-- received="Fri Jan  8 08:53:36 1999 MDT" -->
+<!-- sent="08 Jan 1999 16:53:09 +0100" -->
+<!-- name="Anders Sandberg" -->
+<!-- email="asa@nada.kth.se" -->
+<!-- subject="This week's fun papers" -->
+<!-- id="b49aezt3gnu.fsf@void.nada.kth.se" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=159 -->
+<html><head><title>extropians: This week's fun papers</title>
+<meta name=author content="Anders Sandberg">
+<link rel=author rev=made href="mailto:asa@nada.kth.se" title ="Anders Sandberg">
+</head><body>
+<h1>This week's fun papers</h1>
+Anders Sandberg (<i>asa@nada.kth.se</i>)<br>
+<i>08 Jan 1999 16:53:09 +0100</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#247">[ date ]</a><a href="index.html#247">[ thread ]</a><a href="subject.html#247">[ subject ]</a><a href="author.html#247">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0248.html">[ Next ]</a><a href="0246.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0756.html">Robin Hanson</a>
+</ul>
+<!-- body="start" -->
+
+
+<p>
+This time, a mixed bouquet of phramacology, psychoepidemology, EEG,
+computer graphics, anthrocomology and a few twigs of particle physics:
+
+<pre>
+	Sneaking neuroprotectants through the blood-brain barrier
+	Social class in childhood affecting health in adulthood
+	Brain-wave recognition of sentences
+	Modelling of plant ecosystems
+	A virtual-reality interface for a scanning tunneling microscope
+	Is the strong anthropic principle too weak?
+	Decay of protons and neutrons induced by acceleration
+
+
+
+</pre>
+<p>
+Neuroprotection with noninvasive neurotrophin delivery to the brain
+Dafang Wu and William M. Pardridge Proceedings of the National Academy
+of Sciences USA, Vol 96 254-259 January 1999
+
+<p>
+Neutrotrophic factors are known to have neuroptrotective properties,
+and might be candidates both for treating ischemia and dementias (as
+well as nerve damage). Unfortunately they have to be injected
+intraventricularly to have any effect, since they do not cross the
+blood brain barrier. Wu and Pardridge manage to sneak BDNF into the
+brain anyway, by polyglycosylating the protein so that it isn't
+absorbed by the peripheral tissues, linking it with another protein so
+that it is actively transported through the barrier and adding biotin
+which seems to enhance the process. They tested this on rats, and the
+treatment (given intravenously for two weeks after ischemic damage to
+the brain) managed to keep the number of neurons in the CA1 region
+near normal. Very nice, and the possibility of "smuggling" other drugs
+into the brain is promising.
+
+
+<p>
+Social class in childhood and general health in adulthood:
+questionnaire study of contribution of psychological attributes
+Hans Bosma, H Dike van de Mheen and Johan P Mackenbach, British
+Medical Journal 2 January 1999, 318 18--22
+<a href="http://www.bmj.com/cgi/content/abstract/318/7175/18">http://www.bmj.com/cgi/content/abstract/318/7175/18</a>
+
+<p>
+A tricky but interesting subject: how does social class affect
+attitudes and health? The article suggests that childhood social class
+affects health more than adult social class. Adverse personality
+profiles such as external locus of control, neuroticism, parochialism,
+lack of future orientation and negative coping styles are more common
+for people who grew up with a low childhood social class, and they
+might make people more susceptible to illness; this seems to account
+for half of the association low social class and bad health. These
+results seems to suggest that the memes you acquire as young might
+actually have health effects later in life. Yet another reason to
+spread dynamical optimism, and especially among the young.
+
+
+<p>
+Brain-wave recognition of sentences
+<br>
+<a name="0254qlink1">P. Suppes, B. Han and Z. L. Lu
+<br>
+Proc Natl Acad Sci U S A, 95:26 15861--6 Dec 22</a> 1998
+
+<p>
+It seems that it is possible to at least partially detect the
+brainwave patterns of words and sentences a subject hears. The authors
+measured the electrical and magnetic brain waves from two subjects
+hearing 12 test sentences (of the type Subject-verb-object; "Bill
+loves Susan", "Mary sees John", ...) a number of times, and then used
+averaging to create prototypes that were in turn fourier transformed,
+filtered and inverse transformed into filters. Recognition rates
+varied a lot, but the average recognition was around 40-50% (the best
+was 86.7%). Electrode location, the use of bipolar electrodes and
+various transforms of the data improved recognition. They tried to
+paste together the EEG of individual words, in order to see if one
+word has a standardized EEG representation or if it changes depending
+on its position in the sentence; it turned out that recognition was
+still possible. Overall, this paper shows some interesting
+possibilities for us interested in EEG-interface, but it is clear that
+a practical interface might be rather tricky. 
+
+
+<p>
+Realistic modeling and rendering of plant ecosystems
+Oliver Deussen, Pat Hanrahan, Bernd Lintermann, Radomír M&amp;ecaron;ch,
+Matt Pharr, Przemyslaw Prusinkiewicz
+<br>
+SIGGRAPH '98. Proceedings of the conference on Computer Graphics, pages 275-286
+<a href="http://www.acm.org/pubs/citations/proceedings/graph/280814/p275-deussen/">http://www.acm.org/pubs/citations/proceedings/graph/280814/p275-deussen/</a>
+
+<p>
+A lovely paper about how to model a realistic plant ecosystem. They
+start with setting up a terrain model, both interactively and with
+pseudorandom features. Then they calculate the amount of water in the
+soil in different regions, since this affects what plants will
+grow. Then they "seed" different species (again, partially
+interactive, partially random) and let them grow according to a
+competition model (self-thinning: if two plants get too close
+together, the weaker will die and vanish; since the strength of plants
+depends on the environment the model naturally makes plants grow at
+the "right" places). Then the plants themselves are modelled as
+L-systems, and some simplifications in order to keep the specification
+files manageable (without them the specification files would be
+several hundred gigabytes!). The results are wonderfully realistic.
+
+<p>
+Transhuman relevance? I don't know, but it is a lovely paper and
+beautiful graphics. Well worth remembering when we as uploads want to
+take on gardening :-)
+
+
+<p>
+The nanomanipulator: a virtual-reality interface for a scanning
+tunneling microscope
+<br>
+Russell M. Taylor, Warren Robinett, Vernon L. Chi, Frederick P., J
+r. Brooks, William V. Wright, R. Stanley Williams, Erik J. Snyder
+SIGGRAPH '93. Proceedings of the 20th annual conference on Computer
+graphics, pages 127-134
+<br>
+<a href="http://www.acm.org/pubs/citations/proceedings/graph/166117/p127-taylor/">http://www.acm.org/pubs/citations/proceedings/graph/166117/p127-taylor/</a>
+
+<p>
+A head-mounted display and force-feedback manipulator arm connected to
+a STM - nice! The user can view the surface and move around on it,
+feel it and modify it. Maybe not really useful yet other than
+interactive exploration, but it definitely sounds like a tool that
+will be used when nanotech gets truly underway.
+
+
+<p>
+<a name="0756qlink1"><a name="0254qlink2">Is the Strong Anthropic Principle Too Weak?
+A.Feoli, S.Rampone
+<br>
+to appear in Il Nuovo Cimento B
+<br>
+<a href="http://xxx.lanl.gov/abs/gr-qc/</a>9812093">http://xxx.lanl.gov/abs/gr-qc/9812093</a>
+
+<p>
+Something for the discussions about the Great Filter, I suppose; I'm
+personally not that fond of this realm.</a> The authors revisit Carter's
+formula for the expected time between the emergence of intelligent
+life and the end of the biosphere (either interpreted as "we're very
+unlikely and the biosphere will soon vanish!" if you assume many
+unlikely steps in our ontogenesis, or "we're surprisingly likely!" if
+you start from the estimated lifetime of the biosphere). They show
+that if the steps are not independent but chained the formula gives an
+overestimate of the time. In addition, if you assume a large universe
+with many planets where life can develop, the number of improbable
+steps in our evolution is balancee large number of planets producing a
+longer time between the emergence of intelligence and the end of its
+biosphere, and this grows with the number of terrestrial planets in
+the Universe. In the end they propose a stronger form of the Strong
+Anthropic Principle, the Mediocrity Anthropic Principle: "The Universe
+(and hence both the fundamental parameters on which it depends, and
+the amount of places where the evolitoon can take place9 must be such
+as to admit the creation of observers on some stage, and to assure
+them a not trivial living time". Well, we have the WAP, SAP, FAP and
+now the MAP.
+
+
+<p>
+Decay of protons and neutrons induced by acceleration
+<a name="0792qlink2">George E.A. Matsas, Daniel A.T. Vanzella
+<a href="http://xxx.lanl.gov/abs/gr-qc/9901008">http://xxx.lanl.gov/abs/gr-qc/9901008</a>
+
+<p>
+Apparently accelerations can help induce proton decay in the standard
+model; the authors calculate that for accelerations around 11MeV (I'm
+not sure how they convert energy into acceleration) the proton
+lifetime becomes roughly equal to the neutron lifetime. Maybe useful
+for matter conversion.</a>
+
+
+
+<pre>
+-- 
+-----------------------------------------------------------------------
+Anders Sandberg                                      Towards Ascension!
+asa@nada.kth.se                            <a href="http://www.nada.kth.se/~asa/">http://www.nada.kth.se/~asa/</a>
+GCS/M/S/O d++ -p+ c++++ !l u+ e++ m++ s+/+ n--- h+/* f+ g+ w++ t+ r+ !y
+</pre>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0248.html">[ Next ]</a><a href="0246.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0756.html">Robin Hanson</a>
+</ul>
+</body></html>

@@ -1,0 +1,84 @@
+<!-- received="Thu Jul 15 19:47:32 1999 MDT" -->
+<!-- sent="Thu, 15 Jul 1999 16:15:21 -0500" -->
+<!-- name="" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Overclocking stability with gaussian98" -->
+<!-- id="378E4F69.9DC1A38B@spdc.ti.com" -->
+<!-- inreplyto="Overclocking stability with gaussian98" -->
+<!-- version=1.10, linesinbody=45 -->
+<html><head><title>extropians: Re: Overclocking stability with gaussian98</title>
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="">
+</head><body>
+<h1>Re: Overclocking stability with gaussian98</h1>
+ (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Thu, 15 Jul 1999 16:15:21 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#722">[ date ]</a><a href="index.html#722">[ thread ]</a><a href="subject.html#722">[ subject ]</a><a href="author.html#722">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0723.html">[ Next ]</a><a href="0721.html">[ Previous ]</a>
+<b>Maybe in reply to:</b> <a href="0722.html"></a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+
+<p>
+From: Christoph Wasshuber &lt;wasshub@spdc.ti.com&gt;
+
+<p>
+Let me put my two cents in this overclocking discussion.
+Since I am working in silicon technology R&amp;D I can give
+you some insights from the fab. TI is not manufacturing
+standard CPUs but we do quite good with fast DSPs, so
+the experience should apply in general.
+
+<p>
+Overclocking will reduce the lifetime of your processor.
+But since the lifetime of CMOS is very hard to control
+precisely, that might be or might not be a problem. It is
+very difficult because it changes from lot to
+lot, meaning if you buy two processors at the same day
+from the same distributor or vendor you might get two
+totally differently behaving chips, with respect to lifetime.
+The minimum lifetime of CMOS is somewhere around 10 years.
+At least that is the target of manufacturing. But again that
+is a statistical value, so most of the shipped chips do much better.
+That means that even heavy overclocking should not realy
+matter over the usual lifetime of a PC.
+
+<p>
+Going to finer and finer structures 0.18um, 0.13um means
+that the production facilities are stressed to their
+limits. Which means that variations become larger because
+smaller transistors mean also more sensitivity to minor
+process changes. Chips will have larger 
+variations than in the past. So you can end up with a much 
+better performing CPU than the specs tell you.
+
+<p>
+Stability is another issue. The best would be to write a program
+which tests all possible signal combinations in the critical parts
+of a processor. Running an application, no matter how
+difficult it appears, is not a reliable general test. Of course,
+if all you do is run one application it is enough to see if this
+application runs stable. However, it is enough for one line of
+assembly code to change, to let the CPU produce errors. Todays
+CPUs are pretty sofisticated. So a simple black box test is
+not reliable as a general test.
+
+<p>
+Nevertheless, I think overclocking is a smart way to get more 
+for less.
+
+<p>
+Chris....
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0723.html">[ Next ]</a><a href="0721.html">[ Previous ]</a>
+<b>Maybe in reply to:</b> <a href="0722.html"></a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

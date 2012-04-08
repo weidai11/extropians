@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: cities, databases parallel thread</TITLE>
+<META NAME="Author" CONTENT="Amara Graps (amara@amara.com)">
+<META NAME="Subject" CONTENT="Re: cities, databases parallel thread">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: cities, databases parallel thread</H1>
+<!-- received="Tue Sep 12 14:45:25 2000" -->
+<!-- isoreceived="20000912204525" -->
+<!-- sent="Tue, 12 Sep 2000 22:45:22 +0100" -->
+<!-- isosent="20000912214522" -->
+<!-- name="Amara Graps" -->
+<!-- email="amara@amara.com" -->
+<!-- subject="Re: cities, databases parallel thread" -->
+<!-- id="v03110700b5e44b7bf7ee@[213.23.4.77]" -->
+<!-- inreplyto="cities, databases parallel thread" -->
+<STRONG>From:</STRONG> Amara Graps (<A HREF="mailto:amara@amara.com?Subject=Re:%20cities,%20databases%20parallel%20thread&In-Reply-To=&lt;v03110700b5e44b7bf7ee@[213.23.4.77]&gt;"><EM>amara@amara.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Tue Sep 12 2000 - 15:45:22 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="4806.html">scerir: "Re: ART: What is Art"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="4804.html">Michael S. Lorrey: "Re: Political Fundamentalisma nd the Cost of Entry"</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="4652.html">Emlyn O'Regan: "cities, databases parallel thread"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="4936.html">Samantha Atkins: "just me"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="4936.html">Samantha Atkins: "just me"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#4805">[ date ]</A>
+<A HREF="index.html#4805">[ thread ]</A>
+<A HREF="subject.html#4805">[ subject ]</A>
+<A HREF="author.html#4805">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+From: &quot;Emlyn O'Regan&quot; &lt;<A HREF="mailto:emlyn@one.net.au?Subject=Re:%20cities,%20databases%20parallel%20thread&In-Reply-To=&lt;v03110700b5e44b7bf7ee@[213.23.4.77]&gt;">emlyn@one.net.au</A>&gt;, Tue, 12 Sep 2000
+<BR>
+<P><EM>&gt;I'd be kind of surprised if Spike has a full client/server database kicking
+</EM><BR>
+<EM>&gt;around, just waiting for great gobs of data to be pumped into it. He is a
+</EM><BR>
+<EM>&gt;geek, true, but maybe not quite that particular brand.
+</EM><BR>
+<P>... yes ... but we can all help expand Spike's Geek horizons, don'tcha think?
+<BR>
+<P><P>How about this, Spike.
+<BR>
+<P><P>Get MySQL (because it's SQL and it's free)
+<BR>
+<P>Load your data into the database.
+<BR>
+<P>Get Perl (because it's cool and it's free)
+<BR>
+<P>Get DBI Perl library (because it's Perl and because it's free and great code)
+<BR>
+<P>Speed up your Web server with mod_perl
+<BR>
+<P>And ... voila!
+<BR>
+<P>You can access your database from any networked computer with a Web browswer
+<BR>
+and then see and manipulate your data... PLUS  you can show your Geek friends
+<BR>
+your neat-o Geek code
+<BR>
+<P>$dbHandle = DBI-&gt;connect($dbName,$dbUserName,$dbPassword, { RaiseError =&gt; 1 });
+<BR>
+#Prepare the SQL command
+<BR>
+$sql = &quot;SELECT * from spikeysneatosnotes&quot;;
+<BR>
+#Send to database via database handle
+<BR>
+$statementHandle = $dbHandle-&gt;prepare($sql);
+<BR>
+$statementHandle-&gt;execute();
+<BR>
+etc
+<BR>
+<P>and feel proud that you've mastered this phase of Geekdom.
+<BR>
+<P><P>(And sometimes you might even find this useful...)
+<BR>
+<P>Amara
+<BR>
+<P><P>********************************************************************
+<BR>
+Amara Graps                  email: <A HREF="mailto:amara@amara.com?Subject=Re:%20cities,%20databases%20parallel%20thread&In-Reply-To=&lt;v03110700b5e44b7bf7ee@[213.23.4.77]&gt;">amara@amara.com</A>
+<BR>
+Computational Physics        vita:  finger <A HREF="mailto:agraps@shell5.ba.best.com?Subject=Re:%20cities,%20databases%20parallel%20thread&In-Reply-To=&lt;v03110700b5e44b7bf7ee@[213.23.4.77]&gt;">agraps@shell5.ba.best.com</A>
+<BR>
+Multiplex Answers            URL:   <A HREF="http://www.amara.com/">http://www.amara.com/</A>
+<BR>
+********************************************************************
+<BR>
+&quot;Sometimes I think I understand everything. Then I regain
+<BR>
+consciousness.&quot;     --Ashleigh Brilliant
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="4806.html">scerir: "Re: ART: What is Art"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="4804.html">Michael S. Lorrey: "Re: Political Fundamentalisma nd the Cost of Entry"</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="4652.html">Emlyn O'Regan: "cities, databases parallel thread"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="4936.html">Samantha Atkins: "just me"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="4936.html">Samantha Atkins: "just me"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#4805">[ date ]</A>
+<A HREF="index.html#4805">[ thread ]</A>
+<A HREF="subject.html#4805">[ subject ]</A>
+<A HREF="author.html#4805">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:37:46 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

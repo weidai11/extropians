@@ -1,0 +1,115 @@
+<!-- received="Mon Nov 22 17:08:11 1999 MST" -->
+<!-- sent="Mon, 22 Nov 1999 16:09:33 -0800" -->
+<!-- name="Jerome" -->
+<!-- email="freeman@well.com" -->
+<!-- subject="Re: PGP-secure mailing list?" -->
+<!-- id="3.0.5.32.19991122160933.007bb2d0@mail.well.com" -->
+<!-- inreplyto="3839556D.15A4@geocities.com" -->
+<!-- version=1.10, linesinbody=75 -->
+<html><head><title>extropians: Re: PGP-secure mailing list?</title>
+<meta name=author content="Jerome">
+<link rel=author rev=made href="mailto:freeman@well.com" title ="Jerome">
+</head><body>
+<h1>Re: PGP-secure mailing list?</h1>
+Jerome (<i>freeman@well.com</i>)<br>
+<i>Mon, 22 Nov 1999 16:09:33 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2508">[ date ]</a><a href="index.html#2508">[ thread ]</a><a href="subject.html#2508">[ subject ]</a><a href="author.html#2508">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2509.html">[ Next ]</a><a href="2507.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2496.html">D.den Otter</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+It looks like Den Otter has found the appropriate tools.
+
+<p>
+One will still limit such a list to a small number of trusted subscribers, because the privacy of PGP-encrypted lists is only as strong as that of the WEAKEST subscriber.
+
+<p>
+i.e., if one subscriber has a security breach, the entire list traffic is revealed to the intruder.
+
+<p>
+-Jerome
+
+<p>
+At 03:38 PM 11/22/99 +0100, you wrote:
+<br>
+<a href="2496.html#2508qlink1">&gt;----------</a><br>
+<i>&gt;&gt; From: Eliezer S. Yudkowsky &lt;sentience@pobox.com&gt;</i><br>
+<i>&gt;</i><br>
+<i>&gt;&gt; Does anyone know of a mailing-list program that can operate securely in</i><br>
+<i>&gt;&gt; a not-too-inconvenient way?  An example might be a mailing list program</i><br>
+<i>&gt;&gt; that can decrypt PGP messages sent to it, re-encrypt the message with</i><br>
+<i>&gt;&gt; the public PGP keys of the recipient list, and send each recipient a</i><br>
+<i>&gt;&gt; message encrypted with vis key.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Something like this? </i><br>
+<i>&gt;</i><br>
+<i>&gt;<a href="http://www.petidomo.com/">http://www.petidomo.com/</a></i><br>
+<i>&gt;Petidomo supports fully encrypted mailing lists, using the well-known</i><br>
+<i>&gt;encryption programm Pretty Good Privacy (PGP). </i><br>
+<i>&gt;From: <a href="http://www.petidomo.com/manual/node9.html">http://www.petidomo.com/manual/node9.html</a></i><br>
+<i>&gt;</i><br>
+<i>&gt;8.2 PGP-encrypted mailing lists at</i><br>
+<i>&gt;</i><br>
+<i>&gt;"Another very useful feature of the posting filter and the access</i><br>
+<i>&gt;control languange is the ability to maintain  encrypted mailing lists.</i><br>
+<i>&gt;The idea is very simple: You create a PGP key pair for your mailing list</i><br>
+<i>&gt;and spread the public key among the subscribers of your mailing list. In</i><br>
+<i>&gt;turn you collect their public keys and store them on the mailing list</i><br>
+<i>&gt;server. </i><br>
+<i>&gt;</i><br>
+<i>&gt;Whenever a subscriber wants to post an article to the mailing list, he</i><br>
+<i>&gt;will encrypt it with the public key of the list server before</i><br>
+<i>&gt;transferring it through the Internet. Petidomo will then receive the</i><br>
+<i>&gt;mail, decrypt and process it and encrypt it again, with the public keys</i><br>
+<i>&gt;of the subscribers. Once encrypted again, the mail is distributed to the</i><br>
+<i>&gt;readers. </i><br>
+<i>&gt;</i><br>
+<i>&gt;Please note that at no time the mail was sent through the Internet in</i><br>
+<i>&gt;clear text. Hence this mode is well-suited for maintaining internal</i><br>
+<i>&gt;discussion lists for, say, software development among a few people who</i><br>
+<i>&gt;know each other but live spread throughout the world. Included in the</i><br>
+<i>&gt;distribution are two scripts, pgp-encrypt.sh and pgp-decrypt.sh, which</i><br>
+<i>&gt;realize this. The setup needs a bit of work, but once you understand the</i><br>
+<i>&gt;principle, it is rather easy. Just follow the steps described below". </i><br>
+<i>&gt;</i><br>
+<i>&gt;Etc.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Another related link</i><br>
+<i>&gt;<a href="http://www.icdc.com/~paulwolf/pgplists.htm">http://www.icdc.com/~paulwolf/pgplists.htm</a></i><br>
+<i>&gt;</i><br>
+<i>&gt;"The first thing for you to do is to generate </i><br>
+<i>&gt;another pair of keys - these will be the master keys.  Next, send </i><br>
+<i>&gt;copies of both of keys to everyone on the list, using your newfound </i><br>
+<i>&gt;encryption technology.  Sending keys in the mail may sound like a </i><br>
+<i>&gt;dangerous idea, but because your friends all have their own sets of </i><br>
+<i>&gt;keys, you can use their personal public keys to encrypt the master keys</i><br>
+<i>&gt;for the list and send the master keys securely to each of the members. </i><br>
+<i>&gt;</i><br>
+<i>&gt;Now everyone has an identical pair of master keys, and they've never </i><br>
+<i>&gt;even met face to face.  These keys are in addition to their own </i><br>
+<i>&gt;personal keys, which they can use for personal encrypted mail.  </i><br>
+<i>&gt;Emails sent to the mailing list are encrypted by the public master </i><br>
+<i>&gt;key and broadcast to the list members, who use the private master </i><br>
+<i>&gt;key to decode them.  This is a perfect information security system, </i><br>
+<i>&gt;as long as no one's computer gets bagged."</i><br>
+<i>&gt;</i><br>
+<i>&gt;</i><br>
+
+<p>
+have you visited the high sierra rivercam at:
+  <a href="http://www.tllc.com/rivercam.html">http://www.tllc.com/rivercam.html</a> ?
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2509.html">[ Next ]</a><a href="2507.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2496.html">D.den Otter</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

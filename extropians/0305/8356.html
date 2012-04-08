@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: Electronic voting</title>
+<meta name="Author" content="Hal Finney (hal@finney.org)">
+<meta name="Subject" content="Re: Electronic voting">
+<meta name="Date" content="2003-05-16">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Electronic voting</h1>
+<!-- received="Fri May 16 15:32:17 2003" -->
+<!-- isoreceived="20030516213217" -->
+<!-- sent="Fri, 16 May 2003 14:31:15 -0700" -->
+<!-- isosent="20030516213115" -->
+<!-- name="Hal Finney" -->
+<!-- email="hal@finney.org" -->
+<!-- subject="Re: Electronic voting" -->
+<!-- id="200305162131.h4GLVFC23415@finney.org" -->
+<!-- inreplyto="Electronic voting" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Hal Finney (<a href="mailto:hal@finney.org?Subject=Re:%20Electronic%20voting"><em>hal@finney.org</em></a>)<br>
+<strong>Date:</strong> Fri May 16 2003 - 15:31:15 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8357.html">matus@matus1976.com: "RE: &quot;Hysteria, Thy Name is SARS&quot;"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="8355.html">Damien Sullivan: "Re: Right and left liberal and conservative"</a>
+<li><strong>Maybe in reply to:</strong> <a href="8285.html">Lee Daniel Crocker: "Electronic voting"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8362.html">Lee Daniel Crocker: "Re: Electronic voting"</a>
+<li><strong>Reply:</strong> <a href="8362.html">Lee Daniel Crocker: "Re: Electronic voting"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8356">[ date ]</a>
+<a href="index.html#8356">[ thread ]</a>
+<a href="subject.html#8356">[ subject ]</a>
+<a href="author.html#8356">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I applaud Lee Crocker for coming up with an original proposal for
+<br>
+electronic voting.  However I will offer some criticisms.
+<br>
+<p><em>&gt; At the polling place, each voter goes through the touch-screen
+</em><br>
+<em>&gt; hand-holding menu options of the voting software. When he's done,
+</em><br>
+<em>&gt; a simple paper receipt is printed that shows an overview of his
+</em><br>
+<em>&gt; votes, which he is asked to read and confirm by placing it through
+</em><br>
+<em>&gt; a reader and pressing a comfirmation button. On that receipt is
+</em><br>
+<em>&gt; also printed a large random number unique to each voter. The
+</em><br>
+<em>&gt; reader processes the vote and sends it to a central server. If
+</em><br>
+<em>&gt; the user made a mistake, he just discards the reciept without
+</em><br>
+<em>&gt; submitting it and starts over. The voter retains this receipt.
+</em><br>
+<p>I see two problems here.  The lesser one is that no paper is left at
+<br>
+the polling place.  I understand that you have other mechanisms to
+<br>
+address this.  Nevertheless the traditional systems have the advantage
+<br>
+that a stack of paper ballots is there to be counted, and re-counted
+<br>
+if necessary.  Your system relies on a more distributed and abstract
+<br>
+mechanism for auditing.
+<br>
+<p>The greater problem is that this system facilitates selling votes.
+<br>
+After the election, an official receipt showing a certain vote will
+<br>
+probably be able to be turned in for cash in many jurisdictions.
+<br>
+<p>We could address the first problem by building a Xerox machine into the
+<br>
+vote scanner so that either the voter or the precinct gets a copy of
+<br>
+the vote and the other gets the original.  (Or wait - is there really
+<br>
+a difference between the copy and the original?  That's something we
+<br>
+should definitely spend many, many hours debating!)
+<br>
+<p>For the second problem, maybe you could somehow make the receipts be
+<br>
+easily forgeable, but allow forgeries to be distinguished from true
+<br>
+receipts only by the voting office.  There could be a secret checksum
+<br>
+algorithm embedded in the serial number, or some such.
+<br>
+<p><p><em>&gt; After election day, each precinct publishes two lists (on the
+</em><br>
+<em>&gt; net, on paper, whatever): one is nothing but a list of names of
+</em><br>
+<em>&gt; everyone who voted. This is already public information (when you
+</em><br>
+<em>&gt; go in to vote today, your name is checked off on the registration
+</em><br>
+<em>&gt; list). This way, everyone who voted can verify that his name
+</em><br>
+<em>&gt; appears on the list, and that names of people who he knows didn't
+</em><br>
+<em>&gt; vote (or who are dead, etc.) do not appear.
+</em><br>
+<p>This is a good idea in any case, and as you say it is already done
+<br>
+at least implicitly, and no doubt explicitly in some jurisdictions.
+<br>
+You can probably walk into the voting office and look in some big ledger
+<br>
+to find the list of all the people who voted, and then see if any of them
+<br>
+look bogus.  Putting that data on the net would facilitate this process.
+<br>
+There may be some privacy concerns, though.
+<br>
+<p><p><em>&gt; The second list is the same number of entries, each of which is a
+</em><br>
+<em>&gt; plaintext list of votes cast, along with a random number index made
+</em><br>
+<em>&gt; by hashing together the random number printed on the voter stub
+</em><br>
+<em>&gt; with info such as the voter's name, address, birthdate, etc., and
+</em><br>
+<em>&gt; the votes themselves (a one-way hash). Each voter can then run a
+</em><br>
+<em>&gt; program (with a published algorithm) to hash the random number on
+</em><br>
+<em>&gt; his receipt with the information he knows, and then go to the list,
+</em><br>
+<em>&gt; find that index, and verify that the published votes match.
+</em><br>
+<p>Here it may be getting a little too complex.  Many voters won't have
+<br>
+the ability to run these algorithms, especially the elderly, who vote
+<br>
+in large numbers.  I don't see why you can't just use the same receipt
+<br>
+numbers that are already on the ballot, though.
+<br>
+<p>There may also be a privacy concern here.  Especially in smaller towns,
+<br>
+distinctive votes on certain issues may give people a good idea of
+<br>
+who certain ballots belong to.  This would then reveal the content of
+<br>
+their other votes.  Maybe the same thing happens in principle under the
+<br>
+present system; in some areas people may be able to inspect the votes,
+<br>
+which would reveal the same sorts of correlations.  But your proposal
+<br>
+requires all this to be put on the net and be widely available, making
+<br>
+the privacy impact worse.  (However it would be a mother lode for data
+<br>
+miners intent on learning how political issues related to each other.)
+<br>
+<p>In any case, this auditing procedure looks reliable in theory.  But I'm
+<br>
+not sure that we could confidently say that it is as good as the present
+<br>
+system.  Some elections are very close, and even a fraction of a percent
+<br>
+will swing the results.  If it were possible to get away with a small
+<br>
+amount of &quot;virtual ballot stuffing&quot; then people would lose confidence
+<br>
+in the system.
+<br>
+<p>Of course, paper ballot box stuffing happens, too.  But in that case
+<br>
+we use well-understood principles of physical security and auditing to
+<br>
+make it difficult for one or just a few people to get away with it.
+<br>
+All handling of the ballots is done under the watchful eyes of
+<br>
+representatives of the political parties, as well as disinterested
+<br>
+observers.  You're going to need either a good conspiracy, or some clever
+<br>
+security hacking, to get fake ballots into the box.
+<br>
+<p>Unfortunately, it's not clear that we can expect this level of security
+<br>
+in the computer world.  While we can no doubt do better than just running
+<br>
+this software on Windows on an Internet-connected computer, it still may
+<br>
+be possible that people can get access to it somehow, and make changes
+<br>
+without being caught.
+<br>
+<p>The point is that given the lack of deterrence to such attempts,
+<br>
+we need a very strong degree of reliability in the auditing process.
+<br>
+And I don't see that your proposal provides that.  It depends on people
+<br>
+checking their own recorded vote, but how many people will do so?
+<br>
+Few enough even vote.  Probably most voters will have lost their
+<br>
+receipts by the time this information is published a few days later.
+<br>
+And if they do get motivated and check the results the first few times,
+<br>
+over the years, they are likely to become careless.  I'd guess that only
+<br>
+a small percentage would make the effort in a typical election.
+<br>
+<p>Having said that, your system could still have a good chance of catching
+<br>
+at least some kinds of fraud.  Suppose the hackers can't alter the voting
+<br>
+rolls.  Then they can't add more votes to the list, or the number of votes
+<br>
+won't equal the number of voters.  So they have to change or delete some
+<br>
+votes and hope that those voters don't happen to check their results.
+<br>
+Maybe they'll change half a percent of the votes in order to sway a
+<br>
+close election.  Then 99.5% of the votes are fine.  At first I thought
+<br>
+this meant that 99.5% of the people would have to check their votes in
+<br>
+order to have a good chance of catching the fraud.
+<br>
+<p>But that's not so.  1 voter has a 0.5% chance of being one of the victims,
+<br>
+so that is his chance of catching it.  2 voters increase the chance to 1%
+<br>
+that one of their votes has been altered.  The chances of catching the
+<br>
+fraud increase almost linearly with the number of voters, up through the
+<br>
+50% level or so.  That means that if only 200 or so voters check their
+<br>
+ballots, they will detect the stuffing with a high degree of likelihood.
+<br>
+And in a typical election, such numbers would represent a very small
+<br>
+percentage of the voters.
+<br>
+<p>So your system does work very well to catch altered or deleted votes, if
+<br>
+there are enough to swing any but the most hairs-breadth-close elections,
+<br>
+even if only a few percent of the voters audit their results.  The harder
+<br>
+type of fraud to catch would be added votes, which means putting fake
+<br>
+names onto the voter rolls.  I'm not sure how the vulnerability of your
+<br>
+approach to this problem would compare with how things are done today.
+<br>
+<p>Hal
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8357.html">matus@matus1976.com: "RE: &quot;Hysteria, Thy Name is SARS&quot;"</a>
+<li><strong>Previous message:</strong> <a href="8355.html">Damien Sullivan: "Re: Right and left liberal and conservative"</a>
+<li><strong>Maybe in reply to:</strong> <a href="8285.html">Lee Daniel Crocker: "Electronic voting"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="8362.html">Lee Daniel Crocker: "Re: Electronic voting"</a>
+<li><strong>Reply:</strong> <a href="8362.html">Lee Daniel Crocker: "Re: Electronic voting"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8356">[ date ]</a>
+<a href="index.html#8356">[ thread ]</a>
+<a href="subject.html#8356">[ subject ]</a>
+<a href="author.html#8356">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Fri May 16 2003 - 15:44:44 MDT
+</em></small></p>
+</body>
+</html>

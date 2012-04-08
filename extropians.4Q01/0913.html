@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: LANG: Haskell?</title>
+<meta name="Author" content="Carlos Gonzalia (gonzalia@cs.chalmers.se)">
+<meta name="Subject" content="Re: LANG: Haskell?">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: LANG: Haskell?</h1>
+<!-- received="Mon Oct 15 08:38:43 2001" -->
+<!-- isoreceived="20011015143843" -->
+<!-- sent="Mon, 15 Oct 2001 16:38:39 +0200 (MET DST)" -->
+<!-- isosent="20011015143839" -->
+<!-- name="Carlos Gonzalia" -->
+<!-- email="gonzalia@cs.chalmers.se" -->
+<!-- subject="Re: LANG: Haskell?" -->
+<!-- id="200110151438.f9FEcdb05405@pheidippides.md.chalmers.se" -->
+<!-- inreplyto="LANG: Haskell?" -->
+<strong>From:</strong> Carlos Gonzalia (<a href="mailto:gonzalia@cs.chalmers.se?Subject=Re:%20LANG:%20Haskell?&In-Reply-To=&lt;200110151438.f9FEcdb05405@pheidippides.md.chalmers.se&gt;"><em>gonzalia@cs.chalmers.se</em></a>)<br>
+<strong>Date:</strong> Mon Oct 15 2001 - 08:38:39 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0914.html">John Clark: "Re: Anthrax addendum."</a>
+<li><strong>Previous message:</strong> <a href="0912.html">Eugene Leitl: "Re: Anthrax addendum."</a>
+<li><strong>Maybe in reply to:</strong> <a href="0861.html">James Rogers: "LANG: Haskell?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0922.html">James Rogers: "Re: LANG: Haskell?"</a>
+<li><strong>Reply:</strong> <a href="0922.html">James Rogers: "Re: LANG: Haskell?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#913">[ date ]</a>
+<a href="index.html#913">[ thread ]</a>
+<a href="subject.html#913">[ subject ]</a>
+<a href="author.html#913">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+<em>&gt;From: James Rogers &lt;<a href="mailto:jamesr@best.com?Subject=Re:%20LANG:%20Haskell?&In-Reply-To=&lt;200110151438.f9FEcdb05405@pheidippides.md.chalmers.se&gt;">jamesr@best.com</a>&gt;
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;I am curious as to people's opinions of Haskell as a programming language.
+</em><br>
+<em>&gt;Any comments on notable strengths or weaknesses/limitations (beyond the
+</em><br>
+<em>&gt;really obvious ones) would be appreciated.  Of particular interest to me are
+</em><br>
+<em>&gt;systemic limitations that are difficult to program around, or which don't
+</em><br>
+<em>&gt;scale well conceptually.
+</em><br>
+<p>I think Haskell's main strength is its completely denotational approach
+<br>
+to types. By this I mean the way in which you define types by a mechanism
+<br>
+quite similar in spirit to mathematical definition by algebraic expressions,
+<br>
+inductive schemas, case analysis, implicit composition-decomposition,
+<br>
+and higher-order capabilities. This gives you a level of abstraction that is
+<br>
+very neat, and lends itself to concise and clear capture of the conceptual
+<br>
+solution your program is providing. It also allows you to do an impressive
+<br>
+amount of logic reasoning on the program as an object, which would allow you
+<br>
+to provide mathematical proof justifications of critical behaviour.
+<br>
+<p>I also think Haskell's main weakness is its completely denotational approach
+<br>
+to types. I know I'm sounding like a bad joke, but it's true in my eyes.
+<br>
+As much as people like me would like to crown denotational languages as
+<br>
+the pinnacle of programming, there are lots of real-world situations in
+<br>
+which this becomes a pain. Heavily operational behaviours can be coded in
+<br>
+a quite decent way but it requires you to deal with a lot of abstraction
+<br>
+for your result. This feels like a clumsy burden at times, though it is
+<br>
+my understanding that several years of practice with the &quot;monadic style&quot;
+<br>
+have produced many reasonably good pragmatic ways of going through it.
+<br>
+Another limitation is the module system, which is decidedly primitive
+<br>
+as far as module systems go.
+<br>
+<p>Here our research groups have created wonderful work using Haskell. The kind
+<br>
+of work done seems to confirm my impression: it's amazingly good for problems
+<br>
+that can be expressed denotationally (as an example, the proof-editor
+<br>
+assistant Alfa that I use for my own research), and somewhat clumsy for
+<br>
+problems that are more of an operational nature. An interesting research
+<br>
+direction that has shown relief for this clumsiness comes from dependent
+<br>
+type systems (with which I work for my research too, but on a more math
+<br>
+oriented aim). We have some working prototypes (Cayenne) but they lack
+<br>
+development probably. A different approach has been introducing a layer
+<br>
+of reactive objects, so embedding operational behaviour in a clearer
+<br>
+way than monadic style. The current prototype (O'Haskell) looks good.
+<br>
+<p>On a separate issue, I think Haskell is probably the best language to
+<br>
+introduce freshmen to programming. I've followed closely some teaching
+<br>
+experiences done by colleagues, and the difference in the quality of
+<br>
+learning and the scope of the mental toolkit students get seems quite
+<br>
+impressive compared with introducing them to programming with a
+<br>
+traditional operational language.
+<br>
+<p>In short, I think Haskell hasn't been totally able to bridge the traditional
+<br>
+divide &quot;denotational vs. operational&quot;, the decades-old complaint about
+<br>
+languages of its family based on the lambda calculus. Its systematic and
+<br>
+scalability limitations can be traced back to that divide, so you may find
+<br>
+it awesome for huge complex systems or you may find it mediocre, and it
+<br>
+seems to depend more on the denotational-or-operational nature of the problem
+<br>
+than on size or complexity.
+<br>
+<p>I'm not sure if this was of any help, feel free to curse me for wasting
+<br>
+your time if I'm just babbling about stuff that you already knew. ;-)
+<br>
+<p>Carlos
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0914.html">John Clark: "Re: Anthrax addendum."</a>
+<li><strong>Previous message:</strong> <a href="0912.html">Eugene Leitl: "Re: Anthrax addendum."</a>
+<li><strong>Maybe in reply to:</strong> <a href="0861.html">James Rogers: "LANG: Haskell?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0922.html">James Rogers: "Re: LANG: Haskell?"</a>
+<li><strong>Reply:</strong> <a href="0922.html">James Rogers: "Re: LANG: Haskell?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#913">[ date ]</a>
+<a href="index.html#913">[ thread ]</a>
+<a href="subject.html#913">[ subject ]</a>
+<a href="author.html#913">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:13 MDT</em>
+</em>
+</small>
+</body>
+</html>

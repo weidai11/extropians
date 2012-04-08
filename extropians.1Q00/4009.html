@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: please help FreeNet by becoming a node</TITLE>
+<META NAME="Author" CONTENT="Eugene Leitl (eugene.leitl@lrz.uni-muenchen.de)">
+<META NAME="Subject" CONTENT="Re: please help FreeNet by becoming a node">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: please help FreeNet by becoming a node</H1>
+<!-- received="Thu Mar  2 21:16:18 2000" -->
+<!-- isoreceived="20000303041618" -->
+<!-- sent="Thu, 2 Mar 2000 20:14:55 -0800 (PST)" -->
+<!-- isosent="20000303041455" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: please help FreeNet by becoming a node" -->
+<!-- id="14527.15423.391870.287471@lrz.uni-muenchen.de" -->
+<!-- inreplyto="200003030239.SAA24010@finney.org" -->
+<STRONG>From:</STRONG> Eugene Leitl (<A HREF="mailto:eugene.leitl@lrz.uni-muenchen.de?Subject=Re:%20please%20help%20FreeNet%20by%20becoming%20a%20node&In-Reply-To=&lt;14527.15423.391870.287471@lrz.uni-muenchen.de&gt;"><EM>eugene.leitl@lrz.uni-muenchen.de</EM></A>)<BR>
+<STRONG>Date:</STRONG> Thu Mar 02 2000 - 21:14:55 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="4010.html">Michael S. Lorrey: "Re: Orbital Towers."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="4008.html">Spike Jones: "Re: Orbital Towers."</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3998.html">hal@finney.org: "Re: please help FreeNet by becoming a node"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="4011.html">Michael S. Lorrey: "Re: please help FreeNet by becoming a node"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#4009">[ date ]</A>
+<A HREF="index.html#4009">[ thread ]</A>
+<A HREF="subject.html#4009">[ subject ]</A>
+<A HREF="author.html#4009">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+<A HREF="mailto:hal@finney.org?Subject=Re:%20please%20help%20FreeNet%20by%20becoming%20a%20node&In-Reply-To=&lt;14527.15423.391870.287471@lrz.uni-muenchen.de&gt;">hal@finney.org</A> writes:
+<BR>
+<P><EM> &gt; of documents, ranked by priority.  When a document is fetched, its
+</EM><BR>
+<EM> &gt; rank is increased and that of all others is lowered.  When documents'
+</EM><BR>
+<EM> &gt; rankings drop below a certain level, they are deleted from the node,
+</EM><BR>
+<P>This kinda reminds me of Python's GC reference counter model. One
+<BR>
+could also implement a (glacially slow) bitrot, where constantly
+<BR>
+decrementing counters are being incremented by accesses (ok, in your
+<BR>
+model the clock ticks whenever an access occur. if one node never sees
+<BR>
+hits, objects in it can become infinitely stale). Objects evaporate
+<BR>
+when counters fall below zero.
+<BR>
+<P>It would also be nice to know when the last instance of an object on
+<BR>
+the network is about to face the great bitbucket in the sky. Maybe
+<BR>
+some kind soul will grant it immortality in a bulk storage
+<BR>
+archive. (Otoh, it will be probably called the Great Archive of Crap,
+<BR>
+not even attractive to practising kibologists).
+<BR>
+<P><EM> &gt; This produces a sort of crude &quot;economy&quot;, where document requests are
+</EM><BR>
+<EM> &gt; treated like payment to keep documents present in the system.  Documents
+</EM><BR>
+<EM> &gt; which are requested more often get higher rankings and get replicated on
+</EM><BR>
+<EM> &gt; multiple servers.  Documents which are requested too rarely eventually
+</EM><BR>
+<EM> &gt; get dropped from the system.
+</EM><BR>
+<P>If creating content has a cost, one could keep all of them. Available
+<BR>
+storage is expanding exponentially.
+<BR>
+&nbsp;
+<BR>
+<EM> &gt; It's a highly unbalanced and fragile system which is unlikely to achieve
+</EM><BR>
+<EM> &gt; much robustness.
+</EM><BR>
+<EM> &gt; 
+</EM><BR>
+<EM> &gt; However it could still be a good testbed for the basic mechanisms for
+</EM><BR>
+<EM> &gt; storing documents, moving them around, and so on.  If the ranking system
+</EM><BR>
+<EM> &gt; were updated to be more reasonable (based on real payments, for example)
+</EM><BR>
+<EM> &gt; then it could grow into a more stable system.
+</EM><BR>
+<P>It is really unfortunate that all the usable algorithms for digicash
+<BR>
+have a lock on them, in legalspace. Someone oughta rescue all these
+<BR>
+poor bits, and bring them into circulation.
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="4010.html">Michael S. Lorrey: "Re: Orbital Towers."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="4008.html">Spike Jones: "Re: Orbital Towers."</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3998.html">hal@finney.org: "Re: please help FreeNet by becoming a node"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="4011.html">Michael S. Lorrey: "Re: please help FreeNet by becoming a node"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#4009">[ date ]</A>
+<A HREF="index.html#4009">[ thread ]</A>
+<A HREF="subject.html#4009">[ subject ]</A>
+<A HREF="author.html#4009">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:04:29 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

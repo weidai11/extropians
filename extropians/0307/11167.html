@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: More Hard Problems Using Bayes' Theorem, Please</title>
+<meta name="Author" content="Mitchell Porter (mitchtemporarily@hotmail.com)">
+<meta name="Subject" content="Re: More Hard Problems Using Bayes' Theorem, Please">
+<meta name="Date" content="2003-07-06">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: More Hard Problems Using Bayes' Theorem, Please</h1>
+<!-- received="Sun Jul  6 05:51:08 2003" -->
+<!-- isoreceived="20030706115108" -->
+<!-- sent="Sun, 06 Jul 2003 11:51:05 +0000" -->
+<!-- isosent="20030706115105" -->
+<!-- name="Mitchell Porter" -->
+<!-- email="mitchtemporarily@hotmail.com" -->
+<!-- subject="Re: More Hard Problems Using Bayes' Theorem, Please" -->
+<!-- id="Law11-F512cdXDdQ8Yc000473cb@hotmail.com" -->
+<!-- inreplyto="More Hard Problems Using Bayes' Theorem, Please" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Mitchell Porter (<a href="mailto:mitchtemporarily@hotmail.com?Subject=Re:%20More%20Hard%20Problems%20Using%20Bayes'%20Theorem,%20Please"><em>mitchtemporarily@hotmail.com</em></a>)<br>
+<strong>Date:</strong> Sun Jul 06 2003 - 05:51:05 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11168.html">Harvey Newstrom: "RE: [wta-talk] Specific areas lacking advancement"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="11166.html">Eliezer S. Yudkowsky: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Maybe in reply to:</strong> <a href="11162.html">Lee Corbin: "More Hard Problems Using Bayes' Theorem, Please"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11231.html">Dan Fabulich: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Reply:</strong> <a href="11231.html">Dan Fabulich: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Reply:</strong> <a href="11236.html">Lee Corbin: "RE: More Hard Problems Using Bayes' Theorem, Please"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11167">[ date ]</a>
+<a href="index.html#11167">[ thread ]</a>
+<a href="subject.html#11167">[ subject ]</a>
+<a href="author.html#11167">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+FWIW, my thought process:
+<br>
+<p>A priori probability is 50% for each barrel.
+<br>
+<p>For the red-majority barrel, the probability of
+<br>
+drawing a red each time is 3/4, blue 1/4; so
+<br>
+the odds of 3 blues, 7 reds is p1 = (1^3)*(3^7)/(4^10).
+<br>
+For the blue-majority barrel, it's p2 = (3^3)*(1^7)/(4^10).
+<br>
+<p>Therefore the overall probability (conditioning
+<br>
+on the 50-50 prior) is the average of those two
+<br>
+probabilities. A posteriori we know that this is
+<br>
+what happened, so the odds that it was the
+<br>
+blue-majority barrel are
+<br>
+<p>p2/(p1+p2) = 27/(27+2187) = 1/82
+<br>
+<p>I now think about doing it step-by-step, as originally
+<br>
+commanded. Intuitively, using the same averaging
+<br>
+principle as above, if you fish out a red,
+<br>
+that's a 3/4 probability that the bucket is
+<br>
+red-majority. But this suggests that the final
+<br>
+updated probability (of blue) will just be 3^3/4^10.
+<br>
+I stop, confused. That looks more like a number
+<br>
+you'd calculate 'in your head in less than thirty
+<br>
+seconds'. But what went wrong the first time?
+<br>
+<p>Nothing probably; what's wrong is the idea of
+<br>
+just multiplying all those retrodictive probabilities.
+<br>
+They need to be combined in some more complex way.
+<br>
+But what's the rule? Well, suppose that the current
+<br>
+probability assigned to the blue-majority hypothesis
+<br>
+is b, red-majority r. You draw out a blue. The odds
+<br>
+that you would draw a blue token from the blue-majority
+<br>
+barrel are 3/4, from the red-majority barrel 1/4.
+<br>
+So assuming the (b,r) prior, the odds of what just
+<br>
+happened are b*3/4 + r*1/4 = (3b+r)/4, and the odds
+<br>
+that it came from the blue barrel are 3b/(3b+r).
+<br>
+This is your new probability for the blue-majority
+<br>
+hypothesis. Updating in this fashion I get
+<br>
+<p>B 1/2, R 1/2;
+<br>
+(R) B 1/4, R 3/4;
+<br>
+(B) B 1/2, R 1/2;
+<br>
+(R) B 1/4, R 3/4;
+<br>
+(R) B 1/10, R 9/10;
+<br>
+(B) B 1/4, R 3/4;
+<br>
+(B) B 1/2, R 1/2;
+<br>
+(R) B 1/4, R 3/4;
+<br>
+(R) B 1/10, R 9/10;
+<br>
+(R) B 1/28, R 27/28;
+<br>
+(R) B 1/82, R 81/82
+<br>
+<p>and I also observe that one can begin by saying
+<br>
+that in the sequence blues and reds 'cancel' -
+<br>
+the barrels have equal probabilities of producing
+<br>
+a sequence with equal numbers of blues and reds -
+<br>
+so one need only ask the odds on getting four reds.
+<br>
+<p>But what I still don't get is what's wrong with
+<br>
+'orthodox statistics'. I obtained my p1/(p1+p2)
+<br>
+through frequentist thinking, which is supposed to
+<br>
+be anathema to Bayesians. On the SL4 list, Ben
+<br>
+Goertzel implies that &quot;non-Bayesian probabilists&quot;
+<br>
+are restricted in their choice of priors:
+<br>
+<a href="http://sl4.org/archive/0305/6820.html">http://sl4.org/archive/0305/6820.html</a>
+<br>
+<p>... but even if what he says is true, I don't
+<br>
+see it reflecting on the subjectivist-vs-frequentist
+<br>
+debate. Both sides need priors to get anywhere,
+<br>
+and there's nothing in frequentism to *compel* the
+<br>
+use of Gaussian priors. So, I still don't get the
+<br>
+philosophical lesson.
+<br>
+<p>_________________________________________________________________
+<br>
+Hotmail is now available on Australian mobile phones. Go to  
+<br>
+<a href="http://ninemsn.com.au/mobilecentral/signup.asp">http://ninemsn.com.au/mobilecentral/signup.asp</a>
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="11168.html">Harvey Newstrom: "RE: [wta-talk] Specific areas lacking advancement"</a>
+<li><strong>Previous message:</strong> <a href="11166.html">Eliezer S. Yudkowsky: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Maybe in reply to:</strong> <a href="11162.html">Lee Corbin: "More Hard Problems Using Bayes' Theorem, Please"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="11231.html">Dan Fabulich: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Reply:</strong> <a href="11231.html">Dan Fabulich: "Re: More Hard Problems Using Bayes' Theorem, Please"</a>
+<li><strong>Reply:</strong> <a href="11236.html">Lee Corbin: "RE: More Hard Problems Using Bayes' Theorem, Please"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#11167">[ date ]</a>
+<a href="index.html#11167">[ thread ]</a>
+<a href="subject.html#11167">[ subject ]</a>
+<a href="author.html#11167">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Sun Jul 06 2003 - 06:01:25 MDT
+</em></small></p>
+</body>
+</html>

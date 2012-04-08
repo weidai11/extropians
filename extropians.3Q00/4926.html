@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Homeless</TITLE>
+<META NAME="Author" CONTENT="Spike Jones (spike66@ibm.net)">
+<META NAME="Subject" CONTENT="Re: Homeless">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Homeless</H1>
+<!-- received="Thu Sep 14 00:07:37 2000" -->
+<!-- isoreceived="20000914060737" -->
+<!-- sent="Wed, 13 Sep 2000 23:08:01 -0700" -->
+<!-- isosent="20000914060801" -->
+<!-- name="Spike Jones" -->
+<!-- email="spike66@ibm.net" -->
+<!-- subject="Re: Homeless" -->
+<!-- id="39C06B41.11CEFD10@ibm.net" -->
+<!-- inreplyto="007501c01d7f$9b9b9250$41600c3d@squashy2000" -->
+<STRONG>From:</STRONG> Spike Jones (<A HREF="mailto:spike66@ibm.net?Subject=Re:%20Homeless&In-Reply-To=&lt;39C06B41.11CEFD10@ibm.net&gt;"><EM>spike66@ibm.net</EM></A>)<BR>
+<STRONG>Date:</STRONG> Thu Sep 14 2000 - 00:08:01 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="4927.html">Adrian Tymes: "Re: How to reach the masses"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="4925.html">Joe Dees: "Re: How to reach the masses"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="4870.html">Emlyn O'Regan: "Re: Homeless"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="4964.html">Emlyn O'Regan: "Brittle systems (was Re: Homeless)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="4964.html">Emlyn O'Regan: "Brittle systems (was Re: Homeless)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#4926">[ date ]</A>
+<A HREF="index.html#4926">[ thread ]</A>
+<A HREF="subject.html#4926">[ subject ]</A>
+<A HREF="author.html#4926">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Emlyn O'Regan wrote many wonderful notions in his homeless post, including:
+<BR>
+<P><EM>&gt; ...As far as I can see, the tools have improved incredibly
+</EM><BR>
+<EM>&gt; beyond what I was using 10 years ago when I started uni. So much more is
+</EM><BR>
+<EM>&gt; possible; it's astounding. And yet, paradoxically, it is harder than ever to
+</EM><BR>
+<EM>&gt; be a programmer. The job is getting more and more difficult. Why?
+</EM><BR>
+<P>So, Emlyn has been hiding his light under a bushel.  Why do you
+<BR>
+indulge in as many wisecracks as... I do, when you are capable of
+<BR>
+writing insightful passages like these?  Shame!  {8-]
+<BR>
+<P>Your notion of software implosion is something I have pondered often.
+<BR>
+I am surely not alone when I confess I have developed code (excel
+<BR>
+macro upon macro upon macro) which eventually became so
+<BR>
+spaghetti-ed and complicated, I could no longer debug the mess.  It's
+<BR>
+easier to start over and do it right than try to fix the abomination.
+<BR>
+Excel invites this kind of morass, because the macros start out
+<BR>
+simple, then one tends to add shell after shell over time, kinda
+<BR>
+like... windoze 98.
+<BR>
+<P>For instance, every sophmore physics student has been asked
+<BR>
+on a test to answer a question like this:
+<BR>
+<P>An artilleryman fires a cannon ball at 500 meters per second
+<BR>
+with the barrel 30 degrees from the horizon.  How far does
+<BR>
+the ball travel before it hits the ground?  Assume flat earth
+<BR>
+and no atmosphere.
+<BR>
+<P>Nowthen, the sophomores all derive the equation
+<BR>
+&nbsp;s=2V^2/g*sin(alpha)cos(alpha) with a couple lines of
+<BR>
+calculus, but doesnt it make you crazy?  No one has
+<BR>
+yet fired a shell on an airless planet!  What about that air?
+<BR>
+<P>The next part of the physics problem asks you to show
+<BR>
+that the optimal angle for max distance is 45 degrees, again
+<BR>
+assuming no air.  The student takes the derivative, gets
+<BR>
+constants times sin^2(alpha)-cos^2(alpha), sets that to
+<BR>
+zero, gets alpha is 45 degrees and shes done.  But still,
+<BR>
+no artilleryman has ever fired a shell in a vacuum, so
+<BR>
+what do you do?  Do you fire the cannon a little lower
+<BR>
+than 45 degrees, to shorten the path a little, or aim a
+<BR>
+little higher than 45 degrees to get up into the thinner air?
+<BR>
+<P>Turns out, this is one hell of a difficult problem to model,
+<BR>
+which is why the sophomores dont get to solve it.  The
+<BR>
+atmosphere is difficult to model with a closed form equation,
+<BR>
+so you need tables to get very precise, so you need...
+<BR>
+excel!  You get a good atmosphere table, use the VLOOKUP
+<BR>
+function, and sad to say, a geek can entertain himself for
+<BR>
+*weeks* if not months, fooling around with optimizing
+<BR>
+trajectories.
+<BR>
+<P>It gets worse from there.  It is easy to set up a spreadsheet
+<BR>
+that calculates every second, looks up an atmospheric
+<BR>
+density, calulates a drag, repeats.  But then, well, the
+<BR>
+atmosphere table is in increments of 500 meters, and thats
+<BR>
+course, so why not write a linear interpolator?  Well, then the
+<BR>
+atmosphere is actually more exponential, so how about
+<BR>
+an exponential interpolator?  Next, a drag coefficient
+<BR>
+routine that accounts for the increase in drag at and above
+<BR>
+mach 1, then lets correct for deltas in viscosity of the
+<BR>
+atmosphere, and pretty soon its a mess of code that grows
+<BR>
+and grows in an uncontrolled fashion, layer upon layer,
+<BR>
+until it can no longer be debugged.
+<BR>
+<P>The whole project is a total loss.  Easier to just start over,
+<BR>
+and do it right this time.
+<BR>
+<P>I can very easily imagine this case being analogous to what
+<BR>
+could happen to our interconnected networks.  It really
+<BR>
+could overwhelm our best efforts.  At this point Im not even
+<BR>
+part of the solution, Im still part of the problem.  spike
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="4927.html">Adrian Tymes: "Re: How to reach the masses"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="4925.html">Joe Dees: "Re: How to reach the masses"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="4870.html">Emlyn O'Regan: "Re: Homeless"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="4964.html">Emlyn O'Regan: "Brittle systems (was Re: Homeless)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="4964.html">Emlyn O'Regan: "Brittle systems (was Re: Homeless)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#4926">[ date ]</A>
+<A HREF="index.html#4926">[ thread ]</A>
+<A HREF="subject.html#4926">[ subject ]</A>
+<A HREF="author.html#4926">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:37:55 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

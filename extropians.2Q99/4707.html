@@ -1,0 +1,97 @@
+<!-- received="Tue Jun 29 19:05:47 1999 MDT" -->
+<!-- sent="Tue, 29 Jun 1999 18:05:40 -0700" -->
+<!-- name="Peter C. McCluskey" -->
+<!-- email="pcm@rahul.net" -->
+<!-- subject="Filtech - new filtering software for mailing lists" -->
+<!-- id="199906300105.AA28573@foxtrot.rahul.net" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=56 -->
+<html><head><title>extropians: Filtech - new filtering software for mailing lists</title>
+<meta name=author content="Peter C. McCluskey">
+<link rel=author rev=made href="mailto:pcm@rahul.net" title ="Peter C. McCluskey">
+</head><body>
+<h1>Filtech - new filtering software for mailing lists</h1>
+Peter C. McCluskey (<i>pcm@rahul.net</i>)<br>
+<i>Tue, 29 Jun 1999 18:05:40 -0700</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4707">[ date ]</a><a href="index.html#4707">[ thread ]</a><a href="subject.html#4707">[ subject ]</a><a href="author.html#4707">[ author ]</a>
+<!-- next="start" -->
+<li><a href="4708.html">[ Next ]</a><a href="4706.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+
+<p>
+ It's available at <a href="http://www.rahul.net/pcm/filter/index.html">http://www.rahul.net/pcm/filter/index.html</a>.
+
+<p>
+ A few months ago Robin Hanson mentioned to me that lots of people
+were probably saving messages that they thought valuable from mailing
+lists, and that this could potentially provide valuable information
+about the quality of those posts.
+
+<p>
+ This project is an attempt to turn that idea into software which
+will provide some sort of collaborative filtering for mailing lists
+and similar discussion media. (It should be of some use even if
+used in a noncollaborative way; I certainly intend to filter my
+Extropians list mail through it if I continue to find time to read
+the list).
+
+<p>
+ A big obstacle to collaborative filtering attempts that I've heard of
+is that they require an investment of time by the people who could be
+the source of the information needed for the filtering (either the time
+it takes to enter the information into the system, or the time to switch
+to a new mail reader that automatically deduces it from the user's
+behavior), but don't provide any reward for that effort.
+
+<p>
+ I've therefore chosen an approach which should minimize the time required:
+all the person who is already saving a "best of X" mail folder should need
+to do is to insure that that folder is located on or periodically gets
+copyied to a web-visible location. All the remaining work can be done by
+those who want the benefits of filtering.
+
+<p>
+ If a discussion group can get several people making such folders available,
+and also has a public archive with the complete set of messages, it is
+easy to automate a rating system that provides some information about how
+popular authors are, and not too hard to enable readers to filter out some
+of the least valuable messages. I've come up a crude algorithm that evaluates
+message by a combination of email and subject line evaluations.
+ It evaluates email addresses approximately by what percent of messages
+I've saved for which that address appeared in the From line. For addresses
+that have posted few messages, it is kludged up to be closer to 50 than
+that percent would indicate (I don't want to ignore posts from new people
+unless I'm so overwhelmed that I'm only reading messages from people who
+are reliably interesting).
+<br>
+ I haven't made much use of the Subject line yet, as I'm often slow enough
+at saving messages that a thread is often half done before I get around to
+providing the info needed to indicate whether it interests me.
+
+<p>
+ I mentioned to Robin what I was working on, and he said he wouldn't
+find it of much use because he always saved messages that were replies
+to a message of his, regardless of the message quality. I've looked at
+my habits, and I've been doing something moderately close to that, but
+there's enough difference in what topics I deal with from that of people
+whom I'm least interested in hearing from that it probably doesn't have
+a big effect.
+<pre>
+-- 
+------------------------------------------------------------------------
+Peter McCluskey          | Critmail (<a href="http://crit.org/critmail.html">http://crit.org/critmail.html</a>):
+<a href="http://www.rahul.net/pcm">http://www.rahul.net/pcm</a> | Accept nothing less to archive your mailing list
+</pre>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="4708.html">[ Next ]</a><a href="4706.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

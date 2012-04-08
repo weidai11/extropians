@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADIN</title>
+<meta name="Author" content="Robert J. Bradbury (bradbury@aeiveos.com)">
+<meta name="Subject" content="LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADING ON THE INTERNET (fwd)">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADING ON THE INTERNET (fwd)</h1>
+<!-- received="Fri Mar 23 15:46:19 2001" -->
+<!-- isoreceived="20010323224619" -->
+<!-- sent="Fri, 23 Mar 2001 14:46:20 -0800 (PST)" -->
+<!-- isosent="20010323224620" -->
+<!-- name="Robert J. Bradbury" -->
+<!-- email="bradbury@aeiveos.com" -->
+<!-- subject="LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADING ON THE INTERNET (fwd)" -->
+<!-- id="Pine.UW2.4.20.0103231443580.10327-100000@www.aeiveos.com" -->
+<strong>From:</strong> Robert J. Bradbury (<a href="mailto:bradbury@aeiveos.com?Subject=Re:%20LINUX%20VIRUS%20ALERT:%20A%20DANGEROUS%20NEW%20WORM%20IS%20SPREADING%20ON%20THE%20INTERNET%20(fwd)&In-Reply-To=&lt;Pine.UW2.4.20.0103231443580.10327-100000@www.aeiveos.com&gt;"><em>bradbury@aeiveos.com</em></a>)<br>
+<strong>Date:</strong> Fri Mar 23 2001 - 15:46:20 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1356.html">Brent Allsop: "Qualia (Was Re: Re: Emulation vs. Simulation)"</a>
+<li><strong>Previous message:</strong> <a href="1354.html">Emlyn: "Mir Memory"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1357.html">Dave Sill: "Re: LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADING ON THE INTERNET (fwd)"</a>
+<li><strong>Reply:</strong> <a href="1357.html">Dave Sill: "Re: LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADING ON THE INTERNET (fwd)"</a>
+<li><strong>Maybe reply:</strong> <a href="1362.html">Robert J. Bradbury: "LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADING ON THE INTERNET (fwd)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1355">[ date ]</a>
+<a href="index.html#1355">[ thread ]</a>
+<a href="subject.html#1355">[ subject ]</a>
+<a href="author.html#1355">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Those of you who are running LINUX should read this.  Those not,
+<br>
+just toss it.
+<br>
+<p>The Lion worm is similar to the Ramen worm. However, this worm is
+<br>
+significantly more dangerous and should be taken very seriously.  It
+<br>
+infects Linux machines running the BIND DNS server.  It is known to
+<br>
+infect bind version(s) 8.2, 8.2-P1, 8.2.1, 8.2.2-Px, and all
+<br>
+8.2.3-betas. The specific vulnerability used by the worm to exploit
+<br>
+machines is the TSIG vulnerability that was reported on January 29,
+<br>
+2001.
+<br>
+<p>The Lion worm spreads via an application called &quot;randb&quot;.  Randb scans
+<br>
+random class B networks probing TCP port 53. Once it hits a system, it
+<br>
+checks to see if it is vulnerable. If so, Lion exploits the system using
+<br>
+an exploit called &quot;name&quot;.  It then installs the t0rn rootkit.
+<br>
+<p>[snip - all the bad stuff it does]
+<br>
+<p>DETECTION AND REMOVAL
+<br>
+<p>We have developed a utility called Lionfind that will detect the Lion
+<br>
+files on an infected system.  Simply download it, uncompress it, and
+<br>
+run lionfind.  This utility will list which of the suspect files is on
+<br>
+the system.
+<br>
+<p>At this time, Lionfind is not able to remove the virus from the system.
+<br>
+If and when an updated version becomes available (and we expect to
+<br>
+provide one), an announcement will be made at this site.
+<br>
+<p>Download Lionfind at <a href="http://www.sans.org/y2k/lionfind-0.1.tar.gz">http://www.sans.org/y2k/lionfind-0.1.tar.gz</a>
+<br>
+<p><p>REFERENCES
+<br>
+<p>Further information can be found at:
+<br>
+<p><a href="http://www.sans.org/current.htm">http://www.sans.org/current.htm</a>
+<br>
+<a href="http://www.cert.org/advisories/CA-2001-02.html">http://www.cert.org/advisories/CA-2001-02.html</a>, CERT Advisory CA-2001-02,
+<br>
+Multiple Vulnerabilities in BIND
+<br>
+<a href="http://www.kb.cert.org/vuls/id/196945">http://www.kb.cert.org/vuls/id/196945</a> ISC BIND 8 contains buffer overflow
+<br>
+in transaction signature (TSIG) handling code
+<br>
+<a href="http://www.sans.org/y2k/t0rn.htm">http://www.sans.org/y2k/t0rn.htm</a> Information about the t0rn rootkit.
+<br>
+The following vendor update pages may help you in fixing the original BIND
+<br>
+vulnerability:
+<br>
+<p>Redhat Linux RHSA-2001:007-03 - Bind remote exploit
+<br>
+<a href="http://www.redhat.com/support/errata/RHSA-2001-007.html">http://www.redhat.com/support/errata/RHSA-2001-007.html</a>
+<br>
+Debian GNU/Linux DSA-026-1 BIND
+<br>
+<a href="http://www.debian.org/security/2001/dsa-026">http://www.debian.org/security/2001/dsa-026</a>
+<br>
+SuSE Linux SuSE-SA:2001:03 - Bind 8 remote root compromise.
+<br>
+<a href="http://www.suse.com/de/support/security/2001_003_bind8">http://www.suse.com/de/support/security/2001_003_bind8</a>_ txt.txt
+<br>
+Caldera Linux CSSA-2001-008.0 Bind buffer overflow
+<br>
+<a href="http://www.caldera.com/support/security/advisories/CSSA-2001-008.0.txt">http://www.caldera.com/support/security/advisories/CSSA-2001-008.0.txt</a>
+<br>
+<a href="http://www.caldera.com/support/security/advisories/CSSA-2001-008.1.txt">http://www.caldera.com/support/security/advisories/CSSA-2001-008.1.txt</a>
+<br>
+<p>This security advisory was prepared by Matt Fearnow of the SANS
+<br>
+Institute and William Stearns of the Dartmouth Institute for Security
+<br>
+Technology Studies.
+<br>
+<p>The Lionfind utility was written by William Stearns. William is an
+<br>
+Open-Source developer, enthusiast, and advocate from Vermont, USA. His
+<br>
+day job at the Institute for Security Technology Studies at Dartmouth
+<br>
+College pays him to work on network security and Linux projects.
+<br>
+<p>Also contributing efforts go to Dave Dittrich from the University of
+<br>
+Washington, and Greg Shipley of Neohapsis
+<br>
+<p>Matt Fearnow
+<br>
+SANS GIAC Incident Handler
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1356.html">Brent Allsop: "Qualia (Was Re: Re: Emulation vs. Simulation)"</a>
+<li><strong>Previous message:</strong> <a href="1354.html">Emlyn: "Mir Memory"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1357.html">Dave Sill: "Re: LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADING ON THE INTERNET (fwd)"</a>
+<li><strong>Reply:</strong> <a href="1357.html">Dave Sill: "Re: LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADING ON THE INTERNET (fwd)"</a>
+<li><strong>Maybe reply:</strong> <a href="1362.html">Robert J. Bradbury: "LINUX VIRUS ALERT: A DANGEROUS NEW WORM IS SPREADING ON THE INTERNET (fwd)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1355">[ date ]</a>
+<a href="index.html#1355">[ thread ]</a>
+<a href="subject.html#1355">[ subject ]</a>
+<a href="author.html#1355">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:59:42 MDT</em>
+</em>
+</small>
+</body>
+</html>

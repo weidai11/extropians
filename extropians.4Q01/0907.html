@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: Decyphering lies (was: Re: Anthrax addendum.)y</title>
+<meta name="Author" content="Anders Sandberg (asa@nada.kth.se)">
+<meta name="Subject" content="Re: Decyphering lies (was: Re: Anthrax addendum.)y">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: Decyphering lies (was: Re: Anthrax addendum.)y</h1>
+<!-- received="Mon Oct 15 08:04:13 2001" -->
+<!-- isoreceived="20011015140413" -->
+<!-- sent="Mon, 15 Oct 2001 16:04:02 +0200" -->
+<!-- isosent="20011015140402" -->
+<!-- name="Anders Sandberg" -->
+<!-- email="asa@nada.kth.se" -->
+<!-- subject="Re: Decyphering lies (was: Re: Anthrax addendum.)y" -->
+<!-- id="20011015160402.A7298@akira.nada.kth.se" -->
+<!-- inreplyto="Pine.GSO.4.32.0110150857240.2925-100000@jane.itd.umich.edu" -->
+<strong>From:</strong> Anders Sandberg (<a href="mailto:asa@nada.kth.se?Subject=Re:%20Decyphering%20lies%20(was:%20Re:%20Anthrax%20addendum.)y&In-Reply-To=&lt;20011015160402.A7298@akira.nada.kth.se&gt;"><em>asa@nada.kth.se</em></a>)<br>
+<strong>Date:</strong> Mon Oct 15 2001 - 08:04:02 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0908.html">Mike Lorrey: "Re: TECH: Quantum Head Job"</a>
+<li><strong>Previous message:</strong> <a href="0906.html">Michael Wiik: "Re: Anthrax addendum."</a>
+<li><strong>In reply to:</strong> <a href="0904.html">Alex F. Bokov: "Decyphering lies (was: Re: Anthrax addendum.)y"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0914.html">John Clark: "Re: Anthrax addendum."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#907">[ date ]</a>
+<a href="index.html#907">[ thread ]</a>
+<a href="subject.html#907">[ subject ]</a>
+<a href="author.html#907">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+On Mon, Oct 15, 2001 at 09:12:18AM -0400, Alex F. Bokov wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; This raises an interesting question: how to form a rational opinion
+</em><br>
+<em>&gt; when most sources of information claim to be unbiased and all of them
+</em><br>
+<em>&gt; are biased? The US goverment lies. The enemies of the US government
+</em><br>
+<em>&gt; lie. The mass media is owned by like a dozen people, and what are the
+</em><br>
+<em>&gt; chances that they're impartial in all this? I wonder if game theory or
+</em><br>
+<em>&gt; information theory have some strategies to offer in juxtaposing the
+</em><br>
+<em>&gt; 'information' coming from different sources so the opposing lies
+</em><br>
+<em>&gt; cancel each other out somewhat?
+</em><br>
+<p>A very good question. My personal strategy is to have as many new
+<br>
+sources as possible with as different biases as possible, comparing them
+<br>
+with each other. Sure, both CNN and Al Jazira are biased, but not in the
+<br>
+same way - and the bias of Slashdot is very different from the bias of
+<br>
+Dagens Nyheter. 
+<br>
+<p>Let's see if we can do some information theory here. Assume we have an
+<br>
+information source S (the Truth), which we get information about through
+<br>
+noisy and biased channels. In some cases we know the bias, in some cases
+<br>
+it is unknown. What is the optimal estimate of S?
+<br>
+<p>To make things more concrete, assume S is a scalar we want to estimate
+<br>
+(like the probability of Bin Laden being a nice guy or the number of
+<br>
+dead in a bombing). From information channel i we receive an estimate
+<br>
+s_i, which is s_i = a_i S +  N(b_i,c_i): - a_i is how much S is
+<br>
+distorted, b_i is the bias and c_i the standard deviation. The
+<br>
+distribution of s_i becomes f(s_i | S) = N(x-a_iS-b_i,c_i). Here I
+<br>
+assume independent channels (BIG assumption!). 
+<br>
+<p>Given data from s_i, we can then do a maximum likelyhood estimation of
+<br>
+a_i, b_i and c_i if we hold S constant (i.e compare the news about a
+<br>
+certain fact for a while). 
+<br>
+<p>Bayes rule says that the distribution of S given s_i is f(S | s_1, s_2,
+<br>
+...) = [integral f(S,s) ds] f(s | S) / integral [integral f(S,s) ds] f(s
+<br>
+| S) dS where f(S,s) is the joint distribution of S and s_1, s_2,.... We
+<br>
+already have f(s_i|S), so f(s|S)= product f(s_i|S).  So we get f(S| s) =
+<br>
+f(S) product f(s_i|S) / &lt;normalizing stuff&gt;.
+<br>
+<p>We still have the Bayes factor f(S) - we need an estimate of that. This
+<br>
+is where our own preconceptions and world assumptions come in. Usually I
+<br>
+think we simply assume it is normally distributed and rescaled to have
+<br>
+zero mean and 1 variance. 
+<br>
+<p>OK, this seems to suggest a method: gather s_i, for each channel create
+<br>
+a maximum likeliehood estimate of a_i, b_i and c_i given the assumption
+<br>
+S=N(0,1), put it into the formula above and we get a
+<br>
+posterior distribution of S. 
+<br>
+<p>If channels are of uncertain independence, we can either calculate
+<br>
+correlations between them for a while, and then select a set that are
+<br>
+uncorrelated. A more clever method would be to use principal component
+<br>
+analysis to create &quot;virtual channels&quot; that are weighted sums of the
+<br>
+channels that are mutually independent and hence could be used to
+<br>
+estimate S.
+<br>
+<p>Caveat: I'm not a staticistician and this was just off the cuff - there
+<br>
+has to be some serious analysis on this, I just don't know where to
+<br>
+look (and I don't have the time). 
+<br>
+<p><em>&gt; I only have a crude approximation of such a strategy, where I assign
+</em><br>
+<em>&gt; higher credibility to an institution if liberals accuse it of being
+</em><br>
+<em>&gt; conservative and conservatives accuse it of being liberal. There are
+</em><br>
+<em>&gt; many domains this heuristic doesn't cover though, so I'm looking for
+</em><br>
+<em>&gt; others.
+</em><br>
+<p>A nice strategy, I like it!
+<br>
+<p>This is a bit like finding a channel that is independent of two known
+<br>
+anticorrelated channels.
+<br>
+<p><pre>
+-- 
+-----------------------------------------------------------------------
+Anders Sandberg                                      Towards Ascension!
+<a href="mailto:asa@nada.kth.se?Subject=Re:%20Decyphering%20lies%20(was:%20Re:%20Anthrax%20addendum.)y&In-Reply-To=&lt;20011015160402.A7298@akira.nada.kth.se&gt;">asa@nada.kth.se</a>                            <a href="http://www.nada.kth.se/~asa/">http://www.nada.kth.se/~asa/</a>
+GCS/M/S/O d++ -p+ c++++ !l u+ e++ m++ s+/+ n--- h+/* f+ g+ w++ t+ r+ !y
+</pre>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0908.html">Mike Lorrey: "Re: TECH: Quantum Head Job"</a>
+<li><strong>Previous message:</strong> <a href="0906.html">Michael Wiik: "Re: Anthrax addendum."</a>
+<li><strong>In reply to:</strong> <a href="0904.html">Alex F. Bokov: "Decyphering lies (was: Re: Anthrax addendum.)y"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0914.html">John Clark: "Re: Anthrax addendum."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#907">[ date ]</a>
+<a href="index.html#907">[ thread ]</a>
+<a href="subject.html#907">[ subject ]</a>
+<a href="author.html#907">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:13 MDT</em>
+</em>
+</small>
+</body>
+</html>

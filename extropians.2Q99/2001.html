@@ -1,0 +1,102 @@
+<!-- received="Thu May 27 13:14:36 1999 MDT" -->
+<!-- sent="Thu, 27 May 1999 12:12:09 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Deep time and shallow time" -->
+<!-- id="14157.38093.24261.850500@lrz.de" -->
+<!-- inreplyto="374D04F2.885FFA5D@pobox.com" -->
+<!-- version=1.10, linesinbody=59 -->
+<html><head><title>extropians: Re: Deep time and shallow time</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Re: Deep time and shallow time</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Thu, 27 May 1999 12:12:09 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2001">[ date ]</a><a href="index.html#2001">[ thread ]</a><a href="subject.html#2001">[ subject ]</a><a href="author.html#2001">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2002.html">[ Next ]</a><a href="2000.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1962.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Eliezer S. Yudkowsky writes:
+<br>
+<a href="1962.html#2001qlink1"> &gt; 128 bits isn't enough.  Really.  1Thz isn't enough for molecular</a><br>
+
+<p>
+Err, this was just an illustration. I actually propose having a 
+counter with sufficient number of bits to allow for a wraparound 
+of many times (at least 10^9) the current age of the universe with 
+a resolution of about 10^-43 s. Once again, I think the counter 
+should use an encoding with Hamming distance of 1..3 between 
+each atomic increment and also allow only a narrow lightcone 
+for bitflips (for instance:
+<br>
+t=0 00000000010000000
+<br>
+t=1 00000000100000000
+<br>
+) since with faster clock information propagation will be bottlenecked 
+by relativistic constraints.
+
+<p>
+Such a thing can be currently implemented in software: e.g. similiar
+to the Swatch time hack for the Palm Pilot or as a counter on a webpage.
+
+<p>
+If you have a GPS receiver to hack, such a thing would be actually
+useful since allowing to time-stamp events (with DGPS a realtime
+accuracy of few 10 cm, which is more than sufficient for most current 
+purposes): using the &gt;HTS and the GPS coordinates. GPS does already do 
+relativistic corrections.
+
+<p>
+It's not too difficult to implement 256-bit counters, but currently
+you need a silicon foundry for that. Let's wait for the advent of
+molecular manufacturing.
+
+<p>
+<a href="1962.html#2001qlink2"> &gt; assemblers, and while 573.9Gy seems like a long time now, it's only 40</a><br>
+<i> &gt; ages of the Universe.  I propose the following PostTimeXML identifier:</i><br>
+<i> &gt; </i><br>
+<i> &gt; &lt;posthuman-time&gt;</i><br>
+<i> &gt;  &lt;universe&gt;Socrates&lt;/universe&gt;</i><br>
+<i> &gt;        &lt;!-- Universe identifier. --&gt;</i><br>
+<i> &gt;  &lt;seconds&gt;08402834082304.83245353453452546456432&lt;/seconds&gt;</i><br>
+<i> &gt;        &lt;!-- Seconds since start of Universe. --&gt;</i><br>
+<i> &gt;  &lt;branch&gt;1001001011&lt;/branch&gt;</i><br>
+<i> &gt;        &lt;!-- Quantum computing qubit branch indicator for 10 qubits --&gt;</i><br>
+<i> &gt; &lt;/posthuman-time&gt;</i><br>
+<i> &gt; </i><br>
+<i> &gt; If you really need a digital identifier, then use the native format for</i><br>
+<i> &gt; your machine.</i><br>
+<i> &gt; The standard used by most Jupiter-Beowolf networks is IEEE 3.2983e48,</i><br>
+<i> &gt; the following 256-bit format in big-endian order:</i><br>
+<i> &gt; </i><br>
+<i> &gt;   8 bits -- Current universe (index into local table; 0 = machine-local;</i><br>
+<i> &gt; 1 = Earth).</i><br>
+<i> &gt;  24 bits -- Current quantum branch.</i><br>
+<i> &gt;  32 bits -- WEYL tensor (relativistic data).</i><br>
+<i> &gt;  96 bits -- Seconds since start of current Universe.</i><br>
+<i> &gt;  96 bits -- Fractional seconds (0x00..01 = 12.6218 grouchoseconds).</i><br>
+<i> &gt; </i><br>
+<i> &gt; However, most Omega Point devices simply use the XML format, both</i><br>
+<i> &gt; because Omega time is infinitely divisible, and because they have the</i><br>
+<i> &gt; processing power to spare.</i><br>
+
+<p>
+I have to admit that your herring is of an exquisitely luxuriant red.
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2002.html">[ Next ]</a><a href="2000.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1962.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

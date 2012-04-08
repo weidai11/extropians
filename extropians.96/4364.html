@@ -1,0 +1,157 @@
+<!-- received="Thu Dec 19 17:38:23 1996 MST" -->
+<!-- sent="Thu, 19 Dec 1996 15:59:27 -0800" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Computer Architectures" -->
+<!-- id="1.5.4.32.19961219235927.00391560@best.com" -->
+<!-- inreplyto="Computer Architectures" -->
+<title>extropians: Re: Computer Architectures</title>
+<h1>Re: Computer Architectures</h1>
+James Rogers (<i>jamesr@best.com</i>)<br>
+<i>Thu, 19 Dec 1996 15:59:27 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4364">[ date ]</a><a href="index.html#4364">[ thread ]</a><a href="subject.html#4364">[ subject ]</a><a href="author.html#4364">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4365.html">QueeneMUSE@aol.com: "Re: (Fwd) Re: guidelines/ethics"</a>
+<li> <b>Previous message:</b> <a href="4363.html">James Rogers: "Re: tech snippets"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+At 05:58 PM 12/19/96 +0100, you wrote:<br>
+<i>&gt;I think SMP is a very broken architecture. It speculates on memory </i><br>
+<i>&gt;bandwidth, a scarce commodity, and it requires good caches, which are </i><br>
+<i>&gt;difficult/costly to do, and do not at all help if there is little or no </i><br>
+<i>&gt;data/code locality.</i><br>
+<p>
+Agreed.  I don't think anyone contests the limited nature of SMP.  It think<br>
+it was designed as a cheap interim solution that has become popular.<br>
+<p>
+<i>&gt;&gt; software.  OSs will have to support more truly parallel architectures before</i><br>
+<i>&gt;&gt; the hardware will become popular.  The first large-scale OS to adopt these</i><br>
+<i>&gt;&gt; architectures will probably be one of the quickly evolving ones, like Linux.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Linux is great, but Unix can't be scaled down to nanokernel size, alas.</i><br>
+<p>
+Exactly what is a nano-kernel required to do?  I am familiar with the<br>
+concept, but not with the intimate details.  Won't you have to run some type<br>
+of distributed OS on top of the nano-kernels?  Nano-kernels sound like<br>
+high-level microcode/firmware.<br>
+<p>
+<i>&gt;Dedicated OOP DSP OSses are much better candidates for maspar systems, </i><br>
+<i>&gt;imo. It will get really exciting, when GA-grown ANNs will jump from DSP </i><br>
+<i>&gt;clusters to dedicated ANN chips. Probably, the need for neural DSP will </i><br>
+<i>&gt;pioneer this, other fields (robotics, generic control, ALife AI) will </i><br>
+<i>&gt;gladly accept the torch. Now imagine entire countries encrusted with </i><br>
+<i>&gt;boxes full of ANN chips, mostly idle, locally connected by fiber links... </i><br>
+<i>&gt;Though agoric computing will inhibit that somewhat, the phase transition </i><br>
+<i>&gt;to &gt;web is writ all over the wall, in neon letters light-minutes-large...</i><br>
+<i>&gt; </i><br>
+<i>&gt;&gt; The hardware is already starting to get there.  We are starting to see</i><br>
+<i>&gt;&gt; multiple buses becoming available on PC motherboards, and fully integrated</i><br>
+<i>&gt;</i><br>
+<i>&gt;Many DSPs (Sharc, TI, &amp;c) already offer several high-bandwidth links. </i><br>
+<i>&gt;Theoretically, a single macroscopic (albeit short) serial bus can carry </i><br>
+<i>&gt;100 MBytes/s, optical links several orders of magnitude more. </i><br>
+<i>&gt;(High-clocked stuff must be done in optics anyway, for dissipation </i><br>
+<i>&gt;and signal reasons).</i><br>
+<p>
+DSPs by design can accomodate this much better than CPUs.  DSPs tend to be<br>
+very slick and efficient designs.  And personally, I can't wait until all<br>
+the interconnects go to optics.<br>
+<p>
+<i>&gt;&gt; L2 caches (like the P6) are a good start towards eliminating resource</i><br>
+<i>&gt;&gt; contention in multiprocessor systems.  The one thing that will take the</i><br>
+<i>&gt;</i><br>
+<i>&gt;Caches are evil. Caches transistors provide no extra storage, and take </i><br>
+<i>&gt;4-6 times the transistor resources of a an equivalent DRAM. Putting </i><br>
+<i>&gt;caches on die bloats die extremely, which kills die yield and thus makes </i><br>
+<i>&gt;the result unsuitable for WSI. Cache consistancy is a problem. Added </i><br>
+<i>&gt;latency in case of cache miss is a problem. Increased design complexity, </i><br>
+<i>&gt;prolonged design time and increased probability of a design glitch are a </i><br>
+<i>&gt;problem. Decreased operating frequency due to circuit and design </i><br>
+<i>&gt;complexity is a problem. Lots of ugly &amp; hairy things.</i><br>
+<p>
+SRAM may be bloated, but at least it is fast.  DRAM is simple, cheap, and a<br>
+horribly slow memory design.  Capacitors will *never* stabilize with the<br>
+speed necessary for high-speed memory applications.  As long as memory is<br>
+dependant on high-speed capacitors, we will never get beyond our current<br>
+bottleneck.  The whole reason we need a cache is because of the limitations<br>
+of DRAM.<br>
+<p>
+Currently, I think our best hope may be optical memory hardware, which is<br>
+both fast and has very high bandwidth (the standard bus for laboratory test<br>
+models is 1024-bits).  And optical memory technologies are expected to see<br>
+short term performance improvements of at least another order of magnitude<br>
+as the technology matures.  Unfortunately, we probably won't see anything<br>
+like this available for 5 years.<br>
+<p>
+<i>&gt;&gt; longest is breaking out of the shared memory model.  Most of the rest of the</i><br>
+<i>&gt;&gt; required technology is available and supported.</i><br>
+<i>&gt;&gt; </i><br>
+<i>&gt;&gt; I am not too sure that the shared memory is really such a bad idea, in terms</i><br>
+<i>&gt;&gt; of efficiency.  I think what *really* needs to be improved is the general</i><br>
+<i>&gt;</i><br>
+<i>&gt;Shared memory contradicts the demand for locality. Data/code should </i><br>
+<i>&gt;reside in the utmost immediate vicinity of the ALU, ideally being a single </i><br>
+<i>&gt;entity (CAMs qualify here best). Because of constraints of our spacetime </i><br>
+<i>&gt;(just 3 dimensions, the curled-up ones, alas, unaccessible), and, even </i><br>
+<i>&gt;worse, of silicon photolitho technology, which is a fundamentally </i><br>
+<i>&gt;2d-technique, the conflict arising between making the same data </i><br>
+<i>&gt;accessible to several processors is unresolvable. Caches are no good, and </i><br>
+<i>&gt;open a wholly new can of worms... (cache consistancy in shared-memory </i><br>
+<i>&gt;architectures is a nightmare, see KSR).</i><br>
+<p>
+I am familiar with the problems associated with cache consistency in<br>
+shared-memory architectures.  But caches are the product of slow memory<br>
+architectures.  If we had really fast memory and wide memory bandwidth,<br>
+caches would become irrelevant. Memory contention, however, is unavoidable<br>
+in shared memory systems.<br>
+<p>
+<i>&gt;&gt; memory architecture currently used.  If they used some type of fine grained</i><br>
+<i>&gt;&gt; switching matrix mechanism, maybe something similar to the old Burroughs</i><br>
+<i>&gt;</i><br>
+<i>&gt;If we are to accept the scheme by which our relativistic universe works, </i><br>
+<i>&gt;we must adopt an large-scale asynchronous, locally-coupled, nanograin </i><br>
+<i>&gt;message-passing OO paradigm. Crossbars, whether vanilla, or perfect </i><br>
+<i>&gt;shuffle, are excellent for asynchronous OOP, provided the topology allows </i><br>
+<i>&gt;trivial routing. Hypergrid does.</i><br>
+<i>&gt;</i><br>
+<i>&gt;&gt; B5000 series mainframes, a lot of memory contention could be eliminated.</i><br>
+<i>&gt;&gt; This of course in addition to speeding up the entire memory architecture</i><br>
+<i>&gt;&gt; altogether.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Alas, there are physical limits to that, particularly if it comes to </i><br>
+<i>&gt;off-die memory. Locality strikes yet again, aargh.</i><br>
+<i>&gt; </i><br>
+<p>
+I don't see how a computer could be designed that does not use shared<br>
+memory, but still manages to run a single process across multiple<br>
+processors, while still managing to have data consistency and locality.  I<br>
+suspect there are real theoretical limitations to this.  If all data is<br>
+local to each processor in a multi-processor system, then this would be the<br>
+same as having shared memory when running a single process, unless the data<br>
+was duplicated at each node.  Of course, if the data was duplicated at each<br>
+node, you would have a potential coherence problem since it is a single<br>
+process.  If the data is distributed among the local memories of different<br>
+processors for a single process without duplication, then you have<br>
+non-locality issues again.  I don't see how it is possible to generate a<br>
+perfect memory architecture for running a single process on multiple<br>
+processors, while keeping coherence AND locality.  This is assuming no<br>
+limitations in the memory hardware.<br>
+<p>
+<p>
+-James Rogers<br>
+ jamesr@best.com<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4365.html">QueeneMUSE@aol.com: "Re: (Fwd) Re: guidelines/ethics"</a>
+<li> <b>Previous message:</b> <a href="4363.html">James Rogers: "Re: tech snippets"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

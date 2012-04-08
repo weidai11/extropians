@@ -1,0 +1,146 @@
+<!-- received="Mon Mar  1 21:32:13 1999 MDT" -->
+<!-- sent="Tue, 02 Mar 1999 15:31:35 +1100" -->
+<!-- name="Timothy Bates" -->
+<!-- email="tbates@karri.bhs.mq.edu.au" -->
+<!-- subject="Re: Improving the list (was: Can we please dekookify the list?)" -->
+<!-- id="199903020431.PAA02152@karri.bhs.mq.edu.au" -->
+<!-- inreplyto="Improving the list (was: Can we please dekookify the list?)" -->
+<!-- version=1.10, linesinbody=93 -->
+<html><head><title>extropians: Re: Improving the list (was: Can we please dekookify the list?)</title>
+<meta name=author content="Timothy Bates">
+<link rel=author rev=made href="mailto:tbates@karri.bhs.mq.edu.au" title ="Timothy Bates">
+</head><body>
+<h1>Re: Improving the list (was: Can we please dekookify the list?)</h1>
+Timothy Bates (<i>tbates@karri.bhs.mq.edu.au</i>)<br>
+<i>Tue, 02 Mar 1999 15:31:35 +1100</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2661">[ date ]</a><a href="index.html#2661">[ thread ]</a><a href="subject.html#2661">[ subject ]</a><a href="author.html#2661">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2662.html">[ Next ]</a><a href="2660.html">[ Previous ]</a>
+<b>Maybe in reply to:</b> <a href="2449.html">Alexander 'Sasha' Chislenko</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+&gt; THIS MESSAGE IS IN MIME FORMAT. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+<p>
+--MS_Mac_OE_3003233495_1416529_MIME_Part
+Content-type: text/plain; charset="US-ASCII"
+Content-transfer-encoding: 7bit
+
+<p>
+Anders Sandberg suggested
+<pre>
+&gt; I have been thinking of running some program through the list archives
+&gt; to do data mining, for example build sociograms (who responds to
+&gt; whom?), find threads where someone participates, who glorifies who and
+&gt; perhaps extract clusters of discussion. Maybe the way of improving
+&gt; quality of the list lies in making archives more powerful?
+
+</pre>
+<p>
+Certainly. The archive server could then add simply meta-tag information to
+mails based on some kind of discriminant function analysis, or a weighting
+on 5-6 neural net vectors.
+
+<p>
+clients could then run private scripts like this simple example (in
+Applescript 'cause I am a Mac head)
+
+<p>
+property myWeightings:{0.5,0.1,-0.7,0.9,0.01,}
+
+<p>
+set thisMailsWeights to (extract meta weights(mail_headers)) as list
+
+<p>
+set myRanking to 0
+<br>
+set n to 1
+<br>
+repeat with myWeight in myWeightings
+<p>
+   set myRanking to myWeight * item n of thisMailsWeights
+   set n to n + 1
+<br>
+end
+
+<p>
+if myRanking is less than 3 then
+<p>
+   mark the current mail as read
+<br>
+   set the color of the current mail to "light gray"
+end if
+
+<p>
+cheers,
+<br>
+tim
+
+<p>
+--MS_Mac_OE_3003233495_1416529_MIME_Part
+Content-type: text/html; charset="US-ASCII"
+Content-transfer-encoding: quoted-printable
+
+<HTML>
+<HEAD>
+<TITLE>Re: Improving the list (was: Can we please dekookify the list?)</TIT=
+LE>
+</HEAD>
+<BODY BGCOLOR=3D"#FFFFFF">
+Anders Sandberg suggested<BR>
+&gt; I have been thinking of running some program through the list archives=
+<BR>
+&gt; to do data mining, for example build sociograms (who responds to<BR>
+&gt; whom?), find threads where someone participates, who glorifies who and=
+<BR>
+&gt; perhaps extract clusters of discussion. Maybe the way of improving<BR>
+&gt; quality of the list lies in making archives more powerful?<BR>
+<BR>
+Certainly. The archive server could then add simply meta-tag information to=
+ mails based on some kind of discriminant function analysis, or a weighting =
+on 5-6 neural net vectors.<BR>
+<BR>
+clients could then run private scripts like this simple example (in Applesc=
+ript 'cause I am a Mac head)<BR>
+<BR>
+<B>property</B> myWeightings:{0.5,0.1,-0.7,0.9,0.01,}<BR>
+<BR>
+<B>set</B> thisMailsWeights to (extract meta weights(mail_headers)) as list=
+<BR>
+<BR>
+<B>set</B> myRanking to 0<BR>
+<B>set</B> n to 1<BR>
+<B>repeat</B> with myWeight <B>in</B> myWeightings<BR>
+&nbsp;&nbsp;&nbsp;<B>set</B> myRanking to myWeight * item n <B>of</B> thisM=
+ailsWeights<BR>
+&nbsp;&nbsp;&nbsp;<B>set</B> n to n + 1<BR>
+<B>end</B> <BR>
+<BR>
+<B>if</B> myRanking is <B>less than</B> 3 <B>then</B> <BR>
+&nbsp;&nbsp;&nbsp;mark the current mail as read<BR>
+&nbsp;&nbsp;&nbsp;<B>set</B> the color of the current mail to &quot;light g=
+ray&quot;<BR>
+<B>end if<BR>
+</B><BR>
+cheers,<BR>
+tim<BR>
+</BODY>
+</HTML>
+
+<p>
+--MS_Mac_OE_3003233495_1416529_MIME_Part--
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2662.html">[ Next ]</a><a href="2660.html">[ Previous ]</a>
+<b>Maybe in reply to:</b> <a href="2449.html">Alexander 'Sasha' Chislenko</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

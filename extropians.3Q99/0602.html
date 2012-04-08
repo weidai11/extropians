@@ -1,0 +1,129 @@
+<!-- received="Mon Jul 12 21:28:51 1999 MDT" -->
+<!-- sent="Mon, 12 Jul 1999 20:26:26 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="RE: Human minds on Windows(?)" -->
+<!-- id="14216.10424.102930.15290@lrz.de" -->
+<!-- inreplyto="NDBBLBGGEJLACCFCPNINAECMCBAA.ewbrownv@mindspring.com" -->
+<!-- version=1.10, linesinbody=72 -->
+<html><head><title>extropians: RE: Human minds on Windows(?)</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>RE: Human minds on Windows(?)</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Mon, 12 Jul 1999 20:26:26 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#602">[ date ]</a><a href="index.html#602">[ thread ]</a><a href="subject.html#602">[ subject ]</a><a href="author.html#602">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0603.html">[ Next ]</a><a href="0601.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0508.html">Billy Brown</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0629.html">Billy Brown</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+<a name="0629qlink1">Billy Brown writes:
+ 
+</a>
+<p>
+<a href="0508.html#0602qlink1"> &gt; AFAIK, all Microsoft apps have been written as "asynchronous message-passing</a><br>
+<i> &gt; object soup" since sometime in the mid-90s.  Also, with the right software</i><br>
+
+<p>
+<a name="0629qlink3">Hey, so they really call OS.send.message() every few 100 machine
+instructions, or so, and context-switch every 1 us? Really? Mouse 
+</a>
+<a name="0629qlink4">handler an object, keyboard handler an object, peripheral storage 
+each an object, each widget an object, each Excel cell an object, 
+almost always sitting in a different node so they have to send 
+messages? We're really talking about Microsoft, Redmond, local 
+universe here, are we? 
+
+</a>
+<p>
+<a name="0629qlink5">They can't do it simply because performance on current architectures 
+would suck monumentally. You would have to emulate things, and context 
+switches on current hardware/software architectures are just a tad too 
+expensive for that.
+</a>
+
+<p>
+<a name="0629qlink6">Multithreading!=asynchronous message passing on many tiny objects. 
+We're talking about several thousands primitive (few kBytes) objects 
+which send message packets which are routed by hardware directly -- 
+while the originator code may or may not wait for the ack/result 
+to arrive. If this exists at all, it is academic curiousity at best 
+(Thinking Machines might qualify, though I really doubt they exploited 
+<a name="0629qlink7">their options fully every time). You certainly can't program these 
+</a>
+things in standard languages as C/C++ with any efficiency. And I would 
+just love to see a programmer who can handle concurrent nonlinear 
+control flow in a distributed kObject application. This can get
+arbitrarily hairy.
+
+<p>
+There's a dearth of apps even for Beowulfs, and god knows how
+coarse-grain these are. No sir, don't think so.
+
+<p>
+<a href="0508.html#0602qlink2"> &gt; you can run a large app over a distributed architecture like this without</a><br>
+<i> &gt; having to explicitly modularize it to fit the hardware's quirks (see</i><br>
+
+<p>
+Sure you can. Put x86 opcode sofware emulation into every node, 
+equipartition the old-generation binary over the nodes and send 
+a message to the appropriate node whenever PC leaves your node's 
+address space slice. Redundant as hell (OS nanokernel+ x86 
+emulator in every node) and efficient as treacle since purely 
+sequential, especially considering that you can't do 4 kCPUs 
+PIII/550 way, and interpreting/compiling existing code into 
+SWAR *would* require true AI. 
+
+<p>
+<a href="0508.html#0602qlink3"> &gt; http://research.microsoft.com/sn/Millennium/, and especialy</a><br>
+<i> &gt; <a href="http://research.microsoft.com/sn/Millennium/Coign.html">http://research.microsoft.com/sn/Millennium/Coign.html</a>, for example).</i><br>
+ 
+<pre>
+		       Better yet, the
+                       system builds on the existing Windows operating system,
+                       so today's software won't become obsolete and
+                       programmers can write new software the same way they
+                       do now, for one machine or many. 
+ 
+</pre>
+<p>
+Right. And pilots will worry about pig collision avoidance issues.
+
+<p>
+Looks nice as a concept, but even if it works it is no panacea. Will
+alleviate migration psychologically since suggesting you can run your
+apps on the new platform even if in reality you can't.
+
+<p>
+<a href="0508.html#0602qlink4"> &gt; But that isn't especially relevant, anyway.  I was talking about programming</a><br>
+<i> &gt; techniques for existing PC hardware.  Obviously, radical changes in hardware</i><br>
+
+<p>
+Of what possible relevance is existing PC hardware/programming
+techniques to uploading? I am not sure we're talking in the same
+language here.
+
+<p>
+<a href="0508.html#0602qlink5"> &gt; can require equally radical changes in programming methods.</a><br>
+
+<p>
+And even worse: vice versa.
+</a>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0603.html">[ Next ]</a><a href="0601.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0508.html">Billy Brown</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0629.html">Billy Brown</a>
+</ul>
+</body></html>

@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: re: Data reconstruction (was Dithering)</title>
+<meta name="Author" content="Amara Graps (amara@amara.com)">
+<meta name="Subject" content="re: Data reconstruction (was Dithering)">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>re: Data reconstruction (was Dithering)</h1>
+<!-- received="Sun Oct 28 11:29:34 2001" -->
+<!-- isoreceived="20011028182934" -->
+<!-- sent="Sun, 28 Oct 2001 20:34:31 +0100" -->
+<!-- isosent="20011028193431" -->
+<!-- name="Amara Graps" -->
+<!-- email="amara@amara.com" -->
+<!-- subject="re: Data reconstruction (was Dithering)" -->
+<!-- id="v03110700b80206a844e1@[213.7.133.15]" -->
+<!-- inreplyto="Data reconstruction (was Dithering)" -->
+<strong>From:</strong> Amara Graps (<a href="mailto:amara@amara.com?Subject=re:%20Data%20reconstruction%20(was%20Dithering)&In-Reply-To=&lt;v03110700b80206a844e1@[213.7.133.15]&gt;"><em>amara@amara.com</em></a>)<br>
+<strong>Date:</strong> Sun Oct 28 2001 - 12:34:31 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1865.html">Brian Phillips: "A renaissance for civil defense?"</a>
+<li><strong>Previous message:</strong> <a href="1863.html">Robert J. Bradbury: "Re: Private vs. government views of property"</a>
+<li><strong>Maybe in reply to:</strong> <a href="0893.html">James Rogers: "Data reconstruction (was Dithering)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1867.html">J. R. Molloy: "Re: Data reconstruction (was Dithering)"</a>
+<li><strong>Reply:</strong> <a href="1867.html">J. R. Molloy: "Re: Data reconstruction (was Dithering)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1864">[ date ]</a>
+<a href="index.html#1864">[ thread ]</a>
+<a href="subject.html#1864">[ subject ]</a>
+<a href="author.html#1864">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+James Rogers &lt;<a href="mailto:jamesr@best.com?Subject=re:%20Data%20reconstruction%20(was%20Dithering)&In-Reply-To=&lt;v03110700b80206a844e1@[213.7.133.15]&gt;">jamesr@best.com</a>&gt;, Mon Oct 15, 2001 :
+<br>
+<p><em>&gt; On 10/14/01 10:37 PM, &quot;Amara Graps&quot; &lt;<a href="mailto:Amara.Graps@mpi-hd.mpg.de?Subject=re:%20Data%20reconstruction%20(was%20Dithering)&In-Reply-To=&lt;v03110700b80206a844e1@[213.7.133.15]&gt;">Amara.Graps@mpi-hd.mpg.de</a>&gt; wrote:
+</em><br>
+<em>&gt;&gt; (It's not published yet.) The idea is to use the statistical
+</em><br>
+<em>&gt;&gt; characteristics of the data to fill in gaps for modelling
+</em><br>
+<em>&gt;&gt; purposes. Note: you are NOT creating *real* data (i.e. the folks who
+</em><br>
+<em>&gt;&gt; need to make predictions based on real data should not use this). But
+</em><br>
+<em>&gt;&gt; I think that this method has a valid use for those folks who can't
+</em><br>
+<em>&gt;&gt; apply a data analysis on their data because of small gaps in the
+</em><br>
+<em>&gt;&gt; time-series, or are trying to show long term dynamics of a system.
+</em><br>
+<em>&gt;&gt; For example, the 'standard' wavelet transforms which determine
+</em><br>
+<em>&gt;&gt; frequencies require as input time series data on an evenly-spaced time
+</em><br>
+<em>&gt;&gt; grid.
+</em><br>
+<p><em>&gt;Just out of curiosity, why couldn't full spectral re-synthesis be
+</em><br>
+<em>&gt;used to interpolate the data rather than using statistical models?
+</em><br>
+<p>I don't know the answer, but I'll venture some guesses, assuming
+<br>
+that by &quot;spectral&quot; you mean Fourier decomposition and
+<br>
+recomposition methods. Gaps in the data would produce fictitious
+<br>
+peaks at low frequencies, where the wavelengths are comparable to
+<br>
+the gaps. Also, I think that you have to be careful, when using
+<br>
+Fourier methods, that the data is stationary, and my own experience
+<br>
+in scientific time series is that stationarity occurs rarely.
+<br>
+<p><em>&gt;I tend
+</em><br>
+<em>&gt;to shy away from statistical models because many, though not all,
+</em><br>
+<em>&gt;statistical models seem to be sensitive to anomalies in the data
+</em><br>
+<em>&gt;i.e. even many of the adaptive ones are based on the &quot;expected case&quot;
+</em><br>
+<em>&gt;and can do ugly things when they come across something unusual.
+</em><br>
+<p>I think that there is a trend to use wavelets and beyond for those
+<br>
+time-series that have anomalies. By &quot;beyond&quot; I mean multiple
+<br>
+wavelets, wavelet packets, cosine packets, chirplets, warplets.
+<br>
+Mallat, in _A Wavelet Tour of Signal Processing_ says that creating
+<br>
+new basis families may become just a popular new sport of basis
+<br>
+hunting if not motivated by application.
+<br>
+<p><em>&gt;Unrelated to this discussion, it kind of shocks me to see some of
+</em><br>
+<em>&gt;the archaic methods of analyzing and working with time series data
+</em><br>
+<em>&gt;used in many parts of industry and even science and engineering. The
+</em><br>
+<em>&gt;engineering discipline of signal processing has very mature and
+</em><br>
+<em>&gt;extremely generalized mathematics for handling just about any aspect
+</em><br>
+<em>&gt;of generic time series data you could want in many cases, but many
+</em><br>
+<em>&gt;of the algorithms are rarely applied outside of that discipline.
+</em><br>
+<p>OK you're shocked, but the reality is that scientists don't have
+<br>
+enough hours in the day to be up-to-speed on the latest techniques.
+<br>
+<p>In the astronomy that I know about, helioseismologists are the most
+<br>
+aware about digital signal processing because the Sun acts like
+<br>
+a ringing gas bell providing one million oscillation modes that
+<br>
+need to be sorted out. The seismic geophysicists know a bit more
+<br>
+because the Earth's interior presents a sticky inhomogeneous challenge
+<br>
+to find the oscillations. Helioseismolgists frequently go to
+<br>
+geophysics meetings to be exposed to the sophisticated techniques
+<br>
+that the other field uses. The digital signal processing people
+<br>
+have the most sophisticated techniques, but then you have to allocate
+<br>
+alot of time to discover them.  How to do that?
+<br>
+<p>Scientists could choose to go to large meetings where only 1% of
+<br>
+people in their field are present, in order to be exposed to more
+<br>
+fields and problem-solving methods, but then they risk that it might
+<br>
+be a lot of money and precious time spent on the possibility that
+<br>
+they will not get their hands on that special method that will solve
+<br>
+their scientific problem better. Or they could choose to spend their
+<br>
+precious time and money only on the science meetings where they will
+<br>
+have the maximum interacton with people in their own field. My
+<br>
+meeting-attendence pattern during the last few years was more like
+<br>
+the latter. I only encountered the paper above because I scheduled
+<br>
+part of my holiday last month to spend with a group of volcanologists.
+<br>
+<p>The following link points to some of the mathematical methods
+<br>
+on which a scientist should be up-to-speed (in my opinion),
+<br>
+and I think it's an impossible task, given their time constraints:
+<br>
+<p><a href="http://www.amara.com/science/science.html#num">http://www.amara.com/science/science.html#num</a>
+<br>
+<p>Here's a money-making hint. Scientists need the help of scientific
+<br>
+programmers and numerical-methods specialists who are knowledgeable
+<br>
+about the latest and best numerical methods. (I would dearly love to
+<br>
+hire AmaraGrapsv.1991, because she was much more aware of these
+<br>
+methods than AmaraGrapsv.2001, and I hear her rates were cheap.) If
+<br>
+you can find a way to fill this need given the paperwork and
+<br>
+bureaucratic nonsense and garbage when dealing with
+<br>
+government-funded science, please try. Ten years ago I wrote a
+<br>
+proposal for setting up a &quot;Scientific Computing Center&quot; at NASA-Ames
+<br>
+to exactly do this, and it wasn't funded. Maybe I didn't present it
+<br>
+right, or the time wasn't right, but the need still exists.
+<br>
+<p>Amara
+<br>
+<p>P.S. Another paper by the same author as that discussed above is:
+<br>
+&quot;Stochastic modelling at Stromboli: a volcano with remarkable
+<br>
+memory&quot; by O. Jaquet and R. Carniel, Journal of volcanolgy and
+<br>
+Geothermal Research 105 (2001) 249-262.
+<br>
+<p><p><p>********************************************************************
+<br>
+Amara Graps, PhD          email: <a href="mailto:amara@amara.com?Subject=re:%20Data%20reconstruction%20(was%20Dithering)&In-Reply-To=&lt;v03110700b80206a844e1@[213.7.133.15]&gt;">amara@amara.com</a>
+<br>
+Computational Physics     vita:  <a href="ftp://ftp.amara.com/pub/resume.txt">ftp://ftp.amara.com/pub/resume.txt</a>
+<br>
+Multiplex Answers         URL:   <a href="http://www.amara.com/">http://www.amara.com/</a>
+<br>
+********************************************************************
+<br>
+&quot;Take time to consider. The smallest point may be the most essential.&quot;
+<br>
+Sherlock Holmes  (The Adventure of the Red Circle)
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1865.html">Brian Phillips: "A renaissance for civil defense?"</a>
+<li><strong>Previous message:</strong> <a href="1863.html">Robert J. Bradbury: "Re: Private vs. government views of property"</a>
+<li><strong>Maybe in reply to:</strong> <a href="0893.html">James Rogers: "Data reconstruction (was Dithering)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1867.html">J. R. Molloy: "Re: Data reconstruction (was Dithering)"</a>
+<li><strong>Reply:</strong> <a href="1867.html">J. R. Molloy: "Re: Data reconstruction (was Dithering)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1864">[ date ]</a>
+<a href="index.html#1864">[ thread ]</a>
+<a href="subject.html#1864">[ subject ]</a>
+<a href="author.html#1864">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:16 MDT</em>
+</em>
+</small>
+</body>
+</html>

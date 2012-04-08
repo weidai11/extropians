@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:2.1
+N:Miller;Gary;A.
+FN:Gary A. Miller (garymiller@starband.net) (garymiller@starband.net)
+ORG:New Millennium Consulting
+TITLE:Principal Consultant
+TEL;WORK;VOICE:(440) 942-9264
+TEL;HOME;VOICE:(440) 942-9264
+ADR;WORK:;;7222 Hodgson Rd.;Mentor;OH;44060;United States of America
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:7222 Hodgson Rd.=0D=0AMentor, OH 44060=0D=0AUnited States of America
+EMAIL;PREF;INTERNET:garymiller@starband.net
+REV:20021108T231940Z
+END:VCARD
+

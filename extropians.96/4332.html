@@ -1,0 +1,136 @@
+<!-- received="Thu Dec 19 10:26:44 1996 MST" -->
+<!-- sent="Thu, 19 Dec 1996 17:58:31 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Music/Transhumanist art" -->
+<!-- id="Pine.SOL.3.91.961216231240.2859H-100000@sun1" -->
+<!-- inreplyto="1.5.4.32.19961216211308.00348308@best.com" -->
+<title>extropians: Re: Music/Transhumanist art</title>
+<h1>Re: Music/Transhumanist art</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Thu, 19 Dec 1996 17:58:31 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4332">[ date ]</a><a href="index.html#4332">[ thread ]</a><a href="subject.html#4332">[ subject ]</a><a href="author.html#4332">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4333.html">Anders Sandberg: "Re: Superconduction of Gravity?!? (was Re: &gt;H Re: Gravity)"</a>
+<li> <b>Previous message:</b> <a href="4331.html">J de Lyser: "re: privacy"</a>
+<li> <b>In reply to:</b> <a href="4146.html">James Rogers: "Re: Music/Transhumanist art"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Mon, 16 Dec 1996, James Rogers wrote:<br>
+<p>
+<i>&gt; &gt; [ Linux can do SMP, SMP is poor parallelism, when mainstreams maspar? ] </i><br>
+<i>&gt; </i><br>
+<i>&gt; I agree that eventually we will have to move away from SMP.  Too much</i><br>
+<i>&gt; contention in those systems to be particularly scalable.  5 years isn't such</i><br>
+<p>
+I think SMP is a very broken architecture. It speculates on memory <br>
+bandwidth, a scarce commodity, and it requires good caches, which are <br>
+difficult/costly to do, and do not at all help if there is little or no <br>
+data/code locality.<br>
+<p>
+<i>&gt; a bad estimate.  I think the limiting factor won't be hardware, but</i><br>
+<p>
+Of course. Software _determines_ the course of hardware development <br>
+nowadays, and software development is lagging notoriously behind that of <br>
+what hardware can do. Customer mainstream clings to braindead designs, and <br>
+calls this investment protection. The only way to leave a local minimum <br>
+behind is to do de novo design. Ain't that supposed to be the chiefest <br>
+advantage of human design versus darwinian evolution, to discontinuously <br>
+tunnel through interim fitness walls? We boasted to soon, it seems.<br>
+<p>
+<i>&gt; software.  OSs will have to support more truly parallel architectures before</i><br>
+<i>&gt; the hardware will become popular.  The first large-scale OS to adopt these</i><br>
+<i>&gt; architectures will probably be one of the quickly evolving ones, like Linux.</i><br>
+<p>
+Linux is great, but Unix can't be scaled down to nanokernel size, alas.<br>
+<p>
+Dedicated OOP DSP OSses are much better candidates for maspar systems, <br>
+imo. It will get really exciting, when GA-grown ANNs will jump from DSP <br>
+clusters to dedicated ANN chips. Probably, the need for neural DSP will <br>
+pioneer this, other fields (robotics, generic control, ALife AI) will <br>
+gladly accept the torch. Now imagine entire countries encrusted with <br>
+boxes full of ANN chips, mostly idle, locally connected by fiber links... <br>
+Though agoric computing will inhibit that somewhat, the phase transition <br>
+to &gt;web is writ all over the wall, in neon letters light-minutes-large...<br>
+ <br>
+<i>&gt; The hardware is already starting to get there.  We are starting to see</i><br>
+<i>&gt; multiple buses becoming available on PC motherboards, and fully integrated</i><br>
+<p>
+Many DSPs (Sharc, TI, &amp;c) already offer several high-bandwidth links. <br>
+Theoretically, a single macroscopic (albeit short) serial bus can carry <br>
+100 MBytes/s, optical links several orders of magnitude more. <br>
+(High-clocked stuff must be done in optics anyway, for dissipation <br>
+and signal reasons).<br>
+<p>
+<i>&gt; L2 caches (like the P6) are a good start towards eliminating resource</i><br>
+<i>&gt; contention in multiprocessor systems.  The one thing that will take the</i><br>
+<p>
+Caches are evil. Caches transistors provide no extra storage, and take <br>
+4-6 times the transistor resources of a an equivalent DRAM. Putting <br>
+caches on die bloats die extremely, which kills die yield and thus makes <br>
+the result unsuitable for WSI. Cache consistancy is a problem. Added <br>
+latency in case of cache miss is a problem. Increased design complexity, <br>
+prolonged design time and increased probability of a design glitch are a <br>
+problem. Decreased operating frequency due to circuit and design <br>
+complexity is a problem. Lots of ugly &amp; hairy things.<br>
+<p>
+<i>&gt; longest is breaking out of the shared memory model.  Most of the rest of the</i><br>
+<i>&gt; required technology is available and supported.</i><br>
+<i>&gt; </i><br>
+<i>&gt; I am not too sure that the shared memory is really such a bad idea, in terms</i><br>
+<i>&gt; of efficiency.  I think what *really* needs to be improved is the general</i><br>
+<p>
+Shared memory contradicts the demand for locality. Data/code should <br>
+reside in the utmost immediate vicinity of the ALU, ideally being a single <br>
+entity (CAMs qualify here best). Because of constraints of our spacetime <br>
+(just 3 dimensions, the curled-up ones, alas, unaccessible), and, even <br>
+worse, of silicon photolitho technology, which is a fundamentally <br>
+2d-technique, the conflict arising between making the same data <br>
+accessible to several processors is unresolvable. Caches are no good, and <br>
+open a wholly new can of worms... (cache consistancy in shared-memory <br>
+architectures is a nightmare, see KSR).<br>
+<p>
+<i>&gt; memory architecture currently used.  If they used some type of fine grained</i><br>
+<i>&gt; switching matrix mechanism, maybe something similar to the old Burroughs</i><br>
+<p>
+If we are to accept the scheme by which our relativistic universe works, <br>
+we must adopt an large-scale asynchronous, locally-coupled, nanograin <br>
+message-passing OO paradigm. Crossbars, whether vanilla, or perfect <br>
+shuffle, are excellent for asynchronous OOP, provided the topology allows <br>
+trivial routing. Hypergrid does.<br>
+<p>
+<i>&gt; B5000 series mainframes, a lot of memory contention could be eliminated.</i><br>
+<i>&gt; This of course in addition to speeding up the entire memory architecture</i><br>
+<i>&gt; altogether.</i><br>
+<p>
+Alas, there are physical limits to that, particularly if it comes to <br>
+off-die memory. Locality strikes yet again, aargh.<br>
+ <br>
+<i>&gt; -James Rogers </i><br>
+<i>&gt;  jamesr@best.com</i><br>
+<i>&gt; </i><br>
+<p>
+ciao,<br>
+'gene<br>
+<p>
+______________________________________________________________________________<br>
+<i>|<a href="mailto:ui22204@sunmail.lrz-muenchen.de">mailto:ui22204@sunmail.lrz-muenchen.de</a> |transhumanism &gt;H, cryonics,         |</i><br>
+<i>|<a href="mailto:Eugene.Leitl@uni-muenchen.de">mailto:Eugene.Leitl@uni-muenchen.de</a>    |nanotechnology, etc. etc.           |</i><br>
+<i>|<a href="mailto:c438@org.chemie.uni-muenchen.de">mailto:c438@org.chemie.uni-muenchen.de</a> |"deus ex machina, v.0.0.alpha"      |</i><br>
+<i>|icbmto:N 48 10'07'' E 011 33'53''      |<a href="http://www.lrz-muenchen.de/~ui22204">http://www.lrz-muenchen.de/~ui22204</a> |</i><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4333.html">Anders Sandberg: "Re: Superconduction of Gravity?!? (was Re: &gt;H Re: Gravity)"</a>
+<li> <b>Previous message:</b> <a href="4331.html">J de Lyser: "re: privacy"</a>
+<li> <b>In reply to:</b> <a href="4146.html">James Rogers: "Re: Music/Transhumanist art"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

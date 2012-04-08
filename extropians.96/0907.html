@@ -1,0 +1,559 @@
+<!-- received="Thu Sep 12 16:20:08 1996 MST" -->
+<!-- sent="Thu, 12 Sep 1996 13:59:27 +0200 (MET DST)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: The Joys Of Flesh" -->
+<!-- id="Pine.SOL.3.91.960909191340.6495G-100000@sun2" -->
+<!-- inreplyto="199609080450.VAA07553@well.com" -->
+<title>extropians: Re: The Joys Of Flesh</title>
+<h1>Re: The Joys Of Flesh</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Thu, 12 Sep 1996 13:59:27 +0200 (MET DST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#907">[ date ]</a><a href="index.html#907">[ thread ]</a><a href="subject.html#907">[ subject ]</a><a href="author.html#907">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0908.html">Max More: "Extropy #17 on ExI web site"</a>
+<li> <b>Previous message:</b> <a href="0906.html">David McFadzean: "META: use extropians@lucifer.com for now"</a>
+<li> <b>In reply to:</b> <a href="0844.html">John K Clark: "The Joys Of Flesh"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="1268.html">Hara Ra: "Re: The Joys Of Flesh"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+John, sorry it took me so long to reply (I have a job to do here, and <br>
+reading/posting can easily turn a full-time job. Whoever sets out to <br>
+install Mallinckrodt's DICOM should never underestimate his adversary. <br>
+So far, DICOM's score is better than mine. But we shall see...).<br>
+<p>
+On Sat, 7 Sep 1996, John K Clark wrote:<br>
+<i>&gt; On Fri, 6 Sep 1996 Eugene Leitl Eugene.Leitl@lrz.uni-muenchen.de Wrote:</i><br>
+<i>&gt; </i><br>
+<i>&gt; [Moravec's "Mind Children" assumptions on neural circuitry arbitrary ]</i><br>
+<i>&gt;</i><br>
+<i>&gt; I don't think they were arbitrary, but I grant you some things were just </i><br>
+<i>&gt; educated  guesses, it turns out that he almost certainly overestimated the </i><br>
+<p>
+Guesses, right. Whether they were educated, dunno. Moravec seems to live <br>
+in an alternative reality. He keeps seeing linear log plots for computer <br>
+performance where I see none. We've had them for some time past, yes, but <br>
+now we've hit a saturation zone, for years. We can go beyond it, if we <br>
+assume a packaging revolution imminent, but that would mean another <br>
+saturation zone barrier to spring up just a few years later.<br>
+<p>
+This has sure nothing to do with wet neuroscience, but I think he's <br>
+notoriously overoptimistic, possibly indiscriminately so in most areas. <br>
+(Btw Moravec, both he &amp; Tom Ray will speak at Medientagen in Munich on AL <br>
+things. I will sum up to the list, should something novel crop up<br>
+there).<br>
+<p>
+<i>&gt; storage   capacity of the human brain. As for it's information processing </i><br>
+<p>
+I have no idea, what a human brain can store. I can estimate how much <br>
+storage _under certain optimistic assumptions_ a fairly accurate <br>
+representation of the human brain will need. The amount of storage <br>
+estimated, clearly rules out any 2d semiconductor implementations. Too <br>
+many of these darned bits :(<br>
+<p>
+<i>&gt; capacity, he could be off by quite a lot and it would change the time the </i><br>
+<i>&gt; first AI is developed by very little. The speed of computation has increased </i><br>
+<p>
+I know this argument. Sounds good at first...<br>
+<p>
+<i>&gt; by a factor of 1000 every 20 years. It might not continue at that frantic</i><br>
+<i>&gt; pace but ...</i><br>
+<p>
+This is exactly my own argument: we don't have it even now. Now I did <br>
+not model this, and my maths is notoriously weak. But I think saturation <br>
+makes itself felt especially bitterly if already setting in in the early <br>
+stage of the exponential function. The linear log plot premise ignores <br>
+several transition points, where novel technologies have to be invented &amp; <br>
+introduced into the market. <br>
+<p>
+Alas, one cannot predict when a technological discontinuity will have <br>
+appeared. And to the human eqivalent we'll have several of them. <br>
+Packaging revolution, generic paradigm switch to maspar systems, <br>
+radically new neural accelerator chip architecture, and finally advent of <br>
+molecular circuitry. I dunno, this sequence defines a pretty rigorous <br>
+filter.<br>
+<p>
+We'll sure make it there somewhen, but trying to estimate how long it <br>
+will take us is somewhat pointless, using today's knowledge.<br>
+ <br>
+<i>&gt; 		&gt;Considering about 1 MBit equivalent for storage for a single </i><br>
+<i>&gt; 		&gt;neuron </i><br>
+<i>&gt; </i><br>
+<i>&gt; I think that's thousands of times too high. </i><br>
+<p>
+Let's see: a neuron has 10k synapses, roughly. Let's say each <br>
+neuron's body has a dynamics of 16 bit, and a 32 bit ID (these numbers <br>
+are quite arbitrary, and are not felt in the estimation in relation to <br>
+the contribution of the synapses).<br>
+<p>
+Each synapse has 8 bit dynamics, roughly. Let's say it connects to a <br>
+neuron with a 32 bit ID, and 8 bits neuron class ID. (That can be seen <br>
+either as too low, as allowing for only 4 Gneurons to be addressed, or to <br>
+high, as it ignores hypergridish connectivity, which is mostly local, <br>
+allowing for relative addressing). Let's add 8 bit for signal delay, even <br>
+if we might not need it. Let's add 8 bits for synapse class ID, which <br>
+might seem a bit high. That gives us 32+8+8+8=56 bits/synapse, let's <br>
+round that up to 60 bits/synapse. Having 10k of them, this means 60 <br>
+kBits/neuron, not 1 MBit (1000 kBits) I claimed. An apology is due, the 1 <br>
+MBit estimate was garbage.<br>
+<p>
+However, my brain faddled: I meant not MBits, but MTransistors (really, <br>
+this is not just a lame excuse).<br>
+<p>
+A DRAM cell needs 1 Transistor + 1 capacitor, an SRAM cell 4 to 6 times <br>
+that much. DRAM cells are too slow, moreover the neural chip's <br>
+architecture (it would lead too far exploring it here en detail) needs a <br>
+large amount of few-bit parallel comparators, so we'd rather take the 6x <br>
+estimate, which more than conservative. So this means 360 kTransistors/neuron. <br>
+Moreover, one needs address decoder circuitry, an adder tree, diverse <br>
+lookup tables or hardwired functions defined in random logic, different <br>
+for different neuron types, a crossbar or a perfect shuffle router to send <br>
+out signal messages to neighbour dies containing other <br>
+neurons &amp; receive inputs, etc. These are sure shared resources, but one <br>
+cannot assume a huge die, since low yield would render it unsuitable for <br>
+wafer-scale integration (WSI), so the resources may well require 0.5-1 <br>
+MTransistor/neuron, which is not very little. TI's new ASICS are supposed <br>
+to have 125 MTransistor complexity, at surely abysmal yield (the dies are <br>
+huge).<br>
+<p>
+<i>&gt; </i><br>
+<i>&gt; 		&gt;8 bits/synapse, </i><br>
+<i>&gt; </i><br>
+<i>&gt; A synapse may well be able to distinguish between 256 strength levels, </i><br>
+<i>&gt; perhaps more, Moravec said 10 bits/synapse, and in 1988 when he wrote his </i><br>
+<i>&gt; book it  was reasonable to think that if you multiplied 10 bits by the number</i><br>
+<p>
+Whether 8 or 10, it is an arbitrary number. The dynamics certainly larger <br>
+than 1 bit, though. Moreover, there are different synapse types.<br>
+ <br>
+<i>&gt; of  synapses in the brain you could get a good estimate of the storage </i><br>
+<i>&gt; capacity  of the brain. It is no longer a reasonable assumption</i><br>
+<p>
+Why?<br>
+<p>
+<i>&gt; The most important storage mechanism of memory is thought to be Long Term  </i><br>
+<i>&gt; Potentiation ( LTP). It theorizes that memory is encoded by varying the </i><br>
+<p>
+Yeah, but I was not talking about memory storage, just computation. <br>
+(Actually, the both are indistinguishable: are both patterns of firing <br>
+activity. The distinction between storage &amp; computation does not make <br>
+sense from computational physics perspective (demand for maximal <br>
+locality)). It's an artefact of early days of yore, erm, core. Ferrite <br>
+core was dumb, CPU smart. Now's smart switches everywhere, no need to <br>
+make a difference anymore.<br>
+<p>
+<i>&gt; strength of the 10^14 synapses that connect the 10^11 neurons in the human </i><br>
+<i>&gt; brain. It had been thought that LTP could be specified to a single synapse, </i><br>
+<i>&gt; so each synapse contained a unique and independent piece of memory, we now </i><br>
+<i>&gt; know that is not true. In the January  28 1994 issue of Science Dan Madison </i><br>
+<i>&gt; and Erin Schuman report that LTP spreads out to a large number of synapses on </i><br>
+<i>&gt; many different neurons. </i><br>
+<p>
+The Hamiltonian is encoded by the physical synapse machinery. A <br>
+postsynaptic neuron is thought to feel a neurotransmitter release, as a <br>
+spike triggers neurotransmitter vesicle (packet) release into the <br>
+synaptic cleft, the neurotransmitter diffusing &amp; docking into diverse <br>
+channels, etc. etc.<br>
+<p>
+If the synapse's not there, the Hamiltonian is different, so we wind up <br>
+in slightly different region of the phase space, the shorthand for state <br>
+of current self. Failure of synapses, as well as cell death is a common <br>
+event, so the Darwinian evolution has designed this function the <br>
+Hamiltonian encodes is likely to quench such tiny deviations, to be robust. <br>
+But not infinitely so. The hypervoxels in the persona space are defined by <br>
+this Hamiltonian. Delete synapses, make the Hamiltonian fuzzy, and you'll <br>
+fail to distinguish between two persons. It might be a pure ego thing, <br>
+but I'd rather remain me, not someone else. (At first, at least).<br>
+<p>
+<i>&gt; 		&gt;a 10 k average connectivity </i><br>
+<i>&gt; </i><br>
+<i>&gt; A consensus number, although I have seen estimates as high as 100 k.</i><br>
+<p>
+100 k are mostly related to convergent, not divergent activities, afair.<br>
+Btw, even time-sliced silicon has trouble achieving high connectivities. <br>
+The most natural approach would seem to favor bus width/synapse <br>
+connectivities, which are a few 100 even on die-local kBit broad buses.<br>
+<p>
+<i>&gt; 		&gt;and about 1 kEvents/synapse,</i><br>
+<i>&gt; </i><br>
+<i>&gt; Brain neurons seldom go above 100  firings a second, and at any one time  </i><br>
+<i>&gt; only 1% to 10% are firing in the brain.</i><br>
+<p>
+Yeah, but since the kind of coding used is unknown I'd like to assume the <br>
+worst case. Spiked systems seem to perform better to smooth ones, btw. <br>
+The sampling theorem would require about twice the signal bandwidth. <br>
+Since this is hardware, I have to provide the worst case spiking <br>
+bandwidth for each channel.<br>
+<p>
+<i>&gt; </i><br>
+<i>&gt; 		&gt;assuming about 100*10^9 neurons, </i><br>
+<i>&gt; </i><br>
+<i>&gt; Sounds about right.</i><br>
+<i>&gt; </i><br>
+<i>&gt; 		&gt;Moreover, this is _nonlocal_ MOPS </i><br>
+<i>&gt; </i><br>
+<i>&gt; I assume you're talking about long range chemical messages sent by neurons  </i><br>
+<i>&gt; to other neurons,  that would be one of the easier things  to duplicate. </i><br>
+<p>
+No, this is referring to data locality in simulation. Access <br>
+latency, and such. Chemical broadcast stuff (neuromodulation) is trivial <br>
+to simulate, agreed.<br>
+<p>
+<i>&gt; [ diverse things I agree with snipped ]</i><br>
+<i>&gt; </i><br>
+<i>&gt; 		&gt;I'd rather run at superrealtime, possibly significantly so. </i><br>
+<i>&gt; 		&gt;100* seems realistic, 1000* is stretching it. Nanoists claim </i><br>
+<i>&gt; 		&gt;10^6*, which is bogus.</i><br>
+<i>&gt; </i><br>
+<i>&gt; I think 10^9 would be closer to the mark. The signals in the brain move at </i><br>
+<i>&gt; 10^2 meters per second or less, light moves at 3 X 10^8 and nano-machines   </i><br>
+<p>
+Yes, but diamondoid rods move slower. As do electric signals. And you <br>
+have to multiplex the raw bandwidth, which is admittedly very high. But <br>
+you can lose 3 (and more) degrees of magnitude by multiplexing.<br>
+<p>
+<i>&gt; would be much smaller than neurons so the signal wouldn't have to travel </i><br>
+<i>&gt; nearly as far. Eventually the algorithms and procedures the brain uses could</i><br>
+<p>
+Yes, they are small. Yet their connectivity is is much smaller, and hence <br>
+they have to send several packets over the same local bus to reach nodes <br>
+which they have no direct connection to in a (possibly longish) sequence <br>
+of hops. Each link can send only one packet at a time, albeit fast.<br>
+  <br>
+<i>&gt; be optimized and speed things up even more, but this would be more difficult.</i><br>
+ <br>
+What's this, again? Optimization? Assuming, one cannot collapse <br>
+functionality to any noticeable degree, without simulating all the <br>
+connectivity? That a minimal threshold computation has to be done (no <br>
+free lunch), and that threshold to be pretty high?<br>
+<p>
+<i>&gt; 		&gt;no groundbreaking demonstration of such reversible logics </i><br>
+<i>&gt; 		&gt;has been done yet. </i><br>
+<i>&gt; </i><br>
+<i>&gt; Not so, reversible logic circuits have been built, see April 16 1993 Science. </i><br>
+<p>
+Notice "groundbreaking demonstration". The same applies to quantum <br>
+cryptography: it works, yes. But it's not worth the trouble.<br>
+<p>
+<i>&gt; They're not much use yet because of their increased complexity, and with  </i><br>
+<i>&gt; components as big as they are now the energy you save by failing to destroy  </i><br>
+<i>&gt; information is tiny compared to more conventional losses. It will be  </i><br>
+<i>&gt; different when things get smaller. Ralph Merkle, the leader in the field is  </i><br>
+<i>&gt; quoted as saying " reversible logic will dominate in the 21'st century".</i><br>
+<p>
+It's to be hoped, the effect to be sufficiently big to be utilizable in <br>
+future switches. Can you expand a bit which energetic gains can be <br>
+expected from them?<br>
+ <br>
+<i>&gt; 		&gt;It bears about that many promise as quantum cryptography and </i><br>
+<i>&gt; 		&gt;quantum computers, imo. (Very little, if any).</i><br>
+<i>&gt; </i><br>
+<i>&gt; There is not the slightest doubt that quantum cryptography works, and not </i><br>
+<i>&gt; just  in the lab. Recently two banks in Switzerland exchanged financial </i><br>
+<p>
+Yes, but what does it offer, and which costs? Which advances does it have <br>
+in relation to vanilla cryptography? What is with triggered (by <br>
+stimulated emission) photon message spoofing, can it get detected in <br>
+principle?<br>
+<p>
+<i>&gt; information over a fiber optic cable across lake Geneva using Quantum </i><br>
+<i>&gt; Cryptography.  Whether it's  successful in the marketplace depends on how </i><br>
+<i>&gt; well it competes against public key cryptography, which is easier to use and </i><br>
+<i>&gt; probably almost as safe if you have a big enough key. I  don't want to talk </i><br>
+<i>&gt; about quantum computers quite yet, a lot has been happening in the last few </i><br>
+<i>&gt; weeks and I haven't finished my reading.</i><br>
+<p>
+Your other post on QC has been very illuminating. Do you think these <br>
+theoretical values are achievable in reality, without assuming <br>
+unrealistically high demands on fabrication precision (structure <br>
+geometry, alignment, etc?).<br>
+ <br>
+<i>&gt; 		&gt;One tends always to forget that atoms ain't that little, at </i><br>
+<i>&gt; 		&gt;least in relation to most cellular structures.</i><br>
+<i>&gt; </i><br>
+<i>&gt; It's a good thing one tends to forget that, because it's not true. An average  </i><br>
+<i>&gt; cell has a volume of about 3 X 10^12 cubic nanometers, that's 3 thousand  </i><br>
+<p>
+Yes, but pay attention: "cellular structures", not cells. (An E. coli is <br>
+roughly 1x1x10 um sized, some bacteria are much smaller (I forgot the <br>
+actual numbers, but it may be as low as 0.1x0.1x1 um)). A lipid bilayer <br>
+is a structure. An enzyme is a structure. A ribosome is a structure. The <br>
+C-C bond length is about the same, whether in protein or diamond. Look at <br>
+the average virus on a workstation screen, what is the zoom factor until <br>
+you can discern individual atoms? Not very high. I'm claiming you can't <br>
+build a CAM cell in a cube smaller than 0.1 um (100 nm) edge by means of <br>
+weak nanotech (molecular circuitry embedded in protein matrix). I think you <br>
+can do better with Drexlerian nanotech by one order of magnitude max, <br>
+that would mean 10 nm, that's less than 100 atoms/edge. Not so very much, <br>
+I am afraid. <br>
+<p>
+<i>&gt; billion. Just one cubic nanometer of diamond contains exactly 176 carbon  </i><br>
+<i>&gt; atoms.               </i><br>
+<p>
+Yes, but how many operations/s can you gain from these atoms? How many <br>
+bits can be stored in this volume? One bit? (probably much less). But <br>
+storing alone is pointless, the distinction between storing and <br>
+processing must fall, computational physics demands it. How big are your <br>
+(smart) bits, then? Much larger, I fear.<br>
+<p>
+<i>&gt; 			      &gt;&gt;No known physical reason that would make it </i><br>
+<i>&gt; 			      &gt;&gt;[Nanotechnology] impossible.</i><br>
+<i>&gt; </i><br>
+<i>&gt; 		&gt;No known physical reasons, indeed. </i><br>
+<i>&gt; </i><br>
+<i>&gt; I don't think there are any physical reasons why strong Nanotechnology is </i><br>
+<p>
+What is physics, and what is technology is virtually the same. The <br>
+distinctions are fuzzy at best, nowadays. A lot of constraints, all of them <br>
+"engineering", applied in a sequence can make the gadget unviable. <br>
+Operability window, and such. Now is this physics, or is this engineering? <br>
+Who cares, as long as original demand -- for the functional gadget -- is <br>
+not met.<br>
+<p>
+I think my perspective is the engineer's perspective, not a pure <br>
+scientist's.<br>
+<p>
+<i>&gt; impossible, that's why I don't put it in the same category as faster than </i><br>
+<i>&gt; light flight, anti-gravity, picotechnology or time travel. If you disagree </i><br>
+<p>
+Apropos picotech, see the post on femtotech I forwarded to the &gt;H list ;)<br>
+<p>
+<i>&gt; with my statement then I want to know exactly what law of physics it would </i><br>
+<i>&gt; violate,  not all the reasons that would make it difficult. I already know </i><br>
+<i>&gt; it's  difficult, that's why we haven't done it yet.</i><br>
+<p>
+Chemical reactions are ruled by QM, right? Mechanosynthesis is a chemical <br>
+reaction, right? Should mechanosynthesis be the bottleneck, ruling out <br>
+autoreplication, the gadget is inviable, right? Now is this engineering <br>
+or science?<br>
+ <br>
+<i>&gt; 		&gt;Just look at a diamondoid lattice from above, and look at </i><br>
+<i>&gt; 		&gt;the periode constant. When zigzagged, C-C  bond are a lot </i><br>
+<i>&gt; 		&gt;shorter. Sterical things.</i><br>
+<i>&gt; </i><br>
+<i>&gt; If something is pretty rigid, like diamond, it's steric properties are the </i><br>
+<i>&gt; same as it's shape properties, at least to a first approximation. Often </i><br>
+<i>&gt; steric difficulties can be overcome just be applying a little force and </i><br>
+<i>&gt; compressing  things a little. Naturally it is vital for a Nanotechnology </i><br>
+<p>
+You want to deploy/abstract carbon atoms from above. What your tip sees, <br>
+is a projection of the zigzagged sheet into the plane. Now I want to deploy <br>
+a perfect diamondoid lattice. First you abstract your hydrogen, then <br>
+_another_ tip (is this compatible with the 1*10^6 atoms/s estimate?) must <br>
+deploy your reactive moiety before surface-absorbed species (which are <br>
+highly mobile) bang into your radical spot, possibly quenching it.<br>
+<p>
+How much precision do I need? 100 pm? Sorry, this doesn't correlate  with <br>
+my chemical intuition.<br>
+<p>
+<i>&gt; engineer to  remember that no molecule is ever perfectly rigid and at very</i><br>
+<i>&gt; short distances  anything will look soft and flabby. Drexler is not ignoring </i><br>
+<p>
+If I want to do computation with diamondoid rods, they are pretty rigid <br>
+on small scale. I can't push with very long, thin rods, however, I have <br>
+to pull'em. This is one of the reasons why you can't have the gigantic <br>
+connectivity you need for mind uploading &amp; have to emulate it, thus <br>
+losing the speed advantage.<br>
+<p>
+<i>&gt; this, he spends a  lot of time in Nanosystems talking about it.</i><br>
+<i>&gt; </i><br>
+<i>&gt; 		   &gt;We want to know, whether a) a given structure can exist</i><br>
+<i>&gt; </i><br>
+<i>&gt; It is possible that some of the intermediate states of the object you want to </i><br>
+<i>&gt; construct would not be stable. I can see two ways to get around this problem.   </i><br>
+<p>
+According to Drexler's computation, the structure itself can exist, and <br>
+one _can_ do computation with diamondoid systems. The iffy thing is <br>
+mechanosynthesis, where excited states exist transiently.<br>
+<p>
+<i>&gt; 1) Always use a jig, even if you don't need it.  </i><br>
+<p>
+Using scaffolding is an excellent idea, biotech often uses it.<br>
+<p>
+<i>&gt; 2) Make a test. If you know you put an atom at a certain place and now it's     </i><br>
+<i>&gt; mysteriously gone, put  another one there again and this time use scaffolding. </i><br>
+<i>&gt; Neither method would require a lot of intelligence or skills on the part of  </i><br>
+<i>&gt; the Nanotech machines.</i><br>
+<i>&gt; </i><br>
+<i>&gt; It's also theoretical possible that some exotic structures could not be built,  </i><br>
+<i>&gt; something that had to be complete before it's stable, like an arch, but </i><br>
+<i>&gt; unlike an arch had no room to put temporary scaffolding around it to keep </i><br>
+<i>&gt; things in place during construction. It's unlikely this is a serious </i><br>
+<i>&gt; limitation, nature can't build things like that either.          </i><br>
+<i>&gt; </i><br>
+<i>&gt; 		&gt;b) whether we can build the first instance of this structure</i><br>
+<i>&gt; 		   </i><br>
+<i>&gt; Assuming it can exist, (see above) the question of whether you can make it or </i><br>
+<i>&gt; not is depends entirely on your skill at engineering and has nothing to do  </i><br>
+<i>&gt; with science.      </i><br>
+<p>
+But what is your skill of engineering? Why can't organic synthesis <br>
+synthesize anything complex? Because it can't do mechanosynthesis. Why is <br>
+biochemistry much more powerful? Basically, because it utilizes highly <br>
+constrained systems at synthesis, which are created automagically as the <br>
+protein folds. So whether you can create a complex structure, depends on <br>
+your skill at mechanosyntheis. So this is a circulus vitiosus.<br>
+<p>
+There _is_ a bootstrap problem, and it is not trivial. (Personally, I <br>
+think it is surmountable, using the complementary skills of SPM, <br>
+biochemistry &amp; organic syntesis).<br>
+ <br>
+<i>&gt; 		&gt;c) this structure is sufficiently powerful to at least a </i><br>
+<i>&gt; 		&gt;make a sufficiently accurate copy of itself.</i><br>
+<i>&gt; </i><br>
+<i>&gt; Depends entirely on the particular structure you're talking about and on the </i><br>
+<i>&gt; particular environment it is expected to be working in. Again, this is pure  </i><br>
+<i>&gt; engineering.       </i><br>
+<p>
+The particular structure is a stiff diamondoid tip system, driven by a <br>
+diamondoid rod logic computer. So far, no trouble. This structure <br>
+deposits diamondoid solids of any geometry allowed by nanolitho <br>
+constraints. Mechanosynthesis has not been shown to work. This is a <br>
+problem. The defect threshold in the clone structure must not have _any_ <br>
+negative impact on positioning tip accuracy. Orelse the autoamplification <br>
+sequence will be pitifully short, resulting in a handfull of viable <br>
+nanoagents. Nanotechnology which can't autoreplicate is worthless. That is <br>
+a problem.<br>
+<p>
+One must be careful with words. Engineering denotes a problem class which <br>
+is surmountable, enough work invested provided. Physics defines a class <br>
+of structures/processes which are viable. However, you can't always say <br>
+whether a structure/process is viable a priori. The only 'proof' would be <br>
+the first instance of such structure, or, more weakly, lots of rock-solid <br>
+computer runs and SPM experimental data. We don't have the former, nor <br>
+the latter. Drexler's case is speculative engineering, augmented with <br>
+some circumstantial evidence, not just mere engineering.<br>
+<p>
+You can lick engineering.<br>
+You can't lick physics.<br>
+<p>
+There is a difference.<br>
+ <br>
+<i>&gt; 		&gt;That's a lot of constraints, and all of them physical. </i><br>
+<i>&gt; </i><br>
+<i>&gt; No, none of them are physical, all of them are engineering.</i><br>
+<p>
+See above.<br>
+<p>
+<i>&gt; 		   </i><br>
+<i>&gt; 		&gt;Claiming the problems to be merely engineering, is not good </i><br>
+<i>&gt; 		&gt;marketing, imo.</i><br>
+<i>&gt; </i><br>
+<i>&gt; I wouldn't know, I'm no expert on marketing.</i><br>
+<p>
+Nor me, but without adequate R&amp;D funds almost no relevant research will <br>
+be done. Marketing is social engineering. I thought you liked engineering?<br>
+ <br>
+<i>&gt; 		&gt;There are excellent reasons to suspect this connectivity </i><br>
+<i>&gt; 		&gt; [of neurons] to be crucial </i><br>
+<i>&gt; </i><br>
+<i>&gt; That's true, I don't think there is the slightest doubt. This vast </i><br>
+<i>&gt; connectivity is the very reason why biological brains are still much better  </i><br>
+<i>&gt; than today's electronic computers at most tasks, in spite of it's appallingly </i><br>
+<i>&gt; slow signal propagation.  </i><br>
+<i>&gt; </i><br>
+<i>&gt; 		&gt; so you have to simulate this connectivity. </i><br>
+<i>&gt; </i><br>
+<i>&gt; Obviously, and I see absolutely nothing in the laws of Physics that would </i><br>
+<i>&gt; forbid Nano Machines from equaling or exceeding this connectivity.</i><br>
+<p>
+Simulating or implementing it in hardware are two different things. The <br>
+neuronal connectivity can fluctuate, because the structure which computes <br>
+has also automanipulative capabilities. A diamond rod has no such <br>
+capabilities, it needs anabolics/catabolics by an external unit which is <br>
+capable of mechanosynthesis. Such a unit is _very_ big, and cannot have <br>
+access to that rod before disassembling all the other structures before it, <br>
+recording the state, changing the circuitry, then rebuilding everything <br>
+from memory, including state. <br>
+<p>
+(John, nanoagents are supposed to manipulate atoms, not bits. At least <br>
+that's what they are designed to do. This is also the reason why Utility <br>
+Fog is suboptimal as a computational medium).<br>
+<p>
+I dunno, hardly an economical solution. So rather give me hardware <br>
+of limited connectivity, which can simulate arbitrarily high <br>
+connectivities by multiplexing existing local bandwidth. This means <br>
+losing efficiency, resulting in much slower designs, but currently I do <br>
+not see how this problem can be solved in any different way.<br>
+ <br>
+<i>&gt; 		&gt;you can't do it directly in hardware </i><br>
+<i>&gt; </i><br>
+<i>&gt; Why not? The brain has a lot of connectivity, but a random neuron can't </i><br>
+<i>&gt; connect with any other random neuron, only the closest 10 thousand or so.    </i><br>
+<p>
+Yes, but try to rewire nodes aligned on a noisy grid with 10 k wires <br>
+each. See the nightmare of tangled wire, as many 10k cones overlap. This <br>
+is a jungle of sterical hindrance. You have either construct the wires <br>
+from within, like the brain does, or from the outside, which both bloats <br>
+the machinery drastically, making it even bigger than its biological <br>
+counterpart.<br>
+<p>
+I'd rather go for e.g. cubic primitive lattice of _very_ small, very <br>
+brainded computers which can only talk to its neighbours. This is the CA <br>
+paradigm, and it can emulate about anything (it's equivalent to Turing), <br>
+unlimited connectivity included.<br>
+<p>
+Of course there is a price: physical signalling can be very fast, <br>
+probably many km/s. The entire circuit is just a few mm sized, so that's <br>
+a lot.<br>
+<p>
+However, due to multiplexing, you lose some orders of magnitude. So alas, <br>
+the uploader is ulikely to run at 10^9 realtime speed.<br>
+<p>
+<i>&gt; The brain grows new connections and I don't see why a machine couldn't do  </i><br>
+<i>&gt; that too if needed, but another way is to pre wire 10 thousand connections</i><br>
+<p>
+The machine needs to build structures from the outside, not from within.<br>
+ <br>
+<i>&gt; and then change their strength from zero to a maximum value.</i><br>
+<p>
+This is a possibly viable alternative. It requres strong Drexlerian <br>
+nanotechnology, however, while the simple molecular circuitry (weak <br>
+nanotech) cannot do that, relying on autoassembly of protein crystal <br>
+growth.<br>
+<p>
+Since I tend to be conservative, I always choose the simpler route. <br>
+<p>
+Autoassembling molecular circuitry is almost certainly viable, but is so <br>
+strong nanotech?<br>
+ <br>
+<i>&gt; 		&gt;you must start sending bits, instead of pushing rods </i><br>
+<i>&gt; </i><br>
+<i>&gt; Eugene! I know you can't mean that. Using the same logic you could say that a  </i><br>
+<i>&gt; computer doesn't send bits, it just pushes electrons around, and the brain  </i><br>
+<i>&gt; doesn't deal in information, it just pushes sodium and potassium ions around  </i><br>
+<i>&gt; and Shakespeare didn't write plays, he just pushed ASCII characters around </i><br>
+<i>&gt; until the formed a particular sequence.</i><br>
+<p>
+I was referring to emulation, not hardwired implementation. Everbody <br>
+knows a simulation is always much slower than simulation, unless clever <br>
+algorithms can be utilized. If you can't substitute what neural circuitry<br>
+does with less demanding algorithmics (what I suspect) it's emulation <br>
+time, alas. Wish it was different. <br>
+<p>
+<i>&gt;     </i><br>
+<i>&gt; 					     John K Clark     johnkc@well.com</i><br>
+<p>
+'gene<br>
+_________________________________________________________________________________<br>
+<i>| <a href="mailto:">mailto:</a> ui22204@sunmail.lrz-muenchen.de | transhumanism &gt;H, cryonics,         |</i><br>
+<i>| <a href="mailto:">mailto:</a> Eugene.Leitl@uni-muenchen.de    | nanotechnology, etc. etc.           |</i><br>
+<i>| <a href="mailto:">mailto:</a> c438@org.chemie.uni-muenchen.de | "deus ex machina, v.0.0.alpha"      |</i><br>
+<i>| icbmto: N 48 10'07'' E 011 33'53''      | <a href="http://www.lrz-muenchen.de/~ui22204">http://www.lrz-muenchen.de/~ui22204</a> |</i><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0908.html">Max More: "Extropy #17 on ExI web site"</a>
+<li> <b>Previous message:</b> <a href="0906.html">David McFadzean: "META: use extropians@lucifer.com for now"</a>
+<li> <b>In reply to:</b> <a href="0844.html">John K Clark: "The Joys Of Flesh"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="1268.html">Hara Ra: "Re: The Joys Of Flesh"</a>
+<!-- reply="end" -->
+</ul>

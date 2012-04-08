@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Neuron Computational Requirements?</TITLE>
+<META NAME="Author" CONTENT="Anders Sandberg (asa@nada.kth.se)">
+<META NAME="Subject" CONTENT="Re: Neuron Computational Requirements?">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Neuron Computational Requirements?</H1>
+<!-- received="Wed Apr 19 17:48:08 2000" -->
+<!-- isoreceived="20000419234808" -->
+<!-- sent="20 Apr 2000 01:48:29 +0200" -->
+<!-- isosent="20000419234829" -->
+<!-- name="Anders Sandberg" -->
+<!-- email="asa@nada.kth.se" -->
+<!-- subject="Re: Neuron Computational Requirements?" -->
+<!-- id="b491z4164aa.fsf@sans04.nada.kth.se" -->
+<!-- inreplyto="Wed, 19 Apr 2000 15:47:17 -0700&quot;" -->
+<STRONG>From:</STRONG> Anders Sandberg (<A HREF="mailto:asa@nada.kth.se?Subject=Re:%20Neuron%20Computational%20Requirements?&In-Reply-To=&lt;b491z4164aa.fsf@sans04.nada.kth.se&gt;"><EM>asa@nada.kth.se</EM></A>)<BR>
+<STRONG>Date:</STRONG> Wed Apr 19 2000 - 17:48:29 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="1233.html">Joe Dees: "Re: Mike Lorrey's calling in life..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1231.html">Billy Brown: "RE: Neuron Computational Requirements?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="1236.html">Paul Hughes: "Re: Neuron Computational Requirements?"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="1236.html">Paul Hughes: "Re: Neuron Computational Requirements?"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="1258.html">Robin Hanson: "Re: Neuron Computational Requirements?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1232">[ date ]</A>
+<A HREF="index.html#1232">[ thread ]</A>
+<A HREF="subject.html#1232">[ subject ]</A>
+<A HREF="author.html#1232">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Paul Hughes &lt;<A HREF="mailto:paul@planetp.cc?Subject=Re:%20Neuron%20Computational%20Requirements?&In-Reply-To=&lt;b491z4164aa.fsf@sans04.nada.kth.se&gt;">paul@planetp.cc</A>&gt; writes:
+<BR>
+<P><EM>&gt; Robin Hanson wrote:
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; &gt; Paul Hughes wrote:
+</EM><BR>
+<EM>&gt; &gt; &gt;So the question remains what amount of computational
+</EM><BR>
+<EM>&gt; &gt; &gt;machinery is required to replace the current role that a
+</EM><BR>
+<EM>&gt; &gt; &gt;neuron plays?  Any takers?
+</EM><BR>
+<EM>&gt; &gt;
+</EM><BR>
+<EM>&gt; &gt; Here's a data point I came across recently:
+</EM><BR>
+<EM>&gt; &gt;
+</EM><BR>
+<EM>&gt; &gt; <A HREF="http://www.cacr.caltech.edu/Publications/annreps/annrep92/schutt.html">http://www.cacr.caltech.edu/Publications/annreps/annrep92/schutt.html</A>
+</EM><BR>
+<EM>&gt; &gt;
+</EM><BR>
+<EM>&gt; &gt; It's a 92 paper describing a simulation of one specific
+</EM><BR>
+<EM>&gt; &gt; complex neuron.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; Impressive!  Using their somewhat simplified simulation of the most
+</EM><BR>
+<EM>&gt; complex neuron in the nervous system (the Purkinje), it still took their
+</EM><BR>
+<EM>&gt; i860 processor almost an hour to run a simulation of a single firing.
+</EM><BR>
+<EM>&gt; How this translates into computational requirements for the typical
+</EM><BR>
+<EM>&gt; neuron remains to be seen, but I think it proves that simulating a single
+</EM><BR>
+<EM>&gt; neuron is not a trivial task.
+</EM><BR>
+<P>Definitely not trivial. The Purkinje cell might be a bit more
+<BR>
+branching and have more synapses than the vanilla pyramidal cells of
+<BR>
+the cortex, but not much.
+<BR>
+<P>In most computational neuroscience models of neurons they are divided
+<BR>
+into compartments treated as isopotential; they are each described by
+<BR>
+their membrane potential, the concentrations of sodium, potassium,
+<BR>
+calcium and sometimes chloride ions and the state of various ion
+<BR>
+channels. The number of compartment varies a lot, 100,000 is on the
+<BR>
+largest scale so far - we are quite limited by our lack of really good
+<BR>
+morphological cell data not to mention electrophysiological data. 
+<BR>
+<P>Other chemical processes need to be added at the synapses, especially
+<BR>
+for plasticity models. A fellow researcher made a simplified (!) model
+<BR>
+involving just 30-40 chemicals (many of which were variously
+<BR>
+phosphorylated states of a protein) of the long term potentiation
+<BR>
+phenomenon.
+<BR>
+<P>Yes, neurons are much more complex than simple transistors. But it is
+<BR>
+not obvious that all this complexity makes them *much* more complex -
+<BR>
+there are clever simplifications of certain kinds of dendritic trees
+<BR>
+and many of the chemical networks could be described more compactly
+<BR>
+using a phenomenological model. There are ways of doing reductions of
+<BR>
+cells that (at the price of requiring sharp minds) can create models
+<BR>
+that does qualitatively and often quantitatively the same as much more
+<BR>
+complex models.
+<BR>
+<P>The real complexity lies in the manifold interactions between neurons,
+<BR>
+individual neurons have a fairly limited repertoire of behavior but
+<BR>
+when you connect a few of them into a network, especially modulated by
+<BR>
+different chemicals, then they can do nearly anything. 
+<BR>
+<P><PRE>
+-- 
+-----------------------------------------------------------------------
+Anders Sandberg                                      Towards Ascension!
+<A HREF="mailto:asa@nada.kth.se?Subject=Re:%20Neuron%20Computational%20Requirements?&In-Reply-To=&lt;b491z4164aa.fsf@sans04.nada.kth.se&gt;">asa@nada.kth.se</A>                            <A HREF="http://www.nada.kth.se/~asa/">http://www.nada.kth.se/~asa/</A>
+GCS/M/S/O d++ -p+ c++++ !l u+ e++ m++ s+/+ n--- h+/* f+ g+ w++ t+ r+ !y
+</PRE>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="1233.html">Joe Dees: "Re: Mike Lorrey's calling in life..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1231.html">Billy Brown: "RE: Neuron Computational Requirements?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="1236.html">Paul Hughes: "Re: Neuron Computational Requirements?"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="1236.html">Paul Hughes: "Re: Neuron Computational Requirements?"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="1258.html">Robin Hanson: "Re: Neuron Computational Requirements?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1232">[ date ]</A>
+<A HREF="index.html#1232">[ thread ]</A>
+<A HREF="subject.html#1232">[ subject ]</A>
+<A HREF="author.html#1232">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:09:38 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

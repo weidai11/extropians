@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: RE: near-term processing power growth</TITLE>
+<META NAME="Author" CONTENT="Robert J. Bradbury (bradbury@aeiveos.wa.com)">
+<META NAME="Subject" CONTENT="RE: near-term processing power growth">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>RE: near-term processing power growth</H1>
+<!-- received="Sat Feb 12 05:17:15 2000" -->
+<!-- isoreceived="20000212121715" -->
+<!-- sent="Sat, 12 Feb 2000 02:35:44 -0800 (PST)" -->
+<!-- isosent="20000212103544" -->
+<!-- name="Robert J. Bradbury" -->
+<!-- email="bradbury@aeiveos.wa.com" -->
+<!-- subject="RE: near-term processing power growth" -->
+<!-- id="Pine.SV4.3.91.1000212020430.28465J-100000@aeiveos.aeiveos.wa.com" -->
+<!-- inreplyto="BFF90FB6CF66D111BF4F0000F840DB850FB42C2F@lassie.dns.microsoft.com" -->
+<STRONG>From:</STRONG> Robert J. Bradbury (<A HREF="mailto:bradbury@aeiveos.wa.com?Subject=RE:%20near-term%20processing%20power%20growth&In-Reply-To=&lt;Pine.SV4.3.91.1000212020430.28465J-100000@aeiveos.aeiveos.wa.com&gt;"><EM>bradbury@aeiveos.wa.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Sat Feb 12 2000 - 03:35:44 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2591.html">Delvieron@aol.com: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2589.html">Robert J. Bradbury: "Singularity information [was: Paths to the Singularity]"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2564.html">Ramez Naam: "RE: near-term processing power growth"</A>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2590">[ date ]</A>
+<A HREF="index.html#2590">[ thread ]</A>
+<A HREF="subject.html#2590">[ subject ]</A>
+<A HREF="author.html#2590">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+On Fri, 11 Feb 2000, Ramez Naam wrote:
+<BR>
+<P><EM>&gt; From: Eugene Leitl
+</EM><BR>
+<EM>&gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; One should compare apples with apples. TI 'c6x MIPSen look good on
+</EM><BR>
+<EM>&gt; &gt; paper, but do not translate very well in real-time performance.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; I suspect as much (given that it's a DSP) but don't know any particulars of
+</EM><BR>
+<EM>&gt; the chip.
+</EM><BR>
+<P>Well, for things like emulating neurons, DSPs should do a pretty good
+<BR>
+job.  Aren't their some examples (@ Columbia?) of large DSP arrays
+<BR>
+doing neural net stuff?  If neurons do much more than multiply and
+<BR>
+add, I'd be very surprised.  If you have a thumbtack sized chip
+<BR>
+with 10^12 OPs, its only going to take ~100-1000 of them to get you
+<BR>
+human brain &quot;equivalence&quot;.  Thats a box that fits under my desk.
+<BR>
+Can't take it to bed with me though, as its apt to be a bit *hot*
+<BR>
+[double entendre intended if you are following the other threads].
+<BR>
+As I've indicated before it looks like the Moravec/Kurzweil times
+<BR>
+for Brain equivalent computers (&gt; 2020) are very conservative.
+<BR>
+<P><EM>&gt; 
+</EM><BR>
+<EM>&gt; Yes, this is why for the new Intel / AMD / IBM chips, clock speed seems to
+</EM><BR>
+<EM>&gt; be the only good indicator of actual performance in mainline tasks.*
+</EM><BR>
+...
+<BR>
+<EM>&gt; * = note that I'm talking about chip performance here, rather than system
+</EM><BR>
+<EM>&gt; performance.  For system performance, these days a fast bus, big cache, and
+</EM><BR>
+<EM>&gt; lots of RAM seem to contribute more for most tasks than processor speed.
+</EM><BR>
+<P>I suspect you are up against programming granularity.  Given the rates
+<BR>
+the chips are operating at you have to be making function calls at
+<BR>
+a phenomenal rate.  In the large programs we currently have you
+<BR>
+are going to be flushing the caches at a rather high rate meaning
+<BR>
+your bus bandwidth is the real constraint.  Thats why you see things
+<BR>
+like double data rate memory and RAMBUS coming down the pipe.
+<BR>
+<P>This will not ultimately be solved until we get processor-in-memory.
+<BR>
+I'll be interesting to see published reports on progress on this
+<BR>
+(e.g. the Berkeley group work).  For &quot;brain&quot;-like computations,
+<BR>
+fast chips with a small amount of embedded PROM seems best.
+<BR>
+Of course this is pretty much what the &quot;Blue Gene&quot; architecture is.
+<BR>
+<P>Anyone know if deGaris has published any of the technical details
+<BR>
+of his chip architectures?
+<BR>
+<P><EM>&gt; Since
+</EM><BR>
+<EM>&gt; they seem to have maxed out the number of functional units and improvements
+</EM><BR>
+<EM>&gt; are trending towards providing specialized multi-media instructions, we're
+</EM><BR>
+<EM>&gt; no longer getting general purpose clock-independent peformance boosts from
+</EM><BR>
+<EM>&gt; the new architectures.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; Hopefully VLIW will start to address this in the next few years.  
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<P>They seem to be slowly adding functional units but they've got
+<BR>
+clock distribution, heat dissipation and chip pin counts that
+<BR>
+are restricting this to a fair degree.  The next &quot;architecture&quot;
+<BR>
+fix will most likely involve real-time profiling feeding into
+<BR>
+things like the branch prediction and speculative execution
+<BR>
+followed by real-time pushing the instruction sequences into
+<BR>
+actual gate hardware (hardware compiling).  We probably aren't
+<BR>
+too far away from things like gate-level JAVA interpreters
+<BR>
+or MS-Word.
+<BR>
+<P>I'll just add as a footnote, that everything I do (except the
+<BR>
+simulations for dismantling Jupiter &amp; Saturn) works quite
+<BR>
+quickly on dual 200MHz Pentium Pro machines until I get to the
+<BR>
+point where I'm running a dozen or more Netscape &amp; IE windows
+<BR>
+and MS-Excel and MS-Word and ... So I finally broke down and
+<BR>
+upgraded one system to 256MB of 60ns ECC RAM.  Now I can
+<BR>
+open windows for days and things are still very fast.
+<BR>
+Forget the processor.  Buy memory.  The net is still the
+<BR>
+limiting factor *even* over an ADSL line.
+<BR>
+<P>R.
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2591.html">Delvieron@aol.com: "Re: NANO: Hacking assembler security"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2589.html">Robert J. Bradbury: "Singularity information [was: Paths to the Singularity]"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2564.html">Ramez Naam: "RE: near-term processing power growth"</A>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2590">[ date ]</A>
+<A HREF="index.html#2590">[ thread ]</A>
+<A HREF="subject.html#2590">[ subject ]</A>
+<A HREF="author.html#2590">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:03:40 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

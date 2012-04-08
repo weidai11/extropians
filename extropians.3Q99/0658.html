@@ -1,0 +1,216 @@
+<!-- received="Wed Jul 14 00:31:21 1999 MDT" -->
+<!-- sent="Tue, 13 Jul 1999 23:28:46 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Software/Hardware Architectures (WAS: RE: Human minds on Windows(?))" -->
+<!-- id="14219.63799.953167.314610@lrz.de" -->
+<!-- inreplyto="NDBBLBGGEJLACCFCPNINKEEACBAA.ewbrownv@mindspring.com" -->
+<!-- version=1.10, linesinbody=147 -->
+<html><head><title>extropians: Software/Hardware Architectures (WAS: RE: Human minds on Windows(?))</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Software/Hardware Architectures (WAS: RE: Human minds on Windows(?))</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Tue, 13 Jul 1999 23:28:46 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#658">[ date ]</a><a href="index.html#658">[ thread ]</a><a href="subject.html#658">[ subject ]</a><a href="author.html#658">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0659.html">[ Next ]</a><a href="0657.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0629.html">Billy Brown</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0666.html">Billy Brown</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+Billy Brown writes:
+
+<p>
+<a href="0629.html#0658qlink1"> &gt; &gt; Hey, so they really call OS.send.message() every few 100 machine</a><br>
+<i> &gt; &gt; instructions, or so, and context-switch every 1 us? Really?</i><br>
+<i> &gt; </i><br>
+<i> &gt; Why on Earth would you want to do that?  Even for masively parallel</i><br>
+
+<p>
+Because that's the only way how you can do things on a fine-grain
+maspar system. I believe we were talking about portability/migration 
+issues...
+
+<p>
+<a href="0629.html#0658qlink2"> &gt; architectures you are better off either using large CPU/memory blocks, or</a><br>
+
+<p>
+Uh, there _are_ no large contiguous memory blocks/monster CPUs 
+in a maspar fine-grain system. For price (yield), reliability, 
+footprint and thermal dissipation reasons you shouldn't imagine 
+something like the ASCI Red but a midi tower stuffed few 100...1000 
+VLIW CPUs with few-MBit on-die RAM, interconnected by multiple/
+redundant fast (multi-GBps, &lt;&lt;10 ns latency) serial links 
+running a primitive switchable protocol. But I seem to be repeating
+myself... 
+
+<p>
+<a href="0629.html#0658qlink3"> &gt; running conventional apps in a virtual machine.  At any rate, Redmond</a><br>
+
+<p>
+As I said you *could* run conventional apps, but not at practical
+speeds. It would be even less usable than <a href="http://www.bochs.com/">http://www.bochs.com/</a>
+
+<p>
+<a href="0629.html#0658qlink4"> &gt; designs for the hardware that is actually in use (big surprise), so they</a><br>
+<i> &gt; only context switch every millisecond or two.</i><br>
+ 
+<p>
+Context switches are intrinsically expensive if done on anything else
+than (bi)stack machines <a href="http://www.cs.cmu.edu/~koopman/stack_computers/">http://www.cs.cmu.edu/~koopman/stack_computers/</a> . 
+These cannot be adequately programmed in C-type languages.
+ 
+<p>
+<a href="0629.html#0658qlink5"> &gt; They haven't gotten around to re-writing the entire OS this way yet, but</a><br>
+
+<p>
+Thanks god, or OpenSource OSses would be in trouble ;)
+
+<p>
+<a href="0629.html#0658qlink6"> &gt; everything new *is* done that way.  In Office 2000, for instance, every</a><br>
+<i> &gt; spreadsheet cell is indeed an object (and so is every other recognizeable</i><br>
+<i> &gt; program element).  The same goes for ADO, MTS, and recent versions of most</i><br>
+
+<p>
+Yes, but are these asynchronous objects?
+
+<p>
+<a href="0629.html#0658qlink7"> &gt; On a modern CPU a context switch isn't any big deal.  You don't want to do</a><br>
+
+<p>
+No, it is a very big deal because you have to save the context, and
+there is a lot of it. Register sets, stack frames, you name it. You
+might not notice the machinery for the overhead and the introduced
+delays in a 50 MTransistor bloatware CPU, but we're not talking about 
+anysuch. You certainly can't beat context switch times in a modern
+MISC CPU. 
+
+<p>
+<a href="0629.html#0658qlink8"> &gt; it every other instruction, but there isn't any good reason to do that in</a><br>
+<i> &gt; the first place.  You can certainly do it anywhere there is a reason to</i><br>
+<i> &gt; without having to worry about it affecting your performance.</i><br>
+ 
+<p>
+Of course context switching is a bad idea, but we're using it only to
+simulate something essentially parallel. After all, the same code
+should run on a single-node and multi-node machine, right?
+ 
+<p>
+<a href="0629.html#0658qlink9"> &gt; &gt; Multithreading!=asynchronous message passing on many tiny objects.</a><br>
+<i> &gt; &gt; We're talking about several thousands primitive (few kBytes) objects</i><br>
+<i> &gt; &gt; which send message packets which are routed by hardware directly --</i><br>
+<i> &gt; &gt; while the originator code may or may not wait for the ack/result</i><br>
+<i> &gt; &gt; to arrive. If this exists at all, it is academic curiousity at best</i><br>
+<i> &gt; &gt; (Thinking Machines might qualify, though I really doubt they exploited</i><br>
+<i> &gt; &gt; their options fully every time).</i><br>
+<i> &gt; </i><br>
+<i> &gt; It doesn't exist because there is no reason to do it.  The current model</i><br>
+
+<p>
+Of course there is a reason: we need to migrate to massively parallel
+hardware yet to keep our apps for the time being, remember?
+
+<p>
+<a href="0629.html#0658qlink10"> &gt; does exactly the same thing, but the objects are 10-100 times as big and</a><br>
+<i> &gt; which communicate about 10% as often.  Asynchronous calls are used whenever</i><br>
+<i> &gt; they actualy do something for you (in most cases they don't work, because</i><br>
+<i> &gt; you can't proceed witht he current operation until you get your results</i><br>
+<i> &gt; back).</i><br>
+ 
+<p>
+This is strange, for the world is an intrinsically parallel
+place. Many things are happening simultaneously, and are only coupled
+locally, if at all. This is most naturally expressed as a large number 
+of asynchronous objects which are most naturally run on a large
+parallel machine.
+ 
+<p>
+If you think that the most of the world is sequential, you must be a
+programmer ;)
+
+<p>
+<a href="0629.html#0658qlink11"> &gt; Or, to put it another way, the reason current apps wouldn't benifit from</a><br>
+<i> &gt; your fast chip/small memory parallel processing architecture is because most</i><br>
+<i> &gt; of the tasks they do are inherently linear, not because they are poorly</i><br>
+<i> &gt; written.  The only way to speed up a linear process is to give it a single</i><br>
+<i> &gt; very fast thread of execution.  That's why massively parallel machines are</i><br>
+<i> &gt; generally reserved for inherently parallel sorts of computation.</i><br>
+
+<p>
+Sorry, but this is nonsense. That particular machine by my desk is
+running ~100 processes, each of which even having some massively parallel
+aspects. There shouldn't be more than one process/CPU in most cases,
+and hence there is no need to for context switching, nor MMU for
+address space protection (nor cache, because the stuff is on-die).
+
+<p>
+Searching is intrinsically parallel, so is rendering, so is neural
+DSP, so is simulation of any kind. While I type this into emacs 
+sequentially, don't tell me GC can't profit from a little 
+parallelism, or the GUI, or the mp3 process in the background, 
+the file system reindexing,  the web server, the molecular 
+dynamics process, the FASTA search, the parallel make, etc. All this
+off the top of my head, there is surely lots more to it.
+
+<p>
+<a href="0629.html#0658qlink12"> &gt; Now, if you take a close look at modern PC architectures you'll see that</a><br>
+<i> &gt; there is an emerging trend towards increasing parallelism in the areas where</i><br>
+<i> &gt; it is usefull.  Servers often have multiple CPUs, since they have to handle</i><br>
+
+<p>
+There is no noticeable parallelism in the modern PC but in the
+CPU. Also, I wouldn't say that little parallelism is in there 
+because it is particularly useful. People wouldn't be building
+Beowulfs if one could purchase them on the free market, right?
+
+<p>
+<a href="0629.html#0658qlink13"> &gt; many different requests simultaneously.  Video subsystems often incorporate</a><br>
+
+<p>
+In absence of crossbars to memory, SMPs suck massively. Global shared
+memory is a myth anyway, so we'd better get used to message-passing
+anyway. 
+
+<p>
+<a href="0629.html#0658qlink14"> &gt; several DSPs, and the trend seems to be towards using more and more of them.</a><br>
+
+<p>
+There are no parallel DSP arrays in any PC video subsystem I am aware
+of. In fact I cannot readily think of any DSP array applications
+anywhere in the mainstream.
+
+<p>
+<a href="0629.html#0658qlink15"> &gt; With modems, sound cards and other specialized functions turning into</a><br>
+<i> &gt; software for DSP chips, it would not be at all surprising if the PC of the</i><br>
+
+<p>
+Right now people attempt to reduce hardware prices by moving
+functionality into software. See Windows printers, memory mapped
+video, etc. 
+
+<p>
+<a href="0629.html#0658qlink16"> &gt; future had a large array of DSPs for parallel-processing tasks.  However, it</a><br>
+<i> &gt; will still need that fast Pentium-whatever chip for handling more linear</i><br>
+<i> &gt; jobs in a timely fashion.</i><br>
+
+<p>
+Non sequitur. A pentium is a legacy processor if I ever saw one. There 
+is absolutely no need for a dedicated head in a lattice of modern
+DSPs. 
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0659.html">[ Next ]</a><a href="0657.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0629.html">Billy Brown</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0666.html">Billy Brown</a>
+</ul>
+</body></html>

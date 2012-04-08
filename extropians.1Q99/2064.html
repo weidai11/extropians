@@ -1,0 +1,115 @@
+<!-- received="Fri Feb 19 08:33:53 1999 MDT" -->
+<!-- sent="Fri, 19 Feb 1999 08:33:09 -0600" -->
+<!-- name="Billy Brown" -->
+<!-- email="bbrown@conemsco.com" -->
+<!-- subject="RE: Is an SI possible with todays hardware?" -->
+<!-- id="001001be5c14$c79589c0$352501c0@mfg130" -->
+<!-- inreplyto="3.0.1.32.19990218231819.0069fa14@coastside.net" -->
+<!-- version=1.10, linesinbody=71 -->
+<html><head><title>extropians: RE: Is an SI possible with todays hardware?</title>
+<meta name=author content="Billy Brown">
+<link rel=author rev=made href="mailto:bbrown@conemsco.com" title ="Billy Brown">
+</head><body>
+<h1>RE: Is an SI possible with todays hardware?</h1>
+Billy Brown (<i>bbrown@conemsco.com</i>)<br>
+<i>Fri, 19 Feb 1999 08:33:09 -0600</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2064">[ date ]</a><a href="index.html#2064">[ thread ]</a><a href="subject.html#2064">[ subject ]</a><a href="author.html#2064">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2065.html">[ Next ]</a><a href="2063.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2056.html">Jeff Davis</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Jeff Davis wrote:
+<br>
+<a href="2056.html#2064qlink1">&gt; 	Would it be possible to construct a self-enhancing AI</a><br>
+<i>&gt; with today's hardware?</i><br>
+<i>&gt;</i><br>
+<i>&gt; 	I'm not asking if the software is available.  Nor the</i><br>
+<i>&gt; electrical power.  Nor the money.  Nor whether you could cool</i><br>
+<i>&gt; it to prevent overheating.  Rather I'm thinking more about</i><br>
+<i>&gt; whether memory densities and processor densities and speeds</i><br>
+<i>&gt; could be assembled in sufficient quantities in a small enough</i><br>
+<i>&gt; space so that inter-element communication speed wouldn't</i><br>
+<i>&gt; bottleneck the whole affair..</i><br>
+
+<p>
+A very interesting question!
+
+<p>
+<a href="2056.html#2064qlink2">&gt; 	To narrow the question down some, consider the following:</a><br>
+<i>&gt;</i><br>
+<i>&gt; 	A disk-shaped assembly, with coolant flow through the</i><br>
+<i>&gt; faces of the disk.  Hardware density 50 percent, ie. half</i><br>
+<i>&gt; hardware half coolant passages.  Hardware in quantities to</i><br>
+<i>&gt; support a seed AI plus additional to support an SI according</i><br>
+<i>&gt; to the following human-equivalent definition: a thousand-fold</i><br>
+<i>&gt; increase in synaptic quantities, a thousand-fold increase in</i><br>
+<i>&gt; synaptic firing rates, with memory appropriate to support</i><br>
+<i>&gt; this capability level..</i><br>
+<i>&gt;</i><br>
+<i>&gt; 	Could it be built?  And if so, would the disk be ten</i><br>
+<i>&gt; meters thick by a hundred across?  A hundred meters by a</i><br>
+<i>&gt; thousand? Two hundred by five thousand?</i><br>
+
+<p>
+The fastest neural net system I am familiar with is Genobyte's CAM-Brain
+Machine (CBM) system (see <a href="http://www.genobyte.com/cbm.html">http://www.genobyte.com/cbm.html</a>).  It uses an
+array of 72 FPGA chips to simulate 1,152 simplified neurons, which doesn't
+sound like much.  However, the designers have taken advantage of its
+electronic nature to allow it to rapidly switch between different sets of
+neurons.  In effect, it can simulate 37,000,000 simplified neurons running
+at roughly human speed, or 1,152 neurons running at 10 MHz, or anything in
+between those two extremes.
+
+<p>
+It looks to me like you could fit two of these devices into a standard 6'
+hardware cabinet, with room left over for power supply and networking
+equipment.  Each module needs 400 MB/sec of bandwidth for communicating with
+neighboring modules, so that's 800 MB/sec per cabinet, so we could plausibly
+link 100 or so cabinets into a closely-coupled system using fast fiber-optic
+connections.  That means we top out at around 10^9 well-connected neurons
+(and simplified ones, at that).
+
+<p>
+Now, you should be able to get a larger system than that by subdividing the
+artificial brain into functional units, with   are internally well-connected
+but have a lower volume of communication with other functional units.  I'm
+not sure what volume of data transfer you need to allow - maybe Anders could
+shed some light on what the situation looks like in human brains?
+
+<p>
+At any rate, I would think you could get another order of magnitude in scale
+this way.  If you allow a couple of years to build a specialized, parallel
+networking system we should be able to increase that to hundreds of
+functional units, and probably increase the size of a functional unit by
+another order of magnitude as well.  That gives us maybe 10^12 simplified
+neurons to work with, at a cost of several billion dollars.
+
+<p>
+For comparison, the human brain has around 10^11 neurons, each of which
+probably does a lot more information processing than the simplified ones
+used in neural net machines.  So for a few billion dollars we could make
+something with hardware roughly equivalent to the human brain.  That puts
+your SI-capable hardware well out of reach for pure neural-net machines.
+
+<p>
+Does anyone see another approach that might work?
+
+<p>
+Billy Brown, MCSE+I
+<br>
+bbrown@conemsco.com
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2065.html">[ Next ]</a><a href="2063.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2056.html">Jeff Davis</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

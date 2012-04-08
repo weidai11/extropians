@@ -1,0 +1,320 @@
+<!-- received="Sat Feb  1 16:43:14 1997 MDT" -->
+<!-- sent="Sun, 2 Feb 1997 00:19:33 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Paul M. Churchland cot'd (II)" -->
+<!-- id="Pine.SOL.3.91.970201235717.16810B-100000@sun2" -->
+<!-- inreplyto="" -->
+<title>extropians: Paul M. Churchland cot'd (II)</title>
+<h1>Paul M. Churchland cot'd (II)</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 2 Feb 1997 00:19:33 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2072">[ date ]</a><a href="index.html#2072">[ thread ]</a><a href="subject.html#2072">[ subject ]</a><a href="author.html#2072">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2073.html">Eliezer Yudkowsky: "Re: Free Will"</a>
+<li> <b>Previous message:</b> <a href="2071.html">Michael Lorrey: "Re: ECON: What Jim Legg doesn't understand"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+[ Notice: I haven't checked the formulas, which appear to be minusculy<br>
+  garbled, moreover phi and psi angle symbols have been used<br>
+  inconsistantly. However, these points do not at all affect his<br>
+  course of argumentation -- 'gene ]<br>
+<p>
+3. Sensorimotor coordination<br>
+<p>
+Let me begin by suggesting that vertically connected laminar structures<br>
+are one of evolution's simplest solutions to a crucial type of problem,<br>
+one that any sensorimotor system beyond the most rudimentary must<br>
+somehow solve. In order to appreciate this type of problem, let us<br>
+consider a schematic creature of a deliberately contrived simplicity.<br>
+<p>
+<p>
+   [ sketch of a single-armed crablet omitted ]<br>
+<p>
+                   # a,b<br>
+                    \<br>
+                     \                # food<br>
+<i>                   |  \               * eyes (triangulate food,</i><br>
+<i>                   |   \  \phi                angles alpha, beta)</i><br>
+<i>                   |    \__/  x_e, y_e</i><br>
+<i>                   |     \/</i><br>
+<i>                   |     /  &lt;-- arm, two segments, each 7 units long</i><br>
+<i>                   |    /</i><br>
+<i>                   |   /</i><br>
+<i>                   |  /  \theta</i><br>
+         \alpha    | / \        \beta<br>
+________*__________|/___|_____*______________<br>
+                   0,0<br>
+        left eye              right eye<br>
+                   arm base<br>
+<p>
+<p>
+             Figure 2<br>
+<p>
+Figure 2b is a plan view of a crab-like schematic creature (2a) with<br>
+two rotatable eyes and an extendable arm. If this equipment is to be<br>
+useful to the crab, the crab must embody some functional relationship<br>
+between its eye-angle pairs when an edible object is triangulated, and<br>
+its subsequent shoulder and elbow angles, so that the arm can assume a<br>
+position that makes contact with the edible target. Crudely, it must be<br>
+able to to grasp what it sees, wherever the seen object lies.<br>
+<p>
+We can characterize the required arm/eye relationship as follows. First<br>
+of all, let us represent the input (the pair of eye angles) by a point<br>
+in a two-dimensional sensory-system coordinate space or state space<br>
+(figure 3a). The output (the pair of arm angles) can also be represented<br>
+by an appropriate point in a separate two-dimensional motor state space<br>
+(figure 3a).<br>
+<p>
+180                            180  forearm angle \phi<br>
+<i>| right eye angle               |         |</i><br>
+<i>|     \beta                     |         |</i><br>
+<i>|                               |         |</i><br>
+<i>|                               |         |</i><br>
+<i>|...........*                   |         |</i><br>
+<i>|           .                   |         |</i><br>
+<i>|           .                   |         |</i><br>
+<i>|           .                   |         |.....*</i><br>
+<i>|           .                   |         |     .</i><br>
+<i>|           .                   |         |     .</i><br>
+<i>|           .                   |         |     .</i><br>
+<i>|____________________________  0|_________|__________________</i><br>
+0                         180   -90       0               180<br>
+     left eye angle \alpha           upper arm angle \theta<br>
+      sensory state space              motor state space<br>
+<p>
+We now need a function ot take us from any point in the sensory state<br>
+space to a suitable point in the motor state space, a function that will<br>
+coordinate arm-position with eye-position in the manner described. (I here<br>
+sketch the deduction of the relevant functions so that its origin will not<br>
+be a mystery, but the reader may leap past the algebra without any loss of<br>
+comprehension. The only point to remember is that we are deducing a suitable<br>
+function to take us from eye configurations to arm configurations.)<br>
+<p>
+The two eye angles (a,b) determine two lines that intersect at the seen<br>
+object. The coordinates (a,b) of that point (in real) space are given by<br>
+<p>
+    a = -4(tan \alpha + tan \beta)/(tan \alpha - tan \beta)<br>
+    b = -8(tan \alpha * tan \beta)/(tan \alpha - tan \beta)<br>
+<p>
+The tip of the arm must make contact with this point. Assuming that both<br>
+the forearm and upper arm have a fixed length of seven units, the elbow<br>
+will therefore have to lie at the intersection of two circles of radius<br>
+seven units: one centered at (a,b), and the other centered at (0,0) where<br>
+the upper arm projects from the crab's body. Solving for the relevant<br>
+intersection, the real-space elbow coordinates (x_e, y_e) are given by<br>
+<p>
+   x_e = ((49-((a^2+b^2)^2/4b^2)*(1-((a^2/b^2)/<br>
+         ((a^2/b^2)+?))))^0.5+(((a/b)*((a^2+b^2)/2b))/<br>
+         ((a^2/b^2)+1)^0.5))/((a^2/b^2)+1)^0.5<br>
+   y_e = (49-x_e^2)^0.5<br>
+<p>
+The three points in real space, (a,b), (x_e,y_e), (0,0), determine the<br>
+position of the arm, whose upper arm and forearm angles (theta, psi) are<br>
+finally given by<br>
+<p>
+   theta = tan^-1(y_e/x_e)<br>
+   psi   = 180-(\theta-tan^-1((b-y_e)/(a-x_e)))<br>
+<p>
+These are the desired coordinates of the arm in motor state space. The<br>
+reader will note that the assembled functions that yield them are rather<br>
+tangled ones.<br>
+<p>
+Tangled or not, the crab is drawn on the computer screen, such that its<br>
+final arm-position (drawn by the computer as output) is the specified<br>
+function of its eye-positions (entered by us as input), it it constitutes<br>
+a very effective and well-behaved sensorimotor system, especially if we<br>
+write the controlling program as follows.<br>
+<p>
+Let the program hold the crab's arm folded against its chest (at \theta=0,<br>
+\psi=180), until some suitable stimulus registers on the fovea of<br>
+both eyes. The arm is then moved from its initial state-space position<br>
+(0 deg, 180 deg), along a straight line in motor statet space, to its<br>
+computed target position in motor state space. This is the state-space<br>
+position at which in real space, the tip of the arm contacts the<br>
+triangulation point of the eyes. This arrangement produces a superficially<br>
+realistic system that reaches unerringly for whatever it sees, anywhere<br>
+within reach of its arm (figure 4a-c). [ several multiple-frame computer<br>
+renderings of the crab reaching for target omitted ]<br>
+<p>
+The algebraic presentation of the crab's sensorimotor transformation,<br>
+as represented in the six equations listed earlier, supplies no intuitive<br>
+conception of its overall nature. A geometrical presentation is much more<br>
+revealing. Let us therefore consider the projection of the active portion<br>
+of the crab's sensory state space (figure 5a) into the orthogonal grid of<br>
+its motor state space (figure 5b), as imposed by the function under<br>
+discussion. That is to say, for _every_ point in the displayed sensory grid,<br>
+we have plotted the corresponding arm-position within the motor grid.<br>
+<p>
+Here we can see at a glance the distortion of the vertical and the<br>
+horizontal lines of the sensory space, as projected into motor space. The<br>
+topological features of the sensory space are preserved, but its metrical<br>
+properties are not. What we see is a systematic transformation of <br>
+coordinates. (The heavy scored triangle and rectangle are drawn in solely <br>
+to help the reader locate corresponding positions in the deformed and the <br>
+undeformed grids. Note also that the left border or \beta-axis of figure <br>
+5a shrinks to the lef radial point in figure 5b, and that the top border <br>
+of figure 5a shrinks to the right radial point in figure 5b.)<br>
+<p>
+4 Coordinate tranformation: its physical implementation.<br>
+<p>
+The tranformation described above sustains effective and realistic<br>
+sensorimotor behaviour. But how could a real nervous system possibly<br>
+compute such a complex coordinate tranformation? It is not realistic<br>
+to expect it to compute this complex trigonometric function step by<br>
+step, as our computer simulation does. Nevertheless, given their<br>
+sophisticated sensorimotor coordination, biological systems somehow<br>
+must be computing transformations like these, and others more complex<br>
+still. How might they do it?<br>
+<p>
+Figure 5 suggests a surprisingly simple means. If we suppose that the<br>
+crab contains internal representations of both its sensory state space,<br>
+and its motor state space, then the following arrangement will effect<br>
+the desired tranformation. Let the crab's sensory state space be<br>
+represented by a physical grid of signal-carrying fibres, a grid that<br>
+is metrically deformed in real space in just the way displayed in figure<br>
+5b. Let its motor state space be represented by a second grid of fibres,<br>
+in undeformed orthogonal array. Position the first grid over the second,<br>
+and let them be connected by a large number of short vertical fibres,<br>
+extending from coordinate intersections in the sensory grid down to the<br>
+nearest coordinate in the underlying motor grid, as in figure 6.<br>
+<p>
+Suppose that the fibres of the sensory grid receive input from the eyes'<br>
+proprioceptive system, such that the position of each eye simulates a<br>
+unique fibre in the upper (deformed) grid. The left eye activates one<br>
+fibre from the right radial point, and the right eye activates one from<br>
+the left. Joint eye-position will thus be represented by a simultaneous<br>
+stimulation at the appropriate coordinate intersection in the upper grid.<br>
+<p>
+Underneath this point in the upper map lies a unique intersection in<br>
+the motor grid. Suppose that this intersecting pair of orthogonal motor<br>
+fibres, when jointly activated, induces the arm to assume the position that<br>
+is appropriate to the specific motor coordinate intersection where this<br>
+motor signal originates in the lower map.<br>
+<p>
+Happily, the relative metrical deformations in the maps have placed<br>
+in correspondence the appropriate points in the upper and lower maps.<br>
+We need now suppose only that the vertical connections between the sensory<br>
+grid and the motor grid function as "and-gates" or "threshold switches,"<br>
+so that a signal is sent down the vertical connection to the motor grid<br>
+exactly if the relevant sensory intersection point is simultaneously<br>
+stimulated by both of its intersecting sensory fibres. Such a system will<br>
+compute the desired coordinate transformations to a degree of accuracy<br>
+limited only by the grain of the two grids, and by the density of their<br>
+vertical connections. I call such a system a _state-space sandwich_.<br>
+<p>
+Three points are worth noting immediately about the functional properties<br>
+of such an arrangement. First, it will remain partially functional despite<br>
+localized damage. A small lesion in either grid will produce only a partial<br>
+dyskinesia (two permanent "shadows" of fibre inactivity downstream from<br>
+the lesion), for which a shift of bodily position will usually compensate<br>
+(by bringing the target's state-space position out of the shadow).<br>
+<p>
+Indeed, if the position of the crab's eyes is coded not by the activation<br>
+of a single point in the upper grid, but rather by the activation of a<br>
+large area (set of points) centered around the 'correct' point, and if the<br>
+arm muscles respond by averaging the distributed output signal from the<br>
+now multiply-stimulated lower map, than an appropriate motor response will<br>
+be forthcoming even if the sandwich has suffered the scattered loss of a<br>
+great many cells. Such a system will be functionally persistent despite<br>
+widespread cell damage. The quality of the sensorimotor coordination will<br>
+be progressively degraded under cell damage, but a roughly appropriate<br>
+motor response will still be forthcoming.<br>
+<p>
+Second, the system will be very, very fast, even with fibres of biological<br>
+conduction velocities (10 &lt; \nu &lt; 100 m/s). In a creature the size of a crab,<br>
+in which the total conduction path is less than 10 cm, this system will yield<br>
+a motor response in well under 10 milliseconds. In the crab-simulation<br>
+described earlier, my computer (doing its trigonometry within the software)<br>
+takes 20 times that interval to produce a motor response on-screen, and its<br>
+conduction velocities are on the order of the speed of light. Evidently,<br>
+the massively parallel architecture of the state-space sadwich buys a large<br>
+advantage in speed, even with vastly slower components.<br>
+<p>
+And third, the quality of of the crab's coordination will not be uniform<br>
+over its field of motor activity, since in the maximally deformed areas<br>
+of the sensory grid, small errors in sensory registration produce large<br>
+errors in the motor respose (see again figure 5b). Accordingly, the crab<br>
+is least well coordinated in the area close between its eyes, and to its<br>
+extreme right and left.<br>
+<p>
+All three of these functional properties are biologically realistic. And<br>
+the sandwich appears biologically realistic in one further respect: it is<br>
+relatively easy to imagine such a system being grown. Distinct layers can<br>
+confine distinct chemical gradients, and can thus guide distinct <br>
+morphogenetic processes. Accordingly, distinct topographical maps can <br>
+appear in closely adjacent layers. But given that the maps are so closely <br>
+contiguous, and assuming that they are appropriately deformed, the <br>
+problem of connecting them up so as to produce a functional system <br>
+becomes a trivial one: the solution is just to grow conductive elements <br>
+that are roughly orthogonal to the layers.<br>
+<p>
+Different creatures will have different means of locating objects, and<br>
+different motor systems to effect contact with them, but all of them will<br>
+face the same problem of coordinating positions in their sensory state space<br>
+with positions in their motor state space, and the style of solution here<br>
+outlined is evidently quite general in nature. The point to be emphasized<br>
+is that a state-space sandwich constitutes a simple and biologically <br>
+realistic means for effecting any two-dimensional ot two-dimensional <br>
+coordinate transformation, whatever its mathematical complexity, and <br>
+whatever features -- external or internal, abstract or concrete -- that <br>
+the coordinate axes may represent to the brain. If the transformation can <br>
+be graphed at all, a sandwich can compute it. The sensorimotor problem <br>
+solved above is merely a transparent example of the general technique at <br>
+work.<br>
+<p>
+Switching now from functional to structural considerations, I hope it is<br>
+apparent that, beyond the issue of functional realism, the system of<br>
+interconnected maps in figure 6 is suggestively similiar to the known<br>
+physical structure of typical laminar cortex, including the many topographic<br>
+maps distributed across the cerebral surface. In all of these areas, inputs<br>
+address a given layer of cells, which layer frequently embodies a metrically<br>
+deformed topographic map of something-or-other. And outputs leave the area<br>
+from a different layer, with which the first layer enjoys massiver vertical<br>
+connections.<br>
+<p>
+I therefore propose the hypothesis that the scattered maps within the <br>
+cerebral cortex, and many subcerebral laminar structures as well, are all <br>
+engaged in the coordinate transformation of points in one neural state <br>
+space into points in another, by the direct interaction of metrically <br>
+deformed, vertically connected topographic maps. Their mode of <br>
+representation is state-space position; their mode of computation is <br>
+coordinate transformation; and both functions are simultaneously <br>
+implemented in a state-space sandwich.<br>
+<p>
+I can cite not a single cerebral area for which this functional hypothesis<br>
+is known to be true. To decide the issue would require knowing in some detail<br>
+both the topical and te metrical character of the topographic maps in each<br>
+of the contiguous laminae that constitute a given area of cerebral cortex.<br>
+In general, we still lack such information. However, there is a <br>
+phylogenetically older and simpler laminar structure located on the <br>
+dorsal midbrain whose upper and lower maps have both been decoded, and it <br>
+does display both the structural and the functional patter portrayed in <br>
+figure 6.<br>
+<p>
+The superior colliculus (figure 7) sustains the familiar reflex whereby the<br>
+eye makes an involuntary saccade so as to foveate or to look directly at<br>
+any sudded change or movement that registers on the retina away from its<br>
+central high-resolution area of fovea. e ahve all had the experience of<br>
+being in a darkened movie theater when someone down in the front row left<br>
+suddenly ignites a match or lighter to light a cigarette. Every eye in the<br>
+house makes a ballistic saccade to fixate this brief stimulus, before<br>
+returning to the screen. This reflex is the work of the superiour colliculus.<br>
+Appropriately enough, this is sometimes called the 'visual grasp reflex.'<br>
+<p>
+[ to be continued. ciao, 'gene]<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2073.html">Eliezer Yudkowsky: "Re: Free Will"</a>
+<li> <b>Previous message:</b> <a href="2071.html">Michael Lorrey: "Re: ECON: What Jim Legg doesn't understand"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

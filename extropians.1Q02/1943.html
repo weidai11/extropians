@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>extropians: Re: Singularity and AIs (was: We're stuck with each other)</title>
+<meta name="Author" content="Robert J. Bradbury (bradbury@aeiveos.com)">
+<meta name="Subject" content="Re: Singularity and AIs (was: We're stuck with each other)">
+<meta name="Date" content="2002-01-27">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Singularity and AIs (was: We're stuck with each other)</h1>
+<!-- received="Sun Jan 27 19:57:24 2002" -->
+<!-- isoreceived="20020128025724" -->
+<!-- sent="Sun, 27 Jan 2002 18:56:50 -0800 (PST)" -->
+<!-- isosent="20020128025650" -->
+<!-- name="Robert J. Bradbury" -->
+<!-- email="bradbury@aeiveos.com" -->
+<!-- subject="Re: Singularity and AIs (was: We're stuck with each other)" -->
+<!-- id="Pine.LNX.4.10.10201271835280.3415-100000@server.aeiveos.com" -->
+<!-- charset="US-ASCII" -->
+<!-- inreplyto="Pine.GSO.4.21.0201271453010.5742-100000@earth" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Robert J. Bradbury (<a href="mailto:bradbury@aeiveos.com?Subject=Re:%20Singularity%20and%20AIs%20(was:%20We're%20stuck%20with%20each%20other)"><em>bradbury@aeiveos.com</em></a>)<br>
+<strong>Date:</strong> Sun Jan 27 2002 - 19:56:50 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1944.html">Mike Lorrey: "Re: life test for planets"</a>
+<li><strong>Previous message:</strong> <a href="1942.html">Mike Lorrey: "Re: The Quest for the Purpose of Life"</a>
+<li><strong>In reply to:</strong> <a href="1931.html">Party of Citizens: "Re: Singularity and AIs (was: We're stuck with each other)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1932.html">animated silicon love doll: "Re: Singularity and AIs (was: We're stuck with each other)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1943">[ date ]</a>
+<a href="index.html#1943">[ thread ]</a>
+<a href="subject.html#1943">[ subject ]</a>
+<a href="author.html#1943">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+On Sun, 27 Jan 2002, Party of Citizens wrote:
+<br>
+<p><em>&gt; Can anyone explain the difference, if any, between an operation per
+</em><br>
+<em>&gt; second, a calculation per second and an instruction per second?
+</em><br>
+<p>It depends on the nature of the hardware.  As Dan indicated, &quot;FLOP&quot;
+<br>
+which stands for floating point operation per second has a pretty
+<br>
+standard definition.  The design of most floating point units usually
+<br>
+allowed the ADD, SUB and MULT operations to be carried out in the
+<br>
+same period of time.  This used to be in 1 clock cycle, though I think in
+<br>
+most CPUs today they take several cycles.  DIV typically took a bit
+<br>
+longer.  I don't know if anyone ever designed a floating point unit
+<br>
+where they put enough hardware into it that the DIV executed in one
+<br>
+clock cycle as well (Google might know...).
+<br>
+<p>Now on the older hardware particularly the difference between an
+<br>
+instruction per second and a (Floating) &quot;operation per second&quot;
+<br>
+was significant.  On PDP-11's the clock cycle time was 300 ns
+<br>
+and that was how long it took for most integer instructions
+<br>
+(int-ADD, SUB, MOV, etc.).  So if you were just executing integer
+<br>
+code, you could get 1/3 MIPS out of the CPU.  Floating point
+<br>
+operations took several cycles, so you usually got more like
+<br>
+less than 1/6 MFLOPS.  So &quot;IPS&quot; were not generally equal to &quot;FLOPS&quot;.
+<br>
+On modern CPUs I think there is enough floating point hardware
+<br>
+and the CPUs are so pipelined that I think the difference is
+<br>
+less pronounced.
+<br>
+<p>Now &quot;calculations per second&quot; gets into the nature of the machine.
+<br>
+For general purpose computers, its just IPS or FLOPS, but in
+<br>
+special purpose computers it is more complex.
+<br>
+<p>Chesire I think asked what a GRAPE was -- that a special purpose
+<br>
+&quot;GRAvity PipelinE&quot; computer that was designed by a group in Japan
+<br>
+to do just the gravity calculation.  It did the calculation in hardware
+<br>
+and was massively parallel, There have now been 5 or 6 generations of them,
+<br>
+with each generation being faster.  It is used to simulate things like dust
+<br>
+clouds collapsing into stars, billions of stars collapsing into galaxies,
+<br>
+two galaxies colliding with each other, etc.  Since the fundamental execution
+<br>
+unit is the entire gravity calculation (I'm unsure of how many MULTs/ADDs/EXP, etc.
+<br>
+this is) -- comparison between GRAPEs would be measured in GrvtyCalcsPS.
+<br>
+However, I think they generally figured out how many FLOPS this was
+<br>
+equivalent to and so they &quot;rated&quot; GRAPES like other computers (GFLOPS &amp; TFLOPS).
+<br>
+For most of the last decade they've been the most powerful computers on
+<br>
+the planet in terms of raw throughput (though for a very special
+<br>
+application).
+<br>
+<p>Robert
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1944.html">Mike Lorrey: "Re: life test for planets"</a>
+<li><strong>Previous message:</strong> <a href="1942.html">Mike Lorrey: "Re: The Quest for the Purpose of Life"</a>
+<li><strong>In reply to:</strong> <a href="1931.html">Party of Citizens: "Re: Singularity and AIs (was: We're stuck with each other)"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1932.html">animated silicon love doll: "Re: Singularity and AIs (was: We're stuck with each other)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1943">[ date ]</a>
+<a href="index.html#1943">[ thread ]</a>
+<a href="subject.html#1943">[ subject ]</a>
+<a href="author.html#1943">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Fri Nov 01 2002 - 13:37:36 MST
+</em></small></p>
+</body>
+</html>

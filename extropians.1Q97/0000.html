@@ -1,0 +1,83 @@
+<!-- received="Wed Jan  1 00:28:53 1997 MDT" -->
+<!-- sent="Tue, 31 Dec 1996 23:16:45 -0800 (PST)" -->
+<!-- name="John K Clark" -->
+<!-- email="johnkc@well.com" -->
+<!-- subject="CRYPTO: Small Cryptosystems" -->
+<!-- id="199701010716.XAA14807@well.com" -->
+<!-- inreplyto="" -->
+<title>extropians: CRYPTO: Small Cryptosystems</title>
+<h1>CRYPTO: Small Cryptosystems</h1>
+John K Clark (<i>johnkc@well.com</i>)<br>
+<i>Tue, 31 Dec 1996 23:16:45 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#0">[ date ]</a><a href="index.html#0">[ thread ]</a><a href="subject.html#0">[ subject ]</a><a href="author.html#0">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0001.html">mlbowli1@iupui.edu: "Poem: Event Horizon"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+-----BEGIN PGP SIGNED MESSAGE-----<br>
+<p>
+On Tue, 31 Dec 1996 Eugene Leitl &lt;Eugene.Leitl@lrz.uni-muenchen.de&gt; Wrote:<br>
+                   <br>
+<i>                 &gt;I've looked up IDEA, and indeed, it does not contain lookup                 </i><br>
+<i>                 &gt;tables                 </i><br>
+<p>
+True.<br>
+<p>
+<i>                   &gt;while DES, GOST, Blowfish, etc. do. </i><br>
+<p>
+Yes, but with Blowfish and RC4 an attacker does not know what the lookup <br>
+tables are.<br>
+<p>
+<p>
+<i>                   &gt;cryptosystems with opaque tables should win.</i><br>
+<p>
+                       <br>
+DES was made public by the National Security Agency (NSA) in 1975 and it  <br>
+certainly has lookup tables, but until 1990 nobody outside of the NSA   <br>
+understood why the table, called the S box, had the numbers in it that it did.  <br>
+They were truly opaque.<br>
+<p>
+In 1990 Biham and Shamir discovered Differential Cryptanalysis, rediscovered  <br>
+it really, because it was found that the S box in DES was optimized to make <br>
+Differential Cryptanalysis difficult. Clearly somebody at the NSA knew about <br>
+Differential Cryptanalysis in 1975 and probably much earlier, but the rest of<br>
+the world didn't know about it till 1990.<br>
+<p>
+In 1993 Matsui discovered Linear Cryptanalysis and it was found that the <br>
+S box in DES was NOT optimized to defend against it, in fact, if you picked <br>
+numbers  at random to fill the S box there is only a 9% chance it would work <br>
+as poorly against a Linear Cryptanalysis attack as the one the NSA gave us. <br>
+Either the  NSA  didn't know about Linear Cryptanalysis in 1975 or they<br>
+deliberately gave it a weakness.<br>
+<p>
+Blowfish has something like an S box, but it is key dependent so is unknown  <br>
+to an attacker. The very simple RC4 algorithm generates a lookup table from  <br>
+the key too, and then constantly mutates it as you use it, this  makes using <br>
+Cryptanalysis much more difficult, perhaps impossible.<br>
+<p>
+<p>
+                                            John K Clark      johnkc@well.com<br>
+<p>
+-----BEGIN PGP SIGNATURE-----<br>
+Version: 2.6.i<br>
+<p>
+iQCzAgUBMsoOan03wfSpid95AQHvfwTw6jzSh2Pj6QoL8EUz9OJkwiNO/Vv9q0Hl<br>
+0m8Q9fi4szHhs8moZppb8sgkgS1k2RbOtiEsr9CXq1t/oT7J9A+F9Ql0YngbwjTJ<br>
+MfNakEa6ejqZPLNBQaBs34ZLUqqRLVPaYPtr0mLJ/nYqKoVk226HQFwjgMo9o0Ix<br>
+nwAPl79JRN/CSF3XpMkeba6R+uz8nrZcDQjEMRozgZ/nOqaUnpw=<br>
+=/Zrr<br>
+-----END PGP SIGNATURE-----<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0001.html">mlbowli1@iupui.edu: "Poem: Event Horizon"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

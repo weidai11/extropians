@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: Compatibility</title>
+<meta name="Author" content="Eugene.Leitl@lrz.uni-muenchen.de (Eugene.Leitl@lrz.uni-muenchen.de)">
+<meta name="Subject" content="Re: Compatibility">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: Compatibility</h1>
+<!-- received="Sun Jan  7 12:46:49 2001" -->
+<!-- isoreceived="20010107194649" -->
+<!-- sent="Sun, 07 Jan 2001 20:45:04 +0100" -->
+<!-- isosent="20010107194504" -->
+<!-- name="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Compatibility" -->
+<!-- id="3A58C740.BE9A6EC2@lrz.uni-muenchen.de" -->
+<!-- inreplyto="5.0.2.1.0.20010107115606.009f03f0@earthlink.net" -->
+<strong>From:</strong> <a href="mailto:Eugene.Leitl@lrz.uni-muenchen.de?Subject=Re:%20Compatibility&In-Reply-To=&lt;3A58C740.BE9A6EC2@lrz.uni-muenchen.de&gt;"><em>Eugene.Leitl@lrz.uni-muenchen.de</em></a><br>
+<strong>Date:</strong> Sun Jan 07 2001 - 12:45:04 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0551.html">Jason Joel Thompson: "Re: Placebo effect not physical"</a>
+<li><strong>Previous message:</strong> <a href="0549.html">Anders Sandberg: "Re: headless horseman"</a>
+<li><strong>In reply to:</strong> <a href="0538.html">Barbara Lamar: "Compatibility"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0589.html">Adrian Tymes: "Re: riddles"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#550">[ date ]</a>
+<a href="index.html#550">[ thread ]</a>
+<a href="subject.html#550">[ subject ]</a>
+<a href="author.html#550">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Barbara Lamar wrote:
+<br>
+<p><em>&gt; &quot;Scalable Routing Design Principles&quot;
+</em><br>
+<p>I still think that by making locally-connected networks
+<br>
+with nodes aware of their geographical position the best
+<br>
+solution is geodetic routing. Imagine the planet covered
+<br>
+with a slab of space containing static or mobile routers
+<br>
+of (time-/space-) varying density, which route via a kind 
+<br>
+of 3d-Bresenham (actually, its higher-dimensional homologue, 
+<br>
+since each node sees more others than the nodes on a 3d 
+<br>
+lattice). To allow cut-through, you have to be able to 
+<br>
+decide which space cone to choose to repeat to, 
+<br>
+while the packet header is still streaming past you 
+<br>
+(very short FIFO, if any), so the packet coding should 
+<br>
+be appropriate. Of course, you should allow store-and-forward 
+<br>
+as well, as otherwise too many packets get dropped if packet 
+<br>
+concentration/space volume spikes too high.
+<br>
+<p>For this to work, the node connectivity has roughly to 
+<br>
+approximate the geographic proximity relationship. If 
+<br>
+we do node-mutual time of flight &quot;triangulation&quot; 
+<br>
+(scare-crowed since providing not angle but distance 
+<br>
+constraints), the nodes can act as a global positioning 
+<br>
+system as well as a nuke-quality time standard (if
+<br>
+you see a lot of high-resolution clocks, you average out
+<br>
+the drift). Best way to implement this would be obviously 
+<br>
+by using forthcoming digital pulse radio, which is very 
+<br>
+good for high-precision realtime positioning service as 
+<br>
+well as offering excellent utilization of bandwidth, plus 
+<br>
+compatibility with existing spectrum allocation (digital 
+<br>
+pulse radio ultrabroadband looks a lot like white noise 
+<br>
+background of relatively low intensity, so it doesn't jam
+<br>
+but degrades).
+<br>
+<p>This is especially suitable to a cloud of LEO satellites
+<br>
+(or a large number of stratospheric platforms) with 
+<br>
+line-of-sight laser and wireless (constant average
+<br>
+density of mobile nodes), as well as cellular packet 
+<br>
+switched networks (static nodes, highest density in 
+<br>
+urban areas). But you should be able to use TOF measurements 
+<br>
+on legacy copper and fiber, too.
+<br>
+<p>But wireless and LoS laser will get there first, obviously.
+<br>
+A from scratch global network doesn't have to deal with legacy
+<br>
+nor (overhead-riddled) packet accounting with other networks. 
+<br>
+It could wrap legacy protocols, so both would coexist on the 
+<br>
+same infrastructure, slowly phasing out legacy stuff as TCP/IP.
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0551.html">Jason Joel Thompson: "Re: Placebo effect not physical"</a>
+<li><strong>Previous message:</strong> <a href="0549.html">Anders Sandberg: "Re: headless horseman"</a>
+<li><strong>In reply to:</strong> <a href="0538.html">Barbara Lamar: "Compatibility"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0589.html">Adrian Tymes: "Re: riddles"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#550">[ date ]</a>
+<a href="index.html#550">[ thread ]</a>
+<a href="subject.html#550">[ subject ]</a>
+<a href="author.html#550">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:17 MDT</em>
+</em>
+</small>
+</body>
+</html>

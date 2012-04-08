@@ -1,0 +1,364 @@
+<!-- received="Wed Sep  4 11:35:45 1996 MST" -->
+<!-- sent="Wed, 4 Sep 1996 19:34:16 +0200 (MET DST)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Zen and the Art of Creating Life" -->
+<!-- id="Pine.SOL.3.91.960904193258.26483D-100000@sun3" -->
+<!-- inreplyto="" -->
+<title>extropians: Zen and the Art of Creating Life</title>
+<h1>Zen and the Art of Creating Life</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Wed, 4 Sep 1996 19:34:16 +0200 (MET DST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#769">[ date ]</a><a href="index.html#769">[ thread ]</a><a href="subject.html#769">[ subject ]</a><a href="author.html#769">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0770.html">Max More: "MEDIA: TV filming of Extropy Web site: HELP WANTED!"</a>
+<li> <b>Previous message:</b> <a href="0768.html">Max More: "The Joys of Flesh (was: The Poor Masses)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+An Evolutionary Approach to Synthetic Biology: Zen and the Art<br>
+of Creating Life.<br>
+<p>
+(c) by Thomas S. Ray (ray@hip.atr.co.jp, ray@udel.edu), ART<br>
+ Human Information Processing Research Laboratories, 2-2<br>
+ Hikaridai, Seika-cho, Soraku-gun, Kyoto, 619-02, Japan.<br>
+<p>
+(Ripped from "Artificial Life -- an overview" by Christopher G.<br>
+ Langton (ed.) MIT Press (1995), 340 pp., ISBN 0-262-12189-1 .<br>
+ All typos entirely my own. Please buy the treekiller (=processed<br>
+ cellulose cum pigments + additives) version, should it still be<br>
+ available. Worthwhile to note, that one _can_ arrive at<br>
+ diametrally differing conclusions while investigating the same<br>
+ set of facts. Bitrate's too low (he's somewhat loquacious),<br>
+ furthermore there is imo some amount of muddled thinkin'.<br>
+ Nevertheless on the whole extremely readable. Paricularly the<br>
+ 3.1 passage is very vividly done).<br>
+<p>
+Keywords -- evolution, ecology, synthesis, parallel computation,<br>
+ multi-cellularity, complexity, diversity<br>
+<p>
+Abstract -- Our concepts of biology, evolution and complexity<br>
+ are constrained by having observed only a single instance of<br>
+ life, life on earth. A truly comparative biology is needed to<br>
+ extend these concepts. Because we cannot observe life on other<br>
+ planets, we are left with the alternative of creating Artificial<br>
+ Life forms on earth. I will discuss the approach of inoculating<br>
+ evolution by natural selection into the medium of the digital<br>
+ computer. This is not a physical/chemical medium; it is a<br>
+ logical/informational medium. Thus, these new instances of<br>
+ evolution are not subject to the same physical laws as organic<br>
+ evolution (e.g. the laws of thermodynamics) and exist in what<br>
+ amounts to another universe, governed by the "physical laws" of<br>
+ the logic of the computer. This excercise gives us a broader<br>
+ perspective on what evolution is and what it does.<br>
+<p>
+ An evolutionary approach to synthetic biology consists of<br>
+ inoculating the process of evolution by natural selection into<br>
+ an artificial medium. Evolution is then allowed to find the<br>
+ natural forms of living organisms in the artificial medium.<br>
+ These are not models of life, but independant instances of life.<br>
+ This essay is intended to communicate a way of thinking about<br>
+ synthetic biology that leads to a particular approach: to<br>
+ understand and respect the natural form of the artificial<br>
+ medium, to facilitate the process of evolution in generating<br>
+ forms that are adapted to the medium, and to let evolution find<br>
+ forms and processes that naturally exploit the possibilities<br>
+ inherent to the medium. Examples are cited of synthetic biology<br>
+ embedded in the computational medium, where in addition to being<br>
+ an exercise in experimental comparative evolutionary biology, it<br>
+ is also a possible means of harnessing the evolutionary process<br>
+ for the production of complex computer software.<br>
+<p>
+1 Synthetic Biology<br>
+<p>
+Articial Life (AL) is the enterprise of understanding biology by<br>
+constructing biological phenomena out of artificial components,<br>
+rather than breaking natural life forms down into their<br>
+component parts. It is the synthetic rather than the<br>
+reductionist approach. I will describe an approach to the<br>
+synthesis of artificial living forms that exhibit natural<br>
+evolution.<br>
+<p>
+The umbrella of AI is broad and covers three principal<br>
+approaches to synthesis: in hardware (e.g. robotics,<br>
+nanotechnology), in software (e.g., replicating and evolving<br>
+computer programs), and in wetware (e.g., replicating and<br>
+evolving organic molecules, nucleic acids, or others). This<br>
+essay will focus on software synthesis, although it is hoped<br>
+that the issues discussed will be generalizable to any synthesis<br>
+involving the process of evoluton.<br>
+<p>
+I would like to suggest that software syntheses in AL could be<br>
+divided into two kinds: simulations and instantiations of life<br>
+processes. AL simulations represent an advance in biological<br>
+modeling, based on a bottom-up approach, which has been made<br>
+possible by the increase of available computational power. In<br>
+the older approaches to modeling of ecological or evolutionary<br>
+phenomena, systems of differential equations were set up that<br>
+expressed relationships between covarying quantities of entities<br>
+(i.e., genes, alleles, individuals, or species) in the<br>
+populations or communities.<br>
+<p>
+The new bottom-up approach creates a population of data<br>
+structures, with each instance of the data structure<br>
+corresponding to a single entity. These structures contain<br>
+variables defining the state of an individual. Rules are defined<br>
+as to how the individuals interact with one another and with the<br>
+environment. As the simulation runs, populations of these data<br>
+structures interact according to local rules, and the global<br>
+behaviour of the system emerges from these interactions. Several<br>
+very good examples of bottom-up ecological models have appeared<br>
+in the AL literature [33,91]. However, ecologists have also<br>
+developed this same approach independently of the AL movement<br>
+and have called the approach "individual-based" models [19,39].<br>
+<p>
+The second approach to software synthesis is what I have called<br>
+instantiation rather than simulation. In simulation, data<br>
+structures are created that contain variables that represent the<br>
+states of the entities being modeled. The important point is<br>
+that in simulation, the data in the computer is treated as a<br>
+representation of something else, such as a population of<br>
+mosquitoes or trees. In instantiation, the data in the computer<br>
+does not represent anything else. The data patterns in an<br>
+instantiation are considered to be living forms in their own<br>
+right and are not models of any natural life form. These can<br>
+form the basis of a comparative biology [57].<br>
+<p>
+The object of an AL instantiation is to introduce the natural<br>
+form and process of life into an artificial medium. This results<br>
+in an AL form in some medium other than carbon chemistry and is<br>
+not a model of organic life forms. The approach discussed in<br>
+this essay involves introducing the process of evolution by<br>
+natural selection into the computatonal medium. I consider<br>
+evolution to be the fundamental process of life and the<br>
+generator of living form.<br>
+<p>
+2 Recognizing Life<br>
+<p>
+Most approaches to defining life involve assembling a short set<br>
+of properties of life and then testing candidates on the basis<br>
+of whether or not they exhibit the properties on the list. The<br>
+main problem with this approach is that there is disagreement as<br>
+to what should be on the list. My private list contains only two<br>
+items: self-replication and open-ended evolution. However, this<br>
+reflects my biases as an evolutionary biologist.<br>
+<p>
+I prefer to avoid the semantic argument and take a different<br>
+approach to the problem of recognizing life. I was led to this<br>
+view by contemplating how I would regard a machine that<br>
+exhibited conscious intelligence at such a level that it could<br>
+participate as an equal in a debate like this. The machine would<br>
+meet neither of my two main criteria as to what life is, yet I<br>
+don't feel that I could deny that the process it contained was<br>
+alive.<br>
+<p>
+This means that there are certain properties that I consider to<br>
+be unique to life and whose presence in a system signify the<br>
+existance of life in that system. This suggests an alternative<br>
+approach to the problem. Rather than create a short list of<br>
+minimal requirements and test whether a system exhibits all<br>
+items on the list, one could create a long list of properties<br>
+unique to life and test whether a system exhibits _any_ item on<br>
+the list.<br>
+<p>
+To this softer, more pluralistic approach to recognizing life,<br>
+the objective is not to determine if the system is alive or not<br>
+but to determine if the system exhibits a "genuine" instance of<br>
+some property that is a signature of living systems (e.g.,<br>
+self-replication, evolution, flocking, consciousness).<br>
+<p>
+Whether we consider a system living because it exhibits some<br>
+property that is unique to life amounts to a semantic issue.<br>
+What is more important is that we recognize that it is possible<br>
+to create disembodied but genuine instances of specific<br>
+properties of life in artificial systems. This capability is a<br>
+powerful research tool. By separating the property of life that<br>
+we choose to study from the many other complexities of natural<br>
+living systems, we make it easier to manipulate and observe the<br>
+property of interest. The objective of the approach advocated in<br>
+this paper is to capture genuine evolution in an artificial<br>
+system.<br>
+<p>
+3 What Natural Evolution Does<br>
+<p>
+Evolution by natural selection is a process that enters into a<br>
+physical medium. Through iterated replication with selection of<br>
+large populations through many generations, it searches out the<br>
+possibilities inherent in the "physics and chemistry" of the<br>
+medium in which it is embedded. It exploits any inherent<br>
+self-organizing properties of the medium in which it is<br>
+embedded. It exploits any inherent self-organization of the<br>
+medium and flows into natural attractors realizing and fleshing<br>
+out their structure.<br>
+<p>
+Evolution never escapes from its ultimative imperative:<br>
+self-replication.  However, the mechanisms that evolution<br>
+discovers for achieving this ultimative goal gradually become so<br>
+convoluted and complex that the underlying drive can seem to<br>
+become superfluous. Some philosophers have argued that the<br>
+evolutionary theory as expressed by the phrase "survival of the<br>
+fittest" is tautological, in that the fittest are defined as<br>
+those that survive to reproduce. In fact, fitness is achieved<br>
+through innovation in engineering of the organism [81]. However,<br>
+there remains something peculiarly self-referential about the<br>
+whole enterprise. There is some sense in which life may be a<br>
+natural tautology.<br>
+<p>
+Evolution is both a defining characteristic and the creative<br>
+process of life itself. The living condition is a state that<br>
+complex physical systems naturally flow into under certain<br>
+conditions. It is a self-organizing, self-perpetuating state of<br>
+autocatalytically increasing complexity. The living component of<br>
+the physical system quickly becomes the most complex part of the<br>
+system, such that it reshapes the medium in its own image. Life<br>
+then evolves adaptations predominantly in relation to the living<br>
+components of the system, rather than the nonliving components.<br>
+Life evolves adaptations to itself.<br>
+<p>
+3.1 Evolution in Sequence Space<br>
+<p>
+Think of organisms as occupying a "genotype space" consisting of<br>
+all possible lengths of the elements of genetic system (i.e.,<br>
+nucleotids or machine instructions). When the first organism<br>
+begins replicating, a single self-replicating creature, with a<br>
+single sequence of certain length, occupies a single point in<br>
+the genotype space. However, as the creature replicates in the<br>
+environment, a population of creatures forms, and errors cause<br>
+genetic variation, such that the population will form a cloud of<br>
+points in the genotypes centered around the original point.<br>
+<p>
+Because the new prototypes that form the cloud are formed by<br>
+random processes, most of them are completely inviable and die<br>
+without reproducing. However, some of them are capable of<br>
+reproduction. These new genotypes persist, and, because some of<br>
+them are affected by mutation, the cloud of points spreads<br>
+further. However, not all of the viable genomes are equally<br>
+viable. Some of them discover tricks to replicate more<br>
+efficiently. These genotypes increase in frequency, causing the<br>
+population of the creatures at the corresponding points of the<br>
+genotype space to increase.<br>
+<p>
+Points in the genotype space occupied by greater populations of<br>
+individuals will spawn larger number of mutant offspring; thus<br>
+the density of the cloud of points in the genotype space will<br>
+shift gradually in the direction of the more fit genotypes. Over<br>
+time, the cloud of points will percolate through the genotype<br>
+space, either expanding outward as a result of random drift or<br>
+by flowing along fitness gradients.<br>
+<p>
+Most of the volume of this space represents completely inviable<br>
+sequences. These regions of the space may be momentarily and<br>
+sparsely occupied by inviable mutants, but the cloud will never<br>
+flow into the inviable regions. The cloud of genotypes may<br>
+bifurcate as it flows into habitable regions in different<br>
+directions, and it may split as large genetic changes spawn<br>
+genotypes in distant but viable regions of the space. We may<br>
+imagine that the evolving population of creatures will take the<br>
+form of wispy clouds flowing through this space.<br>
+<p>
+Now imagine for a moment the situation that there was no<br>
+selection. This implies that every sequence is replicated at an<br>
+equal rate. Mutation will cause the cloud of points to expand<br>
+outward, eventually filling the space uniformly. In this<br>
+situation, the complexity of the structure of the cloud of<br>
+points does not increase through time, only the volume that it<br>
+occupies. Under selection by contrast, through time the cloud<br>
+will take on an intrinsicate structure as it flows along fitness<br>
+gradients and percolates by drift through narrow regions of<br>
+viability in a largely uninhabitable space.<br>
+<p>
+Consider that the viable region of the genotype space is a very<br>
+small subset of the total volume of the space, but that it<br>
+probably exhibits a very complex shape, forming tendrils and<br>
+sheets sparsely permeating an otherwise empty space. The complex<br>
+structure of this cloud can be considered to be a product of<br>
+evolution by natural selection. This thought experiment appears<br>
+to imply that the intricate structure that the cloud of<br>
+genotypes may assume through evolution is fully deterministic.<br>
+Its shape is predefined by the physics and chemistry and the<br>
+structure of the environment, in much the same way that the form<br>
+of the Mandelbrot set is predetermined by its defining equation.<br>
+The complex structure of this viable space is inherent in the<br>
+medium and is an example of "order for free" [44].<br>
+<p>
+No living world will ever fill the entire viable subspace,<br>
+either at a single moment of time, or even cumulatively over its<br>
+entire history. The region actually filled will be strongly<br>
+influenced by the original self-replicating sequence and by<br>
+stochastic forces that will by chance push the cloud down a<br>
+subset of possible habitable pathways. Furthermore, coevolution<br>
+and ecological interactions imply that certain regions can only<br>
+be occupied when certain other regions are also occupied. This<br>
+concept of the flow of genotypes through the genotype space is<br>
+essentially the same as that discussed by Eigen [22] in the<br>
+context of "quasispecies". Eigen limited his discussion to<br>
+species of viruses, where it is also easy to think of sequence<br>
+spaces. Here, I am extending the concept beyond the bounds of<br>
+the species to include entire phylogenies of species.<br>
+<p>
+3.2 Natural Evolution in an Artifical Medium<br>
+<p>
+Until recently, life has been known as a state of matter,<br>
+particularly combinations of the elements carbon, hydrogen,<br>
+oxygen, nitrogen, and smaller quantities of many others.<br>
+However, recent work in the field of AL has shown that the<br>
+natural evolutionary process can proceed with great efficacy in<br>
+other media, such as the informational medium of the digital<br>
+computer [1,3,5,15,16,20,24,42,43,50,52,53,67,68,70-73,76,77,<br>
+80,88,90,96]. \footnote{In ref. I, Adami has used the<br>
+input-output facilities of the new Tierra languages to feed data<br>
+to creatures, and select for responses that result from single<br>
+computations, not contained in the seed genome. In ref. 7,<br>
+Brooks has created his own Tierra-like system, which he calls<br>
+Sierra. In his implementation, each machine instruction consists<br>
+of an opcode and an operand. Succesive instructions overlap such<br>
+that the operand of one instruction is interpreted as the opcode<br>
+of the next instruction. In ref. 88, "Tierra-like systems are<br>
+being explored for their potential applications in solving the<br>
+problem of predicting the dynamics of consumption of a single<br>
+energy carrying resource."}<br>
+<p>
+These new natural evolutions in artificial media are beginning<br>
+to explore the possibilities inherent in the "physics and<br>
+chemistry" of those media. They are organizing themselves and<br>
+constructing self-generating complex systems. While these new<br>
+living systems are still so young that they remain in their<br>
+primordial state, it appears that they have embarked on the same<br>
+kind of journey taken by life on earth and presumably have the<br>
+potential to evolve into levels of complexity that could lead to<br>
+sentient and eventually intelligent beings.<br>
+<p>
+If natural evolution in artifical media leads to sentient or<br>
+intelligent beings, they will likely be so alien that they will<br>
+be difficult to recognize. The sentient properties of plants are<br>
+so radically different from those of animals hat they are<br>
+generally unrecognized or denied by humans, and plants are<br>
+merely in another kingdom of the one great tree of organic life<br>
+on earth [69,74,87]. Synthetic organisms evolving in other<br>
+media, such as the digital computer, are not only not a part of<br>
+the same philogeny, but they are not even of the same physics.<br>
+Organic life is based on conventional materal physics, whereas<br>
+digital life exists in a logical, not material, informational<br>
+universe. Digital intelligence will likely be vastly different<br>
+from human intelligence, forget the Turing test.<br>
+<p>
+[..to be continued...]<br>
+<p>
+[ Brought to you by backbreaking &amp;<br>
+  copyright-violating slave labour effort. (MD5)signed: Aegyptian<br>
+  scribe slave (aka 'gene). Flames to /dev/null .] .<br>
+MD5 (tee:zen.txt) = F9F0DBB743A27A490E55FB089696A8E6<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0770.html">Max More: "MEDIA: TV filming of Extropy Web site: HELP WANTED!"</a>
+<li> <b>Previous message:</b> <a href="0768.html">Max More: "The Joys of Flesh (was: The Poor Masses)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

@@ -1,0 +1,59 @@
+<!-- received="Thu Nov 26 13:01:09 1998 MST" -->
+<!-- sent="Thu, 26 Nov 1998 15:01:32 -0500" -->
+<!-- name="Dan Clemmensen" -->
+<!-- email="Dan@Clemmensen.ShireNet.com" -->
+<!-- subject="Re: Broadcast vs. point-to-point" -->
+<!-- id="365DB39C.9CA51803@clemmensen.shirenet.com" -->
+<!-- inreplyto="365CB4B3.414C1417@clemmensen.shirenet.com" -->
+<!-- version=1.10, linesinbody=25 -->
+<html><head><title>extropy: Re: Broadcast vs. point-to-point</title>
+<meta name=author content="Dan Clemmensen">
+<link rel=author rev=made href="mailto:Dan@Clemmensen.ShireNet.com" title ="Dan Clemmensen">
+</head><body>
+<h1>Re: Broadcast vs. point-to-point</h1>
+Dan Clemmensen (<i>Dan@Clemmensen.ShireNet.com</i>)<br>
+<i>Thu, 26 Nov 1998 15:01:32 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1752">[ date ]</a><a href="index.html#1752">[ thread ]</a><a href="subject.html#1752">[ subject ]</a><a href="author.html#1752">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1753.html">[ Next ]</a><a href="1751.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1750.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Eugene Leitl wrote:
+<br>
+<a href="1750.html#1752qlink1">&gt; Dan Clemmensen writes:</a><br>
+<i>&gt; </i><br>
+<i>&gt;  &gt; Again, look at the usable bandwidth per node for the given solutions.</i><br>
+<i>&gt;  &gt; It's below 100Kbps. Radio is wonderful, but I want 100Mbps per node,</i><br>
+<i>&gt;  &gt; and I want a high node density.</i><br>
+<i>&gt; </i><br>
+<i>&gt; A full-duplex FastEthernet link gives you roughly twice that/port.</i><br>
+<i>&gt; Using multiple NICs/node gives you even more bandwidth, and one which</i><br>
+<i>&gt; scales up linearly with node size (ditto disk bandwidth, if each</i><br>
+<i>&gt; node is equipped with individual disk(s)). Multiple-port NICs, even</i><br>
+<i>&gt; with switching functionality, are not unprecendented. In fact, I'll</i><br>
+<i>&gt; build my 8-node Beowulf(cub) switchless, with at least 3 NICs/node</i><br>
+<i>&gt; early next year.  Much unexploited potential lies hidden in U-Net</i><br>
+<i>&gt; and 3D Now! SIMD instructions as well. Of course you can start</i><br>
+<i>&gt; instantly with MPI/PVM and PVFS, and use the cluster as a vanilla</i><br>
+<i>&gt; parallel supercomputer, using the advanced features peu a peu.</i><br>
+<i>&gt; </i><br>
+We are in voilent agreemment. wire and fiber beat radio by orders
+of magnitude wher they can be used. Therefore, use them when you can.
+My gut feeling is that two NICs per node is the optimal number unless
+the problems you are working on requires relatively high IPC/cycle ratio.
+For such problems, you'll have trouble no matter what.
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1753.html">[ Next ]</a><a href="1751.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1750.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

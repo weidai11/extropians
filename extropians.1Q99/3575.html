@@ -1,0 +1,128 @@
+<!-- received="Thu Mar 25 07:41:58 1999 MDT" -->
+<!-- sent="Thu, 25 Mar 1999 06:41:50 -0800 (PST)" -->
+<!-- name="Brian D Williams" -->
+<!-- email="talon57@well.com" -->
+<!-- subject="Re: MIL: Warfare Basics" -->
+<!-- id="199903251441.GAA24239@well.com" -->
+<!-- inreplyto="MIL: Warfare Basics" -->
+<!-- version=1.10, linesinbody=80 -->
+<html><head><title>extropians: Re: MIL: Warfare Basics</title>
+<meta name=author content="Brian D Williams">
+<link rel=author rev=made href="mailto:talon57@well.com" title ="Brian D Williams">
+</head><body>
+<h1>Re: MIL: Warfare Basics</h1>
+Brian D Williams (<i>talon57@well.com</i>)<br>
+<i>Thu, 25 Mar 1999 06:41:50 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3575">[ date ]</a><a href="index.html#3575">[ thread ]</a><a href="subject.html#3575">[ subject ]</a><a href="author.html#3575">[ author ]</a>
+<!-- next="start" -->
+<li><a href="3576.html">[ Next ]</a><a href="3574.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3570.html">Brian D Williams</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+
+<p>
+I wrote:
+
+<p>
+<a href="3570.html#3575qlink1">&gt;Actually this is incorrect, the military initially claimed</a><br>
+<i>&gt;something like a 90% plus success rate, then an MIT prof claimed</i><br>
+<i>&gt;a  0% rate. The revised rate was near 60%.</i><br>
+
+<p>
+This is related:
+
+<p>
+<a name="3608qlink1">Computer Arithmetic Tragedies
+
+<p>
+disasters caused by computer arithmetic errors
+Patriot Missile Failure
+
+</a>
+<p>
+On February 25, 1991, during the Gulf War, an American Patriot
+Missile battery in Dharan, Saudi Arabia, failed to intercept an
+incoming Iraqi Scud missile.  The Scud struck an American Army
+barracks and killed 28 soliders.  A report of the General
+Accounting office, GAO/IMTEC-92-26, entitled Patriot Missile
+Defense: Software Problem Led to System Failure at Dhahran, Saudi
+Arabia reported on the cause of the failure.  It turns out that the
+cause was an inaccurate calculation of the time since boot due to
+computer arithmetic errors.  Specifically, the time in tenths of
+second as measured by the system's internal clock was multiplied by
+1/10 to produce the time in seconds.  This calculation was
+performed using a 24 bit fixed point register.  In particular, the
+value 1/10, which has a non-terminating binary expansion, was
+chopped at 24 bits after the radix point.  The small chopping
+error, when multiplied by the large number giving the time in
+tenths of a second, lead to a significant error.  Indeed, the
+Patriot battery had been up around 100 hours, and an easy
+calculation shows that the resulting time error due to the
+magnified chopping error was about 0.34 seconds.  (The number 1/10
+equals 1/24+1/25+1/28+1/29+1/212+1/213+....
+In other words, the binary expansion of 1/10 is
+0.0001100110011001100110011001100....  Now the 24 bit register in
+the Patriot stored instead 0.00011001100110011001100 introducing an
+<pre>
+error of 0.0000000000000000000000011001100... binary, or about
+</pre>
+0.000000095 decimal.  Multiplying by the number of tenths of a
+second in 100 hours gives
+<br>
+0.000000095&amp;times;100&amp;times;60&amp;times;60&amp;times;10=0.34.)
+
+<p>
+ A Scud travels at about 1,676 meters per second, and so travels
+more than half a kilometer in this time.  This was far enough that
+the incoming Scud was outside the "range gate" that the Patriot
+tracked. Ironically, the fact that the bad time calculation had
+been improved in some parts of the code, but not all, contributed
+to the problem, since it meant that the inaccuracies did not
+cancel.
+
+<p>
+The following paragraph is excerpted from the GAO report.
+
+<p>
+The range gate's prediction of where the Scud will next appear is
+a function of the Scud's known velocity and the time of the last
+radar detection. Velocity is a real number that can be expressed as
+a whole number and a decimal (e.g., 3750.2563...miles per hour). 
+Time is kept continuously by the system's internal clock in tenths
+of seconds but is expressed as an integer or whole number (e.g.,
+32, 33, 34...).  The longer the system has been running, the
+larger the number representing time.  To predict where the Scud
+will next appear, both time and velocity must be expressed as real
+numbers.  Because of the way the Patriot computer performs its
+calculations and the fact that its registers are only 24 bits long,
+the conversion of time from an integer to a real number cannot be
+any more precise than 24 bits.  This conversion results in a loss
+of precision causing a less accurate time calculation.  The effect
+of this inaccuracy on the range gate's calculation is directly
+proportional to the target's velocity and the length of the the
+system has been running. Consequently, performing the conversion
+after the Patriot has been running continuously for extended
+periods causes the range gate to shift away from the center of the
+target, making it less likely that the target, in this case a
+Scud, will be successfully intercepted.
+
+
+<p>
+Brian
+<br>
+Member, Extropy Institute
+<br>
+www.extropy.org
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="3576.html">[ Next ]</a><a href="3574.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3570.html">Brian D Williams</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

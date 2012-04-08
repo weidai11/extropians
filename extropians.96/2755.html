@@ -1,0 +1,113 @@
+<!-- received="Fri Nov  8 13:38:51 1996 MST" -->
+<!-- sent="Fri, 8 Nov 1996 21:23:09 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Making the Most of What We Have" -->
+<!-- id="Pine.SOL.3.91.961108200436.29609G-100000@sun3" -->
+<!-- inreplyto="Pine.SOL.3.91N2x.961108173211.23285C-100000@hemul.nada.kth.se" -->
+<title>extropians: Re: Making the Most of What We Have</title>
+<h1>Re: Making the Most of What We Have</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Fri, 8 Nov 1996 21:23:09 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2755">[ date ]</a><a href="index.html#2755">[ thread ]</a><a href="subject.html#2755">[ subject ]</a><a href="author.html#2755">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2756.html">James Rogers: "Re: Universal Translators"</a>
+<li> <b>Previous message:</b> <a href="2754.html">Robin Hanson: "Cryptocosmology--Dirt does Not Compute?"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Fri, 8 Nov 1996, Anders Sandberg wrote:<br>
+<p>
+<i>&gt; On Thu, 7 Nov 1996, Hara Ra wrote:</i><br>
+<i>&gt; </i><br>
+<i>&gt; &gt; Thanks for a posting which mentions a much avoided topic re</i><br>
+<i>&gt; &gt; transhumanism and</i><br>
+<i>&gt; &gt; uploads - BUGS! If my experience with my PC is any guide, I will be wary</i><br>
+<i>&gt; &gt; of uploading for quite some time...</i><br>
+<i>&gt; </i><br>
+<i>&gt; Yes, creating a stable environment for uploads is a nontrivial problem.</i><br>
+<p>
+I think the most nontrivial problem might be to create an environment at <br>
+all capable to sustain an upload... Making it stable is easy in <br>
+comparison (actually, it's simply a side effect of the implementation <br>
+paradigm naturally suggesting itself  ;)<br>
+ <br>
+<i>&gt; We need a large number of processes that interact in a robust, efficient </i><br>
+<i>&gt; way (no, no upload can run as a single process - physics prevents that </i><br>
+<p>
+No, not even a single, biologically realistic neuron can be run in <br>
+realtime on a current single-processor machine, however capable. (Just <br>
+ask Joe Strout of MURG, he'll quote chapter &amp; verse).<br>
+ <br>
+A standard workstation class system (regardless, whether it has or <br>
+hasn't got an FPU) equates to about 100 realtime _simplistic toy_ <br>
+neurons (integer ops, shifts, primitive logics, lots of lookup tables, <br>
+etc.) Whether these toy neurons are equivalent to biologically realistic <br>
+neurons at some abstration level (translation procedure from raw voxel <br>
+data to labeled geometry, then functionality, then reverse-engineering <br>
+the according IAN circuit) is currently unknown (the big IF of uploading, <br>
+since we're up shit creek should we be forced to stick to actual wetware <br>
+geometry &amp; co). The only way increase the size of the simulation is to <br>
+increase memory bandwidth, which means going WSI (wafer scale integration <br>
+of CPU/RAM dies, since on-die accesses are orders of magnitude faster, burn <br>
+less power and don't need bond pads) really soon. Since die yield goes up <br>
+exponentially with die size, and we need a goodish amount of functional <br>
+dies/wafer (let's say at least 50%), this means dies must be small <br>
+(=simple). The smaller, the better.<br>
+<p>
+<i>&gt; powerful single processor systems, we have to go parallel) that can </i><br>
+<i>&gt; withstand errors, breakdowns and crashes.</i><br>
+<p>
+I don't think uploads will run on von-Neumann machines at all. They will <br>
+require nonalgorithmic virtual hardware, e.g. Integer Automaton Networks <br>
+(a form of ANNs), which will be mapped to extremely braindead molecular <br>
+CAMs (unless strong nanotech proves viable, and we can create complex, <br>
+compact computer 3d-lattice with better OPS/volume/Watt ratio).<br>
+<p>
+Such hardware can't crash (if anybody is interested in mapping IANs to <br>
+molCAM/quantum dot arrays, I can expand on that). Purely digital <br>
+sequential systems should be confined to hybrid use only, everything else <br>
+is much too dangerous.<br>
+<p>
+<i>&gt; For example, assume my brain is run on ten processor clusters and one</i><br>
+<i>&gt; crashes (because a nano-squirrel munched up the power cable?). How to</i><br>
+<i>&gt; handle it?  One natural solution would be to freeze the other nine</i><br>
+<i>&gt; clusters as soon as the error is detected (which takes a short time</i><br>
+<i>&gt; compared to my emulated mental processes) while error checking takes place</i><br>
+<i>&gt; (was the data sent to the other clusters corrupted before the crash? I</i><br>
+<i>&gt; don't want an involuntary digital ECT). Now we need to get the mental</i><br>
+<i>&gt; state of one tenth of my mind, either from backup or by backtracking, and</i><br>
+<i>&gt; place it on another processor cluster. Clearly nontrivial, especially</i><br>
+<i>&gt; since most of us don't want to loose too much of our minds when the lags</i><br>
+<i>&gt; on our networks become too much and out internal communications become</i><br>
+<i>&gt; asynchronus. </i><br>
+<i>&gt; </i><br>
+<i>&gt; The above example suggests that fine-grained parallelism is the way to go </i><br>
+<i>&gt; with our minds, we might even be able to stand a few emulated neurons </i><br>
+<i>&gt; crashing. </i><br>
+<p>
+While IANs do not crash, the hardware might die (molCAMs will slowly <br>
+deteriorate, requiring periodic hardware "upgrades" (which can occur <br>
+transparently incrementally)). However, we harly notice microstrokes, <br>
+even though they mean miniature neuron holocausts (several M of 'em, at <br>
+a guess). So probably no such elaborate exception handling (which might be <br>
+buggy itself, and certainly has negative impact on realtime response, <br>
+which is crucial e.g. in battle) is necessary.  <br>
+<p>
+_Finest_ - grain parallelism is the only option possible.<br>
+<p>
+'gene<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2756.html">James Rogers: "Re: Universal Translators"</a>
+<li> <b>Previous message:</b> <a href="2754.html">Robin Hanson: "Cryptocosmology--Dirt does Not Compute?"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

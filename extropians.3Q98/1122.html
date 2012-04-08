@@ -1,0 +1,272 @@
+<!-- received="Fri Jul 31 02:50:01 1998 MDT" -->
+<!-- sent="Thu, 30 Jul 1998 01:49:39" -->
+<!-- name="David C. Harris" -->
+<!-- email="dharris@best.com" -->
+<!-- subject="E-mail buffer overflow virus is a REAL threat!" -->
+<!-- id="3.0.5.16.19980730014939.3c072c50@shell3.ba.best.com" -->
+<!-- inreplyto="199807301327.JAA22006@gateway2.ey.com" -->
+<!-- version=1.10, linesinbody=201 -->
+<html><head><title>extropians: E-mail buffer overflow virus is a REAL threat!</title>
+<meta name=author content="David C. Harris">
+<link rel=author rev=made href="mailto:dharris@best.com" title ="David C. Harris">
+</head><body>
+<h1>E-mail buffer overflow virus is a REAL threat!</h1>
+David C. Harris (<i>dharris@best.com</i>)<br>
+<i>Thu, 30 Jul 1998 01:49:39</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1122">[ date ]</a><a href="index.html#1122">[ thread ]</a><a href="subject.html#1122">[ subject ]</a><a href="author.html#1122">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1123.html">[ Next ]</a><a href="1121.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1114.html">Doug Bailey</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1125.html">Eugene Leitl</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+<a name="1125qlink1">Normally messages about e-mail viruses are indeed hoaxes, but this one</a> is
+different.  If you have certain e-mail handling programs, including widely
+used programs from Microsoft and Netscape, you will be effected by any
+e-mail sent to you that is crafted to exploit this vulnerability.  In the
+process of receiving e-mail that has a special kind of long name for its
+MIME attachment, the e-mail receiving program will activate code
+<br>
+(instructions) written by a virus writer.  Although there are no reports of<br>
+such viruses being sent yet, if you have the wrong kind of e-mail program,
+you will be completely vulnerable to the any virus crafted to attack your
+program.  Security experts expect such e-mail viruses to be sent soon.
+
+<p>
+I am a computer programmer and had the title Systems Analyst at Syntex, the
+pharmaceutical company.  I will explain how this class of virus can cause
+havoc even without you intentionally running a program, running a Word
+macro, or opening an attachment.
+
+<p>
+If you want to jump straight to the article, or read it yourself, I've
+copied it exactly as published on the free Web site of the San Jose Mercury
+newspaper, whose URL I include below.  I am violating their copyright
+because of the gravity of this threat.  If in doubt about the authenticity
+of my copy of the article, browse the Mercury's site.  The Mercury is a
+fine source of computer and high tech reporting.  I hope they will treat my
+transgression as a form of advertising for their Web site and their "scoop"
+of this story.
+
+<p>
+First, not all e-mail programs are at risk: if you are using a Eudora mail
+reader, such as Eudora Lite or Eudora Pro, this virus cannot damage your
+<a name="1160qlink1">system.  You can read the reassurance at &lt;<a href="http://www.eudora.com">http://www.eudora.com</a>&gt;, near the
+</a>
+bottom of the long page.  But the problem is present in "Microsoft's
+Outlook Express and Outlook 98, and Netscape Communications Corp.'s
+Messenger Mail, which accompanies versions 4.x of the Communicator Web
+browser software. Other e-mail readers may be affected" (quoted from the
+article below).
+
+<p>
+Now, how can just an e-mail be used to attack a computer?  The e-mail
+reading program stores a piece of text (the name of the MIME attachment in
+this case) starting at a particular place in memory, called a "buffer".  A
+correctly written program checks that the text of the attachment name does
+not exceed some length.  But in this case, with some very widely used
+e-mail programs, the programmers failed to put in the code that prevents a
+long name from going past the normal end of the buffer.  This was the same
+kind of flaw that allowed the infamous "Morris worm" to take control of
+UNIX computers years ago, bringing down much of the Internet for a day or so.
+
+<p>
+So, how does a long name that goes past the normal end of buffer cause
+trouble? In these cases there are memory locations beyond the end of the
+buffer that the e-mail reading program expects to contain executable code
+<br>
+(instructions to do something normal).  But the virus writing "crackers"<br>
+(often called "hackers") carefully construct a VERY LONG name so that it<br>
+contains bytes of information that fall exactly where the executable code
+normally occurs.  The "good" instructions of the program get replaced by
+bytes from the long name.  The particular bytes of information are
+transmitted as part of a long name, but because they are placed in a
+location that the program "knows" will contain instructions, the bytes are
+treated as instructions.  The crafty virus writer will choose the bytes to
+be ABNORMAL CODE that, when executed, causes the e-mail program to go to
+and begin executing malevolent code the virus writer has stored still later
+in the actual MIME attachment.  That malevolent code can do anything that
+the virus writer chooses.
+
+<p>
+So, because of a failure to prevent buffer overflow, some e-mail programs
+are vulnerable to such subversion of their normal activities.  These
+failures to block buffer overflow are rare, and becoming rarer as
+programmers become more aware of this class of threats.  But apparently
+such failures ("bugs") are present today in some e-mail programs.  Security
+experts detected the problem first, but because some people might leak the
+news to virus writers, the security experts have publicized the problem and
+programmers are developing patches and new versions of the e-mail programs
+to eliminate the overflow possibility.
+
+<p>
+So what should you do?  If you are using one of the defective mail reading
+programs, check the Web site of the creators, who will post patches and
+instructions soon.  They understand the virulence of the threat.  Don't
+delay, because what I explained here is common knowledge among virus
+writers, and they may exploit these buffer overflow defects very soon.
+Take this virus scare seriously.  You may want to download a free copy of
+Eudora Light or purchase the full featured (and quite good) Eudora e-mail
+program.  Eudora's programmers protected their buffer and deserve the extra
+business that may come their way.
+
+<p>
+Hopefully, the security experts and authorities will be watching for "spam"
+that includes these very long, carefully constructed, MIME attachment
+names.  And hopefully they will find the sender(s) of such virus e-mail and
+prosecute them for damage done.  And hopefully both Microsoft and Netscape
+programmers will be more careful in the future.  But for now, if you are
+using certain e-mail programs, you are at risk.
+
+
+<UL>
+  <li>  David C. Harris
+    Palo Alto, California
+
+
+<hr>
+
+</UL>
+<br>
+Published Wednesday, July 29, 1998, in the San Jose Mercury News 
+
+<p>
+[For 7 more days the archived article will be available online at the
+source: &lt;<a href="http://www.mercurycenter.com/premium/business/docs/SECURE29.htm">http://www.mercurycenter.com/premium/business/docs/SECURE29.htm</a>&gt;]
+
+
+<p>
+           U.S. issues alert over e-mail flaw
+
+
+<p>
+Emergency bulletin calls problem extremely serious
+
+<p>
+BY DAVID L. WILSON
+<br>
+Mercury News Staff Writer 
+
+<p>
+The U.S. Energy Department's computer security team confirmed Tuesday that
+a significant security flaw exists in three of the most popular e-mail
+programs around that, left unrepaired, could have catastrophic consequences
+and urged users to repair or replace the software.
+
+<p>
+Corporate technology managers spent Tuesday frantically scrambling for more
+information about the flaw, which was first reported in the Mercury News.
+And users found it difficult to find the correct patches for the the
+security hole.
+
+<p>
+Software companies initially provided little additional technical
+information about the problem and no real fixes. Microsoft Corp., for
+example, offered patches that were determined to be ineffective and were
+subsequently withdrawn.
+
+<p>
+The flaw, which allows an outsider to send a booby-trapped e-mail message
+capable of executing commands on the user's computer --- anything from
+sending out thousands of e-mails in the user's name to erasing the hard
+drive --- exists in some of the most popular software in the world:
+Microsoft's Outlook Express and Outlook 98, and Netscape Communications
+Corp.'s Messenger Mail, which accompanies versions 4.x of the Communicator
+Web browser software. Other e-mail readers may be affected, but most
+researchers now believe that another commonly used program, Qualcomm
+Corp.'s Eudora, is safe. The flaw can be exploited on the most common
+computer operating systems.
+
+<p>
+The Computer Incident Advisory Capability, the Energy Department's team,
+headquartered at the Lawrence Livermore National Laboratory, declared in an
+emergency bulletin that the situation is extremely serious: ``We base this
+assessment on the ease with which the vulnerability can be exploited, the
+widespread use of the vulnerable e-mail/news readers and the potential for
+doing serious damage to a computer.''
+
+<p>
+Microsoft attempted to post patches for the hole in its products Monday,
+but technical problems kept most users from getting to them. Then the
+company discovered that the first set of patches didn't work. Anybody who
+downloaded the first set of patches is urged by the company to download
+them again, probably later this week. Alternatively, users can download a
+free copy of Eudora Light until a patched version of their favorite e-mail
+program is available.
+
+<p>
+Some users believed the story was incorrect because it is so similar to a
+well-known Internet hoax called the Good Times virus. Typically, a user
+gets an e-mail warning them to delete any e-mail with the subject ``Good
+Times'' because, if opened, the Good Times e-mail will reformat the hard
+drive. The warning message urges the recipient to ``send this to all your
+friends,'' creating a flood of unnecessary e-mail and chewing up system
+resources. 
+
+<p>
+Normally, e-mail alone can't do any damage to a system. But attackers can
+attach a file that's essentially a program to an e-mail message. If a user
+runs that program, it could do damage to the system, which is why system
+administrators warn users to avoid opening attachments from strangers.
+
+<p>
+But this latest flaw can be triggered in some cases without even opening
+the booby-trapped e-mail.
+
+<p>
+The problem can be exploited by assigning an exceptionally long file name
+--- sometimes hundreds of characters --- to an attachment. If the name is
+too long, it will overflow the e-mail program's buffer. At that point, any
+software code contained in that overflow can sometimes execute commands on
+the user's computer.
+
+<p>
+The problem is related to MIME capabilities, or Multipurpose Internet Mail
+Extensions, which let e-mailers work with items besides text. MIME headers
+tell the e-mail software how to treat the file. Older e-mail software that
+is not MIME-compliant is not vulnerable to the hole.
+
+<p>
+While no one believes this flaw has been exploited outside the laboratories
+where it's been researched for the past month, experts are urging users and
+computer system administrators to repair their systems as quickly as
+possible, on the assumption that ``black hat'' hackers will soon be
+exploiting the problem.
+
+<p>
+``I'm just scared that somebody is going to spam the world with this.
+Soon.'' said William J. Orvis, a security specialist with CIAC.
+
+<p>
+Computer system administrators around the world are studying the situation,
+trying to see what needs to be done.
+
+<p>
+``We don't normally comment on our internal systems, for security
+reasons,'' said Lew Wagner, senior manager of the corporate information
+security department at networking giant Cisco Systems Inc. Wagner, however,
+said the standard e-mail package used inside Cisco is not affected by the
+problem, adding there could be some people within the organization who are
+using something else.
+
+<p>
+``We're trying to make sure our 14,000 employees are not using any
+unauthorized applications,'' he said.
+
+<hr>
+<hr>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1123.html">[ Next ]</a><a href="1121.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1114.html">Doug Bailey</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1125.html">Eugene Leitl</a>
+</ul>
+</body></html>

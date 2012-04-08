@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: OT ASCII character question</TITLE>
+<META NAME="Author" CONTENT="KPJ (kpj@sics.se)">
+<META NAME="Subject" CONTENT="Re: OT ASCII character question">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: OT ASCII character question</H1>
+<!-- received="Wed Aug  2 15:31:30 2000" -->
+<!-- isoreceived="20000802213130" -->
+<!-- sent="Wed, 02 Aug 2000 23:31:35 +0200" -->
+<!-- isosent="20000802213135" -->
+<!-- name="KPJ" -->
+<!-- email="kpj@sics.se" -->
+<!-- subject="Re: OT ASCII character question" -->
+<!-- id="200008022131.XAA26731@color.sics.se" -->
+<!-- inreplyto="altamira@ecpi.com" -->
+<STRONG>From:</STRONG> KPJ (<A HREF="mailto:kpj@sics.se?Subject=Re:%20OT%20ASCII%20character%20question&In-Reply-To=&lt;200008022131.XAA26731@color.sics.se&gt;"><EM>kpj@sics.se</EM></A>)<BR>
+<STRONG>Date:</STRONG> Wed Aug 02 2000 - 15:31:35 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2434.html">[ Robert-Coyote ]: "Re: Research Fellowship rules?"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2432.html">Brian D Williams: "GUNS: Re: Brady Law has not affected homicide rates"</A>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2433">[ date ]</A>
+<A HREF="index.html#2433">[ thread ]</A>
+<A HREF="subject.html#2433">[ subject ]</A>
+<A HREF="author.html#2433">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+It appears as if altamira &lt;<A HREF="mailto:altamira@ecpi.com?Subject=Re:%20OT%20ASCII%20character%20question&In-Reply-To=&lt;200008022131.XAA26731@color.sics.se&gt;">altamira@ecpi.com</A>&gt; wrote:
+<BR>
+|
+<BR>
+|I would like to send e-mail containing some set theory symbols. Character
+<BR>
+|set ISO-8859-3 contains the symbols I need, but can I use this with
+<BR>
+|text-only e-mail or would I have to use HTML e-mail?
+<BR>
+|
+<BR>
+|I'd be most grateful for advice.
+<BR>
+<P>Most people don't have ISO-8859-3 fonts on their machines, but at least they
+<BR>
+get a message that some characters could not be displayed properly.
+<BR>
+OTOH, one can get all the fonts on the Internet.
+<BR>
+<P>I currently support ISO-8859-1, US-ASCII, ISO-646-SE, ISO-8859-2,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISO-8859-7, and ISO 2022-JP.
+<BR>
+<P>&lt;WARNING LEVEL=VERBOSE&gt;
+<BR>
+If you intend to send your e-mail over Internet your e-mail _must_ follow
+<BR>
+the Internet rules for e-mail messages.
+<BR>
+<P>Terminology
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You use a user agent (UA). It will probably add headers and give the
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e-mail to its local Message Transfer Agent (MTA), which makes sure
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the e-mail follows the Internet rules (hopefully) and sends it the
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;next MTA, ... and so on, until the receiver's MTA delivers to the
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recipient, which will read it with some UA.
+<BR>
+<P>The Internet rules state:
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;If both MTA's agree to support the same 8-bit character set, and the
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;channel between them support 8-bit wide connection, they can do so.
+<BR>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;If not, then the e-mail must either
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;(a)	    be in 7-bit US-ASCII only, or
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;(b)	    be converted using MIME.
+<BR>
+&nbsp;&nbsp;&nbsp;
+<BR>
+Q: What happens of you don't follow the rules?
+<BR>
+A: It depends.  I know of all these reaction from MTAs:
+<BR>
+&nbsp;&nbsp;&nbsp;(i)		The 8-bit characters came through, and the recipient could
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read it. Success story.
+<BR>
+<P>&nbsp;&nbsp;&nbsp;(ii)		The 8-bit characters came through, but the recipient
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;could not read all of it, since some character were
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coded with other bit strings.  This happens e.g. when
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;some Macintosh users send e-mail to this list.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minor lossage, but no big deal.
+<BR>
+<P>&nbsp;&nbsp;&nbsp;(iii)	The 8-bit characters came through, but the recipient
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;could not read any of it, since the sender's character
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set differed totally from the recipient's,  Total lossage.
+<BR>
+<P>&nbsp;&nbsp;&nbsp;(iv)		Some MTA somewhere on the line zeroed the leftmost bit of
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all characters to 7-bits, so some characters became garbled.
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minor or major lossage, depending on context.
+<BR>
+<P>&nbsp;&nbsp;&nbsp;(v)		Some MTA decided to follow the rules and bounce the message
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;since it didn't follow the rules. This happened to some guy
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who send several kilobytes of text in plain English, but
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;who happened to have his Swedish adress in the signature
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and it contained one (1) single 8-bit character (&quot;ä&quot;).
+<BR>
+<P>&nbsp;&nbsp;&nbsp;(vi)		Some MTA will convert the stuff into MIME, and your e-mail
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;will end up containing stuff like this:
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;r=E4sm=F6rg=E5s&quot;
+<BR>
+<P>&nbsp;&nbsp;&nbsp;(vii)	Some UAs and/or MTAs will convert it to HTML (ugh!).
+<BR>
+<P>&lt;/WARNING&gt;
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2434.html">[ Robert-Coyote ]: "Re: Research Fellowship rules?"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2432.html">Brian D Williams: "GUNS: Re: Brady Law has not affected homicide rates"</A>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2433">[ date ]</A>
+<A HREF="index.html#2433">[ thread ]</A>
+<A HREF="subject.html#2433">[ subject ]</A>
+<A HREF="author.html#2433">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:35:31 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

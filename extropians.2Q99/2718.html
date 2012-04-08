@@ -1,0 +1,73 @@
+<!-- received="Thu Jun  3 20:12:09 1999 MDT" -->
+<!-- sent="Thu,  3 Jun 1999 19:09:24 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="META: How to survive reading this list" -->
+<!-- id="14167.13195.889765.974217@lrz.de" -->
+<!-- inreplyto="c=AU%a=ACCESS400%p=ACTEWCORP%l=MAILCIVIC1-990604011611Z-15047@mailcivic1.actew.o" -->
+<!-- version=1.10, linesinbody=26 -->
+<html><head><title>extropians: META: How to survive reading this list</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>META: How to survive reading this list</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Thu,  3 Jun 1999 19:09:24 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2718">[ date ]</a><a href="index.html#2718">[ thread ]</a><a href="subject.html#2718">[ subject ]</a><a href="author.html#2718">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2719.html">[ Next ]</a><a href="2717.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2716.html">O'Regan, Emlyn</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+O'Regan, Emlyn writes:
+<br>
+<a href="2716.html#2718qlink1"> &gt; Between 11 May 99 (start of property rights fiasco) and 4 June 99</a><br>
+<i> &gt; [ tale of much woe deleted ]</i><br>
+
+<p>
+In case you run Linux, and want to filter using procmail, do this:
+
+<p>
+create a ~/.procmailrc file containing roughly the following entries:
+
+<p>
+PATH=/bin:/usr/bin:/usr/bin
+<br>
+MAILDIR=$HOME/Mail      #you'd better make sure it exists
+LOGFILE=$MAILDIR/from   #recommended
+
+<p>
+:0
+<br>
+* ^From.*plonkit@aol.com
+<br>
+/dev/null
+
+<p>
+:0
+<br>
+* ^Subject:.*aardvark
+<br>
+/dev/null
+
+<p>
+now, create a .forward file containing the following line:
+"|exec /usr/bin/procmail"
+
+<p>
+Perhaps you ought practice that on a fake user, lest you lose some
+mail by fooling around with regexpen.
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2719.html">[ Next ]</a><a href="2717.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2716.html">O'Regan, Emlyn</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

@@ -1,0 +1,208 @@
+<!-- received="Thu Feb  6 16:57:58 1997 MDT" -->
+<!-- sent="Fri, 7 Feb 1997 00:16:49 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="quoth the devourer of cassiterite: this stone is heavy (I)" -->
+<!-- id="Pine.SOL.3.91.970207001313.1682B-100000@sun6" -->
+<!-- inreplyto="" -->
+<title>extropians: quoth the devourer of cassiterite: this stone is heavy (I)</title>
+<h1>quoth the devourer of cassiterite: this stone is heavy (I)</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Fri, 7 Feb 1997 00:16:49 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2317">[ date ]</a><a href="index.html#2317">[ thread ]</a><a href="subject.html#2317">[ subject ]</a><a href="author.html#2317">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2318.html">Robert Schrader: "economic catastrophe"</a>
+<li> <b>Previous message:</b> <a href="2316.html">Robert Schrader: "fitness landscapes"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Stephen Wolfram, "Cellular Automata and Complexity -- Collected<br>
+Papers", Adison Wesley (1994), pp. 309-328. [ Moderately technical,<br>
+highly enjoyable. If you haven't heard about CAs yet, you've been<br>
+missing a lot of fun -- 'gene ]<br>
+<p>
+<p>
+Approaches to Complexity Engineering (1986).<br>
+<p>
+Abstract -- Principles for designing complex systems with specified<br>
+forms of behaviour are discussed. Multiple scale cellular automata<br>
+are suggested as dissipative dynamical systems suitable for tasks<br>
+such as pattern recognition. Fundamental aspects of the engineering<br>
+of such systems are characterized using computation theory, and some<br>
+practical procedures are discussed.<br>
+<p>
+<p>
+The capabilities of the brain and many other biological systems go<br>
+far beyond those of any artificial systems so far constructed by<br>
+conventional engineering means. There is however extensive evidence<br>
+that at a functional level, the basic components of such complex<br>
+natural systems are quite simple, and could for example be emulated<br>
+with a variety of technologies. But how a large number of these<br>
+components can act together to perform complex tasks is not yet<br>
+known. There are probably some rather general principles which<br>
+govern such overall behaviour, and allow it to be moulded to<br>
+achieve particular goals. If these principles could be found and<br>
+applied, they would make new forms of engineering possible. This<br>
+paper discusses some of the approaches to such forms of engineering<br>
+with complex systems. The emphasis is on general concepts and<br>
+analogies. But some of the specific systems described should<br>
+nevertheless be amendable to implementation and detailed analysis.<br>
+<p>
+In conventional engineering or computer programming, systems are<br>
+built to achieve their goals by following strict plans, which<br>
+specify the detailed behaviour of each of their component parts.<br>
+Their overall behaviour must always be simple enough that<br>
+complete prediction and often also analysis is possible. Thus<br>
+for example motion in conventional mechanical engineering devices<br>
+is usually constrained simply to be periodic. And in conventional<br>
+computer programming, each step consists of a single operation<br>
+on a small number of data elements. In both of these cases, much<br>
+more complex behaviour could be obtained from the basic components<br>
+whethre mechanical or logical, but the principles necessary to<br>
+make use of such behaviour are not yet known.<br>
+<p>
+Nature provides many examples of systems whose basic components<br>
+are simple, but whose overall behaviour is extremely complex.<br>
+Mathematical models such as cellular automata (e.g. [1]) seem<br>
+to capture many essential features of such systems, and provide<br>
+some understanding of the basic mechanisms by which complexity<br>
+is produced for example in turbulent fluid flow. But now one<br>
+must use this understanding to design systems whose complex<br>
+behaviour can be controlled and directed to particular tasks.<br>
+<i>&gt;From complex system science, one must now develop complex systems</i><br>
+engineering.<br>
+<p>
+Complexity in natural systems typically arises from the collective<br>
+effect of a very large number of components. It is often essentially<br>
+impossible to predict the detailed behaviour of any one particular<br>
+component, or in fact the precise behaviour of the complete system.<br>
+But the system as a whole may nevertheless show definite overall<br>
+behaviour and this behaviour usually has several important features.<br>
+<p>
+Perhaps most important, it is robust, and is typically unaffected<br>
+by perturbations or failures of individual components. Thus for<br>
+example a change in the detailed initial conditions for a system<br>
+usually has little or no effect on the overall outcome of its<br>
+evolution (although it may have a large effect on the detailed<br>
+behaviour of some individual elements). The visual system in the<br>
+brain, for example, can recognize objects even though there are<br>
+distortions or imperfections in the input image. Its operation is<br>
+also presumably unaffected by the failure of a few neurons. In<br>
+sharp contrast, however, typical computer programs require explicit<br>
+account to be taken of each possible form of input. In addition,<br>
+failure of any one element usually leads to catastrophic failure<br>
+of the whole program.<br>
+<p>
+Dissipation [i.e. irreversible mapping, if time is to flow<br>
+backwards -- 'gene ], in one of many forms, is a key principle<br>
+which lies behind much of the robustness seen in natural systems.<br>
+Through dissipation, only a few features in the behaviour of the<br>
+system survive with time, and others are damped away. Dissipation<br>
+is often used to obtain reliable behaviour in mechanical engineering<br>
+systems. Many different initial motions can for example be<br>
+dissipated away through viscous damping which brings particular<br>
+components to rest. Such behaviour is typically represented by<br>
+a differential equation whose solution tends to a fixed point<br>
+at large times, independent of its initial conditions. Any<br>
+information on the particular initial conditions is thus destroyed<br>
+by the irreversible evolution of the system [ the discrete<br>
+Hamiltonian defines a field of arrows over the array of state<br>
+space hypervoxels, the dissipative (non-Liouville) Hamiltonians<br>
+yielding bifurcations, if we take a look over our shoulder;<br>
+these are unresolvable unless we also throw self evolution<br>
+history into the bargain -- 'gene ].<br>
+<p>
+In more complicated systems, there may be several fixed points,<br>
+reached from different sets of initial conditions. This is the case<br>
+for an idealized ball rolling on a landscape, with dissipation in<br>
+form of friction. Starting at any initial point, the ball is "attracted"<br>
+towards one of the local height minima in the landscape, and eventually<br>
+comes to rest there. The set of initial positions from which the ball<br>
+goes to a particular such fixed point can be considered a "basin of<br>
+attraction" for that fixed point. Each basin of attraction is bounded<br>
+by a "watershed" which typically lies along a ridge in the landscape.<br>
+Dissipation destroys information on detail on initial conditions,<br>
+but preserves the knowledge of which basin on attraction they were in.<br>
+The evolution of the system can be viewed as dividing its inputs into<br>
+various "categories", corresponding to different basins of attraction.<br>
+This operation is the essence of many forms of pattern recognition:<br>
+despite small changes, one recognizes that a particular input is in<br>
+a particular category, or matches a particular pattern. In the example<br>
+of a ball rolling on a landscape, the categories correnspond to<br>
+different regions of initial positions. Small changes in input<br>
+correspond to small changes in initial position.<br>
+<p>
+The state of the system just discussed is given by the continuous<br>
+variables representing the position of the ball. More familiar<br>
+examples of pattern recognition arise in discrete or digital<br>
+systems [ of course every physical system is discrete both in<br>
+time and in space, all thanks to the Bekenstein limit -- 'gene ],<br>
+such as those used for image processing. An image might be<br>
+represented by a 256x256 array of cells, each black or white.<br>
+Then a simple image processing or ("image restoration") operation<br>
+would be to replace any isolated black cell by a white cell. In<br>
+this way certain single cell errors in the images can be removed<br>
+(or "damped out"), and classes of images differing just by such<br>
+errors can be recognized as equivalent (e.g. [3]). The process<br>
+can be considered to have attractors corresponding to the possible<br>
+images without such errors. Clearly three are many of these<br>
+attractors, each with a particular basin of attraction. But in<br>
+contrast to the example with contiguous variables above, there<br>
+is no obvious measure of "distance" on the space of images,<br>
+which could be used to determine which basin of attraction a<br>
+particular image is in. Rather the category of an image is best<br>
+determined by explicit application of the image processing<br>
+operation.<br>
+<p>
+Lenth n sequences of bits can be considered as corners of an<br>
+n-dimensional unit hypercube. The Hamming distance between two<br>
+sequences can then be defined as the number of edges of the<br>
+hypercube that must be traversed to get from one to the<br>
+other, or, equivalently, the total number of bits that differ<br>
+between them. It is possible using algebraic methods to devise<br>
+transformations with basins of attraction corresponding to<br>
+spheres which enclose all points at a Hamming distance of at<br>
+most say two bits from a given point [4]. This allows error-<br>
+correcting codes to be devised in which definite messages can<br>
+be reconstructed even though they may contain say up to two<br>
+erroneous bits.<br>
+<p>
+The transformations used in error-correcting codes are specially<br>
+constructed to have basins of attraction with very simple<br>
+forms. Most dissipative systems, however, yield much more<br>
+complicated basins of attraction, which cannot for example<br>
+be described by simple scalar quantities such as distances.<br>
+The form of these basins of attraction determines what kinds of<br>
+perturbations are damped out, and thus what classes of inputs<br>
+can be recognized as equivalent.<br>
+<p>
+[ to be continued -- 'gene ]<br>
+<p>
+P.S. Mathematica 3.0 is now available for Linux (special price for<br>
+     students). Since Mathematica is a brainchild of the amazing<br>
+     S. Wolfram, it does offer a good support to explore the CA<br>
+     universes. (Besides, if you are a student/scientist/engineer,<br>
+     it can also come quite handy in lots of circumstances).<br>
+<p>
+P.P.S. Have just picked up "Artificial Life" by Steven Levy<br>
+       (1992), a moby nifty book. It contains lots of anectdotes<br>
+       about the life of the Great Ones, and several ALife<br>
+       factoids otherwise hard to come by. Lightly written,<br>
+       yet chockful of the peculiar ALife spirit.<br>
+<p>
+P.P.P.S. Has anybody checked out "A New Kind of Science" yet?<br>
+	 Is it out by now? Is it worth reading?<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2318.html">Robert Schrader: "economic catastrophe"</a>
+<li> <b>Previous message:</b> <a href="2316.html">Robert Schrader: "fitness landscapes"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

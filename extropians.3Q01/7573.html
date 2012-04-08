@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: Steganography</title>
+<meta name="Author" content="Mikael Johansson (mikael.johansson@wineasy.se)">
+<meta name="Subject" content="Re: Steganography">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: Steganography</h1>
+<!-- received="Wed Sep 26 13:34:02 2001" -->
+<!-- isoreceived="20010926193402" -->
+<!-- sent="Wed, 26 Sep 2001 21:29:16 +0200" -->
+<!-- isosent="20010926192916" -->
+<!-- name="Mikael Johansson" -->
+<!-- email="mikael.johansson@wineasy.se" -->
+<!-- subject="Re: Steganography" -->
+<!-- id="009501c146c1$89a244b0$0200a8c0@ROL" -->
+<!-- inreplyto="Pine.SOL.4.33.0109260823230.22364-100000@sun5.lrz-muenchen.de" -->
+<strong>From:</strong> Mikael Johansson (<a href="mailto:mikael.johansson@wineasy.se?Subject=Re:%20Steganography&In-Reply-To=&lt;009501c146c1$89a244b0$0200a8c0@ROL&gt;"><em>mikael.johansson@wineasy.se</em></a>)<br>
+<strong>Date:</strong> Wed Sep 26 2001 - 13:29:16 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="7574.html">Ralph Lewis: "Re: Raisin Bombers over Afghanistan"</a>
+<li><strong>Previous message:</strong> <a href="7572.html">Barbara Lamar: "RE: Is there still a chance for us?"</a>
+<li><strong>In reply to:</strong> <a href="7545.html">Eugene Leitl: "RE: Steganography"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7596.html">Harvey Newstrom: "RE: Steganography"</a>
+<li><strong>Reply:</strong> <a href="7596.html">Harvey Newstrom: "RE: Steganography"</a>
+<li><strong>Maybe reply:</strong> <a href="7623.html">KPJ: "Re: Steganography"</a>
+<li><strong>Maybe reply:</strong> <a href="7627.html">hal@finney.org: "Re: Steganography"</a>
+<li><strong>Maybe reply:</strong> <a href="7649.html">hal@finney.org: "Re: Steganography"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7573">[ date ]</a>
+<a href="index.html#7573">[ thread ]</a>
+<a href="subject.html#7573">[ subject ]</a>
+<a href="author.html#7573">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+<em>&gt; On Tue, 25 Sep 2001, Harvey Newstrom wrote:
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; &gt; How did I do?  Was I able to detect a file that had an &quot;undetectable&quot;
+</em><br>
+<em>&gt; &gt; message in it?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Yes. As I said, the first one was easy. The first message had a 512 byte
+</em><br>
+<em>&gt; random payload straight out of /dev/random. The second message had a
+</em><br>
+<em>&gt; single cr for payload (outguess won't let you add zero length files).
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Next step would be to use same approach on pictures of different origins
+</em><br>
+<em>&gt; and quality. Large pictures with low compression rate.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; The step after that would be telling /dev/random from an encrypted
+</em><br>
+<em>&gt; message. Still game?
+</em><br>
+<p>Try it: I have taken Anders' most magnificient raytracing 'seshat.jpg', and
+<br>
+produced 5 versions of it.
+<br>
+<p>One plain copy of the image
+<br>
+One with a plaintext message steganographed with outguess
+<br>
+One with that message, encrypted with pgp and steganographed with outguess
+<br>
+One with that message, encrypted and steganographed with outguess
+<br>
+One with pure random data (dd if=/dev/random of=sample.bin bs=512 count=1),
+<br>
+steganographed with outguess.
+<br>
+<p>You can find them at
+<br>
+<a href="http://aleph.myip.org/~mik/seshat1.jpg">http://aleph.myip.org/~mik/seshat1.jpg</a>
+<br>
+<a href="http://aleph.myip.org/~mik/seshat2.jpg">http://aleph.myip.org/~mik/seshat2.jpg</a>
+<br>
+<a href="http://aleph.myip.org/~mik/seshat3.jpg">http://aleph.myip.org/~mik/seshat3.jpg</a>
+<br>
+<a href="http://aleph.myip.org/~mik/seshat4.jpg">http://aleph.myip.org/~mik/seshat4.jpg</a>
+<br>
+<a href="http://aleph.myip.org/~mik/seshat5.jpg">http://aleph.myip.org/~mik/seshat5.jpg</a>
+<br>
+<p>The challenge is to pair the pictures with their respective 'descriptions'.
+<br>
+<p>Good luck :-)
+<br>
+<p><em>&gt; -- Eugen* Leitl &lt;a href=&quot;<a href="http://www.lrz.de/~ui22204/">http://www.lrz.de/~ui22204/</a>&quot;&gt;leitl&lt;/a&gt;
+</em><br>
+<em>&gt; ______________________________________________________________
+</em><br>
+<em>&gt; ICBMTO: N48 04'14.8'' E11 36'41.2'' <a href="http://www.lrz.de/~ui22204">http://www.lrz.de/~ui22204</a>
+</em><br>
+<em>&gt; 57F9CFD3: ED90 0433 EB74 E4A9 537F CFF5 86E7 629B 57F9 CFD3
+</em><br>
+<p>// Mikael Johansson
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="7574.html">Ralph Lewis: "Re: Raisin Bombers over Afghanistan"</a>
+<li><strong>Previous message:</strong> <a href="7572.html">Barbara Lamar: "RE: Is there still a chance for us?"</a>
+<li><strong>In reply to:</strong> <a href="7545.html">Eugene Leitl: "RE: Steganography"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7596.html">Harvey Newstrom: "RE: Steganography"</a>
+<li><strong>Reply:</strong> <a href="7596.html">Harvey Newstrom: "RE: Steganography"</a>
+<li><strong>Maybe reply:</strong> <a href="7623.html">KPJ: "Re: Steganography"</a>
+<li><strong>Maybe reply:</strong> <a href="7627.html">hal@finney.org: "Re: Steganography"</a>
+<li><strong>Maybe reply:</strong> <a href="7649.html">hal@finney.org: "Re: Steganography"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7573">[ date ]</a>
+<a href="index.html#7573">[ thread ]</a>
+<a href="subject.html#7573">[ subject ]</a>
+<a href="author.html#7573">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Fri Oct 12 2001 - 14:40:57 MDT</em>
+</em>
+</small>
+</body>
+</html>

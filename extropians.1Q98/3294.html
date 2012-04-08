@@ -1,0 +1,94 @@
+<!-- received="Tue Mar 31 01:10:08 1998 MDT" -->
+<!-- sent="Tue, 31 Mar 1998 00:10:00 -0800 (PST)" -->
+<!-- name="Lee Daniel Crocker" -->
+<!-- email="lcrocker@mercury.colossus.net" -->
+<!-- subject="Chaffing application (was MJ, Carnitine; was Quality)" -->
+<!-- id="199803310810.AAA24478@mercury.colossus.net" -->
+<!-- inreplyto="199803310624.WAA23185@mail.netcom.com" -->
+<title>extropians: Chaffing application (was MJ, Carnitine; was Quality)</title>
+<h1>Chaffing application (was MJ, Carnitine; was Quality)</h1>
+Lee Daniel Crocker (<i>lcrocker@mercury.colossus.net</i>)<br>
+<i>Tue, 31 Mar 1998 00:10:00 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3294">[ date ]</a><a href="index.html#3294">[ thread ]</a><a href="subject.html#3294">[ subject ]</a><a href="author.html#3294">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3295.html">Eugene Leitl: "FYI: malignant mail (II)"</a>
+<li> <b>Previous message:</b> <a href="3293.html">Warrl kyree Tale'sedrin: "Re: Year 2k"</a>
+<li> <b>In reply to:</b> <a href="3292.html">Alexander 'Sasha' Chislenko: "Re: MJ, carnitine and DHEA (Was: Re: Time for a jump in"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<i>&gt; This reminds me of another repressive regime where I had to risk my</i><br>
+<i>&gt; health and career to obtain books from black marketeers.</i><br>
+<i>&gt; (Talk about indifference of transhumanism to politics...)</i><br>
+<i>&gt; Could anybody recommend a serious private discussion groups that deals</i><br>
+<i>&gt; with these topics - or be interested in forming one?</i><br>
+<p>
+The dangers of such a discussion group are obvious, but one of<br>
+the things in Rivest's paper on "Chaffing" stuck with me: the fact<br>
+that a third party with no knowledge of keys can do the work<br>
+made me wonder if that couldn't be used to do a pseudonymous<br>
+remailer like Julf's without the risk of cops subpoenaing your<br>
+database--because you have none.<br>
+<p>
+Here's an idea I think would work; would the more cipherpunk<br>
+connected among you please evaluate this idea for me?<br>
+<p>
+Let's say we form discussion group of 50 people.  Each of us<br>
+uses a standard piece of software to receive mail from the<br>
+group and to post mail to it (a Usenet newsreader modified<br>
+as described later).  The list of addresses for the group is <br>
+known publicly (members can use other mail forwarders for<br>
+added security if desired).  Each time a message is posted<br>
+to the group or mailed to another user with this software,<br>
+the real return address is stripped, and a new set of headers<br>
+is added with, say, 20 return addresses, each accompanied<br>
+by a MAC; the "real" one has a MAC using the sender's private<br>
+key, and the rest a random one.  The MACs are all calculated<br>
+using message ID/time so that they don't repeat.  The 19<br>
+addresses are chosen at random from the group (for even more<br>
+security, members can each have more than one address).<br>
+<p>
+When anyone wants to respond privately to a message, he<br>
+composes the message and addresses it to all 20 of the names<br>
+listed, using their MACs; 20 people receive it, but only the<br>
+real author can authenticate eir address; the software<br>
+quietly discards the message to the other 19.  There is no<br>
+central list of keys at the forwarding server; only the<br>
+addresses and MACs in each message.  There is no way to<br>
+tell from the message which of the 20 senders is real, even<br>
+for the list manager, yet personal replies are still<br>
+possible.<br>
+<p>
+Is this practical/useful?  Could it be combined with real<br>
+encryption as well without revealing identities (I haven't<br>
+thought that far through)?<br>
+<p>
+I suggest using a Usenet system because every message, even<br>
+the personal ones, get sent to many people--in fact the more<br>
+people, the more secure.  The softare on each member's desk<br>
+could rotate MAC keys weekly or so, and keep only as much<br>
+history as ey felt was safe.  That way, even if one message<br>
+was compromised, they system as a whole is still safe.<br>
+<p>
+<pre>
+--
+Lee Daniel Crocker &lt;lee@piclab.com&gt; &lt;<a href="http://www.piclab.com/lcrocker.html">http://www.piclab.com/lcrocker.html</a>&gt;
+"All inventions or works of authorship original to me, herein and past,
+are placed irrevocably in the public domain, and may be used or modified
+for any purpose, without permission, attribution, or notification."--LDC
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3295.html">Eugene Leitl: "FYI: malignant mail (II)"</a>
+<li> <b>Previous message:</b> <a href="3293.html">Warrl kyree Tale'sedrin: "Re: Year 2k"</a>
+<li> <b>In reply to:</b> <a href="3292.html">Alexander 'Sasha' Chislenko: "Re: MJ, carnitine and DHEA (Was: Re: Time for a jump in"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

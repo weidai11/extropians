@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: Today's evil Bayesian math problem</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: Today's evil Bayesian math problem">
+<meta name="Date" content="2003-09-15">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Today's evil Bayesian math problem</h1>
+<!-- received="Mon Sep 15 10:39:08 2003" -->
+<!-- isoreceived="20030915163908" -->
+<!-- sent="Mon, 15 Sep 2003 12:39:06 -0400" -->
+<!-- isosent="20030915163906" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: Today's evil Bayesian math problem" -->
+<!-- id="3F65EB2A.6000909@pobox.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="200309111817.h8BIHep11957@finney.org" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20Today's%20evil%20Bayesian%20math%20problem"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Mon Sep 15 2003 - 10:39:06 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="14009.html">Randy S: "Extropians are not rich"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="14007.html">Michael Wiik: "Re: more networking applications: tribe.net"</a>
+<li><strong>In reply to:</strong> <a href="13894.html">Hal Finney: "Re: Today's evil Bayesian math problem"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14009.html">Randy S: "Extropians are not rich"</a>
+<li><strong>Reply:</strong> <a href="14009.html">Randy S: "Extropians are not rich"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14008">[ date ]</a>
+<a href="index.html#14008">[ thread ]</a>
+<a href="subject.html#14008">[ subject ]</a>
+<a href="author.html#14008">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+Hal Finney wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; I imagine a more complex proof could show that the probability of white
+</em><br>
+<em>&gt; on both of any two rounds is constant, and presumably this could be
+</em><br>
+<em>&gt; generalized to any n rounds.  But I don't see how to prove all this
+</em><br>
+<em>&gt; in a simple way.
+</em><br>
+<p>If you were to prove that for any N sequential samples from this pot, the
+<br>
+probability of getting a sequence with M red chips and (N - M) white chips
+<br>
+is a constant regardless of the ordering of white and red chips, it would
+<br>
+prove both constant P(Wk) and constant P(Wj|Wk), j != k.
+<br>
+<p>The above property, that an outcome containing M red chips and (N - M)
+<br>
+white chips has a constant probability regardless of the ordering of red
+<br>
+and white chips, is known as exchangeability.
+<br>
+<p>Suppose the sequence is exchangeable.  No matter how long the sequence
+<br>
+goes on, P(W1) and P(W1&amp;W2) is constant, since this is computed in the
+<br>
+first two draws.  P(W2) = P(W1), because P(R1&amp;W2) + P(W1&amp;W2) = P(W1&amp;R2) +
+<br>
+P(W1&amp;W2).  P(W1&amp;W2) = P(W2&amp;W3) because P(W1&amp;W2&amp;W3) + P(W1&amp;W2&amp;R3) =
+<br>
+P(R1&amp;W2&amp;W3) + P(W1&amp;W2&amp;W3).  The same holds for arbitrary P(Wi) and P(Wj|Wk).
+<br>
+<p>Actually, if a sequence is exchangeable, we can swap any i, j != k in the
+<br>
+joint distribution, and properties such as P(Wi), P(Wi|Wk), P(Wi&amp;Wk), and
+<br>
+so on, will remain constant.
+<br>
+<p>To show that the sequence is exchangeable, consider any R, W of initial
+<br>
+red and white chips in the bowl, with a total number of chips N.  The
+<br>
+probability of the sequence RWWRR is then given by:
+<br>
+<p>R    W    W+1   R+1   R+2
+<br>
+- * --- * --- * --- * ---
+<br>
+N   N+1   N+2   N+3   N+4
+<br>
+<p>Changing the ordering of the R and W chips will not change the total
+<br>
+factors in the numerator and the denominator.
+<br>
+<p>The entire proof is exactly analogous to the case of a bowl where, instead
+<br>
+of *adding* one chip of the color drawn, we draw a chip and discard it.
+<br>
+If we started with 5 red and 3 white chips, and drew a white chip, we
+<br>
+would be down to 5 red and 2 white chips, and so on, until we ran out of
+<br>
+chips after 8 rounds.  Obviously, the probability of drawing a red or
+<br>
+white chip on any round N is the same as on round 1, if you have no
+<br>
+information about the chips previously drawn; and the probability of
+<br>
+drawing two red chips on any two rounds is the same; and the probability
+<br>
+you drew a red chip on round 2 if you drew a red chip on round 4, is the
+<br>
+same as the probability of drawing a red chip on round 2 if you drew a red
+<br>
+chip on round 1, since in either case there is one less red chip to go
+<br>
+around.  You can imagine the chips &quot;scattered&quot; over N holes,
+<br>
+simultaneously, rather than being placed in sequence - this is what it
+<br>
+means for the sequence to be exchangeable.  Swapping the labels of &quot;round
+<br>
+1&quot; to &quot;round 3&quot; has no effect on how the chips land in the holes.
+<br>
+<p>If you start out with R red chips and W white chips, and draw without
+<br>
+replacement, the probability of getting a particular sequence is:
+<br>
+<p>R    W    W-1   R-1   R-2
+<br>
+- * --- * --- * --- * ---
+<br>
+N   N-1   N-2   N-3   N-4
+<br>
+<p>Which is what makes this distribution exchangeable:
+<br>
+<p><em>&gt; Evil Hint #3:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; The classical version of the problem has a bowl where we sample without replacement - take the chip, and throw it away.  Suppose there are M red chips and N chips.  If you don't know what you got on the first round, the probability of getting a red chip on the second round is still M/N.  The probability of getting a red chip on the second round, given that you got a red chip on the fourth round, is just (M-1)/(N-1), since there's one less red chip to go around.  We can think of sprinkling the chips over holes, instead of drawing them in successive rounds, and it doesn't matter if you swap around the labels on the holes.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; The evil version of the bowl, instead of running out of the chips already sprinkled, has more and more of them, like a P2P file-sharing network. But that doesn't change anything important. 
+</em><br>
+<p>The math is also not affected if you instead add three chips of the color
+<br>
+drawn, or if you subtract two chips of the color drawn, and so on.
+<br>
+<p>Christian Rovner has an interesting way to visualize this, which is that
+<br>
+the drawing procedure always leaves the bowl the same shade of pink
+<br>
+afterward.  If you remove the chip drawn on each round, you're removing a
+<br>
+chip with a 3/8 probability of being white, from a bowl with a 3/8
+<br>
+probability of producing white chips.  If you add a chip of the color
+<br>
+drawn on each round, you're adding a chip with a 3/8 probability of being
+<br>
+white, to a bowl with a 3/8 probability of producing white chips.  If you
+<br>
+know that you drew a white chip on the first round, then on future rounds
+<br>
+with unknown draws you're adding chips with a 4/9 probability of being
+<br>
+white.  And so on.  It doesn't matter whether you *know* that the pot has
+<br>
+5 red and 3 white chips, as on the first round, or if you're working with
+<br>
+some probability distribution of mixes that add up to 3/8; it's all the
+<br>
+same shade of pink.  The drawing procedure leaves the pinkness unchanged,
+<br>
+both for the main distribution, and for any differently shaded
+<br>
+subdistributions that you want to consider separately.
+<br>
+<p>See also Chapter 3 of E.T. Jaynes's &quot;Probability Theory:  The Logic of
+<br>
+Science&quot;.  (I did not get the problem from there; I made it up after
+<br>
+reading it.  Though I am sure it is not original.)
+<br>
+<p><pre>
+-- 
+Eliezer S. Yudkowsky                          <a href="http://singinst.org/">http://singinst.org/</a>
+Research Fellow, Singularity Institute for Artificial Intelligence
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="14009.html">Randy S: "Extropians are not rich"</a>
+<li><strong>Previous message:</strong> <a href="14007.html">Michael Wiik: "Re: more networking applications: tribe.net"</a>
+<li><strong>In reply to:</strong> <a href="13894.html">Hal Finney: "Re: Today's evil Bayesian math problem"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="14009.html">Randy S: "Extropians are not rich"</a>
+<li><strong>Reply:</strong> <a href="14009.html">Randy S: "Extropians are not rich"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#14008">[ date ]</a>
+<a href="index.html#14008">[ thread ]</a>
+<a href="subject.html#14008">[ subject ]</a>
+<a href="author.html#14008">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Mon Sep 15 2003 - 10:50:04 MDT
+</em></small></p>
+</body>
+</html>

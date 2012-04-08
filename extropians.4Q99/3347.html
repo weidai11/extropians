@@ -1,0 +1,129 @@
+<!-- received="Mon Dec  6 23:27:38 1999 MST" -->
+<!-- sent="Tue, 07 Dec 1999 01:27:27 -0500" -->
+<!-- name="Mike Hall" -->
+<!-- email="hallboys@stargate.net" -->
+<!-- subject="Re: Blue Gene" -->
+<!-- id="384CA8CE.166D45F7@stargate.net" -->
+<!-- inreplyto="Blue Gene" -->
+<!-- version=1.10, linesinbody=78 -->
+<html><head><title>extropians: Re: Blue Gene</title>
+<meta name=author content="Mike Hall">
+<link rel=author rev=made href="mailto:hallboys@stargate.net" title ="Mike Hall">
+</head><body>
+<h1>Re: Blue Gene</h1>
+Mike Hall (<i>hallboys@stargate.net</i>)<br>
+<i>Tue, 07 Dec 1999 01:27:27 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3347">[ date ]</a><a href="index.html#3347">[ thread ]</a><a href="subject.html#3347">[ subject ]</a><a href="author.html#3347">[ author ]</a>
+<!-- next="start" -->
+<li><a href="3348.html">[ Next ]</a><a href="3346.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3339.html">Robert J. Bradbury</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="3370.html">Robert J. Bradbury</a>
+</ul>
+<!-- body="start" -->
+
+
+
+<p>
+"Robert J. Bradbury" wrote:
+
+<p>
+<a href="3339.html#3347qlink1">&gt;  If they are taking an example out of the GRAPE book, they are designing the</a><br>
+<i>&gt; instructions for molecular modeling.</i><br>
+
+<p>
+Perhaps, but....
+<br>
+I read the IBM announcement on their web site,  and a New York Times article that
+had a little more detail (can't vouch for its accuracy:
+<a href="http://www.nytimes.com/library/tech/99/12/biztech/articles/06blue.html">http://www.nytimes.com/library/tech/99/12/biztech/articles/06blue.html</a>)
+Neither piece had enough detail to really say what IBM's design plans are, but
+among the few facts I gleaned from there were:
+
+<pre>
+        The "instruction
+        set" -- the total vocabulary of machine-language
+        instructions a computer understands -- will number 57
+        for Blue Gene, compared with about 200 for most RISC
+        machines.  (NYT)
+
+</pre>
+<p>
+57 instructions is not a lot for a processor - Intel 486 has around 170, the IBM
+390 (extreme CISC) has over 400.  Of course these are general purpose processors,
+and a special-purpose architecture like GRAPE probably has many fewer
+instructions; however, I would expect many of those instructions to be relatively
+complex to render in the hardware:
+<br>
+(From IBM's announcement):
+<pre>
+                       "We call this new approach to computer
+                       architecture SMASH, which stands for Simple,
+                       Many and Self-Healing."
+
+                       The SMASH architecture differs from existing
+                       approaches in three ways:
+
+                           It dramatically simplifies the number of
+                           instructions carried out by each processor,
+                           allowing them to work faster and with
+                           significantly lower power and chip surface
+                           requirements (the traditional approach is
+                           to add complex features to gain
+                           performance);
+                           It will facilitate a massively parallel
+                           system capable of more than 8 million
+                           simultaneous threads of computation
+                           (compared to the maximum of 5000
+                           threads today);
+                           It will make the computer self-stabilizing
+                           and self-healing -- automatically able to
+                           overcome failures of individual
+                           processors and computing threads.
+
+</pre>
+<p>
+To me, this implies that their approach to the hardware design is unit simplicity
+for raw speed, massive redundancy for fault tolerance and throughput.  It seems to
+me they intend to handle the complexity at a higher level (in the software).
+
+<p>
+<a href="3339.html#3347qlink2">&gt; They may have sat back after</a><br>
+<i>&gt; doing the molecular modeling stuff and said, ok, now how can</i><br>
+<i>&gt; we turn the machine into a good data-mining computer, or a</i><br>
+<i>&gt; good speech recognition processor, or a good image processor</i><br>
+<i>&gt; and added some more instructions to round things out.</i><br>
+<i>&gt;</i><br>
+<i>&gt;</i><br>
+
+<p>
+<a name="3370qlink1">Maybe, but I've seen nothing in the published material that says this is anything
+other than a general-purpose machine.  But again, the facts in these pieces are
+somewhat meager.  I'd like to get a peek at the instruction set if they ever deign
+to publish</a> it.
+
+<p>
+<a name="3370qlink2">But even if I'm right, the task of designing software to make full use of the
+machine's capabilities may be so daunting that no one else will want to take it
+on, effectively making it a single-purpose machine.</a>  And this is likely the only
+one they will build, like Deep Blue.
+
+<p>
+Must sleep........
+
+<p>
+<a name="3370qlink3">P.S.  I apologize for my sloppy editing on my original post (which was truly my
+first post to this list).
+</a>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="3348.html">[ Next ]</a><a href="3346.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3339.html">Robert J. Bradbury</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="3370.html">Robert J. Bradbury</a>
+</ul>
+</body></html>

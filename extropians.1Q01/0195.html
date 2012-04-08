@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: web snapshot</title>
+<meta name="Author" content="Eugene Leitl (Eugene.Leitl@lrz.uni-muenchen.de)">
+<meta name="Subject" content="Re: web snapshot">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: web snapshot</h1>
+<!-- received="Thu Jan  4 05:48:31 2001" -->
+<!-- isoreceived="20010104124831" -->
+<!-- sent="Thu, 4 Jan 2001 13:48:27 +0100 (MET)" -->
+<!-- isosent="20010104124827" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: web snapshot" -->
+<!-- id="Pine.GSO.4.03.10101041305060.27606-100000@sun1.lrz-muenchen.de" -->
+<!-- inreplyto="3A541C45.8A07C041@attglobal.net" -->
+<strong>From:</strong> Eugene Leitl (<a href="mailto:Eugene.Leitl@lrz.uni-muenchen.de?Subject=Re:%20web%20snapshot&In-Reply-To=&lt;Pine.GSO.4.03.10101041305060.27606-100000@sun1.lrz-muenchen.de&gt;"><em>Eugene.Leitl@lrz.uni-muenchen.de</em></a>)<br>
+<strong>Date:</strong> Thu Jan 04 2001 - 05:48:27 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0196.html">Eugene Leitl: "Re: web snapshot"</a>
+<li><strong>Previous message:</strong> <a href="0194.html">Anders Sandberg: "Re: [Fwd: Re: Most 200{0,1} prescient SciFi author?]"</a>
+<li><strong>In reply to:</strong> <a href="0191.html">Spike Jones: "Re: web snapshot"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0196.html">Eugene Leitl: "Re: web snapshot"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#195">[ date ]</a>
+<a href="index.html#195">[ thread ]</a>
+<a href="subject.html#195">[ subject ]</a>
+<a href="author.html#195">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+On Wed, 3 Jan 2001, Spike Jones wrote:
+<br>
+<p><em>&gt; You know, a technique for archiving the entire content of
+</em><br>
+<em>&gt; the web on any given day in history would be valuable as all
+</em><br>
+<em>&gt; hell.  Have we not all read something somewhere on the web
+</em><br>
+<em>&gt; some time in the past and now we cannot find it?  Think of
+</em><br>
+<em>&gt; the post singularity historians, trying to dig thru all the web
+</em><br>
+<em>&gt; content trying to reconstruct it all.  Looks like an opportunity
+</em><br>
+<em>&gt; begging for some sharp computer guru to make a ton of
+</em><br>
+<em>&gt; money by inventing such a thing.  spike
+</em><br>
+<p>We've talked about this before (how I miss Sasha's input), but
+<br>
+it is probably worth reiterating.
+<br>
+<p>Nonhydra - web spidering is multiple-lousy:
+<br>
+<p>1) it's redundant. Many spiders try getting the same content.
+<br>
+<p>2) it's redundant. You don't know when content changes, so you
+<br>
+&nbsp;&nbsp;&nbsp;rescan it periodically. And again. And again. And again.
+<br>
+<p>3) reading content over a webserver has a much higher overhead
+<br>
+&nbsp;&nbsp;&nbsp;than going over a file system
+<br>
+<p>4) since you scan from a central location, the local pipe
+<br>
+&nbsp;&nbsp;&nbsp;is not your bottleneck; and in 99% of cases you're accessing
+<br>
+&nbsp;&nbsp;&nbsp;remote content through a rather slow connection
+<br>
+<p>5) you're pulling content verbatim, instead of just picking
+<br>
+&nbsp;&nbsp;&nbsp;up the index, which is typically tiny in comparison to
+<br>
+&nbsp;&nbsp;&nbsp;the total document base
+<br>
+<p>6) most web is database-backed and otherwise nontrivially
+<br>
+&nbsp;&nbsp;&nbsp;structured, so the spider never sees the bulk of content.
+<br>
+&nbsp;&nbsp;&nbsp;In many cases this is deliberate, but not in all cases.
+<br>
+<p>Partial remedy would be to bundle partial spider functionality for a
+<br>
+full-text index into Apache, so that upon submission (inserting a new leaf
+<br>
+into document tree, a database insert which is flagged as world-visible,
+<br>
+etc.) the web server automatically refreshes the index, which is placed in
+<br>
+a standard location. If the number of diffs goes superthreshold, the
+<br>
+web server notifies a spider, which picks up the full text index, and
+<br>
+nothing but the index.
+<br>
+<p>This guarantees that the search engine is always up to date, and
+<br>
+only the relevant parts are indexed, and that the server doesn't
+<br>
+see robot hits, and the network inbetween only sees a tiny fraction
+<br>
+of bandwidth use it would see otherwise.
+<br>
+<p>This is easily extensible to the point where each web server builds
+<br>
+a map of local nodes (i.e. those reachable within a minimal number
+<br>
+of hops, and/or those with a reasonably fat pipe to them) and picks
+<br>
+up their full-text indexes (or does it the old-fashioned way, by
+<br>
+spidering them). Because the indexing load is distributed, and by
+<br>
+virtue of locality a) no superfluous traffic is generated b) the
+<br>
+pipe is reasonably fat due to likely absence of bottlenecks. One
+<br>
+step away from this is a distributed search engine, which amplifies
+<br>
+the queries. Assuming each node indexes ~100 of others, amplified
+<br>
+traffic won't saturate each node, since the last step of the
+<br>
+pyramid is omitted, saving a couple orders of magnitude in traffic.
+<br>
+The reason why Gnutella saturates is because it doesn't do this,
+<br>
+and amplifies every query to the entire network, a lot of which
+<br>
+is not xDSL.
+<br>
+<p>A good idea would be to add the option of geographically constrainable
+<br>
+queries (net connectivity will ultimatively approach geographic locations)
+<br>
+and classification which reduces query amplification by adding semantic
+<br>
+information. If you're interested in plush animals, you probably don't
+<br>
+want to query Boeing's database. If it's a pr0n .png, or a pic of
+<br>
+your latest industrial robot model, say it in a tag. Some of it
+<br>
+should be even free-form, for AI which can handle this. Machine
+<br>
+vision will use a *lot* more MIPS and will be a *lot* harder to
+<br>
+program than something which can understand plain text.
+<br>
+<p>Another step away is integrating load levelling and redundancy. 
+<br>
+A web server has a fraction of its file system allocated to hosting
+<br>
+other's content. Some of it will get mirrored from neighbour nodes,
+<br>
+some of it moves, attempting to minimize the traffic. If you get
+<br>
+slashdotted, you suddenly see your content amplifying itself, and
+<br>
+drifting off towards the gradient of the traffic.
+<br>
+<p>I think we'll see web++ skipping several of these stages, should
+<br>
+FreeNet and MojoNation hit criticality. Here's something which
+<br>
+could put Akamai and Google out of business, eventually.
+<br>
+<p>P2P a la MojoNation is how the web should have been designed
+<br>
+right from the start. If broadband flatrate won't boost it
+<br>
+into criticality, then it is tragedy of the commons time all
+<br>
+over again.
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0196.html">Eugene Leitl: "Re: web snapshot"</a>
+<li><strong>Previous message:</strong> <a href="0194.html">Anders Sandberg: "Re: [Fwd: Re: Most 200{0,1} prescient SciFi author?]"</a>
+<li><strong>In reply to:</strong> <a href="0191.html">Spike Jones: "Re: web snapshot"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0196.html">Eugene Leitl: "Re: web snapshot"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#195">[ date ]</a>
+<a href="index.html#195">[ thread ]</a>
+<a href="subject.html#195">[ subject ]</a>
+<a href="author.html#195">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:16 MDT</em>
+</em>
+</small>
+</body>
+</html>

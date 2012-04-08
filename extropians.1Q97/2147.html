@@ -1,0 +1,137 @@
+<!-- received="Sun Feb  2 23:43:19 1997 MDT" -->
+<!-- sent="Mon, 3 Feb 1997 16:24:50 +1000" -->
+<!-- name="Mitchell Porter" -->
+<!-- email="mitch@thehub.com.au" -->
+<!-- subject="QC: Shor's algorithm" -->
+<!-- id="199702030624.QAA03440@smople.thehub.com.au" -->
+<!-- inreplyto="" -->
+<title>extropians: QC: Shor's algorithm</title>
+<h1>QC: Shor's algorithm</h1>
+Mitchell Porter (<i>mitch@thehub.com.au</i>)<br>
+<i>Mon, 3 Feb 1997 16:24:50 +1000</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2147">[ date ]</a><a href="index.html#2147">[ thread ]</a><a href="subject.html#2147">[ subject ]</a><a href="author.html#2147">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2148.html">Eliezer Yudkowsky: "Re: What is the definition of "definition"?"</a>
+<li> <b>Previous message:</b> <a href="2146.html">John K Clark: "What is the definition of "definition"?"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="2381.html">Hara Ra: "Re: QC: Shor's algorithm"</a>
+<li> <b>Maybe reply:</b> <a href="2381.html">Hara Ra: "Re: QC: Shor's algorithm"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+I've been studying Shor's quantum factoring algorithm, from the notes at<br>
+<a href="http://chemphys.weizmann.ac.il/~schmuel/comp/comp.html">http://chemphys.weizmann.ac.il/~schmuel/comp/comp.html</a> (especially<br>
+<a href="http://chemphys.weizmann.ac.il/~schmuel/comp/node9.html">http://chemphys.weizmann.ac.il/~schmuel/comp/node9.html</a>). Everything<br>
+but one step makes sense to me so far, so I thought I'd share...<br>
+<p>
+Perhaps we're soon going to have decent-sized quantum computers. At that <br>
+point, if they're going to be very useful, we'll need quantum compilers <br>
+to translate ordinary code into a quantum programming language like Q-gol <br>
+(see <a href="http://rosebay.matra.com.au/~gregb/q-gol//index.html">http://rosebay.matra.com.au/~gregb/q-gol//index.html</a>).<br>
+<p>
+A note for the future: in "Quantum theory of computation and relativistic <br>
+physics" (quant-ph/9701027), Alexander Vlasov (vlasov@physics.harvard.edu) <br>
+writes "... it should be mentioned that in relativistic physics there is <br>
+no sharp division between q-gates and q-states ...  This property of a QFT <br>
+has some analogy with functional style of programming in modern computer <br>
+science. In both cases there is no essential difference between data <br>
+(states) and functions (operators). A function can be used as data for <br>
+some other function."<br>
+<p>
+And just out: the preprint quant-ph/9702001 says in its abstract: "We <br>
+discuss relations between decoherence and computational complexity and <br>
+show that the quantum factorization algorithm must be modified in order <br>
+to be regarded as efficient and realistic."  <br>
+<p>
+-mitch<br>
+<a href="http://www.thehub.com.au/~mitch/q-comp.html">http://www.thehub.com.au/~mitch/q-comp.html</a><br>
+<p>
+<p>
+Shor's Algorithm, take one <br>
+<p>
+[Based on Samuel Braunstein's tutorial on quantum computation, at<br>
+<a href="http://chemphys.weizmann.ac.il/~schmuel/comp/comp.html">http://chemphys.weizmann.ac.il/~schmuel/comp/comp.html</a>.]<br>
+<p>
+Suppose we want to factor the number N. Here's the complete procedure<br>
+that Shor follows:<br>
+<p>
+A: Find a number x, coprime to N.<br>
+B: Find the least number r such that x^r - 1 is a multiple of N.<br>
+   If r is odd, return to A and pick a new x; otherwise proceed to C.<br>
+C: Since r is even, we can say<br>
+   x^r-1 = (x^[r/2]-1) (x^[r/2]+1) = kN (for some k)<br>
+   For each of the two lefthand factors, find its greatest common divisor<br>
+   with N (for example, via Euclid's algorithm). If this isn't 1 or N,<br>
+   you've found a factor.<br>
+<p>
+The first part of (B) is the computationally intensive part. The quantum<br>
+computer finds r, in effect, by starting with the sequence (1,2,3,...,q),<br>
+where q is some large number, then computing the sequence (x^0 mod N, <br>
+x^1 mod N,... x^q mod N), and determining the period of this second sequence<br>
+(which will be equal to r, since by hypothesis x^r mod N = 1 = x^0 mod N).<br>
+<p>
+Shor's algorithm requires a quantum computer with two multi-qbit registers. <br>
+The first register is the read-out point, the second register is for an <br>
+intermediate computation. The qbits are all two-state quantum systems,<br>
+so the computer has a set of binary states of the form |0110...;1110...&gt;,<br>
+or |i;j&gt; for short, where i is the value of the first register (i.e., the<br>
+first set of qbits), j the value of the second register. <br>
+<p>
+Since it's a quantum computer, we can have superpositions of these states, <br>
+so a general state of the computer has the form<br>
+<p>
+sum[i,j] c[i,j] |i;j&gt;,<br>
+<p>
+where c[i,j] is the complex coefficient of basis state |i;j&gt;.<br>
+<p>
+This is the quantum algorithm for carrying out (B):<br>
+<p>
+Step 1: Initialize the quantum computer to |0;0&gt;.<br>
+<p>
+Step 2: Place the first register into a superposition of all values.<br>
+<i>	|0;0&gt;           -&gt; sum[m] |m;0&gt;</i><br>
+<p>
+Step 3: Compute f(m) = x^m mod N in the second register.<br>
+	sum[m] |m;0&gt;    -&gt; sum[m] |m;f(m)&gt;<br>
+<p>
+Step 4: Perform a quantum fourier transform on the first register.<br>
+	sum[m] |m;f(m)&gt; -&gt; sum[m,n] exp[2i(pi).mn/q] |n;f(m)&gt;<br>
+<p>
+(q is the number of basis states for the first register; m and n<br>
+are summed only from 0 to q-1.)<br>
+<p>
+You can do everything up to this point on a classical computer with<br>
+<p>
+	Initialize c[0..q-1,0..q'-1]<br>
+	For all m,n<br>
+	  Let c[m,n] = 0<br>
+	For m,n from 0 to q-1<br>
+	  Add exp[2i(pi).mn/q] to c[m,f(n)]<br>
+<p>
+The quantum transformations corresponding to steps 1-4 have all been<br>
+described (just not performed, outside of simulation).<br>
+<p>
+Step 5: "Read out" (measure, collapse) the first register.<br>
+<p>
+... And this is where I have a lapse of understanding. The whole <br>
+point is that the quantities in Step 4 are supposed to add up to<br>
+something other than zero ("interfere constructively") only for<br>
+values of m which will allow you to infer r, the period of f(m).<br>
+So far I haven't been able to demonstrate this to my own<br>
+satisfaction, and Braunstein passes the point by in a single<br>
+sentence. I'll keep trying.<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2148.html">Eliezer Yudkowsky: "Re: What is the definition of "definition"?"</a>
+<li> <b>Previous message:</b> <a href="2146.html">John K Clark: "What is the definition of "definition"?"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="2381.html">Hara Ra: "Re: QC: Shor's algorithm"</a>
+<li> <b>Maybe reply:</b> <a href="2381.html">Hara Ra: "Re: QC: Shor's algorithm"</a>
+<!-- reply="end" -->
+</ul>

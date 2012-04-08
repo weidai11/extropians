@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: http://www.echelon.wiretapped.net signatures</title>
+<meta name="Author" content="Eugene Leitl (eugene.leitl@lrz.uni-muenchen.de)">
+<meta name="Subject" content="Re: http://www.echelon.wiretapped.net signatures">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: http://www.echelon.wiretapped.net signatures</h1>
+<!-- received="Sun Oct  8 10:30:47 2000" -->
+<!-- isoreceived="20001008163047" -->
+<!-- sent="Sun, 8 Oct 2000 15:35:11 -0700 (PDT)" -->
+<!-- isosent="20001008223511" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: http://www.echelon.wiretapped.net signatures" -->
+<!-- id="14816.63135.421442.182802@lrz.uni-muenchen.de" -->
+<!-- inreplyto="39E06616.145958F6@comp-lib.org" -->
+<strong>From:</strong> Eugene Leitl (<a href="mailto:eugene.leitl@lrz.uni-muenchen.de?Subject=Re:%20http://www.echelon.wiretapped.net%20signatures&In-Reply-To=&lt;14816.63135.421442.182802@lrz.uni-muenchen.de&gt;"><em>eugene.leitl@lrz.uni-muenchen.de</em></a>)<br>
+<strong>Date:</strong> Sun Oct 08 2000 - 16:35:11 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0605.html">scerir: "Re: Does the state-vector collapse, at last?"</a>
+<li><strong>Previous message:</strong> <a href="0603.html">Alex Future Bokov: "Re: http://www.echelon.wiretapped.net signatures"</a>
+<li><strong>In reply to:</strong> <a href="0598.html">Michael M. Butler: "Re: http://www.echelon.wiretapped.net signatures"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0607.html">Eliezer S. Yudkowsky: "Re: http://www.echelon.wiretapped.net signatures"</a>
+<li><strong>Reply:</strong> <a href="0607.html">Eliezer S. Yudkowsky: "Re: http://www.echelon.wiretapped.net signatures"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#604">[ date ]</a>
+<a href="index.html#604">[ thread ]</a>
+<a href="subject.html#604">[ subject ]</a>
+<a href="author.html#604">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Michael M. Butler writes:
+<br>
+<em> &gt; You just reminded me to set up my own Hotbits server. Project time!
+</em><br>
+<em> &gt; Anyone know of a nice place to buy an energetic beta source besides
+</em><br>
+<em> &gt; NIST? &gt;=100kBq preferred.
+</em><br>
+&nbsp;
+<br>
+That would seem an overkill. Why don't you just digitize output of
+<br>
+white noise generator (say, amplified thermal noise of a transistor
+<br>
+junction) and feed it through a cryptohash? Actually, just the LSB of
+<br>
+/dev/audio or /dev/video (I have a 25 fps 640x480 24 bit/pixel
+<br>
+framegrabber with a 3Com BigPicture attached, that's a high data rate
+<br>
+source) should give you lots of entropy.
+<br>
+<p>Ferinstance:
+<br>
+<p>eugene.leitl@lrz:~ &gt; cat /dev/dsp | mimencode
+<br>
+y9Dq48+9u7aorsnOrLe5yLefsKivlamzho2jpp2srLeil8Konod1nZGYjoSKi3ZkY3V3fIR9
+<br>
+hXd3hYmMq5KjlH+DkH51gVxWcnBsiJGZnrq42NOxv7+wrLq3qbaqiYukzNW1oIJwi7XGxMCu
+<br>
+qZmjmo5/kI1wjIqIgHuOimVlWWR5dYydk3+RsJ6opLfezr+2e3qIfYKTkpWSfneOjZjBy7Wt
+<br>
+[aborted]
+<br>
+<p>(You migh want to jack up mic input amplification). See, it's rather
+<br>
+noisy, already, even without any mic attached.
+<br>
+<p>cat /dev/dsp &gt;blah
+<br>
+[aborted]
+<br>
+cat blah | md5sum
+<br>
+9e3ea9f1d137aef4a089e2fc740731f8  -
+<br>
+<p>Just read in a few 100 bytes from /dev/dsp, pass them through MD5, or
+<br>
+another cryptohash (diversify, you could as well use a stream cipher,
+<br>
+periodically flipping keys, made from a cryptohashed true entropy
+<br>
+source), and either stream that through a socket to a remote
+<br>
+(preferably overseas) friend of yours, or crontab this to be catted
+<br>
+into a mail body, send to some fake users or real users who filter it
+<br>
+out to /dev/null with procmail (you'll also need accomplices for that
+<br>
+-- be your own accomplice with an ssh session). In case they ever
+<br>
+catch it (if I was in their place, I'd use entropy detectors, and
+<br>
+stuff which can tell crypto from compression apart, ranking people by
+<br>
+the rate of noise produced), much headscratching at cryptoanalyst's
+<br>
+end will ensue.
+<br>
+<p><em> &gt; &gt; And yeah, if you really want to piss off certain people, set up noisy
+</em><br>
+<em> &gt; &gt; video webcasts, and encrypted mailing lists (e.g. mmreencrypt patch
+</em><br>
+<em> &gt; &gt; for MailMan) which just send back and forth /dev/(u)random output
+</em><br>
+<em> &gt; &gt; (just set up a pair of scripts which stream that via a socket). These
+</em><br>
+<em> &gt; &gt; people don't like high-entropy bitstreams, given their professional
+</em><br>
+<em> &gt; &gt; paranoia.
+</em><br>
+<em> &gt; 
+</em><br>
+<em> &gt; There also ought to be a way to, for example, run fake stego on all a
+</em><br>
+<em> &gt; server/proxy's cached images so they all show suspicious lsb noise that
+</em><br>
+<em> &gt; varies from day to day.
+</em><br>
+<p>But you'll need a consumer of the video stream, orelse the packets
+<br>
+will never fly.
+<br>
+<p><em> &gt; Then there's Gilmore's FreeS/WAN project:
+</em><br>
+<em> &gt; <a href="http://www.xs4all.nl/~freeswan/">http://www.xs4all.nl/~freeswan/</a>. If I get ADSL or something, I'll
+</em><br>
+<em> &gt; probably run one of these.
+</em><br>
+<p>Ditto here, but try getting SDSL, the assymetrical stuff is too easily 
+<br>
+clogged if you're a producer.
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0605.html">scerir: "Re: Does the state-vector collapse, at last?"</a>
+<li><strong>Previous message:</strong> <a href="0603.html">Alex Future Bokov: "Re: http://www.echelon.wiretapped.net signatures"</a>
+<li><strong>In reply to:</strong> <a href="0598.html">Michael M. Butler: "Re: http://www.echelon.wiretapped.net signatures"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0607.html">Eliezer S. Yudkowsky: "Re: http://www.echelon.wiretapped.net signatures"</a>
+<li><strong>Reply:</strong> <a href="0607.html">Eliezer S. Yudkowsky: "Re: http://www.echelon.wiretapped.net signatures"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#604">[ date ]</a>
+<a href="index.html#604">[ thread ]</a>
+<a href="subject.html#604">[ subject ]</a>
+<a href="author.html#604">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:50:15 MDT</em>
+</em>
+</small>
+</body>
+</html>

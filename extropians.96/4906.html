@@ -1,0 +1,103 @@
+<!-- received="Sat Dec 28 04:28:48 1996 MST" -->
+<!-- sent="Thu, 26 Dec 1996 19:52:13 +0000" -->
+<!-- name="Mark Grant" -->
+<!-- email="mark@unicorn.com" -->
+<!-- subject="Re: Extropians Investing in the Future" -->
+<!-- id="1.5.4.32.19961228085830.00386654@best.com" -->
+<!-- inreplyto="32C1C49E.20EE@pobox.com" -->
+<title>extropians: Re: Extropians Investing in the Future</title>
+<h1>Re: Extropians Investing in the Future</h1>
+Mark Grant (<i>mark@unicorn.com</i>)<br>
+<i>Thu, 26 Dec 1996 19:52:13 +0000</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4906">[ date ]</a><a href="index.html#4906">[ thread ]</a><a href="subject.html#4906">[ subject ]</a><a href="author.html#4906">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4907.html">J de Lyser: "Re: List Filtration (a.k.a.: Signal to Noise Ratio)"</a>
+<li> <b>Previous message:</b> <a href="4905.html">Mark Grant: "COMP: Re: tech snippets"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Wed, 25 Dec 1996, Eliezer Yudkowsky wrote:<br>
+<p>
+<i>&gt; The Java bytecode verifier ensures that no object references are forged,</i><br>
+<i>&gt; so that no area of computer memory can be accessed unless allocated, by</i><br>
+<i>&gt; the Java environment, as an object.</i><br>
+<p>
+Or unless there are bugs in the Java verifier or runtime code (as there <br>
+were to begin with and probably still are).<br>
+<p>
+<i>&gt;  Java *applications* *may* be allowed to access pre-written (not</i><br>
+<i>&gt; net-loaded) native methods for executing commands such as "rm -rf</i><br>
+<i>&gt; $HOME", but Java *applets*, which are loaded automatically, can't do</i><br>
+<i>&gt; that.</i><br>
+<p>
+Actually, because I've written Java applets I do know this. I thought we <br>
+were talking about applications, not applets. The original comment was about <br>
+cross-platform apps, and said that because of verifiers the "security bugs <br>
+that were neccesary to make the most powerful tools work that were initially <br>
+closed will be opened and enhanced". Verifiers cannot reliably prevent you <br>
+from downloading a Java app that erases your hard disk without bouncing any <br>
+application that uses the I/O classes. <br>
+<p>
+<i>&gt; Java is a virtual world.</i><br>
+<p>
+Netscape is a virtual world that processes HTML files. That didn't stop <br>
+people from creating URLs that executed host code inside Netscape and <br>
+could have done anything.<br>
+<p>
+<i>&gt; The bytecode verifier ensures that the Java</i><br>
+<i>&gt; bytecodes stay within the virtual world.  There are no halting problems</i><br>
+<i>&gt; here. </i><br>
+<p>
+Of course there is. You throw out any code that might break the security,<br>
+even when it doesn't, *because* of the halting problem. Only simple code<br>
+will pass the verifier. So you're limiting people's ability to write good,<br>
+fast code in order to ensure that it's theoretically secure. If GNU come<br>
+out with a super-duper highly-optimized free compiler which doesn't<br>
+produce the same bytecode as Sun, then their applications will be bounced.<br>
+<p>
+More to the point, a 'secure' language should not need a verifier. The<br>
+mere fact that Java bytecode must be verified before it's run shows that <br>
+the bytecode is not secure!!! And you're right... it is *theoretically* <br>
+secure. The problem, as I understand it, is that Sun chose not to write<br>
+a secure interpreter with runtime verification of parameters because it<br>
+would be extremely slow. So no matter how theoretically secure the<br>
+bytecode definition is, Sun *chose not to create a secure implementation*,<br>
+and rely entirely on the verifier to prevent abuse.<br>
+<p>
+<i>&gt; In point of fact, if Java wasn't secure, *then* I could write a</i><br>
+<i>&gt; Turing machine capable of solving the halting problem. </i><br>
+<p>
+Huh? Well go ahead, because plenty of security holes in Java have already <br>
+been demonstrated.<br>
+<p>
+<i>&gt; There may be</i><br>
+<i>&gt; flaws in the implementation,</i><br>
+<p>
+And how exactly do you prove there are no flaws in the implementation? <br>
+Plenty have been found and exploited already, and more will be.<br>
+<p>
+<i>&gt; but I think that your challenges here are</i><br>
+<i>&gt; based on a lack of knowledge.</i><br>
+<p>
+Then you presume wrong. <br>
+<p>
+	Mark<br>
+<p>
+<i>|-----------------------------------------------------------------------|</i><br>
+<i>|Mark Grant M.A., U.L.C.	  	       EMAIL: mark@unicorn.com  |</i><br>
+<i>|WWW: <a href="http://www.c2.org/~mark">http://www.c2.org/~mark</a>	  	       MAILBOT: bot@unicorn.com	|</i><br>
+<i>|-----------------------------------------------------------------------|</i><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4907.html">J de Lyser: "Re: List Filtration (a.k.a.: Signal to Noise Ratio)"</a>
+<li> <b>Previous message:</b> <a href="4905.html">Mark Grant: "COMP: Re: tech snippets"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

@@ -1,0 +1,123 @@
+<!-- received="Sun May 10 15:02:20 1998 MDT" -->
+<!-- sent="Sun, 10 May 1998 14:00:14 -0700" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Laser communications idea" -->
+<!-- id="3.0.2.32.19980510140014.00a58290@shell9.ba.best.com" -->
+<!-- inreplyto="3.0.3.32.19980510090033.007626ec@popmail.mcs.net" -->
+<title>extropians: Re: Laser communications idea</title>
+<h1>Re: Laser communications idea</h1>
+James Rogers (<i>jamesr@best.com</i>)<br>
+<i>Sun, 10 May 1998 14:00:14 -0700</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1565">[ date ]</a><a href="index.html#1565">[ thread ]</a><a href="subject.html#1565">[ subject ]</a><a href="author.html#1565">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1566.html">James Rogers: "Re: Laser communications idea"</a>
+<li> <b>Previous message:</b> <a href="1564.html">Hal Finney: "Re: Laser communications idea"</a>
+<li> <b>In reply to:</b> <a href="1560.html">ChuckKuecker: "Re: Laser communications idea"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="1567.html">ChuckKuecker: "Re: Laser communications idea"</a>
+<li> <b>Reply:</b> <a href="1567.html">ChuckKuecker: "Re: Laser communications idea"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+At 09:00 AM 5/10/98 -0500, ChuckKuecker wrote:<br>
+<i>&gt;At 10:47 PM 5/9/98 -0700, James Rogers wrote:</i><br>
+[...snip...]<br>
+<i>&gt;&gt;Laser targeting/ranging systems, such as those used by the military, mark</i><br>
+<i>&gt;&gt;their targets by detecting the laser light which is reflected off the</i><br>
+<i>&gt;&gt;object being illuminated.  My idea was to use objects in geosynchronous</i><br>
+<i>&gt;&gt;orbit as reflective bodies for the purpose of scattering laser light.  The</i><br>
+<i>&gt;&gt;ground stations would use laser pulses to send data by reflecting them off</i><br>
+<i>&gt;&gt;the geosynchronous object.  A passive sensor on the receiving end would</i><br>
+<i>&gt;&gt;detect the laser light that scatters off the satellite and (hopefully)</i><br>
+<i>&gt;&gt;discern the bits.  In the simplest case scenario, the data communication</i><br>
+<i>&gt;&gt;would be half-duplex, but more complex arrangements could be developed.  I</i><br>
+<i>&gt;&gt;am unsure of the type of baud rate that could be accomplished this way.</i><br>
+<i>&gt;&gt;</i><br>
+<i>&gt;</i><br>
+<i>&gt;Path loss looks to be the biggest problem here. Scattered laser light will</i><br>
+<i>&gt;be WAY down in amplitude by the time it makes it back to Earth from</i><br>
+<i>&gt;geosynchronous orbit..</i><br>
+<p>
+<p>
+The path loss shouldn't be insurmountable.  I know that a 3 Joule laser is<br>
+sufficient to get a good return signal from the lunar reflectors.  I would<br>
+expect most of the loss to occur at the satellite when the laser light is<br>
+reflected off an object that was not designed for that purpose.  However,<br>
+depending on your choice of wavelengths, even a very low power return<br>
+signal may be adequate if you have decent contrast against the background.<br>
+<p>
+<p>
+<i>&gt;If you can detect the signal once it's back on Earth, I imagine you want an</i><br>
+<i>&gt;extremely robust error correction algorithm, as atmospheric distortion and</i><br>
+<i>&gt;stray light will be adding lots of noise. </i><br>
+<i>&gt;</i><br>
+<i>&gt;The theoretical maximum baud rate is 1/2 the carrier frequency, so you</i><br>
+<i>&gt;won't be seriously limited in speed with a laser signal. The actual data</i><br>
+<i>&gt;rate will probably be about 10% of the maximum to give a reasonable S/N</i><br>
+<i>&gt;number, and then the packeting and error correction overhead will be</i><br>
+<i>&gt;subtracted from that.</i><br>
+<i>&gt;</i><br>
+<i>&gt;I assume this would be a packet based system, otherwise you are just doing</i><br>
+<i>&gt;a single point to point link?</i><br>
+<p>
+<p>
+Point-to-point would be a good start.  I was thinking of ways to set up a<br>
+relatively high-bandwidth mobile point-to-point communications link without<br>
+having to rely on RF bands or commercial channels.  A more ambitious<br>
+project would be to set up a packet network.  The system wouldn't be too<br>
+good for real-time communications, but should work very well for data.  If<br>
+you used Ethernet type collision protocols, packet communications would<br>
+probably work pretty well.  Every satellite would be the equivalent of a<br>
+hub.  The biggest issue that I see is the high latency.  Geosync and back<br>
+is not a short hop.<br>
+<p>
+<p>
+<i>&gt;&gt;If this worked, it would be an interesting option for</i><br>
+<i>&gt;&gt;covert/subversive/etc. communications.  Lock onto your satellite of choice</i><br>
+<i>&gt;&gt;and send the data.  Encryption would be necessary, but it would probably be</i><br>
+<i>&gt;&gt;difficult to locate the sender, especially if the laser didn't operate at</i><br>
+<i>&gt;&gt;visible wavelengths.  The problem I see is the possibility that you</i><br>
+<i>&gt;&gt;wouldn't get a good scatter off the satellite.  I know that the</i><br>
+<i>&gt;&gt;ground-laser-to-geosync works because my mother used to work in a building</i><br>
+<i>&gt;&gt;where data was transmitted that way, but I am unsure how the downlink</i><br>
+worked.<br>
+<i>&gt;&gt;</i><br>
+<i>&gt;</i><br>
+<i>&gt;It would be impossible to locate the sender from the ground. Surveillance</i><br>
+<i>&gt;satellites could be easily made to pinpoint such laser signals from orbit,</i><br>
+<i>&gt;however. The probability of a short transmission being seen is very low,</i><br>
+<i>&gt;unless there's hundreds of such satellites up there..</i><br>
+<p>
+<p>
+Visible wavelength laser uplinks are potentially visible up to 5-10 miles<br>
+or so.  The blue-green laser uplinks (financial data) in San Diego, for<br>
+example, are visible several miles from the source.  However, burst<br>
+transmissions should reduce this significantly.<br>
+<p>
+My thought was that it wouldn't be too difficult to put together a<br>
+relatively mobile (vehicle-mounted?) secure communications system that does<br>
+not rely on commercial channels.  Setting up such a communications system<br>
+is non-trivial, but doesn't rely on exotic technologies either (lasers,<br>
+detector optics, and maybe GPS if you are mobile) so it should be do-able,<br>
+assuming that there are no serious problems with the design.<br>
+<p>
+<p>
+-James Rogers<br>
+ jamesr@best.com<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1566.html">James Rogers: "Re: Laser communications idea"</a>
+<li> <b>Previous message:</b> <a href="1564.html">Hal Finney: "Re: Laser communications idea"</a>
+<li> <b>In reply to:</b> <a href="1560.html">ChuckKuecker: "Re: Laser communications idea"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="1567.html">ChuckKuecker: "Re: Laser communications idea"</a>
+<li> <b>Reply:</b> <a href="1567.html">ChuckKuecker: "Re: Laser communications idea"</a>
+<!-- reply="end" -->
+</ul>

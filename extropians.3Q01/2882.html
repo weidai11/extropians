@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: \pi2\pi</title>
+<meta name="Author" content="Eugene Leitl (Eugene.Leitl@lrz.uni-muenchen.de)">
+<meta name="Subject" content="\pi2\pi">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>\pi2\pi</h1>
+<!-- received="Thu Aug  2 12:44:27 2001" -->
+<!-- isoreceived="20010802184427" -->
+<!-- sent="Thu, 2 Aug 2001 20:44:22 +0200 (MET DST)" -->
+<!-- isosent="20010802184422" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="\pi2\pi" -->
+<!-- id="Pine.SOL.4.33.0108022043470.15546-100000@sun1.lrz-muenchen.de" -->
+<strong>From:</strong> Eugene Leitl (<a href="mailto:Eugene.Leitl@lrz.uni-muenchen.de?Subject=Re:%20\pi2\pi&In-Reply-To=&lt;Pine.SOL.4.33.0108022043470.15546-100000@sun1.lrz-muenchen.de&gt;"><em>Eugene.Leitl@lrz.uni-muenchen.de</em></a>)<br>
+<strong>Date:</strong> Thu Aug 02 2001 - 12:44:22 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2883.html">J. R. Molloy: "Re: Religious Groups Bash Clones"</a>
+<li><strong>Previous message:</strong> <a href="2881.html">J. R. Molloy: "Re: Vicious Racism was RE: Reparations"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2882">[ date ]</a>
+<a href="index.html#2882">[ thread ]</a>
+<a href="subject.html#2882">[ subject ]</a>
+<a href="author.html#2882">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+-- Eugen* Leitl &lt;a href=&quot;<a href="http://www.lrz.de/~ui22204/">http://www.lrz.de/~ui22204/</a>&quot;&gt;leitl&lt;/a&gt;
+<br>
+______________________________________________________________
+<br>
+ICBMTO  : N48 10'07'' E011 33'53'' <a href="http://www.lrz.de/~ui22204">http://www.lrz.de/~ui22204</a>
+<br>
+57F9CFD3: ED90 0433 EB74 E4A9 537F CFF5 86E7 629B 57F9 CFD3
+<br>
+<p>---------- Forwarded message ----------
+<br>
+Date: Thu, 2 Aug 2001 11:34:57 -0700 (PDT)
+<br>
+From: Eric Cordian &lt;<a href="mailto:emc@artifact.psychedelic.net?Subject=Re:%20\pi2\pi&In-Reply-To=&lt;Pine.SOL.4.33.0108022043470.15546-100000@sun1.lrz-muenchen.de&gt;">emc@artifact.psychedelic.net</a>&gt;
+<br>
+To: <a href="mailto:cypherpunks@einstein.ssz.com?Subject=Re:%20\pi2\pi&In-Reply-To=&lt;Pine.SOL.4.33.0108022043470.15546-100000@sun1.lrz-muenchen.de&gt;">cypherpunks@einstein.ssz.com</a>
+<br>
+Subject: Pi
+<br>
+<p>Interesting article recently posted on the Nature Web site about the
+<br>
+normality of Pi.
+<br>
+<p><a href="http://www.nature.com/nsu/010802/010802-9.html">http://www.nature.com/nsu/010802/010802-9.html</a>
+<br>
+<p>&quot;David Bailey of Lawrence Berkeley National Laboratory in California and
+<br>
+&nbsp;Richard Crandall of Reed College in Portland, Oregon, present evidence
+<br>
+&nbsp;that pi's decimal expansion contains every string of whole numbers. They
+<br>
+&nbsp;also suggest that all strings of the same length appear in pi with the
+<br>
+&nbsp;same frequency: 87,435 appears as often as 30,752, and 451 as often as
+<br>
+&nbsp;862, a property known as normality.&quot;
+<br>
+<p>Of cryptographic interest.
+<br>
+<p>&quot;While there may be no cosmic message lurking in pi's digits, if they are
+<br>
+&nbsp;random they could be used to encrypt other messages as follows:
+<br>
+<p>&quot;Convert a message into zeros and ones, choose a string of digits
+<br>
+&nbsp;somewhere in the decimal expansion of pi, and encode the message by
+<br>
+&nbsp;adding the digits of pi to the digits of the message string, one after
+<br>
+&nbsp;another. Only a person who knows the chosen starting point in pi's
+<br>
+&nbsp;expansion will be able to decode the message.&quot;
+<br>
+<p>While there's presently no known formula which generates decimal digits of
+<br>
+Pi starting from a particular point, there's a clever formula which can be
+<br>
+used to generate HEX digits of Pi starting from anywhere, which Bailey et
+<br>
+al discovered in 1996, using the PSLQ linear relation algorithm.
+<br>
+<p>If you sum the following series for k=0 to k=infinity, its limit is Pi.
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1/16^k[4/(8k+1) - 2/(8k+4) - 1/(8k+5) - 1/(8k+6)]
+<br>
+<p>(Exercise:  Prove this series sums to Pi)
+<br>
+<p>Since this is an expression for Pi in inverse powers of 16, it is easy to
+<br>
+multiply this series by 16^d and take the fractional part, evaluating
+<br>
+terms where d&gt;k by modular exponentiation, and evaluating a couple of
+<br>
+terms where d&lt;k to get a digit's worth of precision, yielding the (d+1)th
+<br>
+hexadecimal digit of Pi.
+<br>
+<p>Presumedly, if one could express PI as a series in inverse powers of 10,
+<br>
+one could do the same trick to get decimal digits.  Such a series has so
+<br>
+far eluded researchers.
+<br>
+<p><pre>
+-- 
+Eric Michael Cordian 0+
+O:.T:.O:. Mathematical Munitions Division
+&quot;Do What Thou Wilt Shall Be The Whole Of The Law&quot;
+</pre>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2883.html">J. R. Molloy: "Re: Religious Groups Bash Clones"</a>
+<li><strong>Previous message:</strong> <a href="2881.html">J. R. Molloy: "Re: Vicious Racism was RE: Reparations"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2882">[ date ]</a>
+<a href="index.html#2882">[ thread ]</a>
+<a href="subject.html#2882">[ subject ]</a>
+<a href="author.html#2882">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Fri Oct 12 2001 - 14:40:01 MDT</em>
+</em>
+</small>
+</body>
+</html>

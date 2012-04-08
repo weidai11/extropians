@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: screwey mail</title>
+<meta name="Author" content="Harvey Newstrom (mail@HarveyNewstrom.com)">
+<meta name="Subject" content="Re: screwey mail">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: screwey mail</h1>
+<!-- received="Mon Jan 29 19:38:28 2001" -->
+<!-- isoreceived="20010130023828" -->
+<!-- sent="Mon, 29 Jan 2001 21:38:17 -0500" -->
+<!-- isosent="20010130023817" -->
+<!-- name="Harvey Newstrom" -->
+<!-- email="mail@HarveyNewstrom.com" -->
+<!-- subject="Re: screwey mail" -->
+<!-- id="p05010402b69bd1ebfa2c@[207.36.25.220]" -->
+<!-- inreplyto="3A758E54.D1641B57@datamann.com" -->
+<strong>From:</strong> Harvey Newstrom (<a href="mailto:mail@HarveyNewstrom.com?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;"><em>mail@HarveyNewstrom.com</em></a>)<br>
+<strong>Date:</strong> Mon Jan 29 2001 - 19:38:17 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2791.html">Emlyn: "Re: true abundance?"</a>
+<li><strong>Previous message:</strong> <a href="2789.html">denis bider: "RE: true abundance?"</a>
+<li><strong>In reply to:</strong> <a href="2725.html">Michael Lorrey: "screwey mail"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2790">[ date ]</a>
+<a href="index.html#2790">[ thread ]</a>
+<a href="subject.html#2790">[ subject ]</a>
+<a href="author.html#2790">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+At 10:37 AM -0500 1/29/01, Michael Lorrey wrote:
+<br>
+<em>&gt;Natasha's message here seems to have locked up download from the linux
+</em><br>
+<em>&gt;mail server to my nestcape mail reader, it seems truncated header
+</em><br>
+<em>&gt;information is the culprit.
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;Received: from tick.javien.com ([209.115.238.117])
+</em><br>
+<em>&gt;com&gt;; Sun, 28 Jan 2001 19:18:53 -0500
+</em><br>
+<em>&gt;25
+</em><br>
+<em>&gt;ing: tick.javien.com: majordom set sender to
+</em><br>
+<em>&gt;<a href="mailto:owner-extropians@extropy.org?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">owner-extropians@extropy.org</a> using <a href="mailto:avita@earthlink.net?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">avita@earthlink.net</a>
+</em><br>
+<em>&gt;0800
+</em><br>
+<em>&gt;t: PARTY:  Release of Primo 3M+
+</em><br>
+<em>&gt;<a href="mailto:xtropians@extropy.org?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">xtropians@extropy.org</a>
+</em><br>
+<em>&gt;			* * * * *
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;		<a href="http://www.natasha.cc/soiree2.htm">http://www.natasha.cc/soiree2.htm</a>
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt;				* * * * *
+</em><br>
+<p>Mike, you have repeatedly complained about extropian messages locking 
+<br>
+up your server.  I don't think anybody else is having that problem. 
+<br>
+I think the problem is in your server somewhere.  If extropians is 
+<br>
+the most verbose list to which you subscribe, it just may be 
+<br>
+statistically more likely to be in the queue when the problem occurs.
+<br>
+<p>The above message came through to me without truncated header 
+<br>
+information.  The specific headers you see truncated were not 
+<br>
+truncated in my copy.  Therefore, it seems to be coming out of the 
+<br>
+ExI servers unbroken and is being garbled elsewhere on its path to 
+<br>
+you.  Note that the truncation does not seem to be positional or 
+<br>
+line-based, but is similar to what a lack of flow-control would 
+<br>
+produce.  My first guess would be that the connection you use for 
+<br>
+downloading mail from your linux server is not performing 
+<br>
+flow-control correctly.  This would probably corrupt the message and 
+<br>
+hang your connection at the same time.  If you are using a modem, 
+<br>
+make sure the hardware flow-control is enabled.  If you must use 
+<br>
+software flow-control, try increasing your buffer size to something 
+<br>
+larger.
+<br>
+<p><p>Here are my suggestions for isolating the problem:
+<br>
+<p>Copy the offending message and send it to yourself, does it lock up 
+<br>
+again?  If so, something in the message is the trigger and can be 
+<br>
+repeatedly demonstrated.  If not, the message itself is not causing 
+<br>
+the crash but may have just happened to be in the queue at the time 
+<br>
+of the crash.
+<br>
+<p>If the message is the trigger, send it to other linux mail servers or 
+<br>
+netscape mail readers to see if they likewise crash.  If so, it is a 
+<br>
+common problem.  If not, the problem is isolated to your particular 
+<br>
+configuration.  This could be a settings problem, an environment 
+<br>
+problem (such as disk space, memory size, number of processes), or 
+<br>
+some random corrupted file.
+<br>
+<p>Note that bad data should never crash a data handler such as e-mail. 
+<br>
+If this were allowed, the server could be deliberately crashed by 
+<br>
+hackers or would be unstable whenever bad data is received.  In 
+<br>
+general, such systems must be fixed even if the data is the trigger.
+<br>
+<p><p>The complete text of the message is reproduced below.  This will give 
+<br>
+you a complete copy to play with in addition to your corrupted copy.
+<br>
+____________________cut here____________________
+<br>
+Received: from tick.javien.com ([209.115.238.117])
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by spool2.valueweb.net (8.9.2/8.9.2) with ESMTP id TAA86480
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for &lt;<a href="mailto:extropians@HarveyNewstrom.com?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">extropians@HarveyNewstrom.com</a>&gt;; Sun, 28 Jan 2001 19:02:23 -0500
+<br>
+Received: (from majordom@localhost)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;by tick.javien.com (8.9.3/8.9.3) id QAA09025
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for extropians-outgoing; Sun, 28 Jan 2001 16:25:38 -0700
+<br>
+X-Authentication-Warning: tick.javien.com: majordom set sender to 
+<br>
+<a href="mailto:owner-extropians@extropy.org?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">owner-extropians@extropy.org</a> using -f
+<br>
+Message-Id: &lt;<a href="mailto:3.0.32.20010128152325.0071f0cc@earthlink.net?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">3.0.32.20010128152325.0071f0cc@earthlink.net</a>&gt;
+<br>
+X-Sender: <a href="mailto:natashavita@earthlink.net?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">natashavita@earthlink.net</a>
+<br>
+X-Mailer: Windows Eudora Pro Version 3.0 (32)
+<br>
+Date: Sun, 28 Jan 2001 15:23:30 -0800
+<br>
+To: <a href="mailto:extropians@extropy.org?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">extropians@extropy.org</a>
+<br>
+From: Natasha Vita-More &lt;<a href="mailto:natasha@natasha.cc?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">natasha@natasha.cc</a>&gt;
+<br>
+Subject: PARTY:  Release of Primo 3M+
+<br>
+Mime-Version: 1.0
+<br>
+Content-Type: text/plain; charset=&quot;us-ascii&quot;
+<br>
+Sender: <a href="mailto:owner-extropians@extropy.org?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">owner-extropians@extropy.org</a>
+<br>
+Precedence: bulk
+<br>
+Reply-To: <a href="mailto:extropians@extropy.org?Subject=Re:%20screwey%20mail&In-Reply-To=&lt;p05010402b69bd1ebfa2c@[207.36.25.220]&gt;">extropians@extropy.org</a>
+<br>
+<p><p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* * * * *
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.natasha.cc/soiree2.htm">http://www.natasha.cc/soiree2.htm</a>
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* * * * *
+<br>
+<pre>
+-- 
+Harvey Newstrom &lt;<a href="http://HarveyNewstrom.com">http://HarveyNewstrom.com</a>&gt;
+</pre>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2791.html">Emlyn: "Re: true abundance?"</a>
+<li><strong>Previous message:</strong> <a href="2789.html">denis bider: "RE: true abundance?"</a>
+<li><strong>In reply to:</strong> <a href="2725.html">Michael Lorrey: "screwey mail"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2790">[ date ]</a>
+<a href="index.html#2790">[ thread ]</a>
+<a href="subject.html#2790">[ subject ]</a>
+<a href="author.html#2790">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:26 MDT</em>
+</em>
+</small>
+</body>
+</html>

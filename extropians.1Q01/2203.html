@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: CODE: Programming project required</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: CODE: Programming project required">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: CODE: Programming project required</h1>
+<!-- received="Tue Jan 23 09:30:48 2001" -->
+<!-- isoreceived="20010123163048" -->
+<!-- sent="Mon, 22 Jan 2001 23:27:44 -0800" -->
+<!-- isosent="20010123072744" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: CODE: Programming project required" -->
+<!-- id="01012300201800.00686@tachyon" -->
+<!-- inreplyto="3A6CD019.3CC76AD4@objectent.com" -->
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20CODE:%20Programming%20project%20required&In-Reply-To=&lt;01012300201800.00686@tachyon&gt;"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Tue Jan 23 2001 - 00:27:44 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2204.html">KPJ: "Re: HTML question (off topic)"</a>
+<li><strong>Previous message:</strong> <a href="2202.html">Michael Wiik: "Re: Damien Broderick's work on-line"</a>
+<li><strong>In reply to:</strong> <a href="2146.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2286.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<li><strong>Reply:</strong> <a href="2286.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2203">[ date ]</a>
+<a href="index.html#2203">[ thread ]</a>
+<a href="subject.html#2203">[ subject ]</a>
+<a href="author.html#2203">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+On Mon, 22 Jan 2001, Samantha wrote:
+<br>
+<em>&gt; I have refused to learn PL/SQL or SQL*Plus any other single db vendor
+</em><br>
+<em>&gt; proprietary language.  The world does not need this and I certainly
+</em><br>
+<em>&gt; don't.  I don't mind learning a specialized language for database if it
+</em><br>
+<em>&gt; works on all vendor's products of a particular class.  I occassionally
+</em><br>
+<em>&gt; learn just enough to write an adaptor to something of my own invention
+</em><br>
+<em>&gt; that is more general.  But I believe I do my customers and employers a
+</em><br>
+<em>&gt; disservice if I write their business logic directly in some vendor
+</em><br>
+<em>&gt; proprietary language.
+</em><br>
+<p><p>At some point, this attitude gives diminishing returns.  I have a strong
+<br>
+preference for standards based implementation, but only when it doesn't
+<br>
+diminish the results in some way.  Oracle is nearly as ubiquitous in the
+<br>
+database world as Windows is in the desktop world, so I don't feel bad
+<br>
+about writing some code in PL/SQL when called for, any more than I would
+<br>
+feel bad about writing part of a Windows app in VB if that was best
+<br>
+suited for the job.  Considering the shear numbers of people who know
+<br>
+PL/SQL, and the probability that it will be supported for many years into
+<br>
+the future, I don't see a problem with it from the perspective of a
+<br>
+business manager.
+<br>
+<p>Sure, I could do everything outside of the database using JDBC/ODBC and
+<br>
+the language of your choice (and many times I do), but I wouldn't
+<br>
+necessarily do it out of principle.  My client is paying for the best
+<br>
+solution to their needs, not for a solution that meets an abstract ideal
+<br>
+that can't be easily justified, particularly when a standardized
+<br>
+solution barely meets the required metrics (speed and scalability are
+<br>
+typically my given primary design goals).  Beside which, many &quot;standards&quot;
+<br>
+have fallen by the wayside faster than proprietary systems.
+<br>
+<p>I have to design for scalability and headroom, and so that is where I put
+<br>
+the engineering elegance.  I am not religious about language, as long as it
+<br>
+is reasonably clean.  A well-written code base in any reasonable language
+<br>
+makes the choice of language really a matter of aesthetics or cosmetics. 
+<br>
+In practice, I usually do most everything in open standard environments,
+<br>
+but for sections of a system with critical performance, I am not shy about
+<br>
+diving in and creating a custom tailored solution using proprietary tools. 
+<br>
+In PL/SQL land, that may mean that certain complicated transactions are
+<br>
+compiled into the database and accessed using standard APIs in something
+<br>
+like Java.
+<br>
+<p><p><em>&gt; Oracle should be a vendor of relational dbms technology not busy locking
+</em><br>
+<em>&gt; you in to having persistent solutions that work only on Oracle and are
+</em><br>
+<em>&gt; useless on anything else.  
+</em><br>
+<p><p>While lowest common denominator solutions may be wonderful for a broad
+<br>
+class of applications, some require tighter integration than you'll find
+<br>
+with a standards based environment.  Business types don't care; Oracle is
+<br>
+a de-facto standard to them, unless they have a religious objection.  If
+<br>
+Oracle isn't an excellent tool for the job, I won't use it or recommend
+<br>
+it.  Fortunately, it is quite adequate as an enterprise database and is
+<br>
+usually the preferred database for many managers.
+<br>
+<p>One could argue that a standard database 4GL could be designed, but that
+<br>
+would defeat the purpose.  4GLs such as PL/SQL reflect the internal
+<br>
+details of the database and abstracting it would defeat most of the
+<br>
+advantages of a 4GL to begin with, since internals vary quite a bit
+<br>
+between major vendors.  But there is still a good argument for 4GLs,
+<br>
+since there is a substantial amount of opimization inherent in their
+<br>
+design.  Frequently I use JDBC/ODBC for database access instead of
+<br>
+native methods, but I do so knowing full well that it won't hold a candle
+<br>
+to native methods performance-wise; when performance is critical, I go
+<br>
+native every time. 
+<br>
+<p>In the business world, Oracle is a de-facto standard, just like Microsoft.
+<br>
+My clients don't want me to sacrifice the business solution on an arguable
+<br>
+philosophical premise.  &quot;Standard&quot; means different things to people from
+<br>
+the business world and the software engineering world.
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20CODE:%20Programming%20project%20required&In-Reply-To=&lt;01012300201800.00686@tachyon&gt;">jamesr@best.com</a>
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2204.html">KPJ: "Re: HTML question (off topic)"</a>
+<li><strong>Previous message:</strong> <a href="2202.html">Michael Wiik: "Re: Damien Broderick's work on-line"</a>
+<li><strong>In reply to:</strong> <a href="2146.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="2286.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<li><strong>Reply:</strong> <a href="2286.html">Samantha Atkins: "Re: CODE: Programming project required"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2203">[ date ]</a>
+<a href="index.html#2203">[ thread ]</a>
+<a href="subject.html#2203">[ subject ]</a>
+<a href="author.html#2203">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:24 MDT</em>
+</em>
+</small>
+</body>
+</html>

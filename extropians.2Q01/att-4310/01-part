@@ -1,0 +1,8 @@
+Reporting-MTA: dns; bouncemessage.net
+
+Final-Recipient: rfc822; extrotech.net@namezero.com
+Action: Failed
+Status: 5.2.2
+
+5.0.0
+

@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Why would AI want to be friendly?</TITLE>
+<META NAME="Author" CONTENT="Eugene Leitl (eugene.leitl@lrz.uni-muenchen.de)">
+<META NAME="Subject" CONTENT="Re: Why would AI want to be friendly?">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Why would AI want to be friendly?</H1>
+<!-- received="Tue Sep 26 03:24:17 2000" -->
+<!-- isoreceived="20000926092417" -->
+<!-- sent="Tue, 26 Sep 2000 00:44:54 -0700 (PDT)" -->
+<!-- isosent="20000926074454" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Why would AI want to be friendly?" -->
+<!-- id="14800.21494.37529.433872@lrz.uni-muenchen.de" -->
+<!-- inreplyto="39D03501.5E10C9E1@objectent.com" -->
+<STRONG>From:</STRONG> Eugene Leitl (<A HREF="mailto:eugene.leitl@lrz.uni-muenchen.de?Subject=Re:%20Why%20would%20AI%20want%20to%20be%20friendly?&In-Reply-To=&lt;14800.21494.37529.433872@lrz.uni-muenchen.de&gt;"><EM>eugene.leitl@lrz.uni-muenchen.de</EM></A>)<BR>
+<STRONG>Date:</STRONG> Tue Sep 26 2000 - 01:44:54 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="5805.html">Eugene Leitl: "Re: Robots, but philosophers"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="5803.html">Eugene Leitl: "Re: Why would AI want to be friendly?"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="5793.html">Samantha Atkins: "Re: Why would AI want to be friendly?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Reply:</STRONG> <A HREF="5829.html">J. R. Molloy: "Re: Why would AI want to be friendly?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#5804">[ date ]</A>
+<A HREF="index.html#5804">[ thread ]</A>
+<A HREF="subject.html#5804">[ subject ]</A>
+<A HREF="author.html#5804">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Samantha Atkins writes:
+<BR>
+&nbsp;
+<BR>
+<EM> &gt; We are at least a jump in substrate away from machines as
+</EM><BR>
+<EM> &gt; computationally complex as human brains.  That is just for the hardware
+</EM><BR>
+<P>I don't think so. Unless they've started selling computronium at
+<BR>
+Fry's, or at least WSI of hardware cellular automata machines. They've 
+<BR>
+barely started using embedded RAM techology yet, and the only
+<BR>
+parallelism you can buy is either a bunch of DSPs, or hooking up lots
+<BR>
+of off-shelf hardwarez with off-shelf networking (FastEthernet, GBit
+<BR>
+Ethernet and maybe Myrinet). No one knows how much biological crunch
+<BR>
+equivalent a PC has, but it doubt it is more than a primitive insect.
+<BR>
+<P><EM> &gt; to be feasible for the task.  The software is another matter that is not
+</EM><BR>
+<EM> &gt; just going to magically come together.  
+</EM><BR>
+&nbsp;
+<BR>
+Do you know how most scientific codes work? An computational engine of
+<BR>
+relatively modest complexity is plowing through a mountain of data,
+<BR>
+over and over and over again. Overall, few % code, the rest of it
+<BR>
+data.  Frequently, in an embarassingly parallel fashion: many such
+<BR>
+mills, loosely (only locally) coupled. Here you can speed up things by 
+<BR>
+using dedicated hardware and/or many nodes (thousands, millions,
+<BR>
+billions) running in a parallel fashion.
+<BR>
+<P>The code is easy enough to grok, through finding a magic set of
+<BR>
+parameters can be tricky. The mountain of data is where most of the
+<BR>
+magic is. You have to initialize the simulation at the start which
+<BR>
+something very, very carefully structured.
+<BR>
+<P>You don't enter that huge of pile of opaque data in a text editor. You 
+<BR>
+can write the computational engine in a text editor, provided you know 
+<BR>
+how it is supposed to look like.
+<BR>
+<P>The only realistic way how to get at that initial set of data is
+<BR>
+either growing it with an evolutionary algorithm (here the exact
+<BR>
+nature of the computational engine is less crucial) or scanning a
+<BR>
+critter. In latter case you'll have to write a very very precise yet
+<BR>
+high-performance neuronal emulation engine.
+<BR>
+<P>I'm not sure why many apparently smart people still want to do it the
+<BR>
+Cyc way. Codify everything explicitly, using an army of human
+<BR>
+programmers, until the thing can limp off on its own. I just don't see
+<BR>
+it work, because even groups of people are just not smart enough for
+<BR>
+that.
+<BR>
+<P><EM> &gt; &gt; They can then work on advancing military science 24 hours a
+</EM><BR>
+<EM> &gt; &gt; day. It makes Roswell conspiracy theories pale by comparison. But then
+</EM><BR>
+<EM> &gt; &gt; this is all just distant futuristic fantasy, right? And we the public can
+</EM><BR>
+<EM> &gt; &gt; sit back and know that private and military AI research is many decades
+</EM><BR>
+<EM> &gt; &gt; away from any such state of development.
+</EM><BR>
+<EM> &gt; 
+</EM><BR>
+<EM> &gt; I would say more like 2 decades away minimum than 1.  But then I saw
+</EM><BR>
+<EM> &gt; average consensus for when we would have at least basic nano-assembler
+</EM><BR>
+<EM> &gt; systems drop from an average of 20+ years in March to about 12 in
+</EM><BR>
+<EM> &gt; September.  So I probably should adjust AI guesstimates also.
+</EM><BR>
+&nbsp;
+<BR>
+Your average is not my average. Apart from the bootstrap problem,
+<BR>
+which can take arbitrarily long, no one has still validated whether
+<BR>
+the mechanosynthetic reaction repertoire executed by a nanorobot is
+<BR>
+sufficient for a full closure.
+<BR>
+<P>It's looking good, and starting looking better year after year, but
+<BR>
+considering it graven in stone, and a particular flavour of
+<BR>
+nanotechnology at that, I dunno. My crystal ball is currently in the
+<BR>
+repair shop.
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="5805.html">Eugene Leitl: "Re: Robots, but philosophers"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="5803.html">Eugene Leitl: "Re: Why would AI want to be friendly?"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="5793.html">Samantha Atkins: "Re: Why would AI want to be friendly?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Reply:</STRONG> <A HREF="5829.html">J. R. Molloy: "Re: Why would AI want to be friendly?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#5804">[ date ]</A>
+<A HREF="index.html#5804">[ thread ]</A>
+<A HREF="subject.html#5804">[ subject ]</A>
+<A HREF="author.html#5804">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:39:08 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

@@ -1,0 +1,69 @@
+<!-- received="Wed Feb  3 12:49:50 1999 MDT" -->
+<!-- sent="Wed, 3 Feb 1999 11:42:50 -0800" -->
+<!-- name="hal@rain.org" -->
+<!-- email="hal@rain.org" -->
+<!-- subject="Re: Spam" -->
+<!-- id="199902031942.LAA01631@hal.sb.rain.org" -->
+<!-- inreplyto="Spam" -->
+<!-- version=1.10, linesinbody=30 -->
+<html><head><title>extropians: Re: Spam</title>
+<meta name=author content="hal@rain.org">
+<link rel=author rev=made href="mailto:hal@rain.org" title ="hal@rain.org">
+</head><body>
+<h1>Re: Spam</h1>
+<i>hal@rain.org</i><br>
+<i>Wed, 3 Feb 1999 11:42:50 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1528">[ date ]</a><a href="index.html#1528">[ thread ]</a><a href="subject.html#1528">[ subject ]</a><a href="author.html#1528">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1529.html">[ Next ]</a><a href="1527.html">[ Previous ]</a>
+<b>Maybe in reply to:</b> <a href="1531.html">Mark D. Fulwiler</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Another anti-spam technology was proposed by Adam Back on the cypherpunks
+mailing list.  You would add a new header to your mail which proved that
+you had done a large computation that was specific to that message.
+For example, take the recipient, the subject, and the date, and then
+encrypt them with a random key.  Take the output of that and encrypt
+again, and repeat this step 1,000,000 times.  Put the resulting value
+and key in the mail header.
+
+<p>
+The recipient's mail agent can reproduce the calculation and verify that
+everything checks out.  Otherwise the mail is rejected as spam (deleted
+or at least filtered into a special bin where you can glance at it later
+before deleting).
+
+<p>
+(The full idea is somewhat more complex in terms of dealing with mailing<br>
+lists, etc.  But there are ways of handling these extra details.)
+
+<p>
+<a name="1534qlink1">The calculation takes only a second or so per piece of email, so it is an
+insignificant cost for most users.  But spammers who send out thousands of
+emails must now customize each one with separate headers and a separate
+computation.  The total computational costs for them are much higher and
+it automatically puts a limit on how much spam they can afford to send.</a>
+
+<p>
+Unlike micropayment schemes, this approach does not require a banking
+system or any trusted third parties.  All it takes is agreement on the
+specific protocol to use for calculating the special header, and for
+the spam problem to grow bad enough that people bother to implement the
+needed code.
+
+<p>
+Hal
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1529.html">[ Next ]</a><a href="1527.html">[ Previous ]</a>
+<b>Maybe in reply to:</b> <a href="1531.html">Mark D. Fulwiler</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

@@ -1,0 +1,118 @@
+<!-- received="Tue Dec 14 15:15:15 1999 MST" -->
+<!-- sent="Tue, 14 Dec 1999 15:11:08 -0800 (PST)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: A simulated cell" -->
+<!-- id="14422.52876.943423.773499@lrz.uni-muenchen.de" -->
+<!-- inreplyto="199912141857.KAA02375@finney.org" -->
+<!-- version=1.10, linesinbody=72 -->
+<html><head><title>extropians: Re: A simulated cell</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Re: A simulated cell</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Tue, 14 Dec 1999 15:11:08 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3810">[ date ]</a><a href="index.html#3810">[ thread ]</a><a href="subject.html#3810">[ subject ]</a><a href="author.html#3810">[ author ]</a>
+<!-- next="start" -->
+<li><a href="3811.html">[ Next ]</a><a href="3809.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3806.html">hal@finney.org</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+hal@finney.org writes:
+ 
+<p>
+<a href="3806.html#3810qlink1"> &gt; It would seem that we have a ways to go before attempting this.  We not</a><br>
+<i> &gt; only need the 3D shapes, we need to know the chemical affinities of</i><br>
+<i> &gt; each portion, and the mechanical properties.  As a trivial first step,</i><br>
+<i> &gt; we'd need to know exactly how ribosomes perform protein synthesis.</i><br>
+<i> &gt; Very little is known about this at the mechanochemical level.  They only</i><br>
+<i> &gt; obtained a detailed 3D map of the ribosome within the past few months.</i><br>
+<i> &gt; It appears that it may be something of a clockwork mechanism, with</i><br>
+<i> &gt; internal moving parts.  I can't wait until we can really understand this</i><br>
+<i> &gt; molecular machine in detail.</i><br>
+ 
+<p>
+We seem to have a confusion of sorts here, about what it means to
+simulate a cell to be able to understand it.
+
+<p>
+In the field of molecular modelling for instance, there is a different
+degree of simulation detail, known as the level of theory. Typically,
+at a deeper level of theory, you tend achieve a higher accuracy at a
+much higher associated computational cost. For instance, because of
+how current QM codes scale, it is computationally infeasible to model
+anything but the active site of the enzyme at that low level of
+theory. So current most advanced models are hybrid, using classical
+molecular dynamics/mechanics for the rest of the enzyme, feeding the
+geometry into the quantum treatment of the active enzyme core.
+ 
+<p>
+Frequently, it is possible to abstract a given system, by stepping
+back, tilting your head, squinting a bit, and discarding its aspects
+we currently don't need. An enzyme can be thus seen as a molecular
+contraption, processing freely diffusing species A in a given cell
+compartment into other species B. Of course it is more complicated
+than a mere Michaelis-Menten kinetics plot: enzyme's activity can be
+modulated by other means, it may be immobilized at a surface, the
+educts/products will be most likely be actively transported, but you
+got the general idea. No need at all to go back to the molecular
+dynamics level, or even (godforbid) formidable Herr Schroedinger.
+
+<p>
+Notice that it is sometimes might be necessary to look down to a
+deeper level of theory to calibrate a higher level model. For
+instance, one might not only use experimental data to obtain
+parameters for a MD system, but try to extract them from
+QM. Currently, afaik this cannot be done purely
+automatically. However, I am confident that such automatically
+learning forcefield codes are feasible in principle. In fact solving
+the Protein Folding Problem (PFP) will probably require such codes,
+since, as I already mentioned, our current forcefields are not
+accurate enough to meet the challenge.
+
+<p>
+Similiarly, we can consider the ribosome as a black box which takes
+different inputs to produce a given output: an amino acid string.
+
+<p>
+In a sense, most vanilla cells also don't do anything magical, they
+might thus be modellable as a mechanical system with a rich inner
+state, capable of sending and reacting to signals.
+
+<p>
+Of course there is a special class of cells of dear interest to us
+all:
+<p>
+	<a href="http://www.google.com/search?q=neuron+simulation">http://www.google.com/search?q=neuron+simulation</a>&amp;num=100
+
+<p>
+Today the molecules, tomorrow cell assemblies?
+
+<p>
+<a href="3806.html#3810qlink2"> &gt; As we learn more about these protein machines I think this will add</a><br>
+<i> &gt; further interest in the prospects for nanotech.  If proteins are just</i><br>
+<i> &gt; enzymes, with specially-shaped active sites, that is old-fashioned</i><br>
+<i> &gt; chemistry.  But if they are mechanical devices, Drexler's gears and</i><br>
+<i> &gt; cables don't look so outlandish.</i><br>
+
+<p>
+True. In fact I had my mechanosynthetic epiphany when I tried to
+understand as to why life does so much better than the organic
+synthesis in the lab. It is about control, and machine-phase chemistry
+is about as much control as it gets (Rejoiceth, you control freaks!
+For your Kingdom is at hand ;)
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="3811.html">[ Next ]</a><a href="3809.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3806.html">hal@finney.org</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

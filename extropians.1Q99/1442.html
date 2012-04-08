@@ -1,0 +1,177 @@
+<!-- received="Mon Feb  1 08:52:53 1999 MDT" -->
+<!-- sent="Mon, 01 Feb 1999 10:42:21 -0500" -->
+<!-- name="Michael S. Lorrey" -->
+<!-- email="retroman@together.net" -->
+<!-- subject="IP selective browsing..." -->
+<!-- id="36B5CB5D.5F15E7CE@together.net" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=96 -->
+<html><head><title>extropians: IP selective browsing...</title>
+<meta name=author content="Michael S. Lorrey">
+<link rel=author rev=made href="mailto:retroman@together.net" title ="Michael S. Lorrey">
+</head><body>
+<h1>IP selective browsing...</h1>
+Michael S. Lorrey (<i>retroman@together.net</i>)<br>
+<i>Mon, 01 Feb 1999 10:42:21 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1442">[ date ]</a><a href="index.html#1442">[ thread ]</a><a href="subject.html#1442">[ subject ]</a><a href="author.html#1442">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1443.html">[ Next ]</a><a href="1441.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Regarding the IP Food Script website that Sasha pointed out yesterday, I
+was digging into my library here, and I came across a script that I
+wrote with the help of a guy on the Experts-Exchange, as follows:
+
+<p>
+#!/usr/bin/perl
+
+<p>
+print "Location: ";
+
+<p>
+# Look for their hostname or IP address. Each if-else query checks the
+browser to see if it
+<br>
+# is originating from the site of one of our competitors. You can create
+a new entry simply by
+<br>
+# adding a new if-else sequence with the new competitors domain name and
+dns address.
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "www.asaint.com") || ($ENV{REMOTE_ADDR"} eq
+"199.103.162.253"))
+<br>
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "asaint.com") || ($ENV{REMOTE_ADDR"} eq
+"208.206.42.254"))
+<br>
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "www.pagedigital.com") || ($ENV{REMOTE_ADDR"}
+eq "38.253.192.61"))
+<br>
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "www.avexxix.com") || ($ENV{REMOTE_ADDR"} eq
+"     "))
+<br>
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "www.sigma-micro.com") || ($ENV{REMOTE_ADDR"}
+eq "204.95.237.194"))
+<br>
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "www.dydacom.com") || ($ENV{REMOTE_ADDR"} eq
+"     "))
+<br>
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "www.colinear.com") || ($ENV{REMOTE_ADDR"} eq
+"209.86.106.186"))
+<br>
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "www.resoft.com") || ($ENV{REMOTE_ADDR"} eq
+"204.50.196.23"))
+<br>
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "www.rigden.com") || ($ENV{REMOTE_ADDR"} eq
+"206.168.2.203"))
+<br>
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+<p>
+if (($ENV{"REMOTE_HOST} eq "www.smith-gardener.com") ||
+($ENV{REMOTE_ADDR"} eq "207.243.49.30"))
+ {print "<a href="http://www.datamann.com/sorry.html">http://www.datamann.com/sorry.html</a>\n\n";
+<br>
+<i>}</i><br>
+<br>
+else{
+
+<p>
+# if the browser does not meet the above criteria, they then are let in
+as follows
+
+<p>
+ print "<a href="http://www.datamann.com/welcome.html">http://www.datamann.com/welcome.html</a>\n\n";
+<br>
+<i>}</i><br>
+
+<p>
+This obviously was designed to prevent our competitors from seeing our
+website.... The same commands are probably used in that IP Food Script
+that we discussed the other night, as a means of providing the search
+engines the desired optimized page....
+
+<p>
+So essentially, to beat the IP Food Script, a bot has to deploy to
+another host server that is not on the Food Script hit list, then query
+the page to be indexed. If you are a competitor, just spoof the host IP
+of a search engine spider on your own server, then query the 'optimized
+HTML page'.
+
+<p>
+Mike
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1443.html">[ Next ]</a><a href="1441.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

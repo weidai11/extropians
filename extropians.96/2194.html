@@ -1,0 +1,183 @@
+<!-- received="Sat Oct 26 04:02:43 1996 MST" -->
+<!-- sent="Wed, 23 Oct 1996 16:23:38 -0700 (PDT)" -->
+<!-- name="Ray Peck" -->
+<!-- email="rpeck@PureAtria.COM" -->
+<!-- subject="fwd: "[psl@langston.com: The world just changed again - A new cryptanalytic attack on DES]"" -->
+<!-- id="199610232323.QAA27346@pure.PureAtria.COM" -->
+<!-- inreplyto="" -->
+<title>extropians: fwd: "[psl@langston.com: The world just changed again - A new cryptanalytic attack on DES]"</title>
+<h1>fwd: "[psl@langston.com: The world just changed again - A new cryptanalytic attack on DES]"</h1>
+Ray Peck (<i>rpeck@PureAtria.COM</i>)<br>
+<i>Wed, 23 Oct 1996 16:23:38 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2194">[ date ]</a><a href="index.html#2194">[ thread ]</a><a href="subject.html#2194">[ subject ]</a><a href="author.html#2194">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2195.html">David McFadzean: "META test"</a>
+<li> <b>Previous message:</b> <a href="2193.html">Alexander Chislenko: "NEWS/FWD: Pope Accepts Theory of Evolution"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Oh shit.<br>
+<p>
+------- Start of forwarded message -------<br>
+From: Jim Bennett &lt;jim@PureAtria.COM&gt;<br>
+To: eng@PureAtria.COM<br>
+Subject: [psl@langston.com: The world just changed again - A new cryptanalytic attack on DES]<br>
+Date: Tue, 22 Oct 1996 07:55:28 -0700 (PDT)<br>
+<p>
+From: Peter Langston &lt;psl@langston.com&gt;<br>
+Forwarded-by: Keith Bostic &lt;bostic@bsdi.com&gt;<br>
+Forwarded-by: Gregory G Rose &lt;ggr@qualcomm.com&gt;<br>
+Forwarded-by: Matt Blaze &lt;mab@research.att.com&gt;<br>
+From: Shamir Adi &lt;shamir@wisdom.weizmann.ac.il&gt;<br>
+<p>
+Research announcement: A new cryptanalytic attack on DES<br>
+<p>
+<p>
+Eli Biham                                 Adi Shamir<br>
+<p>
+Computer Science Dept.                    Applied Math Dept.<br>
+The Technion                              The Weizmann Institute<br>
+Israel                                    Israel<br>
+<p>
+<p>
+                 October 18, 1996<br>
+<p>
+                     (DRAFT)<br>
+<p>
+In September 96, Boneh Demillo and Lipton from Bellcore announced an<br>
+ingenious new type of cryptanalytic attack which received widespread<br>
+attention (see, e.g., John Markoff's 9/26/96 article in the New<br>
+York Times). Their full paper had not been published so far, but<br>
+Bellcore's press release and the authors' FAQ (available at<br>
+<a href="http://www.bellcore.com/PRESS/ADVSRY96/medadv.html">http://www.bellcore.com/PRESS/ADVSRY96/medadv.html</a>) specifically<br>
+state that the attack is applicable only to public key cryptosystems<br>
+such as RSA, and not to secret key algorithms such as the Data Encryption<br>
+Standard (DES). According to Boneh, "The algorithm that we apply to the<br>
+device's faulty computations works against the algebraic structure used<br>
+in public key cryptography, and another algorithm will have to be devised<br>
+to work against the nonalgebraic operations that are used in secret key<br>
+techniques." In particular, the original Bellcore attack is based on<br>
+specific algebraic properties of modular arithmetic, and cannot handle<br>
+the complex bit manipulations which underly most secret key algorithms.<br>
+<p>
+In this research announcement, we describe a related attack<br>
+(which we call Differential Fault Analysis, or DFA), and show that<br>
+it is applicable to almost any secret key cryptosystem proposed so far<br>
+in the open literature. In particular, we have actually implemented<br>
+DFA in the case of DES, and demonstrated that under the same<br>
+hardware fault model used by the Bellcore researchers, we can<br>
+extract the full DES key from a sealed tamperproof DES encryptor by<br>
+analysing fewer than 200 ciphertexts generated from unknown cleartexts.<br>
+The power of Differential Fault Analysis is demonstrated by the fact<br>
+that even if DES is replaced by triple DES (whose 168 bits of key were<br>
+assumed to make it practically invulnerable), essentially the same attack<br>
+can break it with essentially the same number of given ciphertexts.<br>
+<p>
+We would like to greatfully acknowledge the pioneering contribution<br>
+of Boneh Demillo and Lipton, whose ideas were the starting point of<br>
+our new attack.<br>
+<p>
+In the rest of this research announcement, we provide a short technical<br>
+summary of our practical implementation of Differential Fault Analysis of<br>
+DES. Similar attacks against a large number of other secret key cryptosystems<br>
+will be described in the full version of our paper.<br>
+<p>
+<p>
+TECHNICAL DETAILS OF THE ATTACK<br>
+<p>
+The attack follows the Bellcore fundamental assumption that by exposing<br>
+a sealed tamperproof device such as a smart card to certain physical<br>
+effects (e.g., ionizing or microwave radiation), one can induce with<br>
+reasonable probability a fault at a random bit location in one of the<br>
+registers at some random intermediate stage in the cryptographic<br>
+computation. Both the bit location and the round number are unknown<br>
+to the attacker.<br>
+<p>
+We further assume that the attacker is in physical possesion of the<br>
+tamperproofdevice, so that he can repeat the experiment with<br>
+the same cleartext and key but without applying the external<br>
+physical effects. As a result, he obtains two ciphertexts derived from<br>
+the same (unknown) cleartext and key, where one of the ciphertexts is<br>
+correct and the other is the result of a computation corrupted by a<br>
+single bit error during the computation. For the sake of simplicity,<br>
+we assume that one bit of the right half of the data in one of the 16<br>
+rounds of DES is flipped from 0 to 1 or vice versa, and that both the<br>
+bit position and the round number are uniformly distributed.<br>
+<p>
+In the first step of the attack we identify the round in which the<br>
+fault occurred.  This identification is very simple and effective: If<br>
+the fault occurred in the right half of round 16, then only one bit in<br>
+the right half of the ciphertext (before the final permutation) differs<br>
+between the two ciphertexts. The left half of the ciphertext can<br>
+differ only in output bits of the S box (or two S boxes) to which this<br>
+single bit enters, and the difference must be related to non-zero<br>
+entries in the difference distribution tables of these S boxes.  In<br>
+such a case, we can guess the six key bit of each such S box in the<br>
+last round, and discard any value which disagree with the expected<br>
+differences of these S boxes (e.g., differential cryptanalysis). On<br>
+average, about four possible 6-bit values of the key remain for each<br>
+active S box.<br>
+<p>
+If the faults occur in round 15, we can gain information on the key<br>
+bits entering more than two S boxes in the last round: the difference<br>
+of the right half of the ciphertext equals the output difference of<br>
+the F function of round 15.  We guess the single bit fault in round<br>
+15, and verify whether it can cause the expected output difference,<br>
+and also verify whether the difference of the right half of the<br>
+ciphertext can cause the expected difference in the output of the F<br>
+function in the last round (e.g., the difference of the left half of<br>
+the ciphertext XOR the fault).  If successful, we can discard possible<br>
+key values in the last round, according to the expected differences.<br>
+We can also analyse the faults in the 14'th round in a similar way.<br>
+We use counting methods in order to find the key.  In this case, we<br>
+count for each S box separately, and increase the counter by one for<br>
+any pair which suggest the six-bit key value by at least one of its<br>
+possible faults in either the 14'th, 15'th, or 16'th round.<br>
+<p>
+We have implemented this attack on a personal computer.  Our analysis<br>
+program found the whole last subkey given less than 200 ciphertexts,<br>
+with random single-faults in all the rounds.<br>
+<p>
+This attack finds the last subkey.  Once this subkey is known, we can<br>
+proceed in two ways: We can use the fact that this subkey contains<br>
+48 out of the 56 key bits in order to guess the missing 8 bits in<br>
+all the possible 2^8=256 ways. Alternatively, we can use our knowledge<br>
+of the last subkey to peel up the last round (and remove faults that<br>
+we already identified), and analyse the preceding rounds with the same<br>
+data using the same attack. This latter approach makes it possible to<br>
+attack triple DES (with 168 bit keys), or DES with independent subkeys<br>
+(with 768 bit keys).<br>
+<p>
+This attack still works even with more general assumptions on the<br>
+fault locations, such as faults inside the function F, or even faults<br>
+in the key scheduling algorithm.  We also expect that faults in<br>
+round 13 (or even prior to round 13) might be useful for the analysis,<br>
+thus reducing the number of required ciphertext for the full analysis.<br>
+<p>
+OTHER VULNERABLE CIPHERS<br>
+<p>
+Differential Fault Analysis can break many additional secret key<br>
+cryptosystems, including IDEA, RC5 and Feal.  Some ciphers, such as<br>
+Khufu, Khafre and Blowfish compute their S boxes from the key material.<br>
+In such ciphers, it may be even possible to extract the S boxes<br>
+themselves, and the keys, using the techniques of Differential Fault<br>
+Analysis.  Differential Fault Analysis can also be applied against<br>
+stream ciphers, but the implementation might differ by some technical<br>
+details from the implementation described above.<br>
+<p>
+<p>
+------- End of forwarded message -------<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2195.html">David McFadzean: "META test"</a>
+<li> <b>Previous message:</b> <a href="2193.html">Alexander Chislenko: "NEWS/FWD: Pope Accepts Theory of Evolution"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

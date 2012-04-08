@@ -1,0 +1,199 @@
+<!-- received="Wed Dec  4 12:49:27 1996 MST" -->
+<!-- sent="Wed, 4 Dec 1996 20:29:47 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: We need better tools to make better tools. &lt;guaRANTeed&gt;" -->
+<!-- id="Pine.SOL.3.91.961204191612.23419L-100000@sun3" -->
+<!-- inreplyto="1.5.4.32.19961204174706.002dd844@best.com" -->
+<title>extropians: Re: We need better tools to make better tools. &lt;guaRANTeed&gt;</title>
+<h1>Re: We need better tools to make better tools. &lt;guaRANTeed&gt;</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Wed, 4 Dec 1996 20:29:47 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3629">[ date ]</a><a href="index.html#3629">[ thread ]</a><a href="subject.html#3629">[ subject ]</a><a href="author.html#3629">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3630.html">Hal Finney: "Re: A thread that has nothing to do with memes or the Singularity"</a>
+<li> <b>Previous message:</b> <a href="3628.html">Crosby_M: "RE: we need better tools..."</a>
+<li> <b>In reply to:</b> <a href="3623.html">James Rogers: "Re: We need better tools to make better tools."</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3826.html">Steve Witham: "Re: We need better tools to make better tools."</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Wed, 4 Dec 1996, James Rogers wrote:<br>
+<p>
+<i>&gt; &gt; [modern RISC, e.g. Alpha AXP suck, and CISC does things unmentionable] </i><br>
+<i>&gt; </i><br>
+<i>&gt; In the Alpha AXP, this is primarily a result of mediocre CPU design rather</i><br>
+<i>&gt; than something you can blame on the compilers.  The Alpha has a very deep</i><br>
+<p>
+A simple question: why must the compilers be large, slow monsters, having <br>
+to know lots of things about your hardware setup? (That should be the <br>
+domain of the OS). This wasn't the rule just a few years ago. Gcc is <br>
+terribly difficult to optimize for Alpha (it is an internal <br>
+representation problem), Digital's dedicated compiler performs much better. <br>
+This isn't God-given, men build both machines and write compilers for them.<br>
+<p>
+When was the last time you read your compiler in one hour, and understood <br>
+it, at least sufficiently to modify it constructively? (Hint: read a <br>
+modern optimizing Forth compiler, which is just just a few pages of <br>
+printout, one should definitely recite'em at these lyrics readings. Its <br>
+a goddam work of art). The last time the ole edit-compile-crash iteration <br>
+took unperceivable milliseconds, not minutes? Where you could do dynamic <br>
+surgery on a live system, with true incremental compiling?<br>
+<p>
+We had to wait since the '60 for gc to become industrial mainstream, nay, <br>
+not even mainstream: it is still considered top-notch newfangledness. <br>
+This should tell us something about current tech's potential for <br>
+optimization. Remember USCD p-System, Wirth's Oberon project, Lisp machines, <br>
+Taos, Forth chips. Now we see pieces of them cropping up in mainstream <br>
+products. <br>
+<p>
+<i>&gt; pipeline, but almost no look-ahead or intelligent pre-fetch/decode logic.</i><br>
+<p>
+What if your CPU core is so simple, you cannot afford a hardware <br>
+multiplier, apart from things like FPU, pipeline, BPU, &amp;c&amp;c?<br>
+<p>
+Consider a WSI system: a 64 bit primitive CPU, a few kBytes of SRAM to <br>
+contain the VM, 128 kBytes of DRAM, a router with, say, 12 links. How much <br>
+complexity can we afford before die yield drops to zero? Surely not much <br>
+beyond 1 MTransistors. (Those working in a Valley silicon foundry, please <br>
+step forth, to cite chapter &amp; verse).<br>
+<p>
+There is simply no way to put above complexity into a die as tiny as <br>
+that. Moreover, it would be an entirely wrong direction: it would keep <br>
+the CPU architecture converging towards a CAM (it is easy to see <br>
+convergenece in extreme cases of both), which is a nonalgorthmic machine, <br>
+making no distinction between code and data, everything being just a <br>
+hyperactive bit soup.<br>
+<p>
+To approach it from a different direction: consider a 1 MBit DRAM. If we <br>
+ignore all I/O, we can surely organize it in 1 kWords a la 1 kBit each. <br>
+So we need a 1 kBit SRAM register to refresh it occasionally, and an <br>
+incrementing PC to step through, as fast as the core lets us. We can add <br>
+shift capability to the register, we can take two of them, add an adder, <br>
+basic logics, a segmented ALU design (selectable comb tooth width), a <br>
+variety of primitive logic engines to protect parts of the word, to <br>
+shuffle things back &amp; forth, etc. Anyway, starting from this points one <br>
+does not have too many choices how the final beast has to look like. I <br>
+have seen the MediaProcessor people independantly reinventing a lot of <br>
+my machinery I thought was cool but ad hoc. (My design is still better, <br>
+though ;)<br>
+<p>
+<i>&gt; The result is that the pipeline is flushed pretty often, which is only</i><br>
+<i>&gt; worstened by its depth.  Also, the high clock rates make pipeline stalls</i><br>
+<p>
+So let's drop the pipeline, and move the core onto the die, as much of it <br>
+as die yield can take before wafer yield drops to zero.<br>
+<p>
+<i>&gt; (due to things like cache misses) more serious than they would be in slower</i><br>
+<p>
+So let's abolish the cache, giving core DRAM almost cache quality, <br>
+mapping a tiny SRAM islet into the address space, while eliminating <br>
+worst-case scenarios (locality is nonexistant in certain problems, if fact <br>
+it can be conjectured that access locality is a pathologicial case, an <br>
+artefact of the human programmer).<br>
+<p>
+<i>&gt; clocked chips.  Add on top of this an inefficient superscalar</i><br>
+<p>
+Astronomic clocks aren't everything, they just increase power dissipation <br>
+(wasn't that an exponential relation?) and are of no use if the core <br>
+cannot deliver requested words. Clock rates beyond 2-4 GHz aren't viable <br>
+with Si tech anyway (physics starting harrumphing in the background), and <br>
+GaAs is a much weaker substrate, when it comes to integration density, <br>
+which is the key.<br>
+<p>
+I say take a 40 kTransistor, highly tweaked CPU (Chuck does this), clock <br>
+it as high as it can take without melting, considering dense packing of <br>
+a WSI system (about 1 GHz with current high-end structures),<br>
+flush your code into the tiny SRAM by hand, put it and a 128 k DRAM on a <br>
+a die, them wafer with 100s of 'em dies, letting them all work in <br>
+parallel. What are the wafer costs, about $500? Even if it sells for 1 k$, <br>
+it is still acceptable. <br>
+<p>
+Who is going to program this? The multimedia craze will greedily gulp <br>
+down every imaginable DSP resources you can throw at it, as will GA and <br>
+ANN stuff.<br>
+<p>
+<i>&gt; implementation, and you have a chip that virtually *requires* handcrafted</i><br>
+<i>&gt; assembly language to run efficiently.</i><br>
+<p>
+I think we might see a (brief) revival of handcrafted assembly, at least <br>
+in the nanoOS kernel methods. Apps will stop being monolithic, instead <br>
+being live things, multiplying over nodes dynamically or shrinking <br>
+likewise, goaded by the OS load leveler.<br>
+ <br>
+<i>&gt; One of the reasons Intel's late generation chips have done so well,</i><br>
+<i>&gt; performance-wise, is that Intel probably has one of the best pre-execution</i><br>
+<i>&gt; logic designs and techniques on any CPU, RISC or otherwise.  Add to this</i><br>
+<p>
+Intel has grown sufficiently rich to afford the best people, as has M$. I <br>
+once laughed about them, ignored them. I cannot, anymore. They have <br>
+demolished the markets, and upon the ruined marketplace (all thanks, ye <br>
+smart customers) their braindead designs even look good, since there is <br>
+no competition.<br>
+<p>
+Once you are big enough, investments into best manpower, new process <br>
+research, long-term planning, industrial espionage and open market <br>
+warfare can make you only bigger. It is profit maximization, that has <br>
+brought us peu a peu device introduction, instead of a longer stages of <br>
+drastic designs.<br>
+<p>
+<i>&gt; that Intel easily has one of the most efficient superscalar implementations,</i><br>
+<p>
+I don't think vector/scalar division makes at all sense. Precambrian life <br>
+forms, designed to become extinct.<br>
+<p>
+<i>&gt; and you get some real performance out of an old architecture.  One of the</i><br>
+<i>&gt; few RISC companies that I think has a really solid architecture concept is HP.</i><br>
+<p>
+Alas, HP RISC is dying, as does Alpha. When speaking of monopolies...<br>
+ <br>
+<i>&gt; &gt; [rant]</i><br>
+<i>&gt; &gt;Corollaries:</i><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt;1) CPUs will become _very_ simple, see MISC.( I doubt InTeL will pioneer </i><br>
+<i>&gt; &gt;   this, though they sure will join the party, once it has started. I </i><br>
+<i>&gt; &gt;   don't know what M$ might or might not do...)</i><br>
+<i>&gt; </i><br>
+<i>&gt; Actually, you will probably see arrays of tiny cores on chips glued together</i><br>
+<i>&gt; with complex decode logic, or in the VLIW case, have the compiler do most of</i><br>
+<p>
+Agreed, but they won't be complex logics, and the array'd cores will <br>
+stretch all over the entire wafer ;)<br>
+<p>
+<i>&gt; the decode for you.</i><br>
+<p>
+One DSP design from TI features 4 DSP cores, 4 on-die SRAM areas, <br>
+connected by a on-die crossbar, choreographed by a vanilla CPU. TI is <br>
+pretty innovative in terms of DSP/embedded hybrids, putting core on the <br>
+die and to make DSPs cascadable (up to 6 fast links).<br>
+<p>
+<i>&gt; &gt; [ grow your own ]</i><br>
+<i>&gt; &gt; </i><br>
+<i>&gt; &gt; [ CLI=GUI already ]</i><br>
+<i>&gt; </i><br>
+<i>&gt; I'll take it one step further:  An OS you can't customize is useless.</i><br>
+<i>&gt; </i><br>
+<p>
+Have YOU rebuilt your kernel tonight? ;)<br>
+ <br>
+<i>&gt; -James Rogers</i><br>
+<i>&gt;  jamesr@best.com</i><br>
+<p>
+ciao,<br>
+'gene<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3630.html">Hal Finney: "Re: A thread that has nothing to do with memes or the Singularity"</a>
+<li> <b>Previous message:</b> <a href="3628.html">Crosby_M: "RE: we need better tools..."</a>
+<li> <b>In reply to:</b> <a href="3623.html">James Rogers: "Re: We need better tools to make better tools."</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3826.html">Steve Witham: "Re: We need better tools to make better tools."</a>
+<!-- reply="end" -->
+</ul>

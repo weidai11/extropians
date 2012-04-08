@@ -1,0 +1,182 @@
+<!-- received="Tue Jul 13 09:22:11 1999 MDT" -->
+<!-- sent="Tue, 13 Jul 1999 10:20:04 -0500" -->
+<!-- name="Billy Brown" -->
+<!-- email="ewbrownv@mindspring.com" -->
+<!-- subject="Software/Hardware Architectures (WAS: RE: Human minds on Windows(?))" -->
+<!-- id="NDBBLBGGEJLACCFCPNINKEEACBAA.ewbrownv@mindspring.com" -->
+<!-- inreplyto="14216.10424.102930.15290@lrz.de" -->
+<!-- version=1.10, linesinbody=132 -->
+<html><head><title>extropians: Software/Hardware Architectures (WAS: RE: Human minds on Windows(?))</title>
+<meta name=author content="Billy Brown">
+<link rel=author rev=made href="mailto:ewbrownv@mindspring.com" title ="Billy Brown">
+</head><body>
+<h1>Software/Hardware Architectures (WAS: RE: Human minds on Windows(?))</h1>
+Billy Brown (<i>ewbrownv@mindspring.com</i>)<br>
+<i>Tue, 13 Jul 1999 10:20:04 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#629">[ date ]</a><a href="index.html#629">[ thread ]</a><a href="subject.html#629">[ subject ]</a><a href="author.html#629">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0630.html">[ Next ]</a><a href="0628.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0602.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0658.html">Eugene Leitl</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+Eugene Leitl wrote:
+<br>
+<a href="0602.html#0629qlink1">&gt; Billy Brown writes:</a><br>
+<i>&gt;  &gt; AFAIK, all Microsoft apps have been written as "asynchronous</i><br>
+message-passing
+<br>
+<a href="0508.html#0629qlink2">&gt;  &gt; object soup" since sometime in the mid-90s.  Also, with the right</a><br>
+software
+<br>
+<i>&gt;</i><br>
+<a name="0658qlink1"><a href="0602.html#0629qlink3">&gt; Hey, so they really call OS.send.message() every few 100 machine</a><br>
+<i>&gt; instructions, or so, and context-switch every 1 us? Really?</i><br>
+
+<p>
+Why on Earth would you want to do that?  Even for masively</a> parallel
+<a name="0658qlink2">architectures you are better off either using large CPU/memory blocks,</a> or
+<a name="0658qlink3">running conventional apps in a virtual machine.  At any rate,</a> Redmond
+<a name="0658qlink4">designs for the hardware that is actually in use (big surprise), so they
+only context switch every millisecond or two.</a>
+
+<p>
+<a href="0602.html#0629qlink4">&gt; Mouse</a><br>
+<i>&gt; handler an object, keyboard handler an object, peripheral storage</i><br>
+<i>&gt; each an object, each widget an object, each Excel cell an object,</i><br>
+<i>&gt; almost always sitting in a different node so they have to send</i><br>
+<i>&gt; messages? We're really talking about Microsoft, Redmond, local</i><br>
+<i>&gt; universe here, are we?</i><br>
+
+<p>
+<a name="0658qlink5">They haven't gotten around to re-writing the entire OS this way yet,</a> but
+<a name="0658qlink6">everything new *is* done that way.  In Office 2000, for instance, every
+spreadsheet cell is indeed an object (and so is every other recognizeable
+program element).  The same goes for ADO, MTS, and recent versions</a> of most
+of their server apps.  Occasionally they will encapsulate a big block of
+performance-intensive code in a single object instead of breaking it out
+into seperate objects, but their general principle is to make everything as
+object-oriented as is possible on current hardware.
+
+<p>
+<a href="0602.html#0629qlink5">&gt; They can't do it simply because performance on current architectures</a><br>
+<i>&gt; would suck monumentally. You would have to emulate things, and context</i><br>
+<i>&gt; switches on current hardware/software architectures are just a tad too</i><br>
+<i>&gt; expensive for that.</i><br>
+
+<p>
+<a name="0658qlink7">On a modern CPU a context switch isn't any big deal.  You don't want</a> to do
+<a name="0658qlink8">it every other instruction, but there isn't any good reason to do that in
+the first place.  You can certainly do it anywhere there is a reason to
+without having to worry about it affecting your performance.</a>
+
+<p>
+<a name="0658qlink9"><a href="0602.html#0629qlink6">&gt; Multithreading!=asynchronous message passing on many tiny objects.</a><br>
+<i>&gt; We're talking about several thousands primitive (few kBytes) objects</i><br>
+<i>&gt; which send message packets which are routed by hardware directly --</i><br>
+<i>&gt; while the originator code may or may not wait for the ack/result</i><br>
+<i>&gt; to arrive. If this exists at all, it is academic curiousity at best</i><br>
+<i>&gt; (Thinking Machines might qualify, though I really doubt they exploited</i><br>
+<i>&gt; their options fully every time).</i><br>
+
+<p>
+It doesn't exist because there is no reason to do it.  The current</a> model
+<a name="0658qlink10">does exactly the same thing, but the objects are 10-100 times as big and
+which communicate about 10% as often.  Asynchronous calls are used whenever
+they actualy do something for you (in most cases they don't work, because
+you can't proceed witht he current operation until you get your results
+back).</a>
+
+<p>
+<a name="0658qlink11">Or, to put it another way, the reason current apps wouldn't benifit from
+your fast chip/small memory parallel processing architecture is because most
+of the tasks they do are inherently linear, not because they are poorly
+written.  The only way to speed up a linear process is to give it a single
+very fast thread of execution.  That's why massively parallel machines are
+generally reserved for inherently parallel sorts of computation.</a>
+
+<p>
+<a name="0658qlink12">Now, if you take a close look at modern PC architectures you'll see that
+there is an emerging trend towards increasing parallelism in the areas where
+it is usefull.  Servers often have multiple CPUs, since they have</a> to handle
+<a name="0658qlink13">many different requests simultaneously.  Video subsystems often</a> incorporate
+<a name="0658qlink14">several DSPs, and the trend seems to be towards using more and more of them.</a>
+<a name="0658qlink15">With modems, sound cards and other specialized functions turning into
+software for DSP chips, it would not be at all surprising if the PC</a> of the
+<a name="0658qlink16">future had a large array of DSPs for parallel-processing tasks.  However, it
+will still need that fast Pentium-whatever chip for handling more linear
+jobs in a timely fashion.</a>
+
+<p>
+Billy Brown, MCSE+I
+<br>
+ewbrownv@mindspring.com
+
+
+<p>
+<a href="0602.html#0629qlink7">&gt; You certainly can't program these</a><br>
+<i>&gt; things in standard languages as C/C++ with any efficiency. And I would</i><br>
+<i>&gt; just love to see a programmer who can handle concurrent nonlinear</i><br>
+<i>&gt; control flow in a distributed kObject application. This can get</i><br>
+<i>&gt; arbitrarily hairy.</i><br>
+<i>&gt;</i><br>
+<i>&gt; There's a dearth of apps even for Beowulfs, and god knows how</i><br>
+<i>&gt; coarse-grain these are. No sir, don't think so.</i><br>
+<i>&gt;</i><br>
+<i>&gt;  &gt; you can run a large app over a distributed architecture like</i><br>
+<i>&gt; this without</i><br>
+<i>&gt;  &gt; having to explicitly modularize it to fit the hardware's quirks (see</i><br>
+<i>&gt;</i><br>
+<i>&gt; Sure you can. Put x86 opcode sofware emulation into every node,</i><br>
+<i>&gt; equipartition the old-generation binary over the nodes and send</i><br>
+<i>&gt; a message to the appropriate node whenever PC leaves your node's</i><br>
+<i>&gt; address space slice. Redundant as hell (OS nanokernel+ x86</i><br>
+<i>&gt; emulator in every node) and efficient as treacle since purely</i><br>
+<i>&gt; sequential, especially considering that you can't do 4 kCPUs</i><br>
+<i>&gt; PIII/550 way, and interpreting/compiling existing code into</i><br>
+<i>&gt; SWAR *would* require true AI.</i><br>
+<i>&gt;</i><br>
+<i>&gt;  &gt; <a href="http://research.microsoft.com/sn/Millennium/">http://research.microsoft.com/sn/Millennium/</a>, and especialy</i><br>
+<i>&gt;  &gt; <a href="http://research.microsoft.com/sn/Millennium/Coign.html">http://research.microsoft.com/sn/Millennium/Coign.html</a>, for example).</i><br>
+<i>&gt;</i><br>
+<i>&gt; 		       Better yet, the</i><br>
+<i>&gt;                        system builds on the existing Windows</i><br>
+<i>&gt; operating system,</i><br>
+<i>&gt;                        so today's software won't become obsolete and</i><br>
+<i>&gt;                        programmers can write new software the</i><br>
+<i>&gt; same way they</i><br>
+<i>&gt;                        do now, for one machine or many.</i><br>
+<i>&gt;</i><br>
+<i>&gt; Right. And pilots will worry about pig collision avoidance issues.</i><br>
+<i>&gt;</i><br>
+<i>&gt; Looks nice as a concept, but even if it works it is no panacea. Will</i><br>
+<i>&gt; alleviate migration psychologically since suggesting you can run your</i><br>
+<i>&gt; apps on the new platform even if in reality you can't.</i><br>
+<i>&gt;</i><br>
+<i>&gt;  &gt; But that isn't especially relevant, anyway.  I was talking</i><br>
+<i>&gt; about programming</i><br>
+<i>&gt;  &gt; techniques for existing PC hardware.  Obviously, radical</i><br>
+<i>&gt; changes in hardware</i><br>
+<i>&gt;</i><br>
+<i>&gt; Of what possible relevance is existing PC hardware/programming</i><br>
+<i>&gt; techniques to uploading? I am not sure we're talking in the same</i><br>
+<i>&gt; language here.</i><br>
+<i>&gt;</i><br>
+<i>&gt;  &gt; can require equally radical changes in programming methods.</i><br>
+<i>&gt;</i><br>
+<i>&gt; And even worse: vice versa.</i><br>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0630.html">[ Next ]</a><a href="0628.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0602.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0658.html">Eugene Leitl</a>
+</ul>
+</body></html>

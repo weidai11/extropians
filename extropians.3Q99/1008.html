@@ -1,0 +1,92 @@
+<!-- received="Thu Jul 22 18:16:23 1999 MDT" -->
+<!-- sent="Thu, 22 Jul 1999 17:16:25 -0700" -->
+<!-- name="Doug Jones" -->
+<!-- email="random@qnet.com" -->
+<!-- subject="Re: LUNA: Re: indigenous fuels" -->
+<!-- id="3797B459.E05DCF76@qnet.com" -->
+<!-- inreplyto="14231.32227.598668.234306@lrz.de" -->
+<!-- version=1.10, linesinbody=49 -->
+<html><head><title>extropians: Re: LUNA: Re: indigenous fuels</title>
+<meta name=author content="Doug Jones">
+<link rel=author rev=made href="mailto:random@qnet.com" title ="Doug Jones">
+</head><body>
+<h1>Re: LUNA: Re: indigenous fuels</h1>
+Doug Jones (<i>random@qnet.com</i>)<br>
+<i>Thu, 22 Jul 1999 17:16:25 -0700</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1008">[ date ]</a><a href="index.html#1008">[ thread ]</a><a href="subject.html#1008">[ subject ]</a><a href="author.html#1008">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1009.html">[ Next ]</a><a href="1007.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1001.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1110.html">Spike Jones</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+Eugene Leitl wrote:
+<br>
+<i>&gt; </i><br>
+<i>&gt; Doug Jones writes:</i><br>
+<a href="1001.html#1008qlink1">&gt;  &gt; most critical design driver- solid state relays of the speed and</a><br>
+<i>&gt;  &gt; power needed aren't cheap.  I can dig up detail information if</i><br>
+<i>&gt; </i><br>
+<i>&gt; How much power can we switch with a triggered arc discharge?</i><br>
+
+<p>
+I've spent an hour or so trying to track down sources without much
+luck, but from what I recall from discussions on sci.space.tech the
+problem is turning *off* the current.  V=Ldi/dt, and a large
+negative di/dt is a bitch to terminate- like opening a circuit
+breaker carrying a large DC current.  Big sizzling arcs... A big
+inductor with a large current flowing through it (ie lots of stored
+energy) tries to be an ideal current source.
+
+<p>
+The ideal current profile in a stator coil is a square wave, going
+high when the bucket is about one coil diameter away, then dropping
+to zero as the bucket reaches the plane of the coil.  This gives the
+bucket a good pull, and doesn't need maglev guideways. More
+realistically, you might get a roughly linear ramp up &amp; ramp down
+with a Bi-FET driver switch and bridge diodes- the switch closes
+when the bucket is one diameter away, opens at 1/2 diameter, and the
+diodes divert the negative spike back into the supply capacitor. 
+The cap driving each stage is oversized so that it approximates a
+constant voltage supply.  When the coil current goes to zero, the
+diodes stop conducting, and the switch never sees more than 2x the
+drive voltage.
+
+<p>
+Coils at the high speed end would still need to have fewer turns and
+higher currents, to dump the stored charge faster- the total energy
+delivered to the bucket is the same for each coil (if acceleration
+is constant) but the time available for the current pulse goes as
+1/v.
+
+<p>
+<a href="1001.html#1008qlink2">&gt;  &gt; anyone is really truly interested.</a><br>
+<i>&gt; </i><br>
+<i>&gt; If this is not too much trouble on your part, please do.</i><br>
+
+<p>
+Maybe after tomorrow morning... Rotary is supposed to fly the ATV in
+a hover test, then safe the system, put it away, close the doors,
+and send home everybody that's left.  It's sad to see it go out with
+a whimper.
+
+<pre>
+--
+Doug Jones, Freelance Rocket Plumber
+Formerly with Rotary Rocket
+</pre>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1009.html">[ Next ]</a><a href="1007.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1001.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1110.html">Spike Jones</a>
+</ul>
+</body></html>

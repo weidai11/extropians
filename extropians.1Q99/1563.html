@@ -1,0 +1,92 @@
+<!-- received="Thu Feb  4 15:43:06 1999 MDT" -->
+<!-- sent="Thu, 04 Feb 1999 17:41:48 -0500" -->
+<!-- name="Dan Clemmensen" -->
+<!-- email="Dan@Clemmensen.ShireNet.com" -->
+<!-- subject="SPAMers' tactics and effective prevention" -->
+<!-- id="36BA222C.AC412D30@clemmensen.shirenet.com" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=49 -->
+<html><head><title>extropians: SPAMers' tactics and effective prevention</title>
+<meta name=author content="Dan Clemmensen">
+<link rel=author rev=made href="mailto:Dan@Clemmensen.ShireNet.com" title ="Dan Clemmensen">
+</head><body>
+<h1>SPAMers' tactics and effective prevention</h1>
+Dan Clemmensen (<i>Dan@Clemmensen.ShireNet.com</i>)<br>
+<i>Thu, 04 Feb 1999 17:41:48 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1563">[ date ]</a><a href="index.html#1563">[ thread ]</a><a href="subject.html#1563">[ subject ]</a><a href="author.html#1563">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1564.html">[ Next ]</a><a href="1562.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1521.html">Spike Jones</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Spike Jones wrote:
+<br>
+<i>&gt; </i><br>
+<a href="1521.html#1563qlink1">&gt; does anyone know: when you get a spam with a remove button,</a><br>
+<i>&gt; should you reply remove or just play dead and not reply?  spike</i><br>
+
+<p>
+There is now a fairly effective way to block most SPAM.
+There are two web-based organizations that maintain
+lists of IP addresses that are SPAM-friendly or SPAM-neutral,
+and there are mail helper client that can use these lists
+automatically to delete anything from these IP addresses.
+
+<p>
+One service is ORBS, and the other is MAPS.
+
+<p>
+ORBS is a list of "open relays" that have been used by SPAMMERs.
+an open relay is an SMTP server that will forward SMTP incoming
+to SMTP outgouing without any checking whatsoever. Nearly all
+open relays are simply sites whose sysadmins are clueless, not
+places that are actually trying to help SPAMers. SPAMers probe
+the net to find the sites. when a site is found, the SPAMer sends
+a single e-mail to the site with thouhands of addresses, and the
+site obligingly sends out thousands of individual e-mails. By
+cutting off teh site and sending reject messages back to the postmaster
+at that site whenever a SPAM is received, the anti-SPAM client
+software eventually gets the sysadmin's attention, and the sysadmin
+then reconfigs the mailer. ORBS isn't terribly choosy about
+who gets on the list: anyone can send a candidate IP address, and
+ORBS then does an automated test to see if it is an open realy.
+If so, it goes on the list. ORBS periodically checks to see if the
+site is still an open realy, if not, it comes off the list.
+
+<p>
+MAPS lists open relays and also lists other sites. Getting
+listed and de-listed requires human intervention, so the lsit is
+more accurate. It's run by a volunteers who are sysadmins, and it
+looks very good.
+
+<p>
+The MAPS site did an experiment to check out the "remove" scheme.
+they set up an e-mail address, and then wuse it for absolutely
+nothing whatwoever but making a single "remove" request from
+a single SPAM. Then the wait. sure enough, they start getting
+SPAM from many sources. This is ome of their most effective
+ways of identifying new SPAM-friendly sites.
+
+<p>
+The philosopy and tactics for the sites make fascenating reading.
+Check them out. 
+
+<p>
+<a href="http://maps.vix.com/tsi">http://maps.vix.com/tsi</a>
+
+<p>
+<a href="http://www.orbs.org">http://www.orbs.org</a>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1564.html">[ Next ]</a><a href="1562.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1521.html">Spike Jones</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

@@ -1,0 +1,97 @@
+<!-- received="Mon Dec  9 15:05:13 1996 MST" -->
+<!-- sent="Mon, 09 Dec 1996 13:46:59 -0800" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Transhuman VRML world, etc." -->
+<!-- id="1.5.4.32.19961209214659.0034f7d0@best.com" -->
+<!-- inreplyto="Transhuman VRML world, etc." -->
+<title>extropians: Re: Transhuman VRML world, etc.</title>
+<h1>Re: Transhuman VRML world, etc.</h1>
+James Rogers (<i>jamesr@best.com</i>)<br>
+<i>Mon, 09 Dec 1996 13:46:59 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3792">[ date ]</a><a href="index.html#3792">[ thread ]</a><a href="subject.html#3792">[ subject ]</a><a href="author.html#3792">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3793.html">Lyle Burkhead: "Causality"</a>
+<li> <b>Previous message:</b> <a href="3791.html">James Rogers: "RE: Beyond The Beyond"</a>
+<li> <b>Maybe in reply to:</b> <a href="3730.html">Alexander 'Sasha' Chislenko: "Transhuman VRML world, etc."</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3906.html">Eliezer Yudkowsky: "Re: Transhuman VRML world, etc."</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+At 05:03 PM 12/8/96 -0600, you wrote:<br>
+<i>&gt;&gt; Since the the more advanced simulations will suck more server</i><br>
+<i>&gt;&gt; time, it would make sense that we have some way of allocating</i><br>
+<i>&gt;&gt; resources according to people's ability to effectively use them.  It might</i><br>
+<i>&gt;&gt; even prove an interesting exercise in a completely</i><br>
+<i>&gt;&gt; laissez-faire system - people can gain credits for building a cool addition</i><br>
+<i>&gt;&gt; to the world and charging admission</i><br>
+<i>&gt;Ah, the quota battles begin!  Quota on LambdaMOO was handled, last time</i><br>
+<i>&gt;I checked, by the ARB - the Architecture Review Board, I think it was. </i><br>
+<i>&gt;Ironically, arbitration is handled by the mediation system, which is</i><br>
+<i>&gt;totally unrelated to the ARB.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Again from personal experience, I'd say there are three important things</i><br>
+<i>&gt;to remember about server-side resources:</i><br>
+<i>&gt;1)  When a better solution comes along, enforce it.</i><br>
+<i>&gt;  If LambdaMOO wasn't using their old obsolete systems it would cut</i><br>
+<i>&gt;quota</i><br>
+<i>&gt;usage in half and lag would go down 95%.</i><br>
+<i>&gt;2)  Keep only active areas in active memory.</i><br>
+<i>&gt;  On LambdaMOO, EVERYTHING is kept in RAM.  As opposed to WorldMOO,</i><br>
+<i>&gt;where</i><br>
+<i>&gt;things like help systems can be kept on disk.</i><br>
+<i>&gt;3)  Track the usage of actual resources.</i><br>
+<i>&gt;  LambdaMOO used to have an object quota; you got twenty objects.  This</i><br>
+<i>&gt;encouraged huge monolithic programming; there was no restraint on the</i><br>
+<i>&gt;number of methods on an object or how long those methods were. </i><br>
+<i>&gt;Object-oriented programmers were penalized because they could only use</i><br>
+<i>&gt;one object.</i><br>
+<i>&gt;  By the time they switched over to tracking bytes, the damage was done. </i><br>
+<i>&gt;All the core systems were these ridiculously large monoliths - I believe</i><br>
+<i>&gt;that an advanced old-style room cost 20K of OVERHEAD.</i><br>
+<i>&gt;  They still don't track CPU usage and as a result, command-line orders</i><br>
+<i>&gt;can take from 8 to 60 seconds to execute, with around 20 being around</i><br>
+<i>&gt;average.  This is because the system is so OVERLOADED with these</i><br>
+<i>&gt;gigantic monoliths.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Overall, I'd say introduce a system where:</i><br>
+<i>&gt;1) A guy gets X bytes of RAM, Y bytes of disk space, and Z CPU</i><br>
+<i>&gt;cycles/day.</i><br>
+<i>&gt;2) The core architecture is laid out by a programmer who breathes the</i><br>
+<i>&gt;programming language being designed in.  Java is not C or even C++; make</i><br>
+<i>&gt;sure the world-builder knows that.</i><br>
+<p>
+The core architecture cannot be done in Java.  Server-side Java is simply<br>
+too slow, even on a fast machine, to handle more than a relatively small<br>
+number of clients.  Fortunately, a number of methods and systems are<br>
+emerging that allow Java objects to interface with C/C++ software at<br>
+runtime.  Obviously, there will be significant requirements that require the<br>
+inclusion of Java, but they should only be used where absolutely necessary.  <br>
+<p>
+The type of systems we are discussing will probably require a semi-custom<br>
+server side engine of fairly high complexity.  AFAIK, there is no existing<br>
+engines or models of this type that would adequately meet the needs of this<br>
+project.<br>
+<p>
+How many simultaneous users are we targeting?  This makes a big difference<br>
+in terms of architecture.<br>
+<p>
+<p>
+-James Rogers<br>
+ jamesr@best.com<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3793.html">Lyle Burkhead: "Causality"</a>
+<li> <b>Previous message:</b> <a href="3791.html">James Rogers: "RE: Beyond The Beyond"</a>
+<li> <b>Maybe in reply to:</b> <a href="3730.html">Alexander 'Sasha' Chislenko: "Transhuman VRML world, etc."</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3906.html">Eliezer Yudkowsky: "Re: Transhuman VRML world, etc."</a>
+<!-- reply="end" -->
+</ul>

@@ -1,0 +1,81 @@
+<!-- received="Thu Mar 26 09:48:58 1998 MDT" -->
+<!-- sent="Thu, 26 Mar 1998 11:43:11 -0500" -->
+<!-- name="Harvey Newstrom" -->
+<!-- email="harv@gate.net" -->
+<!-- subject="Re: Security through authentication" -->
+<!-- id="3.0.3.32.19980326090701.00a05a10@econ.berkeley.edu" -->
+<!-- inreplyto="Security through authentication" -->
+<title>extropians: Re: Security through authentication</title>
+<h1>Re: Security through authentication</h1>
+Harvey Newstrom (<i>harv@gate.net</i>)<br>
+<i>Thu, 26 Mar 1998 11:43:11 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3150">[ date ]</a><a href="index.html#3150">[ thread ]</a><a href="subject.html#3150">[ subject ]</a><a href="author.html#3150">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3151.html">James MacPherson: "RE: Juries"</a>
+<li> <b>Previous message:</b> <a href="3149.html">Robin Hanson: "Re: Security through authentication"</a>
+<li> <b>Maybe in reply to:</b> <a href="3142.html">Alexander 'Sasha' Chislenko: "Security through authentication"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3152.html">Grant Sparks: "Re: Security through authentication"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Alexander 'Sasha' Chislenko wrote:<br>
+<i>&gt;  More info is available at  <a href="http://theory.lcs.mit.edu/~rivest/chaffing.txt">http://theory.lcs.mit.edu/~rivest/chaffing.txt</a></i><br>
+<p>
+Interesting paper on the theoretical level.  I used a similar technique<br>
+in 1984 to simulate allow dumb asni terminals to enter clear-text<br>
+passwords without the passwords appearing over the network clear text. <br>
+It was not encryption, but added enough garbage going to and from the<br>
+dumb terminal from the host, that only the host could easily determine<br>
+which characters were typed from the user.<br>
+<p>
+The drawbacks to the paper you cite are:<br>
+1. Huge bandwith overhead.  Adding equal amounts of chaff and real<br>
+message doubles the message size.  More chaff increases it further.<br>
+<p>
+2.  Huge packet overhead.  Whole words or names would be visible in<br>
+individual packets, unless the packets are extremely small.  The paper<br>
+gives an example of 1-bit messages inside 100 bit packets.  This turns a<br>
+one-minute transmission into a 100 minute transmission!  More<br>
+accurately, the minimum TCP packet size is more like 100 BYTES, which<br>
+would be 1000 bits over a modem (with start and stop bits).  This makes<br>
+that one minute transmission time 1000 minutes, or 16 hours and 40<br>
+minutes!<br>
+<p>
+3.  This method still includes secret authentication keys that must be<br>
+exchanged between the participants and known only to them.  It would be<br>
+just as easy to exchange encryption keys.  This method does not seem to<br>
+add any security, does not simplify procedures or difficulties, but does<br>
+greatly increases bandwith.<br>
+<p>
+4.  The proposal seems to be based on the idea that "encryption" is<br>
+export-controlled, but this new method would not be because it is not<br>
+"encryption".  The various laws I have seen do not use a scientific<br>
+definition of "encryption".  They describe any means to hide, encode, or<br>
+make unreadable a secret message.  I think that this form of<br>
+reformatting a message to make it unreadable would be considered the<br>
+same as "encryption" by government and law enforcement agencies.<br>
+<p>
+This seems to be a lawyer's trick to bypass export laws rather than a<br>
+technical solution to securing communications.<br>
+<pre>
+--
+Harvey Newstrom &lt;<a href="mailto:harv@gate.net">mailto:harv@gate.net</a>&gt;
+PGP 5.5 Fingerprint:  F746 7A20 EB7D 27BA 80A5  4473 D8E1 6A54 1EB0 56F7
+PGP Public Key available from &lt;ldap://certserver.pgp.com&gt;
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3151.html">James MacPherson: "RE: Juries"</a>
+<li> <b>Previous message:</b> <a href="3149.html">Robin Hanson: "Re: Security through authentication"</a>
+<li> <b>Maybe in reply to:</b> <a href="3142.html">Alexander 'Sasha' Chislenko: "Security through authentication"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3152.html">Grant Sparks: "Re: Security through authentication"</a>
+<!-- reply="end" -->
+</ul>

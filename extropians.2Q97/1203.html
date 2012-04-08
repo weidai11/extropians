@@ -1,0 +1,309 @@
+<!-- received="Sun May 18 14:14:08 1997 MDT" -->
+<!-- sent="Sun, 18 May 1997 21:52:12 +0200 (MET DST)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="MIL:SIM:MAO:HTN:QUAKE: Use of IPng in Combat Simulations" -->
+<!-- id="Pine.SOL.3.91.970518214655.2263A-100000@sun6" -->
+<!-- inreplyto="" -->
+<title>extropians: MIL:SIM:MAO:HTN:QUAKE: Use of IPng in Combat Simulations</title>
+<h1>MIL:SIM:MAO:HTN:QUAKE: Use of IPng in Combat Simulations</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 18 May 1997 21:52:12 +0200 (MET DST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1203">[ date ]</a><a href="index.html#1203">[ thread ]</a><a href="subject.html#1203">[ subject ]</a><a href="author.html#1203">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1204.html">Eugene Leitl: "MIL:SIM:MAO:HTN:QUAKE: Use of IPng in Combat Simulations"</a>
+<li> <b>Previous message:</b> <a href="1202.html">Eugene Leitl: "FYI:HIST:TECH:You are now subscribed to the HTECH-L list (fwd)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Use of IPng in Combat Simulation<br>
+Susan Symington<br>
+David Wood<br>
+MITRE Corporation<br>
+J. Mark Pullen<br>
+George Mason University<br>
+(excerpted from "IPng Internet Protocol Next Generation",<br>
+ Scott O. Bradner, Allison Mankin (ed.), Addison Wesley,<br>
+ 1996, pp. 95-100).<br>
+<p>
+The Defense Modeling and Simulation (M&amp;S) community is<br>
+a major user of packet networks and as such has a stake<br>
+in the definition of IPng. We will summarize the Distributed<br>
+Interactive Simulation environment that is under development,<br>
+with regards to its real-time nature, scope, and magnitude<br>
+of networking requirements. The requirements for real-time<br>
+response, multicast, and resource reservation are set forth,<br>
+based on on our best current understanding of the future of<br>
+Defense Modeling and Simulation.<br>
+<p>
+&lt;b&gt;Introduction.&lt;/b&gt; The Internet Engineering Task Force (IETF)<br>
+is now in the process of designing the Internet Protocol next<br>
+generation (IPng). IPng is expected to be a driving force in<br>
+the future of commercial off-the-shelf (COTS) networking<br>
+technology. It will have a major impact on what future<br>
+networking technologies are widely available, cost-effective,<br>
+and multi-vendor interoperable. Applications that have all<br>
+of their network layer requirements met by the standard<br>
+features of IPng will be at a great advantage, whereas those<br>
+that don't will have to rely on protocols that are not as<br>
+widely available and more costly, that may have limited<br>
+interoperability with the ubiquitous IPng-based COTS products.<br>
+<p>
+We will specify the network layer requirements of Defense M&amp;S<br>
+applications. It is important that the M&amp;S community make its<br>
+unique requirements clear to IPng designers so that mechanisms<br>
+for meeting these requirements can be considered as standard<br>
+features for IPng. The intention is to make IPng's benefits<br>
+have wide COTS availability, multivendor interoperability,<br>
+and cost-effectiveness, all fully available to the M&amp;S<br>
+community.<br>
+<p>
+&lt;b&gt;Overview of Distributed Interactive Simulation.&lt;/b&gt; The<br>
+Defense M&amp;S community requires an integrated, wide area,<br>
+wideband internetwork to perform Distributed Interactive<br>
+Simulation (DIS) {{ain't that the capital of Hell?}}<br>
+excercises among remote, dissimiliar simulation devices<br>
+located at worldwide sites. The network topology used<br>
+in current M&amp;S excercises is typically that of a<br>
+high-speed cross-country adn trans-oceanic backbone<br>
+running between wideband packet switches, with tail<br>
+circuits running these packet switches to various nearby<br>
+sites. At any given site involved in an excercise, there<br>
+may be several internetworked local area networks on<br>
+which numerous simulation entity hots are running. Some<br>
+of these hosts may be executing computer-generated<br>
+semi-automated forces, while others may be manned<br>
+simulators. The entire system must accomodate delays<br>
+and delay variance compatible with human interaction<br>
+times in order to preserve an accurate order of events<br>
+and provide a realistic combat simulation. {{Notice<br>
+that here no attempt is being made to cope with fully<br>
+automatically initiated events well below the human<br>
+agent reaction time scale}}. While the sites themselves<br>
+may be geographically distant from one another, the<br>
+simulation entities running at different sites may<br>
+themselves be operating and interacting as though<br>
+they are in close proximity to one another in the<br>
+battlefield. Our goal is that all of this can take<br>
+place in a common network that supports all Defense<br>
+M&amp;S needs, and hopefully is also shared with other<br>
+Defense applications.<br>
+<p>
+In a typical DIS excercise, distributed simulators<br>
+exchange information over an internetwork in the form<br>
+of standardtized packets. The DIS protocols and packet<br>
+formats are currently under development. The first<br>
+generation has been standartized as IEEE 1278.1 and<br>
+used for small exercises (around 100 hosts), and<br>
+development of a second generation is underway. The<br>
+current Communications Architecture for DIS specifies<br>
+use of Internet protocols.<br>
+<p>
+The amount, type, and sensitivity of information that<br>
+must be exchanged during a typical DIS exercise drives<br>
+the communication requirements for that exercise, and<br>
+depends on on the number and type of participating<br>
+entities and the nature and level of interaction among<br>
+those entities. Future DIS exercises now in planning<br>
+{{MAO:HTN--, eh?}} extend to hundreds of sites and<br>
+tens of thousands of simulation platforms worldwide.<br>
+For example, an exercise may consist of semi-automated<br>
+and individual manned tank, aircraft, and surface<br>
+ship simulators interacting on predefined geographic<br>
+terrain. The actual locations of these simulation<br>
+entities may be distributed amond sites in Virginia,<br>
+Kansas, Massachussetts, Germany, and Korea. The packets<br>
+that are exchanged among simulation entities running<br>
+at these sites must carry all of the information<br>
+necessary to inform each site regarding everything<br>
+relevant that occurs with regard to all other sites that<br>
+have the potential to affect it within the simulation<br>
+{{a light cone thing}}. Such information could include<br>
+the location of each entity, its direction and speed,<br>
+the orientation of its weapon systems, if any, the<br>
+frequency of on which it is transmitting and receiving<br>
+radio messages. If an entity launches a weapon, such<br>
+as a missile, a new entity representing this missile<br>
+will be created within the simulation and it will<br>
+begin transmitting packets containing relevant<br>
+information about its state, such as its location, and<br>
+speed.<br>
+<p>
+A typical moving entity will generate between one and<br>
+two packets per second, with typical packet sizes of<br>
+220 Bytes and a maximum size of 1400 Bytes, although<br>
+rates 15 packets/second and higher are possible.<br>
+Stationary entities must generate some traffic to<br>
+refresh receiving simulators; under the current<br>
+standard this can be as little as 0.2 packets per<br>
+second. Compression techniques reducing packets size<br>
+by 50% or more are being investigated but are not<br>
+included in the current DIS standard {{methinks they<br>
+should be investigate quake}}.<br>
+<p>
+With so much information being exchanged among<br>
+simulation entities at numerous locations, multicasting<br>
+is required to to minimize network bandwidth used and<br>
+to reduce input to individual simulation entities so<br>
+that each entity receives only those packets that<br>
+are of interest to it. For example, a given entity<br>
+need only receive information regarding the location,<br>
+speed, and direction of other entities that are close<br>
+enough to it within the geography of the simulation<br>
+that it could be affected by those entities.<br>
+Similiarly, an entity needs need not receive packets<br>
+containing the contents of radio transmissions that<br>
+are sent on a frequency other that on which this<br>
+entity is listening.<br>
+<p>
+Resource reservation mechanisms are also essential to<br>
+guarantee performance requirements of DIS exercises:<br>
+reliability and real-time transmission are necessary<br>
+to accomodate the manned simulators {{yet}} participating<br>
+in an exercise.<br>
+<p>
+M&amp;S exercises that include humans in the loop and<br>
+are executed in real-time require rapid network response<br>
+times in order to provide realistic combat simulations.<br>
+For DIS, latency requirements between the ouput of a<br>
+packet at the application level of the simulator and<br>
+input of that packet at the application level of any<br>
+other simulator in that exercise have been defined as:<br>
+<p>
+    * 100 ms for exercises containing simulated units<br>
+      whose interactions are tightly coupled<br>
+<p>
+    * 300 ms for exercises whose interactions are not<br>
+      tightly coupled [17]<br>
+<p>
+The reliability of best-effort datagram delivery service<br>
+supporting DIS should be such that 98% of all datagrams are<br>
+delivered to all intended destination sites, with missing<br>
+datagrams randomly distributed. [18]<br>
+<p>
+While these number may be refined for some classes of<br>
+simulation data in the future, latency requirements are<br>
+expected to remain under a few hundred milliseconds in<br>
+all cases. It is also required that delay variance (jitter)<br>
+be low enough that smoothing by buffering the data stream<br>
+at the recieving simulator des not cause the stated latency<br>
+specifications to be exceeded.<br>
+<p>
+There are currently several architectures under considerations<br>
+for the M&amp;S network of the future. Under fully distributed<br>
+models, all simulation entities rely directly on the network<br>
+protocols for multicasting and are therefore endowed with much<br>
+flexibility with regard to their ability to join and leave<br>
+multicast groups dynamically, in large numbers.<br>
+<p>
+In some cases, the M&amp;S exercises will involve the transmission<br>
+of classified data over the network. For example, messages<br>
+may contain sensitive data regarding warfare tactics and<br>
+weapons system characteristics, or an exercise itself may be<br>
+a rehearsal of an imminent military operation. This means the<br>
+data communications used for these exercises must meet<br>
+security constraints defined by the National Security Agency<br>
+(NSA) {{No Such Agency}}. Such such requirements can be met in<br>
+current systems by use of end-to-end packet encryption (E3)<br>
+systems. E3 systems provide adequate protection from disclosure<br>
+and tampering, while allowing multiple security partitions<br>
+to use the same network simultaneously.<br>
+<p>
+Currently the M&amp;S community is using the experimental Internet<br>
+Stream protocol version 2 (ST2) to provide resource reservation<br>
+and multicast. There is much interest in converting to IPv4<br>
+multicast as it becomes available across the COTS base, but this<br>
+cannot happen until IPv45 has a resource reservation capability.<br>
+The RSVP work ongoing in the IETF is being watched in expectation<br>
+that it will provide such a capability. Also some tests have<br>
+been made of IPv4 multicast without resource reservation;<br>
+results have been positive, now larger tests are required to<br>
+confirm the expected scalability of IPv4 multicast. But issues<br>
+remain, for security reasons, some M&amp;S exercises will require<br>
+sender-intiated joining of members of multicast groups. In<br>
+addition, it is not clear that IPv4 multicast will be able to<br>
+make use of link-layer multicast available in ATM systems,<br>
+which the M&amp;S community expects to use to achieve the performance<br>
+necessary for large exercises.<br>
+<p>
+&lt;b&gt;Specific Requirements.&lt;/b&gt; It is recognized that some<br>
+of the capabilities described below may be provided not<br>
+from IPng but form companion protocols, e.g. RSVP [19]<br>
+and IGMP. The M&amp;S requirement is for a compatible suite<br>
+of protocols that are available in commercial products.<br>
+<p>
+&lt;i&gt;Real-time Response.&lt;/i&gt;  DIS will continue to have<br>
+requirements to communicate real-time data, therefore<br>
+the extent to which IPng lends itself to implementing<br>
+real-time networks will be a measure of its utility for<br>
+M&amp;S networking.<br>
+<p>
+&lt;i&gt;Multicasting.&lt;/i&gt; M&amp;S requires a multicasting capability<br>
+and a capability for managing multicast group membership.<br>
+These multicasting capabilities must meet the following<br>
+requirements:<br>
+<p>
+    * Scalable to hundreds of sites and, potentially, to<br>
+      tens of thousands of simulation platforms.<br>
+<p>
+    * It is highly desirable that the network-layer<br>
+      multicasting protocol be able to use the multicasting<br>
+      capabilities of link-level technologies, such as<br>
+      broadcast LANs, Frame Relay, and ATM. (By highly<br>
+      desirable, we mean that the capabilities are not<br>
+      essential, but they will enable more direct and<br>
+      cost-effective networking solutions).<br>
+<p>
+    * The group management mechanics must have the<br>
+      characteristics that thousands of multicast groups<br>
+      consisting of tens of thousands of members each can<br>
+      be supported on a given network and that a host should<br>
+      be able to to belong to hundreds of multicast groups<br>
+      simulataneously.<br>
+<p>
+    * Multicast group members must be able to be added to<br>
+      or to removed from groups dynamically, in less than<br>
+      one second {{notice the timescale}}. It is not possible<br>
+      to predict what special cases may develop, thus this<br>
+      requirement is for all the members of all groups.<br>
+<p>
+    * The network layer must support options for both sender-<br>
+      and receiever-initiated joining of multicast groups.<br>
+<p>
+&lt;i&gt;Resource Reservation&lt;/i&gt; The M&amp;S community requires performance<br>
+guarantees in supporting networks. This implies that IPng must<br>
+be compatible with a capability to reserve bandwidth and other<br>
+necessary allocations in a multicast environment, in order to<br>
+guarantee network capacity from simulator-to-simulator across a<br>
+shared network for the duration of the user's interaction with<br>
+the network. Such a resource reservation capability is esential<br>
+to optimizing the use of limited network resources, increasing<br>
+reliabilit, and decreasing delay and delay variance of priority<br>
+traffic, especialy in cases in which network resources are<br>
+heavily used. The resource reservations should be accomplished<br>
+in such a way that traffic without performance guarantees will<br>
+be re-routed, dropped, or blocked before reserved bandwidth<br>
+traffic is affected.<br>
+<p>
+In addition, it would be highly desirable for the resource<br>
+reservation capaibility to provide mechanisms for:<br>
+<p>
+    * invoking additional network resources (on-demand<br>
+      capacity) when needed.<br>
+<p>
+    * The network to feed back its loading status to the<br>
+      applications to enable graceful degradation of performance. <br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1204.html">Eugene Leitl: "MIL:SIM:MAO:HTN:QUAKE: Use of IPng in Combat Simulations"</a>
+<li> <b>Previous message:</b> <a href="1202.html">Eugene Leitl: "FYI:HIST:TECH:You are now subscribed to the HTECH-L list (fwd)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

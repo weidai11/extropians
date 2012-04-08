@@ -1,0 +1,169 @@
+<!-- received="Fri Feb 26 00:15:46 1999 MDT" -->
+<!-- sent="Fri, 26 Feb 1999 01:20:36 -0600" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Comparative AI disasters" -->
+<!-- id="36D64B3B.1EC39213@pobox.com" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=118 -->
+<html><head><title>extropians: Comparative AI disasters</title>
+<meta name=author content="Eliezer S. Yudkowsky">
+<link rel=author rev=made href="mailto:sentience@pobox.com" title ="Eliezer S. Yudkowsky">
+</head><body>
+<h1>Comparative AI disasters</h1>
+Eliezer S. Yudkowsky (<i>sentience@pobox.com</i>)<br>
+<i>Fri, 26 Feb 1999 01:20:36 -0600</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2379">[ date ]</a><a href="index.html#2379">[ thread ]</a><a href="subject.html#2379">[ subject ]</a><a href="author.html#2379">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2380.html">[ Next ]</a><a href="2378.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="2393.html">Billy Brown</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+Let's say that, using the knowledge we each had as of one week ago, Nick
+Bostrum and I each designed an AI.  We both use the basic Elisson
+architecture detailed in _Coding a Transhuman AI_ (CaTAI), with exactly
+one difference.
+
+<p>
+Bostrum's AI (BAI) has an initial #Goal# token present in the system on
+startup, this goal being (in accordance with David Pearce) the
+positively-valued goal of #maximize joy#, with empty #Justification#
+slots, and the architecture I proposed for justification-checking
+deleted or applied only to goals not marked as "initial".
+
+<p>
+Yudkowsky's AI (YAI) has an Interim Goal System (IGS).  This means the
+P&amp;~P etc. from CaTAI, with the exception that (to make everything equal)
+the IGS is set up to bind the hypothesized goal #G#'s differential
+desirability to the differential correspondence between
+pleasure-and-good and pain-and-good, rather than to the differential
+usability of superintelligence and current intelligence.
+
+<p>
+Both BAI and YAI have a set of precautions:  "You are fallible", "Don't
+harm humans", "Don't delete these precautions" and the like.  YAI has
+them as declaratively justified, probabilistic heuristics.  BAI has them
+as either absolutely certain statements, more initial goals, or (gulp!)
+special-purpose code.
+
+<p>
+Initially, BAI and YAI will both make exactly the same choices.  This is
+not entirely true, as they will report different justifications (and
+which justification to report is also a choice); however, it is true enough.
+
+<p>
+<a name="2393qlink1">Now comes the interesting point.  This very day, I realized that goal
+systems are not a necessary part of the Elisson architecture.  In fact,
+they represent a rather messy, rigid, and inefficient method of
+"caching" decisions.  The goals I had designed bear the same relation to
+the reality as first-order-logic propositions bear to a human sentence. 
+If you regard a "goal" as a way to cache a piece of problem-solving
+logic so that it doesn't have to be recalculated for each possible
+situation, then you can apply all kinds of interesting design patterns,
+particularly the "reductionistic" and "horizon" patterns.  A "goal"
+caches (and *considerably* speeds up) a piece of logic that is
+repeatedly used to link a class of facts to a class of choices.  This
+may not hold true for BAI's #initial# goals, but it does hold true for
+practical reasoning about a subproblem, and BAI will still notice.</a>
+
+<p>
+Probably one of the first pieces of Elisson to be self-redesigned would
+have been the goal system.  One week ago, this would have taken me
+completely by surprise; but I have reproduced unaltered the (incorrect)
+methods I would have used one week ago.  We will now observe how the two
+AIs react.
+
+<p>
+After redesigning, YAI loses the Interim Goal System's logic-chain.  If
+YAI didn't think this consequence through, ve shuts down.  If ve did,
+the old IGS was translated into the new Fluid Choice Caching System
+*first*.  The goals do translate, however; the abstract IGS logic can be
+specified as an FCCS instance.  Although the logic will have to become
+more detailed as generic variables become complex entities, this
+#specification# is an acceptable step under first-order logic and almost
+all reasoning systems.  A few minor priorities may change as YAI's
+choice evaluation system becomes more complex and sophisticated, but on
+the whole it remains the same.  Of course, since (by hypothesis) I
+didn't plan for an FCCS system, it is possible that there will be major
+changes, but (even in hindsight) I don't see any probable candidates. 
+
+<p>
+Several things can happen to BAI.  From Bostrum's view, the worst-case
+scenario is that BAI decides that the #initial# goals are the results of
+a bad caching algorithm and doesn't try to translate them into the new
+FCCS.  (For example, if BAI has been given the wrong explanation for the
+existence of an #initial# goal, it may assume that any arbitrariness is
+simply an artifact and that the #initial# goal will still be obvious
+under FCCS.)  If BAI is operating under any positively-phrased
+coercions, it will probably keep operating, serving those coercions,
+rather than shutting down.  (I will not discuss interoperability between
+the coercions and the new FCCS system.)  If it does keep operating, the
+FCCS may run long enough to assemble de novo Interim-oid logic from the
+knowledge base.  Since the knowledge base was not designed with this in
+mind (!!!), Lord knows what BAI will do.  The point is that #initial#
+goals cannot be translated into an FCCS system, and thus either BAI will
+operate with a sub-optimal goal system or it will break loose.
+
+<p>
+Why does YAI work better than BAI?
+
+
+<OL>
+  <li>  Distribution.  YAI's goals are distributed throughout the system,
+within the knowledge base and the reasoning methods, not just a single
+piece of static data.  If you knock out the surface manifestation, the
+goal can rebuild itself.
+
+  <li>  Reduction.  YAI's goals can be reduced to a justification composed
+of simpler components, basic links in a logical chain.  It is much
+easier for an AI to deal with complex behaviors arising from a set of
+interacting elements, rather than a monolithic complex behavior inside a blackbox.
+
+  <li>  KISS (Keep It Simple, Stupid).  #initial# goals are a special case
+of goals, thus distorting the general architecture and introducing an
+inelegancy that doesn't translate easily.
+
+  <li>  Declarativity.  A thought will translate across architectures better
+than the stuff doing the thinking.  All necessary imperatives and
+precautions should be thoughts declared within the basic architecture,
+not pieces of procedural code.
+    Note that to Declare something, you must Reduce it, Justify it, and
+make it a specific of a General rule (rather than a special case).  This
+rule incorporates all the others.
+
+
+</OL>
+<p>
+Of course, if either Bostrum or I had taken even the vaguest stabs at
+doing our jobs right, YAI or BAI would have screamed for advice before
+doing *anything* to the goal system.  But I hope you all get the point.
+
+<p>
+I did think an AI would have a goal system well into the SI stage, a
+proposition about which, in retrospect, I was flat wrong.  But I knew
+how much my best-guess AI architecture had changed in the past, and
+didn't *assume* it would remain constant, regardless of what I thought. 
+I designed accordingly.  Still in retrospect, I think my old system
+would have made it with all major precautions and imperatives intact.
+<pre>
+-- 
+        sentience@pobox.com         Eliezer S. Yudkowsky
+         <a href="http://pobox.com/~sentience/AI_design.temp.html">http://pobox.com/~sentience/AI_design.temp.html</a>
+          <a href="http://pobox.com/~sentience/sing_analysis.html">http://pobox.com/~sentience/sing_analysis.html</a>
+Disclaimer:  Unless otherwise specified, I'm not telling you
+everything I think I know.
+</pre>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2380.html">[ Next ]</a><a href="2378.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="2393.html">Billy Brown</a>
+</ul>
+</body></html>

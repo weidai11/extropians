@@ -1,0 +1,73 @@
+<!-- received="Fri Mar 27 18:49:39 1998 MDT" -->
+<!-- sent="Fri, 27 Mar 1998 17:50:13 -0800" -->
+<!-- name="Hal Finney" -->
+<!-- email="hal@rain.org" -->
+<!-- subject="Re: Year 2k" -->
+<!-- id="199803280150.RAA00388@s20.term1.sb.rain.org" -->
+<!-- inreplyto="Year 2k" -->
+<title>extropians: Re: Year 2k</title>
+<h1>Re: Year 2k</h1>
+Hal Finney (<i>hal@rain.org</i>)<br>
+<i>Fri, 27 Mar 1998 17:50:13 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3201">[ date ]</a><a href="index.html#3201">[ thread ]</a><a href="subject.html#3201">[ subject ]</a><a href="author.html#3201">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3202.html">Dan Clemmensen: "Re: Year 2k"</a>
+<li> <b>Previous message:</b> <a href="3200.html">JSmith8347: "Re: calyk"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Arjen Kamphuis, &lt;mountain@knoware.nl&gt;, writes:<br>
+<i>&gt; I also read somewhere (but have not been able to confirm it) that the</i><br>
+<i>&gt; GPS-navigation satellites will 'run out of dates' by the end of _this_</i><br>
+<i>&gt; year. It seems their calender is based on counting weeks since 1-1-1980 and</i><br>
+<i>&gt; by next september or something they will run out of memory. Can anyone</i><br>
+<i>&gt; confirm this story?</i><br>
+<p>
+A set of slides from the military office responsible for GPS describes<br>
+this problem as well as Y2K compliance issues at:<br>
+<p>
+<a href="http://www.laafb.af.mil/SMC/CZ/homepage/y2000/y2k/tsld001.htm">http://www.laafb.af.mil/SMC/CZ/homepage/y2000/y2k/tsld001.htm</a><br>
+<p>
+According to slide 4,<br>
+<p>
+      GPS system time counts weeks from midnight 5-6 Jan 1980 in modulo<br>
+      1024 (0-1023)<br>
+<p>
+      No year or century data is included in the Navigation Message -<br>
+      Subframe 1 (Word 3)<br>
+<p>
+      GPS week rolls over from week 1023 to week 0000 at midnight 21-22<br>
+      August 1999 and approximately every 20 years thereafter<br>
+<p>
+      Clearly documented in ICD-GPS-200, para 3.3.4(b)<br>
+<p>
+      GPS receiver manufacturers responsible for their designs conforming<br>
+      to ICD-GPS-200<br>
+<p>
+So the problem occurs the night of August 21, 1999, when the week counter<br>
+rolls over from 1023 to 0.  This is part of the GPS spec but some<br>
+receivers may not have been thoroughly tested for proper operation during<br>
+this transition.<br>
+<p>
+The other slides indicate that the GPS satellites themselves have been<br>
+verified to have Y2K and rollover compliance, but some of the ground<br>
+support software is on older mainframes and has some Y2K issues.<br>
+I gather that the ground software would not affect the operation of<br>
+the satellites in terms of giving out good data, but would affect the<br>
+military's own use of the satellites.<br>
+<p>
+Hal<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3202.html">Dan Clemmensen: "Re: Year 2k"</a>
+<li> <b>Previous message:</b> <a href="3200.html">JSmith8347: "Re: calyk"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

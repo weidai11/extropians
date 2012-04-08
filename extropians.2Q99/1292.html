@@ -1,0 +1,110 @@
+<!-- received="Mon May 10 00:45:54 1999 MDT" -->
+<!-- sent="Mon, 10 May 1999 08:41:12 +0200" -->
+<!-- name="KPJ" -->
+<!-- email="kpj@sics.se" -->
+<!-- subject="Re: Information &amp; Power /Alexandria library" -->
+<!-- id="199905100641.IAA02475@color.sics.se" -->
+<!-- inreplyto="Pine.OSF.4.10.9905040205190.17090-100000@student.uq.edu.au" -->
+<!-- version=1.10, linesinbody=65 -->
+<html><head><title>extropians: Re: Information &amp; Power /Alexandria library</title>
+<meta name=author content="KPJ">
+<link rel=author rev=made href="mailto:kpj@sics.se" title ="KPJ">
+</head><body>
+<h1>Re: Information &amp; Power /Alexandria library</h1>
+KPJ (<i>kpj@sics.se</i>)<br>
+<i>Mon, 10 May 1999 08:41:12 +0200</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1292">[ date ]</a><a href="index.html#1292">[ thread ]</a><a href="subject.html#1292">[ subject ]</a><a href="author.html#1292">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1293.html">[ Next ]</a><a href="1291.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1132.html">Alejandro Dubrovsky</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+It appears as if Michael S. Lorrey wrote:
+<br>
+<a href="1122.html#1292qlink1">|The entire DNS database is updated regularly on every web server at</a><br>
+<i>|every ISP, so there is not threat to its being destroyed. Thats why they</i><br>
+<i>|are called name servers. When you request a page from a site, your ISP's</i><br>
+<i>|webserver looks up the DNS and its corresponding IP address, then</i><br>
+<i>|queries the network for the data from that IP address. The routers take</i><br>
+<i>|that query and send it to the next closer router, etc. The system does</i><br>
+<i>|not query network solutions' registry every time.</i><br>
+
+<p>
+The DNS (Domain Name System) data is distributed over the whole Internet, and
+there exists no "entire DNS database", except in the mind of the abstractor.
+
+<p>
+You could, in theory, ask every DNS server for a copy of their data base, and
+make a single data base of the data.  In practices, however, the can be
+considered _impossible_:
+<br>
+(a) the data would be stale and incomplete at the same time:
+<p>
+    the data change all the time everywhere.
+(b) the data base would require very large amounts of memory to store.
+(c) the bandwidth to copy it to your node would be enormous.
+
+<p>
+It appears as if Alejandro Dubrovsky &lt;s335984@student.uq.edu.au&gt; commented:
+<br>
+<i>|</i><br>
+<a href="1132.html#1292qlink2">|Each DNS at each ISP holds a minuscule share of the entire database, most</a><br>
+<i>|definitely not the entire database.  It can cache requests that go through</i><br>
+<i>|it but that only for a short time (usually one hour) and only of the</i><br>
+<i>|request done on it. A DNS usually only holds the IP table for whatever</i><br>
+<i>|domains it is acting as a master or as a secondary for, and usually you</i><br>
+<i>|only have two servers knowing the IPs for a subdomain.  Whatever ISP you</i><br>
+<i>|are using does not have a clue what IP corresponds to</i><br>
+<i>|s335984.student.uq.edu.au but the root servers know who the dns master for</i><br>
+<i>|edu.au is (munnari.oz.au), who still doesn't know the ip but it knows that</i><br>
+<i>|the master dns for uq.edu.au is krefti.uq.edu.au, and so on.  This system</i><br>
+<i>|enables each dns to respond quickly to name lookups since they only have</i><br>
+<i>|to hold a couple of name to ip matchings but it does mean that it is</i><br>
+<i>|fragile.  If the 7 or 8 root servers were taken down all cross domain</i><br>
+<i>|lookups (eg from .edu to .com, or from .gov to .uk) would fail after the</i><br>
+<i>|corresponding caches expire (1 to 3 hours).</i><br>
+
+<p>
+On May 1, 1999, there existed 13 root servers:
+
+<p>
+   Name		         IP number	Location
+<hr>
+<pre>
+A.ROOT-SERVERS.NET     198.41.0.4	InterNIC (NSI) - USA
+B.ROOT-SERVERS.NET     128.9.0.107	Information Sciences Institute,
+					University of Southern California - USA
+C.ROOT-SERVERS.NET     192.33.4.12	PSINet, Inc. - USA
+D.ROOT-SERVERS.NET     128.8.10.90	University of Maryland - USA
+E.ROOT-SERVERS.NET     192.203.230.10	NASA - USA
+F.ROOT-SERVERS.NET     192.5.5.241	Internet Software Consortium - USA?
+G.ROOT-SERVERS.NET     192.112.36.4	Network Information Center - USA
+H.ROOT-SERVERS.NET     128.63.2.53	U.S. Army Research Laboratory,
+					Maryland - USA
+I.ROOT-SERVERS.NET     192.36.148.17	NORDUnet - Scandinavia
+J.ROOT-SERVERS.NET     198.41.0.10	InterNIC (NSI) - USA
+K.ROOT-SERVERS.NET     193.0.14.129	RIPE Network Coordination Centre (NCC)
+					Amsterdam - Netherlands
+L.ROOT-SERVERS.NET     198.32.64.12	ISI (IANA) - USA
+M.ROOT-SERVERS.NET     202.12.27.33	Widely Integrated Distributed
+					Environment (WIDE) - Japan
+
+</pre>
+<p>
+A list of the current DNS root servers can be acquired from
+&lt;URL:<a href="ftp://RS.INTERNIC.NET/domain/named.root">ftp://RS.INTERNIC.NET/domain/named.root</a>&gt;, which might be a good idea for
+all DNS server administrators to do now and then.
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1293.html">[ Next ]</a><a href="1291.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1132.html">Alejandro Dubrovsky</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

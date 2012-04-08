@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: (meta-)meta-design (was: Coding a Transhuman AI</TITLE>
+<META NAME="Author" CONTENT="Dan Fabulich (daniel.fabulich@yale.edu)">
+<META NAME="Subject" CONTENT="Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)</H1>
+<!-- received="Tue May 23 03:08:00 2000" -->
+<!-- isoreceived="20000523090800" -->
+<!-- sent="Tue, 23 May 2000 05:09:01 -0400 (EDT)" -->
+<!-- isosent="20000523090901" -->
+<!-- name="Dan Fabulich" -->
+<!-- email="daniel.fabulich@yale.edu" -->
+<!-- subject="Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)" -->
+<!-- id="Pine.GSO.4.10.10005230444400.4039-100000@morpheus.cis.yale.edu" -->
+<!-- inreplyto="20000523092324.D16753@melchior" -->
+<STRONG>From:</STRONG> Dan Fabulich (<A HREF="mailto:daniel.fabulich@yale.edu?Subject=Re:%20(meta-)meta-design%20(was:%20Coding%20a%20Transhuman%20AI%202.0a)&In-Reply-To=&lt;Pine.GSO.4.10.10005230444400.4039-100000@morpheus.cis.yale.edu&gt;"><EM>daniel.fabulich@yale.edu</EM></A>)<BR>
+<STRONG>Date:</STRONG> Tue May 23 2000 - 03:09:01 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="3602.html">Ian Goddard: "Re: Waco FLIR Update"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3600.html">Martin Ling: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3597.html">Martin Ling: "(meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3604.html">Martin Ling: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3604.html">Martin Ling: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3626.html">Adrian Tymes: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3601">[ date ]</A>
+<A HREF="index.html#3601">[ thread ]</A>
+<A HREF="subject.html#3601">[ subject ]</A>
+<A HREF="author.html#3601">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Martin Ling, missing the point, replied:
+<BR>
+<P><EM>&gt; On Tue, May 23, 2000 at 12:19:15AM -0400, Dan Fabulich wrote:
+</EM><BR>
+<EM>&gt; &gt; Matt Gingel noted briefly:
+</EM><BR>
+<EM>&gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; &gt; In the general case, evolution is a graph search. Each possible
+</EM><BR>
+<EM>&gt; &gt; &gt; individual is a node, and mutations spell out the transition rules. By
+</EM><BR>
+<EM>&gt; &gt; &gt; manipulating the space of transition rules, we transform the search
+</EM><BR>
+<EM>&gt; &gt; &gt; space - we make some points closer together and some further
+</EM><BR>
+<EM>&gt; &gt; &gt; apart. Perhaps more importantly, local maxima can be eradicated
+</EM><BR>
+<EM>&gt; &gt; &gt; since we change the set reachable nodes. (This analysis still
+</EM><BR>
+<EM>&gt; &gt; &gt; holds if we consider crossover operators, every node becoming a
+</EM><BR>
+<EM>&gt; &gt; &gt; population.)
+</EM><BR>
+<EM>&gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; Here's a good example of how someone might use GAs: they might be
+</EM><BR>
+<EM>&gt; &gt; interested in finding out what the most aerodynamic design for a
+</EM><BR>
+<EM>&gt; &gt; vehicle is.  So they'd design a multi-dimensional space allowing for a
+</EM><BR>
+<EM>&gt; &gt; variety of different things to be changed in the design of the craft.
+</EM><BR>
+<EM>&gt; &gt; Then, they'd set the GA to work.
+</EM><BR>
+<EM>&gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; When it got to work, it would generate a random sampling of designs,
+</EM><BR>
+<EM>&gt; &gt; CHECK TO SEE HOW AERODYNAMIC THEY WERE, and prioritize the designs
+</EM><BR>
+<EM>&gt; &gt; which were the most aerodynamic in the next run, which would amount to
+</EM><BR>
+<EM>&gt; &gt; random variations, breedings, etc. from the previous generation.
+</EM><BR>
+<EM>&gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; So.  GA.  Trying to generate good heuristics.  It generates a random
+</EM><BR>
+<EM>&gt; &gt; sampling of heuristics (or sets of heuristics).  Then it checks to see
+</EM><BR>
+<EM>&gt; &gt; which heuristics are best, and prioritizes the best heuristics in the
+</EM><BR>
+<EM>&gt; &gt; next generation.
+</EM><BR>
+<EM>&gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; But how do you figure out whether a heuristic is good or not?  Well,
+</EM><BR>
+<EM>&gt; &gt; heuristics are rules for action.  You USE the heuristic, and you see
+</EM><BR>
+<EM>&gt; &gt; how well off you wind up.  (Using some definition of &quot;well off&quot; which
+</EM><BR>
+<EM>&gt; &gt; has nothing to do with motivations, I suppose.)  In fact, just one
+</EM><BR>
+<EM>&gt; &gt; trial run really isn't enough... you need to try using the heuristic
+</EM><BR>
+<EM>&gt; &gt; many many times in order to even out statistical hiccups.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; ...so you have a second genetic algorithm, trying out different
+</EM><BR>
+<EM>&gt; heuristics on the first. And then, if neccessary, one above that.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; Has this been tried? Meta-design? Meta-meta-design?
+</EM><BR>
+<P>OK, *now* I'm frustrated.  [I left my whole post here so you can
+<BR>
+reread it.]
+<BR>
+<P>You COMPLETELY missed the point here.  How do you know if ANY of your
+<BR>
+heuristics are good?  A single god damned one of them?  Answer: you
+<BR>
+don't, without testing.  Since you can't tell if any of your
+<BR>
+*heuristics* are good, you also can't tell if any *heuristic search
+<BR>
+engines* (meta-designs) are good, because they're only as good as the
+<BR>
+heuristics they find/generate, and *you don't know how good that is*.
+<BR>
+You can't just run another heuristic search, because you have no way
+<BR>
+of knowing whether any of your heuristics are good AT ALL without
+<BR>
+testing them.
+<BR>
+<P>If you have no way of finding values (such as the drag coefficient),
+<BR>
+you have no way of finding maximum values.  Common sense, people.
+<BR>
+GAs, hell, ANY form of calculation, including &quot;brute force the entire
+<BR>
+search space,&quot; won't work unless you actually have some values to
+<BR>
+search on.
+<BR>
+<P>You can't even search for the best COFFEE MAKER like this, guys!  How
+<BR>
+do you know if any of your recipes are good?  No amount of pure
+<BR>
+calculation will find the best coffee recipe, nor will it find you the
+<BR>
+best way to calculate the best coffee recipe, NOR will it find you the
+<BR>
+best way to calculate the best way to calculate the best coffee
+<BR>
+recipe.  It can't BE calculated.  You have to *test*.
+<BR>
+<P>You're searching on a table of UNKNOWN VALUES.  Does this mean
+<BR>
+anything to you?  We're talking fundamentally UNDERIVABLE here.
+<BR>
+<P>I swear, it's like they think you really CAN derive the existence of
+<BR>
+tapioca pudding...
+<BR>
+<P>-Dan, who needs to get out more
+<BR>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-unless you love someone-
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;-nothing else makes any sense-
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.e. cummings
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="3602.html">Ian Goddard: "Re: Waco FLIR Update"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3600.html">Martin Ling: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3597.html">Martin Ling: "(meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3604.html">Martin Ling: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3604.html">Martin Ling: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3626.html">Adrian Tymes: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3601">[ date ]</A>
+<A HREF="index.html#3601">[ thread ]</A>
+<A HREF="subject.html#3601">[ subject ]</A>
+<A HREF="author.html#3601">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:11:32 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

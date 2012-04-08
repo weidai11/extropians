@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: LAW: Legality of deep linking to Web sites</title>
+<meta name="Author" content="Adrian Tymes (wingcat@pacbell.net)">
+<meta name="Subject" content="Re: LAW: Legality of deep linking to Web sites">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: LAW: Legality of deep linking to Web sites</h1>
+<!-- received="Sat Jan 20 13:34:36 2001" -->
+<!-- isoreceived="20010120203436" -->
+<!-- sent="Sat, 20 Jan 2001 12:35:01 -0800" -->
+<!-- isosent="20010120203501" -->
+<!-- name="Adrian Tymes" -->
+<!-- email="wingcat@pacbell.net" -->
+<!-- subject="Re: LAW: Legality of deep linking to Web sites" -->
+<!-- id="3A69F675.7EE38279@pacbell.net" -->
+<!-- inreplyto="3A687C5B.3663.20D0A25@localhost" -->
+<strong>From:</strong> Adrian Tymes (<a href="mailto:wingcat@pacbell.net?Subject=Re:%20LAW:%20Legality%20of%20deep%20linking%20to%20Web%20sites&In-Reply-To=&lt;3A69F675.7EE38279@pacbell.net&gt;"><em>wingcat@pacbell.net</em></a>)<br>
+<strong>Date:</strong> Sat Jan 20 2001 - 13:35:01 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1848.html">Chuck Kuecker: "RE: (repost) RE: GUNS: Re: Self Defense"</a>
+<li><strong>Previous message:</strong> <a href="1846.html">Adrian Tymes: "Re: Launch Technology"</a>
+<li><strong>In reply to:</strong> <a href="1758.html">John Marlow: "Re: LAW: Legality of deep linking to Web sites"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1640.html">John Calvin: "Re: LAW: Legality of deep linking to Web sites"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1847">[ date ]</a>
+<a href="index.html#1847">[ thread ]</a>
+<a href="subject.html#1847">[ subject ]</a>
+<a href="author.html#1847">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Keeping secrets doesn't seem to matter in this case.  Those who know
+<br>
+the technology well enough to implement something like this tend to
+<br>
+also know the market realities well enough not to make (as) boneheaded
+<br>
+decisions.  It's kinda like why terrorists and nuclear scientists tend
+<br>
+not to be the same people.
+<br>
+<p>Besides, there's a much better way.  Have the restricted content
+<br>
+served by CGI or some other process that checks the HTTP_REFERER (typo
+<br>
+in RFC) header.  If the person came to this page by any means other
+<br>
+than clicking a link on your site, this header will tell you, and your
+<br>
+server's code can simply redirect to your front page - or provide a
+<br>
+link to a new window, with no frames other than your own, with the
+<br>
+desired content.  (Javascript, or any other code interpreted by the
+<br>
+client besides basic HTML, is not required for this.)
+<br>
+<p>John Marlow wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; SSsshhhh. Don't spread this one around. What a nightmare...
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; jm
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; On 19 Jan 2001, at 18:41, Chris Russo wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; &gt;Note that the NYT seems to have resolved the issue--all links to
+</em><br>
+<em>&gt; &gt; &gt;articles (so far as I know) run you into their entry page, where you
+</em><br>
+<em>&gt; &gt; &gt;must enter registration info. You are then forwarded to the linked
+</em><br>
+<em>&gt; &gt; &gt;page. Wonder if this can be done w/o the registration bit? All links
+</em><br>
+<em>&gt; &gt; &gt;diverting to a &quot;start&quot; page?
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; I haven't looked at it, but I'd guess that's basically a cookie
+</em><br>
+<em>&gt; &gt; mechanism.  If you don't have the &quot;logged in&quot; cookie, it throws you
+</em><br>
+<em>&gt; &gt; to the login page.  If you used something similar to prevent deep
+</em><br>
+<em>&gt; &gt; linking, you'd probably catch the first occurrence, but subsequent
+</em><br>
+<em>&gt; &gt; ones would let you through.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; A better solution would probably be to have some dynamic renaming
+</em><br>
+<em>&gt; &gt; system that frequently re-maps the files to new URLs.  Any specific
+</em><br>
+<em>&gt; &gt; URL should only last a few hours or a day (depending on what you're
+</em><br>
+<em>&gt; &gt; trying to accomplish).  That way, no one could really expect to
+</em><br>
+<em>&gt; &gt; maintain deep links to your pages.  Everyone would have to start at
+</em><br>
+<em>&gt; &gt; your commonly-accessed gateway to get the current links.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; Just an idea.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; Regards,
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; Chris Russo
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; &gt; --
+</em><br>
+<em>&gt; &gt; &quot;If anyone can show me, and prove to me, that I am wrong in thought
+</em><br>
+<em>&gt; &gt; or deed, I will gladly change.  I seek the truth, which never yet
+</em><br>
+<em>&gt; &gt; hurt anybody.  It is only persistence in self-delusion and ignorance
+</em><br>
+<em>&gt; &gt; which does harm.&quot;
+</em><br>
+<em>&gt; &gt;               -- Marcus Aurelius, MEDITATIONS, VI, 21
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; John Marlow
+</em><br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1848.html">Chuck Kuecker: "RE: (repost) RE: GUNS: Re: Self Defense"</a>
+<li><strong>Previous message:</strong> <a href="1846.html">Adrian Tymes: "Re: Launch Technology"</a>
+<li><strong>In reply to:</strong> <a href="1758.html">John Marlow: "Re: LAW: Legality of deep linking to Web sites"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1640.html">John Calvin: "Re: LAW: Legality of deep linking to Web sites"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1847">[ date ]</a>
+<a href="index.html#1847">[ thread ]</a>
+<a href="subject.html#1847">[ subject ]</a>
+<a href="author.html#1847">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:21 MDT</em>
+</em>
+</small>
+</body>
+</html>

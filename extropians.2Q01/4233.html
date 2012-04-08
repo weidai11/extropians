@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: I strongly disagree with Lee's answer</title>
+<meta name="Author" content="Adrian Tymes (wingcat@pacbell.net)">
+<meta name="Subject" content="Re: I strongly disagree with Lee's answer">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: I strongly disagree with Lee's answer</h1>
+<!-- received="Sat May 12 20:46:43 2001" -->
+<!-- isoreceived="20010513024643" -->
+<!-- sent="Sat, 12 May 2001 19:46:49 -0700" -->
+<!-- isosent="20010513024649" -->
+<!-- name="Adrian Tymes" -->
+<!-- email="wingcat@pacbell.net" -->
+<!-- subject="Re: I strongly disagree with Lee's answer" -->
+<!-- id="3AFDF599.1EE7A790@pacbell.net" -->
+<!-- inreplyto="3AFDAFFC.1E1CECC7@attglobal.net" -->
+<strong>From:</strong> Adrian Tymes (<a href="mailto:wingcat@pacbell.net?Subject=Re:%20I%20strongly%20disagree%20with%20Lee's%20answer&In-Reply-To=&lt;3AFDF599.1EE7A790@pacbell.net&gt;"><em>wingcat@pacbell.net</em></a>)<br>
+<strong>Date:</strong> Sat May 12 2001 - 20:46:49 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="4234.html">Lee Corbin: "Re: Primes and Probability"</a>
+<li><strong>Previous message:</strong> <a href="4232.html">Damien Broderick: "Wason,  Johnson-Laird, Tversky and Kahneman"</a>
+<li><strong>In reply to:</strong> <a href="4225.html">Spike Jones: "Re: I strongly disagree with Lee's answer"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4237.html">Spike Jones: "Re: I strongly disagree with Lee's answer"</a>
+<li><strong>Reply:</strong> <a href="4237.html">Spike Jones: "Re: I strongly disagree with Lee's answer"</a>
+<li><strong>Reply:</strong> <a href="4261.html">Doug Jones: "Re: I strongly disagree with Lee's answer"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4233">[ date ]</a>
+<a href="index.html#4233">[ thread ]</a>
+<a href="subject.html#4233">[ subject ]</a>
+<a href="author.html#4233">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Spike Jones wrote:
+<br>
+<p>[re: ExtroQuiz]
+<br>
+<p><em>&gt; Guys we need to set up some test cases and run em
+</em><br>
+<em>&gt; when you are here for e5.  spike
+</em><br>
+<p>For this we have simulations.  This is a pretty simple case...
+<br>
+<p>Case A: Host says nothing, so contestant never has a reason to switch.
+<br>
+<p>Case B: Host reveals a nonprize door after initial choice, always
+<br>
+choosing the contestant's door if the contestant chose a nonprize door;
+<br>
+contestant switches only if contestant's door is revealed.
+<br>
+<p>Case C: Host reveals a nonprize door completely at random; contestant
+<br>
+only switches if contestant's door is revealed.
+<br>
+<p>Case D: Host reveals a nonprize door completely at random; contestant
+<br>
+always switches.
+<br>
+<p>Each trial was for 1000 runs; the number given is the number of times
+<br>
+the contestant won in that trial of that case.
+<br>
+Trial 1   2   3   4   5   Total WinRatio ExpectedWinRatio
+<br>
+CaseA 323 302 360 322 331 1638  0.3276   0.3333
+<br>
+CaseB 674 670 675 661 662 3342  0.6684   0.6666
+<br>
+CaseC 536 534 478 515 515 2578  0.5156   0.5000
+<br>
+CaseD 519 493 489 506 477 2484  0.4968   0.5000
+<br>
+<p>Any other strategies I should run?  I've included the code (in Perl)
+<br>
+below, if anyone else would like to double-check my work.
+<br>
+<p><pre>
+---
+<p>use POSIX;
+<p>sub pick_other_than {
+     # pick a number from 1-3 other than the input
+     my ($other) = @_;
+     my $choice = ceil(rand(2));
+     # $choice is 1 or 2
+     # if $other is 3, we're done
+     # if $other is 2 and $choice is 2, $choice becomes 3
+     # if $other is 1, increment $choice by 2
+     $choice += 1 if (($choice == $other) || ($other == 1));
+     return $choice;
+}
+<p>sub do_strategy_a {
+     # no info exchanged, so no switch
+     return shift(@_);
+}
+<p>sub do_strategy_b {
+     # host reveals a non-prize door
+     my ($picked,$prize) = @_;
+     if ($picked != $prize) {
+          # host always reveals contestant's door if
+          # contestant chose non-prize, forcing switch
+          my $new_pick = pick_other_than($picked);
+          return $new_pick;
+     } else {
+          # contestant never switches if host reveals
+          # a door other than the picked (means contestant's
+          # door must have been right)
+          return $picked;
+     }
+}
+<p>sub do_strategy_c {
+     # host reveals a non-prize door at random
+     my ($picked,$prize) = @_;
+     my $revealed = pick_other_than($prize);
+     if ($picked != $revealed) {
+          # contestant never switches if host reveals
+          # a door other than the picked
+          return $picked;
+     } else {
+          # switch forced if host reveals picked door
+          return pick_other_than($revealed);
+     }
+}
+<p>sub do_strategy_d {
+     # host reveals a non-prize door at random
+     my ($picked,$prize) = @_;
+     my $revealed = pick_other_than($prize);
+     if ($picked != $revealed) {
+          # contestant always switches if host reveals
+          # a door other than the picked
+          my $choice = 1;
+          $choice += 1 if
+               (($choice == $picked) || ($choice == $revealed));
+          $choice += 1 if
+               (($choice == $picked) || ($choice == $revealed));
+          return $choice;
+     } else {
+          # switch forced if host reveals picked door
+          return pick_other_than($revealed);
+     }
+}
+<p># main code
+<p># switch the do_straegy_* link to
+# use different strategies
+<p>my $trial = 0,$matches = 0;
+while ($trial &lt; 1000) {
+     my $picked_door = ceil(rand(3));
+     my $prize_door = ceil(rand(3));
+     $picked_door =
+           do_strategy_d($picked_door,$prize_door);
+     $matches++ if ($picked_door == $prize_door);
+     $trial++;
+}
+print $matches . &quot; out of &quot; . $trial . &quot; prizes won\n&quot;;
+</pre>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="4234.html">Lee Corbin: "Re: Primes and Probability"</a>
+<li><strong>Previous message:</strong> <a href="4232.html">Damien Broderick: "Wason,  Johnson-Laird, Tversky and Kahneman"</a>
+<li><strong>In reply to:</strong> <a href="4225.html">Spike Jones: "Re: I strongly disagree with Lee's answer"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4237.html">Spike Jones: "Re: I strongly disagree with Lee's answer"</a>
+<li><strong>Reply:</strong> <a href="4237.html">Spike Jones: "Re: I strongly disagree with Lee's answer"</a>
+<li><strong>Reply:</strong> <a href="4261.html">Doug Jones: "Re: I strongly disagree with Lee's answer"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4233">[ date ]</a>
+<a href="index.html#4233">[ thread ]</a>
+<a href="subject.html#4233">[ subject ]</a>
+<a href="author.html#4233">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 10:00:04 MDT</em>
+</em>
+</small>
+</body>
+</html>

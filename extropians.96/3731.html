@@ -1,0 +1,340 @@
+<!-- received="Sun Dec  8 12:20:52 1996 MST" -->
+<!-- sent="Sun, 8 Dec 1996 20:05:14 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: We need better tools to make better tools. &lt;guaRANTeed&gt;" -->
+<!-- id="Pine.SOL.3.91.961206014600.1918A-100000@sun5" -->
+<!-- inreplyto="1.5.4.32.19961204215222.002d1eac@best.com" -->
+<title>extropians: Re: We need better tools to make better tools. &lt;guaRANTeed&gt;</title>
+<h1>Re: We need better tools to make better tools. &lt;guaRANTeed&gt;</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 8 Dec 1996 20:05:14 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3731">[ date ]</a><a href="index.html#3731">[ thread ]</a><a href="subject.html#3731">[ subject ]</a><a href="author.html#3731">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3732.html">Max M: "Re: Introduction..."</a>
+<li> <b>Previous message:</b> <a href="3730.html">Alexander 'Sasha' Chislenko: "Transhuman VRML world, etc."</a>
+<li> <b>In reply to:</b> <a href="3634.html">James Rogers: "Re: We need better tools to make better tools. &lt;guaRANTeed&gt;"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Wed, 4 Dec 1996, James Rogers wrote:<br>
+<p>
+<i>&gt; At 08:29 PM 12/4/96 +0100, you wrote:</i><br>
+<i>&gt; </i><br>
+<i>&gt; &gt;[ pointless complexity rant ]</i><br>
+<i>&gt; </i><br>
+<i>&gt; If you left all the hardware details to the OS, you wouldn't be able to do</i><br>
+<p>
+Uh, I wasn't proposing leaving the optimization to the OS, just using a <br>
+simple hardware architecture, taking only a few, straightforward <br>
+optimization, and, even more important, which reacts <br>
+_predictable/nonbrittle_ in regards to optimization. Lacking single-node <br>
+performance, the power must come from maspar systems.<br>
+<p>
+But of course, the OS to be hardware-independant must contain a <br>
+just-in-time compiler (this concept was first demonstrated by Taos).<br>
+Though the compile method will typically not be a part of OS nanokernel, <br>
+it must be extremely small (few kBytes) and have excellent performance, <br>
+i.e. being able to translate faster than the HD can provide data.<br>
+<p>
+<i>&gt; much optimization.  You would be trusting that the OS was optimized,</i><br>
+<i>&gt; something I am not yet willing to do.  Granted, compilers *are* slow and</i><br>
+<p>
+For the OS to be optimized, it must be just a few kBytes big. Then, yes, <br>
+it can be optimized, hand-coded in assembly. It can then be even <br>
+virtually bug-free. I think the OS must a virtual machine, interpreting <br>
+a p-code (of course, JIT-interpreting). Depending on implementation, the <br>
+VM can be mostly software, or mostly hardware.<br>
+<p>
+<i>&gt; large, but for some languages (like C++) and systems, the complexity of</i><br>
+<i>&gt; compiling software can approach absurdity.  I once tried to write a</i><br>
+<p>
+That's the reason why I say: hang compiler complexity. The investments <br>
+have gone far beyond of any returns. Many developers do not even realize <br>
+how important it is to have blitzn turnaround cycles. By testing out <br>
+small functions thouroughly, the entire conglomerate is much less brittle.<br>
+<p>
+<i>&gt; compiler.  Not an easy task if you are concerned with optimization.</i><br>
+<p>
+Optimizing Forth compilers are embarassingly simple and fast. Most of <br>
+these are simply lookup tables (sane processor architecture assumed, of <br>
+course).<br>
+ <br>
+<i>&gt; Actually, I think somebody needs to reinvent what an OS is supposed to do.</i><br>
+<p>
+We _have_ such OSses, not only Taos. A lot is happening in realtime <br>
+embedded systems, and DSP OSses. It is just that the market has no demand <br>
+for them (yet). People like whales, they need MBytes on their hard disks <br>
+to feel they have got some value for their money. The same thing with <br>
+hardware boxes: marketing says it must have certain size to be <br>
+perceivable by the customer. Look at a severe case of featuritis most office <br>
+packages have: it makes them large, encrusted in useless features, <br>
+molasses slow, but -- people buy them. Only very few people are <br>
+deliberately running older versions because they are faster.<br>
+<p>
+<i>&gt; Take NT (which I am using to write this email) for example.  That OS is so</i><br>
+<i>&gt; bulky and has so much baggage it would be difficult to write a really small</i><br>
+<p>
+It is purported to have a microkernel. Recently they said they are going <br>
+to integrate goddamn _video drivers_ into it. Microkernel, indeed. In <br>
+fact, Microsoft itself was unable to write NT, they had to engage a bunch <br>
+of VMS guys to do it. Environment considered, they did a relatively fine job.<br>
+<p>
+<i>&gt; or fast piece of software for it.  Most versions of Unix have become the</i><br>
+<i>&gt; same way.  More often than not, the OS gets in the way.  There are a lot of</i><br>
+<p>
+Linux has started as a monolithic system, now kernel modularization has <br>
+progressed noticeably. At the same time the MkLinux project (for the <br>
+PowerPC Macs) has achieved wrapping a Linux personality arond a Mach <br>
+microkernel. There are some chances MkLinux to become integrated into the <br>
+Linux source tree, and thus to become available on a large number of <br>
+platforms.<br>
+<p>
+However, Mach has not been designed for maspar systems, must SMPs.<br>
+<p>
+<i>&gt; good experimental OSs out there, but unfortunately, most don't have enough</i><br>
+<i>&gt; support to be useable.  If I had lots of time and money, I would start</i><br>
+<i>&gt; building a brand new computing environment from the ground up.</i><br>
+<p>
+Yes, a tiny OO OS is necessary for maspar systems. There are several <br>
+possible candidates for desktop maspar system OSses already, though.<br>
+ <br>
+<i>&gt; The one thing I liked about DOS, as limited as it was, was that it allowed</i><br>
+<i>&gt; you to really write compact, fast apps.  If it natively multi-tasked, and</i><br>
+<i>&gt; had full support for 32-bit operation, I might still be working on it.</i><br>
+<p>
+I used a reentrant multitasking OO 32-clean microkernel system since even <br>
+end 1987. It had even a useful GUI, and a shell.<br>
+<p>
+<i>&gt; &gt;[...]</i><br>
+<i>&gt; </i><br>
+<i>&gt; Oh no.  Another Forth evangelist!  ;)</i><br>
+<p>
+Danger: pigeonhole alert. Apart from Lisp machines, I never met a more <br>
+powerful environment than a Forth machine. Of course, a Forth hacker eats <br>
+C hackers for breakfast, so not many had the guts to become Forth <br>
+wizards. A pity, imo. The Forth movement never achieved such a critical <br>
+mass as Unix. Lisp has failed in that, as well.<br>
+ <br>
+<i>&gt; &gt; [WSI optimal die size estimation]</i><br>
+<i>&gt; </i><br>
+<i>&gt; The major CPU producers seem to be getting acceptible yields at</i><br>
+<i>&gt; 3-5MTransistors, depending on which company you are talking about.  I know</i><br>
+<i>&gt; Intel gets &gt;80% yield by mid-cycle for most of its CPU products.  I think</i><br>
+<i>&gt; their initial yields are something like 15% though.</i><br>
+<p>
+Wow. I'd thought 30% tops. 80% die yield for 1-2 MTransistor dies is more <br>
+than enough to produce 100% wafer yield WSI systems.<br>
+<p>
+<i>&gt; &gt;There is simply no way to put above complexity into a die as tiny as </i><br>
+<i>&gt; &gt;that. Moreover, it would be an entirely wrong direction: it would keep </i><br>
+<i>&gt; &gt;the CPU architecture converging towards a CAM (it is easy to see </i><br>
+<i>&gt; &gt;convergenece in extreme cases of both), which is a nonalgorthmic machine, </i><br>
+<i>&gt; &gt;making no distinction between code and data, everything being just a </i><br>
+<i>&gt; &gt;hyperactive bit soup.</i><br>
+<i>&gt; </i><br>
+<i>&gt; We are currently seeing and will probably continue to see a trend towards</i><br>
+<i>&gt; multi-chip modules.  This is certainly coming true as far as memory is</i><br>
+<p>
+Yes, the last generation before WSI.<br>
+<p>
+<i>&gt; concerned.  It's more profitable to connect a lot of little chips than to</i><br>
+<i>&gt; make one big one.  Companies like Cray have been doing things this way for a</i><br>
+<p>
+This is true, and an obvious reason to create orthogonal, redundant WSI <br>
+systems, made from identical mini cores.<br>
+<p>
+<i>&gt; while.  And of course, Intel did it to get the cache size and performance</i><br>
+<i>&gt; they wanted on the P6.  I estimate most of the next generation of chips for</i><br>
+<i>&gt; many of the major manufacturers will be MCMs.</i><br>
+<p>
+Of course, one cannot put the complexity even of a P5 plus even 1 MByte RAM <br>
+on a die, and expect yields &gt;0.05%. WSI won't be pioneered by Intel, that <br>
+much is certain.<br>
+ <br>
+<i>&gt; &gt;[...]</i><br>
+<i>&gt; </i><br>
+<i>&gt; These architectures can be fast, but how well would something like this</i><br>
+<i>&gt; really work for general computing applications such as spreadsheets?  The</i><br>
+<p>
+A spreadsheet is a quite parallel application (wonders over wonders...), <br>
+one can tesselate the spreadsheet over individual nodes, where only the <br>
+boundaries have to be communicated. Large integer arithmetics will <br>
+substitute any float. And of course, when it comes to display the <br>
+spreadsheet, a graph, etc. or to do I/O on a RAID, maspar systems will <br>
+win hugely, again.<br>
+<p>
+<i>&gt; instruction set would be kind of poor for efficient general computing.</i><br>
+<p>
+This is a myth, imo. A simple estimation will show, that you'll get <br>
+several orders of magnitude more bang for the same bucks. The hard part <br>
+is to write maspar software, which gets distributed over any architecture <br>
+automagically. Once again, software, and the minds of human programmers <br>
+are the key why we don't have maspar systems yet.<br>
+<p>
+<i>&gt; &gt;&gt; The result is that the pipeline is flushed pretty often, which is only</i><br>
+<i>&gt; &gt;&gt; worstened by its depth.  Also, the high clock rates make pipeline stalls</i><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt;So let's drop the pipeline, and move the core onto the die, as much of it </i><br>
+<i>&gt; &gt;as die yield can take before wafer yield drops to zero.</i><br>
+<i>&gt; </i><br>
+<i>&gt; It is okay to have a pipeline.  It is just poor design to have such a deep</i><br>
+<p>
+If it not okay, if the pipeline machinery doubles necessary transistor <br>
+resources for the CPU. If is not ok, if you use self-modifying code (as <br>
+ALife-bred code will do routinely). It is not ok, if pipeline stalls make <br>
+execution time nondeterministic.<br>
+<p>
+<i>&gt; and dependant one when you have essentially no branch prediction or</i><br>
+<i>&gt; look-ahead logic.  A well-designed pipeline is what allows you to get the</i><br>
+<i>&gt; high clock speeds out of silicon processes.  Either keep it simple and</i><br>
+<p>
+Have a look at the MuP21 chip by Chuck Moore. It has 20 bit words, and 5 <br>
+bit instuctions, 4 slots in a word. Each instruction get executed <br>
+simultaneously, if the result is needed, it is instantly available. This <br>
+is not a pipeline, yet it has all the features of one.<br>
+<p>
+<i>&gt; short, or long but with a lot of intelligent pre-pipeline logic.  The thing</i><br>
+<i>&gt; with simple and short is, you have to have either a very simple instruction</i><br>
+<i>&gt; set, or a *very* good compiler.  Personally, I don't think current compilers</i><br>
+<p>
+Right. MISC uses a very simple instruction set. Minimal Instruction Set <br>
+Computer.<br>
+<p>
+<i>&gt; are up to the challenge.</i><br>
+<i>&gt; </i><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt;&gt; (due to things like cache misses) more serious than they would be in slower</i><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt;So let's abolish the cache, giving core DRAM almost cache quality, </i><br>
+<i>&gt; &gt;mapping a tiny SRAM islet into the address space, while eliminating </i><br>
+<i>&gt; &gt;worst-case scenarios (locality is nonexistant in certain problems, if fact </i><br>
+<i>&gt; &gt;it can be conjectured that access locality is a pathologicial case, an </i><br>
+<i>&gt; &gt;artefact of the human programmer).</i><br>
+<i>&gt; </i><br>
+<i>&gt; Isn't this the way modern caches are essentially done?</i><br>
+<p>
+Alas, not. I am talking about mapping an 0-wait-state SRAM into an <br>
+address slot. Caches are much more complex beasts, they mount a fast <br>
+memory transparently over the slow memory. If you have a cache miss, the <br>
+retrival takes _longer_ than without a cache, maintaining cache consistancy <br>
+is difficult, and caches eat huge amounts of silicon free estate. Caches <br>
+will have to go.<br>
+<p>
+<i>&gt; &gt;&gt; clocked chips.  Add on top of this an inefficient superscalar</i><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt;Astronomic clocks aren't everything, they just increase power dissipation </i><br>
+<i>&gt; &gt;(wasn't that an exponential relation?) and are of no use if the core </i><br>
+<i>&gt; &gt;cannot deliver requested words. Clock rates beyond 2-4 GHz aren't viable </i><br>
+<i>&gt; &gt;with Si tech anyway (physics starting harrumphing in the background), and </i><br>
+<i>&gt; &gt;GaAs is a much weaker substrate, when it comes to integration density, </i><br>
+<i>&gt; &gt;which is the key.</i><br>
+<i>&gt; </i><br>
+<i>&gt; High clock rates force a deeper pipeline because you still have gate latency</i><br>
+<i>&gt; to contend with.  Deeper pipelines mean you have more time to complete one</i><br>
+<p>
+Nope. If the entire memory is on-die, and the bus width approaches 1 kBit <br>
+core latency ceases to be a problem.<br>
+<p>
+<i>&gt; instruction.  If your clock is getting faster and your gates aren't, the</i><br>
+<i>&gt; only solution is to deepen the pipeline.</i><br>
+<p>
+No pipeline.<br>
+ <br>
+<i>&gt; The obvious physical limit for Si is when clock speed equals switching</i><br>
+<i>&gt; speed, although realistically this isn't true, since it would require</i><br>
+<p>
+I think for CHMOS the limit is about 4-5 GHz. Though frequencies will <br>
+rise as structures will become smaller, the shrinking wire geometries <br>
+cannot take such high frequencies anymore. Sounds like saturation, huh?<br>
+<p>
+<i>&gt; ridiculous level of complexity (a 100 level pipeline?).  I am not sure if</i><br>
+<i>&gt; they have determined the maximum theoretical switching speed for a Si</i><br>
+<i>&gt; transistor yet.  The best they can do right now is to just improve the</i><br>
+<i>&gt; fan-in/fan-out limits (like BiCMOS) and generally decrease structural latency.</i><br>
+<p>
+Interersting observation: at very high frequencies the entire circuit <br>
+must be considered as an analogue one. Clean things with interfaces, FSM, <br>
+etc. do not work anymore.<br>
+<p>
+<i>&gt; &gt;[...]</i><br>
+<i>&gt; </i><br>
+<i>&gt; At 40 kTransistors, how wide will the ALU be?  I assume this does not</i><br>
+<i>&gt; include any type of FP capability.</i><br>
+<p>
+32 bit, possibly even 64 bits. ALU width scales roughly with O(n). Of <br>
+course no FP, not even a hardware multiplier. I tried talking Chuck into <br>
+putting a barrel shifter in (a truly basic commodity, especially if you <br>
+don't have a multiplier) but he is a semireligious minimalist. i21, a <br>
+21 bit architecture, has 20kTransistors complexity.<br>
+<p>
+<i>&gt; &gt;[...]</i><br>
+<i>&gt; </i><br>
+<i>&gt; I still use assembly for computationally complex functions in some types of</i><br>
+<i>&gt; software.  I still can't believe the kind of speed I can get out of</i><br>
+<i>&gt; handcrafted assembler sometimes, even on old systems.  </i><br>
+<p>
+Yes. The nanoOS methods must be written in assembly, that's obvious.<br>
+ <br>
+<i>&gt; &gt;[...]</i><br>
+<i>&gt; </i><br>
+<i>&gt; Many aspects of Intel's designs are quite good.  Other parts I question,</i><br>
+<p>
+Lacking contrast, everything will appear good. I think Intel chips stink, <br>
+yet I run Linux on a Pentium. I almost bought an Alpha, though.<br>
+<p>
+<i>&gt; though.  I think a lot of their bad design decisions are done to cater to</i><br>
+<i>&gt; the consumer market that built them.</i><br>
+<p>
+Right. Customers are Evil, and they don't even realize it. It is a <br>
+perfect stampede: the bisons are dumb brutes, yet they will stamp you in <br>
+the dirt if you happen to stand in their way.<br>
+<p>
+<i>&gt; &gt; [...]</i><br>
+<i>&gt; &gt;Alas, HP RISC is dying, as does Alpha. When speaking of monopolies...</i><br>
+<i>&gt; </i><br>
+<i>&gt; Actually, HP RISC is being kind of absorbed by Intel.  I guess either the P7</i><br>
+<p>
+A nice illustration of Intel's politics. Either buy them, sue them to <br>
+death, or outmaneuver them due to sheer bulk.<br>
+<p>
+<i>&gt; or P8 will include a version which will include a PA-RISC decoder.  This is</i><br>
+<i>&gt; one feature of Intel's latest chips that I think is pretty cool.  Have an</i><br>
+<p>
+10 MTransistors complexity, right?<br>
+<p>
+<i>&gt; architecture specific decoder sitting upon a powerful generic RISC core.</i><br>
+<i>&gt; They could probably put a decoder for just about any common architecture on</i><br>
+<i>&gt; top of that.  Now if you could select your hardware architecture emulation</i><br>
+<i>&gt; via software, *that* would be *too cool*.</i><br>
+<p>
+Alpha is microprogrammable. Threaded code machines are equivalent to <br>
+infinite microprogramming capability.<br>
+ <br>
+<i>&gt; &gt;[...]</i><br>
+<i>&gt; </i><br>
+<i>&gt; Let me see...this would be the TMS320C80, if I am not mistaken.</i><br>
+<i>&gt; Theoretical throughput of 2,000 DSP MIPS, or something like that.</i><br>
+<p>
+2 GOPs. Not bad, huh? But of course, this happens only five minutes <br>
+before midnight, on Sundays, and a full moon.<br>
+ <br>
+[...]<br>
+<p>
+ciao,<br>
+'gene<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3732.html">Max M: "Re: Introduction..."</a>
+<li> <b>Previous message:</b> <a href="3730.html">Alexander 'Sasha' Chislenko: "Transhuman VRML world, etc."</a>
+<li> <b>In reply to:</b> <a href="3634.html">James Rogers: "Re: We need better tools to make better tools. &lt;guaRANTeed&gt;"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

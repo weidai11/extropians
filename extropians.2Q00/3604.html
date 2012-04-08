@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: (meta-)meta-design (was: Coding a Transhuman AI</TITLE>
+<META NAME="Author" CONTENT="Martin Ling (martin@nodezero.org.uk)">
+<META NAME="Subject" CONTENT="Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)</H1>
+<!-- received="Tue May 23 04:56:45 2000" -->
+<!-- isoreceived="20000523105645" -->
+<!-- sent="Tue, 23 May 2000 11:53:52 +0100" -->
+<!-- isosent="20000523105352" -->
+<!-- name="Martin Ling" -->
+<!-- email="martin@nodezero.org.uk" -->
+<!-- subject="Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)" -->
+<!-- id="20000523115352.A17395@melchior" -->
+<!-- inreplyto="Pine.GSO.4.10.10005230444400.4039-100000@morpheus.cis.yale.edu" -->
+<STRONG>From:</STRONG> Martin Ling (<A HREF="mailto:martin@nodezero.org.uk?Subject=Re:%20(meta-)meta-design%20(was:%20Coding%20a%20Transhuman%20AI%202.0a)&In-Reply-To=&lt;20000523115352.A17395@melchior&gt;"><EM>martin@nodezero.org.uk</EM></A>)<BR>
+<STRONG>Date:</STRONG> Tue May 23 2000 - 04:53:52 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="3605.html">Anders Sandberg: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3603.html">Charlie Stross: "Re: Weasels vs. transparancy / traffic cameras"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3601.html">Dan Fabulich: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3626.html">Adrian Tymes: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3604">[ date ]</A>
+<A HREF="index.html#3604">[ thread ]</A>
+<A HREF="subject.html#3604">[ subject ]</A>
+<A HREF="author.html#3604">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+On Tue, May 23, 2000 at 05:09:01AM -0400, Dan Fabulich wrote:
+<BR>
+<EM>&gt; Martin Ling, missing the point, replied:
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; &gt; On Tue, May 23, 2000 at 12:19:15AM -0400, Dan Fabulich wrote:
+</EM><BR>
+<EM>&gt; &gt; &gt; Matt Gingel noted briefly:
+</EM><BR>
+<EM>&gt; &gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; &gt; &gt; In the general case, evolution is a graph search. Each possible
+</EM><BR>
+<EM>&gt; &gt; &gt; &gt; individual is a node, and mutations spell out the transition rules. By
+</EM><BR>
+<EM>&gt; &gt; &gt; &gt; manipulating the space of transition rules, we transform the search
+</EM><BR>
+<EM>&gt; &gt; &gt; &gt; space - we make some points closer together and some further
+</EM><BR>
+<EM>&gt; &gt; &gt; &gt; apart. Perhaps more importantly, local maxima can be eradicated
+</EM><BR>
+<EM>&gt; &gt; &gt; &gt; since we change the set reachable nodes. (This analysis still
+</EM><BR>
+<EM>&gt; &gt; &gt; &gt; holds if we consider crossover operators, every node becoming a
+</EM><BR>
+<EM>&gt; &gt; &gt; &gt; population.)
+</EM><BR>
+<EM>&gt; &gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; &gt; Here's a good example of how someone might use GAs: they might be
+</EM><BR>
+<EM>&gt; &gt; &gt; interested in finding out what the most aerodynamic design for a
+</EM><BR>
+<EM>&gt; &gt; &gt; vehicle is.  So they'd design a multi-dimensional space allowing for a
+</EM><BR>
+<EM>&gt; &gt; &gt; variety of different things to be changed in the design of the craft.
+</EM><BR>
+<EM>&gt; &gt; &gt; Then, they'd set the GA to work.
+</EM><BR>
+<EM>&gt; &gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; &gt; When it got to work, it would generate a random sampling of designs,
+</EM><BR>
+<EM>&gt; &gt; &gt; CHECK TO SEE HOW AERODYNAMIC THEY WERE, and prioritize the designs
+</EM><BR>
+<EM>&gt; &gt; &gt; which were the most aerodynamic in the next run, which would amount to
+</EM><BR>
+<EM>&gt; &gt; &gt; random variations, breedings, etc. from the previous generation.
+</EM><BR>
+<EM>&gt; &gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; &gt; So.  GA.  Trying to generate good heuristics.  It generates a random
+</EM><BR>
+<EM>&gt; &gt; &gt; sampling of heuristics (or sets of heuristics).  Then it checks to see
+</EM><BR>
+<EM>&gt; &gt; &gt; which heuristics are best, and prioritizes the best heuristics in the
+</EM><BR>
+<EM>&gt; &gt; &gt; next generation.
+</EM><BR>
+<EM>&gt; &gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; &gt; But how do you figure out whether a heuristic is good or not?  Well,
+</EM><BR>
+<EM>&gt; &gt; &gt; heuristics are rules for action.  You USE the heuristic, and you see
+</EM><BR>
+<EM>&gt; &gt; &gt; how well off you wind up.  (Using some definition of &quot;well off&quot; which
+</EM><BR>
+<EM>&gt; &gt; &gt; has nothing to do with motivations, I suppose.)  In fact, just one
+</EM><BR>
+<EM>&gt; &gt; &gt; trial run really isn't enough... you need to try using the heuristic
+</EM><BR>
+<EM>&gt; &gt; &gt; many many times in order to even out statistical hiccups.
+</EM><BR>
+<EM>&gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; ...so you have a second genetic algorithm, trying out different
+</EM><BR>
+<EM>&gt; &gt; heuristics on the first. And then, if neccessary, one above that.
+</EM><BR>
+<EM>&gt; &gt; 
+</EM><BR>
+<EM>&gt; &gt; Has this been tried? Meta-design? Meta-meta-design?
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; OK, *now* I'm frustrated.  [I left my whole post here so you can
+</EM><BR>
+<EM>&gt; reread it.]
+</EM><BR>
+<P>...which I now have. Apologies, I had only just got out of bed. I was
+<BR>
+thinking of my own experiments (neural network and simulated two-legged
+<BR>
+walking robot, trying to achieve balance for stable movement) in which
+<BR>
+my main problem has been implementing evaluative heuristics below the
+<BR>
+level of how far forward it got in a given time without falling over.
+<BR>
+<P>I think what I was vaguely getting at is that multiple levels of GA can be
+<BR>
+put in place until you do get something you could set clear limits on.
+<BR>
+<P>The extreme example would be a simulated attempt-at-human AI, where you
+<BR>
+ran the multiple-level GAs and decided everything on what mark your
+<BR>
+virtual subject gets on his English exam.
+<BR>
+<P><P>Martin 
+<BR>
+<P><PRE>
+-- 
++--------------------------------------------------------+
+| Martin J. Ling              Tel: +44 (0)20 8863 2948   |
+| <A HREF="mailto:martin@nodezero.org.uk?Subject=Re:%20(meta-)meta-design%20(was:%20Coding%20a%20Transhuman%20AI%202.0a)&In-Reply-To=&lt;20000523115352.A17395@melchior&gt;">martin@nodezero.org.uk</A>      Fax: +44 (0)20 8248 4025   |
+| <A HREF="http://www.nodezero.org.uk">http://www.nodezero.org.uk</A>  Mobile: +44 (0)7940 482675 |
++--------------------------------------------------------+
+</PRE>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="3605.html">Anders Sandberg: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3603.html">Charlie Stross: "Re: Weasels vs. transparancy / traffic cameras"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3601.html">Dan Fabulich: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3626.html">Adrian Tymes: "Re: (meta-)meta-design (was: Coding a Transhuman AI 2.0a)"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3604">[ date ]</A>
+<A HREF="index.html#3604">[ thread ]</A>
+<A HREF="subject.html#3604">[ subject ]</A>
+<A HREF="author.html#3604">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:11:33 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

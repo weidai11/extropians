@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: Sharing Models, was: Intestinal Fortitude</title>
+<meta name="Author" content="Alejandro Dubrovsky (s335984@student.uq.edu.au)">
+<meta name="Subject" content="Re: Sharing Models, was: Intestinal Fortitude">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: Sharing Models, was: Intestinal Fortitude</h1>
+<!-- received="Thu Mar 22 09:03:44 2001" -->
+<!-- isoreceived="20010322160344" -->
+<!-- sent="Fri, 23 Mar 2001 02:00:31 +1000" -->
+<!-- isosent="20010322160031" -->
+<!-- name="Alejandro Dubrovsky" -->
+<!-- email="s335984@student.uq.edu.au" -->
+<!-- subject="Re: Sharing Models, was: Intestinal Fortitude" -->
+<!-- id="20010323020031.C804@localhost.localdomain" -->
+<!-- inreplyto="Pine.UW2.4.20.0103220503160.49-100000@www.aeiveos.com" -->
+<strong>From:</strong> Alejandro Dubrovsky (<a href="mailto:s335984@student.uq.edu.au?Subject=Re:%20Sharing%20Models,%20was:%20Intestinal%20Fortitude&In-Reply-To=&lt;20010323020031.C804@localhost.localdomain&gt;"><em>s335984@student.uq.edu.au</em></a>)<br>
+<strong>Date:</strong> Thu Mar 22 2001 - 09:00:31 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1267.html">Lee Corbin: "Personal Identity"</a>
+<li><strong>Previous message:</strong> <a href="1265.html">Michael Lorrey: "Re: Engineering Phase Spaces, was: Plasma engine calculator"</a>
+<li><strong>In reply to:</strong> <a href="1255.html">Robert J. Bradbury: "Re: Sharing Models, was: Intestinal Fortitude"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1063.html">Spike Jones: "Re: Sharing Models, was: Intestinal Fortitude"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1266">[ date ]</a>
+<a href="index.html#1266">[ thread ]</a>
+<a href="subject.html#1266">[ subject ]</a>
+<a href="author.html#1266">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+* Robert J. Bradbury &lt;<a href="mailto:bradbury@aeiveos.com?Subject=Re:%20Sharing%20Models,%20was:%20Intestinal%20Fortitude&In-Reply-To=&lt;20010323020031.C804@localhost.localdomain&gt;">bradbury@aeiveos.com</a>&gt; [010323 01:40]:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; On Thu, 22 Mar 2001, Alejandro Dubrovsky wrote:
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; Just a small nitpick: raw access has been around for over a year.  And now
+</em><br>
+<em>&gt; &gt; there are multiple journaling file systems (3 in my count). 
+</em><br>
+<em>&gt; &gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; No quibble, except that now I have to evaluate 3(!) journaling file
+</em><br>
+<em>&gt; systems to determine which of them may be the correct one to adopt.
+</em><br>
+<p>sorry, i missed one.  so there are four that i know of:
+<br>
+ext3 - extension of ext2 and backwards compatible with it so probably the one
+<br>
+people will most likely adopt, with all the associated advantages and
+<br>
+disadvantages of ext2.
+<br>
+reiserfs - journaling filesystem specialising in high speed and efficient access
+<br>
+to lots of little files
+<br>
+jfs - ibm's journaling fs
+<br>
+xfs - sgi's journaling fs
+<br>
+<p><em>&gt; 
+</em><br>
+<em>&gt; However, the lack of raw I/O, a concept over 26 years old, and
+</em><br>
+<em>&gt; one that I personally implemented the use of over 17 years ago
+</em><br>
+<em>&gt; in the dominant RDBMS in the world today, in an operating system
+</em><br>
+<em>&gt; that has has all the hype associated with it that LINUX has had
+</em><br>
+<em>&gt; points out the lack of knowledge of the people doing the 'hyping'.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; But I'm glad to hear that it is finally getting the features that
+</em><br>
+<em>&gt; robust systems require.
+</em><br>
+<p>i don't think it was ever an issue of wether it could be done, but the fact that
+<br>
+linus didn't want it in the kernel (i'm ignorant of the reasons of why he gave
+<br>
+in, or the reasons for the original resistance (apart from the fact that it
+<br>
+didn't fit the nice &quot;everything over the VFS&quot; scheme)) but i think the patch
+<br>
+existed for a long time before it was taken up so you could say that linux has
+<br>
+had raw device support for at least a couple of years.
+<br>
+<p>Also, any RDBM vendor that felt like having raw access could have distributed a
+<br>
+kernel module with their product giving them raw access to the devices they
+<br>
+required.  Probably not a major task for an RDBM developer.
+<br>
+<p>Alejandro
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1267.html">Lee Corbin: "Personal Identity"</a>
+<li><strong>Previous message:</strong> <a href="1265.html">Michael Lorrey: "Re: Engineering Phase Spaces, was: Plasma engine calculator"</a>
+<li><strong>In reply to:</strong> <a href="1255.html">Robert J. Bradbury: "Re: Sharing Models, was: Intestinal Fortitude"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1063.html">Spike Jones: "Re: Sharing Models, was: Intestinal Fortitude"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1266">[ date ]</a>
+<a href="index.html#1266">[ thread ]</a>
+<a href="subject.html#1266">[ subject ]</a>
+<a href="author.html#1266">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:59:42 MDT</em>
+</em>
+</small>
+</body>
+</html>

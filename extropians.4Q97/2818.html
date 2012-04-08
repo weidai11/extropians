@@ -1,0 +1,184 @@
+<!-- received="Sat Dec 20 20:11:47 1997 MDT" -->
+<!-- sent="Sun, 21 Dec 1997 13:11:27 +1000 (EST)" -->
+<!-- name="Mitchell Porter" -->
+<!-- email="mitch@thehub.com.au" -->
+<!-- subject=""Circumcomputers"" -->
+<!-- id="199712210311.NAA12545@smople.thehub.com.au" -->
+<!-- inreplyto="" -->
+<title>extropians: "Circumcomputers"</title>
+<h1>"Circumcomputers"</h1>
+Mitchell Porter (<i>mitch@thehub.com.au</i>)<br>
+<i>Sun, 21 Dec 1997 13:11:27 +1000 (EST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2818">[ date ]</a><a href="index.html#2818">[ thread ]</a><a href="subject.html#2818">[ subject ]</a><a href="author.html#2818">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2819.html">Michael Lorrey: "Re: Margaret Mead Debunked?"</a>
+<li> <b>Previous message:</b> <a href="2817.html">EvMick: "Re:  Re: Mutant Message (was Re: Re Look out! long hair gun loon!)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+1. In principle one could obtain subjective computational<br>
+speed-up through relativistic motion. Start your computer,<br>
+go away and travel in circles at ultrarelativistic speeds,<br>
+and return. Thanks to time dilation, more time will have <br>
+elapsed at the computer than onboard your rocket, but you <br>
+will still be able to access the computer's output.<br>
+<p>
+The disadvantage of this scheme (apart from the energy<br>
+costs) is that everything else you left behind will have <br>
+aged to the same degree as the computer. So unless you can <br>
+bring everything and everyone you care about on your voyage <br>
+with you, the sacrifice might not seem worth it.<br>
+<p>
+2. Imagine this:<br>
+<p>
+You spawn a closed (S^3, hypersphere) universe, linked by <br>
+wormhole to the parent universe, and construct a computer <br>
+and a rocket there. You start the computer on some long<br>
+calculation, and then use the rocket to tow the wormhole<br>
+portal across the child universe at relativistic speeds.<br>
+As before, elapsed computer-time will exceed elapsed<br>
+rocket-time, when the circumnavigation is complete.<br>
+<p>
+If you stayed in the parent universe, your time will<br>
+match rocket-time, rather than computer-time. So if<br>
+you can spawn a new universe, you can take advantage<br>
+of this speed-up without leaving everything behind.<br>
+<p>
+3. This scheme could be applied recursively. Call<br>
+the parent universe, Universe 1, and the child,<br>
+Universe 2. While the rocket circumnavigates Universe 1,<br>
+why not have the computer spawn Universe 3, and build<br>
+a computer and a rocket there? And so on.<br>
+<p>
+This would be possible if the time required to spawn<br>
+a new universe, and build a computer and a rocket<br>
+there, is less than the circumnavigation time, i.e. if<br>
+<p>
+k*t[circum] &gt; t[build] + t[circum] + t[readout]<br>
+<p>
+where<br>
+<p>
+t[circum] = Circumnavigation time<br>
+k = "Circumcomputational" speedup obtained<br>
+  so computer-time elapsed = k*t[circum]<br>
+t[build] = Time to spawn universe, build computer <br>
+  and rocket, start computer and launch rocket<br>
+t[rocket] = Time to read out result of computation <br>
+  upon rocket's return<br>
+<p>
+4. Consequences for time-complexity of computational<br>
+tasks:<br>
+<p>
+Suppose we have a computation which consists of <br>
+the calculation of a series of functions (or the<br>
+execution of a series of programs), each of<br>
+which uses the output of the last as its input:<br>
+<p>
+  i. Initial input is x0.<br>
+  ii. x1 = f(x0)<br>
+  iii. x2 = g(x1)<br>
+  iv. x3 = h(x2) - and so on.<br>
+<p>
+We can imagine performing step (ii) in Universe 2,<br>
+step (iii) in Universe 3, and so on. But this will<br>
+only be possible if the inequality above continues<br>
+to hold. This means that the x's cannot become<br>
+arbitrarily large, for eventually t[readout] will<br>
+become too long and the inequality violated. <br>
+(Of course, the rocket might just go on a second<br>
+circumnavigation!)<br>
+<p>
+Equally, t[build] includes the time it takes to<br>
+tell the computer in Universe N the input and the <br>
+function for step N. In fact, since the computer in<br>
+Universe N has to build and program the computer<br>
+in Universe N+1, it needs to know not just the<br>
+function to be executed at step N, but the functions<br>
+to be executed at all subsequent steps.<br>
+<p>
+This would of course be possible if it's the same<br>
+function at every step. <br>
+<p>
+What if the function at step N is g[N](...),<br>
+some member of a family of functions g[i](...),<br>
+any of which can be determined given i? (For<br>
+example, consider g[i](x) = x^i. If you know<br>
+what i is, you know what function g[i](...) is.)<br>
+Eventually there would be an N so big that the<br>
+mere specification of the value of i would<br>
+cause the inequality to be violated (thanks to<br>
+the size of t[build]).<br>
+<p>
+Nonetheless, it seems that if we have a function<br>
+f whose inputs and outputs are sufficiently small<br>
+that they can be read into and read out of <br>
+the computer in the next universe in less than<br>
+t[circum], then we can calculate an arbitrary<br>
+iteration of f within t[circum].<br>
+<p>
+But wait! If we want to calculate, say, f^1000000,<br>
+we need the computer in Universe One Million to know<br>
+not to continue the process. So the information<br>
+about the total number of steps needs to be passed<br>
+down the chain, along with the specification of f<br>
+and of the input at step (i). <br>
+<p>
+However, all that this requires is that the computer<br>
+in Universe 1 be told "f, x0, and 1,000,000". It<br>
+can tell the computer in Universe 2 "f, f(x0), and <br>
+999,999". And so on. So if it takes less than t[circum]<br>
+to carry out the very first step - telling the computer <br>
+in Universe 2, "f, x0, k" - then we can calculate<br>
+f^k within t[circum].<br>
+<p>
+(Just to be more precise. The instruction at each step<br>
+would have this form: "Here is a function f, and two<br>
+numbers, x and k. If k=0, then calculate f(x) and<br>
+tell me the answer when the rocket returns. If k&gt;0,<br>
+then calculate f(x), spawn a universe, build a<br>
+computer and rocket there [etc], and give the computer<br>
+the same instruction I am giving you, only with f(x)<br>
+substituted for x, and k-1 substituted for k.")<br>
+<p>
+5. In short, then, the simplest form of this scheme<br>
+should permit major speedups of certain functions,<br>
+namely iterations of functions with bounded input and<br>
+output. No doubt 'circumcomputational complexity theory'<br>
+could be greatly expanded, by considering more <br>
+elaborate variations on the basic theme (parallelism,<br>
+conditional actions).<br>
+<p>
+6. A final comment. This scenario has been described<br>
+in terms of baby universes, computers, and rockets.<br>
+If we think in terms of the universe and the matter<br>
+we are familiar with, it might seem that all this is<br>
+relevant only to computations that would take years,<br>
+if not millennia, since the rocket will take that<br>
+long to circumnavigate a universe with a wormhole in<br>
+tow. But I wonder whether, amongst the myriads of <br>
+"vacua" described by string theory, there might be <br>
+much more compact baby universes, in which the <br>
+circumnavigation process could occur on much smaller <br>
+timescales. If we could create these, while retaining<br>
+a connection, and control over what happens in them,<br>
+we might be able to make "spacetime computers", made<br>
+out of wormhole-linked spacetime bubbles, able to<br>
+take advantage of circumcomputational acceleration<br>
+on timescales we would find useful.<br>
+<p>
+-mitch<br>
+<a href="http://www.thehub.com.au/~mitch">http://www.thehub.com.au/~mitch</a><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2819.html">Michael Lorrey: "Re: Margaret Mead Debunked?"</a>
+<li> <b>Previous message:</b> <a href="2817.html">EvMick: "Re:  Re: Mutant Message (was Re: Re Look out! long hair gun loon!)"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

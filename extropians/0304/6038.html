@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Re: Fwd: Question re: Bad ideas from Microsoft et al...</title>
+<meta name="Author" content="Hal Finney (hal@finney.org)">
+<meta name="Subject" content="Re: Fwd: Question re: Bad ideas from Microsoft et al...">
+<meta name="Date" content="2003-04-09">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Fwd: Question re: Bad ideas from Microsoft et al...</h1>
+<!-- received="Wed Apr  9 13:25:39 2003" -->
+<!-- isoreceived="20030409192539" -->
+<!-- sent="Wed, 9 Apr 2003 12:24:29 -0700" -->
+<!-- isosent="20030409192429" -->
+<!-- name="Hal Finney" -->
+<!-- email="hal@finney.org" -->
+<!-- subject="Re: Fwd: Question re: Bad ideas from Microsoft et al..." -->
+<!-- id="200304091924.h39JOTc05060@finney.org" -->
+<!-- inreplyto="Fwd: Question re: Bad ideas from Microsoft et al..." -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Hal Finney (<a href="mailto:hal@finney.org?Subject=Re:%20Fwd:%20Question%20re:%20Bad%20ideas%20from%20Microsoft%20et%20al..."><em>hal@finney.org</em></a>)<br>
+<strong>Date:</strong> Wed Apr 09 2003 - 13:24:29 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6039.html">Robert J. Bradbury: "re: [Somewhat IRAQ/POLITICS] Commentary on the life of Michael Kelly"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="6037.html">Amara Graps: "re: [Somewhat IRAQ/POLITICS] Commentary on the life of Michael Kelly"</a>
+<li><strong>Maybe in reply to:</strong> <a href="6006.html">Alex Ramonsky: "Fwd: Question re: Bad ideas from Microsoft et al..."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6041.html">Lee Daniel Crocker: "Re: Trusted Computing (was Bad ideas...)"</a>
+<li><strong>Reply:</strong> <a href="6041.html">Lee Daniel Crocker: "Re: Trusted Computing (was Bad ideas...)"</a>
+<li><strong>Reply:</strong> <a href="6042.html">Adrian Tymes: "Re: Fwd: Question re: Bad ideas from Microsoft et al..."</a>
+<li><strong>Reply:</strong> <a href="6045.html">Anders Sandberg: "Re: Fwd: Question re: Bad ideas from Microsoft et al..."</a>
+<li><strong>Reply:</strong> <a href="6048.html">Dan Fabulich: "Uploads and Palladium (was: Bad ideas from Microsoft et al...)"</a>
+<li><strong>Reply:</strong> <a href="6053.html">Charles Hixson: "Re: Fwd: Question re: Bad ideas from Microsoft et al..."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6038">[ date ]</a>
+<a href="index.html#6038">[ thread ]</a>
+<a href="subject.html#6038">[ subject ]</a>
+<a href="author.html#6038">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I think that much of the information floating around about Trusted
+<br>
+Computing technology is incorrect or misleading.  I first learned about
+<br>
+this stuff last year when some of the early alarmist reports came out.
+<br>
+I studied the TCPA spec, bought a book on TCPA, and I've learned what
+<br>
+I could about Microsoft's Palladium, although there has been less
+<br>
+information about that.
+<br>
+<p>Let me explain what is Trusted Computing (TC) and basically how it works.
+<br>
+The idea is to set up a computer so that a third party not sitting in
+<br>
+front of it can trust how it will behave.  This does not mean that the
+<br>
+third party owns the computer or has complete control over it.  It means
+<br>
+that he can become convinced that the computer is going to behave in a
+<br>
+predictable way.  That means in practice that he can be convinced about
+<br>
+what program it is going to run, and that the program has a certain
+<br>
+immunity to having its code or data inspected or changed.
+<br>
+<p>Let's talk about uploads for a moment before I go into detail about TC.
+<br>
+Suppose you were an upload, and were about to transfer your program to
+<br>
+a remote system.  You'd be putting yourself at the mercy of the owner
+<br>
+of that system, wouldn't you?  Suppose he turned out to be malicious,
+<br>
+and wanted to inflict pain, or turn you into a slave.  How could you
+<br>
+protect yourself against that?
+<br>
+<p>TC is how.  You'd need to gain assurance that the remote computer was
+<br>
+running a standard, well-understood and well-behaved program that would
+<br>
+receive your data and run it unmolested.  You would need to *trust* the
+<br>
+remote computer to behave in a *specified manner*.  That is precisely
+<br>
+the mission statement for Trusted Computing!
+<br>
+<p>Now I'll say more about how TC works.  As I said, the goal is to be able
+<br>
+to assure a remote system that a particular program is running and that
+<br>
+the program can protect itself and its data.
+<br>
+<p>The way this is achieved is via some secure hardware associated with the
+<br>
+computer, which has a few functions.  One is that the hardware can take a
+<br>
+&quot;fingerprint&quot; (a cryptographic hash) of software which will use the secure
+<br>
+functionality.  This fingerprint can be used in a couple of ways.  First,
+<br>
+it can be reported via a cryptographic signature to remote machines.
+<br>
+This is what allows the remote machines to be convinced about what program
+<br>
+is running - because they learn the digital fingerprint of the software.
+<br>
+And second, this fingerprint can be used to &quot;lock&quot; (encrypt) data, such
+<br>
+that the data can only be decryped by the same program running with
+<br>
+the same fingerprint.  No other program, or no altered version of this
+<br>
+program, can decrypt the data.
+<br>
+<p>Two points follow from this, which I will explain further in a moment.
+<br>
+The first is that this suffices to achieve many of the goals of TC,
+<br>
+including protection of sensitive content, digital rights management, and
+<br>
+more immunity to viruses.  And the second is that it is *not* necessary
+<br>
+for Microsoft or anyone else to approve or limit the programs which can
+<br>
+run in this trusted mode.  Microsoft cannot shut down programs or delete
+<br>
+files off of trusted computers.  There is no need for them to have this
+<br>
+ability in order to achieve the goals of trusted computing.
+<br>
+<p>The way in which this functionality achieves the goals of TC is by
+<br>
+letting third parties know what program is running.  Keep in mind that
+<br>
+this doesn't mean they can snoop on your system arbitrarily; rather,
+<br>
+your programs can prove to remote servers what is running, by asking
+<br>
+the secure hardware to send a cryptographically signed message that
+<br>
+describes the fingerprint of the running program.  This allows, for
+<br>
+example, a content server to only download content to programs that it
+<br>
+trusts to handle the content reliably.  It allows a government security
+<br>
+agency to similarly require that, say, email is only exchanged between
+<br>
+secure email programs, because each one can check what program is running
+<br>
+at the other side and refuse to connect to it.
+<br>
+<p>Another app might be for an online game, the server can make sure that
+<br>
+each user is running a &quot;legal&quot; game client and not one that cheats.
+<br>
+Auction services could use similar technology.  Likewise for SETI@Home
+<br>
+and similar semi-competitive distributed computing efforts, which have
+<br>
+been plagued by cheaters.  This could also be a foundation for more
+<br>
+commercial forms of distributed computing, where sensitive calculations
+<br>
+could be farmed out to end-user computers, and the distributors would
+<br>
+have greater assurance that users couldn't get access to the data that
+<br>
+they were being paid to process, or falsely claim that they were owed
+<br>
+for work they hadn't done.
+<br>
+<p>As far as viruses, the idea is that once a program has locked some data,
+<br>
+if a virus comes along and infects another program, it won't be able to
+<br>
+get access to the data.  Even if it infects the same program that locked
+<br>
+it, that will change its fingerprint and so not even that program will
+<br>
+be able to get at the data.  This won't stop viruses but it could limit
+<br>
+the damage they could cause.
+<br>
+<p>For the second point above, the claim that only Microsoft-approved code
+<br>
+will run, note that all that is necessary is for the TC hardware to be
+<br>
+able to take a hash of the program, and to report it.  Programs that use
+<br>
+this functionality do not have to be signed by Microsoft or anyone else.
+<br>
+Even though we may call these &quot;trusted&quot; programs, they don't have any
+<br>
+special powers.  The sense in which they are &quot;trusted&quot; is that they can
+<br>
+get their hashes reported elsewhere, so that those people can decide
+<br>
+whether to trust them.
+<br>
+<p>There is no central party who decides which programs are trusted.  Rather,
+<br>
+each application area, even each individual user, would ultimately decide
+<br>
+whether to trust a program for a particular purpose.  And these judgements
+<br>
+are made with respect to programs running on *other people's* computers.
+<br>
+I would get to decide whether I want to trust a program running on your
+<br>
+computer for some purpose, and vice versa.  Sony would get to decide
+<br>
+whether to trust a program running on your computer for downloading
+<br>
+its music catalog.  Maxis would get to decide whether to trust the Sims
+<br>
+software running on your computer for connecting to its game server.
+<br>
+<p>Each computer makes its own decision about who to trust.  It's not
+<br>
+Microsoft, for indeed, the potential scope of this technology is so
+<br>
+large that it would hardly be possible for Microsoft to decide for each
+<br>
+program whether or not it was in some sense &quot;trustworthy&quot;.  They want this
+<br>
+to be used in a big way.  Having to do a code review for each program
+<br>
+would increase their costs enormously, would open them up to liability,
+<br>
+and is completely unnecessary in order to achieve the properties of
+<br>
+Trusted Computing.
+<br>
+<p>Based on my understanding of the technology, there is no need to fear
+<br>
+that uploads running on a Palladium system would imply that Microsoft
+<br>
+&quot;owned&quot; all the people and could kill them at any time.  The ability
+<br>
+to take a secure fingerprint of a program does not imply the ability to
+<br>
+kill the program!  TC as I understand it is a technology for information
+<br>
+protection, not for destruction.  It allows applications to extend trust
+<br>
+to remote systems, and to save their data immune from molestation by
+<br>
+other programs.
+<br>
+<p>Obviously the story I have told here is very much at odds with what
+<br>
+you will have heard about TCPA/Palladium/NGSCB elsewhere on the net.
+<br>
+I can't really account for that discrepancy.  I don't understand why my
+<br>
+reading of the technology's properties and capabilities is so different
+<br>
+from everyone else's.  It's possible that there are non-public documents
+<br>
+which paint a much more sinister picture.  All I can say is that based
+<br>
+on the public information, TC works as I have described it here.
+<br>
+<p>Hal
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="6039.html">Robert J. Bradbury: "re: [Somewhat IRAQ/POLITICS] Commentary on the life of Michael Kelly"</a>
+<li><strong>Previous message:</strong> <a href="6037.html">Amara Graps: "re: [Somewhat IRAQ/POLITICS] Commentary on the life of Michael Kelly"</a>
+<li><strong>Maybe in reply to:</strong> <a href="6006.html">Alex Ramonsky: "Fwd: Question re: Bad ideas from Microsoft et al..."</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="6041.html">Lee Daniel Crocker: "Re: Trusted Computing (was Bad ideas...)"</a>
+<li><strong>Reply:</strong> <a href="6041.html">Lee Daniel Crocker: "Re: Trusted Computing (was Bad ideas...)"</a>
+<li><strong>Reply:</strong> <a href="6042.html">Adrian Tymes: "Re: Fwd: Question re: Bad ideas from Microsoft et al..."</a>
+<li><strong>Reply:</strong> <a href="6045.html">Anders Sandberg: "Re: Fwd: Question re: Bad ideas from Microsoft et al..."</a>
+<li><strong>Reply:</strong> <a href="6048.html">Dan Fabulich: "Uploads and Palladium (was: Bad ideas from Microsoft et al...)"</a>
+<li><strong>Reply:</strong> <a href="6053.html">Charles Hixson: "Re: Fwd: Question re: Bad ideas from Microsoft et al..."</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#6038">[ date ]</a>
+<a href="index.html#6038">[ thread ]</a>
+<a href="subject.html#6038">[ subject ]</a>
+<a href="author.html#6038">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed Apr 09 2003 - 13:35:15 MDT
+</em></small></p>
+</body>
+</html>

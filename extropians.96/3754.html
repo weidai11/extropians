@@ -1,0 +1,92 @@
+<!-- received="Sun Dec  8 16:19:45 1996 MST" -->
+<!-- sent="Sun, 08 Dec 1996 17:03:52 -0600" -->
+<!-- name="Eliezer Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: Transhuman VRML world, etc." -->
+<!-- id="199612082233.XAA11075@inet.uni-c.dk" -->
+<!-- inreplyto="Transhuman VRML world, etc." -->
+<title>extropians: Re: Transhuman VRML world, etc.</title>
+<h1>Re: Transhuman VRML world, etc.</h1>
+Eliezer Yudkowsky (<i>sentience@pobox.com</i>)<br>
+<i>Sun, 08 Dec 1996 17:03:52 -0600</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3754">[ date ]</a><a href="index.html#3754">[ thread ]</a><a href="subject.html#3754">[ subject ]</a><a href="author.html#3754">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3755.html">Max More: "Re: Beyond The Beyond"</a>
+<li> <b>Previous message:</b> <a href="3753.html">Eliezer Yudkowsky: "Re: Trans- vs. Non-human"</a>
+<li> <b>Maybe in reply to:</b> <a href="3730.html">Alexander 'Sasha' Chislenko: "Transhuman VRML world, etc."</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3768.html">Chris Hind: "Re: Transhuman VRML world, etc."</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<i>&gt; Since the the more advanced simulations will suck more server</i><br>
+<i>&gt; time, it would make sense that we have some way of allocating</i><br>
+<i>&gt; resources according to people's ability to effectively use them.  It might</i><br>
+<i>&gt; even prove an interesting exercise in a completely</i><br>
+<i>&gt; laissez-faire system - people can gain credits for building a cool addition</i><br>
+<i>&gt; to the world and charging admission</i><br>
+<p>
+Ah, the quota battles begin!  Quota on LambdaMOO was handled, last time<br>
+I checked, by the ARB - the Architecture Review Board, I think it was. <br>
+Ironically, arbitration is handled by the mediation system, which is<br>
+totally unrelated to the ARB.<br>
+<p>
+Again from personal experience, I'd say there are three important things<br>
+to remember about server-side resources:<br>
+1)  When a better solution comes along, enforce it.<br>
+  If LambdaMOO wasn't using their old obsolete systems it would cut<br>
+quota<br>
+usage in half and lag would go down 95%.<br>
+2)  Keep only active areas in active memory.<br>
+  On LambdaMOO, EVERYTHING is kept in RAM.  As opposed to WorldMOO,<br>
+where<br>
+things like help systems can be kept on disk.<br>
+3)  Track the usage of actual resources.<br>
+  LambdaMOO used to have an object quota; you got twenty objects.  This<br>
+encouraged huge monolithic programming; there was no restraint on the<br>
+number of methods on an object or how long those methods were. <br>
+Object-oriented programmers were penalized because they could only use<br>
+one object.<br>
+  By the time they switched over to tracking bytes, the damage was done. <br>
+All the core systems were these ridiculously large monoliths - I believe<br>
+that an advanced old-style room cost 20K of OVERHEAD.<br>
+  They still don't track CPU usage and as a result, command-line orders<br>
+can take from 8 to 60 seconds to execute, with around 20 being around<br>
+average.  This is because the system is so OVERLOADED with these<br>
+gigantic monoliths.<br>
+<p>
+Overall, I'd say introduce a system where:<br>
+1) A guy gets X bytes of RAM, Y bytes of disk space, and Z CPU<br>
+cycles/day.<br>
+2) The core architecture is laid out by a programmer who breathes the<br>
+programming language being designed in.  Java is not C or even C++; make<br>
+sure the world-builder knows that.<br>
+<p>
+<i>&gt; (We can worry about building a "Permutation City" a little</i><br>
+<i>&gt; closer to the Singularity...:))</i><br>
+One of my all-time favorite books.  Vivid, realistic pictures of<br>
+uploading,<br>
+although, alas, upgrading is not addressed.  Three cheers for Greg Egan!<br>
+<pre>
+-- 
+         sentience@pobox.com      Eliezer S. Yudkowsky
+          <a href="http://tezcat.com/~eliezer/singularity.html">http://tezcat.com/~eliezer/singularity.html</a>
+           <a href="http://tezcat.com/~eliezer/algernon.html">http://tezcat.com/~eliezer/algernon.html</a>
+Disclaimer:  Unless otherwise specified, I'm not telling you
+everything I know.
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3755.html">Max More: "Re: Beyond The Beyond"</a>
+<li> <b>Previous message:</b> <a href="3753.html">Eliezer Yudkowsky: "Re: Trans- vs. Non-human"</a>
+<li> <b>Maybe in reply to:</b> <a href="3730.html">Alexander 'Sasha' Chislenko: "Transhuman VRML world, etc."</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3768.html">Chris Hind: "Re: Transhuman VRML world, etc."</a>
+<!-- reply="end" -->
+</ul>

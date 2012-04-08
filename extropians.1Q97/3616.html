@@ -1,0 +1,80 @@
+<!-- received="Sat Mar 15 04:46:17 1997 MDT" -->
+<!-- sent="Wed, 12 Mar 1997 22:49:17 +0000" -->
+<!-- name="Mark Grant" -->
+<!-- email="mark@unicorn.com" -->
+<!-- subject="Re: IDEA: "Site Cloaking" Technology" -->
+<!-- id="3.0.1.32.19970315104155.006a4ffc@pop.dial.pipex.com" -->
+<!-- inreplyto="3.0.32.19970311002605.0081d338@earthlink.net" -->
+<title>extropians: Re: IDEA: "Site Cloaking" Technology</title>
+<h1>Re: IDEA: "Site Cloaking" Technology</h1>
+Mark Grant (<i>mark@unicorn.com</i>)<br>
+<i>Wed, 12 Mar 1997 22:49:17 +0000</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3616">[ date ]</a><a href="index.html#3616">[ thread ]</a><a href="subject.html#3616">[ subject ]</a><a href="author.html#3616">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3617.html">Anders Sandberg: "Re: Emotive Education"</a>
+<li> <b>Previous message:</b> <a href="3615.html">Sarah Marr: "Re: Extropic art: symbolism, interpretation &amp; association"</a>
+<li> <b>In reply to:</b> <a href="3485.html">Chris Hind: "IDEA: "Site Cloaking" Technology"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3619.html">Max M: "Re: IDEA: "Site Cloaking" Technology"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Tue, 11 Mar 1997, Chris Hind wrote:<br>
+<p>
+<i>&gt; A few months ago, I came up with this idea for a new technique I like to</i><br>
+<i>&gt; call "Site Cloaking". It's possible to create a Perl CGI script that would</i><br>
+<i>&gt; grab a file or webpage from another site &amp; display it for the user without</i><br>
+<i>&gt; telling the user the original location like a proxy.</i><br>
+<p>
+Yes, I was thinking of something like this a few days ago; essentially it<br>
+would become an anonymous remailer for Web pages. The system I was<br>
+thinking of was something like: <br>
+<p>
+    Browser sends URL to proxy; this is encrypted with the public<br>
+	key of the proxy.<br>
+    Proxy decrypts URL and fetches the appropriate page. This page is<br>
+	also encrypted with the public key of the proxy, which decrypts<br>
+	it and passes it back to the browser.<br>
+<p>
+This serves two functions; firstly, even if someone finds your web page at<br>
+the real host it will be encrypted so that only the proxy can read it.<br>
+This means that if the Feds ask you to decrypt the page *you can't*. You<br>
+would need the private keys of all the proxies in the chain to decrypt it<br>
+(of course, you'd need to keep a plaintext copy in case one of the proxies<br>
+goes down or changes the key). <br>
+<p>
+Secondly, a proxy which works in this way can be chained just like a<br>
+remailer. The encrypted URL can contain another encrypted URL to be sent<br>
+to the next proxy in the chain. Using five or six proxies should<br>
+complicate traffic analysis enough to keep your page hidden if the traffic<br>
+levels are high enough. <br>
+<p>
+Most likely you'd want the equivalent of a Web 'nymserver', such that you<br>
+could create a URL like '<a href="http://www.nymserver/cool-illegal-page.html'">http://www.nymserver/cool-illegal-page.html'</a> and<br>
+the nymserver would read the full encrypted URL from a database. This<br>
+would also allow you to mirror pages easily, and could be used as a<br>
+justification for the site. You could sell it as a server allowing people <br>
+to move their pages around but keep a fixed URL, and the 'remailed' URLs <br>
+would just be a special case.<br>
+<p>
+	Mark<br>
+<p>
+<i>|-----------------------------------------------------------------------|</i><br>
+<i>|Mark Grant M.A., U.L.C.	  	       EMAIL: mark@unicorn.com  |</i><br>
+<i>|WWW: <a href="http://www.unicorn.com/">http://www.unicorn.com/</a>	  	       MAILBOT: bot@unicorn.com	|</i><br>
+<i>|-----------------------------------------------------------------------|</i><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3617.html">Anders Sandberg: "Re: Emotive Education"</a>
+<li> <b>Previous message:</b> <a href="3615.html">Sarah Marr: "Re: Extropic art: symbolism, interpretation &amp; association"</a>
+<li> <b>In reply to:</b> <a href="3485.html">Chris Hind: "IDEA: "Site Cloaking" Technology"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3619.html">Max M: "Re: IDEA: "Site Cloaking" Technology"</a>
+<!-- reply="end" -->
+</ul>

@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: Spam (solved)</title>
+<meta name="Author" content="JDP (jacques@dtext.com)">
+<meta name="Subject" content="Spam (solved)">
+<meta name="Date" content="2003-09-04">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Spam (solved)</h1>
+<!-- received="Thu Sep  4 09:27:50 2003" -->
+<!-- isoreceived="20030904152750" -->
+<!-- sent="Thu, 4 Sep 2003 17:22:39 +0200" -->
+<!-- isosent="20030904152239" -->
+<!-- name="JDP" -->
+<!-- email="jacques@dtext.com" -->
+<!-- subject="Spam (solved)" -->
+<!-- id="16215.22719.256679.510756@localhost.localdomain" -->
+<!-- charset="us-ascii" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> JDP (<a href="mailto:jacques@dtext.com?Subject=Re:%20Spam%20(solved)"><em>jacques@dtext.com</em></a>)<br>
+<strong>Date:</strong> Thu Sep 04 2003 - 09:22:39 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13637.html">BillK: "Re: Is theft becoming impossible?"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="13635.html">Brett Paatsch: "Re: Who'd submit to the benevolent dictatorship of GAI anyway?"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13636">[ date ]</a>
+<a href="index.html#13636">[ thread ]</a>
+<a href="subject.html#13636">[ subject ]</a>
+<a href="author.html#13636">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+I was quite happy to solve (at least temporarily) my individual spam
+<br>
+problem, and I wanted to share it in case it is useful to anyone (the
+<br>
+solution works for Unix/Linux and Windows 95 and up).
+<br>
+<p>I use Linux as my main OS, and my first try was with Vipul Razor
+<br>
+&lt;<a href="http://razor.sourceforge.net/">http://razor.sourceforge.net/</a>&gt;. Nice, but it only caught a modest
+<br>
+fraction of the spam. I then switched to a Perl solution that goes by
+<br>
+the silly name of SpamAssassin (now on SA) &lt;<a href="http://www.spamassassin.org/">http://www.spamassassin.org/</a>&gt;,
+<br>
+wich turned out to be awesome.
+<br>
+<p>SA uses both text analysis based on a large number of rules, and
+<br>
+online checks (including Vipul Razor if you like). Online checks can
+<br>
+be disabled, which is much faster and almost as useful. In many months
+<br>
+of use, I only had one mailing list producing false positives (French
+<br>
+folks sending HTML-only messages with typically spam-like formatting).
+<br>
+<p>Then, very recently, I had a few SERIOUS false positives. I was quite
+<br>
+worried, but then discovered the reason: a black list had stopped
+<br>
+working (as mentionned by someone else here) AND RETURNED POSITIVE TO
+<br>
+EVERY CHECK. To avoid this, just get a recent version of SA, or see &lt;<a href="http://news.spamassassin.org/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=44&amp;mode=thread&amp;order=0&amp;thold=0">http://news.spamassassin.org/modules.php?op=modload&amp;name=News&amp;file=article&amp;sid=44&amp;mode=thread&amp;order=0&amp;thold=0</a><br>
+<p>SA is a collection of Perl modules distributed under Perl's Artistic
+<br>
+license, so it can easily be ported to other platforms. I was asked an
+<br>
+anti-spam solution by a friend using Windows, and I found a nice
+<br>
+Windows port of SA (implemented as a local POP3 proxy server). It is
+<br>
+very easy to install and as effective as the original. It works with
+<br>
+any email client.
+<br>
+<p>&lt;<a href="http://saproxy.bloomba.com/docs/faq.html">http://saproxy.bloomba.com/docs/faq.html</a>&gt; (read first entry for download)
+<br>
+<p>Of course, you will still download the spam -- unless you have access
+<br>
+to procmail (Unix) at your web service provider. I don't; I have a
+<br>
+fetchmail + local procmail setup. The relevant part of my .procmailrc is
+<br>
+<p># spamassassin
+<br>
+:0fw
+<br>
+| /usr/bin/spamassassin
+<br>
+:0:
+<br>
+* ^X-Spam-Status: Yes
+<br>
+spam-assassin.spool
+<br>
+<p>Windows users don't need to do anything like that. (They just need to
+<br>
+ask at install time that the proxy POP server be started at boot time.)
+<br>
+<p>Jacques
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="13637.html">BillK: "Re: Is theft becoming impossible?"</a>
+<li><strong>Previous message:</strong> <a href="13635.html">Brett Paatsch: "Re: Who'd submit to the benevolent dictatorship of GAI anyway?"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#13636">[ date ]</a>
+<a href="index.html#13636">[ thread ]</a>
+<a href="subject.html#13636">[ subject ]</a>
+<a href="author.html#13636">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Thu Sep 04 2003 - 09:36:55 MDT
+</em></small></p>
+</body>
+</html>

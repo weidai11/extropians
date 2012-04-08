@@ -1,0 +1,118 @@
+<!-- received="Thu Dec 19 17:38:22 1996 MST" -->
+<!-- sent="Thu, 19 Dec 1996 15:59:23 -0800" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: tech snippets" -->
+<!-- id="1.5.4.32.19961219235923.003861b0@best.com" -->
+<!-- inreplyto="tech snippets" -->
+<title>extropians: Re: tech snippets</title>
+<h1>Re: tech snippets</h1>
+James Rogers (<i>jamesr@best.com</i>)<br>
+<i>Thu, 19 Dec 1996 15:59:23 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4363">[ date ]</a><a href="index.html#4363">[ thread ]</a><a href="subject.html#4363">[ subject ]</a><a href="author.html#4363">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4364.html">James Rogers: "Re: Computer Architectures"</a>
+<li> <b>Previous message:</b> <a href="4362.html">James Rogers: "Re: Moods of Mind(was Re:Psychedelic singularities)"</a>
+<li> <b>Maybe in reply to:</b> <a href="4039.html">Eugene Leitl: "tech snippets"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="4569.html">Eugene Leitl: "Re: tech snippets"</a>
+<li> <b>Reply:</b> <a href="4569.html">Eugene Leitl: "Re: tech snippets"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+At 05:09 PM 12/19/96 +0100, you wrote:<br>
+<i>&gt;On Mon, 16 Dec 1996, James Rogers wrote:</i><br>
+<i>&gt;</i><br>
+<i>&gt;&gt; </i><br>
+<i>&gt;&gt; &gt;It seems, MMX multimedia instructions performance is distinctly inferior</i><br>
+<i>&gt;&gt; &gt;to vanilla PowerPC.</i><br>
+<i>&gt;&gt; &gt;</i><br>
+<i>&gt;&gt; I agree.  I think MMX is an excuse to have mediocre floating point</i><br>
+<i>&gt;&gt; performance.  I have always had reservations about specialty, high-level</i><br>
+<i>&gt;</i><br>
+<i>&gt;Very few vanilla applications actually require floats, actually. Some new </i><br>
+<i>&gt;games do, but this is sloppy programming: fixed-point or scaled integers, </i><br>
+<i>&gt;especally xxl integers can substitute any float. Even scientific number </i><br>
+<i>&gt;crunching can be done without floats.</i><br>
+<p>
+I often do use fixed-point numbers for floating point computation (32-bit<br>
+int for fraction and 32 or 64-bit int for integer portion).  For some<br>
+applications it is more convenient (and more accurate) to use fixed point<br>
+calculations.  However, for some types of floating point intensive<br>
+computation, I doubt this is the _fastest_ method.<br>
+<p>
+<i>&gt;Both PentiumPro and PowerPC, especially in cheap SMP machines are serious </i><br>
+<i>&gt;candidates to obsoletify workstations in number crunching applications. </i><br>
+<i>&gt;After mainframe has sunk below the surface of the tar pit, workstation's </i><br>
+<i>&gt;death knell is beginning to toll, already.</i><br>
+<i>&gt; </i><br>
+<i>&gt;&gt; I think the P6 is Intel's first x86 CPU with adequate (although modest)</i><br>
+<i>&gt;&gt; floating point performance.  If I was going to do serious floating point</i><br>
+<i>&gt;&gt; number crunching though, I would definitely go with PA-RISC, Alpha, or</i><br>
+<i>&gt;&gt; PowerPC architectures.  I think as Intel's architectures get faster, they</i><br>
+<i>&gt;</i><br>
+<i>&gt;Are you sure you get the most bang for the $$? PA-RISC is horrendously </i><br>
+<i>&gt;expensive, as are the better Alphas. Don't know much about PowerPC, </i><br>
+<i>&gt;though, but then there are not many vendors shipping them (Apple is </i><br>
+<i>&gt;specializing in crippled architectures, as usual).</i><br>
+<p>
+Granted, Fast fp RISC machines are expensive, but if you need a workstation<br>
+with high-end fp capability, this is the way to go.  "Consumer" CPUs,<br>
+especially SMP, will get you more bang for the buck, but SMP is only useful<br>
+for a subset of computational problems.  The performance gap is getting<br>
+pretty narrow though.  Using specmarks as a reference, the highest-end<br>
+workstation CPUs only offer roughly twice the performance of the highest-end<br>
+"consumer" CPUs.  For some classes of problems, a 4-way SMP P6 or PowerPC<br>
+system would seriously out-perform many high-end workstations at a fraction<br>
+of the cost.  Case in point:  An Intergraph P6 SMP graphics workstations<br>
+(with custom acceleration hardware) will out-perform any SGI graphics system<br>
+costing less than $100k.  The Intergraph system will only cost you $25k<br>
+because it uses off the shelf components, with the sole exception of the<br>
+hardware accelerator (which is compatible with any NT workstation).  <br>
+<p>
+I think this convergence of performance will kill a significant number of<br>
+the RISC vendors unless prices converge as well.<br>
+<p>
+<i>&gt;&gt; are going to find it harder and harder to sell their chips if they don't</i><br>
+<i>&gt;&gt; seriously upgrade their floating point hardware.  Fabulous integer</i><br>
+<i>&gt;&gt; performance isn't enough for most high-end, computation heavy software,</i><br>
+<i>&gt;&gt; especially in the realm of multimedia where you have a lot of realtime</i><br>
+<i>&gt;&gt; signal processing and transforms.</i><br>
+<i>&gt;</i><br>
+<i>&gt;The more reason for doing it in 128 bit integers, and with a maspar </i><br>
+<i>&gt;pipeline (one CPU for each processing stage). </i><br>
+<p>
+I never really thought about it in this sense.  I suppose it WOULD be<br>
+possible to pipeline integer CPUs to get fast floating point performance.<br>
+It probably never occurred to me because this is contrary to conventional<br>
+thinking.  <br>
+<p>
+This could be the basis for a flexible, fast computing architecture.<br>
+Pipeline simple 128-bit (or even 256-bit) ALUs.  The ALUs, by nature, would<br>
+be really small, simple, and very fast.  You could build a simple floating<br>
+point processor with many parallel pipelines using less than &gt;1 million<br>
+transistors (trivial these days).  The fp throughput would be enormous, and<br>
+I suspect that you could build a veritable supercomputer on a chip or MCM<br>
+this way.  And depending on how it was designed, you could have arbitrary<br>
+hardware supported precision, up to the point of the total number of<br>
+pipelines on the chip or MCM.<br>
+<p>
+<p>
+-James Rogers<br>
+ jamesr@best.com<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4364.html">James Rogers: "Re: Computer Architectures"</a>
+<li> <b>Previous message:</b> <a href="4362.html">James Rogers: "Re: Moods of Mind(was Re:Psychedelic singularities)"</a>
+<li> <b>Maybe in reply to:</b> <a href="4039.html">Eugene Leitl: "tech snippets"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="4569.html">Eugene Leitl: "Re: tech snippets"</a>
+<li> <b>Reply:</b> <a href="4569.html">Eugene Leitl: "Re: tech snippets"</a>
+<!-- reply="end" -->
+</ul>

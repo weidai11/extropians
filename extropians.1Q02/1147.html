@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>extropians: Parallel vs Serial Computing [was Re: Jaron Lanier Got Up My Shnoz on  AI]</title>
+<meta name="Author" content="Ken Clements (Ken@Innovation-On-Demand.com)">
+<meta name="Subject" content="Parallel vs Serial Computing [was Re: Jaron Lanier Got Up My Shnoz on  AI]">
+<meta name="Date" content="2002-01-16">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Parallel vs Serial Computing [was Re: Jaron Lanier Got Up My Shnoz on  AI]</h1>
+<!-- received="Wed Jan 16 15:13:43 2002" -->
+<!-- isoreceived="20020116221343" -->
+<!-- sent="Wed, 16 Jan 2002 14:13:26 -0800" -->
+<!-- isosent="20020116221326" -->
+<!-- name="Ken Clements" -->
+<!-- email="Ken@Innovation-On-Demand.com" -->
+<!-- subject="Parallel vs Serial Computing [was Re: Jaron Lanier Got Up My Shnoz on  AI]" -->
+<!-- id="3C45FB06.246D97C0@Innovation-On-Demand.com" -->
+<!-- charset="us-ascii" -->
+<!-- inreplyto="B86AF781.9548%jamesr@best.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Ken Clements (<a href="mailto:Ken@Innovation-On-Demand.com?Subject=Re:%20Parallel%20vs%20Serial%20Computing%20[was%20Re:%20Jaron%20Lanier%20Got%20Up%20My%20Shnoz%20on%20%20AI]"><em>Ken@Innovation-On-Demand.com</em></a>)<br>
+<strong>Date:</strong> Wed Jan 16 2002 - 15:13:26 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1148.html">Randall Randall: "Re: Jaron Lanier Got Up My Shnoz on AI"</a>
+<li><strong>Previous message:</strong> <a href="1146.html">Samantha Atkins: "Re: One humanity, all in the same boat"</a>
+<li><strong>In reply to:</strong> <a href="1121.html">James Rogers: "Re: Jaron Lanier Got Up My Shnoz on AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1124.html">Steve Nichols: "Re: Jaron Lanier Got Up My Shnoz on AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1147">[ date ]</a>
+<a href="index.html#1147">[ thread ]</a>
+<a href="subject.html#1147">[ subject ]</a>
+<a href="author.html#1147">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+This is mostly a non-issue from a scientific standpoint, but is strongly
+<br>
+influenced by economic and manufacturing technology constraints.  Back in the
+<br>
+days when the fastest computers were hand-made by the Ladies of Chippewa Falls,
+<br>
+all computing was expensive and it was generally true that a computer with a
+<br>
+price tag five times higher was more than five times faster.  Thus, it was
+<br>
+better to get the faster serial machine than to try to put together groups of
+<br>
+slower machines.
+<br>
+<p>Things changed when the single chip beat anything you could put together form
+<br>
+logic parts, in both speed and cost.  So now, at a price less than most cars,
+<br>
+you can buy the fastest processor that can be made.  Having reached this point,
+<br>
+although it would be better to have a processor five times faster than five of
+<br>
+these, there is no such thing, so to get the performance advance one has to go
+<br>
+to parallel arrays or clusters.
+<br>
+<p>I usually advise folks working on research to pick a problem that will fit on
+<br>
+today's single processor.  Then, after spending a couple of years getting to
+<br>
+understand what they are doing, buy the next computer.  IMHO a current P4 box
+<br>
+has the processing power to do significant AI, if we just knew how to write, or
+<br>
+grow, the code.  As John C. pointed out, if you want it to be self-aware, be
+<br>
+sure to put in that code module.
+<br>
+<p>Special purpose hardware for computing has usually been an economic failure.
+<br>
+This is because of the exponential increase in general computing power allowing
+<br>
+folks to do in software today that which special hardware did two years ago.
+<br>
+Over the years I have watched this happen in several areas, but the first time
+<br>
+was back in the early 70's.  I was working at a company that did image
+<br>
+processing, and had developed a special parallel logic processor that could do
+<br>
+high speed operations on pictures, it was called the Binary Image Processor, or
+<br>
+BIP.  The BIP was the size of a refrigerator and made of first generation high
+<br>
+power TTL, and cost a great deal of money to develop and build.  It was quite
+<br>
+useful in optical character recognition, which is where the company expected to
+<br>
+get a market.  (We liked it because you could run 100 x 100 Conway's Life on it
+<br>
+and watch it in fast real time.)
+<br>
+<p>&nbsp;However, to use the BIP you needed a PDP-10 to talk to it, and associated
+<br>
+scanners and displays, so it was all very expensive.  One day, a guy came over
+<br>
+from marketing and showed us a print out from a potential customer where someone
+<br>
+had written a BIP simulation from our published papers, and in software, their
+<br>
+CDC-7600 could out BIP the BIP. (sigh)
+<br>
+<p>I started out in hardware, and built circuits with some of the first
+<br>
+commercially available transistors, then ICs, then uPs, but I have learned that
+<br>
+software is always cleaning up behind you, and if you can't keep ahead, it will
+<br>
+remove your economic reason to be.  The only things I know you can do in
+<br>
+hardware that cannot be done algorithmically, are to generate a truly random
+<br>
+number, or to use quantum entanglement.  But in the future, I expect these to be
+<br>
+common processor functions, so the software will just have to ask for them.
+<br>
+<p>-Ken
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1148.html">Randall Randall: "Re: Jaron Lanier Got Up My Shnoz on AI"</a>
+<li><strong>Previous message:</strong> <a href="1146.html">Samantha Atkins: "Re: One humanity, all in the same boat"</a>
+<li><strong>In reply to:</strong> <a href="1121.html">James Rogers: "Re: Jaron Lanier Got Up My Shnoz on AI"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1124.html">Steve Nichols: "Re: Jaron Lanier Got Up My Shnoz on AI"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1147">[ date ]</a>
+<a href="index.html#1147">[ thread ]</a>
+<a href="subject.html#1147">[ subject ]</a>
+<a href="author.html#1147">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Fri Nov 01 2002 - 13:37:34 MST
+</em></small></p>
+</body>
+</html>

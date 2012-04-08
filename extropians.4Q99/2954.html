@@ -1,0 +1,218 @@
+<!-- received="Thu Dec  2 10:57:23 1999 MST" -->
+<!-- sent="Thu, 2 Dec 1999 09:57:20 -0800 (PST)" -->
+<!-- name="Robert J. Bradbury" -->
+<!-- email="bradbury@www.aeiveos.com" -->
+<!-- subject="Reversible computing &amp; MBrains [was Re: Matrioshka Brain detail]" -->
+<!-- id="Pine.UW2.4.20.9912020856310.1035-100000@www.aeiveos.com" -->
+<!-- inreplyto="19991201185909.K8581@eskimo.com" -->
+<!-- version=1.10, linesinbody=157 -->
+<html><head><title>extropians: Reversible computing &amp; MBrains [was Re: Matrioshka Brain detail]</title>
+<meta name=author content="Robert J. Bradbury">
+<link rel=author rev=made href="mailto:bradbury@www.aeiveos.com" title ="Robert J. Bradbury">
+</head><body>
+<h1>Reversible computing &amp; MBrains [was Re: Matrioshka Brain detail]</h1>
+Robert J. Bradbury (<i>bradbury@www.aeiveos.com</i>)<br>
+<i>Thu, 2 Dec 1999 09:57:20 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2954">[ date ]</a><a href="index.html#2954">[ thread ]</a><a href="subject.html#2954">[ subject ]</a><a href="author.html#2954">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2955.html">[ Next ]</a><a href="2953.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2911.html">Wei Dai</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="2936.html">Robert J. Bradbury</a>
+</ul>
+<!-- body="start" -->
+
+
+<p>
+Early (very early) this morning I wrote about computational limits:
+
+<p>
+<a href="2936.html#2954qlink1">&gt; These are the Bremermann &amp; Bekenstein bounds.  (If you want access to the</a><br>
+<i>&gt; relevant papers, send me an off-list request.)  The problem has relatively</i><br>
+<i>&gt; little to do with "resistanceless" computation and much more to do with the</i><br>
+<i>&gt; cost of erasing a bit.  Interestingly enough, you can do "ultra-cheap"</i><br>
+<i>&gt; computing so long as you don't erase bits.  This is what gives rise to the</i><br>
+<i>&gt; reversible computing methods (that multiple groups are working on).</i><br>
+
+<p>
+I realized after some sleep that this isn't correct.  The original classic
+paper on heat in computing, was:
+<br>
+  R. Landauer, "Irreversibility and heat generation in the computing process,"
+  IBM Journal of Research and Development 5:183-191 (1961). 
+
+<p>
+Bremermann developed some theories on quantum limits to information processing
+and Bekenstein worked on entropy and communications costs.  Charles Bennett
+expanded some of Landauer's work related to the thermodynamics of
+computing.  Later the theories were worked into some more practical
+applications by the MIT people (Margolus, Toffoli &amp; Fredkin).  Eric
+of course put in his rod-logic reversible design.  JoSH (Storrs Hall)
+extended this into algorithmic reversibility, and Eric &amp; Ralph extended
+the size scale down a bit (controlling electron movement rather than atom
+or molecule movement).  Its at the stage now where I believe that groups at
+MIT and UCSD are actually working on CMOS based reversible computers
+(which we presumably will need as clock speeds go up and you start
+trying to get rid of 100+ watts per chip).
+
+<p>
+The basic thing to remember about reversible computing is that it
+minimizes the heat production that comes from erasing bits (documented
+by Landauer &amp; Bennet et al, but does so at the price of real time
+(having to "undo" your calculations) and/or circuit complexity since
+you have to add extra logic to create the gates that save the state
+information that gets "erased" in current designs -- more complex
+circuits equals bigger chips equals increased propagation delays.
+
+<p>
+At any rate, some of the bibliographies and articles may be found
+under: <a href="http://www.aeiveos.com/~bradbury/Authors/Computing/index.html">http://www.aeiveos.com/~bradbury/Authors/Computing/index.html</a>
+
+<p>
+Now, having kicked myself sufficiently --
+
+
+<p>
+On Wed, 1 Dec 1999, Wei Dai wrote:
+
+<p>
+<a href="2911.html#2954qlink2">&gt; On Wed, Dec 01, 1999 at 04:33:20PM -0800, Jeff Davis wrote:</a><br>
+<i>&gt; &gt; Second, (and here I think I'm probably gonna put my foot in it) isn't there</i><br>
+<i>&gt; &gt; going to be a type of "computronium" which will operate in a</i><br>
+<i>&gt; &gt; superconductive regime?  Won't that "resistanceless" condition make it</i><br>
+<i>&gt; &gt; possible to function virtually without generation of entropy/waste heat (I</i><br>
+<i>&gt; &gt; have heard of a fundamental principle of computing/information theory that</i><br>
+<i>&gt; &gt; assigns a minimum entropy per op/(state change?), but I have also heard of</i><br>
+<i>&gt; &gt; some other theory of reversible or quantum computation which suggests a</i><br>
+<i>&gt; &gt; means to circumvent or drastically reduce this minimum entropic cost;</i><br>
+<i>&gt; &gt; though such theories are waaay over my head.)</i><br>
+<i>&gt; </i><br>
+<i>&gt; I think you're on the right track. From the perspective of thermodynamics</i><br>
+<i>&gt; the Matrioshka design is highly inefficient since each computing element is</i><br>
+<i>&gt; polluting everyone else with waste heat.</i><br>
+
+<p>
+No, this isn't true.  The standard M-Brain architecture I designed,
+radiates heat only in one direction (outward, away from the star).
+Each layer's waste heat becomes the power source for each subsequent
+(further out) layer.  To satisfy the laws of thermodynamics and
+physics, you have to get cooler and cooler but require more and more
+radiator material.  At the final layer you would radiate at the
+cosmic microwave background (or somewhat above that if you live
+in a "hot" region of space due to lots of stars or hot gas).
+
+<p>
+What you say would be in an M-Brain Beowulf cluster architecture
+(multiple stars, multiple M-Brains).  They would be polluting each
+other with waste heat.
+
+<p>
+See the pictures:
+<br>
+  <a href="http://www.aeiveos.com/~bradbury/MatrioshkaBrains/MBshells.gif">http://www.aeiveos.com/~bradbury/MatrioshkaBrains/MBshells.gif</a>
+to get an idea of the nested shells and
+<br>
+  <a href="http://www.aeiveos.com/~bradbury/MatrioshkaBrains/MBorbits.gif">http://www.aeiveos.com/~bradbury/MatrioshkaBrains/MBorbits.gif</a>
+the size scales &amp; possible element composition of the shell layers.
+Each shell layer orbits at the minimal distance from the star
+(to reduce inter-node propagation delays) while not melting from
+too much heat.  [That makes the best use of the computronium in
+the solar system since the different materials from which computers
+may be constructed (TiC, Al2O3, Diamond, SiC, GaAs, Si, organic,
+high-temp-superconductor, etc.) each has different "limits" on
+operating temperature.]  I suspect that some layers may be element
+constrained (e.g. GaAs) and assume that diamondoid rod-logic computers
+are not "best" for every operating temperature -- single-electron
+Si-based computers, or high-temperature copper oxide superconducting
+computers may be better in specific environments.
+
+<p>
+However it is important to keep in mind that the mass of the computers
+in a node is probably very small compared to the mass of the radiators
+and cooling fluid (this is the part that needs to be worked out in
+detail).
+
+<p>
+It is worth noting that Eric &amp; Ralph's Helical-Logic architecture proposed
+controlling electrons at very low temperatures (less than the cosmic
+microwave background) in a sapphire structure.  That node architecture
+really doesn't fit into an M-Brain anywhere because of the problems that
+you pay in both power losses (to get &lt;&lt; 2.7K operating temps) and
+communications delays (because you need really big radiators).
+
+<p>
+<i>&gt; The theory of reversible</i><br>
+<a href="2911.html#2954qlink3">&gt; computation says you're only forced to generate waste heat when you erase</a><br>
+<i>&gt; information. There is no minimum entropy increase per operation as long as</i><br>
+<i>&gt; the operation is reversible. This suggests that the computational core</i><br>
+<i>&gt; should never erase bits but instead ship them out to erasure sites at the</i><br>
+<i>&gt; outer periphery of the civilization or around black holes.</i><br>
+
+<p>
+Now this makes for a *very* interesting proposal.  I had not considered
+the possibility of effectively dumping the entropy increase from bit
+erasure into black holes!  Of course this may be easy to say in theory
+but difficult to do in practice (as is Frank &amp; Knight's comments about
+using ballistic or relativistic particals for entropy removal from
+a computer).  [You potentially get up to 9 orders of magnitude increased
+power density, if you can figure out how to transfer the waste heat
+to ballistic or relativistic particles.]
+
+<p>
+<i>&gt; </i><br>
+<a href="2911.html#2954qlink4">&gt; The MB design assumes that energy collection, computation, and entropy</a><br>
+<i>&gt; management (i.e. bit erasure) are all done at the same place. It makes more</i><br>
+<i>&gt; sense to distribute these functions to specialists. The optimal design for</i><br>
+<i>&gt; the computational part is probably exactly what you suggested: a single</i><br>
+<i>&gt; supercooled sphere with no moving parts (except maybe at the nano scale).</i><br>
+<i>&gt; </i><br>
+
+<p>
+I don't see evidence for this.  If you supercool below 2.7K the energy
+costs are very large.  Anywhere in the ranges below 50-100K your radiators
+are large so your communications costs are as well.  If you try to put all
+of your computer nodes in one place you lose all of your power to pumping
+cooling fluid around.
+
+<p>
+Quoting from Nanosystems, pg 370:
+<br>
+  "the ~10^12 W/m^3 power dissipation density of 1 GHz nanomechanical
+  logic systems described here exceeds any possible means of cooling"
+<hr>
+
+<p>
+In other words it is impossible to construct a cubic meter of
+computronium (that operates for very long)!
+
+<p>
+What most people don't know (because Eric didn't state it directly)
+is that the velocity of his phase change coolant through 1 cm^3
+nanocomputer is very high (close to the speed of sound).  If you
+go through the fluid dynamics equations, you discover if you push
+the pressures up too high you go from non-turbulent flow to
+turbulent flow and the power requirements increase significantly.
+Obviously you can't increase the fluid pumping pressure beyond the
+strength of the materials and there is a tradeoff between more
+material (to have higher pumping pressures) and reduced heat
+conductivity (thicker material conducts heat more slowly)
+and greater communications delays (because the distances
+between the nanoCPUs is increased).
+
+<p>
+Optimizing these designs is going to be very very tricky.
+
+<p>
+Robert
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2955.html">[ Next ]</a><a href="2953.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2911.html">Wei Dai</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="2936.html">Robert J. Bradbury</a>
+</ul>
+</body></html>

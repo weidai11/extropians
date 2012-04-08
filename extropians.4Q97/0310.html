@@ -1,0 +1,63 @@
+<!-- received="Wed Oct  8 17:13:58 1997 MDT" -->
+<!-- sent="Wed, 8 Oct 1997 17:49:44 -0500" -->
+<!-- name="Kris Ganjam" -->
+<!-- email="cckris@mxyzptlk.atc.missouri.edu" -->
+<!-- subject="Re: CECS343 Prog2" -->
+<!-- id="9710081749.ZM7127@mxyzptlk.atc.missouri.edu" -->
+<!-- inreplyto="shi@cecs.missouri.edu" -->
+<title>extropians: Re: CECS343 Prog2</title>
+<h1>Re: CECS343 Prog2</h1>
+Kris Ganjam (<i>cckris@mxyzptlk.atc.missouri.edu</i>)<br>
+<i>Wed, 8 Oct 1997 17:49:44 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#310">[ date ]</a><a href="index.html#310">[ thread ]</a><a href="subject.html#310">[ subject ]</a><a href="author.html#310">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0311.html">Michael Lorrey: "Re: Orca "two cultures" support?"</a>
+<li> <b>Previous message:</b> <a href="0309.html">Michael Lorrey: "Re: Bill Gates"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<i>&gt; It compiled with the main progam you provided, but it does not produce the</i><br>
+<i>&gt; right result.  For example, given the sample input, it outputs:</i><br>
+<i>&gt;</i><br>
+<i>&gt;   1 BEGIN</i><br>
+<i>&gt; 14 EGIN EGIN</i><br>
+<i>&gt; ...</i><br>
+<i>&gt;</i><br>
+<i>&gt; I guess it chopped the first character. Then it would be an unrecognized</i><br>
+token.<br>
+<i>&gt; I'll give you</i><br>
+<i>&gt; 90/100</i><br>
+<i>&gt; Is this fair?</i><br>
+<p>
+Actually, I was also basing my code on an older "sample1.slang" which had tabs<br>
+(or multiple spaces?) in front of every line.  Since I didn't notice that your<br>
+main2.c calls nextchar() before beginning the nexttoken() loop, the very first<br>
+character in the input file is missed.  My nexttoken() assumed that it would be<br>
+the only one with reason to call nextchar().  So, except for the first token,<br>
+my output is correct.  I'll be more careful to check for changes to the source<br>
+and data files next time.  -Kris.<br>
+<p>
+p.s. - looking at the date on your main2.c, it is possible that I modified my<br>
+copy of main2.c to use nexttoken() instead of next_token(), but I don't recall<br>
+it and am not sure why I would have.  I am sure, though, that my working copy<br>
+of sample1.slang was different than the current one.<br>
+<p>
+--------------------------------------------------------<br>
+Kris Ganjam                  Advanced Technology Center<br>
+cckris@showme.missouri.edu   <a href="http://www.atc.missouri.edu">http://www.atc.missouri.edu</a><br>
+voice: (573)882-7600         fax: (573)884-6700<br>
+--------------------------------------------------------<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0311.html">Michael Lorrey: "Re: Orca "two cultures" support?"</a>
+<li> <b>Previous message:</b> <a href="0309.html">Michael Lorrey: "Re: Bill Gates"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

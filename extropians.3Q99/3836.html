@@ -1,0 +1,218 @@
+<!-- received="Thu Sep  9 17:29:47 1999 MDT" -->
+<!-- sent="Thu, 9 Sep 1999 16:29:44 -0700 (PDT)" -->
+<!-- name="Robert J. Bradbury" -->
+<!-- email="bradbury@www.aeiveos.com" -->
+<!-- subject="Re: Nanotech control systems (was Re: Transhuman Beach Party)" -->
+<!-- id="Pine.SV4.3.91.990909154635.4185C-100000@www.aeiveos.com" -->
+<!-- inreplyto="199909092205.SAA13647@is7.nyu.edu" -->
+<!-- version=1.10, linesinbody=156 -->
+<html><head><title>extropians: Re: Nanotech control systems (was Re: Transhuman Beach Party)</title>
+<meta name=author content="Robert J. Bradbury">
+<link rel=author rev=made href="mailto:bradbury@www.aeiveos.com" title ="Robert J. Bradbury">
+</head><body>
+<h1>Re: Nanotech control systems (was Re: Transhuman Beach Party)</h1>
+Robert J. Bradbury (<i>bradbury@www.aeiveos.com</i>)<br>
+<i>Thu, 9 Sep 1999 16:29:44 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3836">[ date ]</a><a href="index.html#3836">[ thread ]</a><a href="subject.html#3836">[ subject ]</a><a href="author.html#3836">[ author ]</a>
+<!-- next="start" -->
+<li><a href="3837.html">[ Next ]</a><a href="3835.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3831.html">Matt Gingell</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+
+<p>
+On Thu, 9 Sep 1999, Matt Gingell wrote:
+
+<p>
+<i>&gt;  </i><br>
+<a href="3831.html#3836qlink1">&gt; Do you think we're likely to understand the functioning of cells well </a><br>
+<i>&gt; enough that we could program them to build complex structures, and </i><br>
+<i>&gt; create specialized, human designed, offspring in the foreseeable </i><br>
+<i>&gt; future?</i><br>
+
+<p>
+If by "complex structures", you mean organs, by 2010, I would say
+yes, definitely for simple organs such as skin.  More complex organs
+such as the kidney or the heart, I'd say "maybe".  A *key* point to
+remember is that you don't have to "understand" it to make it build
+an organ.  Cells already have working programs to build organs --
+what you want to do is select the minimal subset (so you can produce
+it cheaply) that *still* works.  Its like, if I give you the Linux
+source code, can you select from it a set of subroutines that will
+read and write to the disk?  Yes, easily.  Whats more, you could
+write a program to *randomly* select subroutines from the source
+code and sooner or later you would end up with the set that
+reads &amp; writes to the disk.  All that is necessary is a "test"
+that can verify that the reads/writes occur (or an organ is
+produced).
+
+<p>
+<a href="3831.html#3836qlink2">&gt; How well is the process of human development from a single </a><br>
+<i>&gt; cell understood?</i><br>
+
+<p>
+It depends on the tissue.  For blood cells I would say it is very well
+understood and most of the transition factors are known.  For other
+tissues the picture is much less clear.
+
+<p>
+&gt; Do we understand how a cell knows it's in the right <br>
+<a href="3831.html#3836qlink3">&gt; place to become a liver cell, etc.</a><br>
+
+<p>
+In some tissues, such as the brain, parts of the spine, etc. yes.
+More importantly we *know* what these factors look like at a DNA
+sequence level and they are almost all "similar" (nature works by
+cut, paste and edit).  So once we have the genome sequence, pulling
+them all out is week exercise for a computer, then we will have
+a fair amount of work to test them and see what they really do.
+But the final result will be that we will have all the factors
+that flip the switches.
+
+<p>
+&gt; Do we understand how we go from strings of amino acid specifiers<br>
+<a href="3831.html#3836qlink4">&gt; in DNA to more complex cellular structures?</a><br>
+
+<p>
+Harder question.  We understand many of the higher level components
+that make up cellular structures but are still decoding the subcomponents
+that operate at a very fine level.  After all we only have the a.a.
+sequnce of ~20% of the human genome today, so we can't know it all.
+
+<p>
+<a href="3831.html#3836qlink5">&gt; When I think about the nanotech software question, I imagine an </a><br>
+<i>&gt; automaton with a general-purpose computer and mechanisms to </i><br>
+<i>&gt; reproduce and drop/detect some alphabet of chemical messages. </i><br>
+<i>&gt; Given this idealized scenario, I try to image how to go about </i><br>
+<i>&gt; designing a program for automaton 0 that will eventually lead to </i><br>
+<i>&gt; some interesting configuration of N automata. (shapes, patterns, </i><br>
+<i>&gt; images, etc.) </i><br>
+
+<p>
+I think this may be an excessively complex way to think about the
+problem.  A nanoassembler executes a very small set of motion
+operations with a small set of feedstock materials (literally
+pick up X-feedstock to perform a reaction that puts X in the
+specified position in the atomic matrix).  [This is what your body
+does, only the "pickup" step is generally done by diffusion.]
+
+<p>
+Thinking about this in terms of automata may be confusing the
+process.  Think about it in terms of optimization (within reason)
+of the assembly process --
+<p>
+   Select AssemblerN from all-assemblers where
+<pre>
+      AssemblerN-Available-Feedstock = X and
+      Minimum-Of(AssemblerN-Current-Position - Desired-X-position) 
+
+</pre>
+<p>
+If you simply repeat this for each atom, you will not get the
+minimum assembly time, but you will get a "good" assembly time.
+If it turns out to be highly suboptimal, then you need an algorithm
+that attempts to minimize the overall assembler arm movement or
+optimizes reaction time overlaps.  This is virtually identical
+to the instruction &amp; execution unit scheduling done by optimizing
+compilers for computers today.  It may never be absolutely
+optimal, but it will come pretty close.
+
+<p>
+<i>&gt; </i><br>
+<a href="3831.html#3836qlink6">&gt; These are very hard problems to think about - the flow of the system </a><br>
+<i>&gt; is extremely complex and dynamic. To predict the behavior of the </i><br>
+<i>&gt; system at some point in time, you need to know the complete state </i><br>
+<i>&gt; of the system, which requires knowing how the system behaved in </i><br>
+<i>&gt; the previous time-step, etc. The feedback process leads to very </i><br>
+<i>&gt; simple programs with extremely complicated behavior.  </i><br>
+
+<p>
+I don't think so.  The assembly of a specified set of a billion
+atoms seems not too much different from executing a billion instructions
+on a computer.   You could do them one-by-one with no problems.
+You could do them in highly parallel fashion if no conflicts
+are present.  For nanoassembly you want to make sure that two
+nanoassemblers don't attempt to occupy the same space at the same
+time.  That is no different from making sure that two processors
+don't attempt to modify the same location in memory on a symmetric
+multiprocessor (SMP) today.
+
+<p>
+These problems are well understood in computer science at this point.
+
+<p>
+<a href="3831.html#3836qlink7">&gt; I really meant random bit-flips in the machine's local/working </a><br>
+<i>&gt; memory.</i><br>
+
+<p>
+This should never happen.  Just as you have ECC in computers, you
+*have* to have the equivalent in nanotech.  Eric devotes some attention
+to the problem in Nanosystems (discussing radiation), Robert will devote
+some more in Nanomedicine.  Redundancy and error checking minimize
+these problems.
+
+
+<p>
+<a href="3831.html#3836qlink8">&gt; It seems to be the small you make something the more </a><br>
+<i>&gt; vulnerable it is likely to be to cosmic rays, etc.</i><br>
+Yep.
+
+<p>
+<i>&gt; You would certainly place some kind of error correction mechanism</i><br>
+<a href="3831.html#3836qlink9">&gt; in that memory, but the shear number of possible events (number</a><br>
+<i>&gt; of nanites, local memory size, length of time) makes this a rather</i><br>
+<i>&gt; expensive proposition.</i><br>
+Expensive at the nano-level, cheap from the macro level.
+Redundancy is the key.
+
+<p>
+<a href="3831.html#3836qlink10">&gt; Maybe you need antibody nanites that float around checking the</a><br>
+<i>&gt; program of anyone they bump into and destroying mutants. </i><br>
+I'd consider ECC or the "weighing" of the output machine to be this.
+
+<p>
+<a href="3831.html#3836qlink11">&gt; I think there is something different about software. It's dynamic </a><br>
+<i>&gt; nature makes is much more difficult (if not possible) to analyze than </i><br>
+<i>&gt; more traditional engineering tasks, and the range of things you can </i><br>
+<i>&gt; do in software is much larger and much less well understood.</i><br>
+
+<p>
+Perhaps.  It may be that in mechanical engineering you solve the
+"accidents" by making the materials thicker, stronger, etc.
+Software on the other hand suffers from increased complexity
+when you try to engineer solutions with "add-ons".  Nature
+deals with the defective "add-ons" by rapidly eliminating them.
+
+<p>
+<i>&gt; I said:</i><br>
+<i>&gt; </i><br>
+<a href="3831.html#3836qlink12">&gt; &gt; Such a waste, I need to go give them a lecture on the impact of</a><br>
+<i>&gt; &gt; nanotechnology on the development of ET and how evolving </i><br>
+<i>&gt; &gt; nanomachinery would be the coolest application of that unused horsepower.</i><br>
+<i>&gt; </i><br>
+<i>&gt; Well, it's not a waste if we find something...</i><br>
+
+<p>
+The key word is *if*.  You cannot guarantee you will find aliens
+signaling to us.  The probability is low.  On the other hand
+I can (probably) guarantee that if you search the space of
+possible nanotech designs, you will find something.  Why?
+Because we have *no* example of aliens signalling us while
+we have millions of "working" nanotech designs (in biology).
+Care to make a bet on the relative odds?
+
+<p>
+Robert
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="3837.html">[ Next ]</a><a href="3835.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3831.html">Matt Gingell</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

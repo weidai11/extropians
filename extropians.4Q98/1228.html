@@ -1,0 +1,72 @@
+<!-- received="Mon Nov 16 15:28:38 1998 MST" -->
+<!-- sent="Sun, 15 Nov 1998 17:27:49 -0500" -->
+<!-- name="Michael Lorrey" -->
+<!-- email="retroman@together.net" -->
+<!-- subject="Re: Information Security?" -->
+<!-- id="364F5565.8E66CD15@together.net" -->
+<!-- inreplyto="Information Security?" -->
+<!-- version=1.10, linesinbody=35 -->
+<html><head><title>extropy: Re: Information Security?</title>
+<meta name=author content="Michael Lorrey">
+<link rel=author rev=made href="mailto:retroman@together.net" title ="Michael Lorrey">
+</head><body>
+<h1>Re: Information Security?</h1>
+Michael Lorrey (<i>retroman@together.net</i>)<br>
+<i>Sun, 15 Nov 1998 17:27:49 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1228">[ date ]</a><a href="index.html#1228">[ thread ]</a><a href="subject.html#1228">[ subject ]</a><a href="author.html#1228">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1229.html">[ Next ]</a><a href="1227.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1223.html">Mike Linksvayer</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Mike Linksvayer wrote:
+
+<p>
+<a href="1223.html#1228qlink1">&gt; Michael Lorrey wrote:</a><br>
+<i>&gt; &gt; I figured out the other day how WS_FTP encrypts its passwords in its INI</i><br>
+<i>&gt; &gt; file, which is rather weak and a major weakness for anyone using this FTP</i><br>
+<i>&gt; &gt; client to transfer files. Essentially, the encryption works like this: each</i><br>
+<i>&gt; &gt; letter of the password is converted to its hexadecimal value. Then one hex</i><br>
+<i>&gt; &gt; digit is added to the letters hex value based on its position in the</i><br>
+<i>&gt; &gt; password, starting with 0 for the letter in the first position.</i><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt; So, while you may only FTP encrypted files to an FTP site, by using a weak</i><br>
+<i>&gt; &gt; password encryption like this a hacker could easily sniff out your password</i><br>
+<i>&gt; &gt; and then use the FTP site with impunity in YOUR name.</i><br>
+<i>&gt;</i><br>
+<i>&gt; ftp passwords are sent as cleartext between the client and server,</i><br>
+<i>&gt; so ws_ftp's .ini settings obfuscation does nothing to help or hinder</i><br>
+<i>&gt; someone who wants your password, unless that someone has access to</i><br>
+<i>&gt; your ws_ftp .ini file.</i><br>
+
+<p>
+Which is also rather easy for users on internet connected LANs or WANs. A common
+practice to break into a system is to spoof yourself as an authorized device by
+assuming its IP address when it is offline. Once you are in you then have a login
+to get by, which is no big deal, as most desk drivers at companies which have no
+centrally controlled password system typically just use their name with no
+password, or their name as the user and their name as the password, or first and
+last, etc. Once you are in, you can copy the ws_ftp.ini file you can find on
+every drive the user you are spoofing has access to.
+
+<p>
+Right now I have implemented a patch to prevent this sort of thing from happening
+on the network here, but I doubt that many small businesses know or care about it
+at this point.
+
+<p>
+Mike Lorrey
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1229.html">[ Next ]</a><a href="1227.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1223.html">Mike Linksvayer</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

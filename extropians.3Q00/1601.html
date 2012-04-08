@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Vastmind: Distributed Computing</TITLE>
+<META NAME="Author" CONTENT="Aaron Davidson (davidson@cs.ualberta.ca)">
+<META NAME="Subject" CONTENT="Re: Vastmind: Distributed Computing">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Vastmind: Distributed Computing</H1>
+<!-- received="Wed Jul 19 23:53:03 2000" -->
+<!-- isoreceived="20000720055303" -->
+<!-- sent="Wed, 19 Jul 2000 23:53:58 -0600" -->
+<!-- isosent="20000720055358" -->
+<!-- name="Aaron Davidson" -->
+<!-- email="davidson@cs.ualberta.ca" -->
+<!-- subject="Re: Vastmind: Distributed Computing" -->
+<!-- id="f0432040ab59c4244cb4c@[24.108.7.68]" -->
+<!-- inreplyto="00cf01bff1ea$df6b0f80$80620c3d@daymccosker.com" -->
+<STRONG>From:</STRONG> Aaron Davidson (<A HREF="mailto:davidson@cs.ualberta.ca?Subject=Re:%20Vastmind:%20Distributed%20Computing&In-Reply-To=&lt;f0432040ab59c4244cb4c@[24.108.7.68]&gt;"><EM>davidson@cs.ualberta.ca</EM></A>)<BR>
+<STRONG>Date:</STRONG> Wed Jul 19 2000 - 23:53:58 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="1602.html">Matt Gingell: "Re: The games are all crap; let's make a decent one."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1600.html">Eliezer S. Yudkowsky: "Re: psi as a boundary breaking possibility"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="1597.html">Emlyn (onetel): "Re: Vastmind: Distributed Computing"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="1667.html">Doug Jones: "Re: Vastmind: Distributed Computing"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1601">[ date ]</A>
+<A HREF="index.html#1601">[ thread ]</A>
+<A HREF="subject.html#1601">[ subject ]</A>
+<A HREF="author.html#1601">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+<EM>&gt;Awesome. I'll check it out
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt;Some questions:
+</EM><BR>
+<EM>&gt;     - Why the &quot;modems need not apply&quot; stuff? If you've got hefty comms
+</EM><BR>
+<EM>&gt;requirements, that's going to cost your nodes a lot of money.
+</EM><BR>
+<P>It's not as much a bandwidth issue as a latency / stability one.
+<BR>
+Modems are low bandwidth *and* high high latency. Our goal with vastmind is
+<BR>
+too use only the highest quality nodes available (especially at first). This
+<BR>
+saves us and users an order of magnitude worth of headaches, plus makes the
+<BR>
+system more robust and snappy.
+<BR>
+<P><EM>&gt;     - It looks like you allow C &amp; Java programs to run at the nodes (ie:
+</EM><BR>
+<EM>&gt;user's computers). There is no way in the world I'd let a service like this
+</EM><BR>
+<EM>&gt;run straight C on my machine. Java is a different story, because I think you
+</EM><BR>
+<EM>&gt;can ensure that it is running in it's own secluded sandbox, no opportunity
+</EM><BR>
+<EM>&gt;to be evil to my machine/network/etc. Why allow C, and what are the security
+</EM><BR>
+<EM>&gt;implications for Java?
+</EM><BR>
+<P>This is perhaps the most sensitive and tricky issue to tackle, and 
+<BR>
+many facets of it are completely OS dependant. For java, things are 
+<BR>
+much safer, but for C, it is very difficult. For starters, we will 
+<BR>
+not allow any node modules that have not been verified by vastmind, 
+<BR>
+source code level, to ensure they do not do anything bad. New modules 
+<BR>
+are propagated through the network by our server only, so we have 
+<BR>
+control over what gets put onto each node. On the unix side of 
+<BR>
+things, BSD users can invoke a 'jail' (sandbox) around a program, and 
+<BR>
+are free to set overall permissions on the node software. chroot is 
+<BR>
+also useful for forcing a program to only be able to see a designated 
+<BR>
+portion of the filesystem (but is not completely secure).
+<BR>
+<P><EM>&gt;     - How do you make sure that stuff running on a node machine doesn't
+</EM><BR>
+<EM>&gt;entirely consume all resources on that machine (dont say &quot;nice&quot;).
+</EM><BR>
+<P>nice -19 is a start, but we do also determine the machine's load 
+<BR>
+average and if the machine is not idle, it does not  'check in' to 
+<BR>
+the server for more work, and sleeps partially if it is currently 
+<BR>
+processing anything, so you should never notice any slowdowns.
+<BR>
+<P>--Aaron
+<BR>
+<PRE>
+-- 
++-------------------------------------------------------------------------+
+| Aaron Davidson  &lt;<A HREF="mailto:ajd@ualberta.ca?Subject=Re:%20Vastmind:%20Distributed%20Computing&In-Reply-To=&lt;f0432040ab59c4244cb4c@[24.108.7.68]&gt;">ajd@ualberta.ca</A>&gt;  <A HREF="http://www.cs.ualberta.ca/~davidson/">http://www.cs.ualberta.ca/~davidson/</A> |
++-------------------------------------------------------------------------+
+</PRE>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="1602.html">Matt Gingell: "Re: The games are all crap; let's make a decent one."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1600.html">Eliezer S. Yudkowsky: "Re: psi as a boundary breaking possibility"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="1597.html">Emlyn (onetel): "Re: Vastmind: Distributed Computing"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="1667.html">Doug Jones: "Re: Vastmind: Distributed Computing"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1601">[ date ]</A>
+<A HREF="index.html#1601">[ thread ]</A>
+<A HREF="subject.html#1601">[ subject ]</A>
+<A HREF="author.html#1601">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:34:55 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

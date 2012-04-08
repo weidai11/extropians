@@ -1,0 +1,246 @@
+<!-- received="Thu Nov 11 01:54:58 1999 MST" -->
+<!-- sent="Thu, 11 Nov 1999 12:54 EST" -->
+<!-- name="Robert J. Bradbury" -->
+<!-- email="bradbury@ilr.genebee.msu.su" -->
+<!-- subject="Re: SPACE: How hard IS it to get off Earth?" -->
+<!-- id="382b02ee0.264b@ilr.genebee.msu.su" -->
+<!-- inreplyto="SPACE: How hard IS it to get off Earth?" -->
+<!-- version=1.10, linesinbody=181 -->
+<html><head><title>extropians: Re: SPACE: How hard IS it to get off Earth?</title>
+<meta name=author content="Robert J. Bradbury">
+<link rel=author rev=made href="mailto:bradbury@ilr.genebee.msu.su" title ="Robert J. Bradbury">
+</head><body>
+<h1>Re: SPACE: How hard IS it to get off Earth?</h1>
+Robert J. Bradbury (<i>bradbury@ilr.genebee.msu.su</i>)<br>
+<i>Thu, 11 Nov 1999 12:54 EST</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2035">[ date ]</a><a href="index.html#2035">[ thread ]</a><a href="subject.html#2035">[ subject ]</a><a href="author.html#2035">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2036.html">[ Next ]</a><a href="2034.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2033.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+<a href="0689.html#2035qlink1">&gt;  Eliezer S. Yudkowsky &lt;sentience@pobox.com&gt; wrote:</a><br>
+
+<p>
+<i>&gt; &gt; Doug Jones wrote:</i><br>
+<a href="2031.html#2035qlink2">&gt; &gt; &gt; and a bunch of design software (petaflops and then some).</a><br>
+<i>&gt; &gt; </i><br>
+
+<p>
+<a href="2033.html#2035qlink3">&gt; Glad to hear it, but I don't think I'll be able to rely on it.</a><br>
+
+<p>
+I'm not sure whether you mean the software or horsepower.
+
+<p>
+The software we are pretty close to now.  We can do the quantum
+simulations on small scales, we can do the molecular modeling
+on larger scales, I've got a package from Algor that does the
+finite state element analysis for stresses, etc (though not at
+the molecular level), Autocad &amp; similar packages handle the
+macro scale stuff and I've seen prognostications by people
+familiar with M.E. that more and more of this is going to
+get fairly automated.  I have to believe that M.E. is developing
+standard "libraries" just as the E.E.'s have done.  What *is*
+needed is standard libraries at the atomic level!
+
+<p>
+As far as the horsepower goes, I'm pretty confident that individuals
+will have that as well.  Things don't get difficult until after
+2010 and by then we should have desktop workstations with 10-20 10+ GIP
+processors.  So a 10 machine cluster gets you a couple of Teraflops.
+I think Doug may be overestimating his processing requirements a bit.
+
+<p>
+The thing about most macroscale objects (rockets, cars, etc.) is that
+they don't require nanoscale structure.  Relatively defect-free assembly
+of materials you cannot currently assemble is what you really want.
+Most current materials science focuses on how to make the grain
+bondaries smaller and prevent crack migration.  Those problems
+go away and the materials get much stronger when you have atomic
+assembly.  Because you can consider blocks of perfect crystals in the
+macro scale analysis, your computer simulation requirements have some
+nice aggregation &amp; simplification properties that let you test the design
+without having to go to the atomic level that would require petaflops.
+
+<p>
+You have a very different situation from having to simulate a single
+engine with trillions(^??) of atoms and a large amount of "fluid" to
+simulating 1 engine of 10^6 fewer atoms that you are going to use
+10^6 copies of.  Its interesting if you compare say American &amp; Russian
+rocket efforts.  The American's approach built a huge infrastructure to
+manufacture a few large engines while the Russian infrastructure built
+more on previous efforts by simply adding on more small boosters to get
+the required thrust.  I think Boeing may be moving in that direction with
+the Delta program as well.  (Others please correct if I've got any of this
+wrong.)
+
+<p>
+Nanoengineering takes that much further because of the parallelism,
+building many small things is much faster than building single large
+things.  So we don't have to build a few "perfect" large things, we
+only have to build millions or billions of small things with relatively
+low failure rates.  Our rocket folks might want to comment on how
+their designs and testing requirements get impacted when they have
+redundancy factors of millions.
+
+<p>
+<i>&gt; </i><br>
+<a href="2033.html#2035qlink4">&gt; How clever does the software have to be?  I mean, what exactly are you</a><br>
+<i>&gt; envisioning it doing?  (I'm assuming that we're using design-ahead to</i><br>
+<i>&gt; build nanocomputers that run Linux so that the software can be tested,</i><br>
+<i>&gt; in miniature, on existing computers.)</i><br>
+
+<p>
+Most of the software already exists today.  There are some hurdles
+that have to be gone over for things that don't come into play at
+the macro-scale level that are important at the nano-scale level.
+These scaling-law impacts are slowly being incorporated into MEMS
+design packages.  The hurdle we need to go over is the merging
+of the MEMS design packages with the molecular modeling packages.
+
+<p>
+There isn't much "cleverness" required except when (a) you crossover
+between scales (there are currently maybe 3 of these in molecular
+modeling) and in finding efficient ways to distribute large
+calculations over distributed computing architectures.
+
+<p>
+<i>&gt; </i><br>
+<a href="2033.html#2035qlink5">&gt; What kind of "design-ahead"?  And how much do you need to know about the</a><br>
+<i>&gt; exact nature of the assembler breakthrough beforehand?</i><br>
+
+<p>
+You might have to know a fair amount.  It doesn't do you any good
+to design in a silicon pressure sensor if you don't have any chemistry
+to stick Si atoms there.  What you want to do is the macro-scale
+designs using some assumptions of material scale &amp; properties (equivalent
+to electronic circuit design).  Then below that, the part libraries and
+circuit layout tools take over (correspinding to the low level process
+specific translations in semiconductor manufacturing) doing the grunt work.
+This low level stuff is going to be very chemistry &amp; assembler specific.
+
+<p>
+Single crystal Fe2O3 (hematite) doesn't have much worse material properties
+than Al2O3 (saphire) which is slightly worse than diamondoid but the
+assembly chemistries &amp; feedstocks are all very different.
+
+<p>
+[BTW, sapphire interlaced with diamondoid heat conductors might be your
+best rocket engine material because of the higher melting temp.]
+
+<p>
+<a href="2033.html#2035qlink6">&gt; Suppose the drextech is soft instead of hard?</a><br>
+Doesn't work for space if it is water-based.  Soft for space-suits,
+ballons or solar sails is fine (even good), but for most of the things
+we want to do would require rigid structures.  I can think of some
+ways using disulfide bonds to make proteins somewhat stronger I suspect
+there are limits. Even of you go to pseudo-biocompatible crystalline
+materials (e.g. sucrose or salt), I don't think you want to be building
+space ships out of them.
+
+<p>
+&gt; How does the complexity required to build a hard-nano spaceship in a<br>
+<a href="2033.html#2035qlink7">&gt; vat compare to building soft-nano grey goo that reproduces in the wild?</a><br>
+
+<p>
+Soft-nano assembly *will* be here much sooner, but the design issues are
+probably much more complex.  There is engineering science about how to
+design beams, valves, screws, etc.  Taking this down to the atomic level
+is pretty straight forward.  I can assemble organic "disassemblers"
+fairly easily (though expensively) now, but I don't know how to
+give them robust defenses or easily provide them with capabilities that
+I can't "rip-off" from nature.  The easy engineering of general purpose
+bio-catalytic machinery to "effect" a grey-goo scenario is likely
+to require more computer horsepower than Doug's rocket engine
+simulations because I *do* have to go to atomic scale.
+
+<p>
+I could design a diamondoid slicing &amp; dicing apparatus *much* easier
+[there is some discussion of this in NM] than I could design enzymes
+to disolve humans (much less concrete).  Our M.E. skills are way above
+our B.E. skills at this point.
+
+<p>
+Mind you, the design an enhanced flesh-eating streptococcus (if all you
+wanted to do was disolve people), seems straight forward, but I suspect
+that our ability to block multiple pathways in bacteria will be taking a
+leap forward over the next 5 years as big Pharma rolls out a whole suite
+of antibiotics (enabled by the genome disassembly of most pathogens).
+Given the developing defense prospects and the difficulty of engineering
+new pathways that avoid the new antibiotics is difficult, I'm optimistic
+that bio-defense will trump bio-offence for the next 10-15 years.
+
+<p>
+It is worth commenting that I'm not sure that the "Grey Goo" scenario
+<a name="2036qlink1">has had a serious examination by people qualified to judge its development
+timeline and/or possible defenses.  Given the difficulty of engineering
+concrete disolving enzymes and the fact that even diamondoid slicers &amp;
+dicers "wear", and the fact that whether there are enzymes</a> or diamond cutters,
+<a name="2036qlink2">for extended operation, they do require energy supplies that can</a> be cut off,
+<a name="2036qlink3">I wonder whether the "Grey Goo" nightmare is *really* that significant.
+It might be feasible, only for say an alien civilization to drop on
+a civilization totally unprepared to defend itself against such an
+attack, but might not ever work in an environment where you can see
+it coming and take precautions.</a>
+
+<p>
+<i>&gt; </i><br>
+<a href="2033.html#2035qlink8">&gt; How much power do you need for making fuel? Can the fuel be</a><br>
+<i>&gt; manufactured in advance?  If not, is there some way you can use</i><br>
+<i>&gt; nanotechnology to get around the problem by concentrating existing</i><br>
+<i>&gt; resources, at least on a once-off basis?  How about fusion drives?</i><br>
+
+<p>
+This is a no-op, given growing arrays of nano-solar cells.  Plenty
+of electricty to split H2O.
+
+<p>
+Fusion is a very long shot.  We don't have working fusion reactors
+now so fusion is very unlikely.  You may also be paying a nasty
+weight penalty for the reactor and/or shielding.  I think the most
+efficient (low radiation?) reactions also require 3He out of the
+lunar topsoil or Jupiter's atmosphere.
+
+<p>
+<i>&gt; </i><br>
+<a href="2033.html#2035qlink9">&gt; How fast does that scale up?</a><br>
+
+<p>
+Its limited by your power scale-up which probably is design limited.
+
+<p>
+&gt; Could you evacuate cities, or at least provide the evacuation vehicles<br>
+&gt; to do so? <br>
+
+<p>
+If you give everyone SUV-AirCars evacuation isn't a problem.
+
+<p>
+<a href="2033.html#2035qlink10">&gt; Could you fire cities, or at least buildings, directly into orbit?</a><br>
+
+<p>
+Difficult, these probably aren't engineered for the G forces
+and certainly have steering problems.  If you wanted to lift
+a city up from the bedrock (on rockets), you could do so, but the
+power requirements would probably have to include large solar power
+satellites.  I suspect a better way to go would be hydraulic
+lifting of the cities on diamondoid towers since the power
+delivery can take place over a much longer period of time.
+
+<p>
+Robert
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2036.html">[ Next ]</a><a href="2034.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2033.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

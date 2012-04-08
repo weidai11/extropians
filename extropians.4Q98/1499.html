@@ -1,0 +1,109 @@
+<!-- received="Sat Nov 21 15:55:19 1998 MST" -->
+<!-- sent="Sat, 21 Nov 1998 23:41:40 +0100" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Rationale: No New OS." -->
+<!-- id="199811212241.XAA20193@lrz.uni-muenchen.de" -->
+<!-- inreplyto="199811210537.VAA11458@proxy3.ba.best.com" -->
+<!-- version=1.10, linesinbody=63 -->
+<html><head><title>extropy: Rationale: No New OS.</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Rationale: No New OS.</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sat, 21 Nov 1998 23:41:40 +0100</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1499">[ date ]</a><a href="index.html#1499">[ thread ]</a><a href="subject.html#1499">[ subject ]</a><a href="author.html#1499">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1500.html">[ Next ]</a><a href="1498.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1469.html">my inner geek</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1513.html">Eugene Leitl</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+my inner geek writes:
+<br>
+<a href="1469.html#1499qlink1"> &gt; We need to create a new OS.  We need to do it as an open source </a><br>
+<i> &gt; internet project.  We can base it on Unix, or use some other OS, </i><br>
+<i> &gt; looking to Thinking Machines, Cray, or some other parallel </i><br>
+<i> &gt; distributed system for a model to learn from.</i><br>
+ 
+<p>
+<a name="1519qlink1">We don't need a yet another OS: there is a number of powerful but
+virtually unknown OSses out there: VxWorks, OS 9, Taos, Plan 9, 
+Mach, Hurd, L4, diverse ForthOS'ses and lots of crazy experimental 
+</a>whatnots. We rather need a trick how we can make the marketplace 
+adopt them to max out on diversity. You can't create artificial 
+demand for a fine-grained efficient OS like L3 or L4 (open source, 
+12 kByte OOP microkernel written in Intel assembly, Linux 
+personality) if the people don't care for things like messaging 
+latency, die yield and doing sensible computing with WSI systems with 
+&lt;&lt; 1 MBit grains. How do _you_ write an OS to operate on a 300 mm
+wafer with ~1000 gates/die grains, mostly locally connected? Ever
+programmed an 'OS' for an analog FPGA or a hardware cellular 
+automaton? Ever thought about how to utilize 
+packet-switch-networked self-contained VLIW systems with on-die 
+buses a few kBit wide? Ask your friendly Bunny Man from a local 
+foundry, or a systems programmer how he feels about that.
+
+<p>
+A 300 mm wafer has about 70 000 mm^2 usable area. With near-future
+0.1 um structures you can get about 100 million transistors (1/4 of
+that with current technology) on each 1 mm^2 die (random defect hits
+taking out several hundreds or even a few thousand of dies out of 
+each wafer if you want to go WSI). With about 10^12 transistor 
+equivalents (that's ~1 TeraTransistor, folks) that 300 mm wafer 
+is an awesome resource, if used right. I think a hardware CA with 
+~1 Gcells with a &gt;10 GHz clock sold for 1..2 k$ could be good 
+for something. But how can a new OS help you here?
+ 
+<p>
+<a href="1469.html#1499qlink2"> &gt; The problem is simple: We're going to need to be able to program this </a><br>
+<i> &gt; massive supercomputer called "The Internet".  The broadband </i><br>
+<i> &gt; infrastructure to support distributed nonlinear video requires this.</i><br>
+ 
+<p>
+Whip up a hypercube Beowulf running PVM/MPI (or U-Net on DEC Tulips
+with about 30 us messaging latency, 20 MByte via Tx crossover 
+cabling for full duplex, can bundle ports) or Myrinet. If you 
+really want to flood your PCI or saturate your system with 
+interrupts, buy a GBit ethernet card (if you want to do it 
+cheaper, plug 3 or even 4 FastEthernet cards into your node). 
+Voila, a commodity off-shelf supercomputer -- Beowulf people 
+are doing it all the time.
+ 
+<p>
+The infrastructure is all there. All you need are applications. What was
+your rationale for a yet another OS? Distributed nonlinear video?
+
+<p>
+Shucks, PVM even runs on Win98/NT. If not for security reasons, you 
+could install PVM on every networked box on the Internet and break
+DES, find your favourite Mersenne, and povray Pixar out of the water. 
+Little else, for latency and bandwidth won't let you shock the 
+top500.org crowd, alas. (Maybe a decade downsteam, if you'd find 
+a way to evolve FPGAs/machine instructions robustly, and precipitate 
+Singularity you could impress _some_ people ;)
+
+<p>
+The infrastructure is all there. All you need are applications. What was
+your rationale for a yet another OS? Distributed nonlinear video?
+
+<p>
+ciao,
+<br>
+'gene
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1500.html">[ Next ]</a><a href="1498.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1469.html">my inner geek</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1513.html">Eugene Leitl</a>
+</ul>
+</body></html>

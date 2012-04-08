@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: I strongly disagree with Lee's answer</title>
+<meta name="Author" content="Adrian Tymes (wingcat@pacbell.net)">
+<meta name="Subject" content="Re: I strongly disagree with Lee's answer">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: I strongly disagree with Lee's answer</h1>
+<!-- received="Mon May 14 10:57:42 2001" -->
+<!-- isoreceived="20010514165742" -->
+<!-- sent="Mon, 14 May 2001 09:57:15 -0700" -->
+<!-- isosent="20010514165715" -->
+<!-- name="Adrian Tymes" -->
+<!-- email="wingcat@pacbell.net" -->
+<!-- subject="Re: I strongly disagree with Lee's answer" -->
+<!-- id="3B000E6B.8C20AFF@pacbell.net" -->
+<!-- inreplyto="3.0.6.32.20010513210708.007a24d0@coastside.net" -->
+<strong>From:</strong> Adrian Tymes (<a href="mailto:wingcat@pacbell.net?Subject=Re:%20I%20strongly%20disagree%20with%20Lee's%20answer&In-Reply-To=&lt;3B000E6B.8C20AFF@pacbell.net&gt;"><em>wingcat@pacbell.net</em></a>)<br>
+<strong>Date:</strong> Mon May 14 2001 - 10:57:15 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="4327.html">Christian Szegedy: "Lagrangian multipliers and neural learning?"</a>
+<li><strong>Previous message:</strong> <a href="4325.html">Adrian Tymes: "Re: Difficult Explanations"</a>
+<li><strong>In reply to:</strong> <a href="4290.html">Jeff Davis: "Re: I strongly disagree with Lee's answer"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4306.html">KPJ: "Re: I strongly disagree with Lee's answer"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4326">[ date ]</a>
+<a href="index.html#4326">[ thread ]</a>
+<a href="subject.html#4326">[ subject ]</a>
+<a href="author.html#4326">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Jeff Davis wrote:
+<br>
+<em>&gt; Good work Adrian, but, I'm scratching my head, because it seems to me that
+</em><br>
+<em>&gt; you missed the one sequence that represents the original puzzle.
+</em><br>
+<em>&gt; Contestant chooses door.  Host chooses a nonprize door from the unchosen
+</em><br>
+<em>&gt; two.  Contestant switches from his first choice to the other unrevealed
+</em><br>
+<em>&gt; door.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Am I missing something?
+</em><br>
+<p>I was leaving that one out since I thought everyone already knew that
+<br>
+one, but since you asked...
+<br>
+<p>Case E: Host reveals a door other than the one the contestant picked.
+<br>
+If the contestant picked a non-prize, host reveals the other non-prize,
+<br>
+and contestant switches (thus to the prize).  If contestant picked the
+<br>
+prize, host reveals a random non-prize, and contestant switches to the
+<br>
+other non-prize.
+<br>
+<p>Trial 1   2   3   4   5   Total WinRatio ExpectedWinRatio
+<br>
+CaseE 646 689 642 671 669 3371  0.6634   0.6666
+<br>
+<p>sub do_strategy_e {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# host reveals a non-prize door
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my ($picked,$prize) = @_;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ($picked != $prize) {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# host never reveals contestant's door if
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# contestant chose non-prize, so contestant switches
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# to prize
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $prize;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# host reveals random other door if contestant
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# chose prize, so contestant switches to the
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# other non-prize
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my $new_pick = pick_other_than($picked);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $new_pick;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+}
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="4327.html">Christian Szegedy: "Lagrangian multipliers and neural learning?"</a>
+<li><strong>Previous message:</strong> <a href="4325.html">Adrian Tymes: "Re: Difficult Explanations"</a>
+<li><strong>In reply to:</strong> <a href="4290.html">Jeff Davis: "Re: I strongly disagree with Lee's answer"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4306.html">KPJ: "Re: I strongly disagree with Lee's answer"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4326">[ date ]</a>
+<a href="index.html#4326">[ thread ]</a>
+<a href="subject.html#4326">[ subject ]</a>
+<a href="author.html#4326">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 10:00:05 MDT</em>
+</em>
+</small>
+</body>
+</html>

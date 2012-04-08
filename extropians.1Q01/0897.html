@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: META: tutorial: set up your own lunatic filter</title>
+<meta name="Author" content="Russell Whitaker (russell_whitaker@hotmail.com)">
+<meta name="Subject" content="META: tutorial: set up your own lunatic filter">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>META: tutorial: set up your own lunatic filter</h1>
+<!-- received="Thu Jan 11 00:58:28 2001" -->
+<!-- isoreceived="20010111075828" -->
+<!-- sent="Thu, 11 Jan 2001 07:57:32 -0000" -->
+<!-- isosent="20010111075732" -->
+<!-- name="Russell Whitaker" -->
+<!-- email="russell_whitaker@hotmail.com" -->
+<!-- subject="META: tutorial: set up your own lunatic filter" -->
+<!-- id="F303vLgAusVxONvzyJx00002479@hotmail.com" -->
+<strong>From:</strong> Russell Whitaker (<a href="mailto:russell_whitaker@hotmail.com?Subject=Re:%20META:%20tutorial:%20set%20up%20your%20own%20lunatic%20filter&In-Reply-To=&lt;F303vLgAusVxONvzyJx00002479@hotmail.com&gt;"><em>russell_whitaker@hotmail.com</em></a>)<br>
+<strong>Date:</strong> Thu Jan 11 2001 - 00:57:32 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0898.html">Wei Dai: "Re: Q: Ant colonies and capitalism?"</a>
+<li><strong>Previous message:</strong> <a href="0896.html">hal@finney.org: "Re: Fwd: Re: What is IT?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0914.html">Michael S. Lorrey: "Re: META: tutorial: set up your own lunatic filter"</a>
+<li><strong>Reply:</strong> <a href="0914.html">Michael S. Lorrey: "Re: META: tutorial: set up your own lunatic filter"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#897">[ date ]</a>
+<a href="index.html#897">[ thread ]</a>
+<a href="subject.html#897">[ subject ]</a>
+<a href="author.html#897">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Howdy.  For those uninterested in having their mailboxes
+<br>
+cluttered with lunatic rants, here's a tutorial on how
+<br>
+to set up a lunatic filter.
+<br>
+<p>This assumes that you receive your list mail through an
+<br>
+ISP running some flavor of Unix with a standard local MDA
+<br>
+(mail delivery agent) such as /bin/mail or /usr/local/bin/procmail.
+<br>
+(I do, but have it forwarded to Hotmail for convenience.)
+<br>
+<p>Make sure your shell account host has procmail available
+<br>
+for use (do a &quot;which procmail&quot; at a shell prompt).
+<br>
+If available:
+<br>
+<p>1.) Create directory ~/.procmail:
+<br>
+&nbsp;&nbsp;% mkdir ~/.procmail
+<br>
+<p>2.) Create file ~/.procmailrc with these contents
+<br>
+(modify with actual user values):
+<br>
+<p>PATH=/bin:/usr/bin:/usr/local/bin:/home/&lt;username&gt;/bin  # example path
+<br>
+PMDIR=$HOME/.procmail  # literal directory name: location of filter
+<br>
+rules and log file
+<br>
+MAILDIR=$HOME/mail    # example directory: filtered mail spooled here
+<br>
+DEFAULT=$HOME/inbox   # example default mailspool: could be 
+<br>
+/var/mail/&lt;username&gt; on some systems
+<br>
+LOGFILE=$PMDIR/procmail.log  # you'll want this for debugging
+<br>
+VERBOSE=off
+<br>
+SHELL=/bin/sh
+<br>
+INCLUDERC=$PMDIR/rc.devnull  # name of your procmail recipe file
+<br>
+COMSAT=off
+<br>
+<p>3.) In directory ~/.procmail, create your procmail recipes
+<br>
+file (in this case &quot;rc.devnull&quot;), with contents like this
+<br>
+(the exact example here being merely theoretical):
+<br>
+<p># save mail filtered on the &quot;From&quot; line match to $MAILDIR/joedees,
+<br>
+# for future amusement, or evidence.
+<br>
+:0
+<br>
+* ^From:.*<a href="mailto:joedees@addall.com?Subject=Re:%20META:%20tutorial:%20set%20up%20your%20own%20lunatic%20filter&In-Reply-To=&lt;F303vLgAusVxONvzyJx00002479@hotmail.com&gt;">joedees@addall.com</a>
+<br>
+joedees
+<br>
+<p>or
+<br>
+<p># simply discard mail from example destination
+<br>
+:0
+<br>
+* ^From:.*<a href="mailto:joedees@addall.com?Subject=Re:%20META:%20tutorial:%20set%20up%20your%20own%20lunatic%20filter&In-Reply-To=&lt;F303vLgAusVxONvzyJx00002479@hotmail.com&gt;">joedees@addall.com</a>
+<br>
+/dev/null
+<br>
+<p>4.) Create or modify your ~/.forward file to contain:
+<br>
+<p>&lt;username&gt;,   # usually, your local username
+<br>
+&quot;|IFS=' '&amp;&amp;exec /usr/local/bin/procmail -f-||exit 75 #&lt;username&gt;&quot;
+<br>
+<p>&quot;/usr/local/bin/procmail&quot; is a typical location; use the value of
+<br>
+&quot;which procmail&quot; above or &quot;/usr/bin/env procmail&quot; if your
+<br>
+system supports it.
+<br>
+<p>Some enlightened sysadmins actually have procmail
+<br>
+set up as the local MDA, in which case step #4 above is
+<br>
+unnecessary.
+<br>
+<p>At least one emotionally unbalanced person on this list
+<br>
+has threatened to change email addresses if list members
+<br>
+don't listen to his rants.  That's OK.  Once he/she shows
+<br>
+up and engages in similar rants, it's easy to add recipe lines
+<br>
+to ~/.procmail/rc.devnull.  It takes much less effort to
+<br>
+add the recipe than it does for that person to change email
+<br>
+addresses.  Let him/her waste time trying.
+<br>
+<p>Here's a reference if you're interested:
+<br>
+&quot;<a href="http://userpages.umbc.edu/~ian/procmail.html">http://userpages.umbc.edu/~ian/procmail.html</a>&quot;
+<br>
+<p>Have fun,
+<br>
+Russell
+<br>
+_________________________________________________________________
+<br>
+Get your FREE download of MSN Explorer at <a href="http://explorer.msn.com">http://explorer.msn.com</a>
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0898.html">Wei Dai: "Re: Q: Ant colonies and capitalism?"</a>
+<li><strong>Previous message:</strong> <a href="0896.html">hal@finney.org: "Re: Fwd: Re: What is IT?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0914.html">Michael S. Lorrey: "Re: META: tutorial: set up your own lunatic filter"</a>
+<li><strong>Reply:</strong> <a href="0914.html">Michael S. Lorrey: "Re: META: tutorial: set up your own lunatic filter"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#897">[ date ]</a>
+<a href="index.html#897">[ thread ]</a>
+<a href="subject.html#897">[ subject ]</a>
+<a href="author.html#897">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:56:18 MDT</em>
+</em>
+</small>
+</body>
+</html>

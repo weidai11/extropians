@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Decentralization and exhastive searches: mutual</TITLE>
+<META NAME="Author" CONTENT="hal@finney.org (hal@finney.org)">
+<META NAME="Subject" CONTENT="Re: Decentralization and exhastive searches: mutually exclusive?">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Decentralization and exhastive searches: mutually exclusive?</H1>
+<!-- received="Tue Aug  1 21:24:35 2000" -->
+<!-- isoreceived="20000802032435" -->
+<!-- sent="Tue, 1 Aug 2000 20:23:09 -0700" -->
+<!-- isosent="20000802032309" -->
+<!-- name="hal@finney.org" -->
+<!-- email="hal@finney.org" -->
+<!-- subject="Re: Decentralization and exhastive searches: mutually exclusive?" -->
+<!-- id="200008020323.UAA06206@finney.org" -->
+<!-- inreplyto="Decentralization and exhastive searches: mutually exclusive?" -->
+<STRONG>From:</STRONG> <A HREF="mailto:hal@finney.org?Subject=Re:%20Decentralization%20and%20exhastive%20searches:%20mutually%20exclusive?&In-Reply-To=&lt;200008020323.UAA06206@finney.org&gt;"><EM>hal@finney.org</EM></A><BR>
+<STRONG>Date:</STRONG> Tue Aug 01 2000 - 21:23:09 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2363.html">corporate black ice: "Re: Burning Man: Extropy/Transhuman Camp?"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2361.html">Eliezer S. Yudkowsky: "Re: Decentralization and exhastive searches: mutually exclusive?"</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="2296.html">Alex Future Bokov: "Decentralization and exhastive searches: mutually exclusive?"</A>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2362">[ date ]</A>
+<A HREF="index.html#2362">[ thread ]</A>
+<A HREF="subject.html#2362">[ subject ]</A>
+<A HREF="author.html#2362">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Alex Future Bokov wrote:
+<BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; -----BEGIN PGP SIGNED MESSAGE-----
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; Okay, this is a theoretical question that I'd like to ask without
+</EM><BR>
+<EM>&gt; getting bogged down in politics. I'm using Napster and Gnutella as
+</EM><BR>
+<EM>&gt; convenient examples and not because I approve or disapprove of either.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; 1. Gnutella--
+</EM><BR>
+<EM>&gt;         It's distributed and therefore robust. You cannot shut down
+</EM><BR>
+<EM>&gt;         gnutellanet by shutting down one, or ten, or a thousand servers.
+</EM><BR>
+<EM>&gt;         However, you cannot do exhaustive searches on it. The content
+</EM><BR>
+<EM>&gt;         you're looking for might be out there and yet not be guaranteed
+</EM><BR>
+<EM>&gt;         to show up on a search. Another disadvantage is that the
+</EM><BR>
+<EM>&gt;         searches make inefficient use of bandwidth.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; 2. Napster--
+</EM><BR>
+<EM>&gt;         It is exhaustive. For better or worse, you'll find every single
+</EM><BR>
+<EM>&gt;         instance of Michael_Jackson_Thriller.mp3 that anybody on the
+</EM><BR>
+<EM>&gt;         network is serving. However, the server/s that store the
+</EM><BR>
+<EM>&gt;         content listings and corresponding locations of the content are
+</EM><BR>
+<EM>&gt;         all under the control of one company, which means they are
+</EM><BR>
+<EM>&gt;         vulnerable to legal action, censorship, company-wide technical
+</EM><BR>
+<EM>&gt;         failure, corporate abuse, and attack by hackers.
+</EM><BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; So, what about combining the best of the two? Decentralization and
+</EM><BR>
+<EM>&gt; exhaustive searching? Is it a logical impossibility, or is it merely
+</EM><BR>
+<EM>&gt; something that hasn't been done yet?
+</EM><BR>
+<P>Freenet does do this to some extent.  It is a decentralized network which
+<BR>
+can hold data.  Each data item has a name or &quot;key&quot; which controls where
+<BR>
+it ends up in the network.  If you know the name of a data item you can
+<BR>
+then fetch it, and your fetch request will be routed to the same place
+<BR>
+so that it finds the data.
+<BR>
+<P>Presently you have to know the exact name of the item, which makes it
+<BR>
+less useful for music where you might want to search just by artist,
+<BR>
+album, or part of a song name.  The Freenet team is working on providing
+<BR>
+a method for searches to work.  It will use a different approach than
+<BR>
+gnutella, similar to fuzzy logic.  However it will not be 100% reliable
+<BR>
+and will still have the problem that you will not be guaranteed to find
+<BR>
+all data items that are in the network.
+<BR>
+<P>A simple approach to combine decentralization and reliable searches is
+<BR>
+to simply have a large number of servers, each of which replicate the
+<BR>
+entire database (or a substantial fraction of it).  An example might be
+<BR>
+the PGP key server infrastructure, with a dozen or so key servers each
+<BR>
+holding PGP public keys, periodically exchanging data to make sure all
+<BR>
+are obsolete.  The DNS root servers use a similar concept.  These are
+<BR>
+not fully decentralized, but the basic idea could probably scale up to
+<BR>
+having on the order of 100 or even 1000 servers, which would make it
+<BR>
+difficult to shut them down one by one.
+<BR>
+<P>Hal
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2363.html">corporate black ice: "Re: Burning Man: Extropy/Transhuman Camp?"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2361.html">Eliezer S. Yudkowsky: "Re: Decentralization and exhastive searches: mutually exclusive?"</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="2296.html">Alex Future Bokov: "Decentralization and exhastive searches: mutually exclusive?"</A>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2362">[ date ]</A>
+<A HREF="index.html#2362">[ thread ]</A>
+<A HREF="subject.html#2362">[ subject ]</A>
+<A HREF="author.html#2362">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:35:28 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

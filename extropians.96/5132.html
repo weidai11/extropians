@@ -1,0 +1,88 @@
+<!-- received="Tue Dec 31 06:58:14 1996 MST" -->
+<!-- sent="Tue, 31 Dec 1996 14:34:29 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: CRYPTO: Small cryptosystems" -->
+<!-- id="Pine.SOL.3.91.961231134133.8890A-100000@sun5" -->
+<!-- inreplyto="32C84C1B.615C@pobox.com" -->
+<title>extropians: Re: CRYPTO: Small cryptosystems</title>
+<h1>Re: CRYPTO: Small cryptosystems</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Tue, 31 Dec 1996 14:34:29 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#5132">[ date ]</a><a href="index.html#5132">[ thread ]</a><a href="subject.html#5132">[ subject ]</a><a href="author.html#5132">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="5133.html">Michael Lorrey: "Re: Brin on privacy"</a>
+<li> <b>Previous message:</b> <a href="5131.html">Max M: "Re: Techno, ahem, Electronic music"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Mon, 30 Dec 1996, Eliezer Yudkowsky wrote:<br>
+<p>
+John wrote:<br>
+<i>&gt; &gt; 2) In an algorithm that is large, complex and messy, it's very easy to make a  </i><br>
+<i>&gt; &gt;    blunder. When you add yet another wheel within a wheel you may think you're   </i><br>
+<i>&gt; &gt;    making it more secure, but you may be doing the opposite, it's hard to </i><br>
+<i>&gt; &gt;    know how the change will react with all the other parts of a very messy </i><br>
+<i>&gt; &gt;    algorithm. You may have actually have created a small hole in the system</i><br>
+<i>&gt; &gt;    through which an attacker can extract a little piece of information, </i><br>
+<i>&gt; &gt;    information he shouldn't have, information he can use to expand the hole </i><br>
+<i>&gt; &gt;    until he can drive a truck through it.</i><br>
+<p>
+Agreed. This certainly happens, and all the introductory crypto <br>
+literature is riddled with remarks that one should not mess with a given <br>
+algorithm, trying to "improve" it (apart from developing an algorithm from <br>
+scratch, while having zero cryptoanalytical experience), but I was trying to <br>
+sell something else.<br>
+<p>
+Clearly, a huge algorithm which is trivial to break can exist. However, <br>
+I was trying to argument about a clear-cut algorithm family, with several <br>
+parameters, and an easy way to benchmark them, both in theory and <br>
+practice. I've looked up IDEA, and indeed, it does not contain lookup <br>
+tables, while DES, GOST, Blowfish, etc. do. Little wonder, as IDEA <br>
+substitutes opaque tables with magical code.<br>
+<p>
+Consider a hypothetical computer, with code being about as succinct as an <br>
+average modern machine. Clearly, encryption cannot be done by a program <br>
+consisting of one instruction. Otoh a program the size of the entire <br>
+physical memory consisting of NOPs won't accomplish much, as well. A space <br>
+of all possible programs of given length will contain duds as well as <br>
+brilliant algorithms. The longer the program, the larger the space, the <br>
+more the absolute number of brilliant algorithms. A brilliant algorithm <br>
+can use opaque code with little data, or tiny code with a lot of magic <br>
+cookies in tables -- I'd say both can provide equally good encryption. <br>
+But while data can be created by a physical methods/automatisms, code <br>
+currently cannot. Data can be changed in the course of system evolution, <br>
+while code currently cannot, both SMC being a strong no-no, and the code <br>
+brittleness preventing this. So cryptosystems with opaque tables should win.<br>
+<p>
+What does it mean, if the data encoding the Hamiltonian is changed during <br>
+the system evolution? It can be thought executing a walk in the space of <br>
+possible Hamiltonians, or being a Hamiltonian of a higher order. I <br>
+conjecture it makes it much harder to break, as SMC is typically mightier <br>
+than plain code, albeit banned (but due to its complexity!).<br>
+ <br>
+<i>&gt; In the German "Enigma", they added a little "improvement" which made it</i><br>
+<i>&gt; impossible for any letter to be encoded as itself.  That, essentially,</i><br>
+<i>&gt; is how the Allies cracked it.</i><br>
+<p>
+It was a bit more complicated than that. In the excellent book by Andrew <br>
+Hodges "Alan Turing -- the enigma" the life and works of this, sadly, <br>
+little-known scientist, is described nicely. (Hint: Andrew Hodges has <br>
+created a web site, as well).<br>
+<p>
+ciao,<br>
+'gene<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="5133.html">Michael Lorrey: "Re: Brin on privacy"</a>
+<li> <b>Previous message:</b> <a href="5131.html">Max M: "Re: Techno, ahem, Electronic music"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

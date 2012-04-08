@@ -1,0 +1,78 @@
+<!-- received="Thu Aug 14 12:02:56 1997 MDT" -->
+<!-- sent="Thu, 14 Aug 1997 19:01:19 +0200 (MET DST)" -->
+<!-- name="Anders Sandberg" -->
+<!-- email="nv91-asa@nada.kth.se" -->
+<!-- subject="Re: Galaxy brain problem" -->
+<!-- id="199708141450.HAA20593@primenet.com" -->
+<!-- inreplyto="3.0.1.32.19970813203018.006c2a74@pop3.demon.co.uk" -->
+<title>extropians: Re: Galaxy brain problem</title>
+<h1>Re: Galaxy brain problem</h1>
+Anders Sandberg (<i>nv91-asa@nada.kth.se</i>)<br>
+<i>Thu, 14 Aug 1997 19:01:19 +0200 (MET DST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1904">[ date ]</a><a href="index.html#1904">[ thread ]</a><a href="subject.html#1904">[ subject ]</a><a href="author.html#1904">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1905.html">Anders Sandberg: "Re: Review of "The Spike""</a>
+<li> <b>Previous message:</b> <a href="1903.html">Anders Sandberg: "Re: Galaxy Brain Problem"</a>
+<li> <b>In reply to:</b> <a href="1866.html">Darren Reynolds: "Re: Galaxy brain problem"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="1849.html">Hal Finney: "Re: Galaxy brain problem"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Wed, 13 Aug 1997, Darren Reynolds wrote:<br>
+<p>
+<i>&gt; Suppose you have two designs for a system. Both have the same amount of</i><br>
+<i>&gt; energy. System 1 duplicates all data, whereas system 2 does not. Clearly,</i><br>
+<i>&gt; system 2 will have twice as much capacity for data, although not</i><br>
+<i>&gt; necessarily twice as much usefulness. (Both systems would prioritize</i><br>
+<i>&gt; resource usage to store the most valuable data first, and therefore system</i><br>
+<i>&gt; 2's second half would have less value its first, which should be the same</i><br>
+<i>&gt; as system 1's total.)</i><br>
+<i>&gt; </i><br>
+<i>&gt; I'm no statistician, but you can figure it out mathematically. You want the</i><br>
+<i>&gt; system with the greatest total value over the systems' anticipated</i><br>
+<i>&gt; lifespan. The value would be a sum of the values of each datum stored</i><br>
+<i>&gt; successfully at each instant in time. If you can figure out the value of</i><br>
+<i>&gt; each datum, and the probability of it being destroyed at a given moment,</i><br>
+<i>&gt; then you can integrate to get the total value of the system.</i><br>
+<p>
+OK, lets start by assuming all data is equally valuable (to make<br>
+things simple). The probability of a failure of a datum is p. System<br>
+one contains N datums, each with an extra copy, while system 2<br>
+contains 2N datums with no backup. Assume both systems have the same<br>
+lifespan t. In both systems memory would decay at rates<br>
+l*exp(-k*p^2*t)  and l*exp(-k*p*t) respectively (l is a<br>
+proportionality constant).<br>
+<p>
+Then the value of system one would be <br>
+<p>
+W1=kN(1-exp(-l*p^2 t))/lp^2<br>
+<p>
+and the value of system two would be <br>
+<p>
+W2=2kN(1-exp(-l*p*t))/lp<br>
+<p>
+In the long run, when t-&gt;infinity, W1 goes to kN/(lp^2) and W2 to<br>
+2kN/lp; for p&lt;1/2 (which is the likely scenario, nobody uses<br>
+devices which fails more often than not) system 1 is more valuable<br>
+than system 2. Error correction is apparently worth its price. <br>
+<p>
+-----------------------------------------------------------------------<br>
+Anders Sandberg                                      Towards Ascension!<br>
+nv91-asa@nada.kth.se         <a href="http://www.nada.kth.se/~nv91-asa/main.html">http://www.nada.kth.se/~nv91-asa/main.html</a><br>
+GCS/M/S/O d++ -p+ c++++ !l u+ e++ m++ s+/+ n--- h+/* f+ g+ w++ t+ r+ !y<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="1905.html">Anders Sandberg: "Re: Review of "The Spike""</a>
+<li> <b>Previous message:</b> <a href="1903.html">Anders Sandberg: "Re: Galaxy Brain Problem"</a>
+<li> <b>In reply to:</b> <a href="1866.html">Darren Reynolds: "Re: Galaxy brain problem"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="1849.html">Hal Finney: "Re: Galaxy brain problem"</a>
+<!-- reply="end" -->
+</ul>

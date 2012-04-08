@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: &quot;analog computer&quot; = useless hypothesi</title>
+<meta name="Author" content="Ken Clements (Ken@Innovation-On-Demand.com)">
+<meta name="Subject" content="Re: &quot;analog computer&quot; = useless hypothesis?">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: &quot;analog computer&quot; = useless hypothesis?</h1>
+<!-- received="Sat Mar 31 22:14:01 2001" -->
+<!-- isoreceived="20010401051401" -->
+<!-- sent="Sat, 31 Mar 2001 21:17:10 -0800" -->
+<!-- isosent="20010401051710" -->
+<!-- name="Ken Clements" -->
+<!-- email="Ken@Innovation-On-Demand.com" -->
+<!-- subject="Re: &quot;analog computer&quot; = useless hypothesis?" -->
+<!-- id="3AC6B9D6.6D102BBD@Innovation-On-Demand.com" -->
+<!-- inreplyto="3AC66EF7.B8A6E1BC@home.com" -->
+<strong>From:</strong> Ken Clements (<a href="mailto:Ken@Innovation-On-Demand.com?Subject=Re:%20&quot;analog%20computer&quot;%20=%20useless%20hypothesis?&In-Reply-To=&lt;3AC6B9D6.6D102BBD@Innovation-On-Demand.com&gt;"><em>Ken@Innovation-On-Demand.com</em></a>)<br>
+<strong>Date:</strong> Sat Mar 31 2001 - 22:17:10 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1810.html">Anders Sandberg: "Re: UFO Raël and the definition privilege"</a>
+<li><strong>Previous message:</strong> <a href="1808.html">Jim Fehlinger: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>In reply to:</strong> <a href="1804.html">Jim Fehlinger: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1813.html">scerir: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>Reply:</strong> <a href="1813.html">scerir: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>Reply:</strong> <a href="1815.html">J. R. Molloy: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>Reply:</strong> <a href="1818.html">John Clark: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>Reply:</strong> <a href="1824.html">Jim Fehlinger: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1809">[ date ]</a>
+<a href="index.html#1809">[ thread ]</a>
+<a href="subject.html#1809">[ subject ]</a>
+<a href="author.html#1809">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Jim Fehlinger wrote:
+<br>
+<p><em>&gt; These are extraordinarily suble issues, which the most brilliant
+</em><br>
+<em>&gt; minds in the world have yet to come to grips with completely.
+</em><br>
+<em>&gt; There's no point in trying to divide this list, or any
+</em><br>
+<em>&gt; other realm of discourse, into tribes of &quot;analogists&quot; and
+</em><br>
+<em>&gt; &quot;digitalists&quot; and then picking sides.
+</em><br>
+<em>&gt;
+</em><br>
+<p>Well put.  This is one of those differences that does *not* make a difference.
+<br>
+Many times over the years I have had to remind my digital design engineers that
+<br>
+the circuits they are creating just look digital within a bounded set of
+<br>
+circumstances, and that without careful controls, the manufacturing guys can
+<br>
+screw up those circumstances.  Then I have also had to remind my linear circuit
+<br>
+designers that electrons can cross transistors one at a time, and that very small
+<br>
+signals will be mixed with shot noise that is a random quantum effect.  All of
+<br>
+circuit theory is a special case of Maxwell's equations, and my physicist friends
+<br>
+keep reminding me that those equations only hold on a scale big enough to save me
+<br>
+from sitting there summing Feynman diagrams.
+<br>
+<p>Another problem is that most people assume that analog equals continuous.  This
+<br>
+is not necessarily true (Eugene pointed out that we have yet to find a way to
+<br>
+make it true).  I can have a system that represents, say LP grove width, with an
+<br>
+analog signal having discreet allowable voltage levels.  When the grove gets
+<br>
+wider, the voltage gets higher; just because it does it in steps (quantized) does
+<br>
+not mean it is digital.  If it did, we would have to argue at what step size do
+<br>
+you cross the line.  If I connect two such quantized analog signals into a
+<br>
+multiplying amplifier, it will still give me a quantized analog output, but it
+<br>
+may have to make some internal roundoff decisions that are of a digital nature if
+<br>
+it does not have the dynamic range to preserve all the information.
+<br>
+<p>Contrast the example above with a device that is more clearly on the digital
+<br>
+side.  Here I read a stream of ones and zeros that encode a signal level.  As the
+<br>
+signal becomes stronger and weaker, the pattern of ones and zeros changes, but
+<br>
+one or zero voltage levels do not.  If I want to multiply two of these values
+<br>
+together, I can send the patterns to a digital device that may make the same
+<br>
+roundoff decisions as above, but in this case, it could also expand the length of
+<br>
+the patterns, and preserve all the information (presuming I can trade off time or
+<br>
+have a means to increase bandwidth).
+<br>
+<p>Likewise, digital does not necessarily mean mathematically perfect.  If a chip
+<br>
+salesman came to me and tried to sell me gates that only gave the mathematically
+<br>
+correct result %75 of the time, I would show him the way to door, but if on the
+<br>
+way to the door, he told me that they were cheap and 1000 times faster than any
+<br>
+other, I would stop and get out my check book.  It is well known that reliable
+<br>
+systems can be made out of unreliable parts, which starts to make them look like
+<br>
+systems of analog stuff again.
+<br>
+<p>F. Dyson's argument about having plenty of effectively continuous state levels
+<br>
+near the end of the Universe doesn't do much for me because (1) I do not believe
+<br>
+any projections past Singularity and (2) he has to let his system get arbitrarily
+<br>
+large to get the states, which means that speed of light restrictions would cause
+<br>
+computation to grind to a virtual halt anyway.  As to the noncomputable numbers
+<br>
+argument, if the result of solving some equation is Pi, Macsyma or Mathematica is
+<br>
+going to tell me the answer is Pi, or give me an infinite series to sum for it.
+<br>
+Works for me.
+<br>
+<p>The main point is that the analog/digital difference only makes a difference in
+<br>
+special cases, and in the big picture does not get you anything useful.  So go
+<br>
+ahead J. R., add it to the list.
+<br>
+<p>-Ken
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1810.html">Anders Sandberg: "Re: UFO Raël and the definition privilege"</a>
+<li><strong>Previous message:</strong> <a href="1808.html">Jim Fehlinger: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>In reply to:</strong> <a href="1804.html">Jim Fehlinger: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1813.html">scerir: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>Reply:</strong> <a href="1813.html">scerir: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>Reply:</strong> <a href="1815.html">J. R. Molloy: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>Reply:</strong> <a href="1818.html">John Clark: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<li><strong>Reply:</strong> <a href="1824.html">Jim Fehlinger: "Re: &quot;analog computer&quot; = useless hypothesis?"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1809">[ date ]</a>
+<a href="index.html#1809">[ thread ]</a>
+<a href="subject.html#1809">[ subject ]</a>
+<a href="author.html#1809">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:59:44 MDT</em>
+</em>
+</small>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- received="Fri Aug 22 10:39:52 1997 MDT" -->
+<!-- sent="Fri, 22 Aug 1997 12:09:23 -0400" -->
+<!-- name="Carl Feynman" -->
+<!-- email="carlf@atg.com" -->
+<!-- subject="Re: COMP: A DPA of VPU's to replace CPU's?" -->
+<!-- id="2.2.32.19970822160923.00b3d278@atg.com" -->
+<!-- inreplyto="COMP: A DPA of VPU's to replace CPU's?" -->
+<title>extropians: Re: COMP: A DPA of VPU's to replace CPU's?</title>
+<h1>Re: COMP: A DPA of VPU's to replace CPU's?</h1>
+Carl Feynman (<i>carlf@atg.com</i>)<br>
+<i>Fri, 22 Aug 1997 12:09:23 -0400</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2340">[ date ]</a><a href="index.html#2340">[ thread ]</a><a href="subject.html#2340">[ subject ]</a><a href="author.html#2340">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2341.html">Rick Knight: "Microbe Fossils-Mars"</a>
+<li> <b>Previous message:</b> <a href="2339.html">Tony Hollick: "(no subject)"</a>
+<li> <b>Maybe in reply to:</b> <a href="2311.html">YakWaxx@aol.com: "COMP: A DPA of VPU's to replace CPU's?"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="2376.html">YakWaxx@aol.com: "Re: COMP: A DPA of VPU's to replace CPU's?"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+At 01:54 PM 8/21/97 -0400, YakWaxx@aol.com wrote:<br>
+<p>
+<i>&gt;Now I need to know:</i><br>
+<i>&gt;</i><br>
+<i>&gt;Has it been done before?</i><br>
+<p>
+Yes.  You have described the Connection Machine, models CM-1 and CM-2,<br>
+manufactured by the Thinking Machines Corporation of Cambridge Massachusetts<br>
+from 1984 to 1990, and designed by yours truly and some other people. Also<br>
+the MasPar NCube and the Meiko Computing Surface, and a bunch of others, all<br>
+built during the same period.  They sold adequately, but mostly to the<br>
+military-industrial complex, so when the cold war ended, so did the sales.<br>
+  <br>
+<i>&gt;And will it work?</i><br>
+<p>
+Well, it seemed like a good idea at the time, but it turned out that the<br>
+right size for a processor is about 32 bits wide, not 1 or 4 bits, and it<br>
+turned out that the manufacturing techniques for RAM and processor were<br>
+different enough that you're better off putting them on seperate chips.<br>
+Then, given that you had designed a 32-bit processor on a chip, you might as<br>
+well give up on the central instruction broadcast trick and use a separate<br>
+instruction fetch engine on every chip, because it buys lots of flexibility<br>
+at little cost.  That's close enough to a regular microprocessor that you're<br>
+better off just buying them, and adding special-purpose logic for<br>
+interprocessor communication.  The upshot is the design of the CM-5 and<br>
+every other post-1990 large parallel computer: hundreds or thousands of<br>
+standard one-chip CPUs, each with their own memory, and some special-purpose<br>
+network hardware conecting them.<br>
+<p>
+--CarlF<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2341.html">Rick Knight: "Microbe Fossils-Mars"</a>
+<li> <b>Previous message:</b> <a href="2339.html">Tony Hollick: "(no subject)"</a>
+<li> <b>Maybe in reply to:</b> <a href="2311.html">YakWaxx@aol.com: "COMP: A DPA of VPU's to replace CPU's?"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="2376.html">YakWaxx@aol.com: "Re: COMP: A DPA of VPU's to replace CPU's?"</a>
+<!-- reply="end" -->
+</ul>

@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: &quot;Cybernetic Totalism?&quot;</title>
+<meta name="Author" content="Eugene Leitl (eugene.leitl@lrz.uni-muenchen.de)">
+<meta name="Subject" content="Re: &quot;Cybernetic Totalism?&quot;">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: &quot;Cybernetic Totalism?&quot;</h1>
+<!-- received="Sun Oct 15 12:24:40 2000" -->
+<!-- isoreceived="20001015182440" -->
+<!-- sent="Sun, 15 Oct 2000 20:07:38 -0700 (PDT)" -->
+<!-- isosent="20001016030738" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: &quot;Cybernetic Totalism?&quot;" -->
+<!-- id="14826.28922.143550.895370@lrz.uni-muenchen.de" -->
+<!-- inreplyto="b49y9zqec7j.fsf@sans04.nada.kth.se" -->
+<strong>From:</strong> Eugene Leitl (<a href="mailto:eugene.leitl@lrz.uni-muenchen.de?Subject=Re:%20&quot;Cybernetic%20Totalism?&quot;&In-Reply-To=&lt;14826.28922.143550.895370@lrz.uni-muenchen.de&gt;"><em>eugene.leitl@lrz.uni-muenchen.de</em></a>)<br>
+<strong>Date:</strong> Sun Oct 15 2000 - 21:07:38 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1173.html">Alex Future Bokov: "Re: A scary but HYPOTHETICAL question."</a>
+<li><strong>Previous message:</strong> <a href="1171.html">xgl: "Re: A scary but HYPOTHETICAL question."</a>
+<li><strong>In reply to:</strong> <a href="1157.html">Anders Sandberg: "Re: &quot;Cybernetic Totalism?&quot;"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1180.html">Samantha Atkins: "Re: &quot;Cybernetic Totalism?&quot;"</a>
+<li><strong>Reply:</strong> <a href="1180.html">Samantha Atkins: "Re: &quot;Cybernetic Totalism?&quot;"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1172">[ date ]</a>
+<a href="index.html#1172">[ thread ]</a>
+<a href="subject.html#1172">[ subject ]</a>
+<a href="author.html#1172">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Anders Sandberg writes:
+<br>
+<p><em> &gt; The question is how good the resulting code will be. Obviously, it
+</em><br>
+<em> &gt; won't be brittle - in fact, you have to find ways of coding that
+</em><br>
+<em> &gt; aren't brittle even in order to evolve code - but modularity,
+</em><br>
+<p>Indeed. In fact this was the reason I said &quot;grow a solution&quot; instead
+<br>
+of &quot;grow a program&quot;, as von Neumann type machine code doesn't meet two
+<br>
+most important criteria of a successful evolvable design: if we assume
+<br>
+a computer program mapping some input space to output space the space
+<br>
+of all possible programs is not percolated with long neutral-fitness
+<br>
+filaments (in fact quite the opposite, as most bit mutations will
+<br>
+break it horribly), and not entire mapping diversity can be found
+<br>
+within the volume of a small ball from some random point in program
+<br>
+space. This can only be partially compensated by a complex mutation
+<br>
+function, which traipses around the most obvious minefields and
+<br>
+potholes of the system (jumps are dangerous as is division, absolute
+<br>
+jumps are more dangerous than relative ones, as are tests,
+<br>
+etc.). Obviously not an elegant solution, if a solution at all.
+<br>
+<p>A parallel network of spiking excitatory/inhibitory automata with a
+<br>
+decaying connectivity on 3d lattice will clearly perform better here,
+<br>
+because (provided you also evolved the properties of individual
+<br>
+automata classes and the way the connectivity is being modified) it
+<br>
+typically homeostates its total energy (an equivalent of epilepsy
+<br>
+would be fatal in an industrial control application) nicely and tends
+<br>
+to degrade gracefully, when parts of it fail incrementally or are
+<br>
+being mutated.
+<br>
+<p><em> &gt; validation and extendability seem likely to suffer. How do you evolve
+</em><br>
+<em> &gt; an operating system or traffic controller that you trust? Even if the
+</em><br>
+<p>The notion of an OS has obviously to be revisited. You need something
+<br>
+which lets you run your evolutionary algorithms on a given
+<br>
+hardware. This basic set of patterns/virtual hardware infrastructure
+<br>
+is your &quot;OS&quot;. It is not necessarily something which needs to be
+<br>
+evolved. 
+<br>
+<p>You train a behaviour in a reality simulator or wiring the output to
+<br>
+the physical incarnation of machinery the circuit is going to control,
+<br>
+if an occasional mistake is affordable. A robot spray-painting a car
+<br>
+chassis needs to finish the best job in minimum time and movements
+<br>
+using the least amount of paint while not whacking into itself and
+<br>
+other things. Here you obviously have to use a reality simulator,
+<br>
+because the training process will either result in a mess or lots of
+<br>
+broken hardware or both. Once the system has developed a feel of self
+<br>
+and surroundings (or means to see, and understand that a hard surface
+<br>
+is something to avoid if you move at high velocities), you can leave
+<br>
+it out of its virtual playpen and let it fine-tune the learning on the
+<br>
+factory floor (due to its limited fidelity a reality simulator is only
+<br>
+good for coarse learning). Similiar things apply to a pilotless
+<br>
+fighter training a dogfight, only in a larger extent: hundred
+<br>
+megabucks worth of hardware are potentially at stake here.
+<br>
+<p><em> &gt; process is interactive, it seems to require a high degree of skill and
+</em><br>
+<em> &gt; ways of examining messy evolved code.
+</em><br>
+<p>Examining messy evolved code? Simple: you don't. (Unless you want to
+<br>
+learn some new tricks on a particularly simple example --
+<br>
+understanding more complex ones is difficult since they're doing
+<br>
+something nontrivial, orelse you wouldn't bother with making them in
+<br>
+the first place). You just have to sample the input space
+<br>
+representatively, and prove statistically that the given set of
+<br>
+outputs (system behaviour) meets your specs. This is not particularly
+<br>
+different from today's quality control, since formal proofs are rarely 
+<br>
+employed in the software industry reality.
+<br>
+<p>Evolutionary computation is obviously no panacea (though, as a
+<br>
+metamethod it can generate other methods, and is in principle
+<br>
+open-ended -- but we're not talking about operating in that
+<br>
+high-falutin' regime yet), but it can come very handy in a large class
+<br>
+of solutions typically painstakingly coded by highly paid specialists,
+<br>
+and result in less than satisfactory performance (navigation and
+<br>
+robotics, complex control, etc).
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1173.html">Alex Future Bokov: "Re: A scary but HYPOTHETICAL question."</a>
+<li><strong>Previous message:</strong> <a href="1171.html">xgl: "Re: A scary but HYPOTHETICAL question."</a>
+<li><strong>In reply to:</strong> <a href="1157.html">Anders Sandberg: "Re: &quot;Cybernetic Totalism?&quot;"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1180.html">Samantha Atkins: "Re: &quot;Cybernetic Totalism?&quot;"</a>
+<li><strong>Reply:</strong> <a href="1180.html">Samantha Atkins: "Re: &quot;Cybernetic Totalism?&quot;"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1172">[ date ]</a>
+<a href="index.html#1172">[ thread ]</a>
+<a href="subject.html#1172">[ subject ]</a>
+<a href="author.html#1172">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:50:17 MDT</em>
+</em>
+</small>
+</body>
+</html>

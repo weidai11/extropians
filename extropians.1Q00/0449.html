@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Audio Books</TITLE>
+<META NAME="Author" CONTENT="Harvey Newstrom (newstrom@newstaffinc.com)">
+<META NAME="Subject" CONTENT="Re: Audio Books">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Audio Books</H1>
+<!-- received="Sun Jan  9 10:54:43 2000" -->
+<!-- isoreceived="20000109175443" -->
+<!-- sent="Sun, 9 Jan 2000 12:54:48 -0500" -->
+<!-- isosent="20000109175448" -->
+<!-- name="Harvey Newstrom" -->
+<!-- email="newstrom@newstaffinc.com" -->
+<!-- subject="Re: Audio Books" -->
+<!-- id="003301bf5aca$ac4a3020$8f1924cf@raleigh.ibm.com" -->
+<!-- inreplyto="ef.ef60c2bd.25a9ab02@aol.com" -->
+<STRONG>From:</STRONG> Harvey Newstrom (<A HREF="mailto:newstrom@newstaffinc.com?Subject=Re:%20Audio%20Books&In-Reply-To=&lt;003301bf5aca$ac4a3020$8f1924cf@raleigh.ibm.com&gt;"><EM>newstrom@newstaffinc.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Sun Jan 09 2000 - 10:54:48 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="0450.html">Harvey Newstrom: "Re: Audio Books"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0448.html">Bryan Moss: "Re: the economics of transition to nanotech"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="0435.html">EvMick@aol.com: "Audio Books"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0450.html">Harvey Newstrom: "Re: Audio Books"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#449">[ date ]</A>
+<A HREF="index.html#449">[ thread ]</A>
+<A HREF="subject.html#449">[ subject ]</A>
+<A HREF="author.html#449">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+&lt;<A HREF="mailto:EvMick@aol.com?Subject=Re:%20Audio%20Books&In-Reply-To=&lt;003301bf5aca$ac4a3020$8f1924cf@raleigh.ibm.com&gt;">EvMick@aol.com</A>&gt; wrote on Sunday, January 09, 2000 4:12 am,
+<BR>
+<P><EM>&gt; I've just (re)discovered audio books..
+</EM><BR>
+<P>I loved these a few years ago when I was commuting 90 minutes each way to a
+<BR>
+consulting job.  I got more &quot;reading&quot; done that year than I had in a long
+<BR>
+time!  Try looking at your local library for audio books you can borrow for
+<BR>
+free to reduce your costs.
+<BR>
+<P><EM>&gt;  Today I  listened to Tom
+</EM><BR>
+<EM>&gt; Clancy's &quot;Every man A Tiger' from Oklahoma city to Effingham
+</EM><BR>
+Illinois....it
+<BR>
+<EM>&gt; was the easiest St. Louis Transistion I ever made..
+</EM><BR>
+<P>I grew up on a farm near Effingham, Illinois.
+<BR>
+<P><EM>&gt; Hows about some enterprising software type writing a program that would
+</EM><BR>
+turn
+<BR>
+<EM>&gt; a paperback book into a CD audio?
+</EM><BR>
+<P>I already use my Macintosh to do this.  I use it to make audio tapes of
+<BR>
+texts I download off the Internet, so I don't do much scanning for this
+<BR>
+purpose.
+<BR>
+<P>The Mac has built-in text-to-speech capabilities, and most text editors have
+<BR>
+a &quot;Read outloud&quot; command.  Just stick the sound output into a taperecorder,
+<BR>
+and you've got it made.
+<BR>
+<P>To add a little more control, I wrote my own little Applescript batch job.
+<BR>
+It does the following:
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;- choose the file to speak
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;- select length of each tape side (default is 45 minutes for my tapes)
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;- progress bar shows percentage complete
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;- progress bar estimates time left to speak
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;- progress box shows text of current sentence being spoken
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;- script stops before end-of-tape and prompts for turn-over or next tape
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;- script keeps track of tape/side number and shows what label to put on
+<BR>
+tapes
+<BR>
+<P>I wrote and debugged this in about an hour.  I tested it with about a year
+<BR>
+of use.
+<BR>
+<P><EM>&gt; EvMick
+</EM><BR>
+<EM>&gt; Effingham, Ill.
+</EM><BR>
+<P>(I grew up on a little farm just outside Effingham, Illinois.)
+<BR>
+<P><PRE>
+--
+Harvey Newstrom &lt;<A HREF="http://harveynewstrom.com">http://harveynewstrom.com</A>&gt;
+Certified Consultant,  Legal Hacker, Engineer, Research Scientist, Author.
+____________________________________________________________
+-- This is my script to create audio tapes from ASCII files --
+<P>-- Select file to speak
+<P>set thisfilename to (choose file with prompt &quot;Speak File:&quot;) as string
+set startfilename to 0
+repeat with i from 2 to (count of thisfilename) - 1
+ if character i of thisfilename is &quot;:&quot; then set startfilename to i + 1
+end repeat
+set thisfileshortname to characters startfilename through -1 of thisfilename
+as string
+set thisfile to (open for access thisfilename)
+tell application &quot;Finder&quot; to set thisfilesize to (get eof thisfile)
+<P>-- Select tape length
+<P>set lengthtime to 0
+set temptime to 45
+repeat while lengthtime = 0
+ activate
+ display dialog &quot;Pause for tape change every:&quot; buttons {&quot;&lt;&quot;, (temptime as
+string) &amp; &quot; minutes&quot;, &quot;&gt;&quot;} default button 2
+ set thisbutton to button returned of result
+ if thisbutton is equal to &quot;&lt;&quot; then
+  set temptime to temptime - 15
+ else if thisbutton is equal to &quot;&gt;&quot; then
+  set temptime to temptime + 15
+ else
+  set lengthtime to temptime
+ end if
+ if temptime ² 0 then
+  set temptime to 15
+ end if
+end repeat
+<P>-- Start progress bar
+<P>set thistape to 1
+set thisside to &quot;A&quot;
+set currentposition to 0
+set previouslyrecorded to 1
+tell application &quot;Finder&quot;
+ set myFile to file of (every process whose frontmost is true)
+ set comment of information window of myFile to &quot;Speaking:  \&quot;&quot; &amp;
+thisfileshortname &amp; &quot;\&quot;&quot; &amp; return &amp; &quot;Current Position:  1A:00:00 out
+of --:--:--&quot;
+ open information window of myFile
+end tell
+<P>-- speak entire file
+<P>set speaking to &quot;not done&quot;
+repeat while speaking is &quot;not done&quot;
+ set starttime to (current date)
+ set endtime to starttime + lengthtime * minutes
+ try
+  with timeout of lengthtime seconds
+   repeat while (current date) &lt; endtime
+    set thistext to (read thisfile until &quot;.&quot;)
+    set limit to (count of thistext) - 1
+    if limit &gt; 30 then
+     set limit to 30
+    end if
+    if limit &gt; 5 then
+     if (characters 1 through limit of thistext) contains return then
+      if character 1 of thistext is return then set thistext to (space &amp;
+(characters 2 through -1 of thistext)) as string
+      repeat with i from 2 to limit
+       if character i of thistext is return then set thistext to
+((characters 1 through (i - 1) of thistext) &amp; space &amp; (characters (i + 1)
+through -1 of thistext)) as string
+      end repeat
+     end if
+    end if
+    set currenttime to (current date)
+    set difftime to currenttime - starttime
+    set currentposition to currentposition + (length of thistext)
+    set thisminute to round (difftime / 60) rounding down
+    if thisminute &lt; 10 then set thisminute to &quot;0&quot; &amp; thisminute
+    set thissecond to round (difftime - thisminute * 60) rounding down
+    if thissecond &lt; 10 then set thissecond to &quot;0&quot; &amp; thissecond
+    set secondsdone to previouslyrecorded + difftime
+    set estimatedseconds to secondsdone * (thisfilesize / currentposition)
+    set estimatedtapes to round (estimatedseconds / 60 / lengthtime)
+rounding up
+    if estimatedtapes mod 2 is not 0 then
+     set estimatedtapes to (round (estimatedtapes / 2) rounding up) &amp; &quot;A&quot;
+    else
+     set estimatedtapes to estimatedtapes / 2 &amp; &quot;B&quot;
+    end if
+    set oddminutes to round ((estimatedseconds / 60) mod (lengthtime))
+rounding down
+    if oddminutes &lt; 10 then set oddminutes to &quot;0&quot; &amp; oddminutes
+    set oddseconds to round (estimatedseconds mod 60) rounding down
+    if oddseconds &lt; 10 then set oddseconds to &quot;0&quot; &amp; oddseconds
+    tell application &quot;Finder&quot;
+     set comment of information window of myFile to &quot;Speaking:  \&quot;&quot; &amp;
+thisfileshortname &amp; &quot;\&quot;&quot; &amp; return &amp; &quot;Current Position:  &quot; &amp; thistape &amp;
+thisside &amp; &quot;:&quot; &amp; thisminute &amp; &quot;:&quot; &amp; thissecond &amp; &quot; out of &quot; &amp; estimatedtapes
+&amp; &quot;:&quot; &amp; oddminutes &amp; &quot;:&quot; &amp; oddseconds &amp; return &amp; thistext
+    end tell
+    tell me to say thistext
+   end repeat
+  end timeout
+  if thisside is &quot;A&quot; then
+   set thisside to &quot;B&quot;
+  else
+   set thisside to &quot;A&quot;
+   set thistape to thistape + 1
+  end if
+  set previouslyrecorded to previouslyrecorded + (lengthtime * minutes)
+  activate
+  display dialog &quot;Start recording Tape &quot; &amp; thistape &amp; &quot; Side &quot; &amp; thisside
+buttons {&quot;Cancel&quot;, &quot;OK&quot;} default button 2
+<P> on error errorMessage number errorNumber -- Handle end-of-file, cancel
+button,  time-out or other errors
+  set speaking to &quot;Done!&quot;
+  activate
+  if errorNumber = -39 then -- end of file
+   try
+    set thistext to (read thisfile)
+    tell me to say thistext
+   on error
+   end try
+   tell application &quot;Finder&quot; to set comment of information window of myFile
+to &quot;Done speaking \&quot;&quot; &amp; thisfileshortname &amp; &quot;!&quot; &amp; return &amp; &quot;Ending Position:
+&quot; &amp; thistape &amp; thisside &amp; &quot;:&quot; &amp; thisminute &amp; &quot;:&quot; &amp; thissecond
+   play sound &quot;Done&quot;
+  else if errorNumber = -128 then -- cancel button
+   tell application &quot;Finder&quot; to set comment of information window of myFile
+to &quot;Cancelled speaking \&quot;&quot; &amp; thisfileshortname &amp; &quot;!&quot; &amp; return &amp; &quot;Current
+Position:  &quot; &amp; thistape &amp; thisside &amp; &quot;:&quot; &amp; thisminute &amp; &quot;:&quot; &amp; thissecond
+   play sound &quot;Synth Twang&quot;
+  else
+   display dialog errorMessage &amp; &quot;(&quot; &amp; errorNumber &amp; &quot;)&quot; buttons {&quot;OK&quot;}
+default button &quot;OK&quot; with icon 0
+  end if
+ end try
+<P>end repeat
+</PRE>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="0450.html">Harvey Newstrom: "Re: Audio Books"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0448.html">Bryan Moss: "Re: the economics of transition to nanotech"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="0435.html">EvMick@aol.com: "Audio Books"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0450.html">Harvey Newstrom: "Re: Audio Books"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#449">[ date ]</A>
+<A HREF="index.html#449">[ thread ]</A>
+<A HREF="subject.html#449">[ subject ]</A>
+<A HREF="author.html#449">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:02:10 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

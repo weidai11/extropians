@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Neuron Computational Requirements?</TITLE>
+<META NAME="Author" CONTENT="Robin Hanson (rhanson@gmu.edu)">
+<META NAME="Subject" CONTENT="Re: Neuron Computational Requirements?">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Neuron Computational Requirements?</H1>
+<!-- received="Thu Apr 20 07:48:09 2000" -->
+<!-- isoreceived="20000420134809" -->
+<!-- sent="Thu, 20 Apr 2000 09:40:47 -0400" -->
+<!-- isosent="20000420134047" -->
+<!-- name="Robin Hanson" -->
+<!-- email="rhanson@gmu.edu" -->
+<!-- subject="Re: Neuron Computational Requirements?" -->
+<!-- id="4.2.0.58.20000420085322.00ac7bc0@mason.gmu.edu" -->
+<!-- inreplyto="b491z4164aa.fsf@sans04.nada.kth.se" -->
+<STRONG>From:</STRONG> Robin Hanson (<A HREF="mailto:rhanson@gmu.edu?Subject=Re:%20Neuron%20Computational%20Requirements?&In-Reply-To=&lt;4.2.0.58.20000420085322.00ac7bc0@mason.gmu.edu&gt;"><EM>rhanson@gmu.edu</EM></A>)<BR>
+<STRONG>Date:</STRONG> Thu Apr 20 2000 - 07:40:47 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="1259.html">Spike Jones: "Re: SPACE: Beyond Apollo"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1257.html">Michael S. Lorrey: "[Fwd: HDT: Census 2000, The Southern Long Version]"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="1232.html">Anders Sandberg: "Re: Neuron Computational Requirements?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="1272.html">Robert Bradbury: "Re: Neuron Computational Requirements?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1258">[ date ]</A>
+<A HREF="index.html#1258">[ thread ]</A>
+<A HREF="subject.html#1258">[ subject ]</A>
+<A HREF="author.html#1258">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Anders Sandberg wrote:
+<BR>
+<EM>&gt; &gt; &gt; <A HREF="http://www.cacr.caltech.edu/Publications/annreps/annrep92/schutt.html">http://www.cacr.caltech.edu/Publications/annreps/annrep92/schutt.html</A>
+</EM><BR>
+<EM>&gt; &gt; proves that simulating a single neuron is not a trivial task.
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt;Definitely not trivial. ...
+</EM><BR>
+<EM>&gt;In most computational neuroscience models of neurons they are divided
+</EM><BR>
+<EM>&gt;into compartments treated as isopotential; they are each described by
+</EM><BR>
+<EM>&gt;their membrane potential, the concentrations of sodium, potassium,
+</EM><BR>
+<EM>&gt;calcium and sometimes chloride ions and the state of various ion
+</EM><BR>
+<EM>&gt;channels. The number of compartment varies a lot, 100,000 is on the
+</EM><BR>
+<EM>&gt;largest scale so far - we are quite limited by our lack of really good
+</EM><BR>
+<EM>&gt;morphological cell data not to mention electrophysiological data.
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt;Other chemical processes need to be added at the synapses, especially
+</EM><BR>
+<EM>&gt;for plasticity models. A fellow researcher made a simplified (!) model
+</EM><BR>
+<EM>&gt;involving just 30-40 chemicals (many of which were variously
+</EM><BR>
+<EM>&gt;phosphorylated states of a protein) of the long term potentiation
+</EM><BR>
+<EM>&gt;phenomenon.
+</EM><BR>
+<EM>&gt;
+</EM><BR>
+<EM>&gt;Yes, neurons are much more complex than simple transistors. But it is
+</EM><BR>
+<EM>&gt;not obvious that all this complexity makes them *much* more complex -
+</EM><BR>
+<EM>&gt;there are clever simplifications ... described more compactly
+</EM><BR>
+<EM>&gt;using a phenomenological model.
+</EM><BR>
+<P>Wow.  It looks like Anders has learned enough about this field to
+<BR>
+start to answer the questions I'm most interested in.  So let me now
+<BR>
+try to express my questions more clearly in the hopes of inspiring
+<BR>
+Anders and others to answer them.
+<BR>
+<P>Robert Bradbury supported Billy Brown in this thread, saying &quot;*when*
+<BR>
+one understands exactly what it is the neurons are `computing', you
+<BR>
+can develop software and hardware that do it more effectively.&quot;
+<BR>
+Therefore Morevac's estimates using the parts of the brain he
+<BR>
+understands are reasonable estimates for CPU requirements of the
+<BR>
+whole brain when we understand what all brain parts compute.
+<BR>
+<P>This argument seems correct to me, but beside the most interesting
+<BR>
+point.  Estimating how cheap it will be in CPU terms to simulate
+<BR>
+a brain &quot;eventually&quot; seems like asking how cheap anything will be
+<BR>
+&quot;eventually&quot; -- eventually may never come if improvement continues
+<BR>
+on and on, and even if eventually does come its not clear why
+<BR>
+that estimate is of interest now.
+<BR>
+<P>To me the most interesting questions are how good uploading technology
+<BR>
+is now, how fast it is improving, and when therefore uploading may
+<BR>
+be feasible.  The whole point of the uploading strategy to achieving
+<BR>
+artificial intelligence is to port the software of a human brain
+<BR>
+*without* understanding how it works.  The simplest strategy of this
+<BR>
+sort is to just understand how each type of neuron works, and scan a
+<BR>
+brain noting which neurons are of which types and are connected to
+<BR>
+which other neurons.
+<BR>
+<P>Focusing on this neuron-level strategy, I want estimates for five
+<BR>
+parameters.  Two are static parameters:
+<BR>
+<P>1) Neuron Inventory -- The number of distinct types of neurons, and
+<BR>
+the number of each type in a typical human brain.
+<BR>
+<P>3) Resolution required -- The spatial/chemical resolution of a scanning
+<BR>
+technology that would be required to sufficiently reliably distinguish
+<BR>
+between the types of neurons, and to distinguish which neurons connect
+<BR>
+to which others via which kinds of synapses.  (Assume one is repeated
+<BR>
+slicing and scanning a cryogenically frozen brain.)
+<BR>
+<P>Three parameters are dynamic, about *rates* of progress of these:
+<BR>
+<P>1) Neuron types modeled -- The fraction of neuron types for which
+<BR>
+we have reasonable computational models at *any* level of complexity.
+<BR>
+That is, where we have run such models and seen that they correspond
+<BR>
+reasonably closely to the behavior of actual neurons of that type.
+<BR>
+<P>2) Average CPU/RAM per neuron -- A weighted average across neuron
+<BR>
+types of the CPU/RAM requirements for simulating each neuron type.
+<BR>
+The weights should be according to the fraction of each type of
+<BR>
+neuron in a human brain.
+<BR>
+<P>3) Scanning costs -- The time/dollar cost per area scanned of scanning
+<BR>
+at the resolution required for uploading.  Costs of scanning at
+<BR>
+other resolutions may be interesting if time trends in them can be
+<BR>
+more accurately estimates, and if one can estimate a scaling
+<BR>
+relationship between the costs of scanning at different resolutions.
+<BR>
+<P><P>The progress estimate of neuron types modeled help us estimate
+<BR>
+when it will be possible to upload at any cost, while the other
+<BR>
+estimates (together with estimates of how fast CPU/RAM costs fall)
+<BR>
+help us estimate how fast the cost of uploading is falling with time.
+<BR>
+<P>Anders, tell me if I'm wrong, but it strikes me that we may well have
+<BR>
+enough experience modeling neurons to start to estimate these parameters.
+<BR>
+If so, constructing such estimates of when uploading will be feasible
+<BR>
+and how fast costs will fall seems a very high priority to me.
+<BR>
+<P><P><P><P><P><P><P><P>Robin Hanson  <A HREF="mailto:rhanson@gmu.edu?Subject=Re:%20Neuron%20Computational%20Requirements?&In-Reply-To=&lt;4.2.0.58.20000420085322.00ac7bc0@mason.gmu.edu&gt;">rhanson@gmu.edu</A>  <A HREF="http://hanson.gmu.edu">http://hanson.gmu.edu</A>
+<BR>
+Asst. Prof. Economics, George Mason University
+<BR>
+MSN 1D3, Carow Hall, Fairfax VA 22030
+<BR>
+703-993-2326  FAX: 703-993-2323
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="1259.html">Spike Jones: "Re: SPACE: Beyond Apollo"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="1257.html">Michael S. Lorrey: "[Fwd: HDT: Census 2000, The Southern Long Version]"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="1232.html">Anders Sandberg: "Re: Neuron Computational Requirements?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="1272.html">Robert Bradbury: "Re: Neuron Computational Requirements?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#1258">[ date ]</A>
+<A HREF="index.html#1258">[ thread ]</A>
+<A HREF="subject.html#1258">[ subject ]</A>
+<A HREF="author.html#1258">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:09:38 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

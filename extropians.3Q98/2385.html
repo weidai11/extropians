@@ -1,0 +1,103 @@
+<!-- received="Mon Sep 14 13:10:57 1998 MDT" -->
+<!-- sent="Mon, 14 Sep 1998 12:09:45 -0700" -->
+<!-- name="Hal Finney" -->
+<!-- email="hal@rain.org" -->
+<!-- subject="Re: Quantum computing" -->
+<!-- id="199809141909.MAA30366@hal.sb.rain.org" -->
+<!-- inreplyto="Quantum computing" -->
+<!-- version=1.10, linesinbody=61 -->
+<html><head><title>extropians: Re: Quantum computing</title>
+<meta name=author content="Hal Finney">
+<link rel=author rev=made href="mailto:hal@rain.org" title ="Hal Finney">
+</head><body>
+<h1>Re: Quantum computing</h1>
+Hal Finney (<i>hal@rain.org</i>)<br>
+<i>Mon, 14 Sep 1998 12:09:45 -0700</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2385">[ date ]</a><a href="index.html#2385">[ thread ]</a><a href="subject.html#2385">[ subject ]</a><a href="author.html#2385">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2386.html">[ Next ]</a><a href="2384.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2377.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Eliezer S. Yudkowsky, &lt;sentience@pobox.com&gt;, writes:
+<br>
+<a href="2377.html#2385qlink1">&gt; Hal Finney wrote:</a><br>
+<i>&gt; &gt; Quantum computing does extend the class of problems known to be solvable</i><br>
+<i>&gt; &gt; in polynomial time, but it does not establish that P=NP using such</i><br>
+<i>&gt; &gt; machines.  Factoring has not been shown to be NP-complete.</i><br>
+<i>&gt;</i><br>
+<i>&gt; NP stands for Nondeterministic Polynomial.  Given the right physical</i><br>
+<i>&gt; architecture (each eigenstate is a separate thread, just like reality itself),</i><br>
+<i>&gt; then each qubit could directly represent the magic-coin-flip bit of an NP algorithm.</i><br>
+
+<p>
+<a name="2386qlink1">This sounds correct as far as it goes, but it neglects one crucial aspect
+of quantum computing: getting an answer out of the machine with a large
+probability (or in a large fraction of universes, in the many-worlds
+interpretation).</a>
+
+<p>
+Typically the QC is put into an initial state as a superposition of all
+possible inputs and then runs through the problem so that the resulting
+state is a similar superposition of all possible answers.  In this sense
+it would seem that the QC, taken as a whole over all branches/universes,
+is able to solve all NP problems.  The problem is that the answer is in
+only one branch.  If you just measure the output register, you get state
+function collapse and the probability that you will see the desired
+answer is too small.  So actually the QC is not effectivelly able to
+work as an NP problem solver.
+
+<p>
+What has to be done is to maintain coherence and do some trick to
+amplify the probability of the right answer.  Such tricks have been
+discovered for factoring and discrete logs (Shor's algorithm) and for
+search (Grover's algorithm).  But they are complex and technical and do
+not apply to general problems.
+
+<p>
+<a href="2377.html#2385qlink2">&gt; &gt; Robin Hanson had an interesting article on the polymath list speculating</a><br>
+<i>&gt; &gt; that quantum computing could theoretically speed up AI very dramatically.</i><br>
+<i>&gt; &gt; This only works if AI can be expressed as a massive search problem,</i><br>
+<i>&gt; &gt; consolidating many small problems into very large superproblems.  Search</i><br>
+<i>&gt; &gt; of n items for an optimum can be done in sqrt(n) time using QCs so it</i><br>
+<i>&gt; &gt; is necessary to work on very large problems to get effective speedups.</i><br>
+<i>&gt;</i><br>
+<i>&gt; As far as I can tell, qubit-chunk QC doesn't help AI at all.  If Hanson can</i><br>
+<i>&gt; figure out how to get sqrt(n) out of it, he's way ahead of me.  I haven't</i><br>
+<i>&gt; finished the QCL language spec, but I can't visualize doing anything but very</i><br>
+<i>&gt; dense mathematical problems.  Maybe some network-optimization problems could</i><br>
+<i>&gt; be encoded, but I can't see, say, quantum Deep Blue.</i><br>
+
+<p>
+The sqrt(n) speedup is due to Grover's algorithm, and I have to admit
+that I was not able to understand Grover's paper.  He repeatedly does
+some kind of transform, each time slightly amplifying the probability of
+finding the right answer when you read the register.  You do this sqrt(n)
+times and then you can read the output register with a good probability
+of success.
+
+<p>
+A popularized discussion of Grover's algorithm and its application
+to cryptography is at <a href="http://jya.com/qshake.htm">http://jya.com/qshake.htm</a>.  There was also an
+article in the August 7 issue of Science.  BTW the new government
+standard algorithm to replace the DES, called AES, requires support
+for 256 bit keys, apparently at least in part because of fear of QCs.
+It would still take 2^128 work for a QC to find such a key, which is
+considered to be safe enough.
+
+<p>
+Hal
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2386.html">[ Next ]</a><a href="2384.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2377.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

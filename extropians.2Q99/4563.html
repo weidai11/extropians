@@ -1,0 +1,165 @@
+<!-- received="Sat Jun 26 20:55:28 1999 MDT" -->
+<!-- sent="Sat, 26 Jun 1999 19:53:07 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: uploading" -->
+<!-- id="14197.35578.955415.820375@lrz.de" -->
+<!-- inreplyto="199906261823.LAA10652@finney.org" -->
+<!-- version=1.10, linesinbody=114 -->
+<html><head><title>extropians: Re: uploading</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Re: uploading</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sat, 26 Jun 1999 19:53:07 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4563">[ date ]</a><a href="index.html#4563">[ thread ]</a><a href="subject.html#4563">[ subject ]</a><a href="author.html#4563">[ author ]</a>
+<!-- next="start" -->
+<li><a href="4564.html">[ Next ]</a><a href="4562.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="4540.html">hal@finney.org</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+hal@finney.org writes:
+ 
+<p>
+<a href="4540.html#4563qlink1"> &gt; That may be true in some circumstances, but it's not clear what the</a><br>
+<i> &gt; ultimate architecture will be.  There may be tradeoffs or economic</i><br>
+<i> &gt; pressures which force us to be a little more parsimonious with our</i><br>
+<i> &gt; processors.</i><br>
+ 
+<p>
+Even with nanotechnology, one cannot clock individual processors very
+high (let's say no more than 100 GHz), and brain's massive parallelism 
+easily compensates for slower components. Moreover, we *know* what the 
+optimal computer architecture is (Nanotechnology 9 (1998)
+pp. 162-176). It is crystalline computation a la cellular automaton.
+ 
+<p>
+<a href="4540.html#4563qlink2"> &gt; Even where we do have enough resources for an optimally secure OS,</a><br>
+
+<p>
+Edge-of-chaos cellular automata cannot be programmed in conventional
+languages. I very much doubt there will at all be something like an
+BorgOS. 
+
+<p>
+<a href="4540.html#4563qlink3"> &gt; Parallel processor systems work well with local interactions, but when</a><br>
+<i> &gt; there is a need for global effects they slow way down.  After each step</i><br>
+
+<p>
+There cannot be any global effects in a relativistic universe. It can
+only happen if you simulate a physical system at a scale where
+simulation ticks are long enough that light propagation appears
+simultaneous on the system scale. Which should not be a problem with a 
+proper networking architecture supporting broadcasting on a 3d (or
+higher-dimensional) lattice. (For obvious reasons, crossbar
+architectures cannot scale to high node numbers).
+
+<p>
+<a href="4540.html#4563qlink4"> &gt; of the calculation, every processor has to stop and wait for any messages</a><br>
+<i> &gt; to come in from distant processors in the network.  Then they can go on</i><br>
+<i> &gt; to the next step.  Most of the time there aren't any such messages, but</i><br>
+<i> &gt; they have to wait anyway.  This ends up running very inefficiently, and</i><br>
+<i> &gt; it gets worse as the network grows.</i><br>
+
+<p>
+In physical implementations the long-range interactions, being less
+important, can sometimes be omitted without a significant loss of accuracy.
+ 
+<p>
+The obvious solution e.g for Coulomb forces in a MD simulation is to
+tesselate the simulation box into roughly atom-sized voxels, assigning 
+an individual "processor" with hardwired physical rules letting the
+electrostatics propagate as voxels of physical vacuum do. A kind of
+raycasting for physical forces. The same technique would work for an
+artificial reality renderer engine: implement gravity, finite elements 
+and light propagation as cellular automaton rules, and cast it in
+molecular hardware. You can even run it without hardware
+synchronization, free-running.
+
+<p>
+<a href="4540.html#4563qlink5"> &gt; There is some wasted work here, but as long as the remote messages are</a><br>
+<i> &gt; not too frequent, you end up with a more efficient system, which means</i><br>
+<i> &gt; that it runs faster.</i><br>
+ 
+<p>
+Of course if the remote messages are rare your window of states for
+rollback becomes overwhelmingly huge. Since memory gobbles up atoms
+and occupies space (space is time with relativistic signalling) this
+looks like a pretty rotten strategy to me.
+ 
+<p>
+<a href="4540.html#4563qlink6"> &gt; Now, this architecture would not be a bad choice for simulating the brain.</a><br>
+<i> &gt; Most brain connections are local, but there are some long range neurons.</i><br>
+<i> &gt; You might do very well to run something like Time Warp and roll back</i><br>
+<i> &gt; the local state when a message comes in from a distant part of the brain.</i><br>
+ 
+<p>
+Why bother? Implement the physical connections directly in cellular
+automaton hardware, just like in the real wetware thing. This way delays
+function automatically: the spike takes time to propagate along the
+duct &amp; gets modulated along the way. With a freeze/slice/scan scenario 
+this is in fact a necessary first point of departure for an
+upload. Before you morph the thing you must have it running natively. 
+
+<p>
+The brain is a classical case of locally coupled massively parallel
+system. It makes absolutely no sense trying to map it to a sequential
+computer, unless you want to sacrifice speed for higher density, and
+implement connectivity virtually. This might make sense on an
+interstellar journey where there is time to kill, but would seem 
+foolish in an coevolutionary scenario. You'd be outmaneuvered real
+quick.  
+
+<p>
+<a href="4540.html#4563qlink7"> &gt; The interesting question is what effects this might have on consciousness.</a><br>
+<i> &gt; We have the "main path" of the brain calculation constantly moving</i><br>
+<i> &gt; forward, but at the same time there are a number of "side branches"</i><br>
+<i> &gt; where segments of the brain run off and do calculations that later turn</i><br>
+<i> &gt; out to have been mistaken (as in the run from 2102 to 2108 above).</i><br>
+<i> &gt; Would these side branches cause momentary bits of consciousness?</i><br>
+<i> &gt; Would these conscious threads then be erased when we do the rollback?</i><br>
+<i> &gt; And would we be aware of these effects if we were run on a Time Warp</i><br>
+<i> &gt; architecture?</i><br>
+<i> &gt; </i><br>
+<i> &gt; In some sense we can argue that there would be no perceptible effects.</i><br>
+<i> &gt; Certainly no one would be able to say anything about it (we would wait</i><br>
+<i> &gt; for any late messages to arrive before actually doing any output, so</i><br>
+<i> &gt; we would never undo anything we started to say).  So it would seem that</i><br>
+<i> &gt; there must be a conscious entity which is unaware of any effects caused</i><br>
+<i> &gt; by Time Warp.</i><br>
+ 
+<p>
+What I really wonder is whether the rules for the neural CA could be 
+sparse enough to allow implementing a HashLife kind of technique. Of
+course Conway's Life is not an EOC CA...
+
+<p>
+<a href="4540.html#4563qlink8"> &gt; On the other hand, maybe there are additional entities which have only</a><br>
+<i> &gt; a transient existence and which are constantly being snuffed out.  The</i><br>
+<i> &gt; "main path" consciousness would not be aware of these, but they might be</i><br>
+<i> &gt; said to be real nonetheless.  In effect, we could be creating and killing</i><br>
+<i> &gt; thousands of variants of ourselves every second.</i><br>
+<i> &gt; </i><br>
+<i> &gt; I think this is one performance optimization which even some hard-nosed</i><br>
+<i> &gt; computationalists would hesitate to embrace.  On the other hand, if it</i><br>
+<i> &gt; turns out to be more efficient, there may be pressure to use it.  And</i><br>
+<i> &gt; after all, nobody who does ever reports anything untoward.  It is another</i><br>
+<i> &gt; example of how philosophy will collide with practicality once these</i><br>
+<i> &gt; technologies become possible.</i><br>
+<i> &gt; </i><br>
+<i> &gt; Hal</i><br>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="4564.html">[ Next ]</a><a href="4562.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="4540.html">hal@finney.org</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

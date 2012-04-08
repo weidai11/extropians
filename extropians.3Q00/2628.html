@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Revealed at last... the Echelon spammer.</TITLE>
+<META NAME="Author" CONTENT="Alex Future Bokov (alexboko@umich.edu)">
+<META NAME="Subject" CONTENT="Revealed at last... the Echelon spammer.">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Revealed at last... the Echelon spammer.</H1>
+<!-- received="Mon Aug  7 20:56:52 2000" -->
+<!-- isoreceived="20000808025652" -->
+<!-- sent="Mon, 7 Aug 2000 22:58:03 -0400 (EDT)" -->
+<!-- isosent="20000808025803" -->
+<!-- name="Alex Future Bokov" -->
+<!-- email="alexboko@umich.edu" -->
+<!-- subject="Revealed at last... the Echelon spammer." -->
+<!-- id="Pine.GSO.4.21.0008072244330.4523-100000@jane.itd.umich.edu" -->
+<STRONG>From:</STRONG> Alex Future Bokov (<A HREF="mailto:alexboko@umich.edu?Subject=Re:%20Revealed%20at%20last...%20the%20Echelon%20spammer.&In-Reply-To=&lt;Pine.GSO.4.21.0008072244330.4523-100000@jane.itd.umich.edu&gt;"><EM>alexboko@umich.edu</EM></A>)<BR>
+<STRONG>Date:</STRONG> Mon Aug 07 2000 - 20:58:03 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2629.html">Spike Jones: "asteroid sample return"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2627.html">Dan Hook: "Re: Ebola"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2649.html">James Wetterau: "Re: Revealed at last... the Echelon spammer."</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2649.html">James Wetterau: "Re: Revealed at last... the Echelon spammer."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2628">[ date ]</A>
+<A HREF="index.html#2628">[ thread ]</A>
+<A HREF="subject.html#2628">[ subject ]</A>
+<A HREF="author.html#2628">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+#! /usr/local/bin/perl
+<BR>
+# Echelon Spammer v0.1b
+<BR>
+#
+<BR>
+# License:   
+<BR>
+# This product is YeahBloodyRight!Ware. I've worked long and hard to write this
+<BR>
+# piece of code and I feel that I'm entitled to my rightful... YeahBloodyRight!
+<BR>
+#
+<BR>
+# Now then, with that out of the way...
+<BR>
+#
+<BR>
+# If the same &quot;ECHELON dictionary&quot; words keep appearing in everybody's .sig file
+<BR>
+# then they're trivial to filter out. So this script creates a random .sig file 
+<BR>
+# each time it runs. Toss it into your crontab or .login. Add some words of 
+<BR>
+# your own. Have fun! 
+<BR>
+#
+<BR>
+# Warning: It will blow away any existing .sig file, so back 'em up!
+<BR>
+#            -AFB
+<BR>
+<P>open (SIG, &quot;&gt;&quot;.(getpwuid($&lt;))[7].&quot;/.sig&quot;); # This line specifies your .sig file
+<BR>
+<P>@ewords = (&quot;FBI&quot;,&quot;CIA&quot;,&quot;NSA&quot;,&quot;IRS&quot;,&quot;ATF&quot;,&quot;BATF&quot;,&quot;DOD&quot;,&quot;Waco&quot;,&quot;Ruby Ridge&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;OKC&quot;,&quot;Oklahoma City&quot;,&quot;militia&quot;,&quot;gun&quot;,&quot;handgun&quot;,&quot;milgov&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;assault rifle&quot;,&quot;terrorism&quot;,&quot;bomb&quot;,&quot;drug&quot;,&quot;Horiuchi&quot;,&quot;Koresh&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Davidian&quot;,&quot;Kahl&quot;,&quot;Posse Comitatus&quot;,&quot;Randy Weaver&quot;,&quot;Vickie Weaver&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Special Forces&quot;,&quot;Linda Thompson&quot;,&quot;Special Operations Group&quot;,&quot;SOG&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;SOF&quot;,&quot;Delta Force&quot;,&quot;Constitution&quot;,&quot;Bill of Rights&quot;,&quot;Whitewater&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;POM&quot;,&quot;Park on Meter&quot;,&quot;Arkanside&quot;,&quot;Iran Contra&quot;,&quot;Oliver North&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Vince Foster&quot;,&quot;PROMIS&quot;,&quot;Mossad&quot;,&quot;NASA&quot;,&quot;M15&quot;,&quot;ONI&quot;,&quot;CID&quot;,&quot;AK47&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;M16&quot;,&quot;C4&quot;,&quot;Malcolm X&quot;,&quot;Revolution&quot;,&quot;Cherokee&quot;,&quot;Hillary&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Bill Clinton&quot;,&quot;Gore&quot;,&quot;George Bush&quot;,&quot;Wackenhut&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;Terrorist Task Force 160&quot;,&quot;Special Ops&quot;,&quot;12th Group&quot;,&quot;5th Group&quot;,
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;SF&quot;,&quot;Octopus&quot;);
+<BR>
+<P>$sizeEwords = @ewords;
+<BR>
+$numreps = 3; # How many naughty words to put in your sig.
+<BR>
+<P># Personalize this greeting.
+<BR>
+$egreeting &lt;&lt;EOF;
+<BR>
+Why are the above words in my signature? Check out:
+<BR>
+<A HREF="http://www.echelon.wiretapped.net">http://www.echelon.wiretapped.net</A>
+<BR>
+<P>EOF
+<BR>
+<P>srand;
+<BR>
+print SIG &quot;\n&quot;;
+<BR>
+for ($i = 0; $i &lt; $numreps; $i++){
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print SIG $ewords[rand(100)%$sizeEwords].' ';
+<BR>
+}
+<BR>
+print SIG &quot;\n$egreeting\n&quot;;
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2629.html">Spike Jones: "asteroid sample return"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2627.html">Dan Hook: "Re: Ebola"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2649.html">James Wetterau: "Re: Revealed at last... the Echelon spammer."</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="2649.html">James Wetterau: "Re: Revealed at last... the Echelon spammer."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2628">[ date ]</A>
+<A HREF="index.html#2628">[ thread ]</A>
+<A HREF="subject.html#2628">[ subject ]</A>
+<A HREF="author.html#2628">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:35:41 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

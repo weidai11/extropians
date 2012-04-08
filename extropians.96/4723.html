@@ -1,0 +1,79 @@
+<!-- received="Wed Dec 25 18:12:34 1996 MST" -->
+<!-- sent="Wed, 25 Dec 1996 18:20:23 -0600" -->
+<!-- name="Eliezer Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: Extropians Investing in the Future" -->
+<!-- id="199612252335.PAA05500@igc3.igc.apc.org" -->
+<!-- inreplyto="Extropians Investing in the Future" -->
+<title>extropians: Re: Extropians Investing in the Future</title>
+<h1>Re: Extropians Investing in the Future</h1>
+Eliezer Yudkowsky (<i>sentience@pobox.com</i>)<br>
+<i>Wed, 25 Dec 1996 18:20:23 -0600</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4723">[ date ]</a><a href="index.html#4723">[ thread ]</a><a href="subject.html#4723">[ subject ]</a><a href="author.html#4723">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4724.html">Dejan Vucinic: "Re: tech snippets"</a>
+<li> <b>Previous message:</b> <a href="4722.html">Eliezer Yudkowsky: "Re: Humour"</a>
+<li> <b>Maybe in reply to:</b> <a href="4469.html">Natasha V. More: "Extropians Investing in the Future"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="4968.html">Eliezer Yudkowsky: "Re: Extropians Investing in the Future"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<i>&gt; &gt;  If you're willing to stop some innocent programs, complete</i><br>
+<i>&gt; &gt; verification is easy.  And since no Java compiler that I know of</i><br>
+<i>&gt; &gt; produces secure but (currently) unverifiable code, there's no problem.</i><br>
+<i>&gt; </i><br>
+<i>&gt; I see -- so 'exec "rm -rf $HOME/*"' (or the whatever the Java equivalent</i><br>
+<i>&gt; is) will produce verifiable code but delete all my files. How useful. </i><br>
+<p>
+The Java bytecode verifier ensures that no object references are forged,<br>
+so that no area of computer memory can be accessed unless allocated, by<br>
+the Java environment, as an object.  Java code is not assembly language<br>
+that executes directly on the computer; it is a set of interpreted<br>
+bytecodes, in which there are no pointers, only "object references"<br>
+which cannot be forged by any set of bytecodes which passes the<br>
+verifier, and which can be created only by the Java equivalent of an OS,<br>
+which is prewritten for your computer and which is not loaded over the<br>
+net.  Java *applications* *may* be allowed to access pre-written (not<br>
+net-loaded) native methods for executing commands such as "rm -rf<br>
+$HOME", but Java *applets*, which are loaded automatically, can't do<br>
+that.<br>
+<p>
+Java is a virtual world.  The bytecode verifier ensures that the Java<br>
+bytecodes stay within the virtual world.  There are no halting problems<br>
+here.  The basic Java model is, mathematically speaking, completely<br>
+secure.  In point of fact, if Java wasn't secure, *then* I could write a<br>
+Turing machine capable of solving the halting problem.  There may be<br>
+flaws in the implementation, but I think that your challenges here are<br>
+based on a lack of knowledge.<br>
+<p>
+If you have more questions about Java, I suggest you consult a FAQ or<br>
+Sun's Web site.<br>
+<p>
+<i>&gt; Oops. You just rejected 'JavaDoom' -- three million people disabled their </i><br>
+<i>&gt; verifiers immediately.</i><br>
+"While you've been making better idiot-proof mechanisms, God is out<br>
+there making better idiots."<br>
+<pre>
+-- 
+         sentience@pobox.com      Eliezer S. Yudkowsky
+          <a href="http://tezcat.com/~eliezer/singularity.html">http://tezcat.com/~eliezer/singularity.html</a>
+           <a href="http://tezcat.com/~eliezer/algernon.html">http://tezcat.com/~eliezer/algernon.html</a>
+Disclaimer:  Unless otherwise specified, I'm not telling you
+everything I think I know.
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4724.html">Dejan Vucinic: "Re: tech snippets"</a>
+<li> <b>Previous message:</b> <a href="4722.html">Eliezer Yudkowsky: "Re: Humour"</a>
+<li> <b>Maybe in reply to:</b> <a href="4469.html">Natasha V. More: "Extropians Investing in the Future"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="4968.html">Eliezer Yudkowsky: "Re: Extropians Investing in the Future"</a>
+<!-- reply="end" -->
+</ul>

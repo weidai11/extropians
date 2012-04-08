@@ -1,0 +1,88 @@
+<!-- received="Fri Feb 12 07:09:32 1999 MDT" -->
+<!-- sent="Fri, 12 Feb 1999 06:09:24 -0800 (PST)" -->
+<!-- name="mark@unicorn.com" -->
+<!-- email="mark@unicorn.com" -->
+<!-- subject="Y2K: Am I paranoid?" -->
+<!-- id="918828564.26573.193.133.230.33@unicorn.com" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=43 -->
+<html><head><title>extropians: Y2K: Am I paranoid?</title>
+<meta name=author content="mark@unicorn.com">
+<link rel=author rev=made href="mailto:mark@unicorn.com" title ="mark@unicorn.com">
+</head><body>
+<h1>Y2K: Am I paranoid?</h1>
+<i>mark@unicorn.com</i><br>
+<i>Fri, 12 Feb 1999 06:09:24 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1774">[ date ]</a><a href="index.html#1774">[ thread ]</a><a href="subject.html#1774">[ subject ]</a><a href="author.html#1774">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1775.html">[ Next ]</a><a href="1773.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1758.html">Ron Kean</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+<a name="1802qlink1">Ron Kean [ronkean@juno.com] wrote:
+<br>
+<a href="1758.html#1774qlink1">&gt;The date-related embedded chip problem is greatly overblown.  There is no</a><br>
+<i>&gt;reason why a date-sensitive maintenance monitoring system would be</i><br>
+<i>&gt;knowingly designed to catastrophically shut down the power supply system</i><br>
+<i>&gt;because of a date discrepancy.  </i><br>
+
+<p>
+Tell that to the Swedes; their software essentially said:
+
+<p>
+main ()
+<br>
+{
+<br>
+ if (year == '99')
+<p>
+    shut_down_reactor();
+<br>
+ else
+<p>
+    produce_power ();
+<br>
+}
+
+<p>
+Luckily that was in their main control system rather than the embedded
+systems, so they could just reset the date and keep running. 
+
+<p>
+But the biggest problem with this argument is the idea that software is
+'knowingly designed' to act in this way. Software wasn't 'knowingly designed'
+to fail in ten months from now, that's just an unexpected side-effect of
+other design choices; few people expected it to still be running today.
+
+<p>
+Most of the bugs I see are not 'knowingly designed' into the system,
+they're the consequence of plugging together software which has</a> been
+designed to do one thing and also does others that no-one considered when 
+they dropped it into their system; for example, I was reading an article a
+while ago decrying the increasing use of C++ as people drop more and more
+reusable objects into their Windows programs without understanding what 
+the objects actually do, and add many new bugs due to unexpected 
+interactions. 
+
+<p>
+These controllers are knowingly designed to fail in certain ways when
+certain things happen. Whether anyone actually knows what those failure
+modes are or considered them when they built their system around those
+controllers is another question entirely.
+
+<p>
+    Mark
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1775.html">[ Next ]</a><a href="1773.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1758.html">Ron Kean</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

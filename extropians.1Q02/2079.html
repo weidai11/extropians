@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>extropians: Re: Something strange on my computer</title>
+<meta name="Author" content="Alex Ramonsky (alex@ramonsky.com)">
+<meta name="Subject" content="Re: Something strange on my computer">
+<meta name="Date" content="2002-01-30">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>Re: Something strange on my computer</h1>
+<!-- received="Wed Jan 30 14:29:04 2002" -->
+<!-- isoreceived="20020130212904" -->
+<!-- sent="Wed, 30 Jan 2002 21:28:01 -0000" -->
+<!-- isosent="20020130212801" -->
+<!-- name="Alex Ramonsky" -->
+<!-- email="alex@ramonsky.com" -->
+<!-- subject="Re: Something strange on my computer" -->
+<!-- id="003f01c1a9d4$fee3fe00$5d0127d9@oemcomputer" -->
+<!-- charset="iso-8859-1" -->
+<!-- inreplyto="20020130044419.57607.qmail@web13508.mail.yahoo.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Alex Ramonsky (<a href="mailto:alex@ramonsky.com?Subject=Re:%20Something%20strange%20on%20my%20computer"><em>alex@ramonsky.com</em></a>)<br>
+<strong>Date:</strong> Wed Jan 30 2002 - 14:28:01 MST
+</p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="2080.html">jeff davis: "Re: Embryonic Cow Cells to Create Kidney-Like Organs"</a>
+<li><strong>Previous message:</strong> <a href="2078.html">Charlie Stross: "Re: `posthuman' antho"</a>
+<li><strong>In reply to:</strong> <a href="2049.html">jeff davis: "Something strange on my computer"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2079">[ date ]</a>
+<a href="index.html#2079">[ thread ]</a>
+<a href="subject.html#2079">[ subject ]</a>
+<a href="author.html#2079">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<em>&gt; Around October 1st, I got on the computer and was
+</em><br>
+<em>&gt; trying to figure out how to change the picture that
+</em><br>
+<em>&gt; appears on the screen when I first boot up, the one
+</em><br>
+<em>&gt; before the windows desktop background settles in.
+</em><br>
+<p>You need to store your desired image as C:\logo.sys
+<br>
+To do this, create a standard bitmap image (.BMP extension) sized 640 x 400,
+<br>
+using 256 colours.
+<br>
+(Pallette entries 236 and upward are reserved for the animated bar at the
+<br>
+bottom, so don't use them unless you want an animated bar).
+<br>
+Then resize the picture to 320 x 400 (so that it looks squashed).
+<br>
+Then rename it to &quot;logo.sys&quot;.
+<br>
+Then store it in the root directory of drive C:
+<br>
+<p><em>&gt; Under &quot;Extensions&quot; it says
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; 1001627143ATTACKS_WORLD_TRADE_CENTER_NYR111
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; and under &quot;File Types&quot; it says
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; 1001627143ATTACKS_WORLD_TRADE_CENTER_NYR111 File
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; Clearly, this could not have been on the computer when
+</em><br>
+<em>&gt; I got it, and must have been loaded into the computer
+</em><br>
+<em>&gt; sometime after Sept 11th.  (The computer in question
+</em><br>
+<em>&gt; is utterly insecure--I have no security
+</em><br>
+<em>&gt; issues--protected only by Norton anti-virus.)
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; I did a search in both files and text for
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; 1001627143ATTACKS_WORLD_TRADE_CENTER_NYR111 File
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; but nothing shows up.
+</em><br>
+<p>Try searching the registry using regedit
+<br>
+(Click on the Start button, then on run, then type &quot;regedit&quot; and click on
+<br>
+OK).
+<br>
+You'll probably find it somewhere under HKEY_CLASSES_ROOT.
+<br>
+<p>If you delete all registry entries containing
+<br>
+&quot;1001627143ATTACKS_WORLD_TRADE_CENTER_NYR111 File&quot; then you'll get rid of
+<br>
+the problem, but it might be worth checking what program is designed to run
+<br>
+from this extension first. I'd guess this will be under
+<br>
+&quot;HKEY_CLASSES_ROOT\1001627143ATTACKS_WORLD_TRADE_CENTER_NYR111
+<br>
+File\shell\open\command&quot;. Then you'll have a better idea what's going on.
+<br>
+<p>Ramonsky
+<br>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="2080.html">jeff davis: "Re: Embryonic Cow Cells to Create Kidney-Like Organs"</a>
+<li><strong>Previous message:</strong> <a href="2078.html">Charlie Stross: "Re: `posthuman' antho"</a>
+<li><strong>In reply to:</strong> <a href="2049.html">jeff davis: "Something strange on my computer"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#2079">[ date ]</a>
+<a href="index.html#2079">[ thread ]</a>
+<a href="subject.html#2079">[ subject ]</a>
+<a href="author.html#2079">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Fri Nov 01 2002 - 13:37:37 MST
+</em></small></p>
+</body>
+</html>

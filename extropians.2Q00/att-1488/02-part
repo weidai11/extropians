@@ -1,0 +1,11 @@
+Reporting-MTA: dns; host1.datamann.com
+Received-From-MTA: DNS; [2.2.2.5]
+Arrival-Date: Mon, 24 Apr 2000 10:18:46 -0400
+
+Final-Recipient: RFC822; philosborn@hotmail.com
+Action: failed
+Status: 5.5.0
+Remote-MTA: DNS; mc5.law5.hotmail.com
+Diagnostic-Code: SMTP; 552 Requested mail action aborted: exceeded storage allocation
+Last-Attempt-Date: Mon, 24 Apr 2000 10:18:47 -0400
+

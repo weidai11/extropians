@@ -1,0 +1,138 @@
+<!-- received="Wed Dec  4 11:04:44 1996 MST" -->
+<!-- sent="Wed, 04 Dec 1996 09:47:06 -0800" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: We need better tools to make better tools." -->
+<!-- id="1.5.4.32.19961204174706.002dd844@best.com" -->
+<!-- inreplyto="We need better tools to make better tools." -->
+<title>extropians: Re: We need better tools to make better tools.</title>
+<h1>Re: We need better tools to make better tools.</h1>
+James Rogers (<i>jamesr@best.com</i>)<br>
+<i>Wed, 04 Dec 1996 09:47:06 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3623">[ date ]</a><a href="index.html#3623">[ thread ]</a><a href="subject.html#3623">[ subject ]</a><a href="author.html#3623">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3624.html">James Rogers: "re: we need better tools..."</a>
+<li> <b>Previous message:</b> <a href="3622.html">Steve Pruitt: "RE: FYI: MEDIA &amp; Greenpeace"</a>
+<li> <b>Maybe in reply to:</b> <a href="3516.html">Max M: "We need better tools to make better tools."</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3629.html">Eugene Leitl: "Re: We need better tools to make better tools. &lt;guaRANTeed&gt;"</a>
+<li> <b>Reply:</b> <a href="3629.html">Eugene Leitl: "Re: We need better tools to make better tools. &lt;guaRANTeed&gt;"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+<i>&gt;&gt;    </i><br>
+<i>&gt;&gt; On bad compiler days programming in assembler has its appeal.  Start all</i><br>
+<i>&gt;&gt; over from the CPU up.</i><br>
+<i>&gt;</i><br>
+<i>&gt;Current RISCs have become finicky as formula1 cars. They either break </i><br>
+<i>&gt;the sonic barrier, or, break down. Nothing else in between. Gcc is very </i><br>
+<i>&gt;good at producing terrible Alpha AXP code (while running like molasses </i><br>
+<i>&gt;during compilation), while handcrafted assembly runs like a fox (orders </i><br>
+<i>&gt;over orders) on the same problem/machine. Hang compilers.</i><br>
+<p>
+In the Alpha AXP, this is primarily a result of mediocre CPU design rather<br>
+than something you can blame on the compilers.  The Alpha has a very deep<br>
+pipeline, but almost no look-ahead or intelligent pre-fetch/decode logic.<br>
+The result is that the pipeline is flushed pretty often, which is only<br>
+worstened by its depth.  Also, the high clock rates make pipeline stalls<br>
+(due to things like cache misses) more serious than they would be in slower<br>
+clocked chips.  Add on top of this an inefficient superscalar<br>
+implementation, and you have a chip that virtually *requires* handcrafted<br>
+assembly language to run efficiently.<br>
+<p>
+One of the reasons Intel's late generation chips have done so well,<br>
+performance-wise, is that Intel probably has one of the best pre-execution<br>
+logic designs and techniques on any CPU, RISC or otherwise.  Add to this<br>
+that Intel easily has one of the most efficient superscalar implementations,<br>
+and you get some real performance out of an old architecture.  One of the<br>
+few RISC companies that I think has a really solid architecture concept is HP.<br>
+<p>
+<p>
+<i>&gt;I predict radical simplification of the CPUs, down to the scale of few 10 </i><br>
+<i>&gt;kTransistors (only the core, not the RAM) due to their drastically better </i><br>
+<i>&gt;price/performance ratio (especially memory bandwidth) and the obvious need </i><br>
+<i>&gt;to go WSI (wafer-scale integration) quite soon.</i><br>
+<i>&gt;</i><br>
+<i>&gt;1) CPU dies must cost in the 1-50 $ range for maspar applications</i><br>
+<i>&gt;2) complex dies are dear, both because of design and yield issues</i><br>
+<i>&gt;3) bad die yield goes up exponentially with die size</i><br>
+<i>&gt;4) WSI needs a relatively high percentile (50%) of viable dies</i><br>
+<i>&gt;5) WSI demolishes cutting, packaging, testing in one fell swoop, and </i><br>
+<i>&gt;   offers small bus geometries and good memory bandwidth since</i><br>
+<i>&gt;6) on-die accesses are orders of magnitude faster and burn much less </i><br>
+<i>&gt;   juice due to absence of signal up/downscaling</i><br>
+<i>&gt;</i><br>
+<i>&gt;Corollaries:</i><br>
+<i>&gt;</i><br>
+<i>&gt;1) CPUs will become _very_ simple, see MISC.( I doubt InTeL will pioneer </i><br>
+<i>&gt;   this, though they sure will join the party, once it has started. I </i><br>
+<i>&gt;   don't know what M$ might or might not do...)</i><br>
+<p>
+Actually, you will probably see arrays of tiny cores on chips glued together<br>
+with complex decode logic, or in the VLIW case, have the compiler do most of<br>
+the decode for you.<br>
+<p>
+<i>&gt;2) RAM grains will be small 128...512 kBytes due to yield reasons, </i><br>
+<i>&gt;   ergo </i><br>
+<i>&gt;3) OSses will feature handcrafted nanokernels (10-20 kByte) and</i><br>
+<i>&gt;4) need threaded code, requiring a on-die bi-stack architecture</i><br>
+<i>&gt;5) Buses will be large (128-1024 bits), and we'll have VLIW (notice how </i><br>
+<i>&gt;   my old predictions correlate with what you can now read in </i><br>
+<i>&gt;   the newer Microprocessor Reports).  </i><br>
+<i>&gt;6) Programming paradigm will be low-overhead asynchronous OOP, requiring </i><br>
+<i>&gt;7) redundant hypergrid wiring scheme to catch the dead dies due to WSI </i><br>
+<i>&gt;   and to offer sufficient on-wafer communication bandwidth</i><br>
+<i>&gt; </i><br>
+<i>&gt;&gt; } easily abstracted.  Other applications, such as database or systems</i><br>
+<i>&gt;&gt; } development, require very thorough knowledge of data structures,</i><br>
+algorithms,<br>
+<i>&gt;&gt; </i><br>
+<i>&gt;&gt; Hmm.  Graphical representation of a database of records; highlight a</i><br>
+<i>&gt;&gt; field to be the sort index, drag and drop "Quicksort"...</i><br>
+<i>&gt;&gt; </i><br>
+<i>&gt;&gt; But someone had to write "Quicksort". </i><br>
+<i>&gt;</i><br>
+<i>&gt;For a large class of problems clean algorithmics do not exist (I'm amazed </i><br>
+<i>&gt;my MessagePad 130 (btw, have a look at emate300 and the next Newt (2000)) </i><br>
+<i>&gt;can read my scrawls most of the time, but then they use a large database </i><br>
+<i>&gt;with script samples for the noncontiguous script recognition). </i><br>
+<i>&gt;Such problems are best solved by WYWIWYG, GA-growing your code/data for </i><br>
+<i>&gt;fitness. Such problem solving methodologies, whether digital (a very smart </i><br>
+<i>&gt;RAM) or analog (VLSI ANNs, the C. Meade approach) require a dedicated </i><br>
+<i>&gt;architecture, being unable to run on von-Neumann (generically used) </i><br>
+<i>&gt;monoprocessors worth $0.02. We'll see hybrid architectures before very long.</i><br>
+<i>&gt; </i><br>
+<i>&gt;&gt; } &gt;Everybody (almost) agrees that the GUI is a better way to comunicate</i><br>
+with a<br>
+<i>&gt;&gt; } &gt;computer than a command language. Everybody except system developers.</i><br>
+Eh...<br>
+<i>&gt;&gt; </i><br>
+<i>&gt;&gt; Around here, programmers in general, and many people who don't program</i><br>
+<i>&gt;&gt; regularly as well, prefer command lines to GUIs, or at least want the</i><br>
+<i>&gt;</i><br>
+<i>&gt;Even a CLI is a GUI. You don't see signal levels (ok, in EM you do, but </i><br>
+<i>&gt;that's just another hardware GUI), do you? ;) A GUI you can't customize </i><br>
+<i>&gt;is useless.</i><br>
+<i>&gt;</i><br>
+<p>
+I'll take it one step further:  An OS you can't customize is useless.<br>
+<p>
+<p>
+-James Rogers<br>
+ jamesr@best.com<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3624.html">James Rogers: "re: we need better tools..."</a>
+<li> <b>Previous message:</b> <a href="3622.html">Steve Pruitt: "RE: FYI: MEDIA &amp; Greenpeace"</a>
+<li> <b>Maybe in reply to:</b> <a href="3516.html">Max M: "We need better tools to make better tools."</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="3629.html">Eugene Leitl: "Re: We need better tools to make better tools. &lt;guaRANTeed&gt;"</a>
+<li> <b>Reply:</b> <a href="3629.html">Eugene Leitl: "Re: We need better tools to make better tools. &lt;guaRANTeed&gt;"</a>
+<!-- reply="end" -->
+</ul>

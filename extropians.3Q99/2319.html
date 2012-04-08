@@ -1,0 +1,103 @@
+<!-- received="Tue Aug 17 15:05:09 1999 MDT" -->
+<!-- sent="Tue, 17 Aug 1999 20:26:38 +0100" -->
+<!-- name="Bryan Moss" -->
+<!-- email="bryan.moss@dial.pipex.com" -->
+<!-- subject="Re: Extropians GIMPS team" -->
+<!-- id="008101bee8f2$e99d91a0$a483bc3e@jed" -->
+<!-- inreplyto="Extropians GIMPS team" -->
+<!-- version=1.10, linesinbody=59 -->
+<html><head><title>extropians: Re: Extropians GIMPS team</title>
+<meta name=author content="Bryan Moss">
+<link rel=author rev=made href="mailto:bryan.moss@dial.pipex.com" title ="Bryan Moss">
+</head><body>
+<h1>Re: Extropians GIMPS team</h1>
+Bryan Moss (<i>bryan.moss@dial.pipex.com</i>)<br>
+<i>Tue, 17 Aug 1999 20:26:38 +0100</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2319">[ date ]</a><a href="index.html#2319">[ thread ]</a><a href="subject.html#2319">[ subject ]</a><a href="author.html#2319">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2320.html">[ Next ]</a><a href="2318.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2305.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="2323.html">Dan Fabulich</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+Eugene Leitl wrote:
+
+<p>
+<a href="2305.html#2319qlink1">&gt; &gt; I have an idea to get all 5 of those (potential) undiscovered Mersenne</a><br>
+<i>&gt; &gt; primes and the $100K prize in maybe a year or less.  We'll use the CPU</i><br>
+<i>&gt; &gt; cycles of internet users without asking them.  GIMPS-like software will</i><br>
+<i>&gt; &gt; be hidden in a novelty e-mail attachment; while the recipient is</i><br>
+<i>&gt; &gt; laughing at the sight of Kermit the Frog getting a blow job the software</i><br>
+<i>&gt; &gt; will install itself on their computer.  As long as the software can 'get</i><br>
+<i>&gt; &gt; out of the way' [...]</i><br>
+<i>&gt;</i><br>
+<a name="2333qlink1"><i>&gt; Why going at such great lengths? There are enough holes in network</i><br>
+<i>&gt; protocol stacks and applications to make possible its propagation to</i><br>
+<i>&gt; be purely automatic.</a> Since constituting the bulk of all installations,</i><br>
+<i>&gt; one can essentially concentrate on x86/Win95/98/2000/NT ("Wintel")</i><br>
+<i>&gt; machines, which makes the task of finding buffer overruns quite easy</i><br>
+<i>&gt; (a small exploit library will suffice for starters). Each infected</i><br>
+<i>&gt; machine would occasionally ping a random IP address, trying to infect</i><br>
+<i>&gt; another target.</i><br>
+
+<p>
+<a name="2331qlink1">I did think about a self-reproducing worm.  With it we could do away with
+the server and let the worms report to each other.  For instance, say</a> a worm
+<a name="2333qlink2"><a name="2331qlink2">has searched data spaces 1, 2, and 3, and, detecting that its host is
+on-line, starts propergating to random IPs.  Its children do one of two
+things; if no worm is detected on the new IP the new worm will take root</a> and
+</a>
+<a name="2331qlink3">search random data spaces (with probabilities weighted against 1, 2, and 3).
+If an existing worm is detected the new worm copies its data (i.e. "data
+spaces 1, 2, and 3, searched with no success") to the existing worm and
+terminates (or in other terms, it merges -- this could also be used to
+update the worm).  I'm using random data as much as possible because it cuts
+down on data exchange and means the worms don't have to keep track of each
+other.  Error correction would be through massive redundancy (the worms
+would only have an increased probability of avoiding an already searched
+space so many searches will be performed on the same space).</a>  The whole
+<a name="2331qlink4">system of searching for primes, hiding, merging, copying, and checking for
+errors could probably be packed into a very small, very efficient program.
+You could expect to unleash it on the net and within months have a fresh new
+10 million digit prime and a $100K cheque.  Well worth the investment of
+some time and a little intellectual hardship.
+<p>
+    The reason I went with the novelty attachment idea is that if there were
+an unexpected bug in the program (and there's bound to be an unexpected bug
+in the program) there'd be less chance of crashing something important and
+pissing a lot of people off.</a>
+
+<p>
+<a href="2305.html#2319qlink2">&gt; If we would have found an x86 machine code mutator function before</a><br>
+<i>&gt; (Koza's 1000 node Beowulf would be the ideal substrate for this) and</i><br>
+<i>&gt; add a GA buffer overrun seeker module such a software would be very</i><br>
+<i>&gt; hard to kill indeed, because it would mutate faster than patch</i><br>
+<i>&gt; distribution. Trying to infect routers and switches is another good</i><br>
+<i>&gt; idea.</i><br>
+
+<p>
+<a name="2331qlink5">I don't think detection is much of a threat, the majority of people don't
+worry about viruses until their system crashes.  Of course if someone</a> found
+<a name="2331qlink6">out what the purpose of the worm was it might make going public with the
+results a little more risky.<a name="2323qlink1">  (I'm not sure of the laws concerning viruses,
+would what I'm suggesting be illegal?)
+</a>
+</a>
+
+<p>
+BM
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2320.html">[ Next ]</a><a href="2318.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2305.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="2323.html">Dan Fabulich</a>
+</ul>
+</body></html>

@@ -1,0 +1,89 @@
+<!-- received="Sat Dec 28 10:41:45 1996 MST" -->
+<!-- sent="Sat, 28 Dec 1996 17:25:45 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: COMP: Re: tech snippets" -->
+<!-- id="Pine.SOL.3.91.961228170920.10550E-100000@sun1" -->
+<!-- inreplyto="Pine.3.89.9612262152.E526-0100000@marui" -->
+<title>extropians: Re: COMP: Re: tech snippets</title>
+<h1>Re: COMP: Re: tech snippets</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sat, 28 Dec 1996 17:25:45 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4919">[ date ]</a><a href="index.html#4919">[ thread ]</a><a href="subject.html#4919">[ subject ]</a><a href="author.html#4919">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4920.html">Eugene Leitl: "Re: SPACE: Lunar Billboard?"</a>
+<li> <b>Previous message:</b> <a href="4918.html">Eugene Leitl: "Jesus is coming &amp; He is Pissed"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Thu, 26 Dec 1996, Mark Grant wrote:<br>
+<p>
+<i>&gt; On Wed, 25 Dec 1996, Dejan Vucinic wrote:</i><br>
+<i>&gt; </i><br>
+<i>&gt; &gt; someone said:</i><br>
+<i>&gt; &gt; &gt; Taking this one step further: why not putting the entire microkernel/VM</i><br>
+<i>&gt; &gt; &gt; into a _normal_ on-die SRAM</i><br>
+<i>&gt; </i><br>
+<i>&gt; Does this gain you much? I was under the impression that the microkernel</i><br>
+<p>
+It depends. On your programming style, e.g. I was argumenting from the <br>
+position of tiny grain sizes (WSI constraint), and an asychronous OOP <br>
+with high call density, aka threaded code (tiny grains need dense code). <br>
+Here nanokernel is virtually indistinguishable from the virtual machine. <br>
+SEND_MSG is invoked very often, thus becoming a hot spot. You don't have <br>
+resources for a true MMU on such architectures (it would also slow <br>
+execution down), so automagical swapping out is not an alternative, anyway.<br>
+The kernel space must be protected, of course. But those of the threads <br>
+are not, they are protected by being distributed over several nodes.<br>
+<p>
+<i>&gt; only gave you very limited non-portable facilities so that you could</i><br>
+<i>&gt; rapidly port most of your OS by rewriting the microkernel. I can't believe</i><br>
+<p>
+I would denote this by nanokernel, since several-100-KByte OSses (as Mach) <br>
+are also called microkernels. Nanokernels are not portable, they must be <br>
+written from scratch. Nanokernels are _less_ portable than the average <br>
+UNIX kernel is, anyway. They have been invented for a different reason.<br>
+<p>
+<i>&gt; that all your device drivers fit in 12k. How often is the message-passing</i><br>
+<p>
+Nanokernels do not contain device drivers. A purely computational node <br>
+hasn't got any devices, anyway. Lowest common denominator.<br>
+<p>
+<i>&gt; code called? </i><br>
+<p>
+I can't give you exact data, but (depending on the programming style) -- <br>
+very often. I suggest you check out the URLs I posted earlier, there <br>
+should be a profiler there, somewhere.<br>
+ <br>
+<i>&gt; &gt; &gt;, having an address in address space (cache</i><br>
+<i>&gt; &gt; &gt; has none, it occupies the same address space as the addressable core)?</i><br>
+<i>&gt; </i><br>
+<i>&gt; Some chips let supervisor-mode software lock lines in the cache so that</i><br>
+<i>&gt; they always map to one specific address, effectively allowing you to use</i><br>
+<i>&gt; it as on-chip RAM. I'm fairly sure that the T9000 transputer can do this</i><br>
+<p>
+Effectively yes, but it is slower, and the machinery is still there -- <br>
+on-die transistors are not cheap. <br>
+<p>
+T9000 is mythical, anyway.<br>
+<p>
+<i>&gt; (I read the manual a few years ago), but I'm not sure about more common</i><br>
+<i>&gt; chips. </i><br>
+<i>&gt; </i><br>
+<p>
+ciao,<br>
+'gene<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4920.html">Eugene Leitl: "Re: SPACE: Lunar Billboard?"</a>
+<li> <b>Previous message:</b> <a href="4918.html">Eugene Leitl: "Jesus is coming &amp; He is Pissed"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

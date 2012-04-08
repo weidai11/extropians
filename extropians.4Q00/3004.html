@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: Free riding on Gnutella white paper</title>
+<meta name="Author" content="Eugene.Leitl@lrz.uni-muenchen.de (Eugene.Leitl@lrz.uni-muenchen.de)">
+<meta name="Subject" content="Re: Free riding on Gnutella white paper">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: Free riding on Gnutella white paper</h1>
+<!-- received="Wed Nov 29 10:44:27 2000" -->
+<!-- isoreceived="20001129174427" -->
+<!-- sent="Tue, 28 Nov 2000 21:17:01 +0100 (CET)" -->
+<!-- isosent="20001128201701" -->
+<!-- name="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Free riding on Gnutella white paper" -->
+<!-- id="14884.4797.60544.835236@lrz.uni-muenchen.de" -->
+<!-- inreplyto="200011281618.IAA22981@finney.org" -->
+<strong>From:</strong> <a href="mailto:Eugene.Leitl@lrz.uni-muenchen.de?Subject=Re:%20Free%20riding%20on%20Gnutella%20white%20paper&In-Reply-To=&lt;14884.4797.60544.835236@lrz.uni-muenchen.de&gt;"><em>Eugene.Leitl@lrz.uni-muenchen.de</em></a><br>
+<strong>Date:</strong> Tue Nov 28 2000 - 13:17:01 MST
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="3005.html">Eugene.Leitl@lrz.uni-muenchen.de: "human tetrachromate mutant reported"</a>
+<li><strong>Previous message:</strong> <a href="3003.html">Eugene.Leitl@lrz.uni-muenchen.de: "THE PLANT: It Failed"</a>
+<li><strong>In reply to:</strong> <a href="2988.html">hal@finney.org: "Re: Free riding on Gnutella white paper"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3049.html">Bryan Moss: "Re: Free riding on Gnutella white paper"</a>
+<li><strong>Reply:</strong> <a href="3049.html">Bryan Moss: "Re: Free riding on Gnutella white paper"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3004">[ date ]</a>
+<a href="index.html#3004">[ thread ]</a>
+<a href="subject.html#3004">[ subject ]</a>
+<a href="author.html#3004">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+<a href="mailto:hal@finney.org?Subject=Re:%20Free%20riding%20on%20Gnutella%20white%20paper&In-Reply-To=&lt;14884.4797.60544.835236@lrz.uni-muenchen.de&gt;">hal@finney.org</a> writes:
+<br>
+<p><em> &gt; Gnutella's woes demonstrate that making a scalable, usable peer to
+</em><br>
+<em> &gt; peer file sharing system is not as easy as it looks.  In retrospect it
+</em><br>
+<p>Gnutella's woes demonstrate clearly is that if you take a broken
+<br>
+protocol written by an idiot (Napster) and try to make it
+<br>
+peer-to-peer/headless without any modifications it will break horribly
+<br>
+all over the place. Duh. Napster/Gnutella is really, really broken. It
+<br>
+totally ignores prior art addressing these obvious problems, and a
+<br>
+number of projects (I'm really looking forward to run MojoNation) did
+<br>
+so and do it much better.
+<br>
+<p>Otoh, Napster created the user nucleus with usable criticality, and
+<br>
+thus amplified the meme all over the place. Subsequent efforts don't
+<br>
+have to explain themselves, just tap into existing infrastructure with
+<br>
+a (preferably, one-way) gateway, and declare &quot;we're the better
+<br>
+Napster&quot;. As soon as the new service reaches criticality as enough
+<br>
+users install the clients, you break the (vulnerable, since traceable)
+<br>
+connecting gateways, and go fully autonomous.
+<br>
+<p><em> &gt; is amazing that Napster was able to do so well.  Of course the other
+</em><br>
+<p>IIRC, Gnutella's problem is that it uses a Napster protocol without
+<br>
+caching indexes (Napster runs over a central server, so it doesn't
+<br>
+have to deal with that query amplification problem). Each query gets
+<br>
+amplified to essentially the entire network. A major fraction of
+<br>
+people are 1) freeloader scum 2) run 56k modems 3) don't use
+<br>
+lightweight query coding, so packets are large.  So each query got
+<br>
+amplified a lot, and eventually clogs the bandwidth of your modem
+<br>
+given a relatively modest size of nodes. Finis, the network fragments
+<br>
+in several subnetworks -- each of them are still operational, however.
+<br>
+<p>An SDSL line gives you an order of magnitude larger bandwidth (and a
+<br>
+much smaller latency) than a 56k modem, and hence would not saturate
+<br>
+so easily. A rewrite, where each node caches the common index of next
+<br>
+few neighbour (few-hop) nodes (resulting into a bit of initial setup
+<br>
+time/initial travel spike before your peer will accept your queries)
+<br>
+would let the whole saturation problem disappear into thin air.
+<br>
+<p>This simple measures (advent of xDSL and a protocol patch) do not
+<br>
+address the other pressing problems, however. Did I already mention
+<br>
+that Napster/Gnutella is b0rken?
+<br>
+<p><em> &gt; There are a dozen or more other P2P systems out there that I don't know
+</em><br>
+<em> &gt; anything about.  This fragmentation is itself a problem because these
+</em><br>
+<em> &gt; systems have to reach critical mass to be useful.
+</em><br>
+<p>Thanks for the mini overview. I think we can agree that the problems
+<br>
+currently plaguing P2P share are not fundamental, and are IMO already
+<br>
+adequately addressed in several existing and forthcoming packages,
+<br>
+albeit probably not all in a single one.
+<br>
+<p>The demand is certainly there, and since steganography and remixing
+<br>
+will make the resulting network both unfilterable and untraceable, we
+<br>
+can probably also agree that you can't stop the emergence of global
+<br>
+P2P neither at technical nor at legal level. The only way to stop it
+<br>
+would be to rip out existing infrastructure, and substitute it with a
+<br>
+lawnik-mandated one, while also inserting multiple probes into user's
+<br>
+orifices. I think it is easy to see that this won't happen.
+<br>
+<p>As soon as the beta code bugs are ironed out, any digitized or
+<br>
+digitazable IP for which there is a demand for in a negligeable
+<br>
+fraction of entire participants will be on the network. I'm not
+<br>
+worried about music or texts (street performer procol &amp; Co), I'm
+<br>
+worried about movies, which are real expensive to make. (But I never
+<br>
+liked Hollywood, anyway. They may all burn in hell for what I'm
+<br>
+concerned).
+<br>
+<p>I think the net result will be a win. But we'll find out soon enough,
+<br>
+anyway. 
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="3005.html">Eugene.Leitl@lrz.uni-muenchen.de: "human tetrachromate mutant reported"</a>
+<li><strong>Previous message:</strong> <a href="3003.html">Eugene.Leitl@lrz.uni-muenchen.de: "THE PLANT: It Failed"</a>
+<li><strong>In reply to:</strong> <a href="2988.html">hal@finney.org: "Re: Free riding on Gnutella white paper"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="3049.html">Bryan Moss: "Re: Free riding on Gnutella white paper"</a>
+<li><strong>Reply:</strong> <a href="3049.html">Bryan Moss: "Re: Free riding on Gnutella white paper"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#3004">[ date ]</a>
+<a href="index.html#3004">[ thread ]</a>
+<a href="subject.html#3004">[ subject ]</a>
+<a href="author.html#3004">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 09:50:32 MDT</em>
+</em>
+</small>
+</body>
+</html>

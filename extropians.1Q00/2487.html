@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: NANO: Hacking assembler security</TITLE>
+<META NAME="Author" CONTENT="Charlie Stross (charlie@antipope.org)">
+<META NAME="Subject" CONTENT="Re: NANO: Hacking assembler security">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: NANO: Hacking assembler security</H1>
+<!-- received="Thu Feb 10 10:03:57 2000" -->
+<!-- isoreceived="20000210170357" -->
+<!-- sent="Thu, 10 Feb 2000 17:03:51 +0000" -->
+<!-- isosent="20000210170351" -->
+<!-- name="Charlie Stross" -->
+<!-- email="charlie@antipope.org" -->
+<!-- subject="Re: NANO: Hacking assembler security" -->
+<!-- id="20000210170351.A3574@antipope.org" -->
+<!-- inreplyto="38A2E27C.3FEDC3D5@pobox.com" -->
+<STRONG>From:</STRONG> Charlie Stross (<A HREF="mailto:charlie@antipope.org?Subject=Re:%20NANO:%20Hacking%20assembler%20security&In-Reply-To=&lt;20000210170351.A3574@antipope.org&gt;"><EM>charlie@antipope.org</EM></A>)<BR>
+<STRONG>Date:</STRONG> Thu Feb 10 2000 - 10:03:51 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2488.html">Ralph Lewis: "Re: Subject: immortality and being stuck in time..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2486.html">Joseph Sterlynne: "RE: Tree of Life"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2485.html">Eliezer S. Yudkowsky: "Re: NANO: Hacking assembler security"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2501.html">Stirling Westrup: "Re: NANO: Hacking assembler security"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2487">[ date ]</A>
+<A HREF="index.html#2487">[ thread ]</A>
+<A HREF="subject.html#2487">[ subject ]</A>
+<A HREF="author.html#2487">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+On Thu, Feb 10, 2000 at 10:08:29AM -0600, Eliezer S. Yudkowsky wrote:
+<BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; What you're talking about is not analogous to the Thompson hack; what
+</EM><BR>
+<EM>&gt; you're talking about is more like a compiler that would recognize *any*
+</EM><BR>
+<EM>&gt; compiler, even a compiler written for Pascal instead of C++, and which
+</EM><BR>
+<EM>&gt; would furthermore refuse to compile anything that could be used as a
+</EM><BR>
+<EM>&gt; spreadsheet.  I don't believe it can be done, even with limited AI.
+</EM><BR>
+&nbsp;
+<BR>
+Phrased that way, it sounds like a subset of the halting
+<BR>
+problem. Definitively Not Doable, without waving a magic wand.
+<BR>
+<P>On the other hand, I'm not after a definitive solution; just a &quot;good
+<BR>
+enough&quot; one. I expect that general purpose molecular assemblers are
+<BR>
+going to be so difficult for non-transcendent beings to design that only
+<BR>
+a few specialist teams will do so. Moreover, network externalities (in
+<BR>
+the shape of a readily available pool of blueprints for useful
+<BR>
+artefacts, whether they are free or commercial) will tend to dictate
+<BR>
+that they're all programmed the same way, or in only a couple of different
+<BR>
+ways. (I hesitate to say &quot;language&quot; here because it's begging to be
+<BR>
+misinterpreted.) Which is why the job of recognizing your own source
+<BR>
+code isn't outrageously difficult. 
+<BR>
+<P>Look at C++, today. If you were the NSA and wanted to do the job, how
+<BR>
+many compilers would you need to compromise?
+<BR>
+<P>* Visual C++ (Microsoft)
+<BR>
+* Metrowerks Codewarrior (Motorola)
+<BR>
+* Gcc (Cygnus/Red Hat)
+<BR>
+* Borland C++ (Imprise/Corel)
+<BR>
+<P>That covers the four main compilers used on something like 90% of the
+<BR>
+machines out there. Moreover, they're the ones most budding C++ 
+<BR>
+programmers have access to. You could add specialist small fry like
+<BR>
+Watcom or the mainframe vendors, but by reducing the pool of unmonitored
+<BR>
+programmers by &gt;90% you've massively cut the risk of being hit by a 
+<BR>
+malicious program.
+<BR>
+<P>(And in today's control-freak-friendly political atmosphere, I can see
+<BR>
+calls for this sort of thing being listened to by legislators, halting
+<BR>
+problem or no.)
+<BR>
+<P>What I'd see as a payload for a Thompson hack on an assembler would be
+<BR>
+something a bit like a PC virus scanner: watch out for suspicious
+<BR>
+patterns of use (&quot;hey, that was the billionth plutonium atom I just
+<BR>
+stacked in that assembly! is he building a bomb, or what?&quot;) and snitch.
+<BR>
+<P><EM>&gt; What's more likely is that if Zyvex wants to sell more than one Anything
+</EM><BR>
+<EM>&gt; Box, their Boxes will be programmed to build only those objects which
+</EM><BR>
+<EM>&gt; have been signed with by Zyvex's public RSA key; which, of course, will
+</EM><BR>
+<EM>&gt; not include Anything Boxes.  Or submachine guns.
+</EM><BR>
+<P>I wouldn't buy one. I'd ask a friend to run me off a copy of his/her
+<BR>
+GNU assembler, which will build anything that can be authenticated by
+<BR>
+the author's public key as stored on a known keyserver.
+<BR>
+<P>How do I know that some disgrunted peon at Zyvex hasn't contaminated
+<BR>
+the source then signed it with their key? How do Zyvex prevent someone
+<BR>
+hacking their Anything Box, which is locked up using a method rather
+<BR>
+eerily reminiscent of the region-encoding CSS code in DVD?
+<BR>
+<P>The issue _here_ boils down to authentication and trust. I maintain
+<BR>
+that big corporate entities are not intrinsically more trustworthy than
+<BR>
+small fry like us, and that threats can come from unanticipated sources.
+<BR>
+<P>And I still think that the big growth industry in nanotech, once the
+<BR>
+first general assemblers come out, will be software (in the sense of
+<BR>
+design schemas and construction algorithms).
+<BR>
+<P><P>-- Charlie
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2488.html">Ralph Lewis: "Re: Subject: immortality and being stuck in time..."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2486.html">Joseph Sterlynne: "RE: Tree of Life"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="2485.html">Eliezer S. Yudkowsky: "Re: NANO: Hacking assembler security"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2501.html">Stirling Westrup: "Re: NANO: Hacking assembler security"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2487">[ date ]</A>
+<A HREF="index.html#2487">[ thread ]</A>
+<A HREF="subject.html#2487">[ subject ]</A>
+<A HREF="author.html#2487">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:03:38 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

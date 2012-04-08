@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Fw: Audio Books</TITLE>
+<META NAME="Author" CONTENT="Harvey Newstrom (newstrom@newstaffinc.com)">
+<META NAME="Subject" CONTENT="Fw: Audio Books">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Fw: Audio Books</H1>
+<!-- received="Sun Jan  9 16:35:06 2000" -->
+<!-- isoreceived="20000109233506" -->
+<!-- sent="Sun, 9 Jan 2000 17:08:29 -0500" -->
+<!-- isosent="20000109220829" -->
+<!-- name="Harvey Newstrom" -->
+<!-- email="newstrom@newstaffinc.com" -->
+<!-- subject="Fw: Audio Books" -->
+<!-- id="000001bf5afa$5bdb8460$e91924cf@raleigh.ibm.com" -->
+<!-- inreplyto="Audio Books" -->
+<STRONG>From:</STRONG> Harvey Newstrom (<A HREF="mailto:newstrom@newstaffinc.com?Subject=Fw:%20Audio%20Books&In-Reply-To=&lt;000001bf5afa$5bdb8460$e91924cf@raleigh.ibm.com&gt;"><EM>newstrom@newstaffinc.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Sun Jan 09 2000 - 15:08:29 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="0470.html">James Rogers: "Re: META: The best of times . . ."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0468.html">john grigg: "Old-time radio shows and also  making one's own audio books..."</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="0462.html">John Clark: "Audio Books"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0473.html">EvMick@aol.com: "Re: Fw: Audio Books"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="0473.html">EvMick@aol.com: "Re: Fw: Audio Books"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#469">[ date ]</A>
+<A HREF="index.html#469">[ thread ]</A>
+<A HREF="subject.html#469">[ subject ]</A>
+<A HREF="author.html#469">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Sorry if you get this twice.  I didn't see it show up on the List, so I'm
+<BR>
+resending it.
+<BR>
+<PRE>
+--
+Harvey Newstrom &lt;<A HREF="http://harveynewstrom.com">http://harveynewstrom.com</A>&gt;
+Certified Consultant,  Legal Hacker, Engineer, Research Scientist, Author.
+<P>----- Original Message -----
+From: Harvey Newstrom &lt;<A HREF="mailto:newstrom@newstaffinc.com?Subject=Fw:%20Audio%20Books&In-Reply-To=&lt;000001bf5afa$5bdb8460$e91924cf@raleigh.ibm.com&gt;">newstrom@newstaffinc.com</A>&gt;
+To: &lt;<A HREF="mailto:extropians@extropy.com?Subject=Fw:%20Audio%20Books&In-Reply-To=&lt;000001bf5afa$5bdb8460$e91924cf@raleigh.ibm.com&gt;">extropians@extropy.com</A>&gt;
+Sent: Sunday, January 09, 2000 12:59 pm
+Subject: Re: Audio Books
+<P><P>&gt; &lt;<A HREF="mailto:EvMick@aol.com?Subject=Fw:%20Audio%20Books&In-Reply-To=&lt;000001bf5afa$5bdb8460$e91924cf@raleigh.ibm.com&gt;">EvMick@aol.com</A>&gt; wrote on Sunday, January 09, 2000 4:12 am,
+&gt;
+&gt; &gt; I've just (re)discovered audio books..
+&gt;
+&gt; I loved these a few years ago when I was commuting 90 minutes each way to
+a
+&gt; consulting job.  I got more &quot;reading&quot; done that year than I had in a long
+&gt; time!  Try looking at your local library for audio books you can borrow
+for
+&gt; free to reduce your costs.
+&gt;
+&gt; &gt; Hows about some enterprising software type writing a program that would
+&gt; &gt; turn a paperback book into a CD audio?
+&gt;
+&gt; I already use my Macintosh to do this.  I use it to make audio tapes of
+&gt; texts I download off the Internet, so I don't do much scanning for this
+&gt; purpose.
+&gt;
+&gt; The Mac has built-in text-to-speech capabilities, and most text editors
+have
+&gt; a &quot;Read outloud&quot; command.  Just stick the sound output into a
+taperecorder,
+&gt; and you've got it made.
+&gt;
+&gt; To add a little more control, I wrote my own little Applescript batch job.
+&gt; It does the following:
+&gt;     - choose the file to speak
+&gt;     - select length of each tape side (default is 45 minutes for my tapes)
+&gt;     - progress bar shows percentage complete
+&gt;     - progress bar estimates time left to speak
+&gt;     - progress box shows text of current sentence being spoken
+&gt;     - script stops before end-of-tape and prompts for turn-over or next
+tape
+&gt;     - script keeps track of tape/side number and shows what label to put
+on
+&gt; tapes
+&gt;
+&gt; I wrote and debugged this in about an hour.  I tested it with about a year
+&gt; of use.
+&gt;
+&gt; &gt; EvMick
+&gt; &gt; Effingham, Ill.
+&gt;
+&gt; (I grew up on a little farm just outside Effingham, Illinois.)
+&gt;
+&gt; --
+&gt; Harvey Newstrom &lt;<A HREF="http://harveynewstrom.com">http://harveynewstrom.com</A>&gt;
+&gt; Certified Consultant,  Legal Hacker, Engineer, Research Scientist, Author.
+&gt; ____________________________________________________________
+&gt; -- This is my script to create audio tapes from ASCII files --
+&gt;
+&gt; -- Select file to speak
+&gt;
+&gt; set thisfilename to (choose file with prompt &quot;Speak File:&quot;) as string
+&gt; set startfilename to 0
+&gt; repeat with i from 2 to (count of thisfilename) - 1
+&gt;  if character i of thisfilename is &quot;:&quot; then set startfilename to i + 1
+&gt; end repeat
+&gt; set thisfileshortname to characters startfilename through -1 of
+thisfilename
+&gt; as string
+&gt; set thisfile to (open for access thisfilename)
+&gt; tell application &quot;Finder&quot; to set thisfilesize to (get eof thisfile)
+&gt;
+&gt; -- Select tape length
+&gt;
+&gt; set lengthtime to 0
+&gt; set temptime to 45
+&gt; repeat while lengthtime = 0
+&gt;  activate
+&gt;  display dialog &quot;Pause for tape change every:&quot; buttons {&quot;&lt;&quot;, (temptime as
+&gt; string) &amp; &quot; minutes&quot;, &quot;&gt;&quot;} default button 2
+&gt;  set thisbutton to button returned of result
+&gt;  if thisbutton is equal to &quot;&lt;&quot; then
+&gt;   set temptime to temptime - 15
+&gt;  else if thisbutton is equal to &quot;&gt;&quot; then
+&gt;   set temptime to temptime + 15
+&gt;  else
+&gt;   set lengthtime to temptime
+&gt;  end if
+&gt;  if temptime ² 0 then
+&gt;   set temptime to 15
+&gt;  end if
+&gt; end repeat
+&gt;
+&gt; -- Start progress bar
+&gt;
+&gt; set thistape to 1
+&gt; set thisside to &quot;A&quot;
+&gt; set currentposition to 0
+&gt; set previouslyrecorded to 1
+&gt; tell application &quot;Finder&quot;
+&gt;  set myFile to file of (every process whose frontmost is true)
+&gt;  set comment of information window of myFile to &quot;Speaking:  \&quot;&quot; &amp;
+&gt; thisfileshortname &amp; &quot;\&quot;&quot; &amp; return &amp; &quot;Current Position:  1A:00:00 out
+&gt; of --:--:--&quot;
+&gt;  open information window of myFile
+&gt; end tell
+&gt;
+&gt; -- speak entire file
+&gt;
+&gt; set speaking to &quot;not done&quot;
+&gt; repeat while speaking is &quot;not done&quot;
+&gt;  set starttime to (current date)
+&gt;  set endtime to starttime + lengthtime * minutes
+&gt;  try
+&gt;   with timeout of lengthtime seconds
+&gt;    repeat while (current date) &lt; endtime
+&gt;     set thistext to (read thisfile until &quot;.&quot;)
+&gt;     set limit to (count of thistext) - 1
+&gt;     if limit &gt; 30 then
+&gt;      set limit to 30
+&gt;     end if
+&gt;     if limit &gt; 5 then
+&gt;      if (characters 1 through limit of thistext) contains return then
+&gt;       if character 1 of thistext is return then set thistext to (space &amp;
+&gt; (characters 2 through -1 of thistext)) as string
+&gt;       repeat with i from 2 to limit
+&gt;        if character i of thistext is return then set thistext to
+&gt; ((characters 1 through (i - 1) of thistext) &amp; space &amp; (characters (i + 1)
+&gt; through -1 of thistext)) as string
+&gt;       end repeat
+&gt;      end if
+&gt;     end if
+&gt;     set currenttime to (current date)
+&gt;     set difftime to currenttime - starttime
+&gt;     set currentposition to currentposition + (length of thistext)
+&gt;     set thisminute to round (difftime / 60) rounding down
+&gt;     if thisminute &lt; 10 then set thisminute to &quot;0&quot; &amp; thisminute
+&gt;     set thissecond to round (difftime - thisminute * 60) rounding down
+&gt;     if thissecond &lt; 10 then set thissecond to &quot;0&quot; &amp; thissecond
+&gt;     set secondsdone to previouslyrecorded + difftime
+&gt;     set estimatedseconds to secondsdone * (thisfilesize / currentposition)
+&gt;     set estimatedtapes to round (estimatedseconds / 60 / lengthtime)
+&gt; rounding up
+&gt;     if estimatedtapes mod 2 is not 0 then
+&gt;      set estimatedtapes to (round (estimatedtapes / 2) rounding up) &amp; &quot;A&quot;
+&gt;     else
+&gt;      set estimatedtapes to estimatedtapes / 2 &amp; &quot;B&quot;
+&gt;     end if
+&gt;     set oddminutes to round ((estimatedseconds / 60) mod (lengthtime))
+&gt; rounding down
+&gt;     if oddminutes &lt; 10 then set oddminutes to &quot;0&quot; &amp; oddminutes
+&gt;     set oddseconds to round (estimatedseconds mod 60) rounding down
+&gt;     if oddseconds &lt; 10 then set oddseconds to &quot;0&quot; &amp; oddseconds
+&gt;     tell application &quot;Finder&quot;
+&gt;      set comment of information window of myFile to &quot;Speaking:  \&quot;&quot; &amp;
+&gt; thisfileshortname &amp; &quot;\&quot;&quot; &amp; return &amp; &quot;Current Position:  &quot; &amp; thistape &amp;
+&gt; thisside &amp; &quot;:&quot; &amp; thisminute &amp; &quot;:&quot; &amp; thissecond &amp; &quot; out of &quot; &amp;
+estimatedtapes
+&gt; &amp; &quot;:&quot; &amp; oddminutes &amp; &quot;:&quot; &amp; oddseconds &amp; return &amp; thistext
+&gt;     end tell
+&gt;     tell me to say thistext
+&gt;    end repeat
+&gt;   end timeout
+&gt;   if thisside is &quot;A&quot; then
+&gt;    set thisside to &quot;B&quot;
+&gt;   else
+&gt;    set thisside to &quot;A&quot;
+&gt;    set thistape to thistape + 1
+&gt;   end if
+&gt;   set previouslyrecorded to previouslyrecorded + (lengthtime * minutes)
+&gt;   activate
+&gt;   display dialog &quot;Start recording Tape &quot; &amp; thistape &amp; &quot; Side &quot; &amp; thisside
+&gt; buttons {&quot;Cancel&quot;, &quot;OK&quot;} default button 2
+&gt;
+&gt;  on error errorMessage number errorNumber -- Handle end-of-file, cancel
+&gt; button,  time-out or other errors
+&gt;   set speaking to &quot;Done!&quot;
+&gt;   activate
+&gt;   if errorNumber = -39 then -- end of file
+&gt;    try
+&gt;     set thistext to (read thisfile)
+&gt;     tell me to say thistext
+&gt;    on error
+&gt;    end try
+&gt;    tell application &quot;Finder&quot; to set comment of information window of
+myFile
+&gt; to &quot;Done speaking \&quot;&quot; &amp; thisfileshortname &amp; &quot;!&quot; &amp; return &amp; &quot;Ending
+Position:
+&gt; &quot; &amp; thistape &amp; thisside &amp; &quot;:&quot; &amp; thisminute &amp; &quot;:&quot; &amp; thissecond
+&gt;    play sound &quot;Done&quot;
+&gt;   else if errorNumber = -128 then -- cancel button
+&gt;    tell application &quot;Finder&quot; to set comment of information window of
+myFile
+&gt; to &quot;Cancelled speaking \&quot;&quot; &amp; thisfileshortname &amp; &quot;!&quot; &amp; return &amp; &quot;Current
+&gt; Position:  &quot; &amp; thistape &amp; thisside &amp; &quot;:&quot; &amp; thisminute &amp; &quot;:&quot; &amp; thissecond
+&gt;    play sound &quot;Synth Twang&quot;
+&gt;   else
+&gt;    display dialog errorMessage &amp; &quot;(&quot; &amp; errorNumber &amp; &quot;)&quot; buttons {&quot;OK&quot;}
+&gt; default button &quot;OK&quot; with icon 0
+&gt;   end if
+&gt;  end try
+&gt;
+&gt; end repeat
+&gt;
+&gt;
+&gt;
+</PRE>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="0470.html">James Rogers: "Re: META: The best of times . . ."</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0468.html">john grigg: "Old-time radio shows and also  making one's own audio books..."</A>
+<LI><STRONG>Maybe in reply to:</STRONG> <A HREF="0462.html">John Clark: "Audio Books"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0473.html">EvMick@aol.com: "Re: Fw: Audio Books"</A>
+<LI><STRONG>Maybe reply:</STRONG> <A HREF="0473.html">EvMick@aol.com: "Re: Fw: Audio Books"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#469">[ date ]</A>
+<A HREF="index.html#469">[ thread ]</A>
+<A HREF="subject.html#469">[ subject ]</A>
+<A HREF="author.html#469">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:02:11 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

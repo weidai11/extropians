@@ -1,0 +1,154 @@
+<!-- received="Sun Jul 13 12:23:46 1997 MDT" -->
+<!-- sent="Sun, 13 Jul 1997 19:37:42 +0200 (MET DST)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="RANT: wiring up the neighbourhood" -->
+<!-- id="Pine.SOL.3.91.970713193608.3827A-100000@sun6" -->
+<!-- inreplyto="" -->
+<title>extropians: RANT: wiring up the neighbourhood</title>
+<h1>RANT: wiring up the neighbourhood</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 13 Jul 1997 19:37:42 +0200 (MET DST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#413">[ date ]</a><a href="index.html#413">[ thread ]</a><a href="subject.html#413">[ subject ]</a><a href="author.html#413">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0414.html">Michael M. Butler: "Pace (pah-chay) (was Re: Zen and the Art of Flying Saucer"</a>
+<li> <b>Previous message:</b> <a href="0412.html">Natasha V. More: "Re: Becoming (Trans)Human"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0520.html">Mark Grant: "Re: RANT: wiring up the neighbourhood"</a>
+<li> <b>Reply:</b> <a href="0520.html">Mark Grant: "Re: RANT: wiring up the neighbourhood"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+Kauffman nets (randomly wired graphs) show a very interesting<br>
+property: if the ratio of edges/nodes goes over the threshold<br>
+of 0.5, most nodes crystallize into one giant, interconnected<br>
+domain. A classical phase transition, obviously: gradual<br>
+change, before, gradual change, after; a very rapid change,<br>
+interim.<br>
+<p>
+This has some impacts onto the grassroot nets I've been<br>
+proposing for years (seasoned denizens will probably remember.<br>
+Several people came up with related schemes, it is probably a<br>
+FAQ item somewhere). But let's describe the status quo first, to<br>
+learn what exactly what, if anything, is amiss with the way we<br>
+are accustomed to do things just now.<br>
+<p>
+Currently, there is a sharp boundary between the consumer and<br>
+the provider. Single users have to pay the telcos for use of<br>
+their comm lines, the providers for bandwidth and computational<br>
+resource. In some, less advanced regions of the world, a telco<br>
+monopoly still prevails. Behind it, hides the ISP semimonopoly,<br>
+attempting to maximize profits by keeping newcomers out. It<br>
+won't hold for long for sure, but damage's done, already.<br>
+<p>
+On the other side of the spectrum, bottom-up networking has<br>
+begun. We have the CAN bus on the side of the microcomputer<br>
+embeddeds, IBM's PAN via the "handshake" protocol, ethernet<br>
+networking in the flat; between home PCs, IrDA (now extended to<br>
+4 MBit/s) to talk to the portable, wireless modems, and the<br>
+like. With the recent advent of cheap multiport cards, 10/100<br>
+switches, GBit ethernet, and plastic fiber optics relatively<br>
+impressive hardware will become available to the home user.<br>
+<p>
+In a very real sense, random interlinking has already begun. It<br>
+is possibly only a question of time, before adjacent domains<br>
+crosslink and coalesce, resulting in a larger nucleus. Its<br>
+participants profit mutually, as a linkup has emergent<br>
+properties (distributed storage, resource sharing, etc.) If we<br>
+extrapolate this way into the future, we'll get a global<br>
+grassroot net.<br>
+<p>
+A quick sketch, how this can be possibly accomplished.<br>
+<p>
+Birds of a feather flock together. This also applies to likewise<br>
+minded individuals. In some regions the critical potential user<br>
+density is already reached. A (possibly boosted) IrDA module, a<br>
+pair of magnifying bathroom mirrors (to collimate the 30 deg<br>
+beam), and a PPP infrared link across the street is in place.<br>
+Links along the street may form a pretty good backbone, ranging<br>
+for many 100 m even with primitive optics. There are few<br>
+problems assotiated with a twisted pair network in the house<br>
+(current loops), put galvanic potential-separating cheap optical<br>
+fiber is around the corner. Using laser diodes and directed<br>
+microwave links will be the next step.<br>
+<p>
+Many users object to let their machines run 24 h/day, also most<br>
+OSses show too limited performance and availability (two<br>
+free Unix users won't probably find any of this very demanding).<br>
+A hardware solution is in order, which may well be based on a<br>
+dedicated embedded solution, or on embedded PCs running Linux,<br>
+or, possibly, (embedded) Java in the near future. A low-cost<br>
+solution would use (optocoupled, or optical (IrDA)) RS232, a<br>
+more expensive one, ethernet. The system must be performant<br>
+enough to be able to handle several channels simultaneously (in<br>
+some cases a simple crossbar may already suffice, in some<br>
+interim storage and packet checking might be mandatory). The<br>
+system must come in a rugged, atmosphere-proof case, large<br>
+enough to contain a buffering battery (in case the system is<br>
+powered by a solar cell, crucial for a standalone relais).<br>
+The basic idea here is that users own the hardware, and do some<br>
+very limited maintance.<br>
+<p>
+There are several things to tackle: nanocash packet accounting<br>
+(to prevent network abuse), firewalling (agents should be able<br>
+to live in the boxes, but not to enter your home machine &amp; to<br>
+do some havoc there), and a geodetic routing design.<br>
+<p>
+The latter point is tough. Ubiquitous networking will need a<br>
+very different routing scheme than current TCP/IP. Constraints<br>
+like visibility demand such a scheme (tesselating space in<br>
+addressable voxels, which can be occupied by a hardware box).<br>
+The latter demands a huge address space. If you can imagine a<br>
+mm^3 voxel sphere ranging to beyond GEO, you might notice that<br>
+IPng has got a problem (the raw address space would suffice).<br>
+In the routing scheme there should be no difference between<br>
+routing and switching. Boxes, knowing their spatial address<br>
+(from GPS, and/ultrasonic, or vis LPS), can select the nearest<br>
+one. The benefits are twofold: you can't fake your address,<br>
+since your neighbouring boxes would notice the tampering, and<br>
+won't route your packet. Additionally, this gives a great means<br>
+for automated traffic routing, whether for humans, or agents.<br>
+(Remember a recent aerobot thread).<br>
+<p>
+This could go on for hours, I obviously have to truncate. Such a<br>
+routing scheme appears devisable, using orthogonized hypercubes:<br>
+hypergrids, or, lattices. Their capability to handle wraparound<br>
+at address space boundaries fits nicely with curved spheres,<br>
+both of surface, and orbital configurations. With some effort, a<br>
+fuzzy routing scheme probably could be devised, which derives<br>
+fuzzy addresses from wiring constraints.<br>
+<p>
+Comments?<br>
+<p>
+ciao,<br>
+'gene<br>
+<p>
+P.S. I've got a related problem: I'd like to wire up with<br>
+friends of mine living in the vicinity to share an ISP backlink<br>
+to be able to use cable modems, which are unidirectional (all<br>
+thanks to my favourite monopoly (Telekomiker)).<br>
+<p>
+P.P.S Just hooked up a tiny PC keyboard to my Newt130. The Newt<br>
+(especially the Newt2000) is imo a pretty interesting minimal<br>
+wearable platform, since both offering computational oomph (the<br>
+NTK, a sofware developer set is available for free for download,<br>
+and comes bundled with many Newton developer books, it allows<br>
+the use of NewtonScript, reminiscent of Java, and native code<br>
+as well), and is not too demanding in terms of power burned).<br>
+Of course the peculiar demands of a wearable (which are weird,<br>
+and many) demand a hackbox. <br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0414.html">Michael M. Butler: "Pace (pah-chay) (was Re: Zen and the Art of Flying Saucer"</a>
+<li> <b>Previous message:</b> <a href="0412.html">Natasha V. More: "Re: Becoming (Trans)Human"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0520.html">Mark Grant: "Re: RANT: wiring up the neighbourhood"</a>
+<li> <b>Reply:</b> <a href="0520.html">Mark Grant: "Re: RANT: wiring up the neighbourhood"</a>
+<!-- reply="end" -->
+</ul>

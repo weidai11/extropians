@@ -1,0 +1,68 @@
+<!-- received="Wed Jun  2 15:51:14 1999 MDT" -->
+<!-- sent="Wed, 02 Jun 1999 17:49:16 -0400" -->
+<!-- name="Dan Clemmensen" -->
+<!-- email="Dan@Clemmensen.ShireNet.com" -->
+<!-- subject="Re: Approximating Hypothetical Beowulfs" -->
+<!-- id="3755A6DC.468E87EE@clemmensen.shirenet.com" -->
+<!-- inreplyto="Approximating Hypothetical Beowulfs" -->
+<!-- version=1.10, linesinbody=32 -->
+<html><head><title>extropians: Re: Approximating Hypothetical Beowulfs</title>
+<meta name=author content="Dan Clemmensen">
+<link rel=author rev=made href="mailto:Dan@Clemmensen.ShireNet.com" title ="Dan Clemmensen">
+</head><body>
+<h1>Re: Approximating Hypothetical Beowulfs</h1>
+Dan Clemmensen (<i>Dan@Clemmensen.ShireNet.com</i>)<br>
+<i>Wed, 02 Jun 1999 17:49:16 -0400</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2572">[ date ]</a><a href="index.html#2572">[ thread ]</a><a href="subject.html#2572">[ subject ]</a><a href="author.html#2572">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2573.html">[ Next ]</a><a href="2571.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2565.html">Chandra Patel</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+Chandra Patel wrote:
+<br>
+<a href="2565.html#2572qlink1">&gt; I'm trying to develop a formula to predict the Linpack benchmark rating of a</a><br>
+<i>&gt; Beowulf. To make it easy I assume all nodes have the same processor type and</i><br>
+<i>&gt; the same bus and memory specifications. The factors I've identified so far</i><br>
+<i>&gt; are:</i><br>
+<i>&gt; </i><br>
+<i>&gt; 1)   processor type (speed, flops rating, etc.)</i><br>
+<i>&gt; 2)   memory (subfactors include memory access time, cache speed and size)</i><br>
+<i>&gt; 3)   Ethernet capacity (throughput)</i><br>
+<i>&gt; </i><br>
+OK so far, but Ethernet capacity is not a scalar. In fact, a Beowulf's
+connectivity (network topology) can be good for some problems and
+bad for others. I think you need to rate the capacity with respect to
+each problem you intend to attempt. For CPU-intensive problems with minimal
+comms requirements, a COW (collection of workstations) or even a distributed.net
+can be very effective. For cellular automata simulations, a four-way grid
+net of FDX 100BaseT will likely beat a hierarchical Gigabit net. I'm
+currently putting together a dual 450Mhz Celeron Linux machine (cheap and fast)
+and a friend currently has it connected to a similar machine with 2 100BaseT
+FDX links. He's going to try beowulf povray. We want to try Mosix, but
+Mosix and SMP don't quite play together yet. 
+
+<p>
+For those extropians who may be confused, Beowulf is software that allows
+anyone to build a supercomputer cheaply by connecting essentially any number
+of cheap computers. You can build a dual-processor Celeron system for about
+$500. Sixteen such systems give you a 32-processor beowulf for &lt;$8000.
+If you believe that progress is constrained at least somewhat by lack of
+supercomputer availability, you will see Beowulf as another step toward a
+computer-enhanced future. Mosix is less well-known. It permits a collection
+of computers to share an arbitrary load of "normal" programs, while beowulf
+permits the collection to run a program that has been written for beowulf.
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2573.html">[ Next ]</a><a href="2571.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2565.html">Chandra Patel</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

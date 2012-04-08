@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: Revealed at last... the Echelon spammer.</TITLE>
+<META NAME="Author" CONTENT="James Wetterau (jwjr@ignition.name.net)">
+<META NAME="Subject" CONTENT="Re: Revealed at last... the Echelon spammer.">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: Revealed at last... the Echelon spammer.</H1>
+<!-- received="Tue Aug  8 08:25:08 2000" -->
+<!-- isoreceived="20000808142508" -->
+<!-- sent="Tue, 08 Aug 2000 10:26:19 -0400" -->
+<!-- isosent="20000808142619" -->
+<!-- name="James Wetterau" -->
+<!-- email="jwjr@ignition.name.net" -->
+<!-- subject="Re: Revealed at last... the Echelon spammer." -->
+<!-- id="200008081426.KAA17504@ignition.name.net" -->
+<!-- inreplyto="Mon, 07 Aug 2000 22:58:03 EDT" -->
+<STRONG>From:</STRONG> James Wetterau (<A HREF="mailto:jwjr@ignition.name.net?Subject=Re:%20Revealed%20at%20last...%20the%20Echelon%20spammer.&In-Reply-To=&lt;200008081426.KAA17504@ignition.name.net&gt;"><EM>jwjr@ignition.name.net</EM></A>)<BR>
+<STRONG>Date:</STRONG> Tue Aug 08 2000 - 08:26:19 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="2650.html">altamira: "RE: Differing views of oil reserves"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2648.html">Craig B Johnson: "Re: Strengths of materials"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2660.html">Michael S. Lorrey: "Re: Revealed at last... the Echelon spammer."</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2660.html">Michael S. Lorrey: "Re: Revealed at last... the Echelon spammer."</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2678.html">Alex Future Bokov: "Re: Revealed at last... the Echelon spammer."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2649">[ date ]</A>
+<A HREF="index.html#2649">[ thread ]</A>
+<A HREF="subject.html#2649">[ subject ]</A>
+<A HREF="author.html#2649">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Alex Future Bokov says:
+<BR>
+...
+<BR>
+<EM>&gt; # each time it runs. Toss it into your crontab or .login. Add some words of 
+</EM><BR>
+<EM>&gt; # your own. Have fun! 
+</EM><BR>
+<EM>&gt; #
+</EM><BR>
+<EM>&gt; # Warning: It will blow away any existing .sig file, so back 'em up!
+</EM><BR>
+...
+<BR>
+<EM>&gt; $egreeting &lt;&lt;EOF;
+</EM><BR>
+<P>You have a syntax error here. 
+<BR>
+<P>It should be:
+<BR>
+<P>&nbsp;$egreeting =&lt;&lt;EOF;
+<BR>
+<P>It doesn't compile otherwise.
+<BR>
+<P>Also, if you're on a Unix system, you can make your .signature a fifo
+<BR>
+using mkfifo, and you can keep this program running nohup by writing a
+<BR>
+loop around it to keep it writing to the .sig file and closing after
+<BR>
+each write.  This way each fresh read will get a fresh run.
+<BR>
+<P>The loop could look basically like this:
+<BR>
+<P>while(1) 
+<BR>
+{
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open (&quot;&gt;/path/to/.sig&quot;) or die &quot;Could not open .sig: $!&quot;;
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# do the rest of the program here
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# ...
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# be sure to close
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;close SIG or die &quot;Got an error closing .sig: $!&quot;; 
+<BR>
+}
+<BR>
+<P>Note that I've added error checking to both system calls.  Always
+<BR>
+check the return value from system calls.
+<BR>
+<P>Now, then, after you mkfifo .sig, all you need to do is execute the
+<BR>
+program nohup:
+<BR>
+<P>nohup sigwriter &amp;
+<BR>
+<P>And any read will get a fresh set of words.  If you want, you can put
+<BR>
+a monitor job in your crontab or login to make sure it's still running
+<BR>
+every now and then.  The best way would be to have it record its
+<BR>
+process id on startup in a file you check for an extand pid by the
+<BR>
+same process name.
+<BR>
+<P>All the best,
+<BR>
+James
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="2650.html">altamira: "RE: Differing views of oil reserves"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="2648.html">Craig B Johnson: "Re: Strengths of materials"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="2660.html">Michael S. Lorrey: "Re: Revealed at last... the Echelon spammer."</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2660.html">Michael S. Lorrey: "Re: Revealed at last... the Echelon spammer."</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="2678.html">Alex Future Bokov: "Re: Revealed at last... the Echelon spammer."</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#2649">[ date ]</A>
+<A HREF="index.html#2649">[ thread ]</A>
+<A HREF="subject.html#2649">[ subject ]</A>
+<A HREF="author.html#2649">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Mon Oct 02 2000 - 17:35:42 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

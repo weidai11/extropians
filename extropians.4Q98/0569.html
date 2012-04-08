@@ -1,0 +1,138 @@
+<!-- received="Tue Oct 27 06:21:25 1998 MST" -->
+<!-- sent="Mon, 26 Oct 1998 18:34:31 -0500" -->
+<!-- name="Harvey Newstrom" -->
+<!-- email="harv@gate.net" -->
+<!-- subject="Re: questioning Y2K" -->
+<!-- id="36350707.758BD8AF@gate.net" -->
+<!-- inreplyto="questioning Y2K" -->
+<!-- version=1.10, linesinbody=92 -->
+<html><head><title>extropy: Re: questioning Y2K</title>
+<meta name=author content="Harvey Newstrom">
+<link rel=author rev=made href="mailto:harv@gate.net" title ="Harvey Newstrom">
+</head><body>
+<h1>Re: questioning Y2K</h1>
+Harvey Newstrom (<i>harv@gate.net</i>)<br>
+<i>Mon, 26 Oct 1998 18:34:31 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#569">[ date ]</a><a href="index.html#569">[ thread ]</a><a href="subject.html#569">[ subject ]</a><a href="author.html#569">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0570.html">[ Next ]</a><a href="0568.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0499.html">William John</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+William John wrote:
+<br>
+<a href="0499.html#0569qlink1">&gt; *** WHY *** would any outages occur?  How can a simple date cause such</a><br>
+<i>&gt; problems? Can you (computer programmers) explain how the appearance that it</i><br>
+<i>&gt; is January 1, 1900 will do anything more than screw up billing cycles (for</i><br>
+<i>&gt; power companies, Social Security Administration and others)?  Why should a</i><br>
+<i>&gt; bug like the 1900 vs. 2000 make much difference to power generation? (or</i><br>
+<i>&gt; computerized nuclear missiles and any other nightmare scenarios one can</i><br>
+<i>&gt; dream up)</i><br>
+
+<p>
+Dates and times are used for more than just billing.  They are used for
+all sorts of calculations, which I will exemplify below.  Normally, time
+always goes into the future.  When calculating how much time has passed,
+it always is a positive number.  If the date goes backwards from 1999 to
+1900, time periods suddenly go negative.  If the program interprets
+negative numbers, it may calculate negative values instead of positive
+ones.  If the program doesn't interpret negative numbers, then these
+numbers get interpreted as very large numbers because of the way data is
+stored.  (The first bit can be used as a sign bit, showing a positive or
+negative.  It also can be used as the top order binary digit, allowing
+larger positive numbers.)  In either case, programs get unexpected
+values that are negative or very large.  Such programs will then do
+unexpected things based on these numbers, or they very well may simply
+crash and/or hang the machine.
+
+<p>
+Some examples of date/time calculations:
+
+<p>
+Any machine (such as trains, planes, automobiles cruise controls)
+calculating how fast it is going (based on time calculations) suddenly
+gets a negative number and thinks it is going backwards and tries to
+accelerate to compensate.  Or it gets a very large number and thinks it
+is going too fast and tries to decelerate.
+
+<p>
+Any machine (such as a printer, automobile, nuclear power plant)
+measuring time since its last maintenance suddenly gets a negative
+number and thinks it has a long time to go until maintenance is due and
+never stops for maintenance and so runs until it burns itself up.  Or it
+gets a very large number and thinks its dangerously past maintenance and
+refuses to run at all until maintenance is performed.
+
+<p>
+Any machine (such as a medicinal IV drip) that meters out materials at a
+certain rate suddenly gets a negative number and thinks it is a long
+time until materials are due and so stops releasing materials.  Or it
+gets a very large number and thinks it is way past due and so dumps out
+an extraordinarily high amount of materials to catch up.
+
+<p>
+Not only does billing get screwed up, but any machine trying to track
+speed, rates of delivery, time since maintenance, etc. can get screwed
+up.
+
+<p>
+Dates are also used to calculate the days of the week.  Bank vaults may
+lock up on the wrong days.  VCRs may record on the wrong days.  Coffee
+makers may make coffee on the wrong days.  Alarm systems, sprinkler
+systems, automated lighting schedules, power grid peak production
+schedules, automated trucking schedules, etc., may try to operate on the
+wrong days or not operate on the correct days.
+
+<p>
+Sometimes dates are important as well.  Even though these may be
+"billing", consider if your credit card won't work because it expired in
+"1901".  Consider materials or food being thrown out because it is past
+its expiration date of "1901".  Consider your mechanic not performing
+proper maintenance on your car because his computer thinks it has a
+hundred years before your oil change is due.  Consider all TV
+programming, automated factory schedules, banking transfers, trucking
+schedules, etc., all failing on computers and having to be done by hand
+by certain affected companies.
+
+<p>
+Sometimes the date calculations will just crash because of the bogus
+numbers.  Imagine a cash register trying to print how many shopping days
+until christmas, trying to calculate 100 years of shopping days,
+overflowing the output field which is 3 digits long, and just crashing
+everytime it tries to print a receipt.  Most programs don't expect
+simple date calculations to overflow into extremely large values, so
+they don't check for them.  If they overflow, the program just crashes
+in many cases.  Even if the dates aren't important for the operations,
+they still could prevent the machine from functioning due to field
+overflows.
+
+<p>
+These are just some ideas about what could go wrong.  My predicition is
+that 99% of the errors will be fixed in time, but that the 1% left will
+wreak havoc.  Imagine just one satellite failing, or one airport not
+being able to fly, or one major computer network being down, or one
+phone company going dead, or one state of the U.S. losing its power
+grid, or one stock exchange shutting down, or one brand of automobile to
+all go dead, or one brand of computer operating system to suddenly quit
+working, or one country mistakingly launching missiles.  A small
+percentage of failure can cause widespread problems.
+<pre>
+--
+Harvey Newstrom                                  &lt;<a href="mailto:harv@gate.net">mailto:harv@gate.net</a>&gt;
+Author, Engineer, Entrepreneur,             &lt;<a href="http://www.gate.net/~harv">http://www.gate.net/~harv</a>&gt;
+Consultant, Researcher, Scientist.           &lt;ldap//certserver.pgp.com&gt;
+</pre>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0570.html">[ Next ]</a><a href="0568.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0499.html">William John</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

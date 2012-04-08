@@ -1,0 +1,120 @@
+<!-- received="Fri Apr 11 17:56:05 1997 MDT" -->
+<!-- sent="Fri, 11 Apr 1997 16:52:53 -0700 (PDT)" -->
+<!-- name="Lee Daniel Crocker" -->
+<!-- email="lcrocker@calweb.com" -->
+<!-- subject="Re: META: traffic-limited list idea" -->
+<!-- id="199704112352.QAA27228@web2.calweb.com" -->
+<!-- inreplyto="199704112025.NAA20282@hss.caltech.edu" -->
+<title>extropians: Re: META: traffic-limited list idea</title>
+<h1>Re: META: traffic-limited list idea</h1>
+Lee Daniel Crocker (<i>lcrocker@calweb.com</i>)<br>
+<i>Fri, 11 Apr 1997 16:52:53 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#307">[ date ]</a><a href="index.html#307">[ thread ]</a><a href="subject.html#307">[ subject ]</a><a href="author.html#307">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0308.html">FringeWare News Network: "SITE - High Weirdness WWW site back by popular demand."</a>
+<li> <b>Previous message:</b> <a href="0306.html">Michael Lorrey: "The White Abacus review"</a>
+<li> <b>In reply to:</b> <a href="0297.html">Robin Hanson: "META: traffic-limited list idea"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0310.html">Kathryn Aegis: "Re: META: traffic-limited list idea"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+You're probably right that a simpler non-crypto honor-system first<br>
+implementation would help prove the idea and find new bugs.  Here's<br>
+a specific proposal that I could implement in a few weeks, given<br>
+the cooperation of the server owners:<br>
+<p>
+The existing lists stay as they are.  A new list, say "exi-paid" or<br>
+something like that, is created.  Everything posted to the new list,<br>
+paid or otherwise, is copied to the old list so the existing archive<br>
+becomes the complete open archive.  Some people may still want to<br>
+subscribe to that, or else just occasionally read it on the Web to<br>
+find things to spend their tokens on.<br>
+<p>
+Tokens are simply 5- or 6-digit numbers (depending on traffic).  To<br>
+pay for a posting, the number is placed in the text of the message<br>
+in square brackets: [73567] anywhere in the post.  Shouldn't be a<br>
+problem for anyone with any mailer to do that.<br>
+<p>
+The robot that recieves postings to exi-paid looks for the token,<br>
+matches it against its list of outstanding tokens, replaces the text<br>
+with [PAID] or something, removes that token from the outstanding<br>
+list, and forwards it to the archive and to the paid list.<br>
+<p>
+A robot running daily or as a cron job on lucifer walks through the<br>
+subscriber list, and at each name tosses the dice to decide whether<br>
+to send that person a token (the probability is adjusted at will to<br>
+control traffic).  If it decides to send one, it generates a random<br>
+token different from any outstanding one, and then sends mail to the<br>
+person selected that looks something like:<br>
+<p>
+    You have been issued the token [54637] for the discussion list<br>
+    exi-paid@extropians.org.  If you wish to post to that list,<br>
+    just include this number (along with the brackets) in some line<br>
+    of your post.  It can only be sent once, and will be retired<br>
+    when it is used.  If you want to give this token to someone<br>
+    else, just forward them this message or tell them the number.<br>
+    If you want this token to be reissued randomly, reply to this<br>
+    message and change the subject line to the word "REISSUE".<br>
+    See (some URL) for further details.<br>
+<p>
+Note that even non-members can post if they get a token from<br>
+someone.  Those who are broke can post to the unpaid list a message<br>
+with a title beginning with "BEG: &lt;subject&gt;", trying to convince<br>
+others to fund them.<br>
+<p>
+The token mint logs every issuance and every redemption, and maybe<br>
+produces statistics we can use to tune the process.  We may want to<br>
+expire very old ones, and perhaps notify people who were issued them<br>
+before we do. <br>
+<p>
+<pre>
+-- 
+Lee Daniel Crocker &lt;lee@piclab.com&gt;  &lt;<a href="http://www.piclab.com/lcrocker.html">http://www.piclab.com/lcrocker.html</a>&gt;
+"All inventions or works of authorship original to me, herein and past,
+are placed irrevocably in the public domain, and may be used or modified
+for any purpose, without permission, attribution, or notification."--LDC
+<p>
+&gt; I like this idea.  It is worth trying; the main problem is getting
+&gt; someone to implement it.  So one should strive for a plausible
+&gt; *simple* design.
+&gt; 
+&gt; I don't think the quoting issue is a big problem; authors who don't
+&gt; quote enough won't be understood, and authors don't like that.
+&gt; Similarly while a per page or line charge might be best, a per post
+&gt; charge seems workable and much simpler; overly long posts will not get
+&gt; read.
+&gt; 
+&gt; A non crypto first implementation also seems fine.  Just go down the
+&gt; subscriber list at some rate sending out random ASCII strings of
+&gt; length 30, which people can forward to whomever they like.  The big
+&gt; problem is not people stealing tokens from peeking at messages; it is
+&gt; people creating new addresses to get more tokens.  So I suggest tokens
+&gt; only go to subscribers who have posted to the list within the last
+&gt; month (or three months?), with the first post per such period being
+&gt; free.
+&gt; 
+&gt; Having tokens expire after some period might be more robust to dealing
+&gt; with unknown accumlations of tokens.  Then it would be fine to have a
+&gt; target number of posts per week, and use a one or two week moving
+&gt; average of the recent posting rate to adjust the rate of token
+&gt; distribution.
+&gt; 
+&gt; The token for a new post should probably go in a special header line. 
+&gt; 
+</pre>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="0308.html">FringeWare News Network: "SITE - High Weirdness WWW site back by popular demand."</a>
+<li> <b>Previous message:</b> <a href="0306.html">Michael Lorrey: "The White Abacus review"</a>
+<li> <b>In reply to:</b> <a href="0297.html">Robin Hanson: "META: traffic-limited list idea"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="0310.html">Kathryn Aegis: "Re: META: traffic-limited list idea"</a>
+<!-- reply="end" -->
+</ul>

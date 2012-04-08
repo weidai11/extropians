@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: Primes and Probability</title>
+<meta name="Author" content="Spike Jones (spike66@attglobal.net)">
+<meta name="Subject" content="Re: Primes and Probability">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: Primes and Probability</h1>
+<!-- received="Sat May 12 17:49:27 2001" -->
+<!-- isoreceived="20010512234927" -->
+<!-- sent="Sat, 12 May 2001 16:49:30 -0700" -->
+<!-- isosent="20010512234930" -->
+<!-- name="Spike Jones" -->
+<!-- email="spike66@attglobal.net" -->
+<!-- subject="Re: Primes and Probability" -->
+<!-- id="3AFDCC0A.69A68BF8@attglobal.net" -->
+<!-- inreplyto="200105121735.MAA07453@dal-mail2.ricochet.net" -->
+<strong>From:</strong> Spike Jones (<a href="mailto:spike66@attglobal.net?Subject=Re:%20Primes%20and%20Probability&In-Reply-To=&lt;3AFDCC0A.69A68BF8@attglobal.net&gt;"><em>spike66@attglobal.net</em></a>)<br>
+<strong>Date:</strong> Sat May 12 2001 - 17:49:30 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="4231.html">hal@finney.org: "Phase transitions and Singularities"</a>
+<li><strong>Previous message:</strong> <a href="4229.html">Spike Jones: "Re: Dinosaur extinction anyone?"</a>
+<li><strong>In reply to:</strong> <a href="4216.html">Lee Corbin: "Primes and Probability"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4234.html">Lee Corbin: "Re: Primes and Probability"</a>
+<li><strong>Reply:</strong> <a href="4234.html">Lee Corbin: "Re: Primes and Probability"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4230">[ date ]</a>
+<a href="index.html#4230">[ thread ]</a>
+<a href="subject.html#4230">[ subject ]</a>
+<a href="author.html#4230">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+<em>&gt; Spike wrote:  suppose you pick two random primes and
+</em><br>
+<em>&gt; &gt; multiply them together to get a composite C. What is the probability
+</em><br>
+<em>&gt; &gt; that C+2 is prime? Is it still 1/ln(C+2) ?
+</em><br>
+<em>&gt;
+</em><br>
+<em>&gt; &gt; The answer to this is not trivial, and it bears directly on the
+</em><br>
+<em>&gt; &gt; discussion on page 87 of Damien's updated version of The Spike. spike
+</em><br>
+<p>Lee Corbin wrote:
+<br>
+<p><em>&gt; I'm lucky to have that book, wherein on page 87, it is related
+</em><br>
+<em>&gt; that a certain ominous **Mr. Jones** has determined the rate at
+</em><br>
+<em>&gt; which very large prime numbers are likely to be discovered.
+</em><br>
+<em>&gt; Now I would think that surely the probability that C+2 is
+</em><br>
+<em>&gt; prime is indeed proportional to 1/ln(C+2).  Yes?  It would be
+</em><br>
+<em>&gt; marvelous if someone had found otherwise.  What's the connection? Lee
+</em><br>
+<p>Ominous?   Cooool, Ive always wanted to be ominous.  Every time
+<br>
+you hear of an ominous donor giving money to something, you'll
+<br>
+know that was me.
+<br>
+<p>Im leading you to an apparent paradox, Lee.  The reason I mention
+<br>
+the C+2 problem it is this will lead you to the following:  Since
+<br>
+we have no reason to believe that the probability of C+2 is anything
+<br>
+other than 1 / ln(C+2), lets assume it so.  Now open a spreadsheet
+<br>
+to make this easier.  Get your two randomly chosen primes (neither
+<br>
+of which can be 2), multiply them together to generate the composite C.
+<br>
+Now fill down, C+2, C+4, and so on.  In the next column calculate
+<br>
+1 / ln {the first column}.  The second column is the probability of
+<br>
+each number to its left being prime.  Now calculate the cumulative
+<br>
+probability of C+2 and C+4 prime, then C+6 also prime, and so on.
+<br>
+<p>What did you find out?
+<br>
+<p>One of the many fascinating aspects of living when we do is that for
+<br>
+the first time in all human history, it is possible to make a prediction
+<br>
+about when the record for the largest known prime will be broken.  To
+<br>
+do this, all you need to know is the following:
+<br>
+<p>1.  Now and for all future time, the largest known prime will always
+<br>
+be a Mersenne prime, since there is no known way nor any anticipated
+<br>
+discovery that will allow megadigit non-Mersenne numbers to be tested
+<br>
+for primality.
+<br>
+<p>2.  You need to know the status of the GIMPS project, the Great
+<br>
+Internet Mersenne Primes Search.
+<br>
+<p>3.  You need to understand how to calculate the probability of a given
+<br>
+number of being prime, given that it is of the form 2^P-1 where P is
+<br>
+prime.
+<br>
+<p>4.  You also understand how to adjust the probability if the number has
+<br>
+already been checked for small factors {&quot;small&quot; being defined as factors
+<br>
+smaller than about 6 octillion}.
+<br>
+<p>When making the estimate for Damien's book, we had to make several
+<br>
+assumptions regarding the future of GIMPS, all of which were done
+<br>
+by extrapolation in May 2000.  We extrapolated the growth in
+<br>
+the number of participants (which we assumed would grow linearly)
+<br>
+the speedup of processors (Moore's law with a 2 yr doubling time),
+<br>
+the continued steady improvement of the algorithm, plus several other
+<br>
+assumptions which have proved fairly accurate with two notable exceptions:
+<br>
+<p>a) I failed to foresee the People's Republic of Taxifornia's power crisis
+<br>
+<p>b) I did not account for the fact that George Woltman, the founder of
+<br>
+GIMPS {may he live forever and fill the earth with his descendants}
+<br>
+would continue to *optimize* the Prime95 fourier transforms for
+<br>
+*specific processors*.  George is pending his time doing this for nothing
+<br>
+instead of taking that skill and making about a jillion dollars with it,
+<br>
+which proves Eliezer's point that there are a few people in this big
+<br>
+world who do things like this.
+<br>
+<p>an ominous donor, spike
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="4231.html">hal@finney.org: "Phase transitions and Singularities"</a>
+<li><strong>Previous message:</strong> <a href="4229.html">Spike Jones: "Re: Dinosaur extinction anyone?"</a>
+<li><strong>In reply to:</strong> <a href="4216.html">Lee Corbin: "Primes and Probability"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4234.html">Lee Corbin: "Re: Primes and Probability"</a>
+<li><strong>Reply:</strong> <a href="4234.html">Lee Corbin: "Re: Primes and Probability"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4230">[ date ]</a>
+<a href="index.html#4230">[ thread ]</a>
+<a href="subject.html#4230">[ subject ]</a>
+<a href="author.html#4230">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 10:00:04 MDT</em>
+</em>
+</small>
+</body>
+</html>

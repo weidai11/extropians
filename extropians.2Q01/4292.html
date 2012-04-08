@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: Fun With Bayes' Theorem</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: Fun With Bayes' Theorem">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: Fun With Bayes' Theorem</h1>
+<!-- received="Sun May 13 22:40:01 2001" -->
+<!-- isoreceived="20010514044001" -->
+<!-- sent="Mon, 14 May 2001 00:33:50 -0400" -->
+<!-- isosent="20010514043350" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: Fun With Bayes' Theorem" -->
+<!-- id="3AFF602E.A32FC41F@pobox.com" -->
+<!-- inreplyto="200105140326.WAA04018@dal-mail2.ricochet.net" -->
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20Fun%20With%20Bayes'%20Theorem&In-Reply-To=&lt;3AFF602E.A32FC41F@pobox.com&gt;"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Sun May 13 2001 - 22:33:50 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="4293.html">Lee Corbin: "Re: Fun With Bayes' Theorem"</a>
+<li><strong>Previous message:</strong> <a href="4291.html">Loree Thomas: "Re: Fun With Bayes' Theorem"</a>
+<li><strong>In reply to:</strong> <a href="4283.html">Lee Corbin: "Re: Fun With Bayes' Theorem"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4418.html">KPJ: "Re: Fun With Bayes' Theorem"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4292">[ date ]</a>
+<a href="index.html#4292">[ thread ]</a>
+<a href="subject.html#4292">[ subject ]</a>
+<a href="author.html#4292">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Lee Corbin wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; Here is a problem that I left off my original post
+</em><br>
+<em>&gt; because I thought that it was too similar to one of
+</em><br>
+<em>&gt; the four.  But maybe not.  Possibly, it may clarify
+</em><br>
+<em>&gt; the current discussion.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 5.  There are two cards in a hat: one is red on one side
+</em><br>
+<em>&gt;     and blue on the other side.  The other is red on both
+</em><br>
+<em>&gt;     sides.  You reach into a hat and select one of the
+</em><br>
+<em>&gt;     cards at random, and slap it down on the table.  If a
+</em><br>
+<em>&gt;     red surface is now showing, what is the probability
+</em><br>
+<em>&gt;     that the other side is red?
+</em><br>
+<p>2/3, of course.  But just in case, I wrote a computer simulation to test
+<br>
+it, and it's still 2/3.  (I just needed a break from thinking in English
+<br>
+for a while.)
+<br>
+<p>**********
+<br>
+<p># This is the long version of the Python program
+<br>
+<p>from whrandom import randint
+<br>
+<p>red = 'r'
+<br>
+blue = 'b'
+<br>
+<p>class Card:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, side1, side2):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.sides = [side1, side2]
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;def randSideUp(self):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# randint(0, 1) == random int between 0 and 1 inclusive :)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if randint(0, 1):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.sides
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return [self.sides[1], self.sides[0]]
+<br>
+<p>class Deck:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, *cards):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.cards = cards
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;def randCard(self):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;whichCard = randint(0, len(self.cards) - 1)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Python has zero-base arrays
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return self.cards[whichCard]
+<br>
+<p>class Test:
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self, deck):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.deck = deck
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.numberRedTop = 0
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.numberRedBottom = 0
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;def tryCard(self):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;card = self.deck.randCard()
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sides = card.randSideUp()
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if sides[0] == red:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.numberRedTop = self.numberRedTop + 1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if sides[1] == red:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.numberRedBottom = self.numberRedBottom + 1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;def tryCards(self, howMany):
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while howMany &gt; 0:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;howMany = howMany - 1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.tryCard()
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;percent = self.numberRedBottom * 100.0 / self.numberRedTop
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print &quot;Final result: &quot; + `percent`[0:4]
+<br>
+<p>def main():
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;card1 = Card(blue, red)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;card2 = Card(red, red)
+<br>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;deck = Deck(card1, card2)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;test = Test(deck)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;test.tryCards(10000)
+<br>
+<p>main()
+<br>
+<p><p>**********************
+<br>
+<p># This is the pseudo-Perl version
+<br>
+<p>import whrandom
+<br>
+<p>number = 10000
+<br>
+cardtotals = [0, 0]
+<br>
+while number &gt; 0:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number -= 1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;coin1 = whrandom.randint(0, 1)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;coin2 = whrandom.randint(0, 1)
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if coin1 or coin2:
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cardtotals[coin1] += 1
+<br>
+print `cardtotals[1] * 100.0 / (cardtotals[0] + cardtotals[1])`[0:4]
+<br>
+<p>--              --              --              --              -- 
+<br>
+Eliezer S. Yudkowsky                          <a href="http://singinst.org/">http://singinst.org/</a> 
+<br>
+Research Fellow, Singularity Institute for Artificial Intelligence
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="4293.html">Lee Corbin: "Re: Fun With Bayes' Theorem"</a>
+<li><strong>Previous message:</strong> <a href="4291.html">Loree Thomas: "Re: Fun With Bayes' Theorem"</a>
+<li><strong>In reply to:</strong> <a href="4283.html">Lee Corbin: "Re: Fun With Bayes' Theorem"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="4418.html">KPJ: "Re: Fun With Bayes' Theorem"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#4292">[ date ]</a>
+<a href="index.html#4292">[ thread ]</a>
+<a href="subject.html#4292">[ subject ]</a>
+<a href="author.html#4292">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Mon May 28 2001 - 10:00:05 MDT</em>
+</em>
+</small>
+</body>
+</html>

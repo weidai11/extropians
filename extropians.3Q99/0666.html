@@ -1,0 +1,142 @@
+<!-- received="Wed Jul 14 10:57:28 1999 MDT" -->
+<!-- sent="Wed, 14 Jul 1999 11:55:28 -0500" -->
+<!-- name="Billy Brown" -->
+<!-- email="ewbrownv@mindspring.com" -->
+<!-- subject="RE: Software/Hardware Architectures" -->
+<!-- id="NDBBLBGGEJLACCFCPNINCEEJCBAA.ewbrownv@mindspring.com" -->
+<!-- inreplyto="14219.63799.953167.314610@lrz.de" -->
+<!-- version=1.10, linesinbody=90 -->
+<html><head><title>extropians: RE: Software/Hardware Architectures</title>
+<meta name=author content="Billy Brown">
+<link rel=author rev=made href="mailto:ewbrownv@mindspring.com" title ="Billy Brown">
+</head><body>
+<h1>RE: Software/Hardware Architectures</h1>
+Billy Brown (<i>ewbrownv@mindspring.com</i>)<br>
+<i>Wed, 14 Jul 1999 11:55:28 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#666">[ date ]</a><a href="index.html#666">[ thread ]</a><a href="subject.html#666">[ subject ]</a><a href="author.html#666">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0667.html">[ Next ]</a><a href="0665.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0658.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0691.html">Eugene Leitl</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+<a name="0691qlink1">I don't think we were really getting anywhere with the previous line of
+responses, so I decided to try it again from the beginning.  Here goes:</a>
+
+
+<p>
+<a name="0691qlink2">Regarding Current Software
+<br>
+Current PC software is written for hardware that is actually in use, not
+hypothetical designs that might or might not ever be built.  This is
+perfectly logical, and I don't think it makes sense to blame anyone</a> for it.
+<a name="0691qlink3">If a better architecture becomes available, we can expect ordinary market
+forces to lead them to support it in short order (look</a> at Microsoft's
+<a name="0691qlink4">efforts with regard to the only-marginally-superior Alpha chip, for
+</a>example).
+
+<p>
+<a name="0691qlink5">The more sophisticated vendors (and like it or not, that included Microsoft)</a>
+<a name="0708qlink6"><a name="0691qlink6">have been writing 100% object-oriented, multithreaded code</a> for several years
+<a name="0708qlink7">now.  They use asynchronous communication anywhere there is a chance</a> that it
+</a>
+<a name="0691qlink7">might be useful, and they take full advantage of what little multiprocessor
+hardware is actually available.  There is also a trend currently</a> underway
+<a name="0708qlink9"><a name="0691qlink8">towards designing applications to run distributed across</a> multiple machines
+<a name="0708qlink10">on a network, and this seems likely to become the standard</a> approach for
+high-performance software in the near future.</a>
+
+
+<p>
+<a name="0691qlink9">Regarding Fine-Grained Parallelism
+<br>
+Parallel processing is not a new idea.  The supercomputer industry has</a> been
+<a name="0691qlink10">doing it for some time now, and they've done plenty of experimenting with
+different kinds of architectures.  They have apparently decided</a> that it
+<a name="0691qlink11">makes more sense to link 1,000 big, fast CPUs with large memory caches than
+100,000 small, cheap CPUs with tiny independant memory blocks.</a>  That fits
+<a name="0691qlink12">perfectly with what I know about parallel computing - the more nodes you
+have the higher your overhead tends to be, and tiny nodes can easily end up
+spending 100% of their resources on system overhead.</a>
+
+<p>
+<a name="0691qlink13">Now, if someone has found a new technique that changes the picture, great.
+But if this is something you've thought up yourself, I suggest you do some
+more research (or at least propose a more complete design).  When one</a> of the
+<a name="0691qlink14">most competitive (and technically proficient) industries on the planet has
+already tried something and discarded it as unworkable, its going to take
+more than arm-waving to convince me that they are wrong.</a>
+
+
+<p>
+<a name="0708qlink12"><a name="0691qlink15">Regarding the Applicability of Parallelism
+The processes on a normal computer span a vast continuum between the
+completely serial and the massively parallel, but most of them</a> cluster near
+<a name="0708qlink13">the serial end of the spectrum.  Yes, you have a few hundred</a> process</a> in
+<a name="0691qlink16">memory on your computer at any given time, but only a few of them are
+actually doing anything.  Once you've allocated two or three fast CPUs</a> (or a
+<a name="0691qlink17">dozen or so slow ones) to the OS and any running applications, there isn't
+much left to do on a typical desktop machine.  Even things</a> that in theory
+<a name="0691qlink18">should be parallel, like spell checking, don't actually get much benifit
+from multiple processors (after all, the user only responds to one dialog
+box at a time).</a>
+
+<p>
+<a name="0691qlink19">On servers there is more going on, and thus more opportunity for
+parallelism.  However, the performance bottleneck is usuall</a> in the network
+<a name="0691qlink20">or disk access, not CPU time.  You can solve these problems by introducing
+more parallelism into the system, but ultimately it isn't cost-effective.
+For 99% of the applications out there, it makes more sense to buy 5
+standardized boxes for &lt;$5,000 each than one $100,000 mega-server (and you
+get better performance, too).
+</a>
+
+<p>
+<a name="0691qlink21">Of course, there are many processes that are highly amenable to being run in
+a parallel manner (video rendering, simulation of any kind, and lots of
+other things), but most of them are seldom actually done on PCs.</a>  The one
+<a name="0691qlink22">example that has become commonplace (video rendering) is usually handled by
+a specialized board with 1 - 8 fast DSP chips run by custom driver-level
+software (once again, the vendors have decided that a few fast, expensive
+chips are more economical than a lot of slow, cheap ones).</a>
+
+
+<p>
+Side Issues
+<br>
+<a name="0691qlink23">1) Most parallel tasks require that a large fraction of the data in the
+system be shared among all of your CPUs.  Thus, your system needs</a> to provide
+<a name="0691qlink24">for a lot of shared memory if it is going to be capable</a> of tackling
+<a name="0691qlink25">molecular CAD, atmospheric simulations, neural networks, etc.</a>  That brings
+<a name="0691qlink26">up all those issues of caching, inter-node communication and general
+overhead you were trying to avoid.</a>
+
+<p>
+<a name="0708qlink16"><a name="0691qlink27">2) You also can't get away from context switching.  Any</a> reasonably complex
+<a name="0708qlink17">task is going to have to be broken down into procedures,</a> and each processor
+<a name="0708qlink18">will have to call a whole series of them in order to get any</a> usefull work
+<a name="0708qlink19">done.  This isn't just an artifact of the way we currently</a> write software,</a>
+<a name="0691qlink28">either.  It is an inevitable result of the fact that any interesting
+computation requires a long series of distinct operations, each of which may
+require very different code and/or data from the others.</a>
+
+<p>
+<a name="0691qlink29">Billy Brown, MCSE+I
+<br>
+ewbrownv@mindspring.com
+</a>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0667.html">[ Next ]</a><a href="0665.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0658.html">Eugene Leitl</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0691.html">Eugene Leitl</a>
+</ul>
+</body></html>

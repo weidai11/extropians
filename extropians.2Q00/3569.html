@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: SITE: Coding a Transhuman AI 2.0a</TITLE>
+<META NAME="Author" CONTENT="Eugene Leitl (eugene.leitl@lrz.uni-muenchen.de)">
+<META NAME="Subject" CONTENT="Re: SITE: Coding a Transhuman AI 2.0a">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: SITE: Coding a Transhuman AI 2.0a</H1>
+<!-- received="Mon May 22 20:03:10 2000" -->
+<!-- isoreceived="20000523020310" -->
+<!-- sent="Mon, 22 May 2000 19:01:44 -0700 (PDT)" -->
+<!-- isosent="20000523020144" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: SITE: Coding a Transhuman AI 2.0a" -->
+<!-- id="14633.59016.905966.356252@lrz.uni-muenchen.de" -->
+<!-- inreplyto="Pine.GSO.4.10.10005221858590.15546-100000@morpheus.cis.yale.edu" -->
+<STRONG>From:</STRONG> Eugene Leitl (<A HREF="mailto:eugene.leitl@lrz.uni-muenchen.de?Subject=Re:%20SITE:%20Coding%20a%20Transhuman%20AI%202.0a&In-Reply-To=&lt;14633.59016.905966.356252@lrz.uni-muenchen.de&gt;"><EM>eugene.leitl@lrz.uni-muenchen.de</EM></A>)<BR>
+<STRONG>Date:</STRONG> Mon May 22 2000 - 20:01:44 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="3570.html">Spudboy100@aol.com: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3568.html">Matt Gingell: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3561.html">Dan Fabulich: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3577.html">Matt Gingell: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3577.html">Matt Gingell: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3569">[ date ]</A>
+<A HREF="index.html#3569">[ thread ]</A>
+<A HREF="subject.html#3569">[ subject ]</A>
+<A HREF="author.html#3569">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Dan Fabulich writes:
+<BR>
+<EM> &gt; Gene quipped:
+</EM><BR>
+<EM> &gt;
+</EM><BR>
+<EM> &gt; As usual: Necessary, but not sufficient.
+</EM><BR>
+<P>But an evolutionary process not only writes stuff in opaque fashion,
+<BR>
+it does typically much better than the human programmer, too. A
+<BR>
+darwinian process solving a limited-scale problem produces FPGA
+<BR>
+circuits consisting from a mesh of coupled positive and negative
+<BR>
+autofeedback loops (duh, &quot;strangely&quot; our brain hardware works that
+<BR>
+way, too), which solve a task a much more compact fashion than a human
+<BR>
+designer (alas, so far this doesn't scale to high-complexity
+<BR>
+tasks). Since human designers typically take decades to make, in a
+<BR>
+very expensive process with a very slow yield, it is perhaps best
+<BR>
+limit the number of human experts as close to zero as it is possible.
+<BR>
+<P>It is not really necessary to have human or superhuman level process
+<BR>
+to generate code of a complexity higher than itself, in fact we
+<BR>
+wouldn't be there, would it be the case. We have no idea how to code
+<BR>
+an all-purpose metamethod, however, with the exception of evolutionary
+<BR>
+algorithms applied on the algorithm descriptions itself. This is the
+<BR>
+only metamethod which we certifiedly know works. We ourselves are
+<BR>
+instances of another metamethod (intelligence) produced by a
+<BR>
+metamethod (darwinian evolution), unfortunately, we don't come with a
+<BR>
+manual. Being so very poorely documented makes reverse-engineering in
+<BR>
+a fashion other than clean-room quite difficult (we haven't been
+<BR>
+designed with understandability by ourselves as part of the spec
+<BR>
+sheet), and also I surmise (YMMV) we'll probably run into an
+<BR>
+evolutionary algorithm as the algorithm operating very close to the
+<BR>
+hardware layer, so switching to darwin in machina right from the start
+<BR>
+appears prudent, if we want to address the issue in a focused fashion
+<BR>
+other than perpetuating the AI debacle.
+<BR>
+<P>We don't know how to write programs automatically in a robust fashion
+<BR>
+yet, however. So, the first problem would seem to mutate a population
+<BR>
+of mutation functions in a machine language (say, x86), screening the
+<BR>
+result for obvious nonviability (memory access out of bounds, time
+<BR>
+cycles exhausted, etc -- because no OS is bulletproof (though some
+<BR>
+seem to take some sweeps at it -- see crashme utility), so we have to
+<BR>
+do in a virtual machine like Bochs). We thus have a population of
+<BR>
+mutation functions, which are being invoked to operate upon other
+<BR>
+members of the population.  Clearly, there is a lot of knowledge
+<BR>
+necessary to modify machine code while not produce programs which
+<BR>
+bomb. We have no (or, at least, very little) idea of how to do this,
+<BR>
+so letting the machine solve this part of the task from scratch is
+<BR>
+prudent.
+<BR>
+<P>After we find our magic mutation function, it fitness landscape will
+<BR>
+react much more benign to mutations. (This is really, really, really
+<BR>
+important. Believe me.) This process has to be repeated, wherever we
+<BR>
+change our substrate, be it machine programs, massively parallel
+<BR>
+machine programs tightly coupled by asynchronous message passing,
+<BR>
+FPGAs, or cellular automata patterns. (In fact, in latter case one has
+<BR>
+also to coevolve the rule, which increments the self-referentiality by
+<BR>
+another notch).
+<BR>
+<P>As measured by the metric of a rodent (a mouse..rat), I don't see such
+<BR>
+intelligence in a machine other than evolvable hardware (EHW) boxes,
+<BR>
+which are run by evolutionary algorithms. Of course, you all are
+<BR>
+willing to try (I haven't read <A HREF="http://singinst.org/CaTAI.html">http://singinst.org/CaTAI.html</A> yet, but
+<BR>
+I will once my deadline is past), but I just don't see it sprout legs, 
+<BR>
+blowing you a raspberry, and running off, sorry.
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="3570.html">Spudboy100@aol.com: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3568.html">Matt Gingell: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3561.html">Dan Fabulich: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3577.html">Matt Gingell: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3577.html">Matt Gingell: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3569">[ date ]</A>
+<A HREF="index.html#3569">[ thread ]</A>
+<A HREF="subject.html#3569">[ subject ]</A>
+<A HREF="author.html#3569">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:11:31 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

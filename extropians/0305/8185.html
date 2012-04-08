@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                      "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="hypermail 2.1.5, see http://www.hypermail.org/">
+<title>Extropians: RE: Denial of Service Attacks, Attacked</title>
+<meta name="Author" content="Harvey Newstrom (mail@HarveyNewstrom.com)">
+<meta name="Subject" content="RE: Denial of Service Attacks, Attacked">
+<meta name="Date" content="2003-05-14">
+<style type="text/css">
+body {color: black; background: #ffffff}
+h1.center {text-align: center}
+div.center {text-align: center}
+</style>
+</head>
+<body>
+<h1>RE: Denial of Service Attacks, Attacked</h1>
+<!-- received="Wed May 14 07:07:04 2003" -->
+<!-- isoreceived="20030514130704" -->
+<!-- sent="Wed, 14 May 2003 09:04:52 -0400" -->
+<!-- isosent="20030514130452" -->
+<!-- name="Harvey Newstrom" -->
+<!-- email="mail@HarveyNewstrom.com" -->
+<!-- subject="RE: Denial of Service Attacks, Attacked" -->
+<!-- id="FEEHKEIJDJKMGAAFLAIMMEAJFNAA.mail@HarveyNewstrom.com" -->
+<!-- charset="UTF-8" -->
+<!-- inreplyto="1db.9a46b8b.2bf32e52@aol.com" -->
+<!-- expires="-1" -->
+<p>
+<strong>From:</strong> Harvey Newstrom (<a href="mailto:mail@HarveyNewstrom.com?Subject=RE:%20Denial%20of%20Service%20Attacks,%20Attacked"><em>mail@HarveyNewstrom.com</em></a>)<br>
+<strong>Date:</strong> Wed May 14 2003 - 07:04:52 MDT
+</p>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8186.html">Harvey Newstrom: "RE: &quot;liberal media&quot;"</a>
+<ul>
+<li><strong>Previous message:</strong> <a href="8184.html">Harvey Newstrom: "RE: &quot;Hysteria, Thy Name is SARS&quot;"</a>
+<li><strong>In reply to:</strong> <a href="8171.html">Spudboy100@aol.com: "Denial of Service Attacks, Attacked"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8185">[ date ]</a>
+<a href="index.html#8185">[ thread ]</a>
+<a href="subject.html#8185">[ subject ]</a>
+<a href="author.html#8185">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<hr>
+<!-- body="start" -->
+<p>
+<a href="mailto:Spudboy100@aol.com?Subject=RE:%20Denial%20of%20Service%20Attacks,%20Attacked">Spudboy100@aol.com</a> wrote,
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; &lt;<a href="http://news.com.com/2100-1009_3-1001200.html?tag=fd_top">http://news.com.com/2100-1009_3-1001200.html?tag=fd_top</a>&gt;
+</em><br>
+<em>&gt; Moreover, the proposal shifts the onus for fixing Internet
+</em><br>
+<em>&gt; security problems from the victim to the attacker's ISP
+</em><br>
+<em>&gt; because such attacks result in traffic from parts of the
+</em><br>
+<em>&gt; Internet close to the attacker being blocked by the victim’s server. 
+</em><br>
+<p>I'm not sure how useful this is.
+<br>
+<p>You can't depend on the attacker's ISP to help prevent the attack.  They may be owned by the attacker or they may be under the control of the attacker.  And from a security point-of-view, your security cannot rely on third-parties doing the right thing for you.  If you can't do it yourself or verify that it is being done right, you don't have security assurance that your process is going to protect you at any given time.
+<br>
+<p>Furthermore, we already have easier techniques for preventing all address spoofing, but ISP refuse to cooperate.  That simple method is to filter all packets to limit them to their own legal address.  That is, simply don't allow ISP customers to use IP addresses outside their legal range.  For example, AOL could limit all outgoing traffic to using AOL source ranges.  Nobody from AOL could spoof traffic from any other website.  Unfortunately, most ISPs are too lazy, too stupid, or too cheap to expend any resources to control their own users or to enforce the IP protocol itself.  I doubt they would do so to implement a more complicated, non-standard protocol hack.  If all routers on the Internet would simply enforce legal address ranges for their particular subnet, no spoofing could ever traverse the Internet outside of local segments.
+<br>
+<p>Also from a security perspective, I question the concept of storing data inside the IP packet that would later be used to decide if the packets should be accepted or not.  This is the whole problem with packet forgery, that people fake the data inside the packets to make them look legitimate when they aren't.  This new field does not seem to have any special protections to keep it from being forged any more than IP addresses are currently forged today.  It simply moves the forgery target to a different field within the packet data.  But there is not additional encryption or protection for this new field.  Even the fact that it should be put their by ISP routers doesn't help.  E-mail paths and other packet data are supplied by routers, but this doesn't prevent forgery.  Forgers just fake their own routing data into the packet as it is created to appear that it has already gone through another ISP or router and already has the fields in place.
+<br>
+<p><pre>
+--
+Harvey Newstrom, CISSP, IAM, GSEC, IBMCP
+&lt;www.HarveyNewstrom.com&gt; &lt;www.Newstaff.com&gt;
+</pre>
+<!-- body="end" -->
+<hr>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="8186.html">Harvey Newstrom: "RE: &quot;liberal media&quot;"</a>
+<li><strong>Previous message:</strong> <a href="8184.html">Harvey Newstrom: "RE: &quot;Hysteria, Thy Name is SARS&quot;"</a>
+<li><strong>In reply to:</strong> <a href="8171.html">Spudboy100@aol.com: "Denial of Service Attacks, Attacked"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#8185">[ date ]</a>
+<a href="index.html#8185">[ thread ]</a>
+<a href="subject.html#8185">[ subject ]</a>
+<a href="author.html#8185">[ author ]</a>
+<a href="attachment.html">[ attachment ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr>
+<p><small><em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2.1.5</a> 
+: Wed May 14 2003 - 07:18:46 MDT
+</em></small></p>
+</body>
+</html>

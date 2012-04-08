@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: PROJ: Flare</title>
+<meta name="Author" content="Eliezer S. Yudkowsky (sentience@pobox.com)">
+<meta name="Subject" content="Re: PROJ: Flare">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: PROJ: Flare</h1>
+<!-- received="Wed Jul 18 00:49:30 2001" -->
+<!-- isoreceived="20010718064930" -->
+<!-- sent="Wed, 18 Jul 2001 02:47:41 -0400" -->
+<!-- isosent="20010718064741" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: PROJ: Flare" -->
+<!-- id="3B55310D.FFF54F63@pobox.com" -->
+<!-- inreplyto="3B551F19.846B7805@objectent.com" -->
+<strong>From:</strong> Eliezer S. Yudkowsky (<a href="mailto:sentience@pobox.com?Subject=Re:%20PROJ:%20Flare&In-Reply-To=&lt;3B55310D.FFF54F63@pobox.com&gt;"><em>sentience@pobox.com</em></a>)<br>
+<strong>Date:</strong> Wed Jul 18 2001 - 00:47:41 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="1350.html">Eliezer S. Yudkowsky: "Re: SETI/ASTRO: MBrains/JBrains &amp; Globular Clusters"</a>
+<li><strong>Previous message:</strong> <a href="1348.html">Lee Corbin: "RE: capitalist religion (was: NANO: _Forbes_ cover story)"</a>
+<li><strong>In reply to:</strong> <a href="1343.html">Samantha Atkins: "Re: PROJ: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1355.html">Reason: "RE: PROJ: Flare"</a>
+<li><strong>Reply:</strong> <a href="1355.html">Reason: "RE: PROJ: Flare"</a>
+<li><strong>Reply:</strong> <a href="1398.html">Matthew Gingell: "Re: PROJ: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1349">[ date ]</a>
+<a href="index.html#1349">[ thread ]</a>
+<a href="subject.html#1349">[ subject ]</a>
+<a href="author.html#1349">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Samantha Atkins wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; When Lisp was created is irrelevant.  Using linked lists
+</em><br>
+<em>&gt; internally  is a huge oversimplification (and not true of
+</em><br>
+<em>&gt; various aspects of all modern Lisp environements internally) and
+</em><br>
+<em>&gt; not particularly relevant to its power except for its
+</em><br>
+<em>&gt; fundamental low-level simplicity.  The lists are no more &quot;flat&quot;
+</em><br>
+<em>&gt; than an XML file is.  Much less so as a matter of fact as
+</em><br>
+<em>&gt; arbitrary functional expressions can be expressed within the
+</em><br>
+<em>&gt; same simple list structure as well as macros that generate new
+</em><br>
+<em>&gt; list structures (including new function expressions) dynamically
+</em><br>
+<em>&gt; when invoked.  You can do nothing remotely of this power
+</em><br>
+<em>&gt; starting from such a simple base and with as simple of an
+</em><br>
+<em>&gt; interpreter loop using XML.
+</em><br>
+<p>This is something I just don't understand at all.  What do you mean, I
+<br>
+can't do this in XML?  I can do this with raw lists but not with XML?  Why
+<br>
+on Earth not?  When I was young and inexperienced I wrote my own
+<br>
+parser-interpreter on at least two occasions, and I can personally attest
+<br>
+that it is both easy and natural to represent code blocks and expressions
+<br>
+as tree structures which are then directly executed by the interpreter. 
+<br>
+Not supernaturally efficient, perhaps, but not too slow either.
+<br>
+<p>In fact, I believe that LISP code effectively does this as well; LISP
+<br>
+expressions may not be *extensible* tree structures (if you can cons
+<br>
+another element onto '(plus 2 2) without breaking it, even under
+<br>
+object-oriented Common LISP, I'd like to know how), but LISP expressions
+<br>
+are most certainly tree structures and not Java VM or assembly.  '(plus 2
+<br>
+(plus 1 1)) sure looks like a tree structure to me.
+<br>
+<p><em>&gt; Bah.  I can annotate much more richly in Lisp
+</em><br>
+<p>??
+<br>
+<p><em>&gt; and have the
+</em><br>
+<em>&gt; annotation adapt itself to the context dynamically to boot.
+</em><br>
+<p>Funny, I don't remember that idiom being built into lists.  What's that
+<br>
+you say?  It's built into the language interpreter, not the
+<br>
+representation?  Well, why wouldn't Flare be able to do that as well?  And
+<br>
+do it far more naturally with XML than with lists.
+<br>
+<p><em>&gt; It is hierarchical.  This is not a great thing for a programming
+</em><br>
+<em>&gt; language.  There are many other very useful relationships of
+</em><br>
+<em>&gt; elements as I am sure you are aware.  Using a tool that only has
+</em><br>
+<em>&gt; one of them built-in and the rest as relatively ugly kludges is
+</em><br>
+<em>&gt; one of the problem I have with using XML as a programming
+</em><br>
+<em>&gt; language.  It is even somewhat of a problem even using it to
+</em><br>
+<em>&gt; represent relatively (to XML) rich data relationships.
+</em><br>
+<p>I don't see why Flare would have trouble representing non-hierarchical
+<br>
+data.  Flare has references, so it can freely represent directed networks
+<br>
+and cyclic structures.
+<br>
+<p><em>&gt; Readying XML files is not a natural human capability.  I find
+</em><br>
+<em>&gt; them painfully stultified for all but data that happens to be
+</em><br>
+<em>&gt; pretty hierarchical.  It does not make sense to me that pushing
+</em><br>
+<em>&gt; things into XML is more powerful than something truly flexible
+</em><br>
+<em>&gt; for representing and building new kinds of relationships and
+</em><br>
+<em>&gt; algorithms like lisp.  And Lisp is much easier to
+</em><br>
+<em>&gt; programmatically read and manipulate than using XML.
+</em><br>
+<p>Okay, this is new.  LISP would be superior to Flare?  I have to admit that
+<br>
+I've never heard that one before.
+<br>
+<p>Lists are only the foundation of LISP.  There's ever so much more to the
+<br>
+language.  This I know.  But LISP is still ultimately built on the idiom
+<br>
+of lists.  There's more to Flare than XML, but Flare is still ultimately
+<br>
+built on that foundation.  And XML is a better foundation than lists,
+<br>
+because you can add new pieces of data without destroying the integrity of
+<br>
+existing data.  With a list, it takes work to enable annotation as a
+<br>
+special case; with XML, it is universal.
+<br>
+<p><em>&gt; Translating from FlareSpeak to FlareCode (read something
+</em><br>
+<em>&gt; reasonable for expressing algorithms to XML which is arguable
+</em><br>
+<em>&gt; not at all reasonable for this) and back again costs machine
+</em><br>
+<em>&gt; cycles
+</em><br>
+<p>FlareSpeak never even exists except when a human programmer is looking at
+<br>
+code.  It is inelegant to ever write FlareSpeak to disk unless it is for
+<br>
+debugging purposes.
+<br>
+<p>FlareCode's tree structure, I expect, will be directly executed by the
+<br>
+interpreter.  Possibly there will later be optimized representations of
+<br>
+FlareCode; but, like I said, I can personally attest that it is possible,
+<br>
+and in fact very natural, to build an interpreter that represents
+<br>
+statements and expressions as tree structures, and LISP seems to get along
+<br>
+fine by doing so.
+<br>
+<p>--              --              --              --              -- 
+<br>
+Eliezer S. Yudkowsky                          <a href="http://singinst.org/">http://singinst.org/</a> 
+<br>
+Research Fellow, Singularity Institute for Artificial Intelligence
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="1350.html">Eliezer S. Yudkowsky: "Re: SETI/ASTRO: MBrains/JBrains &amp; Globular Clusters"</a>
+<li><strong>Previous message:</strong> <a href="1348.html">Lee Corbin: "RE: capitalist religion (was: NANO: _Forbes_ cover story)"</a>
+<li><strong>In reply to:</strong> <a href="1343.html">Samantha Atkins: "Re: PROJ: Flare"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1355.html">Reason: "RE: PROJ: Flare"</a>
+<li><strong>Reply:</strong> <a href="1355.html">Reason: "RE: PROJ: Flare"</a>
+<li><strong>Reply:</strong> <a href="1398.html">Matthew Gingell: "Re: PROJ: Flare"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#1349">[ date ]</a>
+<a href="index.html#1349">[ thread ]</a>
+<a href="subject.html#1349">[ subject ]</a>
+<a href="author.html#1349">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Fri Oct 12 2001 - 14:39:49 MDT</em>
+</em>
+</small>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!-- received="Thu Jul  8 11:11:50 1999 MDT" -->
+<!-- sent="Thu, 8 Jul 1999 10:08:52 -0700" -->
+<!-- name="hal@finney.org" -->
+<!-- email="hal@finney.org" -->
+<!-- subject="Re: SETSIs (was Re: seti@home WILL NOT WORK)" -->
+<!-- id="199907081708.KAA01101@finney.org" -->
+<!-- inreplyto="SETSIs (was Re: seti@home WILL NOT WORK)" -->
+<!-- version=1.10, linesinbody=40 -->
+<html><head><title>extropians: Re: SETSIs (was Re: seti@home WILL NOT WORK)</title>
+<meta name=author content="hal@finney.org">
+<link rel=author rev=made href="mailto:hal@finney.org" title ="hal@finney.org">
+</head><body>
+<h1>Re: SETSIs (was Re: seti@home WILL NOT WORK)</h1>
+<i>hal@finney.org</i><br>
+<i>Thu, 8 Jul 1999 10:08:52 -0700</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#375">[ date ]</a><a href="index.html#375">[ thread ]</a><a href="subject.html#375">[ subject ]</a><a href="author.html#375">[ author ]</a>
+<!-- next="start" -->
+<li><a href="0376.html">[ Next ]</a><a href="0374.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0352.html">Robert J. Bradbury</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0383.html">phoenix@ugcs.caltech.edu</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+bradbury@aeiveos.com, Robert J. Bradbury, writes:
+<br>
+<a href="0352.html#0375qlink1">&gt; Question: Does anyone know if there is an encryption</a><br>
+<i>&gt; methodology that will work if QC cracks the factoring problem?</i><br>
+
+<p>
+Quantum computers threaten cryptography in two known ways, so far.
+They greatly speed up factoring and the related problem of finding
+discrete logs, which are the basis for the standard public key
+cryptography algorithms in wide use today.  They also accelerate
+key search for "conventional" secret-key ciphers like DES, so that
+you need to use twice the key lengths that you would otherwise.
+
+<p>
+This second attack is not too troublesome, in that we can solve it by
+going to larger keys.  This is why the in-development Advanced Encryption
+Standard (AES) specifies keys up to 256 bits in size.  The only reason
+to use such large keys is in case quantum computers work, in which case
+they would then have the equivalent strength to 128 bit keys today,
+which is extremely strong.
+
+<p>
+The first attack, against public key cryptography, would be a larger
+problem.  RSA, DSA, and elliptic curve variants would all be hit,
+and it is not clear that going to larger keys would help.  However,
+there are some alternative public key systems which are not used much
+today but which might be practical.  There were a number of systems
+devised in the early days of PKC based on the knapsack problem, most of
+which were broken; I think the last remaining variant fell last year.
+But perhaps with some further looking this method could be brought back.
+There is also a system from McEliece based on coding theory, which
+has very cumbersome keys but uses different mathematical principles.
+Some Chinese groups have worked on finite automata based public key
+systems but I don't know much about them.
+
+<p>
+So if large quantum computers become practical, researchers do have a
+few alternatives to fall back on.  They have not generally been well
+studied though so no doubt there would be many cracks and new systems
+developed as people focus on these areas.  In the end I imagine that
+it would still be possible to use cryptography as we have it today,
+but it would be more expensive and difficult.
+
+<p>
+Hal
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="0376.html">[ Next ]</a><a href="0374.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0352.html">Robert J. Bradbury</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="0383.html">phoenix@ugcs.caltech.edu</a>
+</ul>
+</body></html>

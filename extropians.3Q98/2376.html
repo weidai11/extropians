@@ -1,0 +1,105 @@
+<!-- received="Mon Sep 14 11:34:59 1998 MDT" -->
+<!-- sent="Mon, 14 Sep 1998 12:41:24 -0500" -->
+<!-- name="Eliezer S. Yudkowsky" -->
+<!-- email="sentience@pobox.com" -->
+<!-- subject="Re: Quantum computing" -->
+<!-- id="35FD553E.8F94A5AC@pobox.com" -->
+<!-- inreplyto="Quantum computing" -->
+<!-- version=1.10, linesinbody=55 -->
+<html><head><title>extropians: Re: Quantum computing</title>
+<meta name=author content="Eliezer S. Yudkowsky">
+<link rel=author rev=made href="mailto:sentience@pobox.com" title ="Eliezer S. Yudkowsky">
+</head><body>
+<h1>Re: Quantum computing</h1>
+Eliezer S. Yudkowsky (<i>sentience@pobox.com</i>)<br>
+<i>Mon, 14 Sep 1998 12:41:24 -0500</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2376">[ date ]</a><a href="index.html#2376">[ thread ]</a><a href="subject.html#2376">[ subject ]</a><a href="author.html#2376">[ author ]</a>
+<!-- next="start" -->
+<li><a href="2377.html">[ Next ]</a><a href="2375.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2368.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="2387.html">Michael Nielsen</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+Eliezer S. Yudkowsky wrote:
+<br>
+<i>&gt; </i><br>
+<a name="2387qlink1"><a href="2368.html#2376qlink1">&gt; Michael Nielsen wrote:</a><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt; On Sat, 12 Sep 1998, Eliezer S. Yudkowsky wrote:</i><br>
+<i>&gt; &gt; &gt;</i><br>
+<i>&gt; &gt; &gt; But quantum computing, at least in theory, should allow handling of</i><br>
+<i>&gt; &gt; &gt; exponential search problems.</i><br>
+<i>&gt; &gt;</i><br>
+<i>&gt; &gt; What do you mean by that?</i><br>
+<i>&gt; </i><br>
+<i>&gt; Check out: <a href="http://www.qubit.org">http://www.qubit.org</a></i><br>
+
+
+<UL>
+  <li>  Whoop!  Apparently Michael Nielsen has Web pages about quantum computing. 
+</a>
+Which wasn't quite clear from his question - please tell me things like that. 
+Anyway, let me expand on that a bit - and feel free to correct me if I go off
+the track...
+
+
+</UL>
+<p>
+Ordinary QCL (<a href="http://tph.tuwien.ac.at/~oemer/qc/qcl/">http://tph.tuwien.ac.at/~oemer/qc/qcl/</a>) assumes that a series of
+unitary operations is being applied to an entire qubit in all eigenstates. 
+It's _not_ possible to branch (within the code) on the value of a qubit, which
+would turn each eigenstate into an isolated thread.
+
+<p>
+Suppose RAM can be maintained in superposition - not necessarily manipulated
+by NMR pulses, but having different values in each eigenstate without this
+passing the Penrosian 1-graviton threshold or whatever triggers state-vector
+reduction.  It then seems to me that within the code, "if" statements should
+be able to read off whether a qubit is a 1 or 0 within a given branch,
+particularly in the NMR version where a qubit represents more than one
+particle. 
+
+<p>
+At the physical level, after all, eigenstates are separate branches of
+reality, evolving linearly (without interaction) and without any fundamental
+distinction between whether or not something is a qubit.  So as far as I can
+tell, the only theoretical boundary to one-thread-per-eigenstate computation
+is that measurement would turn RAM and the program counter into a hopeless mess.
+
+<p>
+<a name="2387qlink2">Still, a creative operating system should be able to ignore this "scratch"
+memory, pick up whatever result was left in the qubits, and figure out which
+branch indicated success.  Supposing that arbitrarily large probability
+amplitudes for the qubits are possible, the probability amplitude could
+increase exponentially with the success of a given branch.  Otherwise, the
+measurement might only be able to cut the search space by half, necessitating
+repeated searches to read off the identity of the successful eigenstate/thread.
+</a>
+
+<p>
+Given one-thread-per-eigenstate superposed computing, exponential search
+simply requires a number of qubits equal to (log2(breadth))*depth for a direct
+equivalence between branching on a choice and branching into a new physical eigenstate.
+<pre>
+-- 
+        sentience@pobox.com         Eliezer S. Yudkowsky
+         <a href="http://pobox.com/~sentience/AI_design.temp.html">http://pobox.com/~sentience/AI_design.temp.html</a>
+          <a href="http://pobox.com/~sentience/sing_analysis.html">http://pobox.com/~sentience/sing_analysis.html</a>
+Disclaimer:  Unless otherwise specified, I'm not telling you
+everything I think I know.
+</pre>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="2377.html">[ Next ]</a><a href="2375.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="2368.html">Eliezer S. Yudkowsky</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="2387.html">Michael Nielsen</a>
+</ul>
+</body></html>

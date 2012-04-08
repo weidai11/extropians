@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Y10K, &amp; &quot;Who needs the Gregorian calendar,</TITLE>
+<META NAME="Author" CONTENT="M. E. Smith (mesmith@rocketmail.com)">
+<META NAME="Subject" CONTENT="Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;</H1>
+<!-- received="Mon Apr 10 09:40:40 2000" -->
+<!-- isoreceived="20000410154040" -->
+<!-- sent="Mon, 10 Apr 2000 08:40:46 -0700 (PDT)" -->
+<!-- isosent="20000410154046" -->
+<!-- name="M. E. Smith" -->
+<!-- email="mesmith@rocketmail.com" -->
+<!-- subject="Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;" -->
+<!-- id="20000410154046.29917.qmail@web2903.mail.yahoo.com" -->
+<STRONG>From:</STRONG> M. E. Smith (<A HREF="mailto:mesmith@rocketmail.com?Subject=Re:%20Y10K,%20&amp;%20&quot;Who%20needs%20the%20Gregorian%20calendar,%20anyway?&quot;&In-Reply-To=&lt;20000410154046.29917.qmail@web2903.mail.yahoo.com&gt;"><EM>mesmith@rocketmail.com</EM></A>)<BR>
+<STRONG>Date:</STRONG> Mon Apr 10 2000 - 09:40:46 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="0533.html">Lee Daniel Crocker: "Re: those NRA Australian statistics examined"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0531.html">Charlie Stross: "Re: POL: Reaction to Microsoft Ruling"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0539.html">Michael S. Lorrey: "Re: Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="0539.html">Michael S. Lorrey: "Re: Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="0583.html">Technotranscendence: "Re: Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="0639.html">Adrian Tymes: "Re: Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#532">[ date ]</A>
+<A HREF="index.html#532">[ thread ]</A>
+<A HREF="subject.html#532">[ subject ]</A>
+<A HREF="author.html#532">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Over several weeks ago, someone on this list made
+<BR>
+comments to the effect that the &quot;Y2K Problem&quot; was a
+<BR>
+unique event never to be repeated. The reasoning was
+<BR>
+that, since storage space is now plentiful and
+<BR>
+databases routinely are able to store dates in formats
+<BR>
+that support the far, far, far future (I can't
+<BR>
+remember the details, but we were talking an
+<BR>
+&quot;astronomical&quot; number of years from now), there will
+<BR>
+never again be a calendar event that threatens to
+<BR>
+break a significant fraction of computer programs.
+<BR>
+<P>I believe an implication of the post I refer to was
+<BR>
+that there will be no &quot;Y10K&quot; problem, for example.
+<BR>
+<P>Since then, I have been sensitive to code which is an
+<BR>
+exception to this. That is, every time I see code that
+<BR>
+would fail in Y10K, I notice it.
+<BR>
+<P>And I have noticed code like this an awful lot. For
+<BR>
+example, in Web development, it is common to pass data
+<BR>
+to servers as parameters at the end of URL's. When
+<BR>
+passing dates in URL's, the habit I see is to use a
+<BR>
+four-digit year. When I suggest that a five-digit year
+<BR>
+be used (&quot;just for grins&quot;, I say), people just roll
+<BR>
+their eyes at me. (People do that a lot.)
+<BR>
+<P>Eight thousand years is a long time to fix these
+<BR>
+things, and it seems unlikely that there will even be
+<BR>
+URL's as we now know them in 9999 C.E., so I realize
+<BR>
+this is a mainly nitpicking, but it is NOT the case
+<BR>
+that just because we have plenty of storage space and
+<BR>
+super-duper date fields in databases, there will
+<BR>
+therefore be nothing like Y10K problem. (I say
+<BR>
+&quot;nothing like&quot; because I accept the probability that
+<BR>
+the &quot;Gregorian calendar&quot; will not be used for another
+<BR>
+8000 years.*) All it requires is &quot;shortsightedness&quot;,
+<BR>
+which probably will never go away entirely.
+<BR>
+<P>Also, isn't there some kind of limit on the internal
+<BR>
+Unix clock format? I remember hearing somewhere that
+<BR>
+it only goes to something like 2038. If so, that seems
+<BR>
+like a problem, although probably not a big one (I bet
+<BR>
+the OS could be upgraded without having to change
+<BR>
+application code).
+<BR>
+<P>-- M. Smith
+<BR>
+<P>* Once, after being forced to write code for the
+<BR>
+umpteenth time to determine the number of days in a
+<BR>
+given month, I ALMOST included a joke comment to the
+<BR>
+effect that all months should have 28 days (4 weeks
+<BR>
+exactly) to make programming easier, and TO HELL with
+<BR>
+the phases of the moon and the rotation of the Earth!
+<BR>
+So what if it meant your birthday would be in a
+<BR>
+different season every three years? Don't farmers have
+<BR>
+almanacs? Are there not more programmers now than
+<BR>
+farmers? Do not the needs of the many outweigh the
+<BR>
+needs of the few?
+<BR>
+<P>Actually, if there were 13 months of 28 days each,
+<BR>
+that makes 364 days a year. It would take almost a
+<BR>
+century for your birthday to change seasons. Isn't
+<BR>
+that close enough? And the 13th month could be named
+<BR>
+&quot;Smithember&quot;, because I thought of it! Yeah! And all
+<BR>
+you people who were born on the 29th, 30th, or 31st
+<BR>
+would just be out of luck, no birthdays for you...
+<BR>
+<P>See! You're rolling your eyes!
+<BR>
+<P><P>=====
+<BR>
+** *** ***** ******* ***********
+<BR>
+M. E. Smith
+<BR>
+<A HREF="mailto:mesmith@rocketmail.com?Subject=Re:%20Y10K,%20&amp;%20&quot;Who%20needs%20the%20Gregorian%20calendar,%20anyway?&quot;&In-Reply-To=&lt;20000410154046.29917.qmail@web2903.mail.yahoo.com&gt;">mesmith@rocketmail.com</A>
+<BR>
+<A HREF="http://members.home.net/mesmith/">http://members.home.net/mesmith/</A>
+<BR>
+** *** ***** ******* ***********
+<BR>
+<P><P><P>__________________________________________________
+<BR>
+Do You Yahoo!?
+<BR>
+Talk to your friends online with Yahoo! Messenger.
+<BR>
+<A HREF="http://im.yahoo.com">http://im.yahoo.com</A>
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="0533.html">Lee Daniel Crocker: "Re: those NRA Australian statistics examined"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0531.html">Charlie Stross: "Re: POL: Reaction to Microsoft Ruling"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0539.html">Michael S. Lorrey: "Re: Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="0539.html">Michael S. Lorrey: "Re: Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="0583.html">Technotranscendence: "Re: Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="0639.html">Adrian Tymes: "Re: Y10K, &amp; &quot;Who needs the Gregorian calendar, anyway?&quot;"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#532">[ date ]</A>
+<A HREF="index.html#532">[ thread ]</A>
+<A HREF="subject.html#532">[ subject ]</A>
+<A HREF="author.html#532">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:09:12 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

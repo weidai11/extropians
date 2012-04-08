@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Re: TECH: Database independence</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Re: TECH: Database independence">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Re: TECH: Database independence</h1>
+<!-- received="Tue Oct  9 11:53:28 2001" -->
+<!-- isoreceived="20011009175328" -->
+<!-- sent="Tue, 09 Oct 2001 10:51:27 -0700" -->
+<!-- isosent="20011009175127" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: TECH: Database independence" -->
+<!-- id="B7E8872F.5E3F%jamesr@best.com" -->
+<!-- inreplyto="7A2B25F8EB070940996FA543A70A217B03CA99@ADLEXSV02" -->
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20TECH:%20Database%20independence&In-Reply-To=&lt;B7E8872F.5E3F%25jamesr@best.com&gt;"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Tue Oct 09 2001 - 11:51:27 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0623.html">Reason: "RE: TECH: Database independence"</a>
+<li><strong>Previous message:</strong> <a href="0621.html">Smigrodzki, Rafal: "Freedom of information (was Re: FWD: Jaron on 9/11)"</a>
+<li><strong>In reply to:</strong> <a href="0587.html">Emlyn O'regan: "TECH: Database independence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0635.html">Emlyn O'regan: "RE: TECH: Database independence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#622">[ date ]</a>
+<a href="index.html#622">[ thread ]</a>
+<a href="subject.html#622">[ subject ]</a>
+<a href="author.html#622">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+On 10/8/01 8:17 PM, &quot;Emlyn O'regan&quot; &lt;<a href="mailto:oregan.emlyn@healthsolve.com.au?Subject=Re:%20TECH:%20Database%20independence&In-Reply-To=&lt;B7E8872F.5E3F%25jamesr@best.com&gt;">oregan.emlyn@healthsolve.com.au</a>&gt; wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; I'm doing YADA work at the moment (Yet Another Database App), and I've run
+</em><br>
+<em>&gt; into an old problem for which there never seems to be a really good
+</em><br>
+<em>&gt; solution. This particular app is targetted at RDBMS Brand X (actually it's
+</em><br>
+<em>&gt; Sybase), and now there is a need to retarget it to another RDBMS. I am
+</em><br>
+<em>&gt; positive that more databases will creep into the story over time, so this is
+</em><br>
+<em>&gt; the old database-independent-app problem.
+</em><br>
+<p><p>This is a standard problem.  I've actually constructed fairly thorough
+<br>
+database abstraction layers (ANSI SQL only gets you so much), and there are
+<br>
+actually two primary problems in my experience:  SQL migration and schema
+<br>
+migration.
+<br>
+<p>The schema migration is the worse part, since you may find that there is no
+<br>
+equivalent form for your schema on a different database.  This is
+<br>
+particularly true if you start from relatively unrestricted databases (e.g.
+<br>
+DB2, Oracle) and move to a database that has dozens of seemingly innocuous
+<br>
+restrictions and limits (e.g. SQL Server 7) that are violated all over the
+<br>
+place with the original schema.
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; The big drama with retargetting the app is the mighty mountain of SQL which
+</em><br>
+<em>&gt; is database specific. RDBMSs are supposed to follow standards with their SQL
+</em><br>
+<em>&gt; - yeah, right. While they do look superficially similar, SQL dialects differ
+</em><br>
+<em>&gt; in fundamental join syntax, in built in functions, in the kinds of primitive
+</em><br>
+<em>&gt; data types they provide operators for, etc. This can be a really big hassle,
+</em><br>
+<em>&gt; and from an ongoing maintenance point of view it is big enough to be a
+</em><br>
+<em>&gt; project killer, especially if it forces a codebase to be forked into one
+</em><br>
+<em>&gt; copy for each database to be targetted.
+</em><br>
+<p><p>There isn't really a nice way to do this.  The last time I had to do this
+<br>
+(build an abstraction layer with support for every major RDBMS under the
+<br>
+sun), I built a Java abstraction framework for all database functionality
+<br>
+that was likely to be used by the application.  This was supported by a
+<br>
+plug-in cartridges that handled differences between our reference SQL (we
+<br>
+chose ANSI SQL99) and the individual database dialects.  The SQL conversion
+<br>
+was then done inside the API from SQL99 to the local dialect of the plug-in
+<br>
+cartridge.  This way, all the application code could be written to a single
+<br>
+ANSI SQL target.  Adding new plug-in cartridges turned out to be pretty
+<br>
+trivial once the first couple ones had been done, and this system worked
+<br>
+pretty nicely.  The APIs had support for many things beyond simple database
+<br>
+abstraction as well, such as caching and persistence, so it turned out to be
+<br>
+a good way to get all the  company applications off a particular database
+<br>
+and is used for just about everything these days.
+<br>
+<p>As I said, the biggest problem was migrating existing schema.  We started
+<br>
+with an Oracle 8i schema, which turned out to be a major problem when
+<br>
+migrating to feature restricted databases such as SQL Server 7.  In this
+<br>
+case there is no choice but to re-engineer the schema to the lowest common
+<br>
+denominator and/or move some database capabilities (e.g. sequence
+<br>
+generation) out of the DBMS into middleware.  We did the latter in some
+<br>
+cases and the former in others, depending on what the feature was that
+<br>
+wasn't portable.
+<br>
+<p>Good luck,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20TECH:%20Database%20independence&In-Reply-To=&lt;B7E8872F.5E3F%25jamesr@best.com&gt;">jamesr@best.com</a>
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0623.html">Reason: "RE: TECH: Database independence"</a>
+<li><strong>Previous message:</strong> <a href="0621.html">Smigrodzki, Rafal: "Freedom of information (was Re: FWD: Jaron on 9/11)"</a>
+<li><strong>In reply to:</strong> <a href="0587.html">Emlyn O'regan: "TECH: Database independence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0635.html">Emlyn O'regan: "RE: TECH: Database independence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#622">[ date ]</a>
+<a href="index.html#622">[ thread ]</a>
+<a href="subject.html#622">[ subject ]</a>
+<a href="author.html#622">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:12 MDT</em>
+</em>
+</small>
+</body>
+</html>

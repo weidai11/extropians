@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: SITE: Coding a Transhuman AI 2.0a</TITLE>
+<META NAME="Author" CONTENT="Matt Gingell (mjg223@is7.nyu.edu)">
+<META NAME="Subject" CONTENT="Re: SITE: Coding a Transhuman AI 2.0a">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: SITE: Coding a Transhuman AI 2.0a</H1>
+<!-- received="Mon May 22 21:31:32 2000" -->
+<!-- isoreceived="20000523033132" -->
+<!-- sent="Mon, 22 May 2000 23:32:35 -0400" -->
+<!-- isosent="20000523033235" -->
+<!-- name="Matt Gingell" -->
+<!-- email="mjg223@is7.nyu.edu" -->
+<!-- subject="Re: SITE: Coding a Transhuman AI 2.0a" -->
+<!-- id="00052223335803.00545@localhost.localdomain" -->
+<!-- inreplyto="14633.59016.905966.356252@lrz.uni-muenchen.de" -->
+<STRONG>From:</STRONG> Matt Gingell (<A HREF="mailto:mjg223@is7.nyu.edu?Subject=Re:%20SITE:%20Coding%20a%20Transhuman%20AI%202.0a&In-Reply-To=&lt;00052223335803.00545@localhost.localdomain&gt;"><EM>mjg223@is7.nyu.edu</EM></A>)<BR>
+<STRONG>Date:</STRONG> Mon May 22 2000 - 21:32:35 MDT
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="3578.html">Eugene Leitl: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3576.html">Eugene Leitl: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3569.html">Eugene Leitl: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3581.html">Dan Fabulich: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3581.html">Dan Fabulich: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3577">[ date ]</A>
+<A HREF="index.html#3577">[ thread ]</A>
+<A HREF="subject.html#3577">[ subject ]</A>
+<A HREF="author.html#3577">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+Eugene Leitl wrote:
+<BR>
+<P><EM>&gt; We don't know how to write programs automatically in a robust
+</EM><BR>
+<EM>&gt; fashionyet, however. So, the first problem would seem to mutate a
+</EM><BR>
+<EM>&gt; population of mutation functions in a machine language (say, x86),
+</EM><BR>
+<EM>&gt; screening the result for obvious nonviability (memory access out of
+</EM><BR>
+<EM>&gt; bounds, time cycles exhausted, etc -- because no OS is bulletproof
+</EM><BR>
+<EM>&gt; (though some seem to take some sweeps at it -- see crashme utility),
+</EM><BR>
+<EM>&gt; so we have to do in a virtual machine like Bochs). We thus have a
+</EM><BR>
+<EM>&gt; population of mutation functions, which are being invoked to operate
+</EM><BR>
+<EM>&gt; upon other members of the population.  Clearly, there is a lot of
+</EM><BR>
+<EM>&gt; knowledge necessary to modify machine code while not produce programs
+</EM><BR>
+<EM>&gt; which bomb. We have no (or, at least, very little) idea of how to do
+</EM><BR>
+<EM>&gt; this, so letting the machine solve this part of the task from scratch
+</EM><BR>
+<EM>&gt; is prudent.
+</EM><BR>
+<P>Dawkins mentions this sort of thing, briefly, in _Climbing Mount
+<BR>
+Improbable_ under 'Kaleidoscopic Embryology' and the 'Evolution of
+<BR>
+Evolability.' His example is symmetry: what's good for the left side
+<BR>
+is generally good for the right side, so evolving a genetic encoding
+<BR>
+that allows the same variation to express itself on both is a good
+<BR>
+thing. For instance, if I have two genes controlling the length of my
+<BR>
+two legs, then a mutation in one will leave me walking round in
+<BR>
+circles. If, instead, I have one gene controlling both, then my odds
+<BR>
+of getting something useful a much better. I constrain the space of
+<BR>
+possibilities and make the search more tractable.
+<BR>
+<P>In the general case, evolution is a graph search. Each possible
+<BR>
+individual is a node, and mutations spell out the transition rules. By
+<BR>
+manipulating the space of transition rules, we transform the search
+<BR>
+space - we make some points closer together and some further
+<BR>
+apart. Perhaps more importantly, local maxima can be eradicated
+<BR>
+since we change the set reachable nodes. (This analysis still
+<BR>
+holds if we consider crossover operators, every node becoming a
+<BR>
+population.)
+<BR>
+<P>Finding transition rules which work more often than random - perhaps
+<BR>
+by a meta-evolution over mutation operators - is formally identical to
+<BR>
+developing a heuristic. The really exciting thing is that you don't
+<BR>
+have to stop at meta-evolution, you can steam on ahead to
+<BR>
+meta-meta-evolution: you get heuristics, heuristics for developing new
+<BR>
+heuristics, heuristics for developing heuristics which develop new
+<BR>
+heuristics, and so forth.
+<BR>
+<P>In addition to doing a search over mutation operators, as Eugene
+<BR>
+mentioned, you can also evolve the semantics (the embryology) of
+<BR>
+genotypes. For example, a point mutation operator which flips a bit
+<BR>
+somewhere can have any consequence at all, dependant upon the
+<BR>
+interpretation of the bit it flips. We can then favor representation
+<BR>
+systems which tend to be mutable in useful ways. This is the notion of
+<BR>
+'representation as a heuristic.'
+<BR>
+<P>Take for example a program written in C and a program written in Ada:
+<BR>
+both are equivalently expressive - they're both equally good notations
+<BR>
+for Turing machine tapes - but a well-formed Ada program is more
+<BR>
+likely to do something meaningful than a C program, since type safety
+<BR>
+is static requirement for valid programs in Ada. Maybe this example
+<BR>
+isn't convincing - but consider C and a strongly-typed variant: the
+<BR>
+variant is no less expressive, but contains fewer programs and
+<BR>
+excludes more dopey ones than it does useful ones. (Heuristically
+<BR>
+speaking.) There's a connection here to compression and information
+<BR>
+entropy - we make good ideas short and bad ideas long.
+<BR>
+<P>Or consider mutations, constrained to well-formed programs, operating
+<BR>
+on a C program vs. on an assembly program, you're more likely to
+<BR>
+accomplish something transforming a call to Build_Nest() into
+<BR>
+Dig_Hole() than JMP 100000 into JMP 200000. There are potential big
+<BR>
+wins if you can embed semantics in your representation syntax. Function
+<BR>
+-&gt; Function is far better than Address -&gt; Address. 
+<BR>
+<P>Combined with some of the learning-as-scientific-discovery and
+<BR>
+concept-learning-as-represention formation stuff, I think this open up some
+<BR>
+interesting avenues for research. 
+<BR>
+<P>Which is all to say, in effect, screw doing it by hand. ;/
+<BR>
+<P>-matt
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="3578.html">Eugene Leitl: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="3576.html">Eugene Leitl: "Re: Humanoid Robots on the Mass Market"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="3569.html">Eugene Leitl: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="3581.html">Dan Fabulich: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<LI><STRONG>Reply:</STRONG> <A HREF="3581.html">Dan Fabulich: "Re: SITE: Coding a Transhuman AI 2.0a"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#3577">[ date ]</A>
+<A HREF="index.html#3577">[ thread ]</A>
+<A HREF="subject.html#3577">[ subject ]</A>
+<A HREF="author.html#3577">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:11:32 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

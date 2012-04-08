@@ -1,0 +1,84 @@
+<!-- received="Fri Sep 19 15:55:44 1997 MDT" -->
+<!-- sent="Fri, 19 Sep 1997 14:26:38 -0700" -->
+<!-- name="Hal Finney" -->
+<!-- email="hal@rain.org" -->
+<!-- subject="[META] Mail lossage" -->
+<!-- id="199709192126.OAA02220@s27.term1.sb.rain.org" -->
+<!-- inreplyto="" -->
+<title>extropians: [META] Mail lossage</title>
+<h1>[META] Mail lossage</h1>
+Hal Finney (<i>hal@rain.org</i>)<br>
+<i>Fri, 19 Sep 1997 14:26:38 -0700</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4008">[ date ]</a><a href="index.html#4008">[ thread ]</a><a href="subject.html#4008">[ subject ]</a><a href="author.html#4008">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4009.html">Hara Ra: "Re: Does a copy know?"</a>
+<li> <b>Previous message:</b> <a href="4007.html">Russell Whitaker: "FW: GOA Alert-- Multi-State 09/19/97"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="4099.html">Hal Finney: "Re: [META] Mail lossage"</a>
+<li> <b>Maybe reply:</b> <a href="4099.html">Hal Finney: "Re: [META] Mail lossage"</a>
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+For a couple of weeks now I have not been able to send mail to the<br>
+extropians list from my home system.  I think I may know the reason<br>
+why now.<br>
+<p>
+I have a Linux system which connects via a dial-up line to a local ISP,<br>
+rain.org.  I connect a few times a day for an hour or so to get mail<br>
+and check the web.<br>
+<p>
+My machine has never been configured quite right.  In particular, I've<br>
+never known what to put for the hostname and fully qualified domain name.<br>
+I don't have a registered domain name, so I just made one up:<br>
+crypt.hfinney.com.  For the most part this has not caused problems; my<br>
+outgoing mail shows my return address as hal@rain.org, and I use a POP<br>
+client to pick up my mail from rain.org and download to my Linux system.<br>
+<p>
+Mail to from rain.org to extropians worked, but mail from my Linux<br>
+system (which uses rain.org as an SMTP mail server) does not.  I am able<br>
+to send mail to other addresses, though.  Sending mail to extropians and<br>
+cc'ing it to other addresses gets to the other addresses OK, but it does<br>
+not show up on extropians.<br>
+<p>
+This suggested that the extropians list was rejecting my mail when it<br>
+came from my Linux system but accepting it when it came from rain.org.<br>
+The only real difference (I think) is that a couple of the headers are<br>
+different.  There is an extra Received header when I send from Linux,<br>
+claiming the mail came from crypt.hfinney.com, and the Message-ID also had<br>
+that domain name.  I thought perhaps the extropians software was trying to<br>
+do a DNS lookup on that name, and not finding it, was rejecting the mail.<br>
+<p>
+To try this, I changed my hostname to s27.term1.sb.rain.org.  This is<br>
+typical of the dynamic hostnames assigned by the PPP server on rain.org.<br>
+Each time I dial in I will get a slightly different address, with the s27<br>
+replaced by whatever port I land on.  Nevertheless this is a typical name<br>
+and a DNS lookup on it should succeed.<br>
+<p>
+Since I've made that change, all my mail to extropians has gone through.<br>
+Now I don't know for sure that this change was the cause; it's also<br>
+possible that some other change was made simultaneously that actually<br>
+was the fix.  I will need to try changing the host name back and see if<br>
+it makes a difference.<br>
+<p>
+But for other people who have been having problems getting through to the<br>
+list, if you have any bogus hostnames, you might see if this is the cause.<br>
+It would also be interesting to know if there were any changes made to the<br>
+list software about two weeks ago which might have made it pickier about<br>
+domain names in some header fields.<br>
+<p>
+Hal<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4009.html">Hara Ra: "Re: Does a copy know?"</a>
+<li> <b>Previous message:</b> <a href="4007.html">Russell Whitaker: "FW: GOA Alert-- Multi-State 09/19/97"</a>
+<!-- nextthread="start" -->
+<li> <b>Next in thread:</b> <a href="4099.html">Hal Finney: "Re: [META] Mail lossage"</a>
+<li> <b>Maybe reply:</b> <a href="4099.html">Hal Finney: "Re: [META] Mail lossage"</a>
+<!-- reply="end" -->
+</ul>

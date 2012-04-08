@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: Data reconstruction (was Dithering)</title>
+<meta name="Author" content="James Rogers (jamesr@best.com)">
+<meta name="Subject" content="Data reconstruction (was Dithering)">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>Data reconstruction (was Dithering)</h1>
+<!-- received="Mon Oct 15 01:24:17 2001" -->
+<!-- isoreceived="20011015072417" -->
+<!-- sent="Mon, 15 Oct 2001 00:22:26 -0700" -->
+<!-- isosent="20011015072226" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Data reconstruction (was Dithering)" -->
+<!-- id="B7EFDCC1.612B%jamesr@best.com" -->
+<!-- inreplyto="200110150537.HAA25065@galileo.mpi-hd.mpg.de" -->
+<strong>From:</strong> James Rogers (<a href="mailto:jamesr@best.com?Subject=Re:%20Data%20reconstruction%20(was%20Dithering)&In-Reply-To=&lt;B7EFDCC1.612B%25jamesr@best.com&gt;"><em>jamesr@best.com</em></a>)<br>
+<strong>Date:</strong> Mon Oct 15 2001 - 01:22:26 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0894.html">Josh Martin: "BOOK: Borderlands of Science (was Re: GRRR Vent Vent.)"</a>
+<li><strong>Previous message:</strong> <a href="0892.html">Eugene Leitl: "Re: Anthrax addendum."</a>
+<li><strong>In reply to:</strong> <a href="0889.html">Amara Graps: "Re: Dithering"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1864.html">Amara Graps: "re: Data reconstruction (was Dithering)"</a>
+<li><strong>Maybe reply:</strong> <a href="1864.html">Amara Graps: "re: Data reconstruction (was Dithering)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#893">[ date ]</a>
+<a href="index.html#893">[ thread ]</a>
+<a href="subject.html#893">[ subject ]</a>
+<a href="author.html#893">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+On 10/14/01 10:37 PM, &quot;Amara Graps&quot; &lt;<a href="mailto:Amara.Graps@mpi-hd.mpg.de?Subject=Re:%20Data%20reconstruction%20(was%20Dithering)&In-Reply-To=&lt;B7EFDCC1.612B%25jamesr@best.com&gt;">Amara.Graps@mpi-hd.mpg.de</a>&gt; wrote:
+<br>
+<em>&gt; 
+</em><br>
+<em>&gt; (It's not published yet.) The idea is to use the statistical
+</em><br>
+<em>&gt; characteristics of the data to fill in gaps for modelling
+</em><br>
+<em>&gt; purposes. Note: you are NOT creating *real* data (i.e. the folks who
+</em><br>
+<em>&gt; need to make predictions based on real data should not use this). But
+</em><br>
+<em>&gt; I think that this method has a valid use for those folks who can't
+</em><br>
+<em>&gt; apply a data analysis on their data because of small gaps in the
+</em><br>
+<em>&gt; time-series, or are trying to show long term dynamics of a system.
+</em><br>
+<em>&gt; For example, the 'standard' wavelet transforms which determine
+</em><br>
+<em>&gt; frequencies require as input time series data on an evenly-spaced time
+</em><br>
+<em>&gt; grid.
+</em><br>
+<p><p>Just out of curiosity, why couldn't full spectral re-synthesis be used to
+<br>
+interpolate the data rather than using statistical models?  Not trivial, but
+<br>
+I'm pretty sure it would work (without thinking about it too much).
+<br>
+Arguably the accuracy of the high-resolution spectral re-synthesis is going
+<br>
+to be extremely good and properly general if you are willing to throw a
+<br>
+little silicon at it.  I tend to shy away from statistical models because
+<br>
+many, though not all, statistical models seem to be sensitive to anomalies
+<br>
+in the data i.e. even many of the adaptive ones are based on the &quot;expected
+<br>
+case&quot; and can do ugly things when they come across something unusual.  (Also
+<br>
+most statistical models are specific cases of a general model waiting to be
+<br>
+discovered in my experience.)
+<br>
+<p>Unrelated to this discussion, it kind of shocks me to see some of the
+<br>
+archaic methods of analyzing and working with time series data used in many
+<br>
+parts of industry and even science and engineering.  The engineering
+<br>
+discipline of signal processing has very mature and extremely generalized
+<br>
+mathematics for handling just about any aspect of generic time series data
+<br>
+you could want in many cases, but many of the algorithms are rarely applied
+<br>
+outside of that discipline.  I've applied these things in an &quot;unorthodox&quot;
+<br>
+manner for some projects in the past where I wow-ed people who I really
+<br>
+thought should have known better.  I guess being a polymath has its
+<br>
+advantages.
+<br>
+<p>&nbsp;
+<br>
+<em>&gt; The problem with kriging, or any classical interpolation method, is
+</em><br>
+<em>&gt; that the method does not preserve the observed variability of the
+</em><br>
+<em>&gt; data. In addition, those methods cannot usually be calibrated to the
+</em><br>
+<em>&gt; analyzed observations. With this (which is what I think a much smarter
+</em><br>
+<em>&gt; approach), the temporal auto-correlation is honored and the observed
+</em><br>
+<em>&gt; variability of the data is conserved. A time series missing 20% of its
+</em><br>
+<em>&gt; values can be reconstructed without gaps preserving its temporal
+</em><br>
+<em>&gt; behavior in a statistical sense.
+</em><br>
+<p><p>It should be possible to accurately re-synthesize the expected variability
+<br>
+in a way that preserves most of the hidden context if there is any and add
+<br>
+statistically correct noise if there isn't.  Obviously the reconstructed
+<br>
+data isn't real, but you could theoretically generate essentially correct
+<br>
+data behaviors by convolving the &quot;noise&quot; fingerprint back into the
+<br>
+reconstructed data, particularly since such information could be extracted
+<br>
+cheaply during the primary re-synthesis stage of the data reconstruction.
+<br>
+This assumes you are doing a genuine re-synthesis rather than a much
+<br>
+computationally cheaper form of interpolation, but it is a minor problem
+<br>
+even if you aren't.  There are a few existing niche applications that do
+<br>
+something like this already, so the idea isn't completely novel.
+<br>
+<p>Now, this would be computationally very expensive if your time series is
+<br>
+large; doing this kind of correction in real-time with simple audio data
+<br>
+today requires a dozen or two high-end DSPs working in parallel.  I can only
+<br>
+imagine how long it would take to do millions of data points on a standard
+<br>
+computer.  However, the reason people spend the money to be able to do this
+<br>
+is that the reconstruction is absolutely superb and the algorithm is very
+<br>
+general; it doesn't generate any noticeable anomalies in the reconstructed
+<br>
+data even with relatively high loss.  Ironically, most people don't use
+<br>
+these algorithms to add noise to data (quite the opposite), but they
+<br>
+certainly could, and apparently there is an application. :^)
+<br>
+<p>I wrote a program that did a very limited, low-resolution version of
+<br>
+something similar to this about five years ago for a specific analytical
+<br>
+purpose.  I doubt I still have the code, but it might be an interesting
+<br>
+mini-project to program a generalized, highly accurate, time-series
+<br>
+re-synthesis engine with a bunch of configurable controls.  I'm not sure
+<br>
+such a general tool exists, but it might be nice to have.
+<br>
+<p>Cheers,
+<br>
+<p>-James Rogers
+<br>
+&nbsp;<a href="mailto:jamesr@best.com?Subject=Re:%20Data%20reconstruction%20(was%20Dithering)&In-Reply-To=&lt;B7EFDCC1.612B%25jamesr@best.com&gt;">jamesr@best.com</a>
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0894.html">Josh Martin: "BOOK: Borderlands of Science (was Re: GRRR Vent Vent.)"</a>
+<li><strong>Previous message:</strong> <a href="0892.html">Eugene Leitl: "Re: Anthrax addendum."</a>
+<li><strong>In reply to:</strong> <a href="0889.html">Amara Graps: "Re: Dithering"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="1864.html">Amara Graps: "re: Data reconstruction (was Dithering)"</a>
+<li><strong>Maybe reply:</strong> <a href="1864.html">Amara Graps: "re: Data reconstruction (was Dithering)"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#893">[ date ]</a>
+<a href="index.html#893">[ thread ]</a>
+<a href="subject.html#893">[ subject ]</a>
+<a href="author.html#893">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:13 MDT</em>
+</em>
+</small>
+</body>
+</html>

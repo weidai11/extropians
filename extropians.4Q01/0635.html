@@ -1,0 +1,402 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: RE: TECH: Database independence</title>
+<meta name="Author" content="Emlyn O'regan (oregan.emlyn@healthsolve.com.au)">
+<meta name="Subject" content="RE: TECH: Database independence">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>RE: TECH: Database independence</h1>
+<!-- received="Tue Oct  9 18:18:18 2001" -->
+<!-- isoreceived="20011010001818" -->
+<!-- sent="Wed, 10 Oct 2001 09:46:57 +0930" -->
+<!-- isosent="20011010001657" -->
+<!-- name="Emlyn O'regan" -->
+<!-- email="oregan.emlyn@healthsolve.com.au" -->
+<!-- subject="RE: TECH: Database independence" -->
+<!-- id="7A2B25F8EB070940996FA543A70A217B03CA9A@ADLEXSV02" -->
+<!-- inreplyto="TECH: Database independence" -->
+<strong>From:</strong> Emlyn O'regan (<a href="mailto:oregan.emlyn@healthsolve.com.au?Subject=RE:%20TECH:%20Database%20independence&In-Reply-To=&lt;7A2B25F8EB070940996FA543A70A217B03CA9A@ADLEXSV02&gt;"><em>oregan.emlyn@healthsolve.com.au</em></a>)<br>
+<strong>Date:</strong> Tue Oct 09 2001 - 18:16:57 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="0636.html">Colin Hales: "TECH: Quantum Head Job"</a>
+<li><strong>Previous message:</strong> <a href="0634.html">Dan Clemmensen: "Re: Optical DSPs promise tera-ops performance"</a>
+<li><strong>Maybe in reply to:</strong> <a href="0587.html">Emlyn O'regan: "TECH: Database independence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0659.html">Emlyn O'regan: "RE: TECH: Database independence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#635">[ date ]</a>
+<a href="index.html#635">[ thread ]</a>
+<a href="subject.html#635">[ subject ]</a>
+<a href="author.html#635">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Thanks for this, Samantha. I've worked on object persistence middleware
+<br>
+before, and am a big supporter of it. Unfortunately, most project which are
+<br>
+smaller than &quot;BIG&quot; don't seem to see the need for such infrastructure. I
+<br>
+commonly work on contract, and come in after things are well underway; just
+<br>
+about that time in every project's life when the iron clad guarantee that
+<br>
+&quot;we will only ever use Brand X database&quot; has rusted out.
+<br>
+<p>What would be most useful from this retro fit perspective (besides five
+<br>
+minutes alone with those responsible and a baseball bat) would be something
+<br>
+which could translate SQL from one flavour to another. Of course as James
+<br>
+has pointed out, you still have schema mismatch to contend with, but
+<br>
+normally you can use a lowest common denominator approach to schema
+<br>
+implementation which will work across DBs and give you equivalent looking
+<br>
+schema to work with which will be amenable to translated SQL. This is in
+<br>
+comparison to trying to find a subset of SQL which works across platforms,
+<br>
+which will work if all your statements are of the form &quot;select * from x&quot;,
+<br>
+and nothing more complex; ie, it's doomed to fail.
+<br>
+<p>I've responded to you inline below:
+<br>
+<p><em>&gt; -----Original Message-----
+</em><br>
+<em>&gt; From: Samantha Atkins [mailto:<a href="mailto:samantha@objectent.com?Subject=RE:%20TECH:%20Database%20independence&In-Reply-To=&lt;7A2B25F8EB070940996FA543A70A217B03CA9A@ADLEXSV02&gt;">samantha@objectent.com</a>]
+</em><br>
+<em>&gt; Sent: Tuesday, 9 October 2001 18:09
+</em><br>
+<em>&gt; To: <a href="mailto:extropians@extropy.org?Subject=RE:%20TECH:%20Database%20independence&In-Reply-To=&lt;7A2B25F8EB070940996FA543A70A217B03CA9A@ADLEXSV02&gt;">extropians@extropy.org</a>
+</em><br>
+<em>&gt; Subject: Re: TECH: Database independence
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Emlyn O'regan wrote:
+</em><br>
+<em>&gt; &gt; 
+</em><br>
+<em>&gt; &gt; Hi all,
+</em><br>
+<em>&gt; &gt; 
+</em><br>
+<em>&gt; &gt; I've got a technical question, so I hope there are some 
+</em><br>
+<em>&gt; technically minded
+</em><br>
+<em>&gt; &gt; people out there (erm...). Warning to non-IT types... you 
+</em><br>
+<em>&gt; will likely find
+</em><br>
+<em>&gt; &gt; this entire post entirely pointless, so switch off now!
+</em><br>
+<em>&gt; &gt; 
+</em><br>
+<em>&gt; &gt; I'm doing YADA work at the moment (Yet Another Database 
+</em><br>
+<em>&gt; App), and I've run
+</em><br>
+<em>&gt; &gt; into an old problem for which there never seems to be a really good
+</em><br>
+<em>&gt; &gt; solution. This particular app is targetted at RDBMS Brand X 
+</em><br>
+<em>&gt; (actually it's
+</em><br>
+<em>&gt; &gt; Sybase), and now there is a need to retarget it to another 
+</em><br>
+<em>&gt; RDBMS. I am
+</em><br>
+<em>&gt; &gt; positive that more databases will creep into the story over 
+</em><br>
+<em>&gt; time, so this is
+</em><br>
+<em>&gt; &gt; the old database-independent-app problem.
+</em><br>
+<em>&gt; &gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; I hear you!
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; This is actually close to my speciality.  I've been doing
+</em><br>
+<em>&gt; persistence middleware and object persistence especially for a
+</em><br>
+<em>&gt; lot of the last 15 years.  My speciality is object persistence
+</em><br>
+<em>&gt; and especially through middleware I created.  I just finished
+</em><br>
+<em>&gt; the grand opus of this work (unfortunately proprietary to my
+</em><br>
+<em>&gt; employer for now) in Java.  The performance is quite good.  The
+</em><br>
+<em>&gt; system includes in memory caching, multiple threading, its own
+</em><br>
+<em>&gt; lock manager and an adapter framework for plugging in different
+</em><br>
+<em>&gt; database products.  It doesn't matter if they are even of the
+</em><br>
+<em>&gt; same type (all relational for instance).  At the top the
+</em><br>
+<em>&gt; applications only see the middleware API.  Also included is
+</em><br>
+<em>&gt; builtin support for binary relations, persistent collections and
+</em><br>
+<em>&gt; persistent queues.  There is room in the architecture to scale
+</em><br>
+<em>&gt; and distribute the lock manager and cache and to support
+</em><br>
+<em>&gt; language adapters for different software language object and
+</em><br>
+<em>&gt; structure persistence.   The system supports dynamically
+</em><br>
+<em>&gt; difining new object/structs whose instances can then be
+</em><br>
+<em>&gt; persisted, queried, related to other instances and so on.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; &gt; The big drama with retargetting the app is the mighty 
+</em><br>
+<em>&gt; mountain of SQL which
+</em><br>
+<em>&gt; &gt; is database specific. RDBMSs are supposed to follow 
+</em><br>
+<em>&gt; standards with their SQL
+</em><br>
+<em>&gt; &gt; - yeah, right. While they do look superficially similar, 
+</em><br>
+<em>&gt; SQL dialects differ
+</em><br>
+<em>&gt; &gt; in fundamental join syntax, in built in functions, in the 
+</em><br>
+<em>&gt; kinds of primitive
+</em><br>
+<em>&gt; &gt; data types they provide operators for, etc. This can be a 
+</em><br>
+<em>&gt; really big hassle,
+</em><br>
+<em>&gt; &gt; and from an ongoing maintenance point of view it is big 
+</em><br>
+<em>&gt; enough to be a
+</em><br>
+<em>&gt; &gt; project killer, especially if it forces a codebase to be 
+</em><br>
+<em>&gt; forked into one
+</em><br>
+<em>&gt; &gt; copy for each database to be targetted.
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; What is needed to make a middleware approach work is to
+</em><br>
+<em>&gt; concentrate on the type of persistence services that are needed
+</em><br>
+<em>&gt; for your domain of applications instead of diving down
+</em><br>
+<em>&gt; immediately into SQL blues.  Build a good layer for giving that
+</em><br>
+<em>&gt; which sits on top of adapters which abstract out the vagaries
+</em><br>
+<em>&gt; that are driving you nuts.  
+</em><br>
+<em>&gt;
+</em><br>
+<p>This is my usual approach. For instance, in the project I'm working on right
+<br>
+now, there is a middle layer which hides all SQL grubbiness from the clients
+<br>
+behind an API. Having said that, there is still a layer somewhere which
+<br>
+needs to actually provide a (really very large) bunch of SQL statements to
+<br>
+do the communication between the lowest non-db layer and the db; for multi
+<br>
+db support, you need to provide equivalent translations for each statement;
+<br>
+an excellent source of bugs and always a maintenance problem.
+<br>
+&nbsp;&nbsp;
+<br>
+<em>&gt; &gt; In the past I've worked on systems using various approaches 
+</em><br>
+<em>&gt; to solving this
+</em><br>
+<em>&gt; &gt; problem, from parallel code bases for each database (yes, really!
+</em><br>
+<em>&gt; &gt; urrgghh....), through database tables full of alternate 
+</em><br>
+<em>&gt; forms of queries for
+</em><br>
+<em>&gt; &gt; each desired database (still nasty to maintain), even apps 
+</em><br>
+<em>&gt; which try to
+</em><br>
+<em>&gt; &gt; stick to a common simple subset of SQL which works across 
+</em><br>
+<em>&gt; all dbs (a noble
+</em><br>
+<em>&gt; &gt; but doomed approach). The nicest approach I've used so far 
+</em><br>
+<em>&gt; was a system I
+</em><br>
+<em>&gt; &gt; built for translating the SQL from one database's dialect 
+</em><br>
+<em>&gt; to another at run
+</em><br>
+<em>&gt; &gt; time, so that I could stick to one brand of SQL with 
+</em><br>
+<em>&gt; impunity (within some
+</em><br>
+<em>&gt; &gt; restrictions).
+</em><br>
+<em>&gt; &gt;
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Embedding SQL of any flavor within the application code already
+</em><br>
+<em>&gt; produces cognitive dissonance, known in the industry as
+</em><br>
+<em>&gt; &quot;impedance mismatch&quot;. 
+</em><br>
+<em>&gt;  
+</em><br>
+<p>It's not too modular, is it? :-)
+<br>
+<p><em>&gt; &gt; I'm really truly sick of this stupid problem popping up all 
+</em><br>
+<em>&gt; the time, and I
+</em><br>
+<em>&gt; &gt; think it's time to nail it. I've got some ideas for the 
+</em><br>
+<em>&gt; Grand Solution to
+</em><br>
+<em>&gt; &gt; proprietary database evilness, and I'm ready to go and 
+</em><br>
+<em>&gt; build these solutions
+</em><br>
+<em>&gt; &gt; myself. However, before I go off half cocked, I was hoping 
+</em><br>
+<em>&gt; others could
+</em><br>
+<em>&gt; &gt; share their experiences with this common problem, solutions they've
+</em><br>
+<em>&gt; &gt; used/know of. I don't want to reinvent the wheel, but the 
+</em><br>
+<em>&gt; best that google
+</em><br>
+<em>&gt; &gt; has been able to tell me is that yes, this really is a 
+</em><br>
+<em>&gt; problem without a
+</em><br>
+<em>&gt; &gt; decent solution, and for which one may buy all manner of 
+</em><br>
+<em>&gt; half baked partial
+</em><br>
+<em>&gt; &gt; fixes. If people can help me get a decent feel for what is 
+</em><br>
+<em>&gt; available to
+</em><br>
+<em>&gt; &gt; address this problem, I can move forward in some sensible manner.
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; Perhaps the above could give you some ideas.  If your world is
+</em><br>
+<em>&gt; guaranteed to be always relational then it can make sense to
+</em><br>
+<em>&gt; base middleware first on an ODBC adapter.   This gives you the
+</em><br>
+<em>&gt; most coverage the most cheaply.  
+</em><br>
+<em>&gt; 
+</em><br>
+<em>&gt; - samantha
+</em><br>
+<em>&gt; 
+</em><br>
+<p>Happily, I can usually count on the base db being relational.
+<br>
+<p>Usually I work in Delphi, and use some excellent drivers called SQL Links
+<br>
+drivers; they crap all over ODBC performance wise (which isn't too difficult
+<br>
+of course). Otherwise, ADO is usually the way I end up going.
+<br>
+<p>These do everything for you except actually giving you a single SQL dialect
+<br>
+to work with. Which is the biggest problem.
+<br>
+<p>Emlyn
+<br>
+<p><p><p>***************************************************************************
+<br>
+Confidentiality: The contents of this email are confidential and are
+<br>
+intended only for the named recipient. If the reader of this e-mail is not
+<br>
+the intended recipient you are hereby notified that any use, reproduction,
+<br>
+disclosure or distribution of the information contained in the e-mail is
+<br>
+prohibited. If you have received this e-mail in error, please reply to us
+<br>
+immediately and delete the document.
+<br>
+Viruses: Any loss/damage incurred by using this material is not the sender's
+<br>
+responsibility. Our entire liability will be limited to resupplying the
+<br>
+material. No warranty is made that this material is free from computer virus
+<br>
+or other defect.
+<br>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="0636.html">Colin Hales: "TECH: Quantum Head Job"</a>
+<li><strong>Previous message:</strong> <a href="0634.html">Dan Clemmensen: "Re: Optical DSPs promise tera-ops performance"</a>
+<li><strong>Maybe in reply to:</strong> <a href="0587.html">Emlyn O'regan: "TECH: Database independence"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="0659.html">Emlyn O'regan: "RE: TECH: Database independence"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#635">[ date ]</a>
+<a href="index.html#635">[ thread ]</a>
+<a href="subject.html#635">[ subject ]</a>
+<a href="author.html#635">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Sat May 11 2002 - 17:44:12 MDT</em>
+</em>
+</small>
+</body>
+</html>

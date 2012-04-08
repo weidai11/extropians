@@ -1,0 +1,138 @@
+<!-- received="Tue Dec  3 12:48:17 1996 MST" -->
+<!-- sent="Tue, 3 Dec 1996 20:40:19 +0100 (MET)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="Eugene.Leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: We need better tools to make better tools." -->
+<!-- id="Pine.SOL.3.91.961203194608.7448Q-100000@sun2" -->
+<!-- inreplyto="199612031842.KAA24115@frappe.ugcs.caltech.edu" -->
+<title>extropians: Re: We need better tools to make better tools.</title>
+<h1>Re: We need better tools to make better tools.</h1>
+Eugene Leitl (<i>Eugene.Leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Tue, 3 Dec 1996 20:40:19 +0100 (MET)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3604">[ date ]</a><a href="index.html#3604">[ thread ]</a><a href="subject.html#3604">[ subject ]</a><a href="author.html#3604">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3605.html">Robin Hanson: "Midpoint of history?"</a>
+<li> <b>Previous message:</b> <a href="3603.html">Michael Wiik: "Re: ALL LISTMEMBERS READ THIS NOW!"</a>
+<li> <b>In reply to:</b> <a href="3602.html">Twirlip of Greymist: "Re: We need better tools to make better tools."</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Tue, 3 Dec 1996, Twirlip of Greymist wrote:<br>
+<p>
+<i>&gt; On Dec 2,  6:33pm, James Rogers wrote:</i><br>
+<i>&gt; </i><br>
+<i>&gt; [...]</i><br>
+<i>&gt; } &gt;Yes but it doesn't have to look like gibberish.</i><br>
+<i>&gt; </i><br>
+<i>&gt; To whom?  There are people who can read and possibly write in straight</i><br>
+<i>&gt; hex machine code.</i><br>
+<p>
+Chuck Moore (of Forth fame) still programs in this way. At iTV they had <br>
+to deassemble a large application (a circuit simulator) he wrote entirely <br>
+using his crazy octakey (not hexapod) input scheme. This very nontrivial <br>
+application (he uses it to develop his i21/F21 chips, since the <br>
+commerical simulators produce only digital barfics if let loose upon his <br>
+designs) never had any source. (Why do you think his old company did run <br>
+by the name "Computer Cowboys"? Yeeeehaw!)<br>
+<p>
+<i>&gt; } usefulness of languages such as C and C++ apparent.  Those languages make</i><br>
+<i>&gt; } more sense than the really high-level ones if you understand what is</i><br>
+<i>&gt; } actually going on.</i><br>
+<i>&gt;    </i><br>
+<i>&gt; On bad compiler days programming in assembler has its appeal.  Start all</i><br>
+<i>&gt; over from the CPU up.</i><br>
+<p>
+Current RISCs have become finicky as formula1 cars. They either break <br>
+the sonic barrier, or, break down. Nothing else in between. Gcc is very <br>
+good at producing terrible Alpha AXP code (while running like molasses <br>
+during compilation), while handcrafted assembly runs like a fox (orders <br>
+over orders) on the same problem/machine. Hang compilers.<br>
+<p>
+I predict radical simplification of the CPUs, down to the scale of few 10 <br>
+kTransistors (only the core, not the RAM) due to their drastically better <br>
+price/performance ratio (especially memory bandwidth) and the obvious need <br>
+to go WSI (wafer-scale integration) quite soon.<br>
+<p>
+1) CPU dies must cost in the 1-50 $ range for maspar applications<br>
+2) complex dies are dear, both because of design and yield issues<br>
+3) bad die yield goes up exponentially with die size<br>
+4) WSI needs a relatively high percentile (50%) of viable dies<br>
+5) WSI demolishes cutting, packaging, testing in one fell swoop, and <br>
+   offers small bus geometries and good memory bandwidth since<br>
+6) on-die accesses are orders of magnitude faster and burn much less <br>
+   juice due to absence of signal up/downscaling<br>
+<p>
+Corollaries:<br>
+<p>
+1) CPUs will become _very_ simple, see MISC.( I doubt InTeL will pioneer <br>
+   this, though they sure will join the party, once it has started. I <br>
+   don't know what M$ might or might not do...)<br>
+2) RAM grains will be small 128...512 kBytes due to yield reasons, <br>
+   ergo <br>
+3) OSses will feature handcrafted nanokernels (10-20 kByte) and<br>
+4) need threaded code, requiring a on-die bi-stack architecture<br>
+5) Buses will be large (128-1024 bits), and we'll have VLIW (notice how <br>
+   my old predictions correlate with what you can now read in <br>
+   the newer Microprocessor Reports).  <br>
+6) Programming paradigm will be low-overhead asynchronous OOP, requiring <br>
+7) redundant hypergrid wiring scheme to catch the dead dies due to WSI <br>
+   and to offer sufficient on-wafer communication bandwidth<br>
+ <br>
+<i>&gt; } easily abstracted.  Other applications, such as database or systems</i><br>
+<i>&gt; } development, require very thorough knowledge of data structures, algorithms,</i><br>
+<i>&gt; </i><br>
+<i>&gt; Hmm.  Graphical representation of a database of records; highlight a</i><br>
+<i>&gt; field to be the sort index, drag and drop "Quicksort"...</i><br>
+<i>&gt; </i><br>
+<i>&gt; But someone had to write "Quicksort". </i><br>
+<p>
+For a large class of problems clean algorithmics do not exist (I'm amazed <br>
+my MessagePad 130 (btw, have a look at emate300 and the next Newt (2000)) <br>
+can read my scrawls most of the time, but then they use a large database <br>
+with script samples for the noncontiguous script recognition). <br>
+Such problems are best solved by WYWIWYG, GA-growing your code/data for <br>
+fitness. Such problem solving methodologies, whether digital (a very smart <br>
+RAM) or analog (VLSI ANNs, the C. Meade approach) require a dedicated <br>
+architecture, being unable to run on von-Neumann (generically used) <br>
+monoprocessors worth $0.02. We'll see hybrid architectures before very long.<br>
+ <br>
+<i>&gt; } &gt;Everybody (almost) agrees that the GUI is a better way to comunicate with a</i><br>
+<i>&gt; } &gt;computer than a command language. Everybody except system developers. Eh...</i><br>
+<i>&gt; </i><br>
+<i>&gt; Around here, programmers in general, and many people who don't program</i><br>
+<i>&gt; regularly as well, prefer command lines to GUIs, or at least want the</i><br>
+<p>
+Even a CLI is a GUI. You don't see signal levels (ok, in EM you do, but <br>
+that's just another hardware GUI), do you? ;) A GUI you can't customize <br>
+is useless.<br>
+<p>
+<i>&gt; option available.</i><br>
+<p>
+That's the reason why Apple boxes suck (unless they run MkLinux, that <br>
+is). (No, Newt does not Linux. ARM is great for Forth, though, and I <br>
+wonder whether They (apage, vade retro &amp;c) have messed up him StrongARM?)<br>
+ <br>
+<i>&gt; Merry part,</i><br>
+<i>&gt;  -xx- Damien R. Sullivan X-) &lt;*&gt; <a href="http://www.ugcs.caltech.edu/~phoenix">http://www.ugcs.caltech.edu/~phoenix</a></i><br>
+<p>
+P.S. Sorry if I appear somewhat incoherent: my only net access is very <br>
+expensive, and so I miss a lot of important mail.<br>
+ <br>
+<i>&gt; Jesus don't walk on water anymore; his feet leak.</i><br>
+<i>&gt; 		-- Edward Abbey</i><br>
+<i>&gt; </i><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3605.html">Robin Hanson: "Midpoint of history?"</a>
+<li> <b>Previous message:</b> <a href="3603.html">Michael Wiik: "Re: ALL LISTMEMBERS READ THIS NOW!"</a>
+<li> <b>In reply to:</b> <a href="3602.html">Twirlip of Greymist: "Re: We need better tools to make better tools."</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

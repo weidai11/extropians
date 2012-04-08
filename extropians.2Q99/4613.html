@@ -1,0 +1,73 @@
+<!-- received="Sun Jun 27 17:07:52 1999 MDT" -->
+<!-- sent="Sun, 27 Jun 1999 16:05:04 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="META: personal server-side filtering" -->
+<!-- id="14198.43499.157464.674831@lrz.de" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=34 -->
+<html><head><title>extropians: META: personal server-side filtering</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>META: personal server-side filtering</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 27 Jun 1999 16:05:04 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4613">[ date ]</a><a href="index.html#4613">[ thread ]</a><a href="subject.html#4613">[ subject ]</a><a href="author.html#4613">[ author ]</a>
+<!-- next="start" -->
+<li><a href="4614.html">[ Next ]</a><a href="4612.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+
+<p>
+<a name="4628qlink1"><a name="4616qlink1">Here's an interesting new filtering variant we've cooked up with 
+Cris Rasch today.
+
+<p>
+To recapitulate: my original proposal was to establish a pair of
+lists: extropians moderated/unmoderated. Everything rejected from
+extropians moderated would go to extropians unmoderated that anybody
+who subscribed to both lists would get the full feed, if so inclined. 
+
+<p>
+This scheme is simple to implement, but has obvious flaws. To avoid
+pressing anybody in a single quality metric it should be possible to
+associate each subscriber with a ranking matrix against the other
+participants (which could be inquirable remotely). With 1 k subscribers
+this means keeping track of 1 M short integers, which is tolerable
+nowadays (besides, this can be implemented as sparse matrix). Each 
+mail will be attached a pair of urls/listserv commands to 
+increment/decrement your individual ranking of the poster this mail 
+came from. The matrix gets initialized with zero. All positive</a> values
+including zero mean no filtering. -1 means every second post gets 
+through, -2 every third, etc. 
+</a>
+<p>
+<a name="4616qlink2">This doesn't include topic filtering, but this can be addressed
+separately. To address this, we can agree on an initial keyword pool
+(META:SPACE:GUNS: etc.) and make the listserv let through only
+properly classified messages. If a message is unclassified it gets
+send back with a list of current keywords. There should be a mechanism 
+of creating new keywords, and discarding obsolete ones (e.g. by aging).
+
+<p>
+I'm fairly certain it would be possible to hack mailman into
+supporting this. Does anybody see any obvious flaws in the scheme?
+
+<p>
+ciao,
+<br>
+'gene
+</a>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="4614.html">[ Next ]</a><a href="4612.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

@@ -1,0 +1,97 @@
+<!-- received="Mon Jul 26 00:34:09 1999 MDT" -->
+<!-- sent="Sun, 25 Jul 1999 23:31:32 -0700 (PDT)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="COMP: AI substrate" -->
+<!-- id="14236.196.78763.489720@lrz.de" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=53 -->
+<html><head><title>extropians: COMP: AI substrate</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>COMP: AI substrate</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Sun, 25 Jul 1999 23:31:32 -0700 (PDT)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1127">[ date ]</a><a href="index.html#1127">[ thread ]</a><a href="subject.html#1127">[ subject ]</a><a href="author.html#1127">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1128.html">[ Next ]</a><a href="1126.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+
+<p>
+Little noticed by the mainstream, the hitherto special-purpose DSPs
+have matured into full computer systems on a chip. For instance the
+Analog Devices SHARC DSP family
+
+<p>
+	<a href="http://products.analog.com/products_html/list_gen_98_2_1.html">http://products.analog.com/products_html/list_gen_98_2_1.html</a>
+
+<p>
+has a new member with the following intriguing characteristics:
+
+<p>
+600 MFlops peak
+<br>
+4 (soon 8) MBit on-die RAM with 1.6 GByte/s bandwidth
+6 Byte-wide links, capable of 600 MBytes/s total transfer
+27 mm x 27 mm PBGA with 4 W maximal heat dissipation
+capability to boot from link
+<br>
+glueless integration into 3d DSP arrays by direct linking
+pricing $10 in 100k quantities (Real Soon Now)
+
+<p>
+Obviously, by simply glueing arrays of chips onto 500 mm x 500 mm
+<br>
+(say, perforated copper) support, connecting the next neighbours with<br>
+links, stacking 16 of such units (~200 mm), interconnecting the stack,
+we arrive at a 4 kCPU, 2 GByte RAM, 17 kW thermal dissipation, 2.5
+TFlop peak, 6.5 TByte/s memory bandwidth and 2.5 TByte/s aggregate
+link bandwidth in a volume of 0.05 m^3, for the raw silicon price of
+~50 k$, the price of a current server or a mid-range engineering
+workstation.
+
+<p>
+(17 kW in a volume thus small could be easily contained using a liquid<br>
+heat exchanger, such as a flurocarbon or a mineral oil).
+
+<p>
+As this is a 3d lattice, I can more or less (mostly for coolant
+plumbing issues) easily scale this to 20 such units for budget of 1
+M$. We're talking ~100 k computational elements here. (I do not gloss
+over the reliability issue, the dead units can be easily managed by
+software if running nonbrittle (fault-resistant) codes.
+
+<p>
+Now, we can easily dismiss the above as ravings of a geek struck with
+arithmomania. However, I cannot help but wonder what such a mid-1999
+technology (even barring progress in nanotechnology, we can assume
+Moore will hold up to ~2010.) 1 M$ machine could accomplish, _if
+properly programmed_.
+
+<p>
+<a name="1131qlink1">Oh, we can't program it properly? But a 100 kCPU machine can shuffle
+opcodes damn quickly, 24 h/day, 365 d/year. Despite all the Kozas of
+this world, we cannot mutate assembler opcodes in a nonbrittle
+manner. However, nothing prevents us from making a robust mutator
+function our fitness goal. Find the code which mutates the machine
+code without breaking it too often. Feed back the best performing
+mutation function specimens back into the population searching for the
+best mutation function. (Did somebody just said
+"autocatalysis"?). Mix, stir, repeat until done.</a>
+
+<p>
+Hey, can someone spare a coupla megabucks?
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1128.html">[ Next ]</a><a href="1126.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: will the government allow the public direct acc</TITLE>
+<META NAME="Author" CONTENT="Charlie Stross (charlie@antipope.org)">
+<META NAME="Subject" CONTENT="Re: will the government allow the public direct access to nanotech??">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: will the government allow the public direct access to nanotech??</H1>
+<!-- received="Tue Jan 18 07:10:30 2000" -->
+<!-- isoreceived="20000118141030" -->
+<!-- sent="Tue, 18 Jan 2000 14:10:18 +0000" -->
+<!-- isosent="20000118141018" -->
+<!-- name="Charlie Stross" -->
+<!-- email="charlie@antipope.org" -->
+<!-- subject="Re: will the government allow the public direct access to nanotech??" -->
+<!-- id="20000118141018.A17661@antipope.org" -->
+<!-- inreplyto="Pine.UW2.4.20.0001181418220.5120-100000@ilr" -->
+<STRONG>From:</STRONG> Charlie Stross (<A HREF="mailto:charlie@antipope.org?Subject=Re:%20will%20the%20government%20allow%20the%20public%20direct%20access%20to%20nanotech??&In-Reply-To=&lt;20000118141018.A17661@antipope.org&gt;"><EM>charlie@antipope.org</EM></A>)<BR>
+<STRONG>Date:</STRONG> Tue Jan 18 2000 - 07:10:18 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="0938.html">Charlie Stross: "Re: will the government allow the public direct access to nanotech??"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0936.html">Technotranscendence: "Re: cryonics and abortion"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="0933.html">Robert Bradbury: "Re: will the government allow the public direct access to nanotech??"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0938.html">Charlie Stross: "Re: will the government allow the public direct access to nanotech??"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#937">[ date ]</A>
+<A HREF="index.html#937">[ thread ]</A>
+<A HREF="subject.html#937">[ subject ]</A>
+<A HREF="author.html#937">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+On Tue, Jan 18, 2000 at 02:51:32PM -0500, Robert Bradbury wrote:
+<BR>
+<EM>&gt; 
+</EM><BR>
+<EM>&gt; Now the problem is *not* having an assembler in your home.  The
+</EM><BR>
+<EM>&gt; problem is in using it dangerously or incorrectly (sounds like
+</EM><BR>
+<EM>&gt; the radio-transmitter/wiretapping debate).  So really the problem
+</EM><BR>
+<EM>&gt; comes down to how do you prevent general purpose assemblers from
+</EM><BR>
+<EM>&gt; being used incorrectly.  Well it sounds like we are back not to
+</EM><BR>
+<EM>&gt; regulating the assemblers but regulating the *designs*!
+</EM><BR>
+&nbsp;
+<BR>
+If I was going to do this, I would use the Ken Thompson hack.
+<BR>
+<P>A Von Neumann machine is a compiler; it takes designs in at one end
+<BR>
+and translates them into a different form -- in this case, physical
+<BR>
+matter.
+<BR>
+<P>Ken Thompson -- inventor of UNIX -- did a very interesting hack in
+<BR>
+the early days, which effectively gave him root access to any UNIX
+<BR>
+system. The hack was self-propagating (it would migrate to new
+<BR>
+architectures when you ported UNIX to them), and was not visible in
+<BR>
+the source code. You can find his seminal paper on it (&quot;Reflections
+<BR>
+on trusting trust&quot;) at:
+<BR>
+<P><A HREF="http://www.cs.umsl.edu/~sanjiv/sys_sec/security/thompson/hack.html">http://www.cs.umsl.edu/~sanjiv/sys_sec/security/thompson/hack.html</A>
+<BR>
+<P>The Thompson hack works like this:
+<BR>
+<P>Say there is a program you want to compromise, which is created
+<BR>
+by a compiler. (An example: the UNIX login program invoked whenever
+<BR>
+a new user logs in. Purpose of corruption: to make it recognize
+<BR>
+a special password and give whoever enters it carte blanche on
+<BR>
+the system.) You hack the _compiler_ so that when it recognizes
+<BR>
+the source code for the login program, it inserts some extra code
+<BR>
+before compiling it. Thus, the source code for the login program is
+<BR>
+clean.
+<BR>
+<P>But there's more. You could in principle detect this hack by examining
+<BR>
+the source code for the compiler, right? Wrong. Because you apply
+<BR>
+the same hack to the compiler; you prepare source for a &quot;corrupt&quot; 
+<BR>
+compiler (which inserts the back door into the login program), and
+<BR>
+modify it so that it _also_ inserts an equivalent back door into the
+<BR>
+compiler -- one that detects compiler source code and inserts the
+<BR>
+back door. You then distribute a corrupted compiler binary, and
+<BR>
+clean source code for the compiler. When the unsuspecting user
+<BR>
+compiles the compiler against a new machine architecture, the output
+<BR>
+will propagate the back door ...
+<BR>
+<P>A similar hack can in principle be applied to Von Neumann machines (such
+<BR>
+as a Drexlerian household assembler). You ensure that if the machine
+<BR>
+is told to create certain items (berylium hemispheres, for example --
+<BR>
+tamber-pieces for nuclear weapons -- it goes ahead but also silently
+<BR>
+builds a cellular phone (or equivalent) and snitches to the nuclear
+<BR>
+weapons inspectorate. 
+<BR>
+<P>To this end, you'd load any commercially available assembler with a
+<BR>
+library of &quot;danger&quot; signs to watch out for. Tamber pieces, botulinum
+<BR>
+toxin, precursors for chemical weapons, that sort of thing. You'd
+<BR>
+also ensure that its design for replicating itself files some sort of
+<BR>
+registration with you whenever a user tells it to reproduce -- and this
+<BR>
+includes components of a Von Neumann machine that can be assembled
+<BR>
+later.
+<BR>
+<P>This hack doesn't prevent an assembler being used for nefarious
+<BR>
+purposes. However, it stops it being used *stupidly* for nefarious
+<BR>
+purposes -- if you want to use a domestic assembler to declare war on
+<BR>
+your neighbours, you either have to invent a wholly new weapon that
+<BR>
+won't set off the built-in snitch circuits, or you need to build your
+<BR>
+own &quot;clean&quot; assembler *from scratch*, without using components from a
+<BR>
+commercial assembler that may be contaminated by police Thompson hacks.
+<BR>
+Both of these are significantly more difficult operations than simply
+<BR>
+running off a couple of litres of Sarin.
+<BR>
+<P>For an added twist, we could make the police hack a meta-hack;
+<BR>
+instead of looking for one suspect behaviour, and replicating itself
+<BR>
+into any derived assemblers, the hack might check a public bulletin
+<BR>
+board for a whole range of suspect design items, and build additional
+<BR>
+recognizers into itself for each one. So unless you grow your assembler
+<BR>
+farm in a firewalled asteroid, it's going to be brought up to date on
+<BR>
+no-no forms of behaviour every time you add a node to it. (I'm assuming
+<BR>
+that the exponential growth capabilities of a Von Neumann machine will
+<BR>
+be of interest to anyone planning mega-havoc with one.)
+<BR>
+<P>Make looking for grey goop components an open source operation; you
+<BR>
+get kudos for coming up with a design template for something nasty
+<BR>
+*and submitting it to the police site*, from which new assemblers
+<BR>
+will grab it and configure themselves to snitch on anyone who tries
+<BR>
+to make one. &quot;Extra brownie points for submitting that alternate
+<BR>
+klystron design that those terrorists tried fabbing last week! Thanks
+<BR>
+to you, they didn't get their bomb finished before the police turned
+<BR>
+up with a search warrant. _And_ you made your neighbourhood safer.&quot;
+<BR>
+<P><EM>&gt; I think the general direction will be &quot;non-tamperable&quot; assembler
+</EM><BR>
+<EM>&gt; boxes (i.e. if you open it, it turns into smelly sticky gloop)
+</EM><BR>
+<EM>&gt; and encrypted (and verified) designs.  So while the design
+</EM><BR>
+<EM>&gt; itself is open source, it has to be verified, check-summed,
+</EM><BR>
+<EM>&gt; encrypted and transmitted to the assembler by &quot;approved&quot;
+</EM><BR>
+<EM>&gt; organizations.  This is similar to the way that DVD's were
+</EM><BR>
+<EM>&gt; supposed to work (until someone messed up and forgot to encrypt
+</EM><BR>
+<EM>&gt; the decoding keys in one vendor's product...).  The assemblers
+</EM><BR>
+<EM>&gt; (similar to the DVD players) will only assemble designs that is
+</EM><BR>
+<EM>&gt; approved and untampered with.
+</EM><BR>
+&nbsp;
+<BR>
+I think this is too difficult. It suffers from the same problem as
+<BR>
+Microsoft's ActiveX components; anyone can write one, obtain a
+<BR>
+certificate, certify it as their own, and distribute it. If you can
+<BR>
+corrupt the certificate issuing authority and get your hands on a
+<BR>
+certificate, you can certify your design as 'clean' and wreak havoc
+<BR>
+with it. Thus, there's a single point of failure. Who will guard
+<BR>
+the guardians?
+<BR>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+<BR>
+<EM>&gt; Now, the real trick will be creating some separation of power
+</EM><BR>
+<EM>&gt; between organizations, such as &quot;governments&quot; (who might want to
+</EM><BR>
+<EM>&gt; control behaviors) or industry &quot;monopolists&quot; (such as the DVD
+</EM><BR>
+<EM>&gt; consortium) and the &quot;verification/approval/encryption&quot; organizations.
+</EM><BR>
+<EM>&gt; Presumably you would want something like this done by some kind
+</EM><BR>
+<EM>&gt; of non-profit foundation whose primary interest is in verifying
+</EM><BR>
+<EM>&gt; that the designs are safe, not in regulating what people do with
+</EM><BR>
+<EM>&gt; them.  You do not want to get into a situation where someone like
+</EM><BR>
+<EM>&gt; Natasha designs something but since it doesn't fit the paradigm
+</EM><BR>
+<EM>&gt; of how the &quot;powers&quot; want the society to look, she can't get the
+</EM><BR>
+<EM>&gt; approvals required to get it assembled.  I suspect this will
+</EM><BR>
+<EM>&gt; end up looking a lot like the current drug approval processes
+</EM><BR>
+<EM>&gt; (with a lot more engineering science).
+</EM><BR>
+<P>No.
+<BR>
+<P>No organisations. No licenses.
+<BR>
+<P>Instead, make it a bottom-up process that is in the interests of
+<BR>
+sane individuals to contribute to. Take the best of the open source
+<BR>
+movement. People support and contribute to it because they get
+<BR>
+something back. Torvald's law applies: &quot;given an infinite number of
+<BR>
+eyeballs, all bugs are shallow&quot;. In this case, given an infinite
+<BR>
+number of eyeballs, all possible attempts to trick an assembler
+<BR>
+into building something really nasty can be anticipated and blocked.
+<BR>
+<P><EM>&gt; I believe in the long run (20-30 years), if we get Minting and we
+</EM><BR>
+<EM>&gt; get some reasonable IA for design, you will get just about &quot;anything&quot;
+</EM><BR>
+<EM>&gt; boxes.  The tough part may be getting some rare element (e.g.
+</EM><BR>
+<EM>&gt; gandolinium(?) for magnetic refrigerators) so there may still
+</EM><BR>
+<EM>&gt; be some interesting supply constraints.  But as always there
+</EM><BR>
+<EM>&gt; will be alternate approaches and substitutions so these may
+</EM><BR>
+<EM>&gt; not be strongly constraining.
+</EM><BR>
+<P>I'm waiting for the Free Hardware Foundation -- the post-nanotech
+<BR>
+equivalent of the FSF. Same motives, same methods, same results.
+<BR>
+Why buy a Ford when you can customise your own GNU Automobile? Sure
+<BR>
+it won't be as stylish unless you make the effort to style it yourself,
+<BR>
+but it'll be a hell of a lot cheaper, and it'll be reliable, too. (I
+<BR>
+expect it will have all the aesthetic charm of a Humvee, with added
+<BR>
+solar power/coal/nuclear propulsion options -- but you have to paint
+<BR>
+it yourself.)
+<BR>
+<P>The big thing we can anticipate from assemblers is the commoditization
+<BR>
+of physical goods that are currently premium items. A lot of things we
+<BR>
+currently spend money on and invest with a sense of value will drop off 
+<BR>
+the map, insofar as they will stop being expensive or difficult to
+<BR>
+make. Think of the mutation of the book from mediaeval illuminated
+<BR>
+manuscript to battered paperback. This doesn't mean we don't have books
+<BR>
+any more -- we have many more than ever before -- but they don't cost
+<BR>
+six months' income or require hand-crafting on an individual basis.
+<BR>
+We already expect the cost of consumer electronics to fall, month on
+<BR>
+month; the same effect will hit other types of physical gadget once
+<BR>
+the nanotech revolution begins.
+<BR>
+<P>By 2030, we'll be thinking of a middle-class 1990's existence -- in
+<BR>
+material terms -- as being poverty-stricken. Because the real defining
+<BR>
+items of wealth will have moved away from manufactured goods; the
+<BR>
+emphasis will be on handicrafts, bespoke designs, and information.
+<BR>
+<P><P>-- Charlie
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="0938.html">Charlie Stross: "Re: will the government allow the public direct access to nanotech??"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0936.html">Technotranscendence: "Re: cryonics and abortion"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="0933.html">Robert Bradbury: "Re: will the government allow the public direct access to nanotech??"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0938.html">Charlie Stross: "Re: will the government allow the public direct access to nanotech??"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#937">[ date ]</A>
+<A HREF="index.html#937">[ thread ]</A>
+<A HREF="subject.html#937">[ subject ]</A>
+<A HREF="author.html#937">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:02:22 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

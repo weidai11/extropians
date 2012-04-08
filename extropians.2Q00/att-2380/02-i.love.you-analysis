@@ -1,0 +1,120 @@
+
+VBS/LoveLetter is a VBScript worm. It spreads thru email as a chain 
+letter. 
+
+The worm uses the Outlook e-mail application to spread. LoveLetter is 
+also a overwriting VBS virus, and it spreads itself using mIRC client as 
+well. 
+
+When it is executed, it first copies itself to Windows System directory 
+as: 
+
+    - MSKernel32.vbs
+    - LOVE-LETTER-FOR-YOU.TXT.vbs
+and to Windows directory: 
+
+    - Win32DLL.vbs
+Then it adds itself to registry, so it will be executed when the system 
+is restarted. The registry keys that it adds are: 
+
+
+    
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run\MSKernel3
+2
+    
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices\W
+in32DLL
+Next the worm replaces the Internet Explorer home page with a link that 
+points to an executable program, "WIN-BUGSFIX.exe". If the file is 
+downloaded, the worm adds this to registry as well; causing that the 
+program will be executed when the system is restarted. 
+
+The executable part that the LoveLetter worm downloads from the web is a 
+password stealing trojan. On startup the trojan tries to find a hidden 
+window named 'BAROK...'. If it is present, the trojan exits immediately, 
+if not - the main routine takes control. The trojan checks for the 
+WinFAT32 subkey in the following Registry key: 
+
+
+ HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run
+If the WinFAT32 subkey key is not found, the trojan creates it, copies 
+itself to \Windows\System\ directory as WINFAT32.EXE and then runs the 
+file from that location. The above registry key modification makes the 
+trojan become active every time Windows starts. 
+
+Then the trojan sets Internet Explorer startup page to 'about:blank'. 
+After that the trojan tries to find and delete the following keys: 
+
+
+ Software\Microsoft\Windows\CurrentVersion\Policies\Network\HideSharePwds
+ 
+Software\Microsoft\Windows\CurrentVersion\Policies\Network\DisablePwdCachi
+ng
+ 
+.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Policies\Network\HideSh
+arePwds
+ 
+.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Policies\Network\Disabl
+ePwdCaching
+Then trojan registers a new window class and creates a hidden window 
+titled 'BAROK...' and remains resident in Windows memory as a hidden 
+application. 
+
+Immediately after startup and when timer counters reaches the certain 
+values, the trojan loads MPR.DLL library, calls WNetEnumCashedPasswords 
+function and sends stolen RAS passwords and all cached Windows passwords 
+to 'mailme@super.net.ph' e-mail address that most likely belongs to 
+trojan's author. The trojan uses the 'smpt.super.net.ph' mail server to 
+send e-mails. The e-mail's subject is 'Barok... 
+email.passwords.sender.trojan'. 
+
+There's the author's copyright message inside the trojan's body: 
+
+
+ barok ...i hate go to school suck ->by:spyder @Copyright (c) 2000 
+GRAMMERSoft Group >Manila,Phils.
+There are also some encrypted text messages in the trojan's body used for 
+its internal purposes. 
+
+After that, the worm creates a HTML file, "LOVE-LETTER-FOR-YOU.HTM", to 
+the Windows System directory. This file contains the worm, and it will be 
+sent using mIRC whenever the user joins an IRC channel. 
+
+ 
+
+Then the worm will use Outlook to mass mail itself to everyone in each 
+address book. The message that it sends will be as follows: 
+
+
+    Subject:    ILOVEYOU
+    Body:       kindly check the attached LOVELETTER coming from me.
+    Attachment: LOVE-LETTER-FOR-YOU.TXT.vbs
+ 
+
+LoveLetter sends the mail once to each recipient. After a mail has been 
+sent, it adds a marker to the registry and does not mass mail itself any 
+more. 
+
+The virus then searches for certain filetypes on all folders on all local 
+and remote drives and overwrites them with its own code. The files that 
+are overwritten have either "vbs" or "vbe" extension. 
+
+For the files with the following extensions: ".js", ".jse", ".css", 
+".wsh", ".sct" and ".hta", the virus will create a new file with the same 
+name, but using the extension ".vbs". The original file will be deleted. 
+
+Next the the virus locates files with ".jpg", ".jpeg", ".mp3" or ".mp2", 
+adds a new file next to it and deletes the original file. For example, a 
+picture named "pic.jpg" will cause a new file called "pic.jpg.vbs" to be 
+created. 
+
+LoveLetter was found globally in-the-wild on May 4th, 2000. It looks like 
+the virus is Philippine origin. At the beginning of the code, the virus 
+contains the following text: 
+
+
+    rem  barok -loveletter(vbe) <i hate go to school>
+    rem 			by: spyder  /  ispyder@mail.com  /  
+@GRAMMERSoft Group  /  Manila,Philippines
+
+

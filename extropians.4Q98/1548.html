@@ -1,0 +1,147 @@
+<!-- received="Sun Nov 22 12:24:45 1998 MST" -->
+<!-- sent="Sun, 22 Nov 1998 11:23:40 -0800 (PST)" -->
+<!-- name="Michael Nielsen" -->
+<!-- email="mnielsen@theory.caltech.edu" -->
+<!-- subject="Quantum computing" -->
+<!-- id="Pine.SUN.3.95q.981122104634.14717A-100000@theory" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=96 -->
+<html><head><title>extropy: Quantum computing</title>
+<meta name=author content="Michael Nielsen">
+<link rel=author rev=made href="mailto:mnielsen@theory.caltech.edu" title ="Michael Nielsen">
+</head><body>
+<h1>Quantum computing</h1>
+Michael Nielsen (<i>mnielsen@theory.caltech.edu</i>)<br>
+<i>Sun, 22 Nov 1998 11:23:40 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1548">[ date ]</a><a href="index.html#1548">[ thread ]</a><a href="subject.html#1548">[ subject ]</a><a href="author.html#1548">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1549.html">[ Next ]</a><a href="1547.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1567.html">Michael Nielsen</a>
+</ul>
+<!-- body="start" -->
+
+
+
+<p>
+The following are a few comments on quantum computing which I thought
+might be of some interest to members of these lists.
+
+
+<p>
+Hardware
+
+<p>
+A large number of proposals have been made.  Several of the proposals are
+merely for quantum logic, and do not satisfactorily discuss some of the
+other big issues: (a) state preparation; (b) readout of the
+result; (c) scalability of the architecture.  
+
+<p>
+There is no architecture known which satisfactorily addresses all of these
+issues.  Several candidates are under investigation.  Many researchers
+believe that solid state rather than optical approches are the correct
+path to take, because of human experience in scaling solid state systems.
+Unfortunately, historically, nearly all our experience in manipulating
+single quantum systems has involved photons (and that only for 20-30
+years).
+
+<p>
+In practice, what this means is that solid state approaches which may
+eventually prove viable will take a lot of work to get to the same levels
+of control as we can now see with atom-optical systems.  The hope is that
+once they get to that level of control they will prove to be much more
+scalable.
+
+<p>
+Most of the progress in hardware over the past couple of years has been
+based upon Nuclear Magnetic Resonance (NMR).  While fine for small scale
+demonstrations, it is extremely unlikely that NMR will scale up at a later
+date, without several major revolutions in NMR.
+
+<p>
+In short, there is certainly no cure-all on the horizon, however I am
+pleased by the fact that many of the requisite properties can be found in
+existing systems, albeit _different_ systems.
+
+
+
+<p>
+Algorithms
+
+<p>
+Our understanding of algorithms is still pretty limited.  Broadly
+speaking, two classes of algorithms are known.
+
+<p>
+The first is algorithms based upon finding the stabilizer of an
+Abelian group.  Applications include the factoring and discrete log
+problems, which enable several well-known cryptosystems to be broken.
+These algorithms provide a spectacular exponential speed-up.
+
+<p>
+<a name="1567qlink1">The second class is algorithms based upon a "search" heuristic.  These
+algorithms provide a quadratic speedup to essentially any algorithm based
+upon an unstructured sort, and to some algorithms based upon</a> a more
+structured sort.
+
+<p>
+A third "class" of algorithms is for doing quantum simulation.  I don't
+think anybody doubts that quantum computers will be good at simulating
+quantum systems, however it is not yet quite clear what _precisely_ they
+will be used to do.
+
+<p>
+Still, four years after Shor announced quantum factoring, that's a
+respectable list.  It should not be surprising that we find it a lot more
+difficult to think up quantum algorithms than classical, given the domain
+in which we develop our intuition.
+
+
+<p>
+Limits
+
+<p>
+As in the classical case, there is very little known about limits to
+quantum computation.  Most of the bounds known are proved in "oracle"
+models of computation, which are of dubious value.  Essentially, what
+these bounds tell you is that it is no good trying to solve a
+problem in a certain specific way.  They do not rule out other approaches
+to the problem.  There is, however, an impressively large amount known
+about bounds in the oracle model, which is useful for people trying to
+develop algorithms.
+
+<p>
+As to the power of quantum computers in the general model, it is very
+much an open question.  The class BQP of problems efficiently soluble on a
+quantum computer is not known to have an especially clean relation to any
+class in classical complexity theory.  We do know that BQP is contained
+within PSPACE, the class of problems soluble in polynomial _space_ on a
+classical computer, but not many other non-trivial results are known.
+
+<p>
+In fact, more to the point, we don't even have a very good idea of what
+makes quantum computers powerful.  Is it entanglement?  Superposition?
+The large size of Hilbert space?  All of the above?
+
+
+
+<p>
+In my opinion, one of the most interesting open problems is to investigate
+models of computation which go beyond the standard quantum computing
+model.  Does general relativity buy you anything?  What about quantum
+field theories?  String theory?   These are, by and large, open questions.
+
+<p>
+Michael Nielsen
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1549.html">[ Next ]</a><a href="1547.html">[ Previous ]</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1567.html">Michael Nielsen</a>
+</ul>
+</body></html>

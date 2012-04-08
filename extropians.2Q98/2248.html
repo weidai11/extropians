@@ -1,0 +1,128 @@
+<!-- received="Sat Jun  6 01:38:21 1998 MDT" -->
+<!-- sent="Sat, 6 Jun 1998 00:38:16 -0700" -->
+<!-- name="Warrl kyree Tale'sedrin" -->
+<!-- email="warrl@blarg.net" -->
+<!-- subject="Re: SECURITY: Logistics of paranoia." -->
+<!-- id="199806060738.AAA12367@animal.blarg.net" -->
+<!-- inreplyto="SECURITY: Logistics of paranoia." -->
+<title>extropians: Re: SECURITY: Logistics of paranoia.</title>
+<h1>Re: SECURITY: Logistics of paranoia.</h1>
+Warrl kyree Tale'sedrin (<i>warrl@blarg.net</i>)<br>
+<i>Sat, 6 Jun 1998 00:38:16 -0700</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2248">[ date ]</a><a href="index.html#2248">[ thread ]</a><a href="subject.html#2248">[ subject ]</a><a href="author.html#2248">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2249.html">Ian Goddard: "Re: FDA Ban ALERT: Cholestin"</a>
+<li> <b>Previous message:</b> <a href="2247.html">John K Clark: "Crap Physics"</a>
+<li> <b>Maybe in reply to:</b> <a href="2226.html">Alex Future Bokov: "SECURITY: Logistics of paranoia."</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+From:           	Alex Future Bokov &lt;alexboko@umich.edu&gt;<br>
+<p>
+<i>&gt;  Let's say James Bond and Austin Powers want to correspond about</i><br>
+<i>&gt; secret stuff. Obviously, they would exchange keys signed by trusted</i><br>
+<i>&gt; parties and go at it. However, what if there are no trusted parties, and a</i><br>
+<i>&gt; face to face meeting is too risky/expensive? They could each create a new</i><br>
+<i>&gt; key-pair not associated with their normal identities and correspond</i><br>
+<i>&gt; through two-way anonymous remailers, thus neither knowing whom they're</i><br>
+<i>&gt; talking to but at least knowing it's the same entity each time. If one of</i><br>
+<i>&gt; them is captured or subverted, they still won't be able to give away the</i><br>
+<i>&gt; identity of the other. Can anyone see any vulnerabilities in this plan</i><br>
+<i>&gt; whatsoever?</i><br>
+<p>
+OK, let's start this conversation.  But we must start it at the beginning.  James <br>
+Bond wants to start this conversation, but he doesn't know who with and he <br>
+doesn't want to reveal his identity.  So he creates a new secured ID, and sends <br>
+a thusly-signed clear message to -- whom?<br>
+<p>
+(Or maybe he does know who with, but he is aware that this target person will <br>
+NOT want James Bond to know who he is dealing with.  How do you send a <br>
+message to some specific person, securely, while making it obvious to that<br>
+person that you do not know to whom you are sending the message?  You <br>
+cannot use his normal email address or his normal public encryption key.)<br>
+<p>
+One possible solution: he broadcasts it.  An ad appears in the Personals <br>
+column (Seeking Same) section of your local Internet newspaper:<br>
+  <br>
+  "Somewhat destructive secret agent on another continent seeking same<br>
+   in North America for exchange of information and target identification.  Reply<br>
+   to me@anonymous.remailer with encrypted message using this public key:<br>
+   123456789-qwertyuio-asdfghjkl-zxcvbnmp.-."<br>
+<p>
+And HOW MANY government anti-terrorist groups from around the world <br>
+respond?  Each of them claiming to be the sort of person requested in the ad?<br>
+<p>
+<i>&gt;  Now, supposing they want to bring Maxwell Smart into their</i><br>
+<i>&gt; organization. He joins under the same terms as they: anonymity,</i><br>
+<i>&gt; encryption, digital signatures on everything. Can anyone spot any</i><br>
+<i>&gt; vulnerabilities at this point?</i><br>
+<p>
+How do they know who joins?<br>
+<p>
+Here's another approach, in a system of public-key cryptography.  I will <br>
+assume that James Bond wishes to communicate with Austin Powers, and <br>
+that neither objects to the other knowing the identity of the person they are <br>
+communicating with.<br>
+<p>
+First, double encryption.  Assuming the recipient's key is not compromised, it <br>
+is not possible by examining a doubly-encrypted message to determine its <br>
+source.  (Examining the envelope on the msg is a different matter; thus an <br>
+anonymous remailer.)<br>
+<p>
+Once the recipient decrypts it using his own private key, he *must* have the <br>
+source available to him so that he knows whose public key to use for the <br>
+second decryption.<br>
+<p>
+But assume that at least one person's regular security ID is believed to <br>
+possibly be compromised.  Are there any SEMI-trusted parties?<br>
+<p>
+Let's assume there are 12 parties, each of whom Bond semi-trusts and whom <br>
+Powers could safely come in physical contact with.<br>
+<p>
+Bond sets himself up *two* new security IDs.  ID#1 he splits the public key into <br>
+5 parts.  Each part is wrapped in a message "Key part 3 is sdfausdofds".  This <br>
+message is then encrypted with Powers' public key.  In front of each of the <br>
+results add the text 'Please deliver the following to the next person who comes <br>
+to you and says "foursquare bullfrogs".'  Then send each part to two *different* <br>
+people on the list of twelve semi-trusted parties, encrypted with their public <br>
+keys, through the anonymous remailer.<br>
+<p>
+Next Bond writes the message: "When Austin Powers comes and asks you <br>
+about an email code, tell him 'foursquare bullfrogs'."  He sends this message to <br>
+the remaining two semi-trusted parties, encrypted with their public keys, <br>
+through the anonymous remailer.<br>
+<p>
+Now he writes a message to Austin Powers, saying "I've sent you a new public <br>
+key via distributed means.  Fred or Joe can tell you the email code that will <br>
+persuade the contact persons to give you their portions of the key.  The contact <br>
+persons are...  And you have a message you'll need that key to decrypt.".  He <br>
+sends this through a remailer to Austin Powers, encrypted with Austin's regular <br>
+public key.<br>
+<p>
+Finally he writes a message saying "This is James Bond.  I need to <br>
+communicate with you about..." and giving new contact info, INCLUDING the <br>
+public key for his new ID#2.  He encrypts this using his normal private key.  <br>
+Adds appropriate text and encrypts it again using the private key from ID#1.  <br>
+Adds further appropriate text and encrypts it a third time using Austin Powers' <br>
+public key, and sends it through an anonymous remailer.<br>
+<p>
+To break this by simple spying and wiretapping, you must have compromised <br>
+the private keys of no fewer than six people out of a specific group of thirteen, <br>
+and you must intercept the parts and connect them together.<br>
+<p>
+US$500 fee for receipt of unsolicited commercial email. USC 47.5.II.227<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2249.html">Ian Goddard: "Re: FDA Ban ALERT: Cholestin"</a>
+<li> <b>Previous message:</b> <a href="2247.html">John K Clark: "Crap Physics"</a>
+<li> <b>Maybe in reply to:</b> <a href="2226.html">Alex Future Bokov: "SECURITY: Logistics of paranoia."</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

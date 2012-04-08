@@ -1,0 +1,208 @@
+<!-- received="Mon Aug 24 16:11:23 1998 MDT" -->
+<!-- sent="Mon, 24 Aug 1998 15:12:04 -0700" -->
+<!-- name="Lee Daniel Crocker" -->
+<!-- email="lee@piclab.com" -->
+<!-- subject="Once more with the Doomsday Argument" -->
+<!-- id="35E1E534.140@piclab.com" -->
+<!-- inreplyto="" -->
+<!-- version=1.10, linesinbody=160 -->
+<html><head><title>extropians: Once more with the Doomsday Argument</title>
+<meta name=author content="Lee Daniel Crocker">
+<link rel=author rev=made href="mailto:lee@piclab.com" title ="Lee Daniel Crocker">
+</head><body>
+<h1>Once more with the Doomsday Argument</h1>
+Lee Daniel Crocker (<i>lee@piclab.com</i>)<br>
+<i>Mon, 24 Aug 1998 15:12:04 -0700</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1819">[ date ]</a><a href="index.html#1819">[ thread ]</a><a href="subject.html#1819">[ subject ]</a><a href="author.html#1819">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1820.html">[ Next ]</a><a href="1818.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0858.html">Lee Daniel Crocker</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1835.html">Nick Bostrom</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+One more try at analyzing the Carter-Leslie argument.  Knock
+it down if you can.
+
+<p>
+First, let us clarify what is meant by "mathematical probability",
+which is that quantity to which the calculus of probability (including
+Bayes' Theorem) applies.  "Probability" is a property of propositions.
+Further, the property exists for any proposition only with respect to
+a set of propositions to which it belongs, exactly one of which can be
+true at a given sampling time.  The probability of that proposition,
+then, is a measure of the relative frequency at which it is true at
+sampling time compared to the frequency at which the others in the set
+are true (the sum of all of which must be 1).  For probability
+calculations to be meaningful, then, we must be clear about what our
+universe of propositions is, and keep it consistent throughout our
+calculations.
+
+<p>
+Let's start with the usual example from the DA: two urns, one with
+10 numbered balls and one with 100.  A ball is drawn from one of the
+urns and we find it numbered 7 (any value from 1 to 10 will do).  We
+are then asked to estimate what is the probability that it was drawn
+from the urn with 10 balls rather than the urn with 100?  What is our
+set of propositions?  There are three sets here: one set is {the ball
+was drawn from urn1, the ball was drawn from urn2}.  From each urn,
+there is the set {ball 1 was drawn, ball 2 was drawn ...}.  We must
+assign to each of these propositions an initial probability by some
+empirical means or by fiat before we can use the calculus to further
+study their implications.  The traditional method of doing this is
+the principle of indifference: if we have no reason to suspect that
+any proposition is more probable than another, then we assign them
+equal values.  In this case, then, we will assume that a fair coin was
+flipped to choose which urn to draw from, giving an initial probability
+of 1/2 to each urn selection.  Likewise, we assume a ball is chosen
+fairly from each urn.  Given those ideal assumptions, Bayes' Theorem
+gives us a probability of 10/11 our ball was chosen from urn 1.
+
+<p>
+Bayes' Theorem, to review quickly, is the method for calculating the
+probability of an hypothesis given a piece of evidence [P(H|E)]
+from our knowledge of the probability of the hypothesis itself [P(H)]
+and the probability of the evidence given the hypothesis [P(E|H)].
+The formula is P(H|E} = (P(H)P(E|H))/(P(H)P(E|H)+P(~H)P(E|~H)).
+
+<p>
+It is important to note that those initial probabilities we assigned
+to P(H) are critical: what if the urn was not chosen fairly?  What if
+we are only offered this bet in those cases when a 10 or less is drawn?
+Let's change the method of draw, for example.  Let's say that all 110
+balls are first placed together in a bag: one person reaches into the
+bag and randomly places a beeping device on one of them.  They are then
+sorted into the urns, and the beeping device is activated.  The beeping
+ball is retrieved, and discovered to be numbered 5.  What, now, is the
+probability that it was drawn from urn 1?  In this case, 1/2.  By this
+method of selection, the probabilities of {ball was drawn from urn 1,
+ball was drawn from urn 2} are not 1/2 - 1/2, but 1/11 - 10/11.  Bayes'
+Theorem then gives the posterior probability as (1/11) / (1/11 +
+10/11 * 1/10), or 1/2 (which we could also have determined without
+Bayes in this case, but let's be consistent).
+
+<p>
+In propositions about ourselves, such as the DA, it is similarly of
+critical importance to determine _how we came to be selected to make
+the bet in question_.  From which urn were we drawn, and by what
+method of selection?  In the example above, if we only offer the bet
+in those cases where a 10 or less is drawn, the correct odds to take
+are 1/2 - 1/2, not 10/11 - 1/11.  Think of the old stock scam: you
+receive a letter in the mail predicting a rise in a certain stock,
+and it does indeed rise.  The next week you receive another letter
+predicting a fall, and it falls.  For 5 weeks in a row, you receive a
+letter with a prediction about some stock, and 5 times it's correct.
+The sixth week the letter asks you to pay for its prediction.  How
+much is the prediction worth?  A naive Bayesian would calculate the
+chance of another correct prediction at 32/33.  A wiser person would
+realize that the scammer started out by sending 320 letters with a
+<br>
+"rise" prediction and 320 with "fall", then to those who got the<br>
+correct one, he sent 160 "rise" and 160 "fall".  To those who were
+right on round 2, he sent 80 "rise" and 80 "fall".  You were simply
+among those (un)lucky 10 who got 5 correct predictions in a row.
+Your correct odds are 1/2 which is worth nothing, not 32/33.
+
+<p>
+These, then, are the questions to be answered if we are to attribute
+meaning to the DA: (1) what is the set of propositions from which
+our hypothesis "the world is ending soon" is drawn, and what are
+their initial probabilities? and (2) how did we come to be selected
+to make this bet?  The original DA seems to want us to take as our set
+of propositions {the world will end soon, there will be billions more
+people before the world ends}.  This, on its face, is absurd.  There
+is no reason at all to suspect that those two choices represent the
+only possibilities--and of equal probability--in reality.  Bayes'
+Theorem requires that P(H) + P(~H) = 1, i.e., that there are no other
+options.  In that extremely contrived case, and further given the
+appropriate self-sampling assumption (that I'll deal with below), the
+DA would indeed be spectacularly true, but this is not the least
+bit remarkable, because we have assigned by fiat absurd initial
+probabilities contrived to produce just such a result.  A realistic
+<a name="1835qlink1">set of propositions would be something more like {there will be fewer
+than 100 billion persons, there will be 100-200 billion persons, there
+will be 200-300 billion persons, ...} up to a suitable upper bound
+chosen empirically based on the size of the planet or universe. 
+Without changing the results, this is equivalent to a set of urns with
+{1 ball, 2 balls, 3 balls, ... N balls}, where N is the multiple of
+100 billion persons we choose as our upper limit.  If we then assign
+equal initial probabilities to each of those</a> urns (i.e., possible
+civilizations), select an urn randomly, draw a ball (a birth order)
+and find it to be "1" (less than 100 billion), then our Bayesian
+probability that we were drawn from urn 1 (i.e., that there will only
+ever be 100 billion persons) depends on our choice of N.  For N=2,
+those odds ar 2/3.  For N=4, they are 1/2.  As N approaches infinity,
+the odds approach 0, albeit very slowly.  For N=1 billion, the odds
+that the world will end soon are much better than 1 in a billion, but
+hardly anywhere near 1.
+
+<p>
+Finally, we must deal with the issue of our self-selection.  Have we
+really chosen an urn randomly, or have we fallen for a sucker bet?
+It might be a more satisfying argument if we had a bigger sample of
+possible civilizations around--aliens perhaps, or Atlanteans, or a
+peek at earth's long-distant future, to give us an idea of what sizes
+we can really expect a civilization sufficiently similar to ours to
+reach before collapse.<a name="1835qlink2">  Let's say we had such evidence--that advanced
+civilizations really seemed to grow to a random size from 100 billion
+to 100 billion billion, and then collapse.</a>  Would the fact that we
+<a name="1835qlink3">find ourselves numbering less than<a name="1856qlink1"> 100 billion truly give us reason
+to suspect we are among the unfortunate slated to perish soon?  That
+depends upon whether or not the question is being asked by someone
+who _fairly chose our civilization to pick on_ by offering this bet.</a></a>
+In other words, is our civilization a truly random sample from all
+those we postulate, and is this philosopher a fair sample of persons
+from this civilization?  Frankly, I don't see how either can be.  We
+chose to deal with our civilization in the question because it is the
+one we are most interested in, not because we chose fairly.  We have
+no more reason to put that P(H) into the equation than does any other
+alien civilization.
+
+<p>
+Let's change the bet this way, to make it correctly mirror our balls
+and urns: assume there are many alien civilizations, and we know
+precisely when each of them will end, at somewhere between 100 billion
+and 100 billion billion.  We make a big wheel with the names of those
+civilizations on it and give it a spin.  Now, knowing how long that
+fairly-chosen civilization will last, we choose a ball (birth order)
+from that total number, and offer to someone this bet: "I chose a
+random civilization, and then a random birth order from that, and it
+is X.  What are the odds that this civilization will end soon?"  If
+all of these conditions are perfectly fair, i.e., we really chose a
+random civilization, and we really chose a random birth order from it
+knowing how long it would last, and we were shown that it is less than
+100 billion, then we would be correct to infer that the odds of this
+being one of the shorter-lived civilizations is much better than 1 in
+a billion by the Bayesian calculation suggested by the DA.  But I don't
+think it is possible for us to make the bet fairly in this case.  For
+one thing, if we chose fairly, odds are good that we would choose a
+birth order representing someone who has not been born yet, but we are
+selecting ourselves from among the subset of those who have been born,
+and can thus contemplate this question.  And we really don't know what
+our sample set is.  We do not know what all the propositions are from
+which we are to calculate this probability, and there is great reason
+to suspect that we are biased.  In short, I think this is a sucker bet
+perpetrated on ourselves.
+
+<pre>
+-- 
+Lee Daniel Crocker &lt;lee@piclab.com&gt; &lt;<a href="http://www.piclab.com">http://www.piclab.com</a>&gt;
+<br>
+<a href="0858.html#1819qlink1">"All inventions or works of authorship original to me, herein and</a><br>
+past, are placed irrevocably in the public domain, and may be used
+for any purpose without permission, attribution, or notification."
+</pre>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1820.html">[ Next ]</a><a href="1818.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="0858.html">Lee Daniel Crocker</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="1835.html">Nick Bostrom</a>
+</ul>
+</body></html>

@@ -1,0 +1,108 @@
+<!-- received="Fri Dec 13 15:15:03 1996 MST" -->
+<!-- sent="Fri, 13 Dec 1996 12:37:25 -0800" -->
+<!-- name="James Rogers" -->
+<!-- email="jamesr@best.com" -->
+<!-- subject="Re: Music/Transhumanist art" -->
+<!-- id="1.5.4.32.19961213203725.0035a62c@best.com" -->
+<!-- inreplyto="Music/Transhumanist art" -->
+<title>extropians: Re: Music/Transhumanist art</title>
+<h1>Re: Music/Transhumanist art</h1>
+James Rogers (<i>jamesr@best.com</i>)<br>
+<i>Fri, 13 Dec 1996 12:37:25 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3987">[ date ]</a><a href="index.html#3987">[ thread ]</a><a href="subject.html#3987">[ subject ]</a><a href="author.html#3987">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3988.html">John K Clark: "Singularity worship"</a>
+<li> <b>Previous message:</b> <a href="3986.html">Sean Hastings: "Re: Vegetarianism and Ethics"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+At 10:36 AM 12/13/96 +0100, you wrote:<br>
+<i>&gt;James Rogers wrote:</i><br>
+<i>&gt;</i><br>
+<i>&gt;&gt; &gt;novel:</i><br>
+<i>&gt;&gt; &gt;<a href="http://194.182.38.101/m">http://194.182.38.101/m</a>&amp;k/gallery/maxmcorp/GNov/main.htm</i><br>
+<i>&gt;&gt; </i><br>
+<i>&gt;&gt; I checked out the novel.  Pretty righteous!  Just out of curiousity, what</i><br>
+<i>&gt;&gt; did you do to create it?</i><br>
+<i>&gt;</i><br>
+<i>&gt;3dstudio V4, Photoshop 2.5, a camera, a scanner some friends and 3</i><br>
+<i>&gt;months.</i><br>
+<i>&gt;btw it was part of a sci-fi project witch consisted of a sci-fi book,</i><br>
+<i>&gt;the graphic novel + a music CD on a mixed mode CD. I wanted to be the</i><br>
+<i>&gt;first in the world to make a major "multimedia project" single-handed. I</i><br>
+<i>&gt;think i succeded. I took me two years in all and was released in '92 as</i><br>
+<i>&gt;far as i remember.</i><br>
+<p>
+Pretty good work, especially at the time.  It had a strong "cyber" flavor;<br>
+quite Gibson-esque.  Takes me back to the thriving hacker scene of the mid<br>
+to late 80's and very early 90's before the flood of lamers kind of killed<br>
+that scene.<br>
+<p>
+Sigh...The good old days...<br>
+<p>
+<i>&gt;&gt; I think that soundcards will take over the low end, and may creep into the</i><br>
+<i>&gt;&gt; mid-range, but I doubt they will impact many people in the mid to high-end</i><br>
+<i>&gt;&gt; range.</i><br>
+<i>&gt;</i><br>
+<i>&gt;We will soon only need the soundcard for previewing and analog input.</i><br>
+<i>&gt;Today i burn straight to CD. My DAT is sitting idle. And an eight</i><br>
+<i>&gt;processor 200 Mhz Pentium Pro in a SMP system will be able to do nicely</i><br>
+<i>&gt;as specialised DSP's. Not even more expensive than a good synth(ok a</i><br>
+<i>&gt;pretty good one.). An when you don't make music on it you can make a</i><br>
+<i>&gt;little music video.</i><br>
+<i>&gt;</i><br>
+<p>
+Yes and no.  What operating system are you going to use on the SMP system?<br>
+I have a room full of powerful Unix and NT boxes, but for things like MIDI,<br>
+I still use Macs and Windows 3.1.  One negative feature of pre-emptive<br>
+multitasking "advanced" OSs like NT is that the pre-emptive architecture<br>
+sucks for any task that requires real-time precision timing.  <br>
+<p>
+Running a MIDI sequencer at 960ppqn or even 240ppqn is impossible in this<br>
+type of environment because your sequencer may or may not be preempted just<br>
+before it is supposed to send out a MIDI signal.  The practical MIDI<br>
+resolution is very low, and the timing is off at any resolution.  In my case<br>
+the problem is worsened because I usually use 8-16 MIDI ports in a fairly<br>
+intensive manner, increasing the requirements on the system.  I used to run<br>
+8 ports on a 386dx40 without any problems using Windows 3.1, but running 1<br>
+port under NT on an SMP system usually gives poorer performance, especially<br>
+at intermediate resolutions.<br>
+<p>
+However, there *is* a positive side to SMP systems such as NT.  I used to<br>
+write small digital audio processing software under NT.  Most DSP algorithms<br>
+for digital audio multi-thread really well.  This means that audio DSP<br>
+performance scales almost linearly across multiple processors.  Non-realtime<br>
+audio works great under these systems.  I do believe that eventually<br>
+software on computers will replace all the dedicated hardware, but the synth<br>
+software currently available (AFAIK) just doesn't work as well as dedicated<br>
+hardware.  But I think most of the limitations are in getting real-time<br>
+performance out of non-real-time operating systems, rather than the actual<br>
+processing capabilities of the software, which is very impressive in some cases.<br>
+<p>
+NEW THOUGHT ON THE FLY:  I think the reason digital audio timing for<br>
+playback and recording is unaffected by preemptive multi-tasking is that the<br>
+audio cards pre-buffer the data.  If someone designed a MIDI interface card<br>
+with a large buffer and real-time microcontroller to run the buffer, 1) the<br>
+timing would be unaffected by preemption, and 2) you could run *a lot* of<br>
+MIDI channels through that card.  Writing the device driver might be a<br>
+little more complicated than usual, but workable.  Most MIDI interfaces I've<br>
+worked with do not have significant buffering, and definitely nothing like a<br>
+pre-transmission queue.  Hmmm...<br>
+<p>
+<p>
+-James Rogers<br>
+ jamesr@best.com<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="3988.html">John K Clark: "Singularity worship"</a>
+<li> <b>Previous message:</b> <a href="3986.html">Sean Hastings: "Re: Vegetarianism and Ethics"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

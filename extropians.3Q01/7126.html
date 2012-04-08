@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<title>extropians: RE: steganography</title>
+<meta name="Author" content="Harvey Newstrom (mail@HarveyNewstrom.com)">
+<meta name="Subject" content="RE: steganography">
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h1>RE: steganography</h1>
+<!-- received="Wed Sep 19 18:08:36 2001" -->
+<!-- isoreceived="20010920000836" -->
+<!-- sent="Wed, 19 Sep 2001 19:06:26 -0500" -->
+<!-- isosent="20010920000626" -->
+<!-- name="Harvey Newstrom" -->
+<!-- email="mail@HarveyNewstrom.com" -->
+<!-- subject="RE: steganography" -->
+<!-- id="FEEHKEIJDJKMGAAFLAIMMEALDLAA.mail@HarveyNewstrom.com" -->
+<!-- inreplyto="003501c1411b$4165d640$33d74cd8@newstrom" -->
+<strong>From:</strong> Harvey Newstrom (<a href="mailto:mail@HarveyNewstrom.com?Subject=RE:%20steganography&In-Reply-To=&lt;FEEHKEIJDJKMGAAFLAIMMEALDLAA.mail@HarveyNewstrom.com&gt;"><em>mail@HarveyNewstrom.com</em></a>)<br>
+<strong>Date:</strong> Wed Sep 19 2001 - 18:06:26 MDT
+<p>
+<!-- next="start" -->
+<ul>
+<li><strong>Next message:</strong> <a href="7127.html">Michael Wiik: "the Attack (postscript)"</a>
+<li><strong>Previous message:</strong> <a href="7125.html">Michael Wiik: "the Attack"</a>
+<li><strong>In reply to:</strong> <a href="7091.html">Louis Newstrom: "Re: steganography"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7132.html">Spike Jones: "Re: steganography"</a>
+<li><strong>Reply:</strong> <a href="7132.html">Spike Jones: "Re: steganography"</a>
+<li><strong>Reply:</strong> <a href="7166.html">David Lubkin: "RE: steganography"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7126">[ date ]</a>
+<a href="index.html#7126">[ thread ]</a>
+<a href="subject.html#7126">[ subject ]</a>
+<a href="author.html#7126">[ author ]</a>
+</ul>
+<hr noshade><p>
+<!-- body="start" -->
+<p>
+Robert Coyote wrote,
+<br>
+<em>&gt; But is it still possible to detect steganographic messages if the amount
+</em><br>
+<em>&gt; of information encoded is very small, compared to the amount of
+</em><br>
+background?
+<br>
+<p>Remember that standard graphic algorithms, such as GIF or JPEG, use industry
+<br>
+standard mathematical algorithms to compress data and smooth insignificant
+<br>
+variations.  It is easy to use these algorithms to predict how color should
+<br>
+have been smoothed and to detect bits that deviate from the expected values.
+<br>
+The whole theory behind color smoothing is that any given bit might be
+<br>
+random noise which should be overridden with calculations based on its
+<br>
+neighbors.  The same algorithms can be used to detect these bits that have
+<br>
+unexpected values.
+<br>
+<p>For nonstandard algorithms, it is easy to use statistical analysis to
+<br>
+reverse engineer the smoothing algorithm.  The wrong algorithm won't predict
+<br>
+the encoding of most pixels.  When the correct algorithm is tried, it
+<br>
+instantly predicts 99.999% of the pixels, leaving the other 0.001% exposed
+<br>
+as hidden data.
+<br>
+<p>Even if no predictable graphical coding algorithm can be deduced,
+<br>
+statistical analysis of an unknown algorithm would still probably identify
+<br>
+the alien bits.  A digital picture capable of defining millions of color
+<br>
+shades might only use a few hundred thousand of them.  When counted up,
+<br>
+99.999% of the pixels might use the top few hundred thousand popular shades,
+<br>
+while 0.001% of the pixels define subtle off-shades that did not occur
+<br>
+naturally in the original picture.  As the ratio of real picture to data
+<br>
+increased, this only makes it easier for statistical analysis to detect
+<br>
+alien shades introduced into the picture.
+<br>
+<p>For a camera lens there is a certain amount of blurring between pixels and
+<br>
+between shades.  Any pixel which deviates from its neighbor at a faster rate
+<br>
+than the blurring that occurs in 99.999% of the picture can be identified as
+<br>
+being too specific for the level of blurring.
+<br>
+<p>The picture itself can provide clues as well.  A flat area of one color can
+<br>
+easily be scanned for a few rare bits of another shade.  Any pixel that
+<br>
+deviates from the narrow range of color values in its local area would be
+<br>
+identified as containing alien data.  Likewise, the rate of change from one
+<br>
+shade to another caused by lighting can be mathematically calculated.  Any
+<br>
+pixel that deviates at a different rate from its neighbors as do the pixels
+<br>
+surrounding it would be a data pixel.
+<br>
+<p>Pictures are too predictable, both due to their contents, the technology
+<br>
+that records them, and the encoding algorithm by which they are expressed.
+<br>
+In a way, all this interrelated information almost provides a
+<br>
+self-correcting checksum where each pixel's value can be double-checked by
+<br>
+its neighbors.  Any pixel that is modified can be detected as falling
+<br>
+outside a range, having too much precision, or being statistically out of
+<br>
+place when compared to other pixels.
+<br>
+<p><pre>
+--
+Harvey Newstrom &lt;<a href="http://HarveyNewstrom.com">http://HarveyNewstrom.com</a>&gt; &lt;<a href="http://Newstaff.com">http://Newstaff.com</a>&gt;
+</pre>
+<p><!-- body="end" -->
+<hr noshade>
+<ul>
+<!-- next="start" -->
+<li><strong>Next message:</strong> <a href="7127.html">Michael Wiik: "the Attack (postscript)"</a>
+<li><strong>Previous message:</strong> <a href="7125.html">Michael Wiik: "the Attack"</a>
+<li><strong>In reply to:</strong> <a href="7091.html">Louis Newstrom: "Re: steganography"</a>
+<!-- nextthread="start" -->
+<li><strong>Next in thread:</strong> <a href="7132.html">Spike Jones: "Re: steganography"</a>
+<li><strong>Reply:</strong> <a href="7132.html">Spike Jones: "Re: steganography"</a>
+<li><strong>Reply:</strong> <a href="7166.html">David Lubkin: "RE: steganography"</a>
+<!-- reply="end" -->
+<li><strong>Messages sorted by:</strong> 
+<a href="date.html#7126">[ date ]</a>
+<a href="index.html#7126">[ thread ]</a>
+<a href="subject.html#7126">[ subject ]</a>
+<a href="author.html#7126">[ author ]</a>
+</ul>
+<!-- trailer="footer" -->
+<hr noshade>
+<p>
+<small>
+<em>
+This archive was generated by <a href="http://www.hypermail.org/">hypermail 2b30</a> 
+: <em>Fri Oct 12 2001 - 14:40:53 MDT</em>
+</em>
+</small>
+</body>
+</html>

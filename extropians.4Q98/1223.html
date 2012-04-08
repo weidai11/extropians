@@ -1,0 +1,62 @@
+<!-- received="Mon Nov 16 13:27:25 1998 MST" -->
+<!-- sent="Mon, 16 Nov 1998 12:27:22 -0800" -->
+<!-- name="Mike Linksvayer" -->
+<!-- email="ml@justintime.com" -->
+<!-- subject="Re: Information Security?" -->
+<!-- id="36508AAA.CDDA7762@justintime.com" -->
+<!-- inreplyto="Information Security?" -->
+<!-- version=1.10, linesinbody=23 -->
+<html><head><title>extropy: Re: Information Security?</title>
+<meta name=author content="Mike Linksvayer">
+<link rel=author rev=made href="mailto:ml@justintime.com" title ="Mike Linksvayer">
+</head><body>
+<h1>Re: Information Security?</h1>
+Mike Linksvayer (<i>ml@justintime.com</i>)<br>
+<i>Mon, 16 Nov 1998 12:27:22 -0800</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#1223">[ date ]</a><a href="index.html#1223">[ thread ]</a><a href="subject.html#1223">[ subject ]</a><a href="author.html#1223">[ author ]</a>
+<!-- next="start" -->
+<li><a href="1224.html">[ Next ]</a><a href="1222.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1209.html">Michael Lorrey</a>
+<!-- nextthread="start" -->
+</ul>
+<!-- body="start" -->
+
+<p>
+<a name="1228qlink1">Michael Lorrey wrote:
+<br>
+<a href="1209.html#1223qlink1">&gt; I figured out the other day how WS_FTP encrypts its passwords in its INI</a><br>
+<i>&gt; file, which is rather weak and a major weakness for anyone using this FTP</i><br>
+<i>&gt; client to transfer files. Essentially, the encryption works like this: each</i><br>
+<i>&gt; letter of the password is converted to its hexadecimal value. Then one hex</i><br>
+<i>&gt; digit is added to the letters hex value based on its position in the</i><br>
+<i>&gt; password, starting with 0 for the letter in the first position.</i><br>
+<i>&gt; </i><br>
+<i>&gt; So, while you may only FTP encrypted files to an FTP site, by using a weak</i><br>
+<i>&gt; password encryption like this a hacker could easily sniff out your password</i><br>
+<i>&gt; and then use the FTP site with impunity in YOUR name.</i><br>
+
+<p>
+ftp passwords are sent as cleartext between the client and server,
+so ws_ftp's .ini settings obfuscation does nothing to help or hinder
+someone who wants your password, unless that someone has access to
+your ws_ftp .ini file.</a>
+
+<p>
+There is an rfc out concerning secure ftp, but it isn't widely
+implemented yet.  See &lt;<a href="http://www.mit.edu/people/marc/ftpsec/ftpsec.html">http://www.mit.edu/people/marc/ftpsec/ftpsec.html</a>&gt;.
+
+<pre>
+--
+See From: and Organization: above.  Call +1 415 553 6408 for assistance.
+</pre>
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="1224.html">[ Next ]</a><a href="1222.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="1209.html">Michael Lorrey</a>
+<!-- nextthread="start" -->
+</ul>
+</body></html>

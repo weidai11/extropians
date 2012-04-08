@@ -1,0 +1,95 @@
+<!-- received="Sat Dec 28 04:13:23 1996 MST" -->
+<!-- sent="Thu, 26 Dec 1996 21:33:04 +0000" -->
+<!-- name="Mark Grant" -->
+<!-- email="mark@unicorn.com" -->
+<!-- subject="COMP: Re: tech snippets" -->
+<!-- id="1.5.4.32.19961228085830.00386654@best.com" -->
+<!-- inreplyto="32C1DC04.446B@mit.edu" -->
+<title>extropians: COMP: Re: tech snippets</title>
+<h1>COMP: Re: tech snippets</h1>
+Mark Grant (<i>mark@unicorn.com</i>)<br>
+<i>Thu, 26 Dec 1996 21:33:04 +0000</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#4905">[ date ]</a><a href="index.html#4905">[ thread ]</a><a href="subject.html#4905">[ subject ]</a><a href="author.html#4905">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4906.html">Mark Grant: "Re: Extropians Investing in the Future"</a>
+<li> <b>Previous message:</b> <a href="4904.html">Mark Grant: "Re: Brin on privacy"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+On Wed, 25 Dec 1996, Dejan Vucinic wrote:<br>
+<p>
+<i>&gt; someone said:</i><br>
+<i>&gt; &gt; Taking this one step further: why not putting the entire microkernel/VM</i><br>
+<i>&gt; &gt; into a _normal_ on-die SRAM</i><br>
+<p>
+Does this gain you much? I was under the impression that the microkernel<br>
+only gave you very limited non-portable facilities so that you could<br>
+rapidly port most of your OS by rewriting the microkernel. I can't believe<br>
+that all your device drivers fit in 12k. How often is the message-passing<br>
+code called? <br>
+<p>
+<i>&gt; &gt;, having an address in address space (cache</i><br>
+<i>&gt; &gt; has none, it occupies the same address space as the addressable core)?</i><br>
+<p>
+Some chips let supervisor-mode software lock lines in the cache so that<br>
+they always map to one specific address, effectively allowing you to use<br>
+it as on-chip RAM. I'm fairly sure that the T9000 transputer can do this<br>
+(I read the manual a few years ago), but I'm not sure about more common<br>
+chips. <br>
+<p>
+<i>&gt; Taking this yet another step further:</i><br>
+<i>&gt; Over the last fifteen years all major CPU makers have migrated from</i><br>
+<i>&gt; a monolithic design to microcode.</i><br>
+<p>
+Are you sure of this? I thought the point of RISC was that with a<br>
+simplified instruction set you eliminated the microcode and could increase<br>
+the speed of your chips because the decoding overhead was reduced.<br>
+<p>
+<i>&gt; Why in the world doesn't Motorola</i><br>
+<i>&gt; or MIPS or whoever implement both x86 and 68000/PowerPC/MIPS instruction</i><br>
+<i>&gt; set in a single chip!? </i><br>
+<p>
+Wasn't there a rumor of a combined PowerPC/486 chip from IBM a year or two<br>
+ago? If Intel don't use microcode then you can probably forget any such<br>
+combination, because it would be a huge chip. Even if it did then the cost<br>
+of developing a Pentium clone would probably be prohibitive. I can't see<br>
+Intel supporting the PowerPC chip by giving Motorola rights to the Pentium<br>
+architecture, though they might be able to license the Cyrix or AMD<br>
+clones. <br>
+<p>
+<i>&gt; Switch between the two with a protected</i><br>
+<i>&gt; instruction. Run DOS on an SGI machine as a native OS, for</i><br>
+<i>&gt; applications' sake. </i><br>
+<p>
+Even with a chip that can run Intel instructions you would still need to<br>
+write a huge amount of code to emulate the rest of the PC hardware, or<br>
+license Windows and DOS so that you could rewrite them in native code. <br>
+<p>
+<i>&gt; Bury the</i><br>
+<i>&gt; inferior Intel architecture. </i><br>
+<p>
+I'm not sure what's so inferior about it, except perhaps for floating<br>
+point performance. As a programmer I much prefer the PowerPC architecture,<br>
+but the Intel chips are fast and cheap in comparison. The theoretical<br>
+advantages don't seem to matter so much in practice. <br>
+<p>
+	Mark<br>
+<p>
+<i>|-----------------------------------------------------------------------|</i><br>
+<i>|Mark Grant M.A., U.L.C.	  	       EMAIL: mark@unicorn.com  |</i><br>
+<i>|WWW: <a href="http://www.c2.org/~mark">http://www.c2.org/~mark</a>	  	       MAILBOT: bot@unicorn.com	|</i><br>
+<i>|-----------------------------------------------------------------------|</i><br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="4906.html">Mark Grant: "Re: Extropians Investing in the Future"</a>
+<li> <b>Previous message:</b> <a href="4904.html">Mark Grant: "Re: Brin on privacy"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

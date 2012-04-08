@@ -1,0 +1,128 @@
+<!-- received="Fri Dec 12 22:25:58 1997 MDT" -->
+<!-- sent="Fri, 12 Dec 1997 21:25:47 -0800 (PST)" -->
+<!-- name="John K Clark" -->
+<!-- email="johnkc@well.com" -->
+<!-- subject="PHYS; Quantum Teleportation" -->
+<!-- id="199712130525.VAA26945@well.com" -->
+<!-- inreplyto="" -->
+<title>extropians: PHYS; Quantum Teleportation</title>
+<h1>PHYS; Quantum Teleportation</h1>
+John K Clark (<i>johnkc@well.com</i>)<br>
+<i>Fri, 12 Dec 1997 21:25:47 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#2398">[ date ]</a><a href="index.html#2398">[ thread ]</a><a href="subject.html#2398">[ subject ]</a><a href="author.html#2398">[ author ]</a>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2399.html">Bobby Martin: "Why quantum teleportation doesn't allow FTL communication"</a>
+<li> <b>Previous message:</b> <a href="2397.html">Dan Fabulich: "Re: (Fwd) Re: PHYS: Quantum Teleportation -Reply"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>
+<hr>
+<!-- body="start" -->
+-----BEGIN PGP SIGNED MESSAGE-----<br>
+<p>
+On Fri, 12 Dec 1997  Michael Butler &lt;mmb@best.com&gt; Wrote:<br>
+             <br>
+<i>        &gt;Do you mean to say that one-time pads constructed from, e.g., </i><br>
+<i>        &gt;"HotBits", would no longer work? Just how strong a claim are you </i><br>
+<i>        &gt;making here? I don't mean to attack, but I may have missed something </i><br>
+<i>        &gt;here. Please enlighten me.</i><br>
+<p>
+I found an old post of mine that I sent to the list a year ago on this <br>
+very subject.<br>
+- --------------------------------------------------------------<br>
+<p>
+<p>
+Even if everyone had a Quantum Computer in their pocket we could still <br>
+communicate privately because there is a way to make Cryptography as secure as <br>
+the laws of Physics, and the really amazing thing is that it's practical too.<br>
+Recently 2 banks exchanged financial information with Quantum Cryptography <br>
+through a cable under Lake Geneva. The idea is to use Quantum Cryptography to <br>
+send a One Time Pad of numbers to the person you want to talk to, the message <br>
+can be detected but NOT without you knowing it was detected.  With a random <br>
+One Time Pad you can generate a perfect encryption scheme, even if to <br>
+everybody's surprise it turns out that P=NP, even if your opponent has a <br>
+quantum computer, even if your opponent has a computer of infinite power, <br>
+he can never read your message. Despite its perfect security it has severe <br>
+practical limitations, how do you distribute the One Time Pad to the person <br>
+you want to talk with? You can't send the pad electronically, if your <br>
+electronic channel is not secure then an eavesdropper can tap your line and <br>
+get a copy of the pad, if your channel is already secure then you don't need <br>
+the pad. The only secure method is to  physically hand a disk with the pad on <br>
+it to the person you want to talk to and then hand him another one when that <br>
+one gets used up. That's not practical in most cases, what is practical is to <br>
+use Quantum Cryptography, and unlike Quantum Computers we know for sure this <br>
+will work because it's already been done.<br>
+This is how:<br>
+<p>
+I send you a bunch of photons, each photon is polarized in one of 4 <br>
+directions, horizontal, vertical, left-diagonal and right diagonal, - | \ / . <br>
+In this example I send you 10 photons polarized as follows <br>
+<i>| | / - - \ - | - / .</i><br>
+<p>
+You have a polarization detector, you can set your detector to measure the <br>
+horizontal and vertical photons (+) OR you can set it to measure the <br>
+left-diagonal and right diagonal photons (x). The laws of physics do not <br>
+allow you to measure one photon both ways, because measuring one destroys all <br>
+information about the other.<br>
+<p>
+You set your detector at random, let's say you set it to find rectilinear <br>
+photons and let's say you have guessed correctly and it really is a <br>
+rectilinear photon. If you can detect the photon after it passes through your <br>
+polarized material, you will correctly deduce that it is a horizontal photon. <br>
+If you can not detect a photon after it hits your polarizing material you <br>
+will correctly deduce that the photon is vertical.<br>
+<p>
+What if you guessed incorrectly when you set your detector, what if you set <br>
+it to detect a rectilinear photon but I send you a diagonal polarized photon? <br>
+Then the photon will hit your polarizing material at a 45 degree angle so <br>
+there is a 50% chance the photon will get through, a 50% chance it will not. <br>
+In other words you get a random result.<br>
+<p>
+I send you 10 photons polarized as follows               | | / - - \ - | - /  <br>
+At random you set your polarization detector as follows  x + + x x x + x + + <br>
+So you might claim the photons were polarized as follows / | - \ / \ - / - |<br>
+ <br>
+Now you tell me over an insecure channel how you set your detector for each <br>
+photon, Big Brother is free to listen in, it won't help him. I tell you over <br>
+the same channel which settings on you polarization detector were correct, in <br>
+this example settings number 2,6,7 and 9 were correct    * | * * * \ - * - *<br>
+We only use those readings and junk the others, and we agree that horizontal <br>
+and right diagonal photon means 1, and vertical and left diagonal means 0. <br>
+So we have sent the number 0011 and we can be as certain as we want to be <br>
+that there has been no eavesdropping.<br>
+<p>
+An eavesdropper can not know what type of photon is being sent, and just like <br>
+you must guess what direction to set his polarization detector. He will be <br>
+wrong 50% of the time and when he is he will change the polarization of the <br>
+photon and give himself away. We compare N bits in the string of numbers <br>
+sent over an insecure channel, if there are no discrepancies then there is <br>
+only one chance in 2^N that somebody is eavesdropping, so we can use the <br>
+remaining bits as a one time pad. As I said this  has already been done and <br>
+messages have been sent about 35 miles in this way. I learned about this <br>
+stuff mostly from Bruce Schneir's wonderful book  "Applied Cryptography".<br>
+                           <br>
+<p>
+                                             John K Clark    johnkc@well.com<br>
+<p>
+<p>
+-----BEGIN PGP SIGNATURE-----<br>
+Version: 2.6.i<br>
+<p>
+iQCzAgUBNJIhUX03wfSpid95AQHz2ATvYLbBQxTLUz5goUEcG0aIreC2oPf7Q2rj<br>
+7CawZtZdEgVcRaoB5uxaFHZFdh4ylBPGekT26jpg9DsbKncJ85bAgA0ygt+Be1pY<br>
+iu7chn+kzTORESjM/yuOBvJvkuz5Zy/uC1Gu9p5MsvDuck12EiHxRcr8m5QXlCn1<br>
+lgslK4h7Y1J28r+KGP2u5MJ9c/H81BAix2vIc0CMwwv+K6lxkQQ=<br>
+=7d6g<br>
+-----END PGP SIGNATURE-----<br>
+<!-- body="end" -->
+<hr>
+<p>
+<ul>
+<!-- next="start" -->
+<li> <b>Next message:</b> <a href="2399.html">Bobby Martin: "Why quantum teleportation doesn't allow FTL communication"</a>
+<li> <b>Previous message:</b> <a href="2397.html">Dan Fabulich: "Re: (Fwd) Re: PHYS: Quantum Teleportation -Reply"</a>
+<!-- nextthread="start" -->
+<!-- reply="end" -->
+</ul>

@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+                      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE>extropians: Re: MUSIC ( not vs) Techno and Prog ?</TITLE>
+<META NAME="Author" CONTENT="Max M (maxmcorp@worldonline.dk)">
+<META NAME="Subject" CONTENT="Re: MUSIC ( not vs) Techno and Prog ?">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+<H1>Re: MUSIC ( not vs) Techno and Prog ?</H1>
+<!-- received="Thu Jan 13 10:26:45 2000" -->
+<!-- isoreceived="20000113172645" -->
+<!-- sent="Thu, 13 Jan 2000 18:34:52 +0100" -->
+<!-- isosent="20000113173452" -->
+<!-- name="Max M" -->
+<!-- email="maxmcorp@worldonline.dk" -->
+<!-- subject="Re: MUSIC ( not vs) Techno and Prog ?" -->
+<!-- id="001f01bf5dec$80db8b80$0400a8c0@maxm" -->
+<!-- inreplyto="00011218084302.24714@tachyon" -->
+<STRONG>From:</STRONG> Max M (<A HREF="mailto:maxmcorp@worldonline.dk?Subject=Re:%20MUSIC%20(%20not%20vs)%20Techno%20and%20Prog%20?&In-Reply-To=&lt;001f01bf5dec$80db8b80$0400a8c0@maxm&gt;"><EM>maxmcorp@worldonline.dk</EM></A>)<BR>
+<STRONG>Date:</STRONG> Thu Jan 13 2000 - 10:34:52 MST
+<P>
+<!-- next="start" -->
+<UL>
+<LI><STRONG>Next message:</STRONG> <A HREF="0670.html">Billy Brown: "RE: Open Source (was: Re: the economics of transition to nanotech)"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0668.html">Billy Brown: "RE: Antienvironmentalist data?"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="0643.html">James Rogers: "Re: MUSIC ( not vs) Techno and Prog ?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0660.html">E. Shaun Russell: "Re: MUSIC ( not vs) Techno and Prog ?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#669">[ date ]</A>
+<A HREF="index.html#669">[ thread ]</A>
+<A HREF="subject.html#669">[ subject ]</A>
+<A HREF="author.html#669">[ author ]</A>
+</UL>
+<HR NOSHADE><P>
+<!-- body="start" -->
+<P>
+From: James Rogers &lt;<A HREF="mailto:jamesr@best.com?Subject=Re:%20MUSIC%20(%20not%20vs)%20Techno%20and%20Prog%20?&In-Reply-To=&lt;001f01bf5dec$80db8b80$0400a8c0@maxm&gt;">jamesr@best.com</A>&gt;
+<BR>
+<P><EM>&gt; I am not a huge proponent of buying the latest, greatest synth technology.
+</EM><BR>
+<EM>&gt; You get far more mileage by learning how to really use an older synth than
+</EM><BR>
+<EM>&gt; by blowing money on the next hot machine to come off the assembly line.  A
+</EM><BR>
+<EM>&gt; master programmer using an old Oberheim will almost always do something
+</EM><BR>
+<EM>&gt; more interesting than Joe Preset with the latest mass market Roland box.
+</EM><BR>
+<P>I must add that I have just recently discovered csound
+<BR>
+(<A HREF="http://www.csound.org">http://www.csound.org</A>) It runs on almost any platform imaginable.
+<BR>
+<P>In all of my years of writing music I have never experienced anything like
+<BR>
+it. It is the first time that it is actually true that the imagination is
+<BR>
+the only limitation.
+<BR>
+<P>There is no limits in the number of oscilators, samples, envelope
+<BR>
+genereators, LFO's etc that you can use. It has build in vocoder, filters,
+<BR>
+reverbs, acoustic modeling etc. Anything I have ever heard about in a
+<BR>
+synth/sampler is in there.
+<BR>
+<P>The only drawback is that there isn't much realtime about it. You write code
+<BR>
+and it renders the sounds.
+<BR>
+<P>You feed it two files: a score and an orchestra. It then renders these
+<BR>
+sounds into a sound file. (Wav or Aif)
+<BR>
+<P>It has a lot more possibilities for being expressive than MIDI as you can
+<BR>
+define your own parameters for your instruments and then use these
+<BR>
+parameters in the sequencer.
+<BR>
+<P>Furthermore the instruments can be more musically intelligent than stand
+<BR>
+alone synths as they are far more integrated with the sequencer.
+<BR>
+<P>Piano's are for nonexpressive wimps ;-)
+<BR>
+<P>Currently I am writing a program that will create music. Render it to a
+<BR>
+.wav. Compress it to MP3 and then publish it on my website. Total automation
+<BR>
+:-)
+<BR>
+<P>When I am done it will be able to write any number of tracks in my style,
+<BR>
+with lot's of expression and feeling. So far it is comming along nicely, but
+<BR>
+is not yet ready for publishing.
+<BR>
+<P>My idea with is is that I wan't to make &gt;H music, and how better to do that
+<BR>
+than with music written by me with the aid of Intelligence Amplification.
+<BR>
+The only thing I find difficult is auto generating the lyrics.
+<BR>
+<P>Anybody who has an interrest in electronic music, and programming should
+<BR>
+really give csound a go.
+<BR>
+<P>Here is a simple example of how it looks.
+<BR>
+<P><P><P>This is the Orchestra file with the synthesizer definitions
+<BR>
+------------------------------------------
+<BR>
+instr 1 ; Kraftwerk kickdrum
+<BR>
+&nbsp;k_eg_1   line 1, p3, 0
+<BR>
+&nbsp;a_bd_1   diskin   &quot;sounds/Kraftkik.aif&quot;,   p5
+<BR>
+&nbsp;a_envelopedSound = k_eg_1 * a_bd_1 * 0.5
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out            a_envelopedSound
+<BR>
+endin
+<BR>
+<P><P>instr 2 ; bass
+<BR>
+&nbsp;idur = p3    ; Duration
+<BR>
+&nbsp;iamp = p4    ; Amplitude
+<BR>
+&nbsp;icps = cpspch(p5)   ; Frequency
+<BR>
+&nbsp;iwave = 1    ; Selected wave form 1=Saw, 2=Square/PWM, 3=Tri/Saw-Ramp-Mod
+<BR>
+&nbsp;isine = 1
+<BR>
+&nbsp;imaxd = 1/ icps*2   ; Allows pitch bend down of two octaves
+<BR>
+<P>&nbsp;;The envelope generator
+<BR>
+&nbsp;k_eg_1   line 1, idur, 0
+<BR>
+<P>&nbsp;;The VCO
+<BR>
+&nbsp;a_vco_1 vco iamp, icps, iwave, 0.5, 1, imaxd
+<BR>
+<P>&nbsp;;The lowpass ressonant filter
+<BR>
+&nbsp;a_vco_1 lowpass2 a_vco_1, k_eg_1*1000, 5
+<BR>
+<P>&nbsp;;Controlling the volume of the vco with the envelope
+<BR>
+&nbsp;a_vco_1 = a_vco_1 * k_eg_1
+<BR>
+<P>&nbsp;&nbsp;out a_vco_1  ; Ouput and amplification
+<BR>
+endin
+<BR>
+------------------------------------------------
+<BR>
+<P>This is the score file with the sequence data
+<BR>
+------------------------------------------------
+<BR>
+t 0 480
+<BR>
+<P>;  a sine wave function table
+<BR>
+<P>f1 0 256 10 1
+<BR>
+/*
+<BR>
+i1  1 .2   0.  1
+<BR>
+;i1  2 .    .  .
+<BR>
+i1  3 .    .  .
+<BR>
+;i1  4 .    .  .
+<BR>
+;i1  5 .    .  .
+<BR>
+;i1  6 .    .  .
+<BR>
+;i1  7 .    .  .
+<BR>
+;i1  8 .    .  .
+<BR>
+i1  9 .    .  .
+<BR>
+;i1  10 .    .  .
+<BR>
+i1  11 .    .  .
+<BR>
+;i1  12 .    .  .
+<BR>
+;i1  13 .    .  .
+<BR>
+;i1  14 .    .  .
+<BR>
+;i1  15 .    .  .
+<BR>
+;i1  16 .    .  .
+<BR>
+<P><P>;p1 p2  p3  p4  p5
+<BR>
+<P>i2  1  1  1000 6.01
+<BR>
+i2  2  .  .  .
+<BR>
+i2  3  .  .  6.03
+<BR>
+i2  4  .  .  6.01
+<BR>
+<P>i2  5  .  .  .
+<BR>
+i2  6  .  .  .
+<BR>
+i2  7  .  .  6.07
+<BR>
+i2  8  .  .  6.01
+<BR>
+<P>i2  9  .  .  .
+<BR>
+i2  10  .  .  6.03
+<BR>
+i2  11  .  .  6.01
+<BR>
+i2  12  .  .  .
+<BR>
+<P>i2  13  .  .  .
+<BR>
+i2  14  .  .  .
+<BR>
+i2  15  .  .  6.07
+<BR>
+i2  16  .  .  6.05
+<BR>
+*/
+<BR>
+e
+<BR>
+------------------------------------------------
+<BR>
+<P><P><P>Max M
+<BR>
+<P><!-- body="end" -->
+<HR NOSHADE>
+<UL>
+<!-- next="start" -->
+<LI><STRONG>Next message:</STRONG> <A HREF="0670.html">Billy Brown: "RE: Open Source (was: Re: the economics of transition to nanotech)"</A>
+<LI><STRONG>Previous message:</STRONG> <A HREF="0668.html">Billy Brown: "RE: Antienvironmentalist data?"</A>
+<LI><STRONG>In reply to:</STRONG> <A HREF="0643.html">James Rogers: "Re: MUSIC ( not vs) Techno and Prog ?"</A>
+<!-- nextthread="start" -->
+<LI><STRONG>Next in thread:</STRONG> <A HREF="0660.html">E. Shaun Russell: "Re: MUSIC ( not vs) Techno and Prog ?"</A>
+<!-- reply="end" -->
+<LI><STRONG>Messages sorted by:</STRONG> 
+<A HREF="date.html#669">[ date ]</A>
+<A HREF="index.html#669">[ thread ]</A>
+<A HREF="subject.html#669">[ subject ]</A>
+<A HREF="author.html#669">[ author ]</A>
+</UL>
+<!-- trailer="footer" -->
+<HR NOSHADE>
+<P>
+<SMALL>
+<EM>
+This archive was generated by <A HREF="http://www.hypermail.org/">hypermail 2b29</A> 
+: <EM>Thu Jul 27 2000 - 14:02:15 MDT</EM>
+</EM>
+</SMALL>
+</BODY>
+</HTML>

@@ -1,0 +1,105 @@
+<!-- received="Mon Dec  6 19:37:53 1999 MST" -->
+<!-- sent="Mon, 6 Dec 1999 19:34:05 -0800 (PST)" -->
+<!-- name="Eugene Leitl" -->
+<!-- email="eugene.leitl@lrz.uni-muenchen.de" -->
+<!-- subject="Re: Blue Gene" -->
+<!-- id="14412.32813.323322.188739@lrz.uni-muenchen.de" -->
+<!-- inreplyto="384C5E1D.34E8204C@stargate.net" -->
+<!-- version=1.10, linesinbody=57 -->
+<html><head><title>extropians: Re: Blue Gene</title>
+<meta name=author content="Eugene Leitl">
+<link rel=author rev=made href="mailto:eugene.leitl@lrz.uni-muenchen.de" title ="Eugene Leitl">
+</head><body>
+<h1>Re: Blue Gene</h1>
+Eugene Leitl (<i>eugene.leitl@lrz.uni-muenchen.de</i>)<br>
+<i>Mon, 6 Dec 1999 19:34:05 -0800 (PST)</i>
+<p>
+<ul>
+<li> <b>Messages sorted by:</b> <a href="date.html#3329">[ date ]</a><a href="index.html#3329">[ thread ]</a><a href="subject.html#3329">[ subject ]</a><a href="author.html#3329">[ author ]</a>
+<!-- next="start" -->
+<li><a href="3330.html">[ Next ]</a><a href="3328.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3324.html">Mike Hall</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="3339.html">Robert J. Bradbury</a>
+</ul>
+<!-- body="start" -->
+
+<p>
+Mike Hall writes:
+
+<p>
+<a href="3324.html#3329qlink1"> &gt; I think the limited instruction set refers not to application design, but to</a><br>
+<i> &gt; processor architecture.  My own take on this is that they are developing an</i><br>
+
+<p>
+This would be my guess also. I surmise the individual processors will
+be aligned on a 3d lattice (not unlike T3D), with direct communication
+links to the immediate neighbours.
+
+<p>
+<a href="3324.html#3329qlink2"> &gt; ultra-reduced instruction set processor to maximize hardware speed, by</a><br>
+<i> &gt; reducing the overhead of fetching and decoding instructions prior to</i><br>
+<i> &gt; execution to a minimum, and eliminating complex instructions which invoke</i><br>
+<i> &gt; microcode routines.  The trade-off is that you have to execute more machine</i><br>
+
+<p>
+Sounds sensible, however IBM is not being known for doing MISC
+(Minimal Instruction Set Computer) type designs. MISC is lunatic
+fringe right now, Chuck Moore (the father of FORTH) being its only
+practitioner.
+
+<p>
+<a href="3324.html#3329qlink3"> &gt; instructions to perform a given task vs. a complex instruction set processor,</a><br>
+<i> &gt; but with a good architecture design the improved performance more than</i><br>
+<i> &gt; offsets the increased processor cycles.  A good optimizing HLL compiler can</i><br>
+<i> &gt; also aid in reducing object code size and instruction path lengths.  An</i><br>
+<i> &gt; efficient application design can also help greatly, but machine efficiency</i><br>
+<i> &gt; isn't often a priority with application designers and coders.</i><br>
+ 
+<p>
+If I was them I would use their embedded RAM technology and implement
+a generic force field engine in hardware, using particle-in-cell
+algorithms like SPaSM, but with hardware support for evaluating
+long-range interactions (DPMTA, FAMUSAMM or others).
+
+<pre>
+<a href="http://bifrost.lanl.gov/MD/MD.html">http://bifrost.lanl.gov/MD/MD.html</a>
+<a href="http://ftp.swig.org/papers/Py97/beazley.html">http://ftp.swig.org/papers/Py97/beazley.html</a>
+<a href="http://www.supercomp.org/sc96/proceedings/SC96PROC/BEAZLEY/INDEX.HTM">http://www.supercomp.org/sc96/proceedings/SC96PROC/BEAZLEY/INDEX.HTM</a>
+<a href="http://linux.lanl.gov/~pxl/papers/sc96/INDEX.HTM">http://linux.lanl.gov/~pxl/papers/sc96/INDEX.HTM</a>
+
+</pre>
+<p>
+<i> &gt; The good news is that if and when the machine is commercially available, it</i><br>
+<i> &gt; will probably be an excellent platform for neural modeling.  The bad news is</i><br>
+<a href="3324.html#3329qlink4"> &gt; that it will still be a massive undertaking to develop the software.  I</a><br>
+<i> &gt; expect most of IBM's $100 million will be devoted to software engineering.</i><br>
+ 
+<p>
+Here's the outline (very old, so don't kill me) of an architecture I
+would use to implement a fast neural engine based on embedded RAM:
+
+<p>
+<a href="http://www.lrz-muenchen.de/~ui22204/.html/txt/firesyn.txt">http://www.lrz-muenchen.de/~ui22204/.html/txt/firesyn.txt</a>
+
+<p>
+ &gt; The whole complex consists of 64 processor towers.  I wonder if a single<br>
+<a href="3324.html#3329qlink5"> &gt; tower (or subset of towers) can run standalone, and if they are scalable.</a><br>
+ 
+<p>
+I wonder whether one could hijack PSX2's 4 MByte embedded RAM gfx
+engine for other purposes than rendering. Playstation 2 comes with
+FireWire and PC card slot, and there's a project to make Beowulfs from 
+them (the main CPU is a 64/128 bit MIPS derivate).
+
+ 
+<!-- body="end" -->
+<p>
+<ul>
+<!-- next="start" -->
+<li><a href="3330.html">[ Next ]</a><a href="3328.html">[ Previous ]</a>
+<b>In reply to:</b> <a href="3324.html">Mike Hall</a>
+<!-- nextthread="start" -->
+<b>Next in thread:</b> <a href="3339.html">Robert J. Bradbury</a>
+</ul>
+</body></html>
